@@ -1,0 +1,79 @@
+{
+  "id": "SEC-004",
+  "version": "1.2.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "配布物と添付ファイルへの秘密情報の混入を確認する",
+    "en": "Inspect artifacts and attachments for secret inclusion"
+  },
+  "summary": {
+    "ja": "コード・ビルド成果物・コンテナ・サポート資料を保存または配布する環境。",
+    "en": "Environments storing or distributing code, artifacts, containers, or support material."
+  },
+  "category": "credentials",
+  "surfaces": [
+    "repositories",
+    "containers",
+    "ci",
+    "support"
+  ],
+  "applicability": {
+    "ja": "コード・ビルド成果物・コンテナ・サポート資料を保存または配布する環境。",
+    "en": "Environments storing or distributing code, artifacts, containers, or support material."
+  },
+  "targets": [
+    {
+      "ja": "公開設定・Git履歴・配布用の成果物",
+      "en": "Visibility settings, Git history, distribution artifacts"
+    },
+    {
+      "ja": "Dockerfile・中間レイヤー・CIログ・添付手順",
+      "en": "Dockerfiles, image layers, CI logs, attachment procedures"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "許可されたスキャナーで確認し、ファイル・位置・種類だけを記録する。秘密の実値や環境変数全体を出力しない。",
+      "en": "Use authorized scanners; record only location and type, never secret values or whole environments."
+    },
+    {
+      "ja": "最終ファイルを削除してもGit履歴やイメージのレイヤーに残らないか、配布対象全体を確認する。",
+      "en": "Check Git history and image layers as well as the final filesystem."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "ビルド時の秘密はsecret mount等に移し、ログと添付の除去処理を整備する。漏洩した鍵はSEC-005で失効を確認する。",
+      "en": "Use build-time secret mechanisms and sanitization. Verify revocation of leaked keys with SEC-005."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "合成した秘密の検出テストと、成果物検査の対象範囲・結果を残す。",
+      "en": "Record synthetic-secret test results and the coverage of artifact inspection."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "秘密ファイルの読み取りは所有者の権限に従います。外部のコピーを全て消したことは証明できません。",
+      "en": "Secret-file access follows owner permissions. Deletion of all external copies cannot be established."
+    }
+  ],
+  "incidentIds": [
+    "anthropic-cyber-evals-2026",
+    "axios-npm-2026",
+    "campfire-2026",
+    "codecov-2021",
+    "okta-support-2023",
+    "openai-huggingface-eval-2026",
+    "postman-shai-hulud-2025",
+    "rust-arrayref-2026",
+    "sakura-billing-2026",
+    "toyota-github-2022",
+    "trivy-supply-chain-2026",
+    "unit42-ai-assisted-2026"
+  ],
+  "references": [],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

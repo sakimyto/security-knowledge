@@ -1,0 +1,100 @@
+{
+  "id": "SEC-012",
+  "version": "1.1.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "非本番環境と保存データの廃止期限を確認する",
+    "en": "Inspect nonproduction and data retirement deadlines"
+  },
+  "summary": {
+    "ja": "クラウドやDBに顧客データ、本人確認書類、初期認証情報、テスト用コピーを保存する環境に適用します。",
+    "en": "Applies to cloud or database environments holding customer data, identity documents, initial credentials, or test copies."
+  },
+  "category": "configuration",
+  "surfaces": [
+    "cloud",
+    "data-store"
+  ],
+  "applicability": {
+    "ja": "クラウドやDBに顧客データ、本人確認書類、初期認証情報、テスト用コピーを保存する環境に適用します。",
+    "en": "Applies to cloud or database environments holding customer data, identity documents, initial credentials, or test copies."
+  },
+  "targets": [
+    {
+      "ja": "開発・検証・BI・バックアップのデータコピー、退会者と登録未完了者の保存データ。",
+      "en": "Development, test, BI, and backup copies, including former-member and incomplete-applicant data."
+    },
+    {
+      "ja": "環境とデータの責任者、用途、アクセス権、保持期限、廃止・消去の記録。",
+      "en": "Owners, purpose, privileges, retention deadlines, and retirement or deletion records."
+    }
+  ],
+  "checks": [
+    {
+      "ja": "資産一覧と実環境を照合し、用途を終えた環境と期限超過のデータを探す。",
+      "en": "Compare inventory and runtime assets for obsolete environments and overdue data."
+    },
+    {
+      "ja": "本番データをテストへ持ち込む必要性と匿名化・最小化、外部公開と認証の設定を確認する。",
+      "en": "Inspect the need for production data in tests, anonymization and minimization, exposure, and authentication."
+    },
+    {
+      "ja": "保持・消去の運用がDB本体だけでなく、コピー・復元・検索・バックアップにどう適用されるか確認する。",
+      "en": "Inspect how retention and deletion apply to copies, restoration, search, and backups as well as the live database."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "所有者と合意した保持方針に合わせて、不要な環境を廃止しデータを最小化する。削除は承認範囲と復旧要件に従う。",
+      "en": "Retire unnecessary environments and minimize data under an owner-approved retention policy; deletion follows authority and recovery requirements."
+    },
+    {
+      "ja": "環境作成時に責任者・期限・アクセス制限を必須にし、期限超過を検知する。",
+      "en": "Require ownership, deadlines, and access restrictions at environment creation; detect overdue assets."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "環境リビジョンに対応する資産・保持期限の一覧と、対象を明記した消去・匿名化の記録。",
+      "en": "Revision-linked asset and retention inventory with scoped deletion or anonymization records."
+    },
+    {
+      "ja": "本番コピー、退会者、未完了申込者、バックアップへの適用を確認した結果。",
+      "en": "Evidence covering production copies, former members, incomplete applicants, and backups."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "法令や契約上の保持要件はこのDBで判断できません。必要なデータを独断で削除しません。",
+      "en": "This catalog does not determine legal or contractual retention requirements; do not delete required data without authority."
+    },
+    {
+      "ja": "設定や期限の定義だけでは消去の実施を証明できません。実施記録がない範囲は未確認です。",
+      "en": "Defined settings or deadlines alone do not prove deletion; absent execution evidence remains unverified."
+    }
+  ],
+  "incidentIds": [
+    "aflac-japan-2026",
+    "awabank-test-environment-2026",
+    "discord-support-vendor-2025",
+    "gyazo-2026",
+    "nidek-website-2026",
+    "openai-mixpanel-2025",
+    "sakura-billing-2026",
+    "temairazu-2026",
+    "times-car-2026",
+    "voising-bi-2026"
+  ],
+  "references": [
+    {
+      "title": "阿波銀行の調査結果",
+      "url": "https://www.awabank.co.jp/kojin/benri/awagin_app/news/2026/news20260603a/index.html"
+    },
+    {
+      "title": "タイムズカー第3報",
+      "url": "https://share.timescar.jp/news/2026/0929/1816.html"
+    }
+  ],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

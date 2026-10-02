@@ -1,0 +1,88 @@
+{
+  "id": "SEC-006",
+  "version": "1.2.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "稼働環境の公開範囲を確認する",
+    "en": "Inspect deployed exposure boundaries"
+  },
+  "summary": {
+    "ja": "クラウド・データ基盤・管理画面・ファイル転送を持つ環境。委託先が管理する資産も対象です。",
+    "en": "Cloud, data platforms, administration, and file transfer, including delegated assets."
+  },
+  "category": "configuration",
+  "surfaces": [
+    "cloud",
+    "data-store",
+    "web-app"
+  ],
+  "applicability": {
+    "ja": "クラウド・データ基盤・管理画面・ファイル転送を持つ環境。委託先が管理する資産も対象です。",
+    "en": "Cloud, data platforms, administration, and file transfer, including delegated assets."
+  },
+  "targets": [
+    {
+      "ja": "IaC・実環境の公開設定・ネットワークポリシー",
+      "en": "IaC, deployed visibility, network policies"
+    },
+    {
+      "ja": "管理画面・データ保存先・委託先の資産一覧",
+      "en": "Admin interfaces, data storage, delegated asset inventory"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "意図した公開先と実際の設定を照合し、匿名アクセスや広い接続元許可を確認する。",
+      "en": "Compare intended exposure with deployed settings; inspect anonymous access and broad network permissions."
+    },
+    {
+      "ja": "許可された資産だけで、データを取得せずに拒否を確認する。実環境へアクセスできなければ未確認とする。",
+      "en": "Test rejection only on authorized assets without retrieving data. Without live access, mark deployed state unverified."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "公開が不要な経路を制限し、設定変更を検知する監査と責任者を用意する。",
+      "en": "Restrict unnecessary exposure; establish drift detection and ownership."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "実環境の設定証拠と、想定外の接続元を拒否する確認結果を残す。",
+      "en": "Record deployed configuration and rejection of unintended access sources."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "IaCだけの確認では実環境の手動変更を見つけられません。公開サイトの存在自体を欠陥とは判断しません。",
+      "en": "IaC alone misses manual drift. A deliberately public service is not inherently a defect."
+    }
+  ],
+  "incidentIds": [
+    "anthropic-cyber-evals-2026",
+    "awabank-test-environment-2026",
+    "campfire-2026",
+    "digital-agency-gss-2026",
+    "forticloud-sso-2026",
+    "gyazo-2026",
+    "kddi-isp-2026",
+    "metabase-2026",
+    "moveit-2023",
+    "nidek-website-2026",
+    "nishiyama-2026",
+    "openai-huggingface-eval-2026",
+    "prontest-cloud-2026",
+    "react2shell-2025",
+    "sakura-billing-2026",
+    "sakura-hosting-2026",
+    "snowflake-unc5537-2024",
+    "temairazu-2026",
+    "times-car-2026",
+    "toyota-cloud-2023",
+    "unit42-ai-assisted-2026",
+    "voising-bi-2026"
+  ],
+  "references": [],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

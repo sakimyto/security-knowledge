@@ -1,0 +1,144 @@
+{
+  "id": "moveit-2023",
+  "title": {
+    "ja": "MOVEit：公開前のSQLインジェクション悪用",
+    "en": "MOVEit: SQL injection exploited before disclosure"
+  },
+  "organization": "Progress MOVEit customers",
+  "summary": {
+    "ja": "MOVEit TransferのSQLインジェクション脆弱性が、公表前から悪用されました。調査ではWebシェルの設置とデータ窃取が確認され、更新だけでなく侵害調査が必要でした。",
+    "en": "A MOVEit Transfer SQL injection vulnerability was exploited before disclosure. Investigators observed web shells and data theft, requiring investigation alongside updates."
+  },
+  "occurredAt": "2023-05-27",
+  "disclosedAt": "2023-05-31",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "zero-day",
+    "implementation"
+  ],
+  "cves": [
+    "CVE-2023-34362"
+  ],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "調査で確認された最も早い悪用の証拠は2023年5月27日でした。",
+        "en": "The earliest exploitation evidence in Mandiant response engagements was May 27, 2023."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Overview"
+    },
+    {
+      "topic": "weakness",
+      "text": {
+        "ja": "製品のSQLインジェクション脆弱性はCVE-2023-34362として公表されました。",
+        "en": "The product SQL injection vulnerability was identified as CVE-2023-34362."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "CVE-2023-34362"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-05-27",
+      "text": {
+        "ja": "調査で確認された悪用の証拠。",
+        "en": "Earliest observed exploitation in the cited investigation."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-05-31",
+      "text": {
+        "ja": "開発元が脆弱性を公表。",
+        "en": "Vendor disclosed the vulnerability."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "guidance",
+      "text": {
+        "ja": "開発元は利用者に緩和策と修正版の適用を案内しました。",
+        "en": "The vendor supplied mitigation and patch guidance to customers."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s3"
+      ],
+      "locator": "Customer response"
+    }
+  ],
+  "prevention": {
+    "classification": "pre-disclosure-exploitation",
+    "assessment": {
+      "ja": "公表前の侵害に、後から公開されたパッチを適用できなかった責任は付けられません。公開範囲の制限と侵害時の調査・復旧も点検します。",
+      "en": "A later patch cannot prevent an earlier compromise. Inspect exposure controls and incident investigation and recovery paths."
+    },
+    "sourceIds": [
+      "s1",
+      "s2",
+      "s3"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した一次情報に、攻撃でAIを利用したことを裏付ける記述はありません。AI不使用を意味しません。",
+      "en": "The cited primary sources do not establish AI involvement. This does not establish that AI was absent."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "個別の被害組織がいつ侵害されたかは一様ではありません。自社実装のSQL注入と製品側の欠陥を区別します。",
+      "en": "Victim timelines vary. Distinguish a vendor defect from SQL injection in your own code."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Zero-Day Vulnerability in MOVEit Transfer Exploited for Data Theft",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/zero-day-moveit-data-theft",
+      "publisher": "Mandiant",
+      "kind": "investigator",
+      "publishedAt": "2023-06-02",
+      "reviewedAt": "2026-10-02"
+    },
+    {
+      "id": "s2",
+      "title": "CVE-2023-34362 Detail",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-34362",
+      "publisher": "NIST NVD",
+      "kind": "government",
+      "publishedAt": "2023-06-02",
+      "reviewedAt": "2026-10-02"
+    },
+    {
+      "id": "s3",
+      "title": "An Update on the Steps We are Taking to Protect MOVEit Customers",
+      "url": "https://www.progress.com/blogs/update-steps-we-are-taking-protect-moveit-customers",
+      "publisher": "Progress",
+      "kind": "vendor",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-006",
+    "SEC-010"
+  ]
+}

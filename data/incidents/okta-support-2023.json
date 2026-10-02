@@ -1,0 +1,145 @@
+{
+  "id": "okta-support-2023",
+  "title": {
+    "ja": "Okta：サポート添付ファイルのセッション情報を悪用",
+    "en": "Okta: support attachments enabled session hijacking"
+  },
+  "organization": "Okta",
+  "summary": {
+    "ja": "盗まれたサービスアカウントでサポートシステム内のファイルへアクセスされました。HARファイル内のセッショントークンが、一部顧客への侵入に使われました。",
+    "en": "A compromised service account accessed support files. Session tokens in HAR attachments enabled hijacking of some customer sessions."
+  },
+  "occurredAt": "2023-09-28",
+  "disclosedAt": "2023-10-20",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials",
+    "endpoint"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "サポート用サービスアカウントが悪用され、HAR等の添付ファイルにアクセスされました。",
+        "en": "A support service account was abused to access attachments, including HAR files."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Executive Summary"
+    },
+    {
+      "topic": "origin",
+      "text": {
+        "ja": "個人Googleアカウントへの認証情報の保存が確認され、個人アカウントか端末の侵害が有力な流出経路と説明されました。",
+        "en": "Credentials were saved in a personal Google account; compromise of that account or device was assessed as the most likely leak path."
+      },
+      "status": "inferred",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Executive Summary"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "盗まれたセッショントークンで5顧客のセッションが乗っ取られたと公表しました。",
+        "en": "Okta reported session hijacking affecting five customers."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Executive Summary"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-09-28",
+      "text": {
+        "ja": "公表された不正アクセス期間の開始。",
+        "en": "Start of the disclosed unauthorized access period."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-10-17",
+      "text": {
+        "ja": "サービスアカウント停止と関連セッション失効。",
+        "en": "Service account disabled and associated sessions terminated."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-10-20",
+      "text": {
+        "ja": "事故を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "個人Chromeプロファイルへのログイン制限と監視強化を実施しました。",
+        "en": "Personal Chrome profile sign-in was restricted and monitoring strengthened."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Remediation Tasks"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "サポート用ファイルも秘密情報の持ち出し経路です。添付前の除去と、漏洩したセッションの失効を点検します。",
+      "en": "Support attachments are a credential exposure path. Inspect sanitization and revocation of exposed sessions."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した一次情報に、攻撃でAIを利用したことを裏付ける記述はありません。AI不使用を意味しません。",
+      "en": "The cited primary sources do not establish AI involvement. This does not establish that AI was absent."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "サービスアカウントの資格情報が流出した具体的な経路は、参照した原因報告でも推定です。",
+      "en": "The precise credential leak path remains an assessment in the cited root-cause report."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Unauthorized Access to Okta Support: Root Cause and Remediation",
+      "url": "https://sec.okta.com/articles/2023/11/unauthorized-access-oktas-support-case-management-system-root-cause/",
+      "publisher": "Okta",
+      "kind": "organization",
+      "publishedAt": "2023-11-03",
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": [
+    "SEC-003",
+    "SEC-004",
+    "SEC-005",
+    "SEC-009"
+  ]
+}

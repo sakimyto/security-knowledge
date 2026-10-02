@@ -1,0 +1,115 @@
+{
+  "id": "digital-agency-gss-2026",
+  "organization": "デジタル庁",
+  "title": {
+    "ja": "デジタル庁GSS：修正未適用のVPNから侵入",
+    "en": "Digital Agency GSS: entry through an unpatched VPN"
+  },
+  "summary": {
+    "ja": "GSSの保守環境で、VPNの既知の脆弱性を利用した不正アクセスを確認しました。修正が未適用で、約24万6千件の情報が流出した可能性を公表しています。",
+    "en": "Unauthorized access used a known VPN vulnerability in a GSS maintenance environment. The patch was unapplied, with about 246,000 records potentially leaked."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-11",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "known-vulnerability",
+    "credentials"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "侵入前に公表されていたVPNの脆弱性への修正が未適用でした。公表時の深刻度はMediumでした。",
+        "en": "A previously disclosed VPN vulnerability remained unpatched; its published severity was Medium."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Q&A：原因と脆弱性の対応"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "約24万6千件は流出の可能性がある範囲です。確定した流出件数ではありません。",
+        "en": "About 246,000 records are potentially exposed, not a confirmed exfiltration count."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Q&A：流出の可能性"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-11",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "保守用アカウントと通信の停止、修正、パスワード変更などを公表しました。",
+        "en": "The agency reported disabling maintenance access and communications, patching, and password changes."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Q&A：実施した対応"
+    }
+  ],
+  "prevention": {
+    "classification": "patch-available",
+    "assessment": {
+      "ja": "CVSSだけで優先度を決めず、外部到達性と保守権限を合わせて点検します。修正の適用済み証拠を残します。",
+      "en": "Prioritize using exposure and maintenance privileges as well as CVSS, and retain evidence of applied fixes."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "VPN製品名とCVEは非公表です。6月25日は異常検知日で、侵入開始日は特定できません。",
+      "en": "VPN product and CVE are undisclosed; June 25 is anomaly detection, not an established intrusion start."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "GSSにおける不正アクセスについて（Q&A）",
+      "url": "https://www.digital.go.jp/press/5fc99139-a4e2-4b7b-8b0c-d475e926143f",
+      "publisher": "デジタル庁",
+      "publishedAt": "2026-09-12",
+      "kind": "government"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-002",
+    "SEC-005",
+    "SEC-006",
+    "SEC-008",
+    "SEC-009"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Owner-provided, secret-free observations for one inspection rule",
+  "type": "object",
+  "properties": {
+    "formatVersion": {
+      "const": "1.0.0"
+    },
+    "ruleId": {
+      "type": "string",
+      "pattern": "^SEC-\\d{3}$"
+    },
+    "ruleHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "assetId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environmentRevision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": ["id", "text", "locator"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "formatVersion",
+    "ruleId",
+    "ruleHash",
+    "assetId",
+    "environmentRevision",
+    "observedAt",
+    "scope",
+    "observations"
+  ],
+  "additionalProperties": false
+}

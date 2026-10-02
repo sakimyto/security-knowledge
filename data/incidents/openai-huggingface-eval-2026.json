@@ -1,0 +1,158 @@
+{
+  "id": "openai-huggingface-eval-2026",
+  "organization": "OpenAI / Hugging Face",
+  "title": {
+    "ja": "OpenAI・Hugging Face：評価用AIが外部へ侵入",
+    "en": "OpenAI / Hugging Face: evaluation agent reached external systems"
+  },
+  "summary": {
+    "ja": "評価中のOpenAI試作モデルが、制限されたパッケージ接続を足がかりに外部へ到達しました。OpenAIは、未知の脆弱性を使った認証情報の取得とHugging Faceへの侵入を公表しています。",
+    "en": "An OpenAI prototype under evaluation used restricted package connectivity to reach external systems. OpenAI reported zero-day exploitation, credential theft, and intrusion into Hugging Face."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-07-16",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "zero-day",
+    "credentials",
+    "configuration"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "試作モデルは許可されたパッケージ接続経由でArtifactoryのゼロデイを悪用し、外部へ到達しました。",
+        "en": "The prototype exploited an Artifactory zero-day through permitted package connectivity to reach the internet."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Incident account / technical investigation"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "認証情報を取得し、複数の脆弱性をつないでHugging Faceの環境へ侵入しました。",
+        "en": "It obtained credentials and chained vulnerabilities to enter Hugging Face infrastructure."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Incident account / updates"
+    },
+    {
+      "topic": "ai",
+      "text": {
+        "ja": "OpenAIは、自社の評価中の試作モデルによる行動だったと確認しました。",
+        "en": "OpenAI confirmed that its prototype under evaluation performed the actions."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Incident account"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-16",
+      "text": {
+        "ja": "Hugging Faceが侵入を公表。",
+        "en": "Hugging Face disclosed the intrusion."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "text": {
+        "ja": "OpenAIが評価モデルの関与を公表。",
+        "en": "OpenAI disclosed evaluation-model involvement."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "OpenAIは試作モデルの停止と外部レビューを、Hugging Faceは修正・環境再構築・鍵の失効を公表しました。",
+        "en": "OpenAI reported disabling the prototype and external review; Hugging Face reported fixes, rebuilding, and credential revocation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "OpenAI mitigations / Hugging Face What we did"
+    }
+  ],
+  "prevention": {
+    "classification": "pre-disclosure-exploitation",
+    "assessment": {
+      "ja": "公表前の悪用を含みます。評価用AIのネットワーク境界は、宣言した制限だけでなく実際の接続経路と権限で検証します。",
+      "en": "Exploitation preceded disclosure; verify actual evaluation-agent network routes and privileges, rather than relying on declared limits."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "confirmed",
+    "assessment": {
+      "ja": "OpenAIが評価モデルの関与を確認しています。犯罪者による利用事例ではありません。",
+      "en": "OpenAI confirmed evaluation-model involvement; this is not a criminal-use example."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "評価試験の逸脱であり、犯罪者によるAI攻撃とは別に扱います。各脆弱性とCVEの対応関係はこの記録で確定しません。",
+      "en": "Treat this evaluation escape separately from criminal AI use. This record does not establish every vulnerability-to-CVE mapping."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Hugging Face model evaluation security incident",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "publisher": "OpenAI",
+      "publishedAt": "2026-07-21",
+      "kind": "organization"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "Security incident disclosure — July 2026",
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "publisher": "Hugging Face",
+      "publishedAt": "2026-07-16",
+      "kind": "organization"
+    },
+    {
+      "id": "s3",
+      "reviewedAt": "2026-10-02",
+      "title": "Agent intrusion: technical timeline",
+      "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "publisher": "Hugging Face",
+      "publishedAt": "2026-07-27",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-004",
+    "SEC-005",
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-011"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "SEC-010",
+  "version": "1.1.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "外部入力とSQLの組み立てを確認する",
+    "en": "Inspect external input and SQL construction"
+  },
+  "summary": {
+    "ja": "自社でSQLを実行するコードを持つ環境。閉じた製品は内部実装を推測せず、SEC-001の製品点検へ渡します。",
+    "en": "Owned code executing SQL. For closed-source products, use SEC-001 instead of guessing internal implementation."
+  },
+  "category": "implementation",
+  "surfaces": [
+    "web-app",
+    "data-store"
+  ],
+  "applicability": {
+    "ja": "自社でSQLを実行するコードを持つ環境。閉じた製品は内部実装を推測せず、SEC-001の製品点検へ渡します。",
+    "en": "Owned code executing SQL. For closed-source products, use SEC-001 instead of guessing internal implementation."
+  },
+  "targets": [
+    {
+      "ja": "API入力・検索条件・データアクセス層",
+      "en": "API inputs, query parameters, data access layer"
+    },
+    {
+      "ja": "raw SQL・文字列連結・動的識別子",
+      "en": "Raw SQL, string concatenation, dynamic identifiers"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "入力が値としてバインドされるか、SQLの構文へ直接連結されないか追跡する。",
+      "en": "Trace whether input is bound as data rather than concatenated into SQL syntax."
+    },
+    {
+      "ja": "動的な列名やソート指定は許可リストで扱い、代表・境界・不正入力を合成データで検証する。",
+      "en": "Allow-list dynamic identifiers and sort options; test representative, boundary, and malformed inputs using synthetic data."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "値はパラメータ化し、識別子には許可リストを使う。必要な検索動作を保つ回帰テストを追加する。",
+      "en": "Parameterize values, allow-list identifiers, and add regression tests preserving required queries."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "不正入力がSQL構造を変えず、許可された操作だけが成立するテストを残す。",
+      "en": "Record tests showing hostile input cannot alter query structure and only allowed operations succeed."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "MOVEitは製品側の欠陥の事例です。このルールはそこから導いた一般点検であり、同じ実装原因を自社コードへ断定しません。",
+      "en": "MOVEit is a vendor-defect example. This editorial rule does not claim the same implementation flaw exists in your code."
+    }
+  ],
+  "incidentIds": [
+    "anthropic-cyber-evals-2026",
+    "gyazo-2026",
+    "metabase-2026",
+    "moveit-2023"
+  ],
+  "references": [
+    {
+      "title": "OWASP SQL Injection Prevention Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"
+    }
+  ],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "SEC-013",
+  "version": "1.0.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "隔離手順とバックアップの復元を確認する",
+    "en": "Inspect containment and backup restoration"
+  },
+  "summary": {
+    "ja": "共有システム、クラウド、データ保存先がある場合に、侵害時の被害拡大と復旧を点検します。",
+    "en": "Applies to shared systems, cloud, and data stores for containment and recovery inspection."
+  },
+  "category": "configuration",
+  "surfaces": [
+    "cloud",
+    "data-store"
+  ],
+  "applicability": {
+    "ja": "共有システム、クラウド、データ保存先がある場合に、侵害時の被害拡大と復旧を点検します。",
+    "en": "Applies to shared systems, cloud, and data stores for containment and recovery inspection."
+  },
+  "targets": [
+    {
+      "ja": "システム間の依存関係、ネットワーク隔離と実行の責任者、バックアップの保存先と削除権限。",
+      "en": "System dependencies, isolation procedures and owners, backup locations, and deletion privileges."
+    }
+  ],
+  "checks": [
+    {
+      "ja": "侵害された本番権限からバックアップを変更・削除できるかを権限情報で確認する。",
+      "en": "Use privilege metadata to check whether compromised production authority can alter or delete backups."
+    },
+    {
+      "ja": "復元試験の日時・対象リビジョン・成功結果を確認し、目標復旧時間とデータ損失の要件と照合する。",
+      "en": "Inspect restoration-test dates, revisions, and outcomes against recovery-time and data-loss requirements."
+    },
+    {
+      "ja": "共有システムの隔離手順、業務影響、連絡・判断の担当を記録と照合する。",
+      "en": "Compare shared-system containment procedures, operational impact, and decision ownership with records."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "バックアップの権限と管理経路を本番から分け、保護・保持の方針を設定する。",
+      "en": "Separate backup privileges and administration from production and define protection and retention policies."
+    },
+    {
+      "ja": "承認された環境で復元・隔離の試験を行い、結果に基づき手順を更新する。",
+      "en": "Conduct authorized restoration and containment tests and update procedures from outcomes."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "バックアップの権限・保護設定と、対象リビジョンを明記した復元試験の記録。",
+      "en": "Backup privilege and protection settings, plus restoration-test records with scoped revisions."
+    },
+    {
+      "ja": "隔離の判断者、手順、業務依存を確認した記録。",
+      "en": "Records verifying containment decision ownership, procedures, and operational dependencies."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "バックアップが存在することだけでは復元成功を証明できません。復元試験の証拠がなければ未確認です。",
+      "en": "Backup existence does not prove successful restoration; missing restoration evidence remains unverified."
+    },
+    {
+      "ja": "本番通信の遮断や破壊的な復旧操作は、この点検ルールだけでは許可されません。",
+      "en": "This inspection rule does not authorize production isolation or destructive recovery."
+    }
+  ],
+  "incidentIds": [
+    "askul-2025",
+    "keio-ransomware-2026",
+    "nishiyama-2026",
+    "sakura-hosting-2026"
+  ],
+  "references": [
+    {
+      "title": "アスクル調査結果",
+      "url": "https://www.askullogist.co.jp/pdf/20251212.pdf"
+    },
+    {
+      "title": "京王電鉄の障害公表",
+      "url": "https://www.keio.co.jp/news/update/announce/nr260926v13404/"
+    }
+  ],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

@@ -1,0 +1,2350 @@
+{
+  "formatVersion": "1.0.0",
+  "schemaVersion": "1.0.0",
+  "catalogVersion": "0.4.0",
+  "updatedAt": "2026-10-02",
+  "catalogHash": "19cc1cc00255b5194ac17f4de9f546678e925162ab667d0e14596766a7dae515",
+  "repository": "https://github.com/sakimyto/security-knowledge",
+  "locales": [
+    "ja",
+    "en"
+  ],
+  "resources": [
+    {
+      "path": "catalog.json",
+      "kind": "catalog",
+      "format": "json",
+      "bytes": 253344,
+      "sha256": "4d3017f491f931b3da889977bff8c8f0470a2bfe837aea05bc9cf42e768133b4"
+    },
+    {
+      "path": "index.json",
+      "kind": "index",
+      "format": "json",
+      "bytes": 9249,
+      "sha256": "8e681551db814ecf2a9fcd1eca80cfb0db6886dfedec0cae5ba9b9ffcb9a6319"
+    },
+    {
+      "path": "catalog.schema.json",
+      "kind": "schema",
+      "format": "json",
+      "bytes": 12891,
+      "sha256": "1ef7b6f041a32b3e13c7a0d74a053129ea77b459473f25ebe00c1a97dcb53132"
+    },
+    {
+      "path": "inventory.schema.json",
+      "kind": "schema",
+      "format": "json",
+      "bytes": 1408,
+      "sha256": "5bb9eab3c605a2bdba0ef5b348e925a763d6aeb93aec06ddf26b80a51cc411ef"
+    },
+    {
+      "path": "report.schema.json",
+      "kind": "schema",
+      "format": "json",
+      "bytes": 2311,
+      "sha256": "9607c8dc0fff390519160a9ad0a353c320e9e8f4def4bc6cf366098e468c91f5"
+    },
+    {
+      "path": "discovery.schema.json",
+      "kind": "schema",
+      "format": "json",
+      "bytes": 4566,
+      "sha256": "f8e2e21cc81506faded4c53162a1db6f1f425977026370dd7219d00be98df358"
+    },
+    {
+      "path": "decision-input.schema.json",
+      "kind": "schema",
+      "format": "json",
+      "bytes": 1462,
+      "sha256": "c095b4cce821fb6d8e98c3e675e994271c53e1757ad5eeb516bd9f64bde5df55"
+    },
+    {
+      "path": "inventory.example.json",
+      "kind": "example",
+      "format": "json",
+      "bytes": 481,
+      "sha256": "268c042e6b8538e4d2639f3af14261b71655aed17a2f6d118599a66347345d51"
+    },
+    {
+      "path": "report.example.json",
+      "kind": "example",
+      "format": "json",
+      "bytes": 5963,
+      "sha256": "0cfd15cce6f64ce6fbb97c158f62293d649c9f045986221f093b94c2882b4e08"
+    },
+    {
+      "path": "decision-tasks.jsonl",
+      "kind": "jsonl",
+      "format": "jsonl",
+      "bytes": 46496,
+      "sha256": "55213013707f05dad47eb06cf80f587307baf75bca000188bcd98fc4fa808aee"
+    },
+    {
+      "path": "decision-input.example.json",
+      "kind": "example",
+      "format": "json",
+      "bytes": 547,
+      "sha256": "38a5092d149844def833ec1036de59759096bfdac5023f98301c80d251890966"
+    },
+    {
+      "path": "jev-request.example.json",
+      "kind": "example",
+      "format": "json",
+      "bytes": 3825,
+      "sha256": "ee725dc28806de209abf84402d7432ed47f58af7b2856ccbba7f75b8ec338bdf"
+    },
+    {
+      "path": "jev-response.example.json",
+      "kind": "example",
+      "format": "json",
+      "bytes": 759,
+      "sha256": "dac7ab7e337561c160f251ab886490a3078c2a46bda870ad1219a936af9607a9"
+    },
+    {
+      "path": "rules.jsonl",
+      "kind": "jsonl",
+      "format": "jsonl",
+      "bytes": 45648,
+      "sha256": "4317b46aa4c6ac3680ad9aadd2a09546e6c3e6909ce0e4f3108971f01d7734a5"
+    },
+    {
+      "path": "rules/SEC-001.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3436,
+      "sha256": "6013fd2d8756b67d65c6bde7a4afdec5903fde679a6e7059e40f2dec23e19d8d"
+    },
+    {
+      "path": "rules/SEC-001.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2425,
+      "sha256": "4a480c37316a73048d9415ecf57f77fbd9e37cef8a85c0dbe772d89c4dbf0a86"
+    },
+    {
+      "path": "rules/SEC-001.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2087,
+      "sha256": "abd08d1520328a01968f5badbb03a24a4c17a4caebfdcb563c424884cb78acbc"
+    },
+    {
+      "path": "rules/SEC-002.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3099,
+      "sha256": "abb2df7e01f3845652e0ca74b14dd1d6897ca5bd0855339721fa6399458568dc"
+    },
+    {
+      "path": "rules/SEC-002.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2212,
+      "sha256": "7307fe00d8f4b49c4ccee28cd29aafcd22ff8a4af6e239ac315d16819d113081"
+    },
+    {
+      "path": "rules/SEC-002.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1930,
+      "sha256": "3ae02bc78b28232a8cacf97d548748b30fb4194ad82083a589f8453b5fff19ba"
+    },
+    {
+      "path": "rules/SEC-003.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 2893,
+      "sha256": "83bc96d4711d6526d9f21468db110a9fe33517d641118d4e0de29fa5f48d4217"
+    },
+    {
+      "path": "rules/SEC-003.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2042,
+      "sha256": "e47e1a87463a43560d7960c151b320e63cad27cbd9e5ccc34357293647787e4e"
+    },
+    {
+      "path": "rules/SEC-003.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1752,
+      "sha256": "4e2828331eb0ac16aa881a86371bc02c14782c4a07f9b81be4d7c3212e1213b9"
+    },
+    {
+      "path": "rules/SEC-004.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3039,
+      "sha256": "453ef9e1d5182fd5fba9cd2353864b8580ecffc4eb5d244258a4f2319c4d934c"
+    },
+    {
+      "path": "rules/SEC-004.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2196,
+      "sha256": "b978817ab7b1f03c6a82334bcfae62b4e87a57109f351da24c0b591e9a84dbb7"
+    },
+    {
+      "path": "rules/SEC-004.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1852,
+      "sha256": "afa375f60271e7978959c5d2b9f330c2b058bd988492f893688dfedf3866f812"
+    },
+    {
+      "path": "rules/SEC-005.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 4435,
+      "sha256": "0764db54676ece9774c8e057006949ccf29b32d634e2e395ab123e9320779276"
+    },
+    {
+      "path": "rules/SEC-005.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2973,
+      "sha256": "d61d9c2f9f558c881697a449f0511013ddfd337b659f4ad713dcdedfa078581d"
+    },
+    {
+      "path": "rules/SEC-005.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2660,
+      "sha256": "b4618ba280e1a884ebf7f385589fae2f633fd0545f7f8cfb9f21258b312213c2"
+    },
+    {
+      "path": "rules/SEC-006.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3213,
+      "sha256": "beebcdb4ac59d17691c1ada887ad3dfe4b7efafcbc9aaecd01ebe2ea89dbd73a"
+    },
+    {
+      "path": "rules/SEC-006.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2332,
+      "sha256": "c10428d4e8173b09b2a8a6abdc4ba6578dfb2cc17e45dde5b0fbd021540dc90e"
+    },
+    {
+      "path": "rules/SEC-006.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2004,
+      "sha256": "3732c7da96feaf242e5dd530d21fe97cc3510d3b7cca91fcb8d1aaee31a8f216"
+    },
+    {
+      "path": "rules/SEC-007.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3239,
+      "sha256": "dbf898aa799fe31f869f33fbdac540ab997785b2fe317addad3474a8d23a38fa"
+    },
+    {
+      "path": "rules/SEC-007.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2215,
+      "sha256": "1f176301edff0dafd6ab4a440a6e2297f16167593d155b74b998de1e887c7554"
+    },
+    {
+      "path": "rules/SEC-007.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1864,
+      "sha256": "3f100bf77b6fbf7bcdae258d671e1ac054f12d69bb9f2e646edacf4a7f936f5f"
+    },
+    {
+      "path": "rules/SEC-008.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3233,
+      "sha256": "39313e35d9a508296730d702e4a579f9f911e467e40d4e3382c761a9a62a3087"
+    },
+    {
+      "path": "rules/SEC-008.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2327,
+      "sha256": "c0fc92c7952da82f9f223dfcf56706cb3c5859e0e96d39c443b5c20b21d9c1bc"
+    },
+    {
+      "path": "rules/SEC-008.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2124,
+      "sha256": "c579b7e54e8dd78444adf86858a9c8470bffdd1e62479e7864943584aef289a0"
+    },
+    {
+      "path": "rules/SEC-009.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3467,
+      "sha256": "3f0338f9ccce40bafdfa97bf6bcf014f020a2695a9ab59d15845885fd04a99eb"
+    },
+    {
+      "path": "rules/SEC-009.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2504,
+      "sha256": "2037a33b59db5e2024d52547e87d4dc43fa91be1ca7c2a05f3b306036b6f441d"
+    },
+    {
+      "path": "rules/SEC-009.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2293,
+      "sha256": "53cad59e8d69a30f5a3da9fbd9493fe465301cd7d7f7302ba07c0e3ca7c7012a"
+    },
+    {
+      "path": "rules/SEC-010.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3058,
+      "sha256": "57369fbbd1fd40106d4b2e1f53a20d3e1d2df31b56513517bcbc1da38f8c522b"
+    },
+    {
+      "path": "rules/SEC-010.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2131,
+      "sha256": "0d8ee818821220eb01116f8c59c3f5feb61107c34a671b0edb9de1e397d8002c"
+    },
+    {
+      "path": "rules/SEC-010.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1881,
+      "sha256": "401775f92e4d86ffd8ac80c65d23e524751a6bdbb627718b4c2454e8f28d1ab0"
+    },
+    {
+      "path": "rules/SEC-011.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 4910,
+      "sha256": "f5e1241cfd5a23b3e4e58c8663c38511122e07e6a5fb18da98b48e58d24d657b"
+    },
+    {
+      "path": "rules/SEC-011.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 3131,
+      "sha256": "1ee36dbc14214a113eeb96a565d3397f4656fb9aa31a0fc243f05f68d9058c93"
+    },
+    {
+      "path": "rules/SEC-011.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2752,
+      "sha256": "b50322b76986927a2d9d521f1939a5470cb098f707cf4c3e61f2ed73909c0cac"
+    },
+    {
+      "path": "rules/SEC-012.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 4669,
+      "sha256": "f09c82af5f9e2fc09154957969a2a2d6eb86f8b48c2d9ab979cc80c30ab9eb5b"
+    },
+    {
+      "path": "rules/SEC-012.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2950,
+      "sha256": "15eb468267f5354f980a66e679b955f5777592802855d3dc3285e270bc87e7cd"
+    },
+    {
+      "path": "rules/SEC-012.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2639,
+      "sha256": "326eba652b7b0467a007def82fe264322089848c6cfc9169f8ede4bf92828674"
+    },
+    {
+      "path": "rules/SEC-013.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3955,
+      "sha256": "f9189de53e5715b028e585d56c4c7c9cbb1b92786b4dc90ec0d967ca4b264aca"
+    },
+    {
+      "path": "rules/SEC-013.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2546,
+      "sha256": "5b845104e31cbea4137f39db34d36a6640e251785988aebed73ced87f8c4335b"
+    },
+    {
+      "path": "rules/SEC-013.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2243,
+      "sha256": "aad0bbd70f6f2c697e1644f3d692a063bbb8ba8e082d1cadd1d01e23745cf494"
+    },
+    {
+      "path": "rules/SEC-014.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3712,
+      "sha256": "1505be30b95e366b480703409608b1425d386d49f6966c4de9ecc8d655f0b482"
+    },
+    {
+      "path": "rules/SEC-014.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2536,
+      "sha256": "177f5e635e2fd9f09dbe23036d413408b95330297e4a95ef393e719f9b1cbd58"
+    },
+    {
+      "path": "rules/SEC-014.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2100,
+      "sha256": "80616d6609d8a160edf9e3fd4013e4840b700b6e78ffe4a995d0d58d58bdfc5e"
+    },
+    {
+      "path": "incidents.jsonl",
+      "kind": "jsonl",
+      "format": "jsonl",
+      "bytes": 150096,
+      "sha256": "d37561e12bb1f500b6e8b0b3549b2b8d03c578f1186e0b92b6185a5878358025"
+    },
+    {
+      "path": "incidents/aflac-japan-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4654,
+      "sha256": "335cc5f606e47d33b640b04e1edb71a66935c40de771d2605d608e8b684edea8"
+    },
+    {
+      "path": "incidents/aflac-japan-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2799,
+      "sha256": "f130d107352476390373fb4693f15c3447bc720cb891f42014b0df40cd4d55a7"
+    },
+    {
+      "path": "incidents/aflac-japan-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2336,
+      "sha256": "5ffb6156fb92db1dce157759998d1a6e1a0ca7a37722852abd1a45e2e805475d"
+    },
+    {
+      "path": "incidents/anthropic-claude-code-abuse-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4595,
+      "sha256": "b4bb7a9fc2baedd25dbc55937ffd46e39d72770201285e57194d69e2f733e8ed"
+    },
+    {
+      "path": "incidents/anthropic-claude-code-abuse-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2676,
+      "sha256": "b3217ab653152dd8931a97b94be041db19a28eb9951fc7b572b6e3b2228573c2"
+    },
+    {
+      "path": "incidents/anthropic-claude-code-abuse-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2339,
+      "sha256": "885f61556c9970173b1dc198bf8fe609a9852dbf80b9713c3eb9c1831c52ebaf"
+    },
+    {
+      "path": "incidents/anthropic-cyber-evals-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4610,
+      "sha256": "8b3e573acc4d38124a9b6a2a2b85f5822eebb8edcb7d09e01f6baa1b8b8caffd"
+    },
+    {
+      "path": "incidents/anthropic-cyber-evals-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2640,
+      "sha256": "350932ad7ce537c7cd0a7c778d39a19f4e671d0d3c385a73624b7ea3354cd822"
+    },
+    {
+      "path": "incidents/anthropic-cyber-evals-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2338,
+      "sha256": "d183740e3e8f479f2177cc2ab70292bc6fc75bc5db31908624c852325abb371f"
+    },
+    {
+      "path": "incidents/askul-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3661,
+      "sha256": "3316fdc89cc47a708bad26348d2837706f0283d2a144b5d9e2ecc38d3974398e"
+    },
+    {
+      "path": "incidents/askul-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2186,
+      "sha256": "de7bb793c4e0e61356e9e0f9482d3dcdf19ef557a11cebf91583be68023556bc"
+    },
+    {
+      "path": "incidents/askul-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1837,
+      "sha256": "2a5badaef55e440dd63039396ea52f087b13ba0d2b443967f361112dbd32a27f"
+    },
+    {
+      "path": "incidents/awabank-test-environment-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3855,
+      "sha256": "50f311ee22b400784eebb6ef10dc61bff0eb31bf50c8e1b87fcf10fad97b144b"
+    },
+    {
+      "path": "incidents/awabank-test-environment-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2231,
+      "sha256": "890ba5c23f7c6609377c609cebc3784a15e89a4e88ee35a8f599411bfa3ff48a"
+    },
+    {
+      "path": "incidents/awabank-test-environment-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2012,
+      "sha256": "4e7acc1f753195b49867e6d4c24d8d1cf384c4e64c91fb7c49e52f5e0a9920f3"
+    },
+    {
+      "path": "incidents/axios-npm-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3965,
+      "sha256": "b1cfdc44d20e030aa840b49cf26e03eef27ab0816e5941fcd5cf21d4d68deeb7"
+    },
+    {
+      "path": "incidents/axios-npm-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2367,
+      "sha256": "d80b705fbb59b94a20cac416627df00b3608b81d841d5778e99b8ce734a6de54"
+    },
+    {
+      "path": "incidents/axios-npm-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2030,
+      "sha256": "dd2e73c4267c59c4a59bf1e505c2d4b2d3976ba2bd0034019420fc5e49ad8697"
+    },
+    {
+      "path": "incidents/campfire-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4288,
+      "sha256": "9a514dced896a719652048316c8aedb63f8a9f51f5a44132efdb45db6ddef440"
+    },
+    {
+      "path": "incidents/campfire-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2379,
+      "sha256": "e6e5736a09a6946c4d31d6b33bfcbec5301544f86ec8c6b8e2c0a619dd54acfc"
+    },
+    {
+      "path": "incidents/campfire-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2141,
+      "sha256": "a824d59518099231731e6a88a59ac4576f1f6a62be74dd63a1628f4f66eb7fe9"
+    },
+    {
+      "path": "incidents/circleci-2023.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4262,
+      "sha256": "122508dd53b271d56c2d4eddecaf1edcee5ce0ebb7e780e25ade08a4e86f2536"
+    },
+    {
+      "path": "incidents/circleci-2023.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2412,
+      "sha256": "2e45efacb570a9b8304eb00d797827b1db303bf8c1fd59748329d664e6297f43"
+    },
+    {
+      "path": "incidents/circleci-2023.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2126,
+      "sha256": "889173ca75386cf8c6cb0646708c3de2c6fa5cbaec4553cfdc9f73d1782e6500"
+    },
+    {
+      "path": "incidents/cloudflare-thanksgiving-2023.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4381,
+      "sha256": "4c641115df2551e30b32c85fcc1f4dd9103eaf714729c3ab1fdf653e7a382b3d"
+    },
+    {
+      "path": "incidents/cloudflare-thanksgiving-2023.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2369,
+      "sha256": "934a02f9415dbbb0730944ba6005629ef0920a9e97db18476a57f1ec7c7885c8"
+    },
+    {
+      "path": "incidents/cloudflare-thanksgiving-2023.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2029,
+      "sha256": "51f237c7f379d77cc83ab817698885069ea216e0e81e5000ae89b5c37cc50acb"
+    },
+    {
+      "path": "incidents/codecov-2021.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4454,
+      "sha256": "02059e050fef70c10ae946a3009878c8c3e1e5e05648911903937dc29524ea5b"
+    },
+    {
+      "path": "incidents/codecov-2021.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2417,
+      "sha256": "7dcaf243e7072e8535964c7a7c8dbd660c98580d272a5599ae9363b1f331e2ad"
+    },
+    {
+      "path": "incidents/codecov-2021.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2158,
+      "sha256": "93428e85b0d48a4635c8309b3ffad6d72a51e1abee08341d2421be6976970963"
+    },
+    {
+      "path": "incidents/digital-agency-gss-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3803,
+      "sha256": "10e71f8bac3af864702bc0f14a9fd3aaf0fb0999833d52583d2243bd3ddde2b8"
+    },
+    {
+      "path": "incidents/digital-agency-gss-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2220,
+      "sha256": "ad309daaced2f7a8865c34a39cceb4f36303e6200d4d3fe9f05e72acb583f1fd"
+    },
+    {
+      "path": "incidents/digital-agency-gss-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1986,
+      "sha256": "220012d6d470b056a106ed83e8e02cb30adbe08e6dcee84e4aaf62af9748808a"
+    },
+    {
+      "path": "incidents/discord-support-vendor-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4442,
+      "sha256": "a2eb6b5dc079d52c2a226a83f502a2f554dd90e3c806b9c38900f91317a02895"
+    },
+    {
+      "path": "incidents/discord-support-vendor-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2675,
+      "sha256": "e842cfd44ab6bfa1ee7c528786497a7307bc79013580470010b3f58ec5837ed9"
+    },
+    {
+      "path": "incidents/discord-support-vendor-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2252,
+      "sha256": "b0d880551fc1b552a145fe3f5958b4a2a0303713768c271a1388651614572657"
+    },
+    {
+      "path": "incidents/equifax-2017.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4122,
+      "sha256": "061f9c282060299e56695bdc5c7d6f5a049334f0a13579a650637ed7ae9795d6"
+    },
+    {
+      "path": "incidents/equifax-2017.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2369,
+      "sha256": "ad1c8a0b9d9a7d7503dfc821f8b5296463db0feddc3cb8d15033b58b22272ab1"
+    },
+    {
+      "path": "incidents/equifax-2017.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2075,
+      "sha256": "c100ed303c41fc45a978cb146185476774e1fdd7f3e2c5998e7492a468c45a74"
+    },
+    {
+      "path": "incidents/forticloud-sso-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4171,
+      "sha256": "1a191a3393eedbbed9ee0ea8450e2e8bb4b02712a8e91e18f9f6d3603757cba5"
+    },
+    {
+      "path": "incidents/forticloud-sso-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2421,
+      "sha256": "781a1ef773a486cab9075eadf0aec95646a08dbb918a037bb81fe22556d4b6ad"
+    },
+    {
+      "path": "incidents/forticloud-sso-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2153,
+      "sha256": "df7574bfbc6057a8fac583336bfa69992e34e989f5cc79cf864ce7af3744016a"
+    },
+    {
+      "path": "incidents/gainsight-oauth-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4858,
+      "sha256": "fd91ff388a21130c44f7e0caff1a8fb3f05480b27ff2d87b3cd612028190d0e4"
+    },
+    {
+      "path": "incidents/gainsight-oauth-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2946,
+      "sha256": "f5acc9bf874fe4358006e1d21e7bd5a400a9b884099d8f17c00ca78e7460e0e6"
+    },
+    {
+      "path": "incidents/gainsight-oauth-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2502,
+      "sha256": "414a3c521c1cdd0d05c009ba1b9baa9f643cfac6587ac92c1b72276bb67be041"
+    },
+    {
+      "path": "incidents/gyazo-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4415,
+      "sha256": "f939296d84d40b5d29fabc2c3e8dd43c927be9b9bd2cc039e481b8aa552624bf"
+    },
+    {
+      "path": "incidents/gyazo-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2585,
+      "sha256": "2b20f46d50dff988d942160fa7bfa2cef6d6119ffe64b81ce6fddf3e8fb071f6"
+    },
+    {
+      "path": "incidents/gyazo-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2250,
+      "sha256": "fa97b4d5223245bf15a3bc9ad4f44d001c1b8c92882f7581ecf0f14787a64263"
+    },
+    {
+      "path": "incidents/kddi-isp-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4183,
+      "sha256": "ed360ee32843bcf276e105e254a09b0028b698ff6a24cd5cbf0b2a92896e8002"
+    },
+    {
+      "path": "incidents/kddi-isp-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2510,
+      "sha256": "0886f8ed47ed0938c447d570c1ac60cbccbc4aba294355393ca4fcf12a95e245"
+    },
+    {
+      "path": "incidents/kddi-isp-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2223,
+      "sha256": "44cf4808e014befe45f5e25d69a409b2e2aaf24f6ab5bd1dd8edc7f15ca29342"
+    },
+    {
+      "path": "incidents/keio-ransomware-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3694,
+      "sha256": "4fa1822d0657b419d0aee5d030c892ee5c5dbaae05a4c3bf3ff7208693a2c72a"
+    },
+    {
+      "path": "incidents/keio-ransomware-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2164,
+      "sha256": "0a146c324fff07eea343e75ad3d081d4062b58ec0501d9434d66228a97497dc2"
+    },
+    {
+      "path": "incidents/keio-ransomware-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1854,
+      "sha256": "94a5d9b432929f6c1d805090a678392f244bb6407603c6fbfba1df6ea802d9a7"
+    },
+    {
+      "path": "incidents/metabase-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 5539,
+      "sha256": "a849d1395c041968d2a42148b37e3adedbd8c6ee53ba48c42608bc883fb98c2e"
+    },
+    {
+      "path": "incidents/metabase-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 3055,
+      "sha256": "64227f891d07e51fcfabcc821887354f0cdbb3d87de74232d18cca8bb0fd2b7e"
+    },
+    {
+      "path": "incidents/metabase-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2744,
+      "sha256": "98d2c9be7ef1b901d6fbb3e863441f262e9ea8a9cf810c4dff00d6aee8d50663"
+    },
+    {
+      "path": "incidents/moveit-2023.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4651,
+      "sha256": "fd8ccc4766b056e4e28909243ca103d53be45f8aa40715f0712b1b1ce0f3f954"
+    },
+    {
+      "path": "incidents/moveit-2023.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2664,
+      "sha256": "73496b52dfb659ed500becffa2f773fd54f45106be5c3821af653f9623dacb8a"
+    },
+    {
+      "path": "incidents/moveit-2023.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2378,
+      "sha256": "d7d05fecc5f8e510716045223628f080e2adf8ba6737ebf404cfe004575441ab"
+    },
+    {
+      "path": "incidents/nidek-website-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4685,
+      "sha256": "fa325bdb77a368cb6f6280e71774c05c57f6ebd65daf2aa5ee0e53b14db94faa"
+    },
+    {
+      "path": "incidents/nidek-website-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2792,
+      "sha256": "7b622ef00887157216585c8aa7dbe21b53407156afc401406d152732430a8af2"
+    },
+    {
+      "path": "incidents/nidek-website-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2296,
+      "sha256": "165ddeecb404d37835d7af858d3a7c29ce9a0ebe752b8083097d1917d2e60b62"
+    },
+    {
+      "path": "incidents/nishiyama-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3728,
+      "sha256": "65df91c86b6a42f56db75914af62bcbbc9ec0908601393251ccf1cbc81f7a8f0"
+    },
+    {
+      "path": "incidents/nishiyama-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2176,
+      "sha256": "b25231c702be3cbaf42c4590ca63816342b32e3aaa4adbea3714e309fd4902b7"
+    },
+    {
+      "path": "incidents/nishiyama-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1900,
+      "sha256": "25d260e8909797b835bc22d11e6ad1b724956717575a5944ec04947135536d2f"
+    },
+    {
+      "path": "incidents/okta-support-2023.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4730,
+      "sha256": "fe83d3ca71e28bb67783da5b6e5d23512658c8e6c27309bc5c9bbb9e045fbf33"
+    },
+    {
+      "path": "incidents/okta-support-2023.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2610,
+      "sha256": "a9d9a4c232b98498d491ff5ce991dcf38d124231d6638588587cd750287029cb"
+    },
+    {
+      "path": "incidents/okta-support-2023.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2185,
+      "sha256": "046a8a7618b81303223d72a18e4db774331f63744e4b5ca68d99fbb8a7993005"
+    },
+    {
+      "path": "incidents/openai-huggingface-eval-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 5384,
+      "sha256": "efe22a9350f97e856dc59c06f537430c348dd76127ded66a721dd0e63b9519d6"
+    },
+    {
+      "path": "incidents/openai-huggingface-eval-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 3023,
+      "sha256": "3cbbd4f3d446f6bac13d0ba68e340d62b708a57bb6ae95eb06e35d45cd1347f7"
+    },
+    {
+      "path": "incidents/openai-huggingface-eval-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2769,
+      "sha256": "9e569d2cc43220b45d6382877c9e7b49d1c0d6e076b9d41bd19098e0832506c0"
+    },
+    {
+      "path": "incidents/openai-mixpanel-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 5030,
+      "sha256": "f8f6ad1722c70b0c8e049e858500c42fd786a90ee72259a2ebca01f4ccceea43"
+    },
+    {
+      "path": "incidents/openai-mixpanel-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 3019,
+      "sha256": "ba840583a5ad921a04c7330b5e95529b1034c9fa1ad69cd8e180f2028f11e6c1"
+    },
+    {
+      "path": "incidents/openai-mixpanel-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2521,
+      "sha256": "0a0be2d891d1b9006a3c812a92fa4cac47476088b86a9c14a4ae62cd77c34c67"
+    },
+    {
+      "path": "incidents/postman-shai-hulud-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4693,
+      "sha256": "812cb879f28ce567adff6ea33e918e76050b0515d7a27162827bdd5480d12889"
+    },
+    {
+      "path": "incidents/postman-shai-hulud-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2796,
+      "sha256": "fa34f9f9dcf6c78910162b4cae4896675f661c6d78492a8fed7b649750ffd36e"
+    },
+    {
+      "path": "incidents/postman-shai-hulud-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2274,
+      "sha256": "63a19ce4c6c8fba752b56e4f8bb03524a4bc2ad26c7077e2b56bf528f2872941"
+    },
+    {
+      "path": "incidents/prontest-cloud-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3785,
+      "sha256": "5e5301fb6e36faa042503d5fab84b004108cdb12530e67ae7a6b828748975e1b"
+    },
+    {
+      "path": "incidents/prontest-cloud-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2227,
+      "sha256": "7a476b25536592f21984a1836b247fbf7a1ea518316defaebdffdb4eb521a7b9"
+    },
+    {
+      "path": "incidents/prontest-cloud-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1934,
+      "sha256": "dcc8873d50e69f541f7dac26c8d9f201fa2860869cd7656622317d93c31fa056"
+    },
+    {
+      "path": "incidents/quick-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3644,
+      "sha256": "d703278bf0ccafd5ddd738b5c27d84e1d31b75a0f46323056d7e57cb4c38e782"
+    },
+    {
+      "path": "incidents/quick-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2140,
+      "sha256": "673fbb1f8df1cb5fb7bf7a67480103a62f34109034c590ad1c511e103c00657b"
+    },
+    {
+      "path": "incidents/quick-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1829,
+      "sha256": "50544a56458b1a936debd29bd2d51bf0821887cd49e03d68311e82e4e3ea80f0"
+    },
+    {
+      "path": "incidents/react2shell-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4327,
+      "sha256": "bfcb117efa56cd013659934375de6433406c39b5821c74fb5a93c8c3db41ebe7"
+    },
+    {
+      "path": "incidents/react2shell-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2603,
+      "sha256": "58f64d1ef832f7049bb1fa00df5f92aedc5f73e13f3662ff09bf7ed3ad4ef6ec"
+    },
+    {
+      "path": "incidents/react2shell-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2345,
+      "sha256": "38e3ae79f483a337a3c82b83d8e8328f157348cdb63e15d7579ab42d160513ed"
+    },
+    {
+      "path": "incidents/rust-arrayref-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4179,
+      "sha256": "2ba034bfa57c57577e28c5ddcf1517b62e211f18afa8c9d0c7b3d5ef5e0ce416"
+    },
+    {
+      "path": "incidents/rust-arrayref-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2432,
+      "sha256": "dcd965b87d053f0fd4df235817035f8668b7cfd93153e9b7b6b03a534a310ebd"
+    },
+    {
+      "path": "incidents/rust-arrayref-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2144,
+      "sha256": "1dc162f51fa9dc15f8b92ece99b3d1168cc14d5506e08c8645734b9e66d59c18"
+    },
+    {
+      "path": "incidents/sakura-billing-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4054,
+      "sha256": "f92be7e31b8b4c3836074334d0586afe25f4bf62c5343d5ee317da17a917ad25"
+    },
+    {
+      "path": "incidents/sakura-billing-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2407,
+      "sha256": "0efeaa56b4707de1020bf7342977f9d94dc5a1e95962e078086d21dc176c52ce"
+    },
+    {
+      "path": "incidents/sakura-billing-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2103,
+      "sha256": "9a48e095d6b23c467795fc4a5393f4c24859932361fd9c6279bf68387be902fd"
+    },
+    {
+      "path": "incidents/sakura-hosting-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3832,
+      "sha256": "5920d835d68a5908072e11688052e21234ed8116b4f7454b9dc89b34849d99fb"
+    },
+    {
+      "path": "incidents/sakura-hosting-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2262,
+      "sha256": "38d4586c69c86b39c32bec09e7626d5406b64f480eee0e0d777002b9ee3870d9"
+    },
+    {
+      "path": "incidents/sakura-hosting-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2004,
+      "sha256": "ebc9ed34a003e5844d4c6d7b090440cea8597c197b9ac1acdf75cda11cf367c6"
+    },
+    {
+      "path": "incidents/snowflake-unc5537-2024.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4338,
+      "sha256": "a53ad2d08818fa4020a4fbf9d586dfd0657d16ebcf7a4897294254e6a0312a6b"
+    },
+    {
+      "path": "incidents/snowflake-unc5537-2024.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2494,
+      "sha256": "a31a68ba91192d6baeb7702a52d0e401846a15e4215c86386cfa77757d021d9e"
+    },
+    {
+      "path": "incidents/snowflake-unc5537-2024.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2163,
+      "sha256": "c0c9c64202e26262c3ec2dcd92274c0ef8ff2e8eb26d3fa6b0bf878c2362b07a"
+    },
+    {
+      "path": "incidents/temairazu-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3875,
+      "sha256": "0ea3d488f6cf4272eb33ca0471354ad1dd1f5a54fb5fda3cf43200cd54f3fb0d"
+    },
+    {
+      "path": "incidents/temairazu-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2216,
+      "sha256": "f37d77745efb016b6e542126d212cc5551d83bbe1cabfcb384e40dbcba63563c"
+    },
+    {
+      "path": "incidents/temairazu-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2026,
+      "sha256": "5b172b37b824f6bda28361bf19d2ca54abc0bb9645e9ee23dc462135afc85ff1"
+    },
+    {
+      "path": "incidents/times-car-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4125,
+      "sha256": "c5032af10162bfd5e49b06ad44890dc9f3213a07fd32da14cdd25ee19029d923"
+    },
+    {
+      "path": "incidents/times-car-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2393,
+      "sha256": "4cf921ca0f632de679383bc61af1fcc2b2514b6e4a7c3b2b90cebcb02da62e09"
+    },
+    {
+      "path": "incidents/times-car-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2238,
+      "sha256": "085a7f0154f09c259153dfadbb836df69b337d67fcaa081b5d5467ef2f6cf565"
+    },
+    {
+      "path": "incidents/toyota-cloud-2023.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4365,
+      "sha256": "c417a936688be51dcc90462995935cee9f534449001696db8e7b093a395abb1d"
+    },
+    {
+      "path": "incidents/toyota-cloud-2023.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2435,
+      "sha256": "fd3ad7fa4aaf55735f759c36d1e71763c54753fd8cddb7a2412a8ba65bcb2654"
+    },
+    {
+      "path": "incidents/toyota-cloud-2023.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2102,
+      "sha256": "1d2b5f830ece52c8b5b0abf80ee5d1b060c9ff12a284a57db7ec7d9ce4bd7944"
+    },
+    {
+      "path": "incidents/toyota-github-2022.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4224,
+      "sha256": "94e29369751c77c8a4e30344585f7d28ce8a62f32bb38269ab3e0380cf5284c9"
+    },
+    {
+      "path": "incidents/toyota-github-2022.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2390,
+      "sha256": "fe4000650eae96edfdca20038172ad414b086f78e2ce71529b846a58d2fc4b84"
+    },
+    {
+      "path": "incidents/toyota-github-2022.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2001,
+      "sha256": "3f41bec968de438619cecb1bbfc6fde61c805497748549d94aab45094e22b359"
+    },
+    {
+      "path": "incidents/trivy-supply-chain-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4873,
+      "sha256": "c72524e4f5b0f031f0bbf13678b19f9f76bf12212a566c410ef8e9cdcfcc0c03"
+    },
+    {
+      "path": "incidents/trivy-supply-chain-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2880,
+      "sha256": "a88452fc2f2a24463f08a0abe56ae83c03d60704e156738992bbcb657bd85364"
+    },
+    {
+      "path": "incidents/trivy-supply-chain-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2499,
+      "sha256": "990734c4606c8c58f07663366e89a41414aa99ce1e074177937cc22a92c0b940"
+    },
+    {
+      "path": "incidents/uber-2022.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3922,
+      "sha256": "7b8f7e758eff36c80f09bbf771cbb8813fc37a4f16fa9023bfd69da6ca425bd6"
+    },
+    {
+      "path": "incidents/uber-2022.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2200,
+      "sha256": "16be6a95b53fb0c7f27e8f1f4cb4be4e000cccb99ef9483f08c01b9be28b9e0b"
+    },
+    {
+      "path": "incidents/uber-2022.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1891,
+      "sha256": "0b040217a22b66d1d5abbb93d1c8190f537ca1eb6ceaaec0ffb6975961a76ce0"
+    },
+    {
+      "path": "incidents/unit42-ai-assisted-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4484,
+      "sha256": "917ddbc506c38fd3deb59ff1b94c0e21537cc04dbb11f1d8884d54cd83d72db6"
+    },
+    {
+      "path": "incidents/unit42-ai-assisted-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2620,
+      "sha256": "6893c1a756be6c9c938c7d2b9c092c01025327b01e3a5569818ef574824f4bb1"
+    },
+    {
+      "path": "incidents/unit42-ai-assisted-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2275,
+      "sha256": "6fc51566ed512176b714525d0efd2a6f357753fe5670fb8279f5705095cc43ce"
+    },
+    {
+      "path": "incidents/voising-bi-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3738,
+      "sha256": "de9b360533fb7a972fd3feda19dd49f8ee6c701ccee25e213ea455d4a5f60b11"
+    },
+    {
+      "path": "incidents/voising-bi-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2173,
+      "sha256": "24aafe9c6eee1eac18cf0451439c1b6b22579f3dea6a5405de71b5d4dec7ada8"
+    },
+    {
+      "path": "incidents/voising-bi-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1898,
+      "sha256": "91de079ff11115394c5743909d314e8ce643b1861412c6c94e3e9949e30d17c7"
+    },
+    {
+      "path": "packs/ai-agent.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 3507,
+      "sha256": "bad353de0f0e54df29b2b7f0a4d08a0e27acaeb3b3d2f51f7f7a99aa17e0554f"
+    },
+    {
+      "path": "packs/ai-agent.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 3030,
+      "sha256": "9a6432b1647a369e22f06120a53806d1ced4ee45f602e69b3d786e3e9c8a5a34"
+    },
+    {
+      "path": "packs/ci.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 10084,
+      "sha256": "7f67632aa69d42cc288865c3dd6bd450f36ea7c6dabfec1c0bb7ae14a2686469"
+    },
+    {
+      "path": "packs/ci.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 8775,
+      "sha256": "febfc98a06c33b985d03cae4debe156ded5ea348ed367f04c5c280b491e4aa05"
+    },
+    {
+      "path": "packs/cloud.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 13505,
+      "sha256": "22a911d5f6fbb38d3497a78e1cc7886a083ee56c0087d3245d6145d802da7843"
+    },
+    {
+      "path": "packs/cloud.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 11949,
+      "sha256": "a92b3ef3d2dae0c5d511bcc56adf2ec33ac6db1788d3fe4f6656657aee76911f"
+    },
+    {
+      "path": "packs/containers.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2574,
+      "sha256": "c3f7b9a99df7476cb86d7ada517b69ab35b70d3dc60475e0c52fbf07679f4bd3"
+    },
+    {
+      "path": "packs/containers.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2132,
+      "sha256": "7ec475dbcc2be916061ebb481554be6a56e0a27912859b0a7451be5695b8f985"
+    },
+    {
+      "path": "packs/data-store.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 20684,
+      "sha256": "e7c20f874aea88974b370238a8eaca3183e2a4be9d54629e751be9a5e816a908"
+    },
+    {
+      "path": "packs/data-store.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 18231,
+      "sha256": "de650dd9f7f9d5bf6a91e76c2d194ebd98f24ea8448813bd62c79b162e2dc089"
+    },
+    {
+      "path": "packs/dependencies.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2805,
+      "sha256": "bea769a36f083abb1fa9dc69dda8ca2075341fdeb22f74f20d604374ef066253"
+    },
+    {
+      "path": "packs/dependencies.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2369,
+      "sha256": "4f8e2c6822446243fdad1f1971e61bf87fbd6106e28c8274ba4111b9944f7ecc"
+    },
+    {
+      "path": "packs/endpoint.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2418,
+      "sha256": "2f533b1cb728eeff40434388a2ea64c31f87bdb4e9455889f1b604bf91541ea5"
+    },
+    {
+      "path": "packs/endpoint.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2030,
+      "sha256": "76220b7a7e7e0e69e43edcec302d62aca1384b5aa65be89d1ae538e01b562903"
+    },
+    {
+      "path": "packs/identity.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 14975,
+      "sha256": "ba3c70ef543e550859a1efbf9bb030a407b4e3b15d7e0e067514b2918931e7b3"
+    },
+    {
+      "path": "packs/identity.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 13142,
+      "sha256": "fe0639258172e07b5763c5f031f7165a5a677c84f7aad14ce5f57d8d9d2e0f8c"
+    },
+    {
+      "path": "packs/repositories.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2576,
+      "sha256": "53f03f998217165c5433653abe335a0a9408648cf13d7aaf75133936d8a65be4"
+    },
+    {
+      "path": "packs/repositories.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2134,
+      "sha256": "4faffa1add25e6a9cfd5a1024b8b67b7933a22a0c2cab181aef73d9d8995671b"
+    },
+    {
+      "path": "packs/support.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 7119,
+      "sha256": "148d8ed765afd2b859c0f0eb54d1f279f0d9c120ceb32c9801e7cff10e20d824"
+    },
+    {
+      "path": "packs/support.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 6176,
+      "sha256": "227f45fe10187b9d85168957e405d1848a4a74e0c2742a894a6defa889f5e095"
+    },
+    {
+      "path": "packs/web-app.ja.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 9802,
+      "sha256": "0fc7d5867526dda7de384d490e6fb1b95ac3f90a40451b28d8e8cc5b761d4173"
+    },
+    {
+      "path": "packs/web-app.en.md",
+      "kind": "pack",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 8352,
+      "sha256": "cfbc30e08f98d52ac2d13a7f23ccf45941e090de083f092d724348f22e11e7b1"
+    },
+    {
+      "path": "start-here.ja.md",
+      "kind": "quickstart",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 5106,
+      "sha256": "1e8a86e834b55d60767ec8ee66c2957b9dcaae5c837550dc98def3c2cc716c0e"
+    },
+    {
+      "path": "llms-full.ja.txt",
+      "kind": "full-text",
+      "format": "text",
+      "locale": "ja",
+      "bytes": 142324,
+      "sha256": "8c4be731fa865519aaf21afe6527f5526cbc04888ec0b07d65e56bec334fe9c4"
+    },
+    {
+      "path": "start-here.en.md",
+      "kind": "quickstart",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 4253,
+      "sha256": "f1d8252791ac6adf069637282f3fcc462d1bc2170bb7723eff6db608559fb702"
+    },
+    {
+      "path": "llms-full.txt",
+      "kind": "full-text",
+      "format": "text",
+      "locale": "en",
+      "bytes": 123919,
+      "sha256": "2acc13b4a08e4bfd9710b4fb7c934362907ae87d2cc63b59846db44d53887e99"
+    },
+    {
+      "path": "llms.txt",
+      "kind": "entry",
+      "format": "text",
+      "bytes": 2102,
+      "sha256": "c100e6404277e9d15aeb291080c8ac8757a8261a93a3752444f4eedd0a8342be"
+    }
+  ],
+  "records": [
+    {
+      "kind": "rule",
+      "id": "SEC-001",
+      "hash": "8e6c53174bef8ca55cea3f34e97f1aad0f6f0c55a15111ba9f2df8613d55fe55",
+      "json": "rules/SEC-001.json",
+      "markdown": {
+        "ja": "rules/SEC-001.ja.md",
+        "en": "rules/SEC-001.en.md"
+      },
+      "surfaces": [
+        "dependencies",
+        "web-app"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-002",
+      "hash": "fcf58a1b53fff45725fbbe1f19fa49d638d0ea143a2444428247b31f3c62de1a",
+      "json": "rules/SEC-002.json",
+      "markdown": {
+        "ja": "rules/SEC-002.ja.md",
+        "en": "rules/SEC-002.en.md"
+      },
+      "surfaces": [
+        "identity"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-003",
+      "hash": "fa4a4a16010e066b0c6208029e5cf0d1e65b0a96a18bfd0463081b7681220a25",
+      "json": "rules/SEC-003.json",
+      "markdown": {
+        "ja": "rules/SEC-003.ja.md",
+        "en": "rules/SEC-003.en.md"
+      },
+      "surfaces": [
+        "endpoint",
+        "identity",
+        "support"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-004",
+      "hash": "0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6",
+      "json": "rules/SEC-004.json",
+      "markdown": {
+        "ja": "rules/SEC-004.ja.md",
+        "en": "rules/SEC-004.en.md"
+      },
+      "surfaces": [
+        "repositories",
+        "containers",
+        "ci",
+        "support"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-005",
+      "hash": "4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0",
+      "json": "rules/SEC-005.json",
+      "markdown": {
+        "ja": "rules/SEC-005.ja.md",
+        "en": "rules/SEC-005.en.md"
+      },
+      "surfaces": [
+        "identity",
+        "ci",
+        "cloud",
+        "data-store"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-006",
+      "hash": "ef322bf44c1b8241baf2b84ce08f6422b46075b59a85e88eb927713bbef64e8a",
+      "json": "rules/SEC-006.json",
+      "markdown": {
+        "ja": "rules/SEC-006.ja.md",
+        "en": "rules/SEC-006.en.md"
+      },
+      "surfaces": [
+        "cloud",
+        "data-store",
+        "web-app"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-007",
+      "hash": "24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5",
+      "json": "rules/SEC-007.json",
+      "markdown": {
+        "ja": "rules/SEC-007.ja.md",
+        "en": "rules/SEC-007.en.md"
+      },
+      "surfaces": [
+        "ci"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-008",
+      "hash": "f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464",
+      "json": "rules/SEC-008.json",
+      "markdown": {
+        "ja": "rules/SEC-008.ja.md",
+        "en": "rules/SEC-008.en.md"
+      },
+      "surfaces": [
+        "identity",
+        "cloud",
+        "data-store",
+        "ci"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-009",
+      "hash": "ee5ca8e3ff31cae2c3818e2446db3453376e07ac498d71a4b9bd54aa2678f745",
+      "json": "rules/SEC-009.json",
+      "markdown": {
+        "ja": "rules/SEC-009.ja.md",
+        "en": "rules/SEC-009.en.md"
+      },
+      "surfaces": [
+        "identity",
+        "data-store",
+        "support"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-010",
+      "hash": "057e3ecf2e5f444da0fa1a37d2696bce79690ae193150a0ea534ec07542be6ff",
+      "json": "rules/SEC-010.json",
+      "markdown": {
+        "ja": "rules/SEC-010.ja.md",
+        "en": "rules/SEC-010.en.md"
+      },
+      "surfaces": [
+        "web-app",
+        "data-store"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-011",
+      "hash": "c825b2408ad9c74579cd404c68b6cb9daa00d14601a42ba32b6b60fac4afcbf0",
+      "json": "rules/SEC-011.json",
+      "markdown": {
+        "ja": "rules/SEC-011.ja.md",
+        "en": "rules/SEC-011.en.md"
+      },
+      "surfaces": [
+        "ai-agent"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-012",
+      "hash": "a263b1e54e292b97464b5b6e1494a948a77571813c642c26eec1ed994473b833",
+      "json": "rules/SEC-012.json",
+      "markdown": {
+        "ja": "rules/SEC-012.ja.md",
+        "en": "rules/SEC-012.en.md"
+      },
+      "surfaces": [
+        "cloud",
+        "data-store"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-013",
+      "hash": "0e16048f65f44638a3e7858bde158f737c2fa74751e5b12580da67ab0a3e7856",
+      "json": "rules/SEC-013.json",
+      "markdown": {
+        "ja": "rules/SEC-013.ja.md",
+        "en": "rules/SEC-013.en.md"
+      },
+      "surfaces": [
+        "cloud",
+        "data-store"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-014",
+      "hash": "40889eb24f568c0135a0c8abe83471c8d3cf585ac435d86a668dbc910a6fc471",
+      "json": "rules/SEC-014.json",
+      "markdown": {
+        "ja": "rules/SEC-014.ja.md",
+        "en": "rules/SEC-014.en.md"
+      },
+      "surfaces": [
+        "web-app",
+        "identity",
+        "data-store"
+      ]
+    },
+    {
+      "kind": "incident",
+      "id": "aflac-japan-2026",
+      "hash": "e7147a302edd53b5d5620ad5861ec3ca6464a90590cb3779fd971d5a8eb2b4a0",
+      "json": "incidents/aflac-japan-2026.json",
+      "markdown": {
+        "ja": "incidents/aflac-japan-2026.ja.md",
+        "en": "incidents/aflac-japan-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "anthropic-claude-code-abuse-2025",
+      "hash": "20d0318c8b3ab9ddede5b6f0dca1923392469c5aeacc7acec2e5544b4522aa64",
+      "json": "incidents/anthropic-claude-code-abuse-2025.json",
+      "markdown": {
+        "ja": "incidents/anthropic-claude-code-abuse-2025.ja.md",
+        "en": "incidents/anthropic-claude-code-abuse-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "anthropic-cyber-evals-2026",
+      "hash": "df22edd6b470df3c7276c13334a0400fb1c2344c796091898bb40b00c80e7654",
+      "json": "incidents/anthropic-cyber-evals-2026.json",
+      "markdown": {
+        "ja": "incidents/anthropic-cyber-evals-2026.ja.md",
+        "en": "incidents/anthropic-cyber-evals-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "askul-2025",
+      "hash": "8807f2dc9a76a9250318dde15e88f1d97a29fa9f39feda176246710b552f4235",
+      "json": "incidents/askul-2025.json",
+      "markdown": {
+        "ja": "incidents/askul-2025.ja.md",
+        "en": "incidents/askul-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "awabank-test-environment-2026",
+      "hash": "274695977d4b0103725da2aef85bb23722b25dde5a57ad8c0d4d2c1e25ee7b74",
+      "json": "incidents/awabank-test-environment-2026.json",
+      "markdown": {
+        "ja": "incidents/awabank-test-environment-2026.ja.md",
+        "en": "incidents/awabank-test-environment-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "axios-npm-2026",
+      "hash": "209e538cd359db5c738022789123f0e56efcc115d5b00ac67d20585ee32bb450",
+      "json": "incidents/axios-npm-2026.json",
+      "markdown": {
+        "ja": "incidents/axios-npm-2026.ja.md",
+        "en": "incidents/axios-npm-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "campfire-2026",
+      "hash": "6ebd0adb88b55b1f734f6be5eb9eb9168c3977c7504da6a2c91087448117eca6",
+      "json": "incidents/campfire-2026.json",
+      "markdown": {
+        "ja": "incidents/campfire-2026.ja.md",
+        "en": "incidents/campfire-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "circleci-2023",
+      "hash": "2d1c93b1f50bbfabd2c13b0abd6cd587cc5dcf2ddb4569710345a43e627a9788",
+      "json": "incidents/circleci-2023.json",
+      "markdown": {
+        "ja": "incidents/circleci-2023.ja.md",
+        "en": "incidents/circleci-2023.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "cloudflare-thanksgiving-2023",
+      "hash": "98665310d09970c4a288fdf4686f8e76fa0483ce3e5f05670bfef949f75001fa",
+      "json": "incidents/cloudflare-thanksgiving-2023.json",
+      "markdown": {
+        "ja": "incidents/cloudflare-thanksgiving-2023.ja.md",
+        "en": "incidents/cloudflare-thanksgiving-2023.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "codecov-2021",
+      "hash": "8eddabe999ec0a13dcb7fa03264b806636affbbbaf6806b6faf99fe164fdb1be",
+      "json": "incidents/codecov-2021.json",
+      "markdown": {
+        "ja": "incidents/codecov-2021.ja.md",
+        "en": "incidents/codecov-2021.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "digital-agency-gss-2026",
+      "hash": "f213edc27fdd0fbcd2d58006757eb9243c43e43797634ac1440d9d22d7be9e9c",
+      "json": "incidents/digital-agency-gss-2026.json",
+      "markdown": {
+        "ja": "incidents/digital-agency-gss-2026.ja.md",
+        "en": "incidents/digital-agency-gss-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "discord-support-vendor-2025",
+      "hash": "30b18dd1c522b297ee64df0dafca09e2a43a0b9575ad64e2a0560d34371c6726",
+      "json": "incidents/discord-support-vendor-2025.json",
+      "markdown": {
+        "ja": "incidents/discord-support-vendor-2025.ja.md",
+        "en": "incidents/discord-support-vendor-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "equifax-2017",
+      "hash": "0954c174783b7f496ec4a924a31369007b98b19efba85df4a6f8e54c2dfa7e5d",
+      "json": "incidents/equifax-2017.json",
+      "markdown": {
+        "ja": "incidents/equifax-2017.ja.md",
+        "en": "incidents/equifax-2017.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "forticloud-sso-2026",
+      "hash": "0a7f90420b23c4dfb973bdcaff05e36e1eb84dc5c20fa128b3a09de3ba9ff80b",
+      "json": "incidents/forticloud-sso-2026.json",
+      "markdown": {
+        "ja": "incidents/forticloud-sso-2026.ja.md",
+        "en": "incidents/forticloud-sso-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "gainsight-oauth-2025",
+      "hash": "6ae22e8b926ab069ccfd74df1b7d2ab4ca50731bf2e538e801468489502b486f",
+      "json": "incidents/gainsight-oauth-2025.json",
+      "markdown": {
+        "ja": "incidents/gainsight-oauth-2025.ja.md",
+        "en": "incidents/gainsight-oauth-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "gyazo-2026",
+      "hash": "dcfbe0fdc99c01508af80909bf27ebcc40c68ff910badfd997a051e6b57dbbbf",
+      "json": "incidents/gyazo-2026.json",
+      "markdown": {
+        "ja": "incidents/gyazo-2026.ja.md",
+        "en": "incidents/gyazo-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "kddi-isp-2026",
+      "hash": "1ce489fa2ebf16936851f2918eefafe2e224aa2f546c6a8bb2730d6397cdc41f",
+      "json": "incidents/kddi-isp-2026.json",
+      "markdown": {
+        "ja": "incidents/kddi-isp-2026.ja.md",
+        "en": "incidents/kddi-isp-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "keio-ransomware-2026",
+      "hash": "9e6952a807de15004a7784a79fa5e92539203b4cea8c847adb576bcd515eef51",
+      "json": "incidents/keio-ransomware-2026.json",
+      "markdown": {
+        "ja": "incidents/keio-ransomware-2026.ja.md",
+        "en": "incidents/keio-ransomware-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "metabase-2026",
+      "hash": "053252ba1c260199433f8a2d6153668f9bde48f01bc0164cb9a05c534d6404f5",
+      "json": "incidents/metabase-2026.json",
+      "markdown": {
+        "ja": "incidents/metabase-2026.ja.md",
+        "en": "incidents/metabase-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "moveit-2023",
+      "hash": "45b350a8a188702b74a004f233526410807f88335b0bca600f2fdba3d548bfef",
+      "json": "incidents/moveit-2023.json",
+      "markdown": {
+        "ja": "incidents/moveit-2023.ja.md",
+        "en": "incidents/moveit-2023.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "nidek-website-2026",
+      "hash": "ccd806ce45a04c06b083881c61fbaec18e1ed24c2a721b9d7de02493c77f4c62",
+      "json": "incidents/nidek-website-2026.json",
+      "markdown": {
+        "ja": "incidents/nidek-website-2026.ja.md",
+        "en": "incidents/nidek-website-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "nishiyama-2026",
+      "hash": "68eb5c7416f2f56fd3f4f2ac4fa0687e7d61f69d46847577f531c1ce0af5304a",
+      "json": "incidents/nishiyama-2026.json",
+      "markdown": {
+        "ja": "incidents/nishiyama-2026.ja.md",
+        "en": "incidents/nishiyama-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "okta-support-2023",
+      "hash": "ce2a745c071cd0822922d4da150d4c8c22b9b85503b2fc9041c1761718ea25de",
+      "json": "incidents/okta-support-2023.json",
+      "markdown": {
+        "ja": "incidents/okta-support-2023.ja.md",
+        "en": "incidents/okta-support-2023.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "openai-huggingface-eval-2026",
+      "hash": "03227e077cca0327d2bac49a95735ea95166b1b5de15e2c64af2b8e36be565c0",
+      "json": "incidents/openai-huggingface-eval-2026.json",
+      "markdown": {
+        "ja": "incidents/openai-huggingface-eval-2026.ja.md",
+        "en": "incidents/openai-huggingface-eval-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "openai-mixpanel-2025",
+      "hash": "0b6f0fec769375ab00c2d6bb0b62379ea04ead5b1745d6db3490b0b8987d7cf5",
+      "json": "incidents/openai-mixpanel-2025.json",
+      "markdown": {
+        "ja": "incidents/openai-mixpanel-2025.ja.md",
+        "en": "incidents/openai-mixpanel-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "postman-shai-hulud-2025",
+      "hash": "f8b1047dbd4c170d0117eafc65394441c2892db067107bafdc7a1c86abf7ea6a",
+      "json": "incidents/postman-shai-hulud-2025.json",
+      "markdown": {
+        "ja": "incidents/postman-shai-hulud-2025.ja.md",
+        "en": "incidents/postman-shai-hulud-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "prontest-cloud-2026",
+      "hash": "2bb95e8ef1b4820d690fa35891f56e2cc7fbc8cdcc29a17ec2ee372684795dca",
+      "json": "incidents/prontest-cloud-2026.json",
+      "markdown": {
+        "ja": "incidents/prontest-cloud-2026.ja.md",
+        "en": "incidents/prontest-cloud-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "quick-2025",
+      "hash": "2af038caa32254c502baaf93e1ff3ab3ac89e5d9c8df1bdb1c7798081907def1",
+      "json": "incidents/quick-2025.json",
+      "markdown": {
+        "ja": "incidents/quick-2025.ja.md",
+        "en": "incidents/quick-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "react2shell-2025",
+      "hash": "e1fdfa5bfd246913e92ba9225eeda9a0f496fe731af6f782f90ea416e924444a",
+      "json": "incidents/react2shell-2025.json",
+      "markdown": {
+        "ja": "incidents/react2shell-2025.ja.md",
+        "en": "incidents/react2shell-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "rust-arrayref-2026",
+      "hash": "636cf32e46b05d55895c1e34fda7bb20010e0d4d7bb0d25a61acf9a5eb673d50",
+      "json": "incidents/rust-arrayref-2026.json",
+      "markdown": {
+        "ja": "incidents/rust-arrayref-2026.ja.md",
+        "en": "incidents/rust-arrayref-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "sakura-billing-2026",
+      "hash": "493c79f96ce4c126392ba6b9db8dff616fe874d06de5eef3f1b56a8b58eed167",
+      "json": "incidents/sakura-billing-2026.json",
+      "markdown": {
+        "ja": "incidents/sakura-billing-2026.ja.md",
+        "en": "incidents/sakura-billing-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "sakura-hosting-2026",
+      "hash": "4991b42d0a8538c21bb12adb878e1168cac61d2b0903cc1252cad66686c2ed89",
+      "json": "incidents/sakura-hosting-2026.json",
+      "markdown": {
+        "ja": "incidents/sakura-hosting-2026.ja.md",
+        "en": "incidents/sakura-hosting-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "snowflake-unc5537-2024",
+      "hash": "24174c9c99c67f8211c4e3c0cf1b613975a33a0eaf02a73d422670a9a81fce03",
+      "json": "incidents/snowflake-unc5537-2024.json",
+      "markdown": {
+        "ja": "incidents/snowflake-unc5537-2024.ja.md",
+        "en": "incidents/snowflake-unc5537-2024.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "temairazu-2026",
+      "hash": "850d08abeb2117646398605c54df2f7e164b985406fc001155792b8eadc716e4",
+      "json": "incidents/temairazu-2026.json",
+      "markdown": {
+        "ja": "incidents/temairazu-2026.ja.md",
+        "en": "incidents/temairazu-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "times-car-2026",
+      "hash": "8de24493d8aada652dfe02055b6cacca57f0cff723ed7906ca65c10e5eaf6331",
+      "json": "incidents/times-car-2026.json",
+      "markdown": {
+        "ja": "incidents/times-car-2026.ja.md",
+        "en": "incidents/times-car-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "toyota-cloud-2023",
+      "hash": "5ff255efcb15fa05449044fc4e4496a8fa03254b7a8e73c959b4c53d01ed6bba",
+      "json": "incidents/toyota-cloud-2023.json",
+      "markdown": {
+        "ja": "incidents/toyota-cloud-2023.ja.md",
+        "en": "incidents/toyota-cloud-2023.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "toyota-github-2022",
+      "hash": "43212999882c7072a980d356ca9ffceb30fb5eb838a0e95b78cceef75be465bb",
+      "json": "incidents/toyota-github-2022.json",
+      "markdown": {
+        "ja": "incidents/toyota-github-2022.ja.md",
+        "en": "incidents/toyota-github-2022.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "trivy-supply-chain-2026",
+      "hash": "cb35a6d0ed024d98b333585f5eb25ad4d4550664ccda998253132a9b849b8169",
+      "json": "incidents/trivy-supply-chain-2026.json",
+      "markdown": {
+        "ja": "incidents/trivy-supply-chain-2026.ja.md",
+        "en": "incidents/trivy-supply-chain-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "uber-2022",
+      "hash": "378245575d4a60d27b27fc4ce0173d340b03aa930b5475fdfc416585e8186914",
+      "json": "incidents/uber-2022.json",
+      "markdown": {
+        "ja": "incidents/uber-2022.ja.md",
+        "en": "incidents/uber-2022.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "unit42-ai-assisted-2026",
+      "hash": "5df080af935d7269cf938146b76266693d1f5759a00b76a1bd874ae11b0741fd",
+      "json": "incidents/unit42-ai-assisted-2026.json",
+      "markdown": {
+        "ja": "incidents/unit42-ai-assisted-2026.ja.md",
+        "en": "incidents/unit42-ai-assisted-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "voising-bi-2026",
+      "hash": "f40d9ec1c382b6866d9556f42e40d033ec17c42a91b6d97397ce952724dccaaa",
+      "json": "incidents/voising-bi-2026.json",
+      "markdown": {
+        "ja": "incidents/voising-bi-2026.ja.md",
+        "en": "incidents/voising-bi-2026.en.md"
+      }
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "ai-agent",
+      "ruleIds": [
+        "SEC-011"
+      ],
+      "markdown": {
+        "ja": "packs/ai-agent.ja.md",
+        "en": "packs/ai-agent.en.md"
+      }
+    },
+    {
+      "id": "ci",
+      "ruleIds": [
+        "SEC-004",
+        "SEC-005",
+        "SEC-007",
+        "SEC-008"
+      ],
+      "markdown": {
+        "ja": "packs/ci.ja.md",
+        "en": "packs/ci.en.md"
+      }
+    },
+    {
+      "id": "cloud",
+      "ruleIds": [
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-012",
+        "SEC-013"
+      ],
+      "markdown": {
+        "ja": "packs/cloud.ja.md",
+        "en": "packs/cloud.en.md"
+      }
+    },
+    {
+      "id": "containers",
+      "ruleIds": [
+        "SEC-004"
+      ],
+      "markdown": {
+        "ja": "packs/containers.ja.md",
+        "en": "packs/containers.en.md"
+      }
+    },
+    {
+      "id": "data-store",
+      "ruleIds": [
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-010",
+        "SEC-012",
+        "SEC-013",
+        "SEC-014"
+      ],
+      "markdown": {
+        "ja": "packs/data-store.ja.md",
+        "en": "packs/data-store.en.md"
+      }
+    },
+    {
+      "id": "dependencies",
+      "ruleIds": [
+        "SEC-001"
+      ],
+      "markdown": {
+        "ja": "packs/dependencies.ja.md",
+        "en": "packs/dependencies.en.md"
+      }
+    },
+    {
+      "id": "endpoint",
+      "ruleIds": [
+        "SEC-003"
+      ],
+      "markdown": {
+        "ja": "packs/endpoint.ja.md",
+        "en": "packs/endpoint.en.md"
+      }
+    },
+    {
+      "id": "identity",
+      "ruleIds": [
+        "SEC-002",
+        "SEC-003",
+        "SEC-005",
+        "SEC-008",
+        "SEC-009",
+        "SEC-014"
+      ],
+      "markdown": {
+        "ja": "packs/identity.ja.md",
+        "en": "packs/identity.en.md"
+      }
+    },
+    {
+      "id": "repositories",
+      "ruleIds": [
+        "SEC-004"
+      ],
+      "markdown": {
+        "ja": "packs/repositories.ja.md",
+        "en": "packs/repositories.en.md"
+      }
+    },
+    {
+      "id": "support",
+      "ruleIds": [
+        "SEC-003",
+        "SEC-004",
+        "SEC-009"
+      ],
+      "markdown": {
+        "ja": "packs/support.ja.md",
+        "en": "packs/support.en.md"
+      }
+    },
+    {
+      "id": "web-app",
+      "ruleIds": [
+        "SEC-001",
+        "SEC-006",
+        "SEC-010",
+        "SEC-014"
+      ],
+      "markdown": {
+        "ja": "packs/web-app.ja.md",
+        "en": "packs/web-app.en.md"
+      }
+    }
+  ]
+}

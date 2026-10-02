@@ -1,0 +1,114 @@
+{
+  "id": "prontest-cloud-2026",
+  "organization": "Prontest",
+  "title": {
+    "ja": "Prontest：クラウドの計算資源を不正利用",
+    "en": "Prontest: unauthorized cloud compute use"
+  },
+  "summary": {
+    "ja": "クラウド環境への不正アクセスにより、計算資源が不正利用されました。同社は、外部に公開した管理サーバーの脆弱性が原因だった可能性が高いと説明しています。",
+    "en": "Unauthorized cloud access enabled compute misuse. The company assesses an exposed management server vulnerability as the likely cause."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-04-09",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown",
+    "configuration"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "公開された管理サーバーの脆弱性が侵入原因だった可能性が高いと報告しました。",
+        "en": "An exposed management server vulnerability was assessed as the likely entry point."
+      },
+      "status": "inferred",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "原因"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "計算資源の不正利用を確認しました。データベースへのアクセスや個人情報の悪用は確認されていません。",
+        "en": "Compute misuse was confirmed; database access or personal-information misuse was not observed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "調査結果"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-04-09",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "不正資源の停止・削除、認証情報の再発行、MFAと監視の強化を公表しました。",
+        "en": "Prontest reported stopping and deleting abused resources, credential reissuance, and stronger MFA and monitoring."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "実施済みの対策"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入原因は推定のため、パッチ放置とは判断できません。管理サーバーの公開範囲とクラウド権限を確認します。",
+      "en": "The entry assessment does not establish neglected patching; inspect management exposure and cloud privileges."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "製品名、CVE、修正提供時期、侵入開始日は不明です。3月24日は発見日です。",
+      "en": "Product, CVE, patch timing, and intrusion start are unknown; March 24 is the detection date."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "弊社クラウド環境における不正アクセスと対応状況のお知らせ",
+      "url": "https://prontest.co.jp/news/notice-of-unauthorized-access-in-our-cloud-environment-and-response-status/",
+      "publisher": "Prontest",
+      "publishedAt": "2026-04-09",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-002",
+    "SEC-005",
+    "SEC-006",
+    "SEC-009"
+  ]
+}

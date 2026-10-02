@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogHash": "19cc1cc00255b5194ac17f4de9f546678e925162ab667d0e14596766a7dae515",
+  "environment": "example-project",
+  "environmentRevision": "replace-with-actual-environment-revision",
+  "checkedAt": "2026-10-02T00:00:00Z",
+  "results": [
+    {
+      "ruleId": "SEC-001",
+      "ruleHash": "8e6c53174bef8ca55cea3f34e97f1aad0f6f0c55a15111ba9f2df8613d55fe55",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-002",
+      "ruleHash": "fcf58a1b53fff45725fbbe1f19fa49d638d0ea143a2444428247b31f3c62de1a",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-003",
+      "ruleHash": "fa4a4a16010e066b0c6208029e5cf0d1e65b0a96a18bfd0463081b7681220a25",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-004",
+      "ruleHash": "0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-005",
+      "ruleHash": "4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-006",
+      "ruleHash": "ef322bf44c1b8241baf2b84ce08f6422b46075b59a85e88eb927713bbef64e8a",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-007",
+      "ruleHash": "24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-008",
+      "ruleHash": "f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-009",
+      "ruleHash": "ee5ca8e3ff31cae2c3818e2446db3453376e07ac498d71a4b9bd54aa2678f745",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-010",
+      "ruleHash": "057e3ecf2e5f444da0fa1a37d2696bce79690ae193150a0ea534ec07542be6ff",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-011",
+      "ruleHash": "c825b2408ad9c74579cd404c68b6cb9daa00d14601a42ba32b6b60fac4afcbf0",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-012",
+      "ruleHash": "a263b1e54e292b97464b5b6e1494a948a77571813c642c26eec1ed994473b833",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-013",
+      "ruleHash": "0e16048f65f44638a3e7858bde158f737c2fa74751e5b12580da67ab0a3e7856",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-014",
+      "ruleHash": "40889eb24f568c0135a0c8abe83471c8d3cf585ac435d86a668dbc910a6fc471",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "SEC-002",
+  "version": "1.2.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "MFAの方式と適用漏れを確認する",
+    "en": "Inspect MFA methods and coverage"
+  },
+  "summary": {
+    "ja": "人がログインする管理画面・SSO・データ基盤。サービスアカウントは別の認証制御として扱います。",
+    "en": "Human access to administration, SSO, and data platforms. Inspect service identities separately."
+  },
+  "category": "credentials",
+  "surfaces": [
+    "identity"
+  ],
+  "applicability": {
+    "ja": "人がログインする管理画面・SSO・データ基盤。サービスアカウントは別の認証制御として扱います。",
+    "en": "Human access to administration, SSO, and data platforms. Inspect service identities separately."
+  },
+  "targets": [
+    {
+      "ja": "IdP・SaaSの認証ポリシーと委託先アカウント",
+      "en": "IdP/SaaS policies and contractor accounts"
+    },
+    {
+      "ja": "回復手段・例外設定・管理者認証",
+      "en": "Recovery methods, exceptions, administrator authentication"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "MFA必須の範囲を管理者・委託先・例外まで確認し、未登録を見落とさない。",
+      "en": "Check enforcement for administrators, contractors, exceptions, and unenrolled accounts."
+    },
+    {
+      "ja": "プッシュ承認の連打やフィッシングに対する制御と、回復経路が認証を迂回しないか確認する。",
+      "en": "Inspect repeated-prompt and phishing controls, including recovery paths."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "対応可能な環境でフィッシング耐性のある認証を採用し、例外には期限と担当者を設定する。",
+      "en": "Adopt phishing-resistant authentication where supported; assign an owner and expiry to exceptions."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "対象アカウントの適用率と、未認証の管理操作が拒否される検証を残す。",
+      "en": "Record coverage and evidence that administrative access without required authentication is rejected."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "MFAは端末侵害や認証後のセッション窃取を防ぐ保証ではありません。IdPにアクセスできなければ未確認です。",
+      "en": "MFA does not guarantee protection against compromised endpoints or stolen sessions. Missing IdP access means unverified."
+    }
+  ],
+  "incidentIds": [
+    "anthropic-cyber-evals-2026",
+    "askul-2025",
+    "awabank-test-environment-2026",
+    "digital-agency-gss-2026",
+    "forticloud-sso-2026",
+    "gainsight-oauth-2025",
+    "nishiyama-2026",
+    "openai-mixpanel-2025",
+    "prontest-cloud-2026",
+    "quick-2025",
+    "snowflake-unc5537-2024",
+    "uber-2022"
+  ],
+  "references": [
+    {
+      "title": "Cloudflare: phishing attack blocked",
+      "url": "https://blog.cloudflare.com/2022-07-sms-phishing-attacks/"
+    }
+  ],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

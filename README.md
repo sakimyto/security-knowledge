@@ -6,6 +6,8 @@
 
 事故全体の統計や安全性の保証には使いません。トヨタの2事案は公開状態・漏洩可能性の記録であり、第三者の侵害が確認された記録とは区別しています。
 
+- [AI・サービスへの取り込み方](docs/consuming.md)（URL・添付・1件ずつの点検・JSONL）
+- [Jev / TypeSafe AIの接続手順](docs/jev.md)（選択式質問と応答検証）
 - AI向け配布データ：[data/llms.txt](data/llms.txt)
 - [事故DBと点検ルールのJSON](data/catalog.json)
 - サイト連携時の入口：`/security`（英語は `/en/security`）
@@ -25,12 +27,13 @@ node --test scripts/*.test.mjs
 node scripts/build.mjs
 ```
 
-`dist/` に `catalog.json`、`index.json`、`llms.txt`、3種類のJSON Schemaを生成します。JSONの配列順はファイル名で固定し、ビルド時刻は入れません。同じデータからは同じハッシュを生成します。
+`dist/` に全データのJSON、個別の日本語・英語Markdown、JSONL、分野別資料、使い方の案内、5種類のJSON Schemaを生成します。`discovery.json` がファイルのパス・形式・サイズ・ハッシュをまとめています。JSONの配列順はファイル名で固定し、ビルド時刻は入れません。同じデータからは同じハッシュを生成します。
 
 このリポジトリでは配布データを `data/` に保存します。事故やルールを編集したら、以下で配布データも更新してください。閲覧サイトは別実装です。
 
 ```sh
 node scripts/build.mjs --out data
+node scripts/distribution.mjs data
 ```
 
 AIへ渡す公開用の入口は `https://raw.githubusercontent.com/sakimyto/security-knowledge/main/data/llms.txt` です。各ファイルの相対URLはこの入口を基準に解決します。

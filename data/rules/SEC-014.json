@@ -1,0 +1,72 @@
+{
+  "id": "SEC-014",
+  "version": "1.0.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "照会APIの認可と取得量の制御を確認する",
+    "en": "Inspect query authorization and retrieval limits"
+  },
+  "summary": {
+    "ja": "会員・顧客・組織の情報を照会、一覧表示、一括出力するWebアプリやAPI。",
+    "en": "Web apps and APIs that query, list, or export member, customer, or organization information."
+  },
+  "category": "implementation",
+  "surfaces": [
+    "web-app",
+    "identity",
+    "data-store"
+  ],
+  "applicability": {
+    "ja": "利用者のIDや所属組織に応じて取得可能なデータが変わる環境。大量照会の制御も対象です。",
+    "en": "Environments where user or organization identity determines accessible data, including bulk-query controls."
+  },
+  "targets": [
+    {
+      "ja": "APIルート・認可処理・組織IDによる絞り込み・DBへの照会",
+      "en": "API routes, authorization, tenant filtering, and database queries"
+    },
+    {
+      "ja": "ページ送り・一括出力・取得量の上限・監視設定",
+      "en": "Pagination, exports, retrieval limits, and monitoring configuration"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "画面の表示制限に加え、各APIが呼び出し元の権限とデータの所属を照合するか確認する。未認証・権限不足・別組織の試験データが拒否されるか、許可されたテスト環境の証拠で確認する。",
+      "en": "Inspect server-side caller and record authorization; use evidence from an authorized test environment for unauthenticated, insufficient-role, and cross-tenant denial."
+    },
+    {
+      "ja": "通常形式のリクエストを繰り返した場合も、利用者・組織ごとの取得量を制限・検知できるか確認する。ページ送りや複数のAPIに分けた取得も試験計画に含める。",
+      "en": "Inspect per-user and per-tenant volume limits and detection, including repeated ordinary requests, pagination, and access spread across endpoints."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "認可をサーバー側で共通化し、業務に合う取得量の上限と通知を設ける。許可された操作の成功と、許可していない照会の拒否を試験データで確認する。",
+      "en": "Centralize server-side authorization and set appropriate limits and alerts; verify allowed and denied queries with synthetic data."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "対象API、権限とデータ所属の組合せ、許可・拒否の試験結果、取得量の上限と通知の証拠を残す。未検査のAPIや一括出力は明記する。",
+      "en": "Record API coverage, role/ownership combinations, allow/deny results, retrieval limits, and alert evidence; identify untested endpoints and exports."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "取得量の制限だけでは認可の欠陥を直せません。本番での大量リクエストや実顧客データへの照会を点検のために実行せず、権限や試験証拠が不足すれば未確認とします。",
+      "en": "Limits do not repair authorization flaws. Do not exercise bulk requests or real customer queries in production; unavailable permissions or test evidence mean unverified."
+    }
+  ],
+  "incidentIds": [
+    "aflac-japan-2026"
+  ],
+  "references": [
+    {
+      "title": "アフラック生命保険：調査結果と再発防止策",
+      "url": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf"
+    }
+  ],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

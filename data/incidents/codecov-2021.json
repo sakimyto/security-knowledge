@@ -1,0 +1,142 @@
+{
+  "id": "codecov-2021",
+  "title": {
+    "ja": "Codecov：イメージ内の鍵からCIスクリプトを改ざん",
+    "en": "Codecov: leaked image credential and CI script tampering"
+  },
+  "organization": "Codecov",
+  "summary": {
+    "ja": "公開Dockerイメージの中間レイヤーにあった鍵が悪用され、Bash Uploaderが改ざんされました。実行した利用者のCI環境変数などが外部へ送信される攻撃でした。",
+    "en": "A credential in a public Docker image layer enabled tampering with the Bash Uploader. The modified script exported CI environment information from affected users."
+  },
+  "occurredAt": "2021-01-31",
+  "disclosedAt": "2021-04-15",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials",
+    "supply-chain"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "公開Dockerイメージの中間レイヤーから、配布物を書き換えられるHMAC鍵が取得されました。",
+        "en": "An HMAC key extracted from an intermediate image layer allowed modification of the distributed uploader."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "Root Cause"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "改ざんされたUploaderは環境変数とGitリモート情報を外部へ送信しました。",
+        "en": "The modified uploader transmitted environment variables and Git remote information."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "About the Event"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2021-01-31",
+      "text": {
+        "ja": "改ざんが始まった時期。",
+        "en": "Beginning of observed script modifications."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2021-04-01",
+      "text": {
+        "ja": "利用者のチェックサム検査を契機に発覚。",
+        "en": "Detected after a customer checksum check."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2021-04-15",
+      "text": {
+        "ja": "事故と利用者向けの対応を公表。",
+        "en": "Disclosure and customer response guidance published."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "recovery",
+      "text": {
+        "ja": "鍵の失効・更新と、公開イメージのビルド方法の変更を実施しました。",
+        "en": "Credentials were revoked and rotated; public image build practices were changed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "Recovery"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "鍵を最終イメージのファイルから消すだけでは、中間レイヤーに残る場合があります。配布物全体とCIの実行権限を点検します。",
+      "en": "Deleting a secret from the final filesystem can leave it in layers. Inspect distributed artifacts and CI execution permissions."
+    },
+    "sourceIds": [
+      "s1",
+      "s2"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した一次情報に、攻撃でAIを利用したことを裏付ける記述はありません。AI不使用を意味しません。",
+      "en": "The cited primary sources do not establish AI involvement. This does not establish that AI was absent."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "利用者ごとの漏洩範囲は、当時のCI環境と実行履歴に依存します。",
+      "en": "Customer exposure depends on the CI environment and execution history."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Bash Uploader Security Update",
+      "url": "https://about.codecov.io/security-update/",
+      "publisher": "Codecov",
+      "kind": "organization",
+      "publishedAt": "2021-04-15",
+      "reviewedAt": "2026-10-02"
+    },
+    {
+      "id": "s2",
+      "title": "Post-Mortem / Root Cause Analysis (April 2021)",
+      "url": "https://about.codecov.io/apr-2021-post-mortem/",
+      "publisher": "Codecov",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": [
+    "SEC-004",
+    "SEC-005",
+    "SEC-007"
+  ]
+}

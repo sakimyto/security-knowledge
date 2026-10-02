@@ -1,0 +1,79 @@
+{
+  "id": "SEC-007",
+  "version": "1.2.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "CIで実行する外部コードと権限を確認する",
+    "en": "Inspect external CI code and permissions"
+  },
+  "summary": {
+    "ja": "外部Action・Orb・スクリプト・ビルドツールを実行するCI。",
+    "en": "CI executing external actions, orbs, scripts, or build tools."
+  },
+  "category": "supply-chain",
+  "surfaces": [
+    "ci"
+  ],
+  "applicability": {
+    "ja": "外部Action・Orb・スクリプト・ビルドツールを実行するCI。",
+    "en": "CI executing external actions, orbs, scripts, or build tools."
+  },
+  "targets": [
+    {
+      "ja": "CIワークフロー・取得URL・Actionの参照",
+      "en": "CI workflows, download URLs, action references"
+    },
+    {
+      "ja": "ジョブの権限・渡す秘密の種類・信頼境界",
+      "en": "Job permissions, secret types, trust boundaries"
+    },
+    {
+      "ja": "依存パッケージのlockfile・固定インストール・公開用ジョブ",
+      "en": "Dependency lockfiles, frozen installation, and publishing jobs"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "変更可能なタグやリモートスクリプトの直接実行を確認し、固定・署名・信頼できる検証手段を調べる。",
+      "en": "Inspect mutable references and direct remote-script execution; assess pinning, signatures, and trusted verification."
+    },
+    {
+      "ja": "外部コードを動かすステップに不要な秘密や書込み権限が渡らないか確認する。",
+      "en": "Check whether external-code steps receive unnecessary secrets or write permissions."
+    },
+    {
+      "ja": "lockfileが保存され、CIが固定インストールを使うか確認する。依存パッケージのインストール中に、別のパッケージの公開用トークンを取得できないか点検する。",
+      "en": "Check committed lockfiles and frozen installs, and whether dependency installation can access tokens that publish other packages."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "検証した参照を固定し、更新はレビューする。秘密が必要な処理と不要な処理を分離する。",
+      "en": "Pin reviewed references and review updates; separate jobs by secret requirements."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "固定した参照と検証根拠、権限を絞ったCIの成功結果を残す。",
+      "en": "Record pinned references, verification evidence, and successful execution under narrowed permissions."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "固定だけでは固定先が安全だと証明できません。同じ侵害元から取ったチェックサムだけに依存しません。",
+      "en": "Pinning does not prove code is safe. A checksum from the same compromised source is insufficient."
+    }
+  ],
+  "incidentIds": [
+    "anthropic-cyber-evals-2026",
+    "axios-npm-2026",
+    "codecov-2021",
+    "postman-shai-hulud-2025",
+    "rust-arrayref-2026",
+    "trivy-supply-chain-2026",
+    "unit42-ai-assisted-2026"
+  ],
+  "references": [],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

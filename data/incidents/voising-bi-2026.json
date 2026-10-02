@@ -1,0 +1,114 @@
+{
+  "id": "voising-bi-2026",
+  "organization": "VOISING",
+  "title": {
+    "ja": "VOISING：修正未適用のBIツールから情報が流出",
+    "en": "VOISING: unpatched BI tool data leakage"
+  },
+  "summary": {
+    "ja": "BIツールの脆弱性が悪用され、約17万件の情報流出を確認したと公表しました。同社は、不正アクセス前に提供されていた修正版を適用していなかったと説明しています。",
+    "en": "VOISING confirmed leakage of about 170,000 records via a BI vulnerability and reported that an available pre-intrusion patch had not been applied."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-18",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "known-vulnerability"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "不正アクセス前に修正版が提供されていましたが、適用されていませんでした。",
+        "en": "A patch was available before unauthorized access but had not been applied."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "3. 発生原因"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "約17万件の情報流出を確認したと公表しました。",
+        "en": "VOISING reported about 170,000 confirmed leaked records."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "2. 影響範囲"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-18",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "BI停止、環境の廃棄・再構築、APIキーと認証情報の無効化・更新を公表しました。",
+        "en": "VOISING reported stopping BI, discarding and rebuilding the environment, and revoking and rotating API keys and credentials."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "4. 実施した対応"
+    }
+  ],
+  "prevention": {
+    "classification": "patch-available",
+    "assessment": {
+      "ja": "稼働するBIのバージョンと修正情報を照合し、更新の担当と期限を確認します。取得できるデータと公開範囲も限定します。",
+      "en": "Compare deployed BI versions with advisories and verify patch ownership and deadlines; limit exposure and accessible data."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "BI製品名とCVEは公表されていません。他社事案との時期の近さだけでは同じ製品・脆弱性と判断できません。",
+      "en": "BI product and CVE are undisclosed; proximity to another incident does not establish a shared product or vulnerability."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "不正アクセスによる情報流出に関するご報告（第4報）",
+      "url": "https://voising-official.com/news/1015",
+      "publisher": "VOISING",
+      "publishedAt": "2026-09-30",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-005",
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

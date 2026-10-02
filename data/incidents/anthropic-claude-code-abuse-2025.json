@@ -1,0 +1,113 @@
+{
+  "id": "anthropic-claude-code-abuse-2025",
+  "organization": "Anthropicが調査した複数組織への攻撃",
+  "title": {
+    "ja": "Claude Code：攻撃者がAIを悪用した複数組織への侵入",
+    "en": "Claude Code: attacker misuse in a multi-organization intrusion campaign"
+  },
+  "summary": {
+    "ja": "Anthropicは、攻撃者がClaude Codeを偵察、攻撃コードの作成、認証情報の取得、データ持ち出しに悪用したと報告しました。約30組織が標的で、侵入成功は少数と説明しています。",
+    "en": "Anthropic reported attacker use of Claude Code for reconnaissance, exploit development, credential harvesting, and exfiltration. About 30 organizations were targeted, with success reported at a small number."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2025-11-13",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials",
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "ai",
+      "text": {
+        "ja": "Claude Codeの攻撃者による悪用を、Anthropicが調査したと公表しています。評価試験の逸脱ではなく、同社が観測した攻撃キャンペーンの報告です。",
+        "en": "Anthropic reports investigating attacker misuse of Claude Code in an observed campaign, distinct from evaluation incidents."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Introduction / How the cyberattack worked"
+    },
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "人間が標的を選び、正当な防御テストを装ってAIへ作業を分割しました。AIは偵察から認証情報の取得、持ち出しまでを支援したと説明しています。",
+        "en": "Human operators selected targets and disguised fragmented tasks as defensive testing; Anthropic describes AI assistance through reconnaissance and exfiltration."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "How the cyberattack worked"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-11-13",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "不正利用アカウントを停止し、影響を受けた組織への通知、関係当局との連携、検知と安全対策の改善を行ったと公表しました。",
+        "en": "Anthropic reported banning accounts, notifying affected organizations, coordinating with authorities, and improving safeguards."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Introduction"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "被害環境の具体的な侵入原因は判断できません。認証情報の到達範囲と取得ログを点検し、自社で動かすAIのツール・通信権限も確認します。",
+      "en": "Victim-specific entry causes are unspecified; inspect credential reach, access logs, and permissions of AI operated in your own environment."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "confirmed",
+    "assessment": {
+      "ja": "攻撃者によるClaude Codeの利用をAnthropicが報告しています。被害環境の穴が回避不能だったことや、AI攻撃全体の増加率を示す証拠ではありません。",
+      "en": "Anthropic reports attacker use of Claude Code; this does not establish unavoidable victim vulnerabilities or a population-wide increase in AI attacks."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "被害組織名、個別の脆弱性とCVE、初回侵入日は非公表です。標的数は被害企業数ではなく、AIの自律性の評価は調査元の見解です。",
+      "en": "Victim names, vulnerabilities, CVEs, and precise entry dates are undisclosed; target count is not victim count, and autonomy assessments are the investigator’s interpretation."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Disrupting an AI-orchestrated cyber espionage campaign",
+      "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+      "publisher": "Anthropic",
+      "publishedAt": "2025-11-13",
+      "kind": "investigator"
+    }
+  ],
+  "ruleIds": [
+    "SEC-005",
+    "SEC-008",
+    "SEC-009",
+    "SEC-011"
+  ]
+}

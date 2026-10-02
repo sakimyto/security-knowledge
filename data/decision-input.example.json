@@ -1,0 +1,16 @@
+{
+  "formatVersion": "1.0.0",
+  "ruleId": "SEC-001",
+  "ruleHash": "8e6c53174bef8ca55cea3f34e97f1aad0f6f0c55a15111ba9f2df8613d55fe55",
+  "assetId": "fictional-example",
+  "environmentRevision": "replace-with-actual-environment-revision",
+  "observedAt": "2026-10-02T00:00:00Z",
+  "scope": "Fictional example only; no inspection performed",
+  "observations": [
+    {
+      "id": "example-1",
+      "text": "Fictional example: deployed versions and advisories have not been collected.",
+      "locator": "example only; no real evidence"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "SEC-003",
+  "version": "1.2.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "端末とセッションの失効経路を確認する",
+    "en": "Inspect endpoints and session revocation"
+  },
+  "summary": {
+    "ja": "従業員端末やサポート添付ファイルから、認証済みセッションが持ち出され得る環境。",
+    "en": "Environments where endpoints or support files can expose authenticated sessions."
+  },
+  "category": "endpoint",
+  "surfaces": [
+    "endpoint",
+    "identity",
+    "support"
+  ],
+  "applicability": {
+    "ja": "従業員端末やサポート添付ファイルから、認証済みセッションが持ち出され得る環境。",
+    "en": "Environments where endpoints or support files can expose authenticated sessions."
+  },
+  "targets": [
+    {
+      "ja": "端末管理・SSOセッション設定",
+      "en": "Endpoint management and SSO session policies"
+    },
+    {
+      "ja": "HAR・サポート添付・ログアウト処理",
+      "en": "HAR/support attachments and logout handlers"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "HAR等を送る前にCookie・Authorization・個人情報が除去される手順を確認する。実値は出力しない。",
+      "en": "Verify sanitization of cookies, Authorization headers, and personal data before sending HAR files; never output values."
+    },
+    {
+      "ja": "失効・再認証・管理者セッションの制限を確認し、既存セッションで操作が続けられないか検証する。",
+      "en": "Inspect revocation, reauthentication, and administrator-session limits; verify old sessions cannot continue acting."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "管理端末とセッション制御を整え、漏洩疑いのセッションを担当者の承認範囲で失効する。",
+      "en": "Strengthen managed endpoints and session controls; revoke suspected sessions within granted authority."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "合成したテストセッションが失効後に拒否される証拠と、添付ファイルの除去検査を残す。",
+      "en": "Record rejection of synthetic revoked sessions and attachment sanitization checks."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "リポジトリだけでは端末の状態を確認できません。HTTPOnly等のCookie属性だけで端末マルウェアへの耐性を判断しません。",
+      "en": "A repository cannot establish endpoint health. Cookie flags alone do not establish resistance to endpoint malware."
+    }
+  ],
+  "incidentIds": [
+    "askul-2025",
+    "axios-npm-2026",
+    "circleci-2023",
+    "okta-support-2023",
+    "openai-mixpanel-2025",
+    "quick-2025",
+    "rust-arrayref-2026",
+    "uber-2022"
+  ],
+  "references": [],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

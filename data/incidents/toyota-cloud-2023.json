@@ -1,0 +1,129 @@
+{
+  "id": "toyota-cloud-2023",
+  "title": {
+    "ja": "トヨタ：クラウドの誤設定で車両データが公開状態",
+    "en": "Toyota: cloud misconfiguration exposed vehicle data"
+  },
+  "organization": "Toyota / Toyota Connected",
+  "summary": {
+    "ja": "管理を委託していたクラウド環境の誤設定により、車両の位置情報などが外部からアクセス可能でした。これは公開状態の確認であり、第三者の窃取を確認した発表ではありません。",
+    "en": "Misconfiguration in a delegated cloud environment exposed vehicle data. The disclosure established accessibility, not confirmed third-party theft."
+  },
+  "occurredAt": "2013-11-06",
+  "disclosedAt": "2023-05-12",
+  "reviewedAt": "2026-10-02",
+  "outcome": "exposure-only",
+  "categories": [
+    "configuration"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "exposure",
+      "text": {
+        "ja": "2013年11月6日から2023年4月17日まで、対象データが外部からアクセス可能でした。",
+        "en": "The data was externally accessible from November 6, 2013 to April 17, 2023."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "公開期間の表"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "約215万人が対象で、端末ID・車台番号・位置情報・時刻に漏洩の可能性がありました。",
+        "en": "Potential exposure covered roughly 2.15 million customers and device identifiers, vehicle identifiers, location, and time."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "対象の表"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2013-11-06",
+      "text": {
+        "ja": "公表された公開状態の開始日。",
+        "en": "Start of the disclosed exposure period."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-04-17",
+      "text": {
+        "ja": "公表された公開状態の終了日。",
+        "en": "End of the disclosed exposure period."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-05-12",
+      "text": {
+        "ja": "誤設定と漏洩の可能性を公表。",
+        "en": "Misconfiguration and potential exposure disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "外部アクセスの遮断と、クラウド設定の監査・継続監視に取り組むと公表しました。",
+        "en": "Toyota blocked external access and announced cloud configuration audits and continuous monitoring."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本文"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "ソースコードに問題がなくても、実際のクラウド設定で公開されることがあります。委託先を含む稼働環境の設定を確認します。",
+      "en": "Safe source code does not establish safe cloud configuration. Inspect deployed settings, including delegated environments."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した一次情報に、攻撃でAIを利用したことを裏付ける記述はありません。AI不使用を意味しません。",
+      "en": "The cited primary sources do not establish AI involvement. This does not establish that AI was absent."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "クラウド製品名や具体的な設定項目、第三者の取得の有無は、この発表だけでは特定できません。",
+      "en": "This disclosure does not identify the cloud product, exact setting, or actual third-party retrieval."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "クラウド環境の誤設定によるお客様情報の漏洩可能性に関するお詫びとお知らせ",
+      "url": "https://global.toyota/jp/newsroom/corporate/39174380.html",
+      "publisher": "トヨタ自動車",
+      "kind": "organization",
+      "publishedAt": "2023-05-12",
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "keio-ransomware-2026",
+  "organization": "京王電鉄",
+  "title": {
+    "ja": "京王電鉄：グループのサーバーでランサムウェア被害",
+    "en": "Keio: ransomware on group servers"
+  },
+  "summary": {
+    "ja": "グループ共通のサーバーでランサムウェア感染が確認され、一部の業務システムに影響が出ました。公表時点では鉄道運行への影響と情報流出は確認されていません。",
+    "en": "Ransomware on group servers affected some business systems; rail operations and information leakage were not reported as affected at disclosure."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-26",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "9月26日未明にランサムウェア感染を確認しました。鉄道の運行には影響していません。",
+        "en": "Ransomware was confirmed early September 26 without affecting rail operations."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "1. 概要"
+    },
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "侵入原因と経路を外部専門家と調査しています。情報流出も公表時点では未確認です。",
+        "en": "Entry cause and route are under external investigation; leakage was unconfirmed at publication."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "2. 現在の状況"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-26",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "被害拡大を防ぐためネットワークを遮断し、調査を開始したと公表しました。",
+        "en": "Keio reported disconnecting networks and starting an investigation to contain impact."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "2. 現在の状況"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入原因は判断できません。共通システムの依存関係、隔離手順、復元できるバックアップを点検します。",
+      "en": "The entry cause is unknown; inspect shared-system dependencies, containment procedures, and restorable backups."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "9月26日は感染確認日です。侵入開始日、原因、CVE、情報流出、復旧の全範囲は確定できません。",
+      "en": "September 26 is detection, not an established intrusion start; cause, CVE, leakage, and full recovery scope remain unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "不正アクセスによるシステム障害の発生について",
+      "url": "https://www.keio.co.jp/news/update/announce/nr260926v13404/",
+      "publisher": "京王電鉄",
+      "publishedAt": "2026-09-26",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": [
+    "SEC-009",
+    "SEC-013"
+  ]
+}

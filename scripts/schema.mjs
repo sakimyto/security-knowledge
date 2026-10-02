@@ -15,6 +15,9 @@ const keywords = new Set([
   'additionalProperties',
   'items',
   'minItems',
+  'maxItems',
+  'minimum',
+  'maximum',
   'uniqueItems',
   'minLength',
   'pattern',
@@ -35,12 +38,23 @@ export function validateSchema(value, schema, path = '$', root = schema) {
       : [`${path}: unresolved reference`]
   }
   const type = value === null ? 'null' : Array.isArray(value) ? 'array' : typeof value
-  if (schema.type && !(Array.isArray(schema.type) ? schema.type : [schema.type]).includes(type)) {
+  const allowed = Array.isArray(schema.type) ? schema.type : [schema.type]
+  if (
+    schema.type &&
+    !allowed.some((item) => item === type || (item === 'integer' && Number.isInteger(value)))
+  ) {
     return [...errors, `${path}: expected ${schema.type}, received ${type}`]
   }
   if (schema.enum && !schema.enum.includes(value))
     errors.push(`${path}: unsupported value ${String(value)}`)
   if ('const' in schema && value !== schema.const) errors.push(`${path}: expected ${schema.const}`)
+  if (type === 'number') {
+    if (!Number.isFinite(value)) errors.push(`${path}: non-finite number`)
+    if (schema.minimum !== undefined && value < schema.minimum)
+      errors.push(`${path}: below minimum`)
+    if (schema.maximum !== undefined && value > schema.maximum)
+      errors.push(`${path}: above maximum`)
+  }
   if (type === 'string') {
     if (value.length < (schema.minLength ?? 0)) errors.push(`${path}: empty or short string`)
     if (schema.pattern && !new RegExp(schema.pattern).test(value))
@@ -48,7 +62,7 @@ export function validateSchema(value, schema, path = '$', root = schema) {
   }
   if (type === 'object') {
     for (const key of schema.required ?? [])
-      if (!(key in value)) errors.push(`${path}.${key}: required`)
+      if (!Object.hasOwn(value, key)) errors.push(`${path}.${key}: required`)
     for (const [key, item] of Object.entries(value)) {
       if (schema.properties?.[key])
         errors.push(...validateSchema(item, schema.properties[key], `${path}.${key}`, root))
@@ -60,6 +74,8 @@ export function validateSchema(value, schema, path = '$', root = schema) {
   }
   if (type === 'array') {
     if (value.length < (schema.minItems ?? 0)) errors.push(`${path}: too few items`)
+    if (schema.maxItems !== undefined && value.length > schema.maxItems)
+      errors.push(`${path}: too many items`)
     if (
       schema.uniqueItems &&
       new Set(value.map((item) => JSON.stringify(item))).size !== value.length

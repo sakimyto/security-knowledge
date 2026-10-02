@@ -1,0 +1,115 @@
+{
+  "id": "sakura-billing-2026",
+  "organization": "さくらインターネット",
+  "title": {
+    "ja": "さくらインターネット：請求情報DBへの別の不正アクセス",
+    "en": "Sakura Internet: separate billing-database intrusion"
+  },
+  "summary": {
+    "ja": "2023年4月から2026年3月までの請求情報DBへの不正アクセスが、2026年8月に公表されました。ホスティング事案とは別に、情報流出の可能性を報告しています。",
+    "en": "Sakura disclosed billing-database access spanning April 2023 to March 2026 in August 2026, with potential information leakage reported separately from its hosting incident."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-19",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown",
+    "credentials"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "請求情報DBへの不正アクセスが確認されましたが、ホスティング事案との関連は確認されていません。",
+        "en": "Billing-database unauthorized access was confirmed without an established link to the hosting incident."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "2. 請求情報データベース"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "流出の可能性がある対象は136万563件です。一部には初期パスワードが含まれますが、現行パスワード全体の流出を意味しません。",
+        "en": "Potential exposure covers 1,360,563 accounts and some initial passwords, not all current passwords."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "2. 影響範囲"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-19",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "初期パスワードの無効化・変更対応と、アクセス制御・監視の強化を公表しました。",
+        "en": "Sakura reported initial-password invalidation or change measures and stronger access control and monitoring."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "2. 対応 / 3. 再発防止策"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入原因は判断できません。保存する初期認証情報の必要性と形式、廃棄期限、アクセス権を点検します。",
+      "en": "The entry cause remains unknown; inspect the need, storage format, retention, and access control for initial credentials."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "侵入開始日は月単位の公表です。ホスティング対象と重複するため、両事案の件数は合算しません。",
+      "en": "Intrusion timing is disclosed only by month; account overlap prevents adding the two incident counts."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "当社サービスへの不正アクセスに関するご報告とお詫び（第3報）",
+      "url": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/",
+      "publisher": "さくらインターネット",
+      "publishedAt": "2026-09-10",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": [
+    "SEC-004",
+    "SEC-005",
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

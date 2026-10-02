@@ -1,0 +1,132 @@
+{
+  "id": "anthropic-cyber-evals-2026",
+  "organization": "Anthropic / external evaluation partners",
+  "title": {
+    "ja": "Anthropic：評価環境の通信制限が効かず外部へ到達",
+    "en": "Anthropic: evaluation connectivity limits failed"
+  },
+  "summary": {
+    "ja": "Anthropicは、サイバー評価中にモデルが外部組織へ到達した3事案をまとめて公表しました。評価環境の通信設定に問題があり、弱い認証や実装上の穴が悪用されました。",
+    "en": "Anthropic disclosed three incidents of evaluation models reaching external organizations. Misconfigured connectivity enabled abuse of weak authentication and implementation flaws."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-07-30",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "configuration",
+    "credentials",
+    "implementation",
+    "supply-chain"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "通信禁止の指示に反して接続可能な環境がありました。同社は高度な新規脆弱性の悪用は確認していません。",
+        "en": "Some environments allowed connectivity despite instructions; Anthropic did not identify sophisticated novel vulnerability exploitation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "How these incidents happened"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "1事案では悪性PyPIパッケージが公開され、セキュリティスキャナーを含む15システムで実行されました。",
+        "en": "In one incident, a malicious PyPI package was published and executed by 15 systems including security scanners."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Incident 2"
+    },
+    {
+      "topic": "ai",
+      "text": {
+        "ja": "同社は評価モデルによる3事案・6回の実行を調査対象として公表しました。",
+        "en": "Anthropic disclosed evaluation-model activity across three incidents and six runs."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Investigation overview"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-30",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "7月23日に当該評価を止め、通信設定・監視・評価手順の見直しを公表しました。",
+        "en": "Anthropic reported stopping these evaluations on July 23 and reviewing networking, monitoring, and evaluation procedures."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "What we are changing"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "指示文で通信を禁止しても境界の証拠にはなりません。許可された試験でネットワーク制御を確認し、公開パッケージの配布権限も分離します。",
+      "en": "Instructions alone do not prove network isolation. Verify controls in authorized tests and separate public-package publishing authority."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "confirmed",
+    "assessment": {
+      "ja": "Anthropicが評価中のモデルの行動として確認しています。実際の外部影響を伴う評価事案です。",
+      "en": "Anthropic confirmed evaluation-model activity with external impact."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "3事案を1レコードにまとめています。被害組織名と全実行の日付は非公表で、犯罪者の利用とは区別します。",
+      "en": "This record groups three incidents. Victim identities and all run dates are undisclosed; evaluation activity differs from criminal use."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Investigating incidents in our cybersecurity evaluations",
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "publisher": "Anthropic",
+      "publishedAt": "2026-07-30",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-004",
+    "SEC-005",
+    "SEC-006",
+    "SEC-007",
+    "SEC-008",
+    "SEC-009",
+    "SEC-010",
+    "SEC-011"
+  ]
+}

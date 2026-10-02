@@ -1,0 +1,125 @@
+{
+  "id": "react2shell-2025",
+  "organization": "React ecosystem / Microsoft observed campaign",
+  "title": {
+    "ja": "React2Shell：公開後にRSCの脆弱性を悪用",
+    "en": "React2Shell: exploitation after disclosure"
+  },
+  "summary": {
+    "ja": "Microsoftは、React Server Componentsの認証不要のコード実行脆弱性による数百台の侵害を報告しました。脆弱性と修正は12月3日に公表されていました。",
+    "en": "Microsoft reported hundreds of machines compromised through unauthenticated RSC code execution. The vulnerability and fixes were disclosed on December 3."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2025-12-15",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "known-vulnerability",
+    "implementation"
+  ],
+  "cves": [
+    "CVE-2025-55182"
+  ],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "MicrosoftはCVE-2025-55182による複数組織の端末侵害を観測しました。成功例にはレッドチームの評価も含まれます。",
+        "en": "Microsoft observed compromised devices across organizations; successful exploitation also included red-team assessments."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Analyzing CVE-2025-55182 exploitation activity"
+    },
+    {
+      "topic": "patch",
+      "text": {
+        "ja": "Reactは12月3日に脆弱性と修正を公表しました。",
+        "en": "React disclosed the vulnerability and fixes on December 3."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "Critical Security Vulnerability"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-12-15",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "guidance",
+      "text": {
+        "ja": "Microsoftは更新、公開範囲の確認、侵害の調査、影響する秘密情報の更新を推奨しています。",
+        "en": "Microsoft recommends patching, exposure checks, compromise investigation, and rotation of affected secrets."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Mitigation and protection guidance"
+    }
+  ],
+  "prevention": {
+    "classification": "patch-available",
+    "assessment": {
+      "ja": "稼働するRSC・関連フレームワークのバージョンを最新のアドバイザリと照合します。修正済みでも侵害の痕跡と鍵の利用を確認します。",
+      "en": "Compare deployed RSC and framework versions with current advisories; inspect compromise traces and credential use after patching."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "キャンペーンをまとめた記録です。各被害組織の侵入日や、修正を適用しなかった理由は不明です。",
+      "en": "This is a campaign record; individual intrusion dates and reasons for delayed patching are unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Defending against CVE-2025-55182 (React2Shell)",
+      "url": "https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/",
+      "publisher": "Microsoft",
+      "publishedAt": "2025-12-15",
+      "kind": "investigator"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "Critical Security Vulnerability in React Server Components",
+      "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components",
+      "publisher": "React",
+      "publishedAt": "2025-12-03",
+      "kind": "vendor"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-005",
+    "SEC-006",
+    "SEC-008",
+    "SEC-009"
+  ]
+}

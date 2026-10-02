@@ -1,0 +1,132 @@
+{
+  "id": "circleci-2023",
+  "title": {
+    "ja": "CircleCI：端末からSSOセッションを窃取",
+    "en": "CircleCI: endpoint malware and stolen SSO session"
+  },
+  "organization": "CircleCI",
+  "summary": {
+    "ja": "従業員端末のマルウェアが、二要素認証済みのSSOセッションを窃取しました。従業員の権限が悪用され、本番の一部と顧客の環境変数・鍵などへアクセスされました。",
+    "en": "Endpoint malware stole a two-factor-backed SSO session. Employee privileges enabled access to production stores containing customer variables and credentials."
+  },
+  "occurredAt": "2022-12-16",
+  "disclosedAt": "2023-01-04",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "endpoint",
+    "credentials"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "マルウェアによるセッションCookieの窃取が侵入経路でした。",
+        "en": "Malware stole a valid session cookie."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "What happened?"
+    },
+    {
+      "topic": "expansion",
+      "text": {
+        "ja": "対象従業員は本番アクセストークンを発行できる権限を持ち、攻撃者がその権限を利用しました。",
+        "en": "The targeted employee could generate production access tokens; the attacker used those privileges."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "What happened?"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2022-12-16",
+      "text": {
+        "ja": "従業員端末が侵害されたと調査で判明。",
+        "en": "Investigation dates the endpoint compromise to this day."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-01-04",
+      "text": {
+        "ja": "顧客に秘密情報の更新を呼びかけ。",
+        "en": "Customer credential rotation alert published."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "端末検知の強化とアクセス制御の変更を実施し、顧客に鍵等の更新・失効を要請しました。",
+        "en": "Endpoint detection and access controls were strengthened; customers were asked to rotate and revoke secrets."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Remediation / customer guidance"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "MFAの導入後も、セッション窃取と端末侵害への対策、管理権限の範囲を点検します。",
+      "en": "MFA does not eliminate stolen-session risk. Inspect endpoint controls and the scope of privileged access."
+    },
+    "sourceIds": [
+      "s1",
+      "s2"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した一次情報に、攻撃でAIを利用したことを裏付ける記述はありません。AI不使用を意味しません。",
+      "en": "The cited primary sources do not establish AI involvement. This does not establish that AI was absent."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "顧客側の二次被害の全体像や、個々の鍵の利用状況はこの記録では評価できません。",
+      "en": "This record does not assess all downstream customer impact or individual credential use."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "CircleCI Jan 4, 2023 security incident report",
+      "url": "https://circleci.com/blog/jan-4-2023-incident-report/",
+      "publisher": "CircleCI",
+      "kind": "organization",
+      "publishedAt": "2023-01-12",
+      "reviewedAt": "2026-10-02"
+    },
+    {
+      "id": "s2",
+      "title": "CircleCI security alert: Rotate any secrets",
+      "url": "https://circleci.com/blog/january-4-2023-security-alert/",
+      "publisher": "CircleCI",
+      "kind": "organization",
+      "publishedAt": "2023-01-04",
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": [
+    "SEC-003",
+    "SEC-005",
+    "SEC-008"
+  ]
+}

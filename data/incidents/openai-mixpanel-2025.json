@@ -1,0 +1,127 @@
+{
+  "id": "openai-mixpanel-2025",
+  "organization": "Mixpanel / OpenAI利用者の解析データ",
+  "title": {
+    "ja": "Mixpanel：SMSを使うフィッシングと解析データの持ち出し",
+    "en": "Mixpanel: smishing and analytics-data export affecting OpenAI users"
+  },
+  "summary": {
+    "ja": "MixpanelはSMSを使うフィッシングへの対応を公表し、OpenAIは委託先から利用者の解析データが持ち出されたと説明しました。OpenAIによると、パスワードやAPIキー、チャット内容は対象外です。",
+    "en": "Mixpanel reported a smishing incident; OpenAI reported export of user analytics data from the supplier. OpenAI says passwords, API keys, and chat content were not involved."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2025-11-26",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials",
+    "supply-chain"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "Mixpanelは11月8日にSMSを使うフィッシングを検知したと説明しています。OpenAIは、Mixpanelで解析データを含むデータセットが持ち出されたと公表しています。",
+        "en": "Mixpanel dates smishing detection to November 8; OpenAI reports export of a dataset containing analytics data from Mixpanel."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "Mixpanel: introduction / OpenAI: What happened"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "氏名、メールアドレス、概略の位置情報などが対象です。OpenAIの12月19日追記では、一部のChatGPT利用者も対象に含むと明確化しています。APIキーや会話内容の流出とは区別します。",
+        "en": "Potentially affected data includes names, emails, and coarse locations; a December 19 clarification also includes some ChatGPT users, without API-key or chat-content exposure."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "December 19 clarification / What this means for you"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-11-26",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "Mixpanelはセッションの失効、資格情報の更新、認証・出力ログの調査を実施しました。OpenAIはMixpanelの本番利用を停止し、契約先の点検を拡大したと公表しました。",
+        "en": "Mixpanel revoked sessions, rotated credentials, and reviewed logs; OpenAI ended production use of Mixpanel and expanded supplier reviews."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "Mixpanel: What we did in response / OpenAI: Our response"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "SMSからの偽ログインとセッション失効の手順を点検します。解析先へ送る識別情報の必要性、取得・出力権限、保存期間も確認します。",
+      "en": "Inspect resistance to SMS-led fake logins and session revocation, plus analytics identifiers, export permissions, and retention."
+    },
+    "sourceIds": [
+      "s1",
+      "s2"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "SMS経由の侵入の詳細、初回侵入日時、影響人数は参照資料から確定できません。11月8日と9日はそれぞれの公表元による検知・認知の日で、初回侵入日とは扱いません。",
+      "en": "Exact entry mechanics, initial access date, and victim count are unspecified. November 8 and 9 are provider-specific detection/awareness dates rather than assigned entry dates."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "What to know about a recent Mixpanel security incident",
+      "url": "https://openai.com/index/mixpanel-incident/",
+      "publisher": "OpenAI",
+      "publishedAt": "2025-11-26",
+      "kind": "organization"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "Our response to a recent security incident",
+      "url": "https://mixpanel.com/blog/sms-security-incident/",
+      "publisher": "Mixpanel",
+      "publishedAt": "2025-11-27",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-003",
+    "SEC-005",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "SEC-008",
+  "version": "1.2.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "侵害後に広がる管理権限を確認する",
+    "en": "Inspect privileges enabling lateral access"
+  },
+  "summary": {
+    "ja": "管理者・サービスアカウント・CIが本番や別のデータ基盤へアクセスする環境。",
+    "en": "Environments where administrators, services, or CI can access production or separate data stores."
+  },
+  "category": "credentials",
+  "surfaces": [
+    "identity",
+    "cloud",
+    "data-store",
+    "ci"
+  ],
+  "applicability": {
+    "ja": "管理者・サービスアカウント・CIが本番や別のデータ基盤へアクセスする環境。",
+    "en": "Environments where administrators, services, or CI can access production or separate data stores."
+  },
+  "targets": [
+    {
+      "ja": "IAM・ロール・サービスアカウント",
+      "en": "IAM, roles, service identities"
+    },
+    {
+      "ja": "本番トークン発行経路・環境間の接続",
+      "en": "Production token issuance, cross-environment access"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "通常業務に必要な権限と、鍵の発行・データ一括取得・権限追加が可能な範囲を比較する。",
+      "en": "Compare job needs with credential issuance, bulk-export, and privilege-grant capabilities."
+    },
+    {
+      "ja": "一つのセッションや鍵の侵害で他の環境へ到達できる経路を記録する。",
+      "en": "Document cross-environment paths available to a single compromised identity."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "権限の縮小と環境の分離を提案し、必要な業務への影響を検証する。",
+      "en": "Propose narrower roles and environment boundaries; test impact on required workflows."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "許可した操作が成功し、許可していない操作が拒否されるテストを残す。",
+      "en": "Record positive tests for allowed operations and negative tests for denied operations."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "権限の広さだけで侵害を断定しません。本番ロールの変更は所有者の承認範囲に従います。",
+      "en": "Broad privileges do not establish compromise. Production role changes follow owner authorization."
+    }
+  ],
+  "incidentIds": [
+    "aflac-japan-2026",
+    "anthropic-claude-code-abuse-2025",
+    "anthropic-cyber-evals-2026",
+    "askul-2025",
+    "campfire-2026",
+    "circleci-2023",
+    "cloudflare-thanksgiving-2023",
+    "digital-agency-gss-2026",
+    "discord-support-vendor-2025",
+    "forticloud-sso-2026",
+    "gainsight-oauth-2025",
+    "gyazo-2026",
+    "kddi-isp-2026",
+    "metabase-2026",
+    "openai-huggingface-eval-2026",
+    "openai-mixpanel-2025",
+    "postman-shai-hulud-2025",
+    "quick-2025",
+    "react2shell-2025",
+    "sakura-billing-2026",
+    "sakura-hosting-2026",
+    "snowflake-unc5537-2024",
+    "temairazu-2026",
+    "times-car-2026",
+    "trivy-supply-chain-2026",
+    "unit42-ai-assisted-2026",
+    "voising-bi-2026"
+  ],
+  "references": [],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

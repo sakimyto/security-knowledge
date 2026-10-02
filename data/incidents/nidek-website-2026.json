@@ -1,0 +1,121 @@
+{
+  "id": "nidek-website-2026",
+  "organization": "ニデック（医療機器・NIDEK）",
+  "title": {
+    "ja": "ニデック（医療機器）：Webサイトで使うソフトの脆弱性を悪用",
+    "en": "NIDEK medical devices: website software vulnerability exploited"
+  },
+  "summary": {
+    "ja": "同社は、Webサイトのソフトウェアの脆弱性を悪用されたと説明しています。会員や問い合わせ情報へのアクセスの可能性がありますが、参照したFAQでは外部への流出は未確認です。",
+    "en": "NIDEK reported exploitation of website software. Member and inquiry data may have been accessed; the cited FAQ does not confirm external disclosure."
+  },
+  "occurredAt": "2026-07-20",
+  "disclosedAt": "2026-07-24",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "7月20日午前1時ごろ（日本時間）の初回不正アクセスと、7月24日の検知を報告しています。原因はサイトで使うソフトウェアの脆弱性と説明しています。",
+        "en": "The FAQ dates initial access to around 01:00 JST on July 20 and detection to July 24, and identifies a website-software vulnerability."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "FAQ Q1 / Q3 / Q14"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "会員情報と問い合わせ情報がアクセス対象となった可能性があります。約28,000会員は影響を受けた可能性のある範囲で、流出確定人数ではありません。",
+        "en": "Member and inquiry information was potentially affected; approximately 28,000 members is a potential-impact figure, not confirmed exfiltration."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "FAQ Q2 / Q7 / Q17"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-24",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "検知日にソフトウェアを更新し、専門家と調査しています。過去の問い合わせ情報はサイトから削除し、調査・保護措置のため別の場所で保持すると説明しています。",
+        "en": "NIDEK patched on detection and engaged specialists. Historical inquiries were removed from the website but retained separately for investigation and safeguards."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "FAQ Q4 / Q10 / Q14"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "ソフトの稼働版と更新記録、問い合わせ情報の保持先と削除条件を点検します。侵入前の修正提供時期が不明なため、パッチ放置とは判断できません。",
+      "en": "Inspect deployed versions, update records, and inquiry-data retention; unknown pre-intrusion patch timing prevents a neglect finding."
+    },
+    "sourceIds": [
+      "s2"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "製品名、CVE、修正提供時期、流出の確定範囲は参照資料から特定できません。NIDEKはモーター企業のNIDECとは別会社です。",
+      "en": "Product, CVE, patch timing, and confirmed leakage scope are unspecified; NIDEK is distinct from motor manufacturer NIDEC."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "当社Webサイトへの不正アクセスに関するお知らせ",
+      "url": "https://www.nidek.co.jp/news/20260724_news/",
+      "publisher": "NIDEK",
+      "publishedAt": "2026-07-24",
+      "kind": "organization"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "FAQ Regarding Unauthorized Access to Our Website",
+      "url": "https://www.nidek-intl.com/information/customer_faq/",
+      "publisher": "NIDEK",
+      "publishedAt": "2026-08-19",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-006",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "cloudflare-thanksgiving-2023",
+  "title": {
+    "ja": "Cloudflare：失効漏れのトークンとアカウントから侵入",
+    "en": "Cloudflare: credentials missed during rotation"
+  },
+  "organization": "Cloudflare",
+  "summary": {
+    "ja": "以前のOkta事故で漏洩した資格情報のうち、更新されなかったトークンとアカウントが悪用されました。自己管理のAtlassian環境に侵入され、ソースコード等にアクセスされました。",
+    "en": "Credentials stolen in the earlier Okta incident were missed during rotation. They enabled access to self-hosted Atlassian systems and source code."
+  },
+  "occurredAt": "2023-11-14",
+  "disclosedAt": "2024-02-01",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "未使用と誤認したサービス用トークン1つとアカウント3つが、更新されずに残っていました。",
+        "en": "One service token and three accounts were not rotated because they were mistakenly thought unused."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Credentials not rotated"
+    },
+    {
+      "topic": "scope",
+      "text": {
+        "ja": "侵入は自己管理のAtlassian環境に及びました。顧客データやグローバルネットワークへの影響はなかったと公表しました。",
+        "en": "The self-hosted Atlassian environment was accessed; Cloudflare reported no impact on customer data or its global network."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Executive summary"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023-11-14",
+      "text": {
+        "ja": "公表された偵察・アクセスの開始。",
+        "en": "Beginning of disclosed reconnaissance and access."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-11-23",
+      "text": {
+        "ja": "侵入を検知。",
+        "en": "Intrusion detected."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-11-24",
+      "text": {
+        "ja": "攻撃者のアクセスを停止。",
+        "en": "Attacker access terminated."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2024-02-01",
+      "text": {
+        "ja": "調査結果を公表。",
+        "en": "Investigation published."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "資格情報の広範な更新と、侵入範囲の調査を実施しました。",
+        "en": "Credentials were rotated broadly and access scope investigated."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Remediation"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "更新した鍵の一覧だけでなく、対象の全資格情報と旧鍵の失効証拠を照合する点検が必要です。",
+      "en": "Reconcile all affected credentials against rotation records and evidence that old credentials are revoked."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した一次情報に、攻撃でAIを利用したことを裏付ける記述はありません。AI不使用を意味しません。",
+      "en": "The cited primary sources do not establish AI involvement. This does not establish that AI was absent."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "対象資格情報の実値や内部の完全な権限構成は、公表資料から確認できません。",
+      "en": "Public sources do not expose credential values or the complete internal authorization model."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Thanksgiving 2023 security incident",
+      "url": "https://blog.cloudflare.com/thanksgiving-2023-security-incident/",
+      "publisher": "Cloudflare",
+      "kind": "organization",
+      "publishedAt": "2024-02-01",
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": [
+    "SEC-005",
+    "SEC-008",
+    "SEC-009"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "nishiyama-2026",
+  "organization": "西山製作所",
+  "title": {
+    "ja": "西山製作所：VPNの脆弱性と認証情報を悪用",
+    "en": "Nishiyama: VPN vulnerability and account abuse"
+  },
+  "summary": {
+    "ja": "同社は、VPNの脆弱性と特定のアカウント情報を悪用した侵入を報告しました。データの暗号化や流出への対応として、VPNの廃止と環境の初期化を公表しています。",
+    "en": "The company reported entry using a VPN vulnerability and account information, with encryption and leakage addressed by VPN removal and environment reinitialization."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-02-13",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown",
+    "credentials"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "侵入にはVPNの脆弱性と特定のアカウント情報が悪用されたと公表しました。",
+        "en": "The company reported abuse of a VPN vulnerability and specific account information."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "調査結果"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "一部データの復元は困難で、流出情報の監視を継続すると公表しました。",
+        "en": "Some data could not be restored; monitoring for leaked information continued."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "復旧状況 / 情報流出"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-02-13",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "VPNの廃止、認証情報の更新、端末・サーバーの初期化、バックアップ方式の変更を公表しました。",
+        "en": "The company reported removing the VPN, credential resets, reinitialization, and backup changes."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "再発防止策"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "製品や修正時期が不明なため、パッチ放置とは判断できません。VPNの稼働情報、認証情報、バックアップを確認します。",
+      "en": "Undisclosed product and patch timing prevent a neglect finding. Inspect VPN deployment, credentials, and backups."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "VPN製品名、CVE、悪用前の修正提供状況、認証情報の流出元は不明です。",
+      "en": "VPN product, CVE, pre-attack patch availability, and credential origin are unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "サイバー攻撃に関するお知らせ（第3報）",
+      "url": "https://www.nishiyama-ss.co.jp/asset/pdf/20260403_CyberAttack3.pdf",
+      "publisher": "西山製作所",
+      "publishedAt": "2026-04-03",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-002",
+    "SEC-005",
+    "SEC-006",
+    "SEC-009",
+    "SEC-013"
+  ]
+}

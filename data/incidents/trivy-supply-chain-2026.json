@@ -1,0 +1,125 @@
+{
+  "id": "trivy-supply-chain-2026",
+  "organization": "Aqua Security / Trivy",
+  "title": {
+    "ja": "Trivy：失効漏れの資格情報から配布物とActionを改ざん",
+    "en": "Trivy: residual credentials used to tamper with releases and actions"
+  },
+  "summary": {
+    "ja": "Aqua Securityは、GitHub Actionsの設定不備で特権トークンを取得され、初回対応の失効漏れを経て再び配布物を改ざんされたと報告しました。既存のActionタグも悪性コミットへ付け替えられました。",
+    "en": "Aqua reports privileged-token theft through GitHub Actions misconfiguration, incomplete initial rotation, and renewed release tampering. Existing action tags were redirected to malicious commits."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-03-20",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "supply-chain",
+    "credentials",
+    "configuration"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "2月下旬の設定不備によるトークン取得後、3月1日の資格情報更新では一部の有効な資格情報が残り、3月19日の改ざんに利用されました。",
+        "en": "Aqua describes late-February token theft, credentials remaining valid after March 1 rotation, and reuse for March 19 tampering."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "Attack Timeline"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "Trivy v0.69.4とGitHub Actionsに悪性コードが配布され、既存タグも付け替えられました。影響を受けたCIに渡された秘密情報は露出した可能性があると警告しています。",
+        "en": "Malicious Trivy v0.69.4 and actions were distributed, including changed existing tags; Aqua warns that secrets accessible to affected runners must be considered exposed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "What Happened / What Was Affected"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-03-20",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "悪性配布物を削除し、資格情報の失効と更新、長期トークンからの移行、CIとアクセス制御の強化を進めていると公表しました。",
+        "en": "Aqua reported artifact removal, credential revocation and rotation, moving away from long-lived tokens, and strengthening CI and access controls."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "Ongoing Actions / Attack Timeline"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "Actionのタグだけでなく、検証したコミットを固定できているか確認します。初回対応で新しい鍵を作っただけにせず、全旧鍵の失効記録と利用先を照合します。",
+      "en": "Inspect verified commit pinning rather than tag names alone, and reconcile every old credential’s revocation with its consumers."
+    },
+    "sourceIds": [
+      "s2"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "2月下旬の初回侵入の正確な日は不明です。このレコードは3月19日の再侵害を中心に記録し、配布数を被害組織数とは扱いません。",
+      "en": "The exact late-February entry day is unknown. This record focuses on the March 19 recurrence; distribution counts are not victim-organization counts."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Trivy Security incident 2026-03-19",
+      "url": "https://github.com/aquasecurity/trivy/discussions/10425",
+      "publisher": "Aqua Security / Trivy maintainers",
+      "publishedAt": "2026-03-20",
+      "kind": "vendor"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "Trivy supply chain attack: ongoing investigation and remediation",
+      "url": "https://www.aquasec.com/blog/trivy-supply-chain-attack-what-you-need-to-know/",
+      "publisher": "Aqua Security",
+      "publishedAt": "2026-03-22",
+      "kind": "vendor"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-004",
+    "SEC-005",
+    "SEC-007",
+    "SEC-008",
+    "SEC-009"
+  ]
+}
