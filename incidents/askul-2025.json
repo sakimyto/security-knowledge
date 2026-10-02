@@ -1,0 +1,95 @@
+{
+  "id": "askul-2025",
+  "organization": "ASKUL",
+  "title": {
+    "ja": "アスクル：MFAの例外アカウントから侵入",
+    "en": "ASKUL: access through an MFA exception"
+  },
+  "summary": {
+    "ja": "委託先用の管理者アカウントの認証情報が悪用され、ランサムウェア被害が発生しました。このアカウントにはMFAが適用されていませんでした。",
+    "en": "Stolen credentials for a contractor administrator account without MFA enabled a ransomware intrusion."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2025-10-19",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "委託先用アカウントのID・パスワードが悪用されました。認証情報が漏れた経路は特定されていません。",
+        "en": "A contractor account was misused; the original credential leak remains unresolved."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "6. 調査結果 (1)"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "一部のサーバーにはEDRと常時監視がなく、バックアップの暗号化・削除が復旧を妨げました。",
+        "en": "Some servers lacked EDR and continuous monitoring; encrypted or deleted backups impeded recovery."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "6. 調査結果 (2)–(5)"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-10-19",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "認証情報の更新、MFA適用、環境の再構築を実施したと公表しました。",
+        "en": "ASKUL reported credential resets, MFA rollout, and environment rebuilding."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "7. 対応状況"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "MFAの例外と委託先の管理権限を確認します。侵害された権限から削除できないバックアップと復元試験も必要です。",
+      "en": "Inspect MFA exceptions and contractor privileges, plus protected backups and restoration tests."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "認証情報の流出元は不明です。VPNの脆弱性を悪用した痕跡は確認されていません。",
+      "en": "Credential theft origin is unresolved; the report found no evidence that the VPN vulnerability was exploited."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "ランサムウェア攻撃に関する調査結果および今後の対応について",
+      "url": "https://www.askullogist.co.jp/pdf/20251212.pdf",
+      "publisher": "ASKUL",
+      "publishedAt": "2025-12-12",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": ["SEC-002", "SEC-003", "SEC-005", "SEC-008", "SEC-009", "SEC-013"]
+}

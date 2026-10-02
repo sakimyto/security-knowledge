@@ -267,7 +267,8 @@
               "credentials",
               "implementation",
               "configuration",
-              "supply-chain"
+              "supply-chain",
+              "unknown"
             ]
           },
           "minItems": 1,
@@ -442,7 +443,8 @@
             "credentials",
             "implementation",
             "configuration",
-            "supply-chain"
+            "supply-chain",
+            "unknown"
           ]
         },
         "surfaces": {
@@ -459,7 +461,8 @@
               "containers",
               "cloud",
               "data-store",
-              "support"
+              "support",
+              "ai-agent"
             ]
           },
           "minItems": 1,

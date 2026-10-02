@@ -39,7 +39,8 @@
                 "containers",
                 "cloud",
                 "data-store",
-                "support"
+                "support",
+                "ai-agent"
               ]
             },
             "minItems": 1,

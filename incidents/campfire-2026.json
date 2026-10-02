@@ -1,0 +1,105 @@
+{
+  "id": "campfire-2026",
+  "organization": "CAMPFIRE",
+  "title": {
+    "ja": "CAMPFIRE：開発サーバーに置いたGitHub認証情報を悪用",
+    "en": "CAMPFIRE: leaked GitHub credentials and cloud access"
+  },
+  "summary": {
+    "ja": "個人の開発サーバーに誤って置いたGitHub認証情報が悪用されました。同社は内部のクラウド管理領域への不正アクセスと、個人情報1件のクエリによる取得を確認しています。",
+    "en": "GitHub credentials mistakenly uploaded to a personal development server were misused. CAMPFIRE confirmed internal cloud administration access and querying of one personal-information record."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-04-03",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials", "configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "従業員が発行したGitHub認証情報を、個人の開発サーバーへ誤ってアップロードしていました。",
+        "en": "An employee mistakenly uploaded GitHub credentials to a personal development server."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "5. 原因"
+    },
+    {
+      "topic": "expansion",
+      "text": {
+        "ja": "GitHubから得た情報でクラウドの認証情報を取得したと同社は判断しています。",
+        "en": "The company assesses that information obtained from GitHub enabled acquisition of cloud credentials."
+      },
+      "status": "inferred",
+      "sourceIds": ["s1"],
+      "locator": "5. 原因"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "個人情報1件の取得を確認しました。22万5,846人は影響の可能性がある範囲で、流出確認件数ではありません。",
+        "en": "One queried personal record was confirmed; 225,846 people are potentially affected, not a confirmed exfiltration count."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "3. 流出した可能性のある情報"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-04-03",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "GitHubの接続解除、認証情報の無効化・更新、関連クラウド資源の停止を公表しました。",
+        "en": "The company reported disconnecting GitHub, revoking and rotating credentials, and stopping affected cloud resources."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "4. 対応"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公開物への秘密情報の混入と、GitHubから到達できるクラウド権限を点検します。旧鍵の失効も証拠で確認します。",
+      "en": "Inspect secret exposure in published files and cloud privileges reachable from GitHub; verify old-key revocation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "欠けたログがあり、取得・流出範囲の全体を確定できません。",
+      "en": "Incomplete logs prevent a complete determination of accessed or exfiltrated information."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "不正アクセスに関する調査結果と再発防止策について",
+      "url": "https://campfire.co.jp/press/2026/06/02/campfire/",
+      "publisher": "CAMPFIRE",
+      "publishedAt": "2026-06-02",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": ["SEC-004", "SEC-005", "SEC-006", "SEC-008", "SEC-009"]
+}

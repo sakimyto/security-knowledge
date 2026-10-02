@@ -1,0 +1,104 @@
+{
+  "id": "rust-arrayref-2026",
+  "organization": "crates.io / arrayref and related crates",
+  "title": {
+    "ja": "Rust：正規クレートの更新に悪性ビルド処理が混入",
+    "en": "Rust: malicious build code in legitimate crate updates"
+  },
+  "summary": {
+    "ja": "Rustチームは、arrayrefなどの更新に悪性の依存関係が追加されたと報告しました。ビルド時にペイロードを取得する処理が含まれ、公開された悪性版は削除されました。",
+    "en": "The Rust team reported malicious dependencies in updates to arrayref and related crates. Build-time code retrieved a payload; malicious versions were removed."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-20",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["supply-chain", "credentials"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "distribution",
+      "text": {
+        "ja": "arrayref、internment、append-only-vecの悪性版がproc-macro1に依存し、ビルド時にペイロードを取得しました。",
+        "en": "Malicious arrayref, internment, and append-only-vec releases depended on proc-macro1 to retrieve a payload at build time."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Attack overview"
+    },
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "8月20日の報告は、管理者の端末または認証情報の侵害が原因と推定しています。",
+        "en": "The August 20 report assesses compromise of a maintainer’s computer or credentials as the likely cause."
+      },
+      "status": "inferred",
+      "sourceIds": ["s1"],
+      "locator": "Maintainer account"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-20",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "Rustチームは悪性版の削除と公開者アカウントのロックを実施したと報告しました。",
+        "en": "The Rust team reported removing malicious releases and locking the publisher account."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Response"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "依存版とビルドスクリプトの実行履歴を照合します。悪性版を実行した環境では、依存更新だけでなく鍵の露出と端末の状態を確認します。",
+      "en": "Check dependency versions and build-script execution; examine exposed credentials and hosts rather than only replacing dependencies."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "悪性版のダウンロード数は被害者数ではありません。利用先での侵害範囲は不明です。",
+      "en": "Downloads are not a victim count; downstream compromise scope is unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Supply-chain attack on arrayref",
+      "url": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/",
+      "publisher": "Rust Project",
+      "publishedAt": "2026-08-20",
+      "kind": "vendor"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "Targeted attacks on Rust crate maintainers",
+      "url": "https://blog.rust-lang.org/2026/09/17/targeted-attacks/",
+      "publisher": "Rust Project",
+      "publishedAt": "2026-09-17",
+      "kind": "vendor"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-003", "SEC-004", "SEC-005", "SEC-007", "SEC-009"]
+}

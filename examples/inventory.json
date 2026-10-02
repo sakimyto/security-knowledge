@@ -11,6 +11,10 @@
     {
       "id": "build",
       "surfaces": ["ci", "repositories", "containers"]
+    },
+    {
+      "id": "example-evaluation-agent",
+      "surfaces": ["ai-agent"]
     }
   ]
 }

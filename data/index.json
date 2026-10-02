@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
@@ -10,11 +10,36 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "原因や公開状態を一次情報で確認できる10事例を選んだ初期版。事故全体の統計や網羅的な安全性評価には使えません。",
-    "en": "An initial selection of 10 incidents with primary-source evidence. It is not a representative dataset or a comprehensive security assessment."
+    "ja": "2025-10-02〜2026-10-02の公表日を対象に23事例を追加し、過去の10事例と合わせた選定DBです。評価試験・複数組織の攻撃報告も含むため、件数は企業数や事故全体の統計を意味しません。",
+    "en": "A curated database with 23 records disclosed during 2025-10-02–2026-10-02 and 10 earlier records. Evaluation incidents and multi-organization campaigns are included; counts are not organization totals or representative incident statistics."
   },
-  "contentHash": "5a3c8e3041e8e7a9a707f8f14a11d64425b5b69cc92828916f1aaeaa5e43cb4b",
+  "contentHash": "f5ac5fc91ec93ce474f12df056aee19dcd547d59b6784a26e747f38affeacbd2",
   "entries": [
+    {
+      "kind": "incident",
+      "id": "anthropic-cyber-evals-2026",
+      "hash": "df22edd6b470df3c7276c13334a0400fb1c2344c796091898bb40b00c80e7654"
+    },
+    {
+      "kind": "incident",
+      "id": "askul-2025",
+      "hash": "8807f2dc9a76a9250318dde15e88f1d97a29fa9f39feda176246710b552f4235"
+    },
+    {
+      "kind": "incident",
+      "id": "awabank-test-environment-2026",
+      "hash": "274695977d4b0103725da2aef85bb23722b25dde5a57ad8c0d4d2c1e25ee7b74"
+    },
+    {
+      "kind": "incident",
+      "id": "axios-npm-2026",
+      "hash": "209e538cd359db5c738022789123f0e56efcc115d5b00ac67d20585ee32bb450"
+    },
+    {
+      "kind": "incident",
+      "id": "campfire-2026",
+      "hash": "6ebd0adb88b55b1f734f6be5eb9eb9168c3977c7504da6a2c91087448117eca6"
+    },
     {
       "kind": "incident",
       "id": "circleci-2023",
@@ -32,8 +57,38 @@
     },
     {
       "kind": "incident",
+      "id": "digital-agency-gss-2026",
+      "hash": "f213edc27fdd0fbcd2d58006757eb9243c43e43797634ac1440d9d22d7be9e9c"
+    },
+    {
+      "kind": "incident",
       "id": "equifax-2017",
       "hash": "0954c174783b7f496ec4a924a31369007b98b19efba85df4a6f8e54c2dfa7e5d"
+    },
+    {
+      "kind": "incident",
+      "id": "forticloud-sso-2026",
+      "hash": "0a7f90420b23c4dfb973bdcaff05e36e1eb84dc5c20fa128b3a09de3ba9ff80b"
+    },
+    {
+      "kind": "incident",
+      "id": "gyazo-2026",
+      "hash": "dcfbe0fdc99c01508af80909bf27ebcc40c68ff910badfd997a051e6b57dbbbf"
+    },
+    {
+      "kind": "incident",
+      "id": "kddi-isp-2026",
+      "hash": "1ce489fa2ebf16936851f2918eefafe2e224aa2f546c6a8bb2730d6397cdc41f"
+    },
+    {
+      "kind": "incident",
+      "id": "keio-ransomware-2026",
+      "hash": "9e6952a807de15004a7784a79fa5e92539203b4cea8c847adb576bcd515eef51"
+    },
+    {
+      "kind": "incident",
+      "id": "metabase-2026",
+      "hash": "053252ba1c260199433f8a2d6153668f9bde48f01bc0164cb9a05c534d6404f5"
     },
     {
       "kind": "incident",
@@ -42,13 +97,63 @@
     },
     {
       "kind": "incident",
+      "id": "nishiyama-2026",
+      "hash": "68eb5c7416f2f56fd3f4f2ac4fa0687e7d61f69d46847577f531c1ce0af5304a"
+    },
+    {
+      "kind": "incident",
       "id": "okta-support-2023",
       "hash": "ce2a745c071cd0822922d4da150d4c8c22b9b85503b2fc9041c1761718ea25de"
     },
     {
       "kind": "incident",
+      "id": "openai-huggingface-eval-2026",
+      "hash": "03227e077cca0327d2bac49a95735ea95166b1b5de15e2c64af2b8e36be565c0"
+    },
+    {
+      "kind": "incident",
+      "id": "prontest-cloud-2026",
+      "hash": "2bb95e8ef1b4820d690fa35891f56e2cc7fbc8cdcc29a17ec2ee372684795dca"
+    },
+    {
+      "kind": "incident",
+      "id": "quick-2025",
+      "hash": "2af038caa32254c502baaf93e1ff3ab3ac89e5d9c8df1bdb1c7798081907def1"
+    },
+    {
+      "kind": "incident",
+      "id": "react2shell-2025",
+      "hash": "e1fdfa5bfd246913e92ba9225eeda9a0f496fe731af6f782f90ea416e924444a"
+    },
+    {
+      "kind": "incident",
+      "id": "rust-arrayref-2026",
+      "hash": "636cf32e46b05d55895c1e34fda7bb20010e0d4d7bb0d25a61acf9a5eb673d50"
+    },
+    {
+      "kind": "incident",
+      "id": "sakura-billing-2026",
+      "hash": "493c79f96ce4c126392ba6b9db8dff616fe874d06de5eef3f1b56a8b58eed167"
+    },
+    {
+      "kind": "incident",
+      "id": "sakura-hosting-2026",
+      "hash": "4991b42d0a8538c21bb12adb878e1168cac61d2b0903cc1252cad66686c2ed89"
+    },
+    {
+      "kind": "incident",
       "id": "snowflake-unc5537-2024",
       "hash": "24174c9c99c67f8211c4e3c0cf1b613975a33a0eaf02a73d422670a9a81fce03"
+    },
+    {
+      "kind": "incident",
+      "id": "temairazu-2026",
+      "hash": "850d08abeb2117646398605c54df2f7e164b985406fc001155792b8eadc716e4"
+    },
+    {
+      "kind": "incident",
+      "id": "times-car-2026",
+      "hash": "8de24493d8aada652dfe02055b6cacca57f0cff723ed7906ca65c10e5eaf6331"
     },
     {
       "kind": "incident",
@@ -66,54 +171,79 @@
       "hash": "378245575d4a60d27b27fc4ce0173d340b03aa930b5475fdfc416585e8186914"
     },
     {
+      "kind": "incident",
+      "id": "unit42-ai-assisted-2026",
+      "hash": "5df080af935d7269cf938146b76266693d1f5759a00b76a1bd874ae11b0741fd"
+    },
+    {
+      "kind": "incident",
+      "id": "voising-bi-2026",
+      "hash": "f40d9ec1c382b6866d9556f42e40d033ec17c42a91b6d97397ce952724dccaaa"
+    },
+    {
       "kind": "rule",
       "id": "SEC-001",
-      "hash": "970e961f606656001a0cbfc24c1e70351206a325caab6d22d191ded8f7246858"
+      "hash": "2cef8b4a8dabc9e46331770a513fd14a7fd970349e061d9a5cdb731bac36967a"
     },
     {
       "kind": "rule",
       "id": "SEC-002",
-      "hash": "fa80cd4a400004f1464265b363e20452a28a78afbb3b11aab9474176349cbd98"
+      "hash": "26d696610613e7dc7e8f016fb3084634ffd31a74c6333ee863d9ecbd9dceb4c1"
     },
     {
       "kind": "rule",
       "id": "SEC-003",
-      "hash": "cc74ebfdf1e90addb82c750d65123c33b5b0990f52a9a5bcd3fab4c2eed0af1e"
+      "hash": "7173e35ecfc72b419c7239930b27dbf0346defb2e407a430d082f3ea8a9526d2"
     },
     {
       "kind": "rule",
       "id": "SEC-004",
-      "hash": "d6a71883919069fabba154a0f2e70da90713b93786f6661d64851f1d865a0503"
+      "hash": "357ca458dc5ebef0281dbbc853bbd41b955c280b8df0b4f80ad835efa1234d97"
     },
     {
       "kind": "rule",
       "id": "SEC-005",
-      "hash": "ae8fe31ed23e82b7f9d5756ada677947351808388401cd709299219967474987"
+      "hash": "2da83b02baa52e03e5e917d4858000df64c2e02b631d272f176adbf8ae4524c0"
     },
     {
       "kind": "rule",
       "id": "SEC-006",
-      "hash": "cb9620460d12c370a578999c7a3e1346a304de2c630f1ed46e278a2c8b2df198"
+      "hash": "ad5cf24399635f2244f0240a4237b410ca6d07e352811f651447f5368c43318a"
     },
     {
       "kind": "rule",
       "id": "SEC-007",
-      "hash": "5df095c5cbdbb5aadcd5440d3aa8382cc65e0f07fdd15a958510491631243a19"
+      "hash": "89b86018d60ab5d1546e0547f38bdfbcbaf33b0bdd03a78fc590d4201349045e"
     },
     {
       "kind": "rule",
       "id": "SEC-008",
-      "hash": "9c74ad8f2397c4f3791125b55128a3b6a9f38855df63054006958961221b894e"
+      "hash": "4961a7a944dbf51853817a537ee22cdb7814caba6fb70d8ff632deeee73c08f5"
     },
     {
       "kind": "rule",
       "id": "SEC-009",
-      "hash": "f9b6bfbcefa2cc2a397b922e16d61c667977793da710c5628d38d0a13769fab7"
+      "hash": "6467d48234f7eb64c455122f8c8140421ca5a8f40ffff9bf0bf4f3980b86823d"
     },
     {
       "kind": "rule",
       "id": "SEC-010",
-      "hash": "ffc7fd3744c4d1db4cb9b6afcf26acd6364f9ed2f63acef3d486db1a4974c450"
+      "hash": "057e3ecf2e5f444da0fa1a37d2696bce79690ae193150a0ea534ec07542be6ff"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-011",
+      "hash": "2ed11f2560fd24b0a4bb2dc539d195c13569ee6e7b499e79db26241d43db438d"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-012",
+      "hash": "36f8264944bbc3b2df1256e3df99d8fad9b434d1c6f268b014807d72e094fddc"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-013",
+      "hash": "0e16048f65f44638a3e7858bde158f737c2fa74751e5b12580da67ab0a3e7856"
     }
   ]
 }

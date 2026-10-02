@@ -1,0 +1,105 @@
+{
+  "id": "unit42-ai-assisted-2026",
+  "organization": "Anonymous enterprise investigated by Unit 42",
+  "title": {
+    "ja": "Unit 42：AI支援の侵入でリポジトリの鍵を悪用",
+    "en": "Unit 42: AI-assisted intrusion abusing repository secrets"
+  },
+  "summary": {
+    "ja": "Unit 42は、公開サービスへの侵入後、リポジトリの秘密情報を足がかりにクラウドへ広がった事案を報告しました。攻撃中のLLM呼び出しが観測されています。",
+    "en": "Unit 42 reported an intrusion that expanded from an exposed service to cloud systems through repository secrets, with LLM calls observed during the attack."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-02",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials", "configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "expansion",
+      "text": {
+        "ja": "リポジトリ内のトークン、保管庫の認証情報、CIのクラウド鍵が侵害拡大に利用されました。",
+        "en": "Repository tokens, vault credentials, and cloud keys in CI enabled expansion."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Repository / vault / CI stages"
+    },
+    {
+      "topic": "control",
+      "text": {
+        "ja": "バックドアを加える試みはブランチ保護に阻まれました。侵入全体はランサムウェアと確認されていません。",
+        "en": "Branch protection blocked a backdoor attempt; the intrusion was not established as ransomware."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Branch protection / September corrections"
+    },
+    {
+      "topic": "ai",
+      "text": {
+        "ja": "調査元は攻撃中のLLM呼び出しと、複数のエージェントを使う操作を報告しました。",
+        "en": "Investigators reported LLM calls and operations involving multiple agents during the attack."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "AI-assisted orchestration"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-02",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "調査元は、ブランチ保護によって攻撃者の変更が本番へ入るのを阻止したと報告しました。",
+        "en": "Investigators reported that branch protection prevented the attacker’s change from reaching production."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Branch protection"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "リポジトリに混入する鍵と、CI・保管庫・AI接続先の権限を点検します。コード変更に必要な承認と本番鍵を分離します。",
+      "en": "Inspect repository secrets and CI, vault, and AI-endpoint privileges; separate change approval from production credentials."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "confirmed",
+    "assessment": {
+      "ja": "Unit 42が攻撃中のLLM呼び出しを報告しています。全工程が自律実行されたことまでは確認していません。",
+      "en": "Unit 42 reports LLM calls during the intrusion; this does not establish autonomous execution of every stage."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "被害組織名と最初の脆弱性の詳細は非公表です。人の操作とAIの自律行動の全範囲は未検証です。",
+      "en": "Victim identity and initial vulnerability are undisclosed; the full human-versus-agent autonomy split is unverified."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "An AI-assisted cyber attack: inside a Unit 42 investigation",
+      "url": "https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/",
+      "publisher": "Palo Alto Networks Unit 42",
+      "publishedAt": "2026-09-02",
+      "kind": "investigator"
+    }
+  ],
+  "ruleIds": ["SEC-004", "SEC-005", "SEC-006", "SEC-007", "SEC-008", "SEC-009", "SEC-011"]
+}

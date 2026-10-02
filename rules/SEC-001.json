@@ -1,6 +1,6 @@
 {
   "id": "SEC-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "修正対象と稼働バージョンを照合する",
@@ -54,7 +54,22 @@
       "en": "Absence from this dataset is not evidence of safety. Closed-source internals and actual compromise require separate investigation."
     }
   ],
-  "incidentIds": ["equifax-2017", "moveit-2023"],
+  "incidentIds": [
+    "axios-npm-2026",
+    "digital-agency-gss-2026",
+    "equifax-2017",
+    "forticloud-sso-2026",
+    "gyazo-2026",
+    "kddi-isp-2026",
+    "metabase-2026",
+    "moveit-2023",
+    "nishiyama-2026",
+    "openai-huggingface-eval-2026",
+    "prontest-cloud-2026",
+    "react2shell-2025",
+    "rust-arrayref-2026",
+    "voising-bi-2026"
+  ],
   "references": [
     {
       "title": "OSV API",

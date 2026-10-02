@@ -1,6 +1,6 @@
 {
   "id": "SEC-009",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "取得・管理操作のログが揃っているか確認する",
@@ -54,7 +54,34 @@
       "en": "Missing logs do not establish absence of compromise. Unavailable logs mean unverified."
     }
   ],
-  "incidentIds": ["okta-support-2023", "cloudflare-thanksgiving-2023", "snowflake-unc5537-2024"],
+  "incidentIds": [
+    "anthropic-cyber-evals-2026",
+    "askul-2025",
+    "awabank-test-environment-2026",
+    "axios-npm-2026",
+    "campfire-2026",
+    "cloudflare-thanksgiving-2023",
+    "digital-agency-gss-2026",
+    "forticloud-sso-2026",
+    "gyazo-2026",
+    "kddi-isp-2026",
+    "keio-ransomware-2026",
+    "metabase-2026",
+    "nishiyama-2026",
+    "okta-support-2023",
+    "openai-huggingface-eval-2026",
+    "prontest-cloud-2026",
+    "quick-2025",
+    "react2shell-2025",
+    "rust-arrayref-2026",
+    "sakura-billing-2026",
+    "sakura-hosting-2026",
+    "snowflake-unc5537-2024",
+    "temairazu-2026",
+    "times-car-2026",
+    "unit42-ai-assisted-2026",
+    "voising-bi-2026"
+  ],
   "references": [],
   "execution": "read-only-by-default",
   "provenance": "editorial-guidance"

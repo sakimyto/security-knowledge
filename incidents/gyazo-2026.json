@@ -1,0 +1,104 @@
+{
+  "id": "gyazo-2026",
+  "organization": "Helpfeel / Gyazo",
+  "title": {
+    "ja": "Gyazo：画像アップロード用サーバーの脆弱性から侵入",
+    "en": "Gyazo: upload-server vulnerability and data access"
+  },
+  "summary": {
+    "ja": "画像アップロード用サーバーの脆弱性を悪用され、ユーザー情報と画像メタデータが取得されました。公表されたユーザーレコードには、匿名ユーザーとメール登録者の両方が含まれます。",
+    "en": "An upload-server vulnerability enabled access to user records and image metadata. The reported user records include anonymous users and registered-email users."
+  },
+  "occurredAt": "2026-09-11",
+  "disclosedAt": "2026-09-16",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "9月11日に画像アップロード用サーバーへのコード実行があり、同日夜に検知しました。",
+        "en": "Remote code execution affected the image-upload server on September 11 and was detected that evening."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "調査で判明した経緯"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "ユーザー情報2,362万件と画像メタデータの取得を確認しました。メタデータ件数は画像ファイルの流出件数ではありません。",
+        "en": "The company confirmed access to 23.62 million user records and image metadata; metadata counts are not image-file exfiltration counts."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "影響範囲"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-16",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "脆弱性の修正、接続トークンの失効、停止中の調査を実施し、9月27日にサービスを再開したと公表しました。",
+        "en": "Helpfeel reported patching, token revocation, investigation during suspension, and service resumption on September 27."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "対応状況 / 9月27日追記"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "修正提供時期が不明なため、パッチ放置とは判断できません。アップロード処理とDBへ到達する権限、削除済みデータの保持を確認します。",
+      "en": "Unknown patch timing prevents a neglect finding; inspect upload handling, database privileges, and deleted-data retention."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な脆弱性、CVE、侵入前の修正提供状況は不明です。ユーザーレコード数は実人数を意味しません。",
+      "en": "Specific vulnerability, CVE, and pre-intrusion patch availability are unknown; user records do not necessarily represent distinct people."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Gyazoにおける不正アクセスに関するお知らせ",
+      "url": "https://corp.helpfeel.com/news/news-20260916-1",
+      "publisher": "Helpfeel",
+      "publishedAt": "2026-09-16",
+      "kind": "organization"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "Gyazoにおける不正アクセスに関するお知らせ（第2報）",
+      "url": "https://corp.helpfeel.com/news/news-20260925-01",
+      "publisher": "Helpfeel",
+      "publishedAt": "2026-09-25",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-005", "SEC-006", "SEC-008", "SEC-009", "SEC-010", "SEC-012"]
+}

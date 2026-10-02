@@ -1,0 +1,95 @@
+{
+  "id": "axios-npm-2026",
+  "organization": "Axios npm project",
+  "title": {
+    "ja": "Axios：公開者アカウントから悪性パッケージを配布",
+    "en": "Axios: malicious releases through publisher compromise"
+  },
+  "summary": {
+    "ja": "Googleの調査チームは、Axiosの公開者アカウントが侵害され、悪性の依存パッケージを含む版が公開されたと報告しました。インストール時の処理が複数OS向けのバックドアを配布します。",
+    "en": "Google investigators reported a compromised Axios publisher account and releases carrying a malicious dependency whose install script distributes cross-platform backdoors."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-03-31",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["supply-chain", "credentials"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "公開者アカウントが侵害され、Axios 1.14.1と0.30.4が悪性版として報告されました。",
+        "en": "A compromised publisher account was used to distribute malicious Axios 1.14.1 and 0.30.4."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Overview / Remediation"
+    },
+    {
+      "topic": "execution",
+      "text": {
+        "ja": "plain-crypto-jsのインストール処理がWindows・macOS・Linux向けのペイロードを取得します。",
+        "en": "The plain-crypto-js install script retrieves payloads for Windows, macOS, and Linux."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Initial stage"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-03-31",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "guidance",
+      "text": {
+        "ja": "調査元は依存関係の照合、影響端末の隔離、露出した鍵の更新、キャッシュの除去を推奨しました。",
+        "en": "Investigators recommend dependency checks, host isolation, rotation of exposed secrets, and cache remediation."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Remediation"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "ロックファイルと実際のビルド環境を照合し、インストール処理の実行履歴を確認します。版の固定だけでは悪性版の安全性を保証できません。",
+      "en": "Compare lockfiles with actual build environments and install execution; pinning does not make a malicious version safe."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "公開者アカウントの侵害方法と、実際に影響した利用者の総数は不明です。",
+      "en": "Publisher-account compromise method and total affected consumers are unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package/",
+      "publisher": "Google Threat Intelligence Group",
+      "publishedAt": "2026-03-31",
+      "kind": "investigator"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-003", "SEC-004", "SEC-005", "SEC-007", "SEC-009"]
+}

@@ -1,6 +1,6 @@
 {
   "id": "SEC-002",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "MFAの方式と適用漏れを確認する",
@@ -54,7 +54,18 @@
       "en": "MFA does not guarantee protection against compromised endpoints or stolen sessions. Missing IdP access means unverified."
     }
   ],
-  "incidentIds": ["uber-2022", "snowflake-unc5537-2024"],
+  "incidentIds": [
+    "anthropic-cyber-evals-2026",
+    "askul-2025",
+    "awabank-test-environment-2026",
+    "digital-agency-gss-2026",
+    "forticloud-sso-2026",
+    "nishiyama-2026",
+    "prontest-cloud-2026",
+    "quick-2025",
+    "snowflake-unc5537-2024",
+    "uber-2022"
+  ],
   "references": [
     {
       "title": "Cloudflare: phishing attack blocked",

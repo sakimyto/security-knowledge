@@ -1,0 +1,133 @@
+{
+  "id": "metabase-2026",
+  "organization": "Metabase / affected customers",
+  "title": {
+    "ja": "Metabase：ゼロデイと管理者セッションからデータ取得",
+    "en": "Metabase: zero-day and administrator-session abuse"
+  },
+  "summary": {
+    "ja": "Metabaseは8月3日の異常なAPIキー利用を調査し、未知の脆弱性を使った侵入を確認しました。入力処理とORMの挙動がつながり、管理者セッションを得た攻撃者がデータを取得しました。",
+    "en": "Metabase investigated abnormal API-key activity on August 3 and confirmed zero-day exploitation. Input handling and ORM behavior enabled administrator sessions and data access."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-06",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["zero-day", "implementation"],
+  "cves": ["CVE-2026-72898"],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "過剰な入力キー、パスワードリセット処理、SQL式を受け付けるORMの挙動が攻撃経路につながりました。",
+        "en": "Extra input keys, password-reset handling, and ORM acceptance of SQL expressions formed the exploit chain."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Technical root cause"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "同社クラウドの顧客の3%未満と、一部の公開された自己運用環境で侵害を確認しました。",
+        "en": "Metabase confirmed compromise of fewer than 3% of cloud customers and some publicly exposed self-hosted installations."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Scope of impact"
+    },
+    {
+      "topic": "ai",
+      "text": {
+        "ja": "複数のコード上の挙動とUser-Agentを根拠に、開発元は高度なLLMが関与した可能性を示しています。",
+        "en": "The developer assesses advanced LLM involvement based on code-path complexity and User-Agent evidence."
+      },
+      "status": "inferred",
+      "sourceIds": ["s1"],
+      "locator": "Was this AI?"
+    },
+    {
+      "topic": "vulnerability",
+      "text": {
+        "ja": "開発元のアドバイザリは、認証不要のSQLインジェクションと管理者権限の取得をCVE-2026-72898として公表しています。",
+        "en": "The vendor advisory identifies unauthenticated SQL injection enabling administrator access as CVE-2026-72898."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s3"],
+      "locator": "Summary / CVE ID"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-06",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "クラウドの修正、自己運用向けの修正版、入力とSQL式の扱いの強化を公表しました。",
+        "en": "Metabase reported cloud fixes, patched self-hosted releases, and hardened input and SQL-expression handling."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Remediation"
+    }
+  ],
+  "prevention": {
+    "classification": "pre-disclosure-exploitation",
+    "assessment": {
+      "ja": "公表前の悪用を含みます。BIの公開範囲、APIキー、取得権限を確認し、自社実装では入力の許可リストとSQL式の境界を点検します。",
+      "en": "Exploitation preceded disclosure. Inspect BI exposure, API keys, and data privileges; inspect input allowlists and SQL-expression boundaries in owned code."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "inferred",
+    "assessment": {
+      "ja": "開発元はLLM関与を推定していますが、攻撃者のモデルや利用実態を確認した報告ではありません。",
+      "en": "The developer infers LLM involvement without confirming the attacker’s model or actual usage."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "AI関与は開発元の推定です。自己運用環境の被害総数と個別の侵入開始日は不明です。",
+      "en": "AI attribution is the developer’s assessment; total self-hosted impact and individual intrusion starts are unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Vulnerability: what happened",
+      "url": "https://www.metabase.com/blog/vulnerability-what-happened",
+      "publisher": "Metabase",
+      "publishedAt": "2026-08-27",
+      "kind": "vendor"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "Security update, 6 Aug 2026",
+      "url": "https://www.metabase.com/blog/security-update-6-aug-2026",
+      "publisher": "Metabase",
+      "publishedAt": "2026-08-06",
+      "kind": "vendor"
+    },
+    {
+      "id": "s3",
+      "title": "SQL injection using an unauthenticated endpoint leading to admin access",
+      "url": "https://github.com/metabase/metabase/security/advisories/GHSA-vwf4-m7j8-wcjf",
+      "publisher": "Metabase",
+      "kind": "vendor",
+      "publishedAt": "2026-08-06",
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-005", "SEC-006", "SEC-008", "SEC-009", "SEC-010"]
+}

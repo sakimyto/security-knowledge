@@ -40,6 +40,11 @@ export function validateCatalog(catalog, root = ROOT) {
       errors.push(`${incident.id}: duplicate source ID`)
     if (!incident.sources.some((source) => source.kind !== 'secondary'))
       errors.push(`${incident.id}: primary source required`)
+    if (
+      incident.ai.status !== 'unknown' &&
+      !incident.claims.some((claim) => claim.topic === 'ai' && claim.status === incident.ai.status)
+    )
+      errors.push(`${incident.id}: AI attribution requires a sourced claim with matching status`)
     const claims = [
       ...incident.claims,
       ...incident.timeline,

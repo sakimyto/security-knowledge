@@ -1,0 +1,104 @@
+{
+  "id": "times-car-2026",
+  "organization": "タイムズモビリティ",
+  "title": {
+    "ja": "タイムズカー：会員情報と本人確認書類が流出",
+    "en": "Times Car: member records and identity documents leaked"
+  },
+  "summary": {
+    "ja": "同社は、660万件の会員情報と、そのうち160万件の本人確認書類画像の流出を確認しました。退会済み会員や登録未完了の申込者も対象に含まれます。",
+    "en": "The company confirmed leakage of 6.6 million member records, including 1.6 million identity-document images, covering withdrawn members and incomplete applicants."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-25",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "660万件の会員情報と、うち160万件の本人確認書類画像の流出を確認しました。両者を合算しません。",
+        "en": "Leakage covered 6.6 million member records, including 1.6 million identity documents; these counts must not be added."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "流出した情報 / 対象件数"
+    },
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "不正アクセスの侵入経路と原因は調査中です。",
+        "en": "The intrusion route and cause remain under investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "今後の調査"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-25",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "9月26日に不正通信を遮断し、対象者への通知を実施すると公表しました。",
+        "en": "The company reported blocking malicious communications on September 26 and notifying affected users."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "対応状況"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入経路は判断できません。退会者・申込者の保持データ、本人確認書類への権限、取得ログを点検します。",
+      "en": "The entry path cannot be assessed; inspect former-member and applicant retention, identity-document privileges, and access logs."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "9月25日は検知・公表日です。初回侵入日、具体的な脆弱性と修正提供状況は不明です。",
+      "en": "September 25 is detection and disclosure, not an established intrusion start; vulnerability and patch timing are unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "タイムズカーにおける不正アクセスに関するお知らせ（第2報）",
+      "url": "https://share.timescar.jp/news/2026/0928/1815.html",
+      "publisher": "タイムズモビリティ",
+      "publishedAt": "2026-09-28",
+      "kind": "organization"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "タイムズカーにおける不正アクセスに関するお知らせ（第3報）",
+      "url": "https://share.timescar.jp/news/2026/0929/1816.html",
+      "publisher": "タイムズモビリティ",
+      "publishedAt": "2026-09-29",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-006", "SEC-008", "SEC-009", "SEC-012"]
+}

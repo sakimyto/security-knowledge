@@ -1,6 +1,6 @@
 {
   "id": "SEC-007",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "CIで実行する外部コードと権限を確認する",
@@ -54,7 +54,13 @@
       "en": "Pinning does not prove code is safe. A checksum from the same compromised source is insufficient."
     }
   ],
-  "incidentIds": ["codecov-2021"],
+  "incidentIds": [
+    "anthropic-cyber-evals-2026",
+    "axios-npm-2026",
+    "codecov-2021",
+    "rust-arrayref-2026",
+    "unit42-ai-assisted-2026"
+  ],
   "references": [],
   "execution": "read-only-by-default",
   "provenance": "editorial-guidance"

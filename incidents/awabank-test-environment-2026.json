@@ -1,0 +1,95 @@
+{
+  "id": "awabank-test-environment-2026",
+  "organization": "阿波銀行",
+  "title": {
+    "ja": "阿波銀行：残存したテスト環境から情報が流出",
+    "en": "Awabank: leakage from a retained test environment"
+  },
+  "summary": {
+    "ja": "廃止・データ消去が必要だったテスト環境が、AI高度化の検証用として残っていました。ID・パスワードによる不正アクセスを受け、顧客・株主の情報が流出したと公表しています。",
+    "en": "A test environment due for retirement and data deletion remained for AI-related verification. Credential-based unauthorized access led to reported customer and shareholder data leakage."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-04-03",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials", "configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "外部からテスト環境へID・パスワードを用いた不正アクセスがありました。",
+        "en": "External unauthorized access used an ID and password against the test environment."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "原因"
+    },
+    {
+      "topic": "control",
+      "text": {
+        "ja": "開発後の環境廃止・データ消去が行われず、アクセス制御も不十分だったと報告しました。",
+        "en": "The bank reported missing post-development retirement and data deletion, and insufficient access controls."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "原因 / 再発防止策"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-04-03",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "planned-response",
+      "text": {
+        "ja": "警察の調査後の環境廃止と、システム管理・アクセス制御の見直しを予定すると公表しました。",
+        "en": "The bank announced planned retirement after police investigation and reviews of system management and access controls."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "再発防止策"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "非本番環境の実データ、公開範囲、責任者、廃止期限と消去の証拠を点検します。",
+      "en": "Inspect real data in nonproduction, exposure, ownership, retirement deadlines, and deletion evidence."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "AIは環境を残した業務目的として記載されています。攻撃者のAI利用を示す根拠ではありません。",
+      "en": "AI is mentioned as a business reason for retaining the environment, not evidence of attacker AI use."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "認証情報の入手経路と、非本番環境を残した判断の詳細は不明です。",
+      "en": "Credential acquisition and detailed decisions behind retaining the environment are unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "情報流出に関する調査結果および再発防止策について",
+      "url": "https://www.awabank.co.jp/kojin/benri/awagin_app/news/2026/news20260603a/index.html",
+      "publisher": "阿波銀行",
+      "publishedAt": "2026-06-03",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": ["SEC-002", "SEC-005", "SEC-006", "SEC-009", "SEC-012"]
+}

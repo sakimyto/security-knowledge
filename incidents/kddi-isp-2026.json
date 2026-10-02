@@ -1,0 +1,104 @@
+{
+  "id": "kddi-isp-2026",
+  "organization": "KDDI",
+  "title": {
+    "ja": "KDDI：第三者ソフトのゼロデイからISP情報が流出",
+    "en": "KDDI: ISP data leakage through a third-party zero-day"
+  },
+  "summary": {
+    "ja": "5月16日からソフトウェアの脆弱性を悪用され、ISP利用者の情報が流出しました。KDDIは、6月17日の発見時点で提供元も把握していなかった脆弱性と説明しています。",
+    "en": "A software vulnerability exploited from May 16 led to ISP data leakage. KDDI says the vendor was unaware of it when detected on June 17."
+  },
+  "occurredAt": "2026-05-16",
+  "disclosedAt": "2026-06-23",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["zero-day"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "悪用は5月16日から始まり、6月17日の発見時点で提供元も未把握の脆弱性でした。",
+        "en": "Exploitation began May 16; the vendor was unaware of the vulnerability at June 17 detection."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "3. 発生原因および対応"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "7月21日の訂正後の対象はメールアドレス1,223万1,954人、うちパスワード流出761万6,173人です。",
+        "en": "Corrected July 21 counts are 12,231,954 email-address holders, including 7,616,173 with password leakage."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "2. 情報流出の詳細（7月21日訂正）"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-23",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "6月17日のシステム修正、EDR導入と、ISPパスワードのリセット対応を公表しました。",
+        "en": "KDDI reported a June 17 system fix, EDR deployment, and ISP password reset measures."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "3. 対応 / 4. お願い"
+    }
+  ],
+  "prevention": {
+    "classification": "pre-disclosure-exploitation",
+    "assessment": {
+      "ja": "公表前の悪用を含みます。依存製品の把握に加え、流出範囲を限定する権限・保存情報・検知を確認します。",
+      "en": "Exploitation preceded disclosure; inspect component inventory, privileges, stored information, and detection to limit impact."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "対策でのAI利用は記載されていますが、攻撃者のAI利用は確認できません。",
+      "en": "AI is mentioned for defensive measures, not established attacker use."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "製品名とCVEは非公表です。漏れたパスワードすべての保存形式はこの資料だけでは判断できません。",
+      "en": "Product and CVE are undisclosed; this source does not establish a single storage format for every leaked password."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "当社ISPサービスのお客さま情報の流出について（第2報・訂正）",
+      "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-73_4619/kddi_nr_s-73_4619_pdf_01.pdf",
+      "publisher": "KDDI",
+      "publishedAt": "2026-07-06",
+      "kind": "organization"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "当社ISPサービスのお客さま情報の流出について",
+      "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-71_4593/kddi_nr_s-71_4593_pdf_01.pdf",
+      "publisher": "KDDI",
+      "publishedAt": "2026-06-23",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-005", "SEC-006", "SEC-008", "SEC-009"]
+}

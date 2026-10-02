@@ -1,0 +1,95 @@
+{
+  "id": "temairazu-2026",
+  "organization": "手間いらず",
+  "title": {
+    "ja": "手間いらず：不正アクセスと宿泊者向け不審メッセージ",
+    "en": "Temairazu: unauthorized access and suspicious guest messages"
+  },
+  "summary": {
+    "ja": "同社システムへの不正アクセスを確認したと公表しました。宿泊者への不審な予約関連メッセージも報告されていますが、両者の関係と情報の取得範囲は調査中です。",
+    "en": "Temairazu confirmed unauthorized system access. Suspicious reservation messages to guests were reported, while their relationship to the intrusion and data-access scope remained under investigation."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-28",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "侵入原因を特定し対策したと説明していますが、技術的な詳細は非公表です。",
+        "en": "The company says it identified and addressed the cause, but withholds technical details."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "2. 調査・対応状況"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "9月21日夜以降の不審メッセージと、宿泊情報へのアクセスの可能性を調査しています。",
+        "en": "Investigators examined suspicious messages reported from September 21 and possible access to guest information."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "1. 経緯 / 2. 調査・対応状況"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-28",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "不正アクセスの遮断と対策、監視の強化、宿泊施設への注意喚起を公表しました。",
+        "en": "Temairazu reported blocking access, remediation, stronger monitoring, and alerts to lodging facilities."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "2. 対応状況 / 3. お願い"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "技術的な原因は判断できません。宿泊情報の取得権限・ログと、外部サービスへ預けるデータの必要性を点検します。",
+      "en": "Technical cause is undisclosed; inspect guest-data privileges, logs, and the need for data held by external services."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "不審メッセージとの因果関係、流出の確定範囲、具体的な侵入手法は不明です。",
+      "en": "Causation of suspicious messages, confirmed leakage scope, and specific entry technique remain unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "当社システムへの不正アクセスに関するお知らせ",
+      "url": "https://www.temairazu.co.jp/pdf/1206/news-update",
+      "publisher": "手間いらず",
+      "publishedAt": "2026-09-28",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-006", "SEC-008", "SEC-009", "SEC-012"]
+}

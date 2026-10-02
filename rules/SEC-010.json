@@ -1,6 +1,6 @@
 {
   "id": "SEC-010",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "外部入力とSQLの組み立てを確認する",
@@ -54,7 +54,7 @@
       "en": "MOVEit is a vendor-defect example. This editorial rule does not claim the same implementation flaw exists in your code."
     }
   ],
-  "incidentIds": ["moveit-2023"],
+  "incidentIds": ["anthropic-cyber-evals-2026", "gyazo-2026", "metabase-2026", "moveit-2023"],
   "references": [
     {
       "title": "OWASP SQL Injection Prevention Cheat Sheet",

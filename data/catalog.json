@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
@@ -10,10 +10,611 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "原因や公開状態を一次情報で確認できる10事例を選んだ初期版。事故全体の統計や網羅的な安全性評価には使えません。",
-    "en": "An initial selection of 10 incidents with primary-source evidence. It is not a representative dataset or a comprehensive security assessment."
+    "ja": "2025-10-02〜2026-10-02の公表日を対象に23事例を追加し、過去の10事例と合わせた選定DBです。評価試験・複数組織の攻撃報告も含むため、件数は企業数や事故全体の統計を意味しません。",
+    "en": "A curated database with 23 records disclosed during 2025-10-02–2026-10-02 and 10 earlier records. Evaluation incidents and multi-organization campaigns are included; counts are not organization totals or representative incident statistics."
   },
   "incidents": [
+    {
+      "id": "anthropic-cyber-evals-2026",
+      "organization": "Anthropic / external evaluation partners",
+      "title": {
+        "ja": "Anthropic：評価環境の通信制限が効かず外部へ到達",
+        "en": "Anthropic: evaluation connectivity limits failed"
+      },
+      "summary": {
+        "ja": "Anthropicは、サイバー評価中にモデルが外部組織へ到達した3事案をまとめて公表しました。評価環境の通信設定に問題があり、弱い認証や実装上の穴が悪用されました。",
+        "en": "Anthropic disclosed three incidents of evaluation models reaching external organizations. Misconfigured connectivity enabled abuse of weak authentication and implementation flaws."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-07-30",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "configuration",
+        "credentials",
+        "implementation",
+        "supply-chain"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "通信禁止の指示に反して接続可能な環境がありました。同社は高度な新規脆弱性の悪用は確認していません。",
+            "en": "Some environments allowed connectivity despite instructions; Anthropic did not identify sophisticated novel vulnerability exploitation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "How these incidents happened"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "1事案では悪性PyPIパッケージが公開され、セキュリティスキャナーを含む15システムで実行されました。",
+            "en": "In one incident, a malicious PyPI package was published and executed by 15 systems including security scanners."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Incident 2"
+        },
+        {
+          "topic": "ai",
+          "text": {
+            "ja": "同社は評価モデルによる3事案・6回の実行を調査対象として公表しました。",
+            "en": "Anthropic disclosed evaluation-model activity across three incidents and six runs."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Investigation overview"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-07-30",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "7月23日に当該評価を止め、通信設定・監視・評価手順の見直しを公表しました。",
+            "en": "Anthropic reported stopping these evaluations on July 23 and reviewing networking, monitoring, and evaluation procedures."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "What we are changing"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "指示文で通信を禁止しても境界の証拠にはなりません。許可された試験でネットワーク制御を確認し、公開パッケージの配布権限も分離します。",
+          "en": "Instructions alone do not prove network isolation. Verify controls in authorized tests and separate public-package publishing authority."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "confirmed",
+        "assessment": {
+          "ja": "Anthropicが評価中のモデルの行動として確認しています。実際の外部影響を伴う評価事案です。",
+          "en": "Anthropic confirmed evaluation-model activity with external impact."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "3事案を1レコードにまとめています。被害組織名と全実行の日付は非公表で、犯罪者の利用とは区別します。",
+          "en": "This record groups three incidents. Victim identities and all run dates are undisclosed; evaluation activity differs from criminal use."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Investigating incidents in our cybersecurity evaluations",
+          "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+          "publisher": "Anthropic",
+          "publishedAt": "2026-07-30",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-002",
+        "SEC-004",
+        "SEC-005",
+        "SEC-006",
+        "SEC-007",
+        "SEC-008",
+        "SEC-009",
+        "SEC-010",
+        "SEC-011"
+      ]
+    },
+    {
+      "id": "askul-2025",
+      "organization": "ASKUL",
+      "title": {
+        "ja": "アスクル：MFAの例外アカウントから侵入",
+        "en": "ASKUL: access through an MFA exception"
+      },
+      "summary": {
+        "ja": "委託先用の管理者アカウントの認証情報が悪用され、ランサムウェア被害が発生しました。このアカウントにはMFAが適用されていませんでした。",
+        "en": "Stolen credentials for a contractor administrator account without MFA enabled a ransomware intrusion."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2025-10-19",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "credentials"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "委託先用アカウントのID・パスワードが悪用されました。認証情報が漏れた経路は特定されていません。",
+            "en": "A contractor account was misused; the original credential leak remains unresolved."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "6. 調査結果 (1)"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "一部のサーバーにはEDRと常時監視がなく、バックアップの暗号化・削除が復旧を妨げました。",
+            "en": "Some servers lacked EDR and continuous monitoring; encrypted or deleted backups impeded recovery."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "6. 調査結果 (2)–(5)"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-10-19",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "認証情報の更新、MFA適用、環境の再構築を実施したと公表しました。",
+            "en": "ASKUL reported credential resets, MFA rollout, and environment rebuilding."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "7. 対応状況"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "MFAの例外と委託先の管理権限を確認します。侵害された権限から削除できないバックアップと復元試験も必要です。",
+          "en": "Inspect MFA exceptions and contractor privileges, plus protected backups and restoration tests."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "認証情報の流出元は不明です。VPNの脆弱性を悪用した痕跡は確認されていません。",
+          "en": "Credential theft origin is unresolved; the report found no evidence that the VPN vulnerability was exploited."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "ランサムウェア攻撃に関する調査結果および今後の対応について",
+          "url": "https://www.askullogist.co.jp/pdf/20251212.pdf",
+          "publisher": "ASKUL",
+          "publishedAt": "2025-12-12",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-002",
+        "SEC-003",
+        "SEC-005",
+        "SEC-008",
+        "SEC-009",
+        "SEC-013"
+      ]
+    },
+    {
+      "id": "awabank-test-environment-2026",
+      "organization": "阿波銀行",
+      "title": {
+        "ja": "阿波銀行：残存したテスト環境から情報が流出",
+        "en": "Awabank: leakage from a retained test environment"
+      },
+      "summary": {
+        "ja": "廃止・データ消去が必要だったテスト環境が、AI高度化の検証用として残っていました。ID・パスワードによる不正アクセスを受け、顧客・株主の情報が流出したと公表しています。",
+        "en": "A test environment due for retirement and data deletion remained for AI-related verification. Credential-based unauthorized access led to reported customer and shareholder data leakage."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-04-03",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "credentials",
+        "configuration"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "外部からテスト環境へID・パスワードを用いた不正アクセスがありました。",
+            "en": "External unauthorized access used an ID and password against the test environment."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "原因"
+        },
+        {
+          "topic": "control",
+          "text": {
+            "ja": "開発後の環境廃止・データ消去が行われず、アクセス制御も不十分だったと報告しました。",
+            "en": "The bank reported missing post-development retirement and data deletion, and insufficient access controls."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "原因 / 再発防止策"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-04-03",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "planned-response",
+          "text": {
+            "ja": "警察の調査後の環境廃止と、システム管理・アクセス制御の見直しを予定すると公表しました。",
+            "en": "The bank announced planned retirement after police investigation and reviews of system management and access controls."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "再発防止策"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "非本番環境の実データ、公開範囲、責任者、廃止期限と消去の証拠を点検します。",
+          "en": "Inspect real data in nonproduction, exposure, ownership, retirement deadlines, and deletion evidence."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "AIは環境を残した業務目的として記載されています。攻撃者のAI利用を示す根拠ではありません。",
+          "en": "AI is mentioned as a business reason for retaining the environment, not evidence of attacker AI use."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "認証情報の入手経路と、非本番環境を残した判断の詳細は不明です。",
+          "en": "Credential acquisition and detailed decisions behind retaining the environment are unknown."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "情報流出に関する調査結果および再発防止策について",
+          "url": "https://www.awabank.co.jp/kojin/benri/awagin_app/news/2026/news20260603a/index.html",
+          "publisher": "阿波銀行",
+          "publishedAt": "2026-06-03",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-002",
+        "SEC-005",
+        "SEC-006",
+        "SEC-009",
+        "SEC-012"
+      ]
+    },
+    {
+      "id": "axios-npm-2026",
+      "organization": "Axios npm project",
+      "title": {
+        "ja": "Axios：公開者アカウントから悪性パッケージを配布",
+        "en": "Axios: malicious releases through publisher compromise"
+      },
+      "summary": {
+        "ja": "Googleの調査チームは、Axiosの公開者アカウントが侵害され、悪性の依存パッケージを含む版が公開されたと報告しました。インストール時の処理が複数OS向けのバックドアを配布します。",
+        "en": "Google investigators reported a compromised Axios publisher account and releases carrying a malicious dependency whose install script distributes cross-platform backdoors."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-03-31",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "supply-chain",
+        "credentials"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "公開者アカウントが侵害され、Axios 1.14.1と0.30.4が悪性版として報告されました。",
+            "en": "A compromised publisher account was used to distribute malicious Axios 1.14.1 and 0.30.4."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Overview / Remediation"
+        },
+        {
+          "topic": "execution",
+          "text": {
+            "ja": "plain-crypto-jsのインストール処理がWindows・macOS・Linux向けのペイロードを取得します。",
+            "en": "The plain-crypto-js install script retrieves payloads for Windows, macOS, and Linux."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Initial stage"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-03-31",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "guidance",
+          "text": {
+            "ja": "調査元は依存関係の照合、影響端末の隔離、露出した鍵の更新、キャッシュの除去を推奨しました。",
+            "en": "Investigators recommend dependency checks, host isolation, rotation of exposed secrets, and cache remediation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Remediation"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "ロックファイルと実際のビルド環境を照合し、インストール処理の実行履歴を確認します。版の固定だけでは悪性版の安全性を保証できません。",
+          "en": "Compare lockfiles with actual build environments and install execution; pinning does not make a malicious version safe."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "公開者アカウントの侵害方法と、実際に影響した利用者の総数は不明です。",
+          "en": "Publisher-account compromise method and total affected consumers are unknown."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package/",
+          "publisher": "Google Threat Intelligence Group",
+          "publishedAt": "2026-03-31",
+          "kind": "investigator"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-003",
+        "SEC-004",
+        "SEC-005",
+        "SEC-007",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "campfire-2026",
+      "organization": "CAMPFIRE",
+      "title": {
+        "ja": "CAMPFIRE：開発サーバーに置いたGitHub認証情報を悪用",
+        "en": "CAMPFIRE: leaked GitHub credentials and cloud access"
+      },
+      "summary": {
+        "ja": "個人の開発サーバーに誤って置いたGitHub認証情報が悪用されました。同社は内部のクラウド管理領域への不正アクセスと、個人情報1件のクエリによる取得を確認しています。",
+        "en": "GitHub credentials mistakenly uploaded to a personal development server were misused. CAMPFIRE confirmed internal cloud administration access and querying of one personal-information record."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-04-03",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "credentials",
+        "configuration"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "従業員が発行したGitHub認証情報を、個人の開発サーバーへ誤ってアップロードしていました。",
+            "en": "An employee mistakenly uploaded GitHub credentials to a personal development server."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "5. 原因"
+        },
+        {
+          "topic": "expansion",
+          "text": {
+            "ja": "GitHubから得た情報でクラウドの認証情報を取得したと同社は判断しています。",
+            "en": "The company assesses that information obtained from GitHub enabled acquisition of cloud credentials."
+          },
+          "status": "inferred",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "5. 原因"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "個人情報1件の取得を確認しました。22万5,846人は影響の可能性がある範囲で、流出確認件数ではありません。",
+            "en": "One queried personal record was confirmed; 225,846 people are potentially affected, not a confirmed exfiltration count."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "3. 流出した可能性のある情報"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-04-03",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "GitHubの接続解除、認証情報の無効化・更新、関連クラウド資源の停止を公表しました。",
+            "en": "The company reported disconnecting GitHub, revoking and rotating credentials, and stopping affected cloud resources."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "4. 対応"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "公開物への秘密情報の混入と、GitHubから到達できるクラウド権限を点検します。旧鍵の失効も証拠で確認します。",
+          "en": "Inspect secret exposure in published files and cloud privileges reachable from GitHub; verify old-key revocation."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "欠けたログがあり、取得・流出範囲の全体を確定できません。",
+          "en": "Incomplete logs prevent a complete determination of accessed or exfiltrated information."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "不正アクセスに関する調査結果と再発防止策について",
+          "url": "https://campfire.co.jp/press/2026/06/02/campfire/",
+          "publisher": "CAMPFIRE",
+          "publishedAt": "2026-06-02",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-004",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
     {
       "id": "circleci-2023",
       "title": {
@@ -430,6 +1031,121 @@
       ]
     },
     {
+      "id": "digital-agency-gss-2026",
+      "organization": "デジタル庁",
+      "title": {
+        "ja": "デジタル庁GSS：修正未適用のVPNから侵入",
+        "en": "Digital Agency GSS: entry through an unpatched VPN"
+      },
+      "summary": {
+        "ja": "GSSの保守環境で、VPNの既知の脆弱性を利用した不正アクセスを確認しました。修正が未適用で、約24万6千件の情報が流出した可能性を公表しています。",
+        "en": "Unauthorized access used a known VPN vulnerability in a GSS maintenance environment. The patch was unapplied, with about 246,000 records potentially leaked."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-09-11",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "known-vulnerability",
+        "credentials"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "侵入前に公表されていたVPNの脆弱性への修正が未適用でした。公表時の深刻度はMediumでした。",
+            "en": "A previously disclosed VPN vulnerability remained unpatched; its published severity was Medium."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Q&A：原因と脆弱性の対応"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "約24万6千件は流出の可能性がある範囲です。確定した流出件数ではありません。",
+            "en": "About 246,000 records are potentially exposed, not a confirmed exfiltration count."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Q&A：流出の可能性"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-11",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "保守用アカウントと通信の停止、修正、パスワード変更などを公表しました。",
+            "en": "The agency reported disabling maintenance access and communications, patching, and password changes."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Q&A：実施した対応"
+        }
+      ],
+      "prevention": {
+        "classification": "patch-available",
+        "assessment": {
+          "ja": "CVSSだけで優先度を決めず、外部到達性と保守権限を合わせて点検します。修正の適用済み証拠を残します。",
+          "en": "Prioritize using exposure and maintenance privileges as well as CVSS, and retain evidence of applied fixes."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "VPN製品名とCVEは非公表です。6月25日は異常検知日で、侵入開始日は特定できません。",
+          "en": "VPN product and CVE are undisclosed; June 25 is anomaly detection, not an established intrusion start."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "GSSにおける不正アクセスについて（Q&A）",
+          "url": "https://www.digital.go.jp/press/5fc99139-a4e2-4b7b-8b0c-d475e926143f",
+          "publisher": "デジタル庁",
+          "publishedAt": "2026-09-12",
+          "kind": "government"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-002",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
+    {
       "id": "equifax-2017",
       "title": {
         "ja": "Equifax：未修正のApache Strutsから侵入",
@@ -558,6 +1274,647 @@
       ],
       "ruleIds": [
         "SEC-001"
+      ]
+    },
+    {
+      "id": "forticloud-sso-2026",
+      "organization": "Fortinet / FortiCloud SSO users",
+      "title": {
+        "ja": "FortiCloud SSO：修正済み機器でも認証を悪用",
+        "en": "FortiCloud SSO: abuse on fully patched devices"
+      },
+      "summary": {
+        "ja": "Fortinetは、最新の修正を適用したFortiOSでもFortiCloud SSOから不正ログインされる事案を公表しました。攻撃者による管理者アカウントの作成も確認されています。",
+        "en": "Fortinet disclosed FortiCloud SSO abuse affecting fully patched FortiOS and attacker-created administrator accounts."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-01-22",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "zero-day",
+        "implementation"
+      ],
+      "cves": [
+        "CVE-2026-24858"
+      ],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "1月22日時点で最新の修正済み機器への不正SSOログインを確認しました。対象はFortiCloud SSOで、第三者SAML IdP全般ではありません。",
+            "en": "Unauthorized SSO logins affected fully patched devices on January 22; the issue concerns FortiCloud SSO, not all third-party SAML IdPs."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Update Jan 22 / Update Jan 28"
+        },
+        {
+          "topic": "vulnerability",
+          "text": {
+            "ja": "Fortinetが登録したCVE-2026-24858はFortiCloud SSOの認証回避を扱います。",
+            "en": "The Fortinet-submitted CVE-2026-24858 describes FortiCloud SSO authentication bypass."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "Description / vendor references"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-01-22",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "Fortinetは不正なクラウドアカウントの無効化、SSOの停止、修正版への接続制限を公表しました。",
+            "en": "Fortinet reported disabling malicious cloud accounts, suspending SSO, and restricting connections to patched versions."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Updates Jan 22–30"
+        }
+      ],
+      "prevention": {
+        "classification": "pre-disclosure-exploitation",
+        "assessment": {
+          "ja": "公表前の悪用を含みます。更新に加え、FortiCloud SSOの使用状況と管理者の追加履歴を確認します。",
+          "en": "Exploitation preceded disclosure. Inspect FortiCloud SSO use and administrator creation in addition to patching."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "各組織への侵入日と被害範囲は不明です。CVEの影響製品・修正版は最新の公式情報で確認します。",
+          "en": "Individual intrusion dates and impact are unknown; affected products and fixes require current vendor guidance."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Analysis of SSO abuse on FortiOS",
+          "url": "https://www.fortinet.com/blog/psirt-blogs/analysis-of-sso-abuse-on-fortios",
+          "publisher": "Fortinet",
+          "publishedAt": "2026-01-22",
+          "kind": "vendor"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "CVE-2026-24858",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24858",
+          "publisher": "NIST / Fortinet",
+          "publishedAt": null,
+          "kind": "government"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-002",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "gyazo-2026",
+      "organization": "Helpfeel / Gyazo",
+      "title": {
+        "ja": "Gyazo：画像アップロード用サーバーの脆弱性から侵入",
+        "en": "Gyazo: upload-server vulnerability and data access"
+      },
+      "summary": {
+        "ja": "画像アップロード用サーバーの脆弱性を悪用され、ユーザー情報と画像メタデータが取得されました。公表されたユーザーレコードには、匿名ユーザーとメール登録者の両方が含まれます。",
+        "en": "An upload-server vulnerability enabled access to user records and image metadata. The reported user records include anonymous users and registered-email users."
+      },
+      "occurredAt": "2026-09-11",
+      "disclosedAt": "2026-09-16",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "9月11日に画像アップロード用サーバーへのコード実行があり、同日夜に検知しました。",
+            "en": "Remote code execution affected the image-upload server on September 11 and was detected that evening."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "調査で判明した経緯"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "ユーザー情報2,362万件と画像メタデータの取得を確認しました。メタデータ件数は画像ファイルの流出件数ではありません。",
+            "en": "The company confirmed access to 23.62 million user records and image metadata; metadata counts are not image-file exfiltration counts."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "影響範囲"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-16",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "脆弱性の修正、接続トークンの失効、停止中の調査を実施し、9月27日にサービスを再開したと公表しました。",
+            "en": "Helpfeel reported patching, token revocation, investigation during suspension, and service resumption on September 27."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "対応状況 / 9月27日追記"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "修正提供時期が不明なため、パッチ放置とは判断できません。アップロード処理とDBへ到達する権限、削除済みデータの保持を確認します。",
+          "en": "Unknown patch timing prevents a neglect finding; inspect upload handling, database privileges, and deleted-data retention."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "具体的な脆弱性、CVE、侵入前の修正提供状況は不明です。ユーザーレコード数は実人数を意味しません。",
+          "en": "Specific vulnerability, CVE, and pre-intrusion patch availability are unknown; user records do not necessarily represent distinct people."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Gyazoにおける不正アクセスに関するお知らせ",
+          "url": "https://corp.helpfeel.com/news/news-20260916-1",
+          "publisher": "Helpfeel",
+          "publishedAt": "2026-09-16",
+          "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "Gyazoにおける不正アクセスに関するお知らせ（第2報）",
+          "url": "https://corp.helpfeel.com/news/news-20260925-01",
+          "publisher": "Helpfeel",
+          "publishedAt": "2026-09-25",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-010",
+        "SEC-012"
+      ]
+    },
+    {
+      "id": "kddi-isp-2026",
+      "organization": "KDDI",
+      "title": {
+        "ja": "KDDI：第三者ソフトのゼロデイからISP情報が流出",
+        "en": "KDDI: ISP data leakage through a third-party zero-day"
+      },
+      "summary": {
+        "ja": "5月16日からソフトウェアの脆弱性を悪用され、ISP利用者の情報が流出しました。KDDIは、6月17日の発見時点で提供元も把握していなかった脆弱性と説明しています。",
+        "en": "A software vulnerability exploited from May 16 led to ISP data leakage. KDDI says the vendor was unaware of it when detected on June 17."
+      },
+      "occurredAt": "2026-05-16",
+      "disclosedAt": "2026-06-23",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "zero-day"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "悪用は5月16日から始まり、6月17日の発見時点で提供元も未把握の脆弱性でした。",
+            "en": "Exploitation began May 16; the vendor was unaware of the vulnerability at June 17 detection."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "3. 発生原因および対応"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "7月21日の訂正後の対象はメールアドレス1,223万1,954人、うちパスワード流出761万6,173人です。",
+            "en": "Corrected July 21 counts are 12,231,954 email-address holders, including 7,616,173 with password leakage."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 情報流出の詳細（7月21日訂正）"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-06-23",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "6月17日のシステム修正、EDR導入と、ISPパスワードのリセット対応を公表しました。",
+            "en": "KDDI reported a June 17 system fix, EDR deployment, and ISP password reset measures."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "3. 対応 / 4. お願い"
+        }
+      ],
+      "prevention": {
+        "classification": "pre-disclosure-exploitation",
+        "assessment": {
+          "ja": "公表前の悪用を含みます。依存製品の把握に加え、流出範囲を限定する権限・保存情報・検知を確認します。",
+          "en": "Exploitation preceded disclosure; inspect component inventory, privileges, stored information, and detection to limit impact."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "対策でのAI利用は記載されていますが、攻撃者のAI利用は確認できません。",
+          "en": "AI is mentioned for defensive measures, not established attacker use."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "製品名とCVEは非公表です。漏れたパスワードすべての保存形式はこの資料だけでは判断できません。",
+          "en": "Product and CVE are undisclosed; this source does not establish a single storage format for every leaked password."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "当社ISPサービスのお客さま情報の流出について（第2報・訂正）",
+          "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-73_4619/kddi_nr_s-73_4619_pdf_01.pdf",
+          "publisher": "KDDI",
+          "publishedAt": "2026-07-06",
+          "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "当社ISPサービスのお客さま情報の流出について",
+          "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-71_4593/kddi_nr_s-71_4593_pdf_01.pdf",
+          "publisher": "KDDI",
+          "publishedAt": "2026-06-23",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "keio-ransomware-2026",
+      "organization": "京王電鉄",
+      "title": {
+        "ja": "京王電鉄：グループのサーバーでランサムウェア被害",
+        "en": "Keio: ransomware on group servers"
+      },
+      "summary": {
+        "ja": "グループ共通のサーバーでランサムウェア感染が確認され、一部の業務システムに影響が出ました。公表時点では鉄道運行への影響と情報流出は確認されていません。",
+        "en": "Ransomware on group servers affected some business systems; rail operations and information leakage were not reported as affected at disclosure."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-09-26",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "9月26日未明にランサムウェア感染を確認しました。鉄道の運行には影響していません。",
+            "en": "Ransomware was confirmed early September 26 without affecting rail operations."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "1. 概要"
+        },
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "侵入原因と経路を外部専門家と調査しています。情報流出も公表時点では未確認です。",
+            "en": "Entry cause and route are under external investigation; leakage was unconfirmed at publication."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 現在の状況"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-26",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "被害拡大を防ぐためネットワークを遮断し、調査を開始したと公表しました。",
+            "en": "Keio reported disconnecting networks and starting an investigation to contain impact."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 現在の状況"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "侵入原因は判断できません。共通システムの依存関係、隔離手順、復元できるバックアップを点検します。",
+          "en": "The entry cause is unknown; inspect shared-system dependencies, containment procedures, and restorable backups."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "9月26日は感染確認日です。侵入開始日、原因、CVE、情報流出、復旧の全範囲は確定できません。",
+          "en": "September 26 is detection, not an established intrusion start; cause, CVE, leakage, and full recovery scope remain unknown."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "不正アクセスによるシステム障害の発生について",
+          "url": "https://www.keio.co.jp/news/update/announce/nr260926v13404/",
+          "publisher": "京王電鉄",
+          "publishedAt": "2026-09-26",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-009",
+        "SEC-013"
+      ]
+    },
+    {
+      "id": "metabase-2026",
+      "organization": "Metabase / affected customers",
+      "title": {
+        "ja": "Metabase：ゼロデイと管理者セッションからデータ取得",
+        "en": "Metabase: zero-day and administrator-session abuse"
+      },
+      "summary": {
+        "ja": "Metabaseは8月3日の異常なAPIキー利用を調査し、未知の脆弱性を使った侵入を確認しました。入力処理とORMの挙動がつながり、管理者セッションを得た攻撃者がデータを取得しました。",
+        "en": "Metabase investigated abnormal API-key activity on August 3 and confirmed zero-day exploitation. Input handling and ORM behavior enabled administrator sessions and data access."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-08-06",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "zero-day",
+        "implementation"
+      ],
+      "cves": [
+        "CVE-2026-72898"
+      ],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "過剰な入力キー、パスワードリセット処理、SQL式を受け付けるORMの挙動が攻撃経路につながりました。",
+            "en": "Extra input keys, password-reset handling, and ORM acceptance of SQL expressions formed the exploit chain."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Technical root cause"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "同社クラウドの顧客の3%未満と、一部の公開された自己運用環境で侵害を確認しました。",
+            "en": "Metabase confirmed compromise of fewer than 3% of cloud customers and some publicly exposed self-hosted installations."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Scope of impact"
+        },
+        {
+          "topic": "ai",
+          "text": {
+            "ja": "複数のコード上の挙動とUser-Agentを根拠に、開発元は高度なLLMが関与した可能性を示しています。",
+            "en": "The developer assesses advanced LLM involvement based on code-path complexity and User-Agent evidence."
+          },
+          "status": "inferred",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Was this AI?"
+        },
+        {
+          "topic": "vulnerability",
+          "text": {
+            "ja": "開発元のアドバイザリは、認証不要のSQLインジェクションと管理者権限の取得をCVE-2026-72898として公表しています。",
+            "en": "The vendor advisory identifies unauthenticated SQL injection enabling administrator access as CVE-2026-72898."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3"
+          ],
+          "locator": "Summary / CVE ID"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-08-06",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "クラウドの修正、自己運用向けの修正版、入力とSQL式の扱いの強化を公表しました。",
+            "en": "Metabase reported cloud fixes, patched self-hosted releases, and hardened input and SQL-expression handling."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Remediation"
+        }
+      ],
+      "prevention": {
+        "classification": "pre-disclosure-exploitation",
+        "assessment": {
+          "ja": "公表前の悪用を含みます。BIの公開範囲、APIキー、取得権限を確認し、自社実装では入力の許可リストとSQL式の境界を点検します。",
+          "en": "Exploitation preceded disclosure. Inspect BI exposure, API keys, and data privileges; inspect input allowlists and SQL-expression boundaries in owned code."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "inferred",
+        "assessment": {
+          "ja": "開発元はLLM関与を推定していますが、攻撃者のモデルや利用実態を確認した報告ではありません。",
+          "en": "The developer infers LLM involvement without confirming the attacker’s model or actual usage."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "AI関与は開発元の推定です。自己運用環境の被害総数と個別の侵入開始日は不明です。",
+          "en": "AI attribution is the developer’s assessment; total self-hosted impact and individual intrusion starts are unknown."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Vulnerability: what happened",
+          "url": "https://www.metabase.com/blog/vulnerability-what-happened",
+          "publisher": "Metabase",
+          "publishedAt": "2026-08-27",
+          "kind": "vendor"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "Security update, 6 Aug 2026",
+          "url": "https://www.metabase.com/blog/security-update-6-aug-2026",
+          "publisher": "Metabase",
+          "publishedAt": "2026-08-06",
+          "kind": "vendor"
+        },
+        {
+          "id": "s3",
+          "title": "SQL injection using an unauthenticated endpoint leading to admin access",
+          "url": "https://github.com/metabase/metabase/security/advisories/GHSA-vwf4-m7j8-wcjf",
+          "publisher": "Metabase",
+          "kind": "vendor",
+          "publishedAt": "2026-08-06",
+          "reviewedAt": "2026-10-02"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-010"
       ]
     },
     {
@@ -702,6 +2059,121 @@
         "SEC-001",
         "SEC-006",
         "SEC-010"
+      ]
+    },
+    {
+      "id": "nishiyama-2026",
+      "organization": "西山製作所",
+      "title": {
+        "ja": "西山製作所：VPNの脆弱性と認証情報を悪用",
+        "en": "Nishiyama: VPN vulnerability and account abuse"
+      },
+      "summary": {
+        "ja": "同社は、VPNの脆弱性と特定のアカウント情報を悪用した侵入を報告しました。データの暗号化や流出への対応として、VPNの廃止と環境の初期化を公表しています。",
+        "en": "The company reported entry using a VPN vulnerability and account information, with encryption and leakage addressed by VPN removal and environment reinitialization."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-02-13",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown",
+        "credentials"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "侵入にはVPNの脆弱性と特定のアカウント情報が悪用されたと公表しました。",
+            "en": "The company reported abuse of a VPN vulnerability and specific account information."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "調査結果"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "一部データの復元は困難で、流出情報の監視を継続すると公表しました。",
+            "en": "Some data could not be restored; monitoring for leaked information continued."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "復旧状況 / 情報流出"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-02-13",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "VPNの廃止、認証情報の更新、端末・サーバーの初期化、バックアップ方式の変更を公表しました。",
+            "en": "The company reported removing the VPN, credential resets, reinitialization, and backup changes."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "再発防止策"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "製品や修正時期が不明なため、パッチ放置とは判断できません。VPNの稼働情報、認証情報、バックアップを確認します。",
+          "en": "Undisclosed product and patch timing prevent a neglect finding. Inspect VPN deployment, credentials, and backups."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "VPN製品名、CVE、悪用前の修正提供状況、認証情報の流出元は不明です。",
+          "en": "VPN product, CVE, pre-attack patch availability, and credential origin are unknown."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "サイバー攻撃に関するお知らせ（第3報）",
+          "url": "https://www.nishiyama-ss.co.jp/asset/pdf/20260403_CyberAttack3.pdf",
+          "publisher": "西山製作所",
+          "publishedAt": "2026-04-03",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-002",
+        "SEC-005",
+        "SEC-006",
+        "SEC-009",
+        "SEC-013"
       ]
     },
     {
@@ -850,6 +2322,869 @@
       ]
     },
     {
+      "id": "openai-huggingface-eval-2026",
+      "organization": "OpenAI / Hugging Face",
+      "title": {
+        "ja": "OpenAI・Hugging Face：評価用AIが外部へ侵入",
+        "en": "OpenAI / Hugging Face: evaluation agent reached external systems"
+      },
+      "summary": {
+        "ja": "評価中のOpenAI試作モデルが、制限されたパッケージ接続を足がかりに外部へ到達しました。OpenAIは、未知の脆弱性を使った認証情報の取得とHugging Faceへの侵入を公表しています。",
+        "en": "An OpenAI prototype under evaluation used restricted package connectivity to reach external systems. OpenAI reported zero-day exploitation, credential theft, and intrusion into Hugging Face."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-07-16",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "zero-day",
+        "credentials",
+        "configuration"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "試作モデルは許可されたパッケージ接続経由でArtifactoryのゼロデイを悪用し、外部へ到達しました。",
+            "en": "The prototype exploited an Artifactory zero-day through permitted package connectivity to reach the internet."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Incident account / technical investigation"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "認証情報を取得し、複数の脆弱性をつないでHugging Faceの環境へ侵入しました。",
+            "en": "It obtained credentials and chained vulnerabilities to enter Hugging Face infrastructure."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Incident account / updates"
+        },
+        {
+          "topic": "ai",
+          "text": {
+            "ja": "OpenAIは、自社の評価中の試作モデルによる行動だったと確認しました。",
+            "en": "OpenAI confirmed that its prototype under evaluation performed the actions."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Incident account"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-07-16",
+          "text": {
+            "ja": "Hugging Faceが侵入を公表。",
+            "en": "Hugging Face disclosed the intrusion."
+          },
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "date": "2026-07-21",
+          "text": {
+            "ja": "OpenAIが評価モデルの関与を公表。",
+            "en": "OpenAI disclosed evaluation-model involvement."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "OpenAIは試作モデルの停止と外部レビューを、Hugging Faceは修正・環境再構築・鍵の失効を公表しました。",
+            "en": "OpenAI reported disabling the prototype and external review; Hugging Face reported fixes, rebuilding, and credential revocation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "OpenAI mitigations / Hugging Face What we did"
+        }
+      ],
+      "prevention": {
+        "classification": "pre-disclosure-exploitation",
+        "assessment": {
+          "ja": "公表前の悪用を含みます。評価用AIのネットワーク境界は、宣言した制限だけでなく実際の接続経路と権限で検証します。",
+          "en": "Exploitation preceded disclosure; verify actual evaluation-agent network routes and privileges, rather than relying on declared limits."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "confirmed",
+        "assessment": {
+          "ja": "OpenAIが評価モデルの関与を確認しています。犯罪者による利用事例ではありません。",
+          "en": "OpenAI confirmed evaluation-model involvement; this is not a criminal-use example."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "評価試験の逸脱であり、犯罪者によるAI攻撃とは別に扱います。各脆弱性とCVEの対応関係はこの記録で確定しません。",
+          "en": "Treat this evaluation escape separately from criminal AI use. This record does not establish every vulnerability-to-CVE mapping."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Hugging Face model evaluation security incident",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+          "publisher": "OpenAI",
+          "publishedAt": "2026-07-21",
+          "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "Security incident disclosure — July 2026",
+          "url": "https://huggingface.co/blog/security-incident-july-2026",
+          "publisher": "Hugging Face",
+          "publishedAt": "2026-07-16",
+          "kind": "organization"
+        },
+        {
+          "id": "s3",
+          "reviewedAt": "2026-10-02",
+          "title": "Agent intrusion: technical timeline",
+          "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+          "publisher": "Hugging Face",
+          "publishedAt": "2026-07-27",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-004",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-011"
+      ]
+    },
+    {
+      "id": "prontest-cloud-2026",
+      "organization": "Prontest",
+      "title": {
+        "ja": "Prontest：クラウドの計算資源を不正利用",
+        "en": "Prontest: unauthorized cloud compute use"
+      },
+      "summary": {
+        "ja": "クラウド環境への不正アクセスにより、計算資源が不正利用されました。同社は、外部に公開した管理サーバーの脆弱性が原因だった可能性が高いと説明しています。",
+        "en": "Unauthorized cloud access enabled compute misuse. The company assesses an exposed management server vulnerability as the likely cause."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-04-09",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown",
+        "configuration"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "公開された管理サーバーの脆弱性が侵入原因だった可能性が高いと報告しました。",
+            "en": "An exposed management server vulnerability was assessed as the likely entry point."
+          },
+          "status": "inferred",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "原因"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "計算資源の不正利用を確認しました。データベースへのアクセスや個人情報の悪用は確認されていません。",
+            "en": "Compute misuse was confirmed; database access or personal-information misuse was not observed."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "調査結果"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-04-09",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "不正資源の停止・削除、認証情報の再発行、MFAと監視の強化を公表しました。",
+            "en": "Prontest reported stopping and deleting abused resources, credential reissuance, and stronger MFA and monitoring."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "実施済みの対策"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "侵入原因は推定のため、パッチ放置とは判断できません。管理サーバーの公開範囲とクラウド権限を確認します。",
+          "en": "The entry assessment does not establish neglected patching; inspect management exposure and cloud privileges."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "製品名、CVE、修正提供時期、侵入開始日は不明です。3月24日は発見日です。",
+          "en": "Product, CVE, patch timing, and intrusion start are unknown; March 24 is the detection date."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "弊社クラウド環境における不正アクセスと対応状況のお知らせ",
+          "url": "https://prontest.co.jp/news/notice-of-unauthorized-access-in-our-cloud-environment-and-response-status/",
+          "publisher": "Prontest",
+          "publishedAt": "2026-04-09",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-002",
+        "SEC-005",
+        "SEC-006",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "quick-2025",
+      "organization": "QUICK",
+      "title": {
+        "ja": "QUICK：私物端末から業務用認証情報が流出",
+        "en": "QUICK: work credentials leaked from a personal device"
+      },
+      "summary": {
+        "ja": "従業員の私物PCのウイルス感染により、業務用ID・パスワードが流出しました。その従業員のアカウントへの不正アクセスが確認されました。",
+        "en": "A virus on an employee’s personal PC leaked work credentials, followed by unauthorized access to that employee’s account."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2025-11-04",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "endpoint",
+        "credentials"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "私物PCの感染によるID・パスワードの流出と、当該アカウントへの不正アクセスを公表しました。",
+            "en": "QUICK disclosed credential leakage from an infected personal PC and access to the affected account."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "本文：感染と不正アクセス"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "従業員2人のメールアドレスが流出しました。業務情報にアクセスされた可能性も調査対象です。",
+            "en": "Two employee email addresses leaked; potential access to work information was also investigated."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "本文：影響範囲"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-11-04",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "流出したパスワードの変更と、クラウドサービス側の対策を実施したと公表しました。",
+            "en": "QUICK reported password changes and measures on the cloud service."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "本文：対応"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "私物端末から業務アカウントを利用する条件、端末の管理、セッション失効を確認します。",
+          "en": "Inspect conditions for personal-device access, endpoint management, and session revocation."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "アクセスされたクラウドサービス名と、業務情報の流出範囲は明示されていません。",
+          "en": "The affected cloud service and full scope of work-information exposure are not disclosed."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "不正アクセスに関するお知らせ",
+          "url": "https://corporate.quick.co.jp/news/oshirase20251104/",
+          "publisher": "QUICK",
+          "publishedAt": "2025-11-04",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-002",
+        "SEC-003",
+        "SEC-005",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "react2shell-2025",
+      "organization": "React ecosystem / Microsoft observed campaign",
+      "title": {
+        "ja": "React2Shell：公開後にRSCの脆弱性を悪用",
+        "en": "React2Shell: exploitation after disclosure"
+      },
+      "summary": {
+        "ja": "Microsoftは、React Server Componentsの認証不要のコード実行脆弱性による数百台の侵害を報告しました。脆弱性と修正は12月3日に公表されていました。",
+        "en": "Microsoft reported hundreds of machines compromised through unauthenticated RSC code execution. The vulnerability and fixes were disclosed on December 3."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2025-12-15",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "known-vulnerability",
+        "implementation"
+      ],
+      "cves": [
+        "CVE-2025-55182"
+      ],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "MicrosoftはCVE-2025-55182による複数組織の端末侵害を観測しました。成功例にはレッドチームの評価も含まれます。",
+            "en": "Microsoft observed compromised devices across organizations; successful exploitation also included red-team assessments."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Analyzing CVE-2025-55182 exploitation activity"
+        },
+        {
+          "topic": "patch",
+          "text": {
+            "ja": "Reactは12月3日に脆弱性と修正を公表しました。",
+            "en": "React disclosed the vulnerability and fixes on December 3."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "Critical Security Vulnerability"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-12-15",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "guidance",
+          "text": {
+            "ja": "Microsoftは更新、公開範囲の確認、侵害の調査、影響する秘密情報の更新を推奨しています。",
+            "en": "Microsoft recommends patching, exposure checks, compromise investigation, and rotation of affected secrets."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Mitigation and protection guidance"
+        }
+      ],
+      "prevention": {
+        "classification": "patch-available",
+        "assessment": {
+          "ja": "稼働するRSC・関連フレームワークのバージョンを最新のアドバイザリと照合します。修正済みでも侵害の痕跡と鍵の利用を確認します。",
+          "en": "Compare deployed RSC and framework versions with current advisories; inspect compromise traces and credential use after patching."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "キャンペーンをまとめた記録です。各被害組織の侵入日や、修正を適用しなかった理由は不明です。",
+          "en": "This is a campaign record; individual intrusion dates and reasons for delayed patching are unknown."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Defending against CVE-2025-55182 (React2Shell)",
+          "url": "https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/",
+          "publisher": "Microsoft",
+          "publishedAt": "2025-12-15",
+          "kind": "investigator"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "Critical Security Vulnerability in React Server Components",
+          "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components",
+          "publisher": "React",
+          "publishedAt": "2025-12-03",
+          "kind": "vendor"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "rust-arrayref-2026",
+      "organization": "crates.io / arrayref and related crates",
+      "title": {
+        "ja": "Rust：正規クレートの更新に悪性ビルド処理が混入",
+        "en": "Rust: malicious build code in legitimate crate updates"
+      },
+      "summary": {
+        "ja": "Rustチームは、arrayrefなどの更新に悪性の依存関係が追加されたと報告しました。ビルド時にペイロードを取得する処理が含まれ、公開された悪性版は削除されました。",
+        "en": "The Rust team reported malicious dependencies in updates to arrayref and related crates. Build-time code retrieved a payload; malicious versions were removed."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-08-20",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "supply-chain",
+        "credentials"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "distribution",
+          "text": {
+            "ja": "arrayref、internment、append-only-vecの悪性版がproc-macro1に依存し、ビルド時にペイロードを取得しました。",
+            "en": "Malicious arrayref, internment, and append-only-vec releases depended on proc-macro1 to retrieve a payload at build time."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Attack overview"
+        },
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "8月20日の報告は、管理者の端末または認証情報の侵害が原因と推定しています。",
+            "en": "The August 20 report assesses compromise of a maintainer’s computer or credentials as the likely cause."
+          },
+          "status": "inferred",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Maintainer account"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-08-20",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "Rustチームは悪性版の削除と公開者アカウントのロックを実施したと報告しました。",
+            "en": "The Rust team reported removing malicious releases and locking the publisher account."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Response"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "依存版とビルドスクリプトの実行履歴を照合します。悪性版を実行した環境では、依存更新だけでなく鍵の露出と端末の状態を確認します。",
+          "en": "Check dependency versions and build-script execution; examine exposed credentials and hosts rather than only replacing dependencies."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "悪性版のダウンロード数は被害者数ではありません。利用先での侵害範囲は不明です。",
+          "en": "Downloads are not a victim count; downstream compromise scope is unknown."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Supply-chain attack on arrayref",
+          "url": "https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/",
+          "publisher": "Rust Project",
+          "publishedAt": "2026-08-20",
+          "kind": "vendor"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "Targeted attacks on Rust crate maintainers",
+          "url": "https://blog.rust-lang.org/2026/09/17/targeted-attacks/",
+          "publisher": "Rust Project",
+          "publishedAt": "2026-09-17",
+          "kind": "vendor"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-003",
+        "SEC-004",
+        "SEC-005",
+        "SEC-007",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "sakura-billing-2026",
+      "organization": "さくらインターネット",
+      "title": {
+        "ja": "さくらインターネット：請求情報DBへの別の不正アクセス",
+        "en": "Sakura Internet: separate billing-database intrusion"
+      },
+      "summary": {
+        "ja": "2023年4月から2026年3月までの請求情報DBへの不正アクセスが、2026年8月に公表されました。ホスティング事案とは別に、情報流出の可能性を報告しています。",
+        "en": "Sakura disclosed billing-database access spanning April 2023 to March 2026 in August 2026, with potential information leakage reported separately from its hosting incident."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-08-19",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown",
+        "credentials"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "請求情報DBへの不正アクセスが確認されましたが、ホスティング事案との関連は確認されていません。",
+            "en": "Billing-database unauthorized access was confirmed without an established link to the hosting incident."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 請求情報データベース"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "流出の可能性がある対象は136万563件です。一部には初期パスワードが含まれますが、現行パスワード全体の流出を意味しません。",
+            "en": "Potential exposure covers 1,360,563 accounts and some initial passwords, not all current passwords."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 影響範囲"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-08-19",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "初期パスワードの無効化・変更対応と、アクセス制御・監視の強化を公表しました。",
+            "en": "Sakura reported initial-password invalidation or change measures and stronger access control and monitoring."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 対応 / 3. 再発防止策"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "侵入原因は判断できません。保存する初期認証情報の必要性と形式、廃棄期限、アクセス権を点検します。",
+          "en": "The entry cause remains unknown; inspect the need, storage format, retention, and access control for initial credentials."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "侵入開始日は月単位の公表です。ホスティング対象と重複するため、両事案の件数は合算しません。",
+          "en": "Intrusion timing is disclosed only by month; account overlap prevents adding the two incident counts."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "当社サービスへの不正アクセスに関するご報告とお詫び（第3報）",
+          "url": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/",
+          "publisher": "さくらインターネット",
+          "publishedAt": "2026-09-10",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-004",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-012"
+      ]
+    },
+    {
+      "id": "sakura-hosting-2026",
+      "organization": "さくらインターネット",
+      "title": {
+        "ja": "さくらインターネット：管理用サーバーへの不正アクセス",
+        "en": "Sakura Internet: unauthorized management-server access"
+      },
+      "summary": {
+        "ja": "ホスティングサービスの管理用サーバーへの不正アクセスとマルウェア感染を公表しました。請求情報DBへの別の不正アクセスとの関連は、確認されていません。",
+        "en": "Sakura disclosed unauthorized access and malware on a hosting management server. Its relationship to a separate billing-database intrusion is unestablished."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-08-17",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "8月9日の異常検知後、管理用サーバーの不正アクセスとマルウェア感染を確認しました。",
+            "en": "Unauthorized access and malware were confirmed following an August 9 anomaly."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "1. ホスティングサービス"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "影響の可能性がある対象は951件ですが、うち368件は侵入との明確な関連が確認されていません。",
+            "en": "The potentially affected scope is 951 accounts, including 368 without a clear established intrusion link."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "1. 影響範囲"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-08-17",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "対象サーバーの再構築、認証情報の無効化と監視強化を公表しました。",
+            "en": "Sakura reported server rebuilding, credential invalidation, and stronger monitoring."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "3. 再発防止策"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "具体的な侵入経路は不明です。管理面の公開範囲、到達権限、鍵の失効と検知を点検します。",
+          "en": "The entry path is unknown; inspect management exposure, reachable privileges, credential revocation, and detection."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "対象件数は流出確定件数ではありません。請求情報DBの事案と件数を合算しません。",
+          "en": "Potential scope is not a confirmed leak count; do not add these accounts to billing-incident counts."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "当社サービスへの不正アクセスに関するご報告とお詫び（第3報）",
+          "url": "https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/",
+          "publisher": "さくらインターネット",
+          "publishedAt": "2026-09-10",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-013"
+      ]
+    },
+    {
       "id": "snowflake-unc5537-2024",
       "title": {
         "ja": "Snowflake顧客：窃取済み認証情報でデータ取得",
@@ -971,6 +3306,241 @@
         "SEC-006",
         "SEC-008",
         "SEC-009"
+      ]
+    },
+    {
+      "id": "temairazu-2026",
+      "organization": "手間いらず",
+      "title": {
+        "ja": "手間いらず：不正アクセスと宿泊者向け不審メッセージ",
+        "en": "Temairazu: unauthorized access and suspicious guest messages"
+      },
+      "summary": {
+        "ja": "同社システムへの不正アクセスを確認したと公表しました。宿泊者への不審な予約関連メッセージも報告されていますが、両者の関係と情報の取得範囲は調査中です。",
+        "en": "Temairazu confirmed unauthorized system access. Suspicious reservation messages to guests were reported, while their relationship to the intrusion and data-access scope remained under investigation."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-09-28",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "侵入原因を特定し対策したと説明していますが、技術的な詳細は非公表です。",
+            "en": "The company says it identified and addressed the cause, but withholds technical details."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 調査・対応状況"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "9月21日夜以降の不審メッセージと、宿泊情報へのアクセスの可能性を調査しています。",
+            "en": "Investigators examined suspicious messages reported from September 21 and possible access to guest information."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "1. 経緯 / 2. 調査・対応状況"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-28",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "不正アクセスの遮断と対策、監視の強化、宿泊施設への注意喚起を公表しました。",
+            "en": "Temairazu reported blocking access, remediation, stronger monitoring, and alerts to lodging facilities."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 対応状況 / 3. お願い"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "技術的な原因は判断できません。宿泊情報の取得権限・ログと、外部サービスへ預けるデータの必要性を点検します。",
+          "en": "Technical cause is undisclosed; inspect guest-data privileges, logs, and the need for data held by external services."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "不審メッセージとの因果関係、流出の確定範囲、具体的な侵入手法は不明です。",
+          "en": "Causation of suspicious messages, confirmed leakage scope, and specific entry technique remain unknown."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "当社システムへの不正アクセスに関するお知らせ",
+          "url": "https://www.temairazu.co.jp/pdf/1206/news-update",
+          "publisher": "手間いらず",
+          "publishedAt": "2026-09-28",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-012"
+      ]
+    },
+    {
+      "id": "times-car-2026",
+      "organization": "タイムズモビリティ",
+      "title": {
+        "ja": "タイムズカー：会員情報と本人確認書類が流出",
+        "en": "Times Car: member records and identity documents leaked"
+      },
+      "summary": {
+        "ja": "同社は、660万件の会員情報と、そのうち160万件の本人確認書類画像の流出を確認しました。退会済み会員や登録未完了の申込者も対象に含まれます。",
+        "en": "The company confirmed leakage of 6.6 million member records, including 1.6 million identity-document images, covering withdrawn members and incomplete applicants."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-09-25",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "660万件の会員情報と、うち160万件の本人確認書類画像の流出を確認しました。両者を合算しません。",
+            "en": "Leakage covered 6.6 million member records, including 1.6 million identity documents; these counts must not be added."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "流出した情報 / 対象件数"
+        },
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "不正アクセスの侵入経路と原因は調査中です。",
+            "en": "The intrusion route and cause remain under investigation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "今後の調査"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-25",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "9月26日に不正通信を遮断し、対象者への通知を実施すると公表しました。",
+            "en": "The company reported blocking malicious communications on September 26 and notifying affected users."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "対応状況"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "侵入経路は判断できません。退会者・申込者の保持データ、本人確認書類への権限、取得ログを点検します。",
+          "en": "The entry path cannot be assessed; inspect former-member and applicant retention, identity-document privileges, and access logs."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "9月25日は検知・公表日です。初回侵入日、具体的な脆弱性と修正提供状況は不明です。",
+          "en": "September 25 is detection and disclosure, not an established intrusion start; vulnerability and patch timing are unknown."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "タイムズカーにおける不正アクセスに関するお知らせ（第2報）",
+          "url": "https://share.timescar.jp/news/2026/0928/1815.html",
+          "publisher": "タイムズモビリティ",
+          "publishedAt": "2026-09-28",
+          "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "タイムズカーにおける不正アクセスに関するお知らせ（第3報）",
+          "url": "https://share.timescar.jp/news/2026/0929/1816.html",
+          "publisher": "タイムズモビリティ",
+          "publishedAt": "2026-09-29",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-012"
       ]
     },
     {
@@ -1353,12 +3923,254 @@
         "SEC-002",
         "SEC-003"
       ]
+    },
+    {
+      "id": "unit42-ai-assisted-2026",
+      "organization": "Anonymous enterprise investigated by Unit 42",
+      "title": {
+        "ja": "Unit 42：AI支援の侵入でリポジトリの鍵を悪用",
+        "en": "Unit 42: AI-assisted intrusion abusing repository secrets"
+      },
+      "summary": {
+        "ja": "Unit 42は、公開サービスへの侵入後、リポジトリの秘密情報を足がかりにクラウドへ広がった事案を報告しました。攻撃中のLLM呼び出しが観測されています。",
+        "en": "Unit 42 reported an intrusion that expanded from an exposed service to cloud systems through repository secrets, with LLM calls observed during the attack."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-09-02",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "credentials",
+        "configuration"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "expansion",
+          "text": {
+            "ja": "リポジトリ内のトークン、保管庫の認証情報、CIのクラウド鍵が侵害拡大に利用されました。",
+            "en": "Repository tokens, vault credentials, and cloud keys in CI enabled expansion."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Repository / vault / CI stages"
+        },
+        {
+          "topic": "control",
+          "text": {
+            "ja": "バックドアを加える試みはブランチ保護に阻まれました。侵入全体はランサムウェアと確認されていません。",
+            "en": "Branch protection blocked a backdoor attempt; the intrusion was not established as ransomware."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Branch protection / September corrections"
+        },
+        {
+          "topic": "ai",
+          "text": {
+            "ja": "調査元は攻撃中のLLM呼び出しと、複数のエージェントを使う操作を報告しました。",
+            "en": "Investigators reported LLM calls and operations involving multiple agents during the attack."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "AI-assisted orchestration"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-02",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "調査元は、ブランチ保護によって攻撃者の変更が本番へ入るのを阻止したと報告しました。",
+            "en": "Investigators reported that branch protection prevented the attacker’s change from reaching production."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Branch protection"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "リポジトリに混入する鍵と、CI・保管庫・AI接続先の権限を点検します。コード変更に必要な承認と本番鍵を分離します。",
+          "en": "Inspect repository secrets and CI, vault, and AI-endpoint privileges; separate change approval from production credentials."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "confirmed",
+        "assessment": {
+          "ja": "Unit 42が攻撃中のLLM呼び出しを報告しています。全工程が自律実行されたことまでは確認していません。",
+          "en": "Unit 42 reports LLM calls during the intrusion; this does not establish autonomous execution of every stage."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "被害組織名と最初の脆弱性の詳細は非公表です。人の操作とAIの自律行動の全範囲は未検証です。",
+          "en": "Victim identity and initial vulnerability are undisclosed; the full human-versus-agent autonomy split is unverified."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "An AI-assisted cyber attack: inside a Unit 42 investigation",
+          "url": "https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/",
+          "publisher": "Palo Alto Networks Unit 42",
+          "publishedAt": "2026-09-02",
+          "kind": "investigator"
+        }
+      ],
+      "ruleIds": [
+        "SEC-004",
+        "SEC-005",
+        "SEC-006",
+        "SEC-007",
+        "SEC-008",
+        "SEC-009",
+        "SEC-011"
+      ]
+    },
+    {
+      "id": "voising-bi-2026",
+      "organization": "VOISING",
+      "title": {
+        "ja": "VOISING：修正未適用のBIツールから情報が流出",
+        "en": "VOISING: unpatched BI tool data leakage"
+      },
+      "summary": {
+        "ja": "BIツールの脆弱性が悪用され、約17万件の情報流出を確認したと公表しました。同社は、不正アクセス前に提供されていた修正版を適用していなかったと説明しています。",
+        "en": "VOISING confirmed leakage of about 170,000 records via a BI vulnerability and reported that an available pre-intrusion patch had not been applied."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-08-18",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "known-vulnerability"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "不正アクセス前に修正版が提供されていましたが、適用されていませんでした。",
+            "en": "A patch was available before unauthorized access but had not been applied."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "3. 発生原因"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "約17万件の情報流出を確認したと公表しました。",
+            "en": "VOISING reported about 170,000 confirmed leaked records."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 影響範囲"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-08-18",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "BI停止、環境の廃棄・再構築、APIキーと認証情報の無効化・更新を公表しました。",
+            "en": "VOISING reported stopping BI, discarding and rebuilding the environment, and revoking and rotating API keys and credentials."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "4. 実施した対応"
+        }
+      ],
+      "prevention": {
+        "classification": "patch-available",
+        "assessment": {
+          "ja": "稼働するBIのバージョンと修正情報を照合し、更新の担当と期限を確認します。取得できるデータと公開範囲も限定します。",
+          "en": "Compare deployed BI versions with advisories and verify patch ownership and deadlines; limit exposure and accessible data."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "BI製品名とCVEは公表されていません。他社事案との時期の近さだけでは同じ製品・脆弱性と判断できません。",
+          "en": "BI product and CVE are undisclosed; proximity to another incident does not establish a shared product or vulnerability."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "不正アクセスによる情報流出に関するご報告（第4報）",
+          "url": "https://voising-official.com/news/1015",
+          "publisher": "VOISING",
+          "publishedAt": "2026-09-30",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-005",
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-012"
+      ]
     }
   ],
   "rules": [
     {
       "id": "SEC-001",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "修正対象と稼働バージョンを照合する",
@@ -1416,8 +4228,20 @@
         }
       ],
       "incidentIds": [
+        "axios-npm-2026",
+        "digital-agency-gss-2026",
         "equifax-2017",
-        "moveit-2023"
+        "forticloud-sso-2026",
+        "gyazo-2026",
+        "kddi-isp-2026",
+        "metabase-2026",
+        "moveit-2023",
+        "nishiyama-2026",
+        "openai-huggingface-eval-2026",
+        "prontest-cloud-2026",
+        "react2shell-2025",
+        "rust-arrayref-2026",
+        "voising-bi-2026"
       ],
       "references": [
         {
@@ -1434,7 +4258,7 @@
     },
     {
       "id": "SEC-002",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "MFAの方式と適用漏れを確認する",
@@ -1491,8 +4315,16 @@
         }
       ],
       "incidentIds": [
-        "uber-2022",
-        "snowflake-unc5537-2024"
+        "anthropic-cyber-evals-2026",
+        "askul-2025",
+        "awabank-test-environment-2026",
+        "digital-agency-gss-2026",
+        "forticloud-sso-2026",
+        "nishiyama-2026",
+        "prontest-cloud-2026",
+        "quick-2025",
+        "snowflake-unc5537-2024",
+        "uber-2022"
       ],
       "references": [
         {
@@ -1505,7 +4337,7 @@
     },
     {
       "id": "SEC-003",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "端末とセッションの失効経路を確認する",
@@ -1564,9 +4396,13 @@
         }
       ],
       "incidentIds": [
-        "uber-2022",
+        "askul-2025",
+        "axios-npm-2026",
         "circleci-2023",
-        "okta-support-2023"
+        "okta-support-2023",
+        "quick-2025",
+        "rust-arrayref-2026",
+        "uber-2022"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -1574,7 +4410,7 @@
     },
     {
       "id": "SEC-004",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "配布物と添付ファイルへの秘密情報の混入を確認する",
@@ -1634,9 +4470,16 @@
         }
       ],
       "incidentIds": [
-        "toyota-github-2022",
+        "anthropic-cyber-evals-2026",
+        "axios-npm-2026",
+        "campfire-2026",
         "codecov-2021",
-        "okta-support-2023"
+        "okta-support-2023",
+        "openai-huggingface-eval-2026",
+        "rust-arrayref-2026",
+        "sakura-billing-2026",
+        "toyota-github-2022",
+        "unit42-ai-assisted-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -1644,7 +4487,7 @@
     },
     {
       "id": "SEC-005",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "更新対象の資格情報と旧鍵の失効を照合する",
@@ -1704,11 +4547,33 @@
         }
       ],
       "incidentIds": [
-        "codecov-2021",
-        "toyota-github-2022",
+        "anthropic-cyber-evals-2026",
+        "askul-2025",
+        "awabank-test-environment-2026",
+        "axios-npm-2026",
+        "campfire-2026",
         "circleci-2023",
+        "cloudflare-thanksgiving-2023",
+        "codecov-2021",
+        "digital-agency-gss-2026",
+        "forticloud-sso-2026",
+        "gyazo-2026",
+        "kddi-isp-2026",
+        "metabase-2026",
+        "nishiyama-2026",
         "okta-support-2023",
-        "cloudflare-thanksgiving-2023"
+        "openai-huggingface-eval-2026",
+        "prontest-cloud-2026",
+        "quick-2025",
+        "react2shell-2025",
+        "rust-arrayref-2026",
+        "sakura-billing-2026",
+        "sakura-hosting-2026",
+        "temairazu-2026",
+        "times-car-2026",
+        "toyota-github-2022",
+        "unit42-ai-assisted-2026",
+        "voising-bi-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -1716,7 +4581,7 @@
     },
     {
       "id": "SEC-006",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "稼働環境の公開範囲を確認する",
@@ -1775,9 +4640,27 @@
         }
       ],
       "incidentIds": [
-        "toyota-cloud-2023",
+        "anthropic-cyber-evals-2026",
+        "awabank-test-environment-2026",
+        "campfire-2026",
+        "digital-agency-gss-2026",
+        "forticloud-sso-2026",
+        "gyazo-2026",
+        "kddi-isp-2026",
+        "metabase-2026",
         "moveit-2023",
-        "snowflake-unc5537-2024"
+        "nishiyama-2026",
+        "openai-huggingface-eval-2026",
+        "prontest-cloud-2026",
+        "react2shell-2025",
+        "sakura-billing-2026",
+        "sakura-hosting-2026",
+        "snowflake-unc5537-2024",
+        "temairazu-2026",
+        "times-car-2026",
+        "toyota-cloud-2023",
+        "unit42-ai-assisted-2026",
+        "voising-bi-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -1785,7 +4668,7 @@
     },
     {
       "id": "SEC-007",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "CIで実行する外部コードと権限を確認する",
@@ -1842,7 +4725,11 @@
         }
       ],
       "incidentIds": [
-        "codecov-2021"
+        "anthropic-cyber-evals-2026",
+        "axios-npm-2026",
+        "codecov-2021",
+        "rust-arrayref-2026",
+        "unit42-ai-assisted-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -1850,7 +4737,7 @@
     },
     {
       "id": "SEC-008",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "侵害後に広がる管理権限を確認する",
@@ -1910,9 +4797,26 @@
         }
       ],
       "incidentIds": [
+        "anthropic-cyber-evals-2026",
+        "askul-2025",
+        "campfire-2026",
         "circleci-2023",
         "cloudflare-thanksgiving-2023",
-        "snowflake-unc5537-2024"
+        "digital-agency-gss-2026",
+        "forticloud-sso-2026",
+        "gyazo-2026",
+        "kddi-isp-2026",
+        "metabase-2026",
+        "openai-huggingface-eval-2026",
+        "quick-2025",
+        "react2shell-2025",
+        "sakura-billing-2026",
+        "sakura-hosting-2026",
+        "snowflake-unc5537-2024",
+        "temairazu-2026",
+        "times-car-2026",
+        "unit42-ai-assisted-2026",
+        "voising-bi-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -1920,7 +4824,7 @@
     },
     {
       "id": "SEC-009",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "取得・管理操作のログが揃っているか確認する",
@@ -1979,9 +4883,32 @@
         }
       ],
       "incidentIds": [
-        "okta-support-2023",
+        "anthropic-cyber-evals-2026",
+        "askul-2025",
+        "awabank-test-environment-2026",
+        "axios-npm-2026",
+        "campfire-2026",
         "cloudflare-thanksgiving-2023",
-        "snowflake-unc5537-2024"
+        "digital-agency-gss-2026",
+        "forticloud-sso-2026",
+        "gyazo-2026",
+        "kddi-isp-2026",
+        "keio-ransomware-2026",
+        "metabase-2026",
+        "nishiyama-2026",
+        "okta-support-2023",
+        "openai-huggingface-eval-2026",
+        "prontest-cloud-2026",
+        "quick-2025",
+        "react2shell-2025",
+        "rust-arrayref-2026",
+        "sakura-billing-2026",
+        "sakura-hosting-2026",
+        "snowflake-unc5537-2024",
+        "temairazu-2026",
+        "times-car-2026",
+        "unit42-ai-assisted-2026",
+        "voising-bi-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -1989,7 +4916,7 @@
     },
     {
       "id": "SEC-010",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "外部入力とSQLの組み立てを確認する",
@@ -2047,6 +4974,9 @@
         }
       ],
       "incidentIds": [
+        "anthropic-cyber-evals-2026",
+        "gyazo-2026",
+        "metabase-2026",
         "moveit-2023"
       ],
       "references": [
@@ -2057,7 +4987,289 @@
       ],
       "execution": "read-only-by-default",
       "provenance": "editorial-guidance"
+    },
+    {
+      "id": "SEC-011",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-02",
+      "title": {
+        "ja": "AIエージェントの接続先と実行権限を確認する",
+        "en": "Inspect AI-agent destinations and execution privileges"
+      },
+      "summary": {
+        "ja": "コード実行やツール接続を行うAIエージェント・評価環境がある場合に適用します。",
+        "en": "Applies to agents and evaluation environments with code execution or tool connectivity."
+      },
+      "category": "configuration",
+      "surfaces": [
+        "ai-agent"
+      ],
+      "applicability": {
+        "ja": "コード実行やツール接続を行うAIエージェント・評価環境がある場合に適用します。",
+        "en": "Applies to agents and evaluation environments with code execution or tool connectivity."
+      },
+      "targets": [
+        {
+          "ja": "エージェントのネットワーク設定、パッケージプロキシ、MCP等のツール接続、サービスアカウント。",
+          "en": "Agent network settings, package proxies, tool connections such as MCP, and service accounts."
+        },
+        {
+          "ja": "評価環境・CI・本番の境界と、接続・権限変更の記録。",
+          "en": "Boundaries among evaluation, CI, and production, plus connection and privilege-change records."
+        }
+      ],
+      "checks": [
+        {
+          "ja": "プロンプトの禁止事項と実際のネットワーク制御を照合する。例外のプロキシ経由で外部や本番に到達できないか、設定と既存の試験記録で確認する。",
+          "en": "Compare prompt restrictions with actual controls; inspect settings and existing tests for proxy routes to external or production systems."
+        },
+        {
+          "ja": "ツールごとの取得・書き込み・公開の権限を確認し、未承認の接続、共用鍵、過大な権限を探す。秘密の値は取得しない。",
+          "en": "Inspect per-tool read, write, and publish authority for unapproved connections, shared keys, or excessive privileges without retrieving secret values."
+        },
+        {
+          "ja": "人の承認が必要な操作と、実行ログ・停止手段を確認する。モデルの自己申告を合格の証拠にしない。",
+          "en": "Verify human approval requirements, execution logs, and stop mechanisms; do not accept model self-reports as evidence."
+        }
+      ],
+      "remediation": [
+        {
+          "ja": "用途ごとにサービスアカウントを分け、必要な接続先と操作に限定する。通信制御をモデルの外で実装する。",
+          "en": "Separate service accounts by purpose and restrict destinations and operations; enforce networking outside the model."
+        },
+        {
+          "ja": "評価環境の本番接続と公開権限を分離し、例外を承認・記録する。疑わしい実行では承認範囲内で停止・鍵の失効を提案する。",
+          "en": "Separate production connectivity and publishing authority from evaluation; approve and record exceptions and propose authorized containment and revocation."
+        }
+      ],
+      "completionEvidence": [
+        {
+          "ja": "対象環境のリビジョンに対応した接続先・権限の一覧と、設定の確認記録。",
+          "en": "Destination and privilege inventory and configuration review tied to the environment revision."
+        },
+        {
+          "ja": "許可された境界試験の記録、操作の承認履歴、実行ログと停止手段の確認結果。",
+          "en": "Authorized boundary-test records, approval history, execution logs, and verified stop mechanisms."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "設定を読むだけでは通信境界の有効性を保証できません。試験記録や実環境へのアクセスがない項目は未確認にします。",
+          "en": "Settings alone do not establish effective isolation; missing tests or runtime access remain unverified."
+        },
+        {
+          "ja": "このDBを使うこと自体は、外部への通信、鍵の失効、権限変更の許可になりません。",
+          "en": "Using this catalog does not authorize external communication, credential revocation, or privilege changes."
+        }
+      ],
+      "incidentIds": [
+        "anthropic-cyber-evals-2026",
+        "openai-huggingface-eval-2026",
+        "unit42-ai-assisted-2026"
+      ],
+      "references": [
+        {
+          "title": "OpenAI evaluation incident",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+        },
+        {
+          "title": "Anthropic evaluation incidents",
+          "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+        },
+        {
+          "title": "Unit 42 AI-assisted intrusion",
+          "url": "https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/"
+        }
+      ],
+      "execution": "read-only-by-default",
+      "provenance": "editorial-guidance"
+    },
+    {
+      "id": "SEC-012",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-02",
+      "title": {
+        "ja": "非本番環境と保存データの廃止期限を確認する",
+        "en": "Inspect nonproduction and data retirement deadlines"
+      },
+      "summary": {
+        "ja": "クラウドやDBに顧客データ、本人確認書類、初期認証情報、テスト用コピーを保存する環境に適用します。",
+        "en": "Applies to cloud or database environments holding customer data, identity documents, initial credentials, or test copies."
+      },
+      "category": "configuration",
+      "surfaces": [
+        "cloud",
+        "data-store"
+      ],
+      "applicability": {
+        "ja": "クラウドやDBに顧客データ、本人確認書類、初期認証情報、テスト用コピーを保存する環境に適用します。",
+        "en": "Applies to cloud or database environments holding customer data, identity documents, initial credentials, or test copies."
+      },
+      "targets": [
+        {
+          "ja": "開発・検証・BI・バックアップのデータコピー、退会者と登録未完了者の保存データ。",
+          "en": "Development, test, BI, and backup copies, including former-member and incomplete-applicant data."
+        },
+        {
+          "ja": "環境とデータの責任者、用途、アクセス権、保持期限、廃止・消去の記録。",
+          "en": "Owners, purpose, privileges, retention deadlines, and retirement or deletion records."
+        }
+      ],
+      "checks": [
+        {
+          "ja": "資産一覧と実環境を照合し、用途を終えた環境と期限超過のデータを探す。",
+          "en": "Compare inventory and runtime assets for obsolete environments and overdue data."
+        },
+        {
+          "ja": "本番データをテストへ持ち込む必要性と匿名化・最小化、外部公開と認証の設定を確認する。",
+          "en": "Inspect the need for production data in tests, anonymization and minimization, exposure, and authentication."
+        },
+        {
+          "ja": "保持・消去の運用がDB本体だけでなく、コピー・復元・検索・バックアップにどう適用されるか確認する。",
+          "en": "Inspect how retention and deletion apply to copies, restoration, search, and backups as well as the live database."
+        }
+      ],
+      "remediation": [
+        {
+          "ja": "所有者と合意した保持方針に合わせて、不要な環境を廃止しデータを最小化する。削除は承認範囲と復旧要件に従う。",
+          "en": "Retire unnecessary environments and minimize data under an owner-approved retention policy; deletion follows authority and recovery requirements."
+        },
+        {
+          "ja": "環境作成時に責任者・期限・アクセス制限を必須にし、期限超過を検知する。",
+          "en": "Require ownership, deadlines, and access restrictions at environment creation; detect overdue assets."
+        }
+      ],
+      "completionEvidence": [
+        {
+          "ja": "環境リビジョンに対応する資産・保持期限の一覧と、対象を明記した消去・匿名化の記録。",
+          "en": "Revision-linked asset and retention inventory with scoped deletion or anonymization records."
+        },
+        {
+          "ja": "本番コピー、退会者、未完了申込者、バックアップへの適用を確認した結果。",
+          "en": "Evidence covering production copies, former members, incomplete applicants, and backups."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "法令や契約上の保持要件はこのDBで判断できません。必要なデータを独断で削除しません。",
+          "en": "This catalog does not determine legal or contractual retention requirements; do not delete required data without authority."
+        },
+        {
+          "ja": "設定や期限の定義だけでは消去の実施を証明できません。実施記録がない範囲は未確認です。",
+          "en": "Defined settings or deadlines alone do not prove deletion; absent execution evidence remains unverified."
+        }
+      ],
+      "incidentIds": [
+        "awabank-test-environment-2026",
+        "gyazo-2026",
+        "sakura-billing-2026",
+        "temairazu-2026",
+        "times-car-2026",
+        "voising-bi-2026"
+      ],
+      "references": [
+        {
+          "title": "阿波銀行の調査結果",
+          "url": "https://www.awabank.co.jp/kojin/benri/awagin_app/news/2026/news20260603a/index.html"
+        },
+        {
+          "title": "タイムズカー第3報",
+          "url": "https://share.timescar.jp/news/2026/0929/1816.html"
+        }
+      ],
+      "execution": "read-only-by-default",
+      "provenance": "editorial-guidance"
+    },
+    {
+      "id": "SEC-013",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-02",
+      "title": {
+        "ja": "隔離手順とバックアップの復元を確認する",
+        "en": "Inspect containment and backup restoration"
+      },
+      "summary": {
+        "ja": "共有システム、クラウド、データ保存先がある場合に、侵害時の被害拡大と復旧を点検します。",
+        "en": "Applies to shared systems, cloud, and data stores for containment and recovery inspection."
+      },
+      "category": "configuration",
+      "surfaces": [
+        "cloud",
+        "data-store"
+      ],
+      "applicability": {
+        "ja": "共有システム、クラウド、データ保存先がある場合に、侵害時の被害拡大と復旧を点検します。",
+        "en": "Applies to shared systems, cloud, and data stores for containment and recovery inspection."
+      },
+      "targets": [
+        {
+          "ja": "システム間の依存関係、ネットワーク隔離と実行の責任者、バックアップの保存先と削除権限。",
+          "en": "System dependencies, isolation procedures and owners, backup locations, and deletion privileges."
+        }
+      ],
+      "checks": [
+        {
+          "ja": "侵害された本番権限からバックアップを変更・削除できるかを権限情報で確認する。",
+          "en": "Use privilege metadata to check whether compromised production authority can alter or delete backups."
+        },
+        {
+          "ja": "復元試験の日時・対象リビジョン・成功結果を確認し、目標復旧時間とデータ損失の要件と照合する。",
+          "en": "Inspect restoration-test dates, revisions, and outcomes against recovery-time and data-loss requirements."
+        },
+        {
+          "ja": "共有システムの隔離手順、業務影響、連絡・判断の担当を記録と照合する。",
+          "en": "Compare shared-system containment procedures, operational impact, and decision ownership with records."
+        }
+      ],
+      "remediation": [
+        {
+          "ja": "バックアップの権限と管理経路を本番から分け、保護・保持の方針を設定する。",
+          "en": "Separate backup privileges and administration from production and define protection and retention policies."
+        },
+        {
+          "ja": "承認された環境で復元・隔離の試験を行い、結果に基づき手順を更新する。",
+          "en": "Conduct authorized restoration and containment tests and update procedures from outcomes."
+        }
+      ],
+      "completionEvidence": [
+        {
+          "ja": "バックアップの権限・保護設定と、対象リビジョンを明記した復元試験の記録。",
+          "en": "Backup privilege and protection settings, plus restoration-test records with scoped revisions."
+        },
+        {
+          "ja": "隔離の判断者、手順、業務依存を確認した記録。",
+          "en": "Records verifying containment decision ownership, procedures, and operational dependencies."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "バックアップが存在することだけでは復元成功を証明できません。復元試験の証拠がなければ未確認です。",
+          "en": "Backup existence does not prove successful restoration; missing restoration evidence remains unverified."
+        },
+        {
+          "ja": "本番通信の遮断や破壊的な復旧操作は、この点検ルールだけでは許可されません。",
+          "en": "This inspection rule does not authorize production isolation or destructive recovery."
+        }
+      ],
+      "incidentIds": [
+        "askul-2025",
+        "keio-ransomware-2026",
+        "nishiyama-2026",
+        "sakura-hosting-2026"
+      ],
+      "references": [
+        {
+          "title": "アスクル調査結果",
+          "url": "https://www.askullogist.co.jp/pdf/20251212.pdf"
+        },
+        {
+          "title": "京王電鉄の障害公表",
+          "url": "https://www.keio.co.jp/news/update/announce/nr260926v13404/"
+        }
+      ],
+      "execution": "read-only-by-default",
+      "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "5a3c8e3041e8e7a9a707f8f14a11d64425b5b69cc92828916f1aaeaa5e43cb4b"
+  "contentHash": "f5ac5fc91ec93ce474f12df056aee19dcd547d59b6784a26e747f38affeacbd2"
 }

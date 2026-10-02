@@ -11,12 +11,40 @@ const inventory = readJson(resolve(ROOT, 'examples/inventory.json'))
 
 test('primary sources, references, and bidirectional links validate', () => {
   assert.deepEqual(validateCatalog(catalog), [])
-  assert.equal(catalog.incidents.length, 10)
-  assert.equal(catalog.rules.length, 10)
+  assert.equal(catalog.incidents.length, 33)
+  assert.equal(catalog.rules.length, 13)
   assert.equal(
     catalog.incidents.filter((incident) => incident.outcome === 'exposure-only').length,
     2,
   )
+})
+
+test('recent records preserve unknown causes and distinguish evaluated AI from attack attribution', () => {
+  const recent = catalog.incidents.filter(
+    (item) => item.disclosedAt >= '2025-10-02' && item.disclosedAt <= '2026-10-02',
+  )
+  assert.equal(recent.length, 23)
+  assert.equal(recent.filter((item) => item.ai.status === 'confirmed').length, 3)
+  assert.equal(recent.filter((item) => item.ai.status === 'inferred').length, 1)
+  const voising = recent.find((item) => item.id === 'voising-bi-2026')
+  assert.deepEqual(voising.cves, [])
+  assert.equal(voising.prevention.classification, 'patch-available')
+  const metabase = recent.find((item) => item.id === 'metabase-2026')
+  assert.deepEqual(metabase.cves, ['CVE-2026-72898'])
+  assert.equal(metabase.ai.status, 'inferred')
+  for (const id of ['times-car-2026', 'temairazu-2026', 'keio-ransomware-2026']) {
+    const item = recent.find((record) => record.id === id)
+    assert.ok(item.categories.includes('unknown'))
+    assert.equal(item.occurredAt, null)
+    assert.equal(item.prevention.classification, 'unknown')
+  }
+  const changed = structuredClone(catalog)
+  changed.incidents.find((item) => item.id === 'metabase-2026').ai.status = 'confirmed'
+  assert.match(validateCatalog(changed).join('\n'), /AI attribution requires/)
+  const missing = structuredClone(catalog)
+  const item = missing.incidents.find((record) => record.id === 'unit42-ai-assisted-2026')
+  item.claims = item.claims.filter((claim) => claim.topic !== 'ai')
+  assert.match(validateCatalog(missing).join('\n'), /AI attribution requires/)
 })
 
 test('malformed records, claims without sources, and dangling links fail closed', () => {
@@ -75,6 +103,7 @@ test('unchanged knowledge does not skip environment checks and incomplete invent
   const plan = makePlan(catalog, inventory, buildCatalog(catalog).index)
   assert.equal(plan.changes.updated.length, 0)
   assert.equal(plan.tasks.length, catalog.rules.length)
+  assert.equal(plan.tasks.find((item) => item.ruleId === 'SEC-011').applicability, 'candidate')
   assert.equal(plan.tasks.find((item) => item.ruleId === 'SEC-002').applicability, 'unverified')
   const complete = makePlan(catalog, { ...inventory, complete: true })
   assert.equal(

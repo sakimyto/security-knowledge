@@ -1,6 +1,6 @@
 {
   "id": "SEC-003",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "端末とセッションの失効経路を確認する",
@@ -54,7 +54,15 @@
       "en": "A repository cannot establish endpoint health. Cookie flags alone do not establish resistance to endpoint malware."
     }
   ],
-  "incidentIds": ["uber-2022", "circleci-2023", "okta-support-2023"],
+  "incidentIds": [
+    "askul-2025",
+    "axios-npm-2026",
+    "circleci-2023",
+    "okta-support-2023",
+    "quick-2025",
+    "rust-arrayref-2026",
+    "uber-2022"
+  ],
   "references": [],
   "execution": "read-only-by-default",
   "provenance": "editorial-guidance"

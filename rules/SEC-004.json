@@ -1,6 +1,6 @@
 {
   "id": "SEC-004",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "配布物と添付ファイルへの秘密情報の混入を確認する",
@@ -54,7 +54,18 @@
       "en": "Secret-file access follows owner permissions. Deletion of all external copies cannot be established."
     }
   ],
-  "incidentIds": ["toyota-github-2022", "codecov-2021", "okta-support-2023"],
+  "incidentIds": [
+    "anthropic-cyber-evals-2026",
+    "axios-npm-2026",
+    "campfire-2026",
+    "codecov-2021",
+    "okta-support-2023",
+    "openai-huggingface-eval-2026",
+    "rust-arrayref-2026",
+    "sakura-billing-2026",
+    "toyota-github-2022",
+    "unit42-ai-assisted-2026"
+  ],
   "references": [],
   "execution": "read-only-by-default",
   "provenance": "editorial-guidance"

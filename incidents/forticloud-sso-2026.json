@@ -1,0 +1,104 @@
+{
+  "id": "forticloud-sso-2026",
+  "organization": "Fortinet / FortiCloud SSO users",
+  "title": {
+    "ja": "FortiCloud SSO：修正済み機器でも認証を悪用",
+    "en": "FortiCloud SSO: abuse on fully patched devices"
+  },
+  "summary": {
+    "ja": "Fortinetは、最新の修正を適用したFortiOSでもFortiCloud SSOから不正ログインされる事案を公表しました。攻撃者による管理者アカウントの作成も確認されています。",
+    "en": "Fortinet disclosed FortiCloud SSO abuse affecting fully patched FortiOS and attacker-created administrator accounts."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-01-22",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["zero-day", "implementation"],
+  "cves": ["CVE-2026-24858"],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "1月22日時点で最新の修正済み機器への不正SSOログインを確認しました。対象はFortiCloud SSOで、第三者SAML IdP全般ではありません。",
+        "en": "Unauthorized SSO logins affected fully patched devices on January 22; the issue concerns FortiCloud SSO, not all third-party SAML IdPs."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Update Jan 22 / Update Jan 28"
+    },
+    {
+      "topic": "vulnerability",
+      "text": {
+        "ja": "Fortinetが登録したCVE-2026-24858はFortiCloud SSOの認証回避を扱います。",
+        "en": "The Fortinet-submitted CVE-2026-24858 describes FortiCloud SSO authentication bypass."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "Description / vendor references"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-01-22",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "Fortinetは不正なクラウドアカウントの無効化、SSOの停止、修正版への接続制限を公表しました。",
+        "en": "Fortinet reported disabling malicious cloud accounts, suspending SSO, and restricting connections to patched versions."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Updates Jan 22–30"
+    }
+  ],
+  "prevention": {
+    "classification": "pre-disclosure-exploitation",
+    "assessment": {
+      "ja": "公表前の悪用を含みます。更新に加え、FortiCloud SSOの使用状況と管理者の追加履歴を確認します。",
+      "en": "Exploitation preceded disclosure. Inspect FortiCloud SSO use and administrator creation in addition to patching."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "各組織への侵入日と被害範囲は不明です。CVEの影響製品・修正版は最新の公式情報で確認します。",
+      "en": "Individual intrusion dates and impact are unknown; affected products and fixes require current vendor guidance."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Analysis of SSO abuse on FortiOS",
+      "url": "https://www.fortinet.com/blog/psirt-blogs/analysis-of-sso-abuse-on-fortios",
+      "publisher": "Fortinet",
+      "publishedAt": "2026-01-22",
+      "kind": "vendor"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "CVE-2026-24858",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24858",
+      "publisher": "NIST / Fortinet",
+      "publishedAt": null,
+      "kind": "government"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-002", "SEC-005", "SEC-006", "SEC-008", "SEC-009"]
+}
