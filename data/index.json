@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
@@ -10,11 +10,21 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "2025-10-02〜2026-10-02の公表日を対象に23事例を追加し、過去の10事例と合わせた選定DBです。評価試験・複数組織の攻撃報告も含むため、件数は企業数や事故全体の統計を意味しません。",
-    "en": "A curated database with 23 records disclosed during 2025-10-02–2026-10-02 and 10 earlier records. Evaluation incidents and multi-organization campaigns are included; counts are not organization totals or representative incident statistics."
+    "ja": "2025-10-02〜2026-10-02に公表された国内外の31事例と、過去の10事例を収録した選定DBです。評価試験・複数組織の攻撃報告も含むため、件数は企業数や事故全体の統計を意味しません。",
+    "en": "A curated database of 31 domestic and international records disclosed during 2025-10-02–2026-10-02, plus 10 earlier records. Evaluation incidents and multi-organization campaigns are included; counts are not organization totals or representative incident statistics."
   },
-  "contentHash": "f5ac5fc91ec93ce474f12df056aee19dcd547d59b6784a26e747f38affeacbd2",
+  "contentHash": "ff9986ee77e08bad8b2c287793a57b06073a191f8e97017f3704534e1b361fb0",
   "entries": [
+    {
+      "kind": "incident",
+      "id": "aflac-japan-2026",
+      "hash": "e7147a302edd53b5d5620ad5861ec3ca6464a90590cb3779fd971d5a8eb2b4a0"
+    },
+    {
+      "kind": "incident",
+      "id": "anthropic-claude-code-abuse-2025",
+      "hash": "20d0318c8b3ab9ddede5b6f0dca1923392469c5aeacc7acec2e5544b4522aa64"
+    },
     {
       "kind": "incident",
       "id": "anthropic-cyber-evals-2026",
@@ -62,6 +72,11 @@
     },
     {
       "kind": "incident",
+      "id": "discord-support-vendor-2025",
+      "hash": "30b18dd1c522b297ee64df0dafca09e2a43a0b9575ad64e2a0560d34371c6726"
+    },
+    {
+      "kind": "incident",
       "id": "equifax-2017",
       "hash": "0954c174783b7f496ec4a924a31369007b98b19efba85df4a6f8e54c2dfa7e5d"
     },
@@ -69,6 +84,11 @@
       "kind": "incident",
       "id": "forticloud-sso-2026",
       "hash": "0a7f90420b23c4dfb973bdcaff05e36e1eb84dc5c20fa128b3a09de3ba9ff80b"
+    },
+    {
+      "kind": "incident",
+      "id": "gainsight-oauth-2025",
+      "hash": "6ae22e8b926ab069ccfd74df1b7d2ab4ca50731bf2e538e801468489502b486f"
     },
     {
       "kind": "incident",
@@ -97,6 +117,11 @@
     },
     {
       "kind": "incident",
+      "id": "nidek-website-2026",
+      "hash": "ccd806ce45a04c06b083881c61fbaec18e1ed24c2a721b9d7de02493c77f4c62"
+    },
+    {
+      "kind": "incident",
       "id": "nishiyama-2026",
       "hash": "68eb5c7416f2f56fd3f4f2ac4fa0687e7d61f69d46847577f531c1ce0af5304a"
     },
@@ -109,6 +134,16 @@
       "kind": "incident",
       "id": "openai-huggingface-eval-2026",
       "hash": "03227e077cca0327d2bac49a95735ea95166b1b5de15e2c64af2b8e36be565c0"
+    },
+    {
+      "kind": "incident",
+      "id": "openai-mixpanel-2025",
+      "hash": "0b6f0fec769375ab00c2d6bb0b62379ea04ead5b1745d6db3490b0b8987d7cf5"
+    },
+    {
+      "kind": "incident",
+      "id": "postman-shai-hulud-2025",
+      "hash": "f8b1047dbd4c170d0117eafc65394441c2892db067107bafdc7a1c86abf7ea6a"
     },
     {
       "kind": "incident",
@@ -167,6 +202,11 @@
     },
     {
       "kind": "incident",
+      "id": "trivy-supply-chain-2026",
+      "hash": "cb35a6d0ed024d98b333585f5eb25ad4d4550664ccda998253132a9b849b8169"
+    },
+    {
+      "kind": "incident",
       "id": "uber-2022",
       "hash": "378245575d4a60d27b27fc4ce0173d340b03aa930b5475fdfc416585e8186914"
     },
@@ -183,47 +223,47 @@
     {
       "kind": "rule",
       "id": "SEC-001",
-      "hash": "2cef8b4a8dabc9e46331770a513fd14a7fd970349e061d9a5cdb731bac36967a"
+      "hash": "8e6c53174bef8ca55cea3f34e97f1aad0f6f0c55a15111ba9f2df8613d55fe55"
     },
     {
       "kind": "rule",
       "id": "SEC-002",
-      "hash": "26d696610613e7dc7e8f016fb3084634ffd31a74c6333ee863d9ecbd9dceb4c1"
+      "hash": "fcf58a1b53fff45725fbbe1f19fa49d638d0ea143a2444428247b31f3c62de1a"
     },
     {
       "kind": "rule",
       "id": "SEC-003",
-      "hash": "7173e35ecfc72b419c7239930b27dbf0346defb2e407a430d082f3ea8a9526d2"
+      "hash": "fa4a4a16010e066b0c6208029e5cf0d1e65b0a96a18bfd0463081b7681220a25"
     },
     {
       "kind": "rule",
       "id": "SEC-004",
-      "hash": "357ca458dc5ebef0281dbbc853bbd41b955c280b8df0b4f80ad835efa1234d97"
+      "hash": "0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6"
     },
     {
       "kind": "rule",
       "id": "SEC-005",
-      "hash": "2da83b02baa52e03e5e917d4858000df64c2e02b631d272f176adbf8ae4524c0"
+      "hash": "4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0"
     },
     {
       "kind": "rule",
       "id": "SEC-006",
-      "hash": "ad5cf24399635f2244f0240a4237b410ca6d07e352811f651447f5368c43318a"
+      "hash": "ef322bf44c1b8241baf2b84ce08f6422b46075b59a85e88eb927713bbef64e8a"
     },
     {
       "kind": "rule",
       "id": "SEC-007",
-      "hash": "89b86018d60ab5d1546e0547f38bdfbcbaf33b0bdd03a78fc590d4201349045e"
+      "hash": "24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5"
     },
     {
       "kind": "rule",
       "id": "SEC-008",
-      "hash": "4961a7a944dbf51853817a537ee22cdb7814caba6fb70d8ff632deeee73c08f5"
+      "hash": "f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464"
     },
     {
       "kind": "rule",
       "id": "SEC-009",
-      "hash": "6467d48234f7eb64c455122f8c8140421ca5a8f40ffff9bf0bf4f3980b86823d"
+      "hash": "ee5ca8e3ff31cae2c3818e2446db3453376e07ac498d71a4b9bd54aa2678f745"
     },
     {
       "kind": "rule",
@@ -233,17 +273,22 @@
     {
       "kind": "rule",
       "id": "SEC-011",
-      "hash": "2ed11f2560fd24b0a4bb2dc539d195c13569ee6e7b499e79db26241d43db438d"
+      "hash": "c825b2408ad9c74579cd404c68b6cb9daa00d14601a42ba32b6b60fac4afcbf0"
     },
     {
       "kind": "rule",
       "id": "SEC-012",
-      "hash": "36f8264944bbc3b2df1256e3df99d8fad9b434d1c6f268b014807d72e094fddc"
+      "hash": "a263b1e54e292b97464b5b6e1494a948a77571813c642c26eec1ed994473b833"
     },
     {
       "kind": "rule",
       "id": "SEC-013",
       "hash": "0e16048f65f44638a3e7858bde158f737c2fa74751e5b12580da67ab0a3e7856"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-014",
+      "hash": "40889eb24f568c0135a0c8abe83471c8d3cf585ac435d86a668dbc910a6fc471"
     }
   ]
 }

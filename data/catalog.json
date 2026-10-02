@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
@@ -10,10 +10,235 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "2025-10-02〜2026-10-02の公表日を対象に23事例を追加し、過去の10事例と合わせた選定DBです。評価試験・複数組織の攻撃報告も含むため、件数は企業数や事故全体の統計を意味しません。",
-    "en": "A curated database with 23 records disclosed during 2025-10-02–2026-10-02 and 10 earlier records. Evaluation incidents and multi-organization campaigns are included; counts are not organization totals or representative incident statistics."
+    "ja": "2025-10-02〜2026-10-02に公表された国内外の31事例と、過去の10事例を収録した選定DBです。評価試験・複数組織の攻撃報告も含むため、件数は企業数や事故全体の統計を意味しません。",
+    "en": "A curated database of 31 domestic and international records disclosed during 2025-10-02–2026-10-02, plus 10 earlier records. Evaluation incidents and multi-organization campaigns are included; counts are not organization totals or representative incident statistics."
   },
   "incidents": [
+    {
+      "id": "aflac-japan-2026",
+      "organization": "アフラック生命保険",
+      "title": {
+        "ja": "アフラック：通常の利用に似たアクセスで大量のデータを照会",
+        "en": "Aflac Japan: ordinary-looking requests and bulk data queries"
+      },
+      "summary": {
+        "ja": "アフラックは、通常の利用に似たアクセスを検知できず、大量照会への監視や制御も不足していたと公表しました。顧客約440万人の個人情報が漏えいし、そのうち約22万人には口座情報が含まれます。",
+        "en": "Aflac reported missed detection of ordinary-looking requests and inadequate bulk-query controls. Personal information of about 4.4 million customers leaked, including bank-account information for about 220,000 of them."
+      },
+      "occurredAt": "2026-06-10",
+      "disclosedAt": "2026-06-30",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "implementation"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "アクセスとデータ照会への制御が不十分で、通常利用に似た形式のアクセスを直ちに検知できませんでした。設計レビューと侵入テストでも手口を想定できていなかったと説明しています。",
+            "en": "Aflac described insufficient access and query controls; reviews and penetration tests had not anticipated the method."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "4. 発生原因"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "顧客約440万人（うち口座情報を含む約22万人）と代理店約4万店の個人情報が漏えいしました。顧客数と口座情報の対象者数を合算しません。",
+            "en": "The disclosed scope was about 4.4 million customers, including about 220,000 with bank-account information, and about 40,000 agencies. The customer subsets are not additive."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2. 漏えいした個人情報"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-06-30",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "6月25日に関連システムを停止しました。認証・照会時の認可、大量アクセスへの監視・制御、レビューと侵入テストを強化する方針を公表しました。",
+            "en": "Aflac suspended related systems on June 25 and announced stronger authentication, query authorization, bulk-access controls, and security testing."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "1. 経緯 / 5. 再発防止策"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "画面のログインだけでなく、照会APIの認可と取得量の制御を確認します。通常形式のリクエストでも異常な取得量を検知できるか、試験データで点検します。",
+          "en": "Inspect server-side query authorization and retrieval limits, and test detection of abnormal volume with synthetic data."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "具体的な攻撃リクエスト、製品名、CVEは非公表です。ライブラリの修正放置や特定のSQL注入手法とは断定できません。",
+          "en": "Specific requests, products, and CVEs are undisclosed; this does not establish neglected library patches or a specific SQL-injection technique."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "当社システムに対する不正アクセスの発生および情報漏えいに関する調査結果と再発防止策について",
+          "url": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf",
+          "publisher": "アフラック生命保険",
+          "publishedAt": "2026-07-31",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-008",
+        "SEC-009",
+        "SEC-012",
+        "SEC-014"
+      ]
+    },
+    {
+      "id": "anthropic-claude-code-abuse-2025",
+      "organization": "Anthropicが調査した複数組織への攻撃",
+      "title": {
+        "ja": "Claude Code：攻撃者がAIを悪用した複数組織への侵入",
+        "en": "Claude Code: attacker misuse in a multi-organization intrusion campaign"
+      },
+      "summary": {
+        "ja": "Anthropicは、攻撃者がClaude Codeを偵察、攻撃コードの作成、認証情報の取得、データ持ち出しに悪用したと報告しました。約30組織が標的で、侵入成功は少数と説明しています。",
+        "en": "Anthropic reported attacker use of Claude Code for reconnaissance, exploit development, credential harvesting, and exfiltration. About 30 organizations were targeted, with success reported at a small number."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2025-11-13",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "credentials",
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "ai",
+          "text": {
+            "ja": "Claude Codeの攻撃者による悪用を、Anthropicが調査したと公表しています。評価試験の逸脱ではなく、同社が観測した攻撃キャンペーンの報告です。",
+            "en": "Anthropic reports investigating attacker misuse of Claude Code in an observed campaign, distinct from evaluation incidents."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Introduction / How the cyberattack worked"
+        },
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "人間が標的を選び、正当な防御テストを装ってAIへ作業を分割しました。AIは偵察から認証情報の取得、持ち出しまでを支援したと説明しています。",
+            "en": "Human operators selected targets and disguised fragmented tasks as defensive testing; Anthropic describes AI assistance through reconnaissance and exfiltration."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "How the cyberattack worked"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-11-13",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "不正利用アカウントを停止し、影響を受けた組織への通知、関係当局との連携、検知と安全対策の改善を行ったと公表しました。",
+            "en": "Anthropic reported banning accounts, notifying affected organizations, coordinating with authorities, and improving safeguards."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Introduction"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "被害環境の具体的な侵入原因は判断できません。認証情報の到達範囲と取得ログを点検し、自社で動かすAIのツール・通信権限も確認します。",
+          "en": "Victim-specific entry causes are unspecified; inspect credential reach, access logs, and permissions of AI operated in your own environment."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "confirmed",
+        "assessment": {
+          "ja": "攻撃者によるClaude Codeの利用をAnthropicが報告しています。被害環境の穴が回避不能だったことや、AI攻撃全体の増加率を示す証拠ではありません。",
+          "en": "Anthropic reports attacker use of Claude Code; this does not establish unavoidable victim vulnerabilities or a population-wide increase in AI attacks."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "被害組織名、個別の脆弱性とCVE、初回侵入日は非公表です。標的数は被害企業数ではなく、AIの自律性の評価は調査元の見解です。",
+          "en": "Victim names, vulnerabilities, CVEs, and precise entry dates are undisclosed; target count is not victim count, and autonomy assessments are the investigator’s interpretation."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Disrupting an AI-orchestrated cyber espionage campaign",
+          "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+          "publisher": "Anthropic",
+          "publishedAt": "2025-11-13",
+          "kind": "investigator"
+        }
+      ],
+      "ruleIds": [
+        "SEC-005",
+        "SEC-008",
+        "SEC-009",
+        "SEC-011"
+      ]
+    },
     {
       "id": "anthropic-cyber-evals-2026",
       "organization": "Anthropic / external evaluation partners",
@@ -1146,6 +1371,118 @@
       ]
     },
     {
+      "id": "discord-support-vendor-2025",
+      "organization": "Discord / 委託先のカスタマーサポート",
+      "title": {
+        "ja": "Discord：サポート委託先への侵入で問い合わせ情報にアクセス",
+        "en": "Discord: support-provider compromise exposed ticket information"
+      },
+      "summary": {
+        "ja": "Discordは、サポート委託先への侵入により問い合わせ情報へ不正アクセスがあったと公表しました。約70,000人の利用者は本人確認画像が露出した可能性のある範囲であり、画像流出の確定人数ではありません。",
+        "en": "Discord reported unauthorized access to support information through a provider compromise. About 70,000 users potentially had identity-document photos exposed; this is not a confirmed image-leak count."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2025-10-03",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "supply-chain",
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "Discordは委託先5CAへの侵入と説明しています。Discord本体のシステム侵害とは区別して公表しています。",
+            "en": "Discord attributed the compromise to service provider 5CA and distinguished it from a breach of Discord itself."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "TL;DR / What happened?"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "問い合わせ情報や一部の本人確認画像が対象です。サポートに提供した内容以外のチャット、パスワード、認証情報は対象外と説明しています。",
+            "en": "Support data and some identity images were affected; Discord said other chats, passwords, and authentication data were not involved."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "What data was involved? / What data was not involved?"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-10-03",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "委託先のチケットシステムへのアクセスを失効させ、外部の調査会社を起用し、影響を受けた利用者への通知を進めると公表しました。",
+            "en": "Discord revoked provider access, engaged forensic specialists, and reported notifying affected users."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "TL;DR / What are we doing about this?"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "委託先が取得できるチケットと添付書類、アクセスログ、本人確認画像の保存期間を点検します。委託先への初回侵入手法は、この発表だけでは判断できません。",
+          "en": "Inspect provider ticket permissions, attachment access logs, and identity-image retention; this notice does not establish the initial entry technique."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "委託先の侵入原因、具体的な脆弱性と流出人数は未確定です。委託先への原因帰属はDiscordの発表に基づきます。",
+          "en": "Initial cause, specific vulnerabilities, and confirmed victim count are unresolved; provider attribution reflects Discord’s statement."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Update on a Security Incident Involving Third-Party Customer Service",
+          "url": "https://discord.com/press-releases/update-on-security-incident-involving-third-party-customer-service",
+          "publisher": "Discord",
+          "publishedAt": "2025-10-03",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-008",
+        "SEC-009",
+        "SEC-012"
+      ]
+    },
+    {
       "id": "equifax-2017",
       "title": {
         "ja": "Equifax：未修正のApache Strutsから侵入",
@@ -1398,6 +1735,128 @@
         "SEC-002",
         "SEC-005",
         "SEC-006",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "gainsight-oauth-2025",
+      "organization": "Gainsight–Salesforce連携の顧客環境",
+      "title": {
+        "ja": "Gainsight連携：古いOAuthトークンを顧客環境へのアクセスに悪用",
+        "en": "Gainsight integration: old OAuth tokens reused against customer environments"
+      },
+      "summary": {
+        "ja": "攻撃者は、古い連携トークンの有効性を調べ、失効されていないものをSalesforce APIへのアクセスに使いました。トークンを最初に取得した経路は特定されていません。",
+        "en": "Attackers tested old integration tokens and used still-valid credentials against Salesforce APIs. The original acquisition path is unidentified."
+      },
+      "occurredAt": "2025-10-22",
+      "disclosedAt": "2025-11-20",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "credentials",
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "10月22日にトークンを検証し、11月16〜19日に顧客のSalesforce環境でAPIを呼び出したと報告しています。Gainsight環境への同時期の侵入を示すものではありません。",
+            "en": "Gainsight reports token validation on October 22 and customer Salesforce API calls on November 16–19, without corresponding recent access to Gainsight systems."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "Analyzing the Token Usage"
+        },
+        {
+          "topic": "cause",
+          "text": {
+            "ja": "最も新しいトークンも2023年8月発行でした。調査元は漏えい元を特定できず、失効や更新まで長期間有効な設計を問題として説明しています。",
+            "en": "Even the newest token dated to August 2023. Investigators could not identify the leak source; Gainsight identifies long-lived validity as a systemic issue."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "Analyzing the Token Origin / At the Root of the Issue"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-11-20",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "全システムの資格情報を更新し、古い鍵を削除しました。連携トークンの頻繁な更新、単回使用の更新トークン、接続元制限、PKCEを導入したと公表しました。",
+            "en": "Gainsight reported credential rotation, stale-key removal, frequent token refresh, single-use refresh tokens, trusted IP restrictions, and PKCE."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "Immediate Remediation / OAuth Token Lifecycle Management"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "OAuthの有効期限、更新トークンの再利用制御、旧トークンの失効結果を確認します。漏えい元が不明でも、鍵を長期間使い続けられる範囲は点検できます。",
+          "en": "Inspect OAuth lifetimes, refresh-token reuse controls, and legacy revocation evidence even when the leak source is unknown."
+        },
+        "sourceIds": [
+          "s2"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "漏えい元と最初の漏えい時期は不明です。古いトークンの再利用を、2025年のGainsight本体への侵入と同一視しません。",
+          "en": "The original source and leakage date are unknown; 2025 reuse does not establish a new breach of Gainsight itself."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Salesforce–Gainsight Connected App Incident",
+          "url": "https://communities.gainsight.com/community-news-2/salesforce-gainsight-connected-app-incident-29798",
+          "publisher": "Gainsight",
+          "publishedAt": "2025-11-20",
+          "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "How We Accelerated a Year of Security Work in Weeks",
+          "url": "https://www.gainsight.com/blog/how-we-accelerated-a-year-of-security-work-in-weeks/",
+          "publisher": "Gainsight",
+          "publishedAt": "2026-01-02",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-002",
+        "SEC-005",
         "SEC-008",
         "SEC-009"
       ]
@@ -2062,6 +2521,127 @@
       ]
     },
     {
+      "id": "nidek-website-2026",
+      "organization": "ニデック（医療機器・NIDEK）",
+      "title": {
+        "ja": "ニデック（医療機器）：Webサイトで使うソフトの脆弱性を悪用",
+        "en": "NIDEK medical devices: website software vulnerability exploited"
+      },
+      "summary": {
+        "ja": "同社は、Webサイトのソフトウェアの脆弱性を悪用されたと説明しています。会員や問い合わせ情報へのアクセスの可能性がありますが、参照したFAQでは外部への流出は未確認です。",
+        "en": "NIDEK reported exploitation of website software. Member and inquiry data may have been accessed; the cited FAQ does not confirm external disclosure."
+      },
+      "occurredAt": "2026-07-20",
+      "disclosedAt": "2026-07-24",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "7月20日午前1時ごろ（日本時間）の初回不正アクセスと、7月24日の検知を報告しています。原因はサイトで使うソフトウェアの脆弱性と説明しています。",
+            "en": "The FAQ dates initial access to around 01:00 JST on July 20 and detection to July 24, and identifies a website-software vulnerability."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "FAQ Q1 / Q3 / Q14"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "会員情報と問い合わせ情報がアクセス対象となった可能性があります。約28,000会員は影響を受けた可能性のある範囲で、流出確定人数ではありません。",
+            "en": "Member and inquiry information was potentially affected; approximately 28,000 members is a potential-impact figure, not confirmed exfiltration."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "FAQ Q2 / Q7 / Q17"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-07-24",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "検知日にソフトウェアを更新し、専門家と調査しています。過去の問い合わせ情報はサイトから削除し、調査・保護措置のため別の場所で保持すると説明しています。",
+            "en": "NIDEK patched on detection and engaged specialists. Historical inquiries were removed from the website but retained separately for investigation and safeguards."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "FAQ Q4 / Q10 / Q14"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "ソフトの稼働版と更新記録、問い合わせ情報の保持先と削除条件を点検します。侵入前の修正提供時期が不明なため、パッチ放置とは判断できません。",
+          "en": "Inspect deployed versions, update records, and inquiry-data retention; unknown pre-intrusion patch timing prevents a neglect finding."
+        },
+        "sourceIds": [
+          "s2"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "製品名、CVE、修正提供時期、流出の確定範囲は参照資料から特定できません。NIDEKはモーター企業のNIDECとは別会社です。",
+          "en": "Product, CVE, patch timing, and confirmed leakage scope are unspecified; NIDEK is distinct from motor manufacturer NIDEC."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "当社Webサイトへの不正アクセスに関するお知らせ",
+          "url": "https://www.nidek.co.jp/news/20260724_news/",
+          "publisher": "NIDEK",
+          "publishedAt": "2026-07-24",
+          "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "FAQ Regarding Unauthorized Access to Our Website",
+          "url": "https://www.nidek-intl.com/information/customer_faq/",
+          "publisher": "NIDEK",
+          "publishedAt": "2026-08-19",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-006",
+        "SEC-009",
+        "SEC-012"
+      ]
+    },
+    {
       "id": "nishiyama-2026",
       "organization": "西山製作所",
       "title": {
@@ -2477,6 +3057,249 @@
         "SEC-008",
         "SEC-009",
         "SEC-011"
+      ]
+    },
+    {
+      "id": "openai-mixpanel-2025",
+      "organization": "Mixpanel / OpenAI利用者の解析データ",
+      "title": {
+        "ja": "Mixpanel：SMSを使うフィッシングと解析データの持ち出し",
+        "en": "Mixpanel: smishing and analytics-data export affecting OpenAI users"
+      },
+      "summary": {
+        "ja": "MixpanelはSMSを使うフィッシングへの対応を公表し、OpenAIは委託先から利用者の解析データが持ち出されたと説明しました。OpenAIによると、パスワードやAPIキー、チャット内容は対象外です。",
+        "en": "Mixpanel reported a smishing incident; OpenAI reported export of user analytics data from the supplier. OpenAI says passwords, API keys, and chat content were not involved."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2025-11-26",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "credentials",
+        "supply-chain"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "Mixpanelは11月8日にSMSを使うフィッシングを検知したと説明しています。OpenAIは、Mixpanelで解析データを含むデータセットが持ち出されたと公表しています。",
+            "en": "Mixpanel dates smishing detection to November 8; OpenAI reports export of a dataset containing analytics data from Mixpanel."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "Mixpanel: introduction / OpenAI: What happened"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "氏名、メールアドレス、概略の位置情報などが対象です。OpenAIの12月19日追記では、一部のChatGPT利用者も対象に含むと明確化しています。APIキーや会話内容の流出とは区別します。",
+            "en": "Potentially affected data includes names, emails, and coarse locations; a December 19 clarification also includes some ChatGPT users, without API-key or chat-content exposure."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "December 19 clarification / What this means for you"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-11-26",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "Mixpanelはセッションの失効、資格情報の更新、認証・出力ログの調査を実施しました。OpenAIはMixpanelの本番利用を停止し、契約先の点検を拡大したと公表しました。",
+            "en": "Mixpanel revoked sessions, rotated credentials, and reviewed logs; OpenAI ended production use of Mixpanel and expanded supplier reviews."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "Mixpanel: What we did in response / OpenAI: Our response"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "SMSからの偽ログインとセッション失効の手順を点検します。解析先へ送る識別情報の必要性、取得・出力権限、保存期間も確認します。",
+          "en": "Inspect resistance to SMS-led fake logins and session revocation, plus analytics identifiers, export permissions, and retention."
+        },
+        "sourceIds": [
+          "s1",
+          "s2"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "SMS経由の侵入の詳細、初回侵入日時、影響人数は参照資料から確定できません。11月8日と9日はそれぞれの公表元による検知・認知の日で、初回侵入日とは扱いません。",
+          "en": "Exact entry mechanics, initial access date, and victim count are unspecified. November 8 and 9 are provider-specific detection/awareness dates rather than assigned entry dates."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "What to know about a recent Mixpanel security incident",
+          "url": "https://openai.com/index/mixpanel-incident/",
+          "publisher": "OpenAI",
+          "publishedAt": "2025-11-26",
+          "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "Our response to a recent security incident",
+          "url": "https://mixpanel.com/blog/sms-security-incident/",
+          "publisher": "Mixpanel",
+          "publishedAt": "2025-11-27",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-002",
+        "SEC-003",
+        "SEC-005",
+        "SEC-008",
+        "SEC-009",
+        "SEC-012"
+      ]
+    },
+    {
+      "id": "postman-shai-hulud-2025",
+      "organization": "Postman",
+      "title": {
+        "ja": "Postman：依存パッケージ経由でCIの公開用トークンを悪用",
+        "en": "Postman: poisoned dependencies exposed CI publishing authority"
+      },
+      "summary": {
+        "ja": "Postmanは、適切なlockfileのないCIが感染済みの依存パッケージを取り込み、npm公開用トークンを悪用されたと公表しました。17パッケージの改ざんを公表し、本番アプリと顧客データは影響を受けなかったと説明しています。",
+        "en": "A CI build without an appropriate lockfile installed infected dependencies, enabling misuse of an npm publishing token. Postman reported 17 hijacked packages, with production apps and customer data unaffected."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2025-11-24",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "supply-chain",
+        "credentials",
+        "configuration"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "GitHub Actionsのビルドが感染したAsyncAPIパッケージを取得しました。ビルドの公開用トークンと、17パッケージで未設定だったトークン公開禁止・二要素認証の条件が悪用されました。",
+            "en": "GitHub Actions installed infected AsyncAPI packages; a publishing token could publish to 17 packages lacking the disallow-tokens/two-factor setting."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "How did it happen?"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "17の公開npmパッケージに感染版が配布されました。Postmanは環境分離により本番システムと顧客データへの到達はなかったと説明しています。",
+            "en": "Infected versions of 17 public npm packages were distributed; Postman attributes production and customer-data isolation to segmented environments."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "What happened?"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2025-11-24",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "悪用されたアカウントの全トークンを失効させ、感染版を削除しました。公開権限の制限、OIDCのTrusted Publishers、lockfileの点検を実施したと公表しました。",
+            "en": "Postman revoked the account’s tokens, removed infected versions, restricted publishing access, enabled OIDC Trusted Publishers, and began checking lockfiles."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "How did it happen? / What we have already done"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "lockfileの存在と固定インストール、外部コードを実行するジョブの公開権限、長期トークンの必要性を点検します。lockfileだけで依存コードの安全性を保証はできません。",
+          "en": "Inspect lockfiles, frozen installs, CI publishing authority, and long-lived tokens; lockfiles alone do not establish dependency safety."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "Postmanの報告対象は同社のパッケージです。Shai-Hulud全体の被害件数と合算しません。時刻は原文のPT表記で、初回侵入のUTC日付はここでは確定していません。",
+          "en": "This record covers Postman packages rather than the whole campaign. Source timestamps use PT; an initial-entry UTC date is not assigned here."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Root Cause Analysis: Shai-Hulud 2.0",
+          "url": "https://blog.postman.com/engineering/root-cause-analysis-shai-halud-2-0/",
+          "publisher": "Postman",
+          "publishedAt": "2025-12-04",
+          "kind": "organization"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-004",
+        "SEC-005",
+        "SEC-007",
+        "SEC-008",
+        "SEC-009"
       ]
     },
     {
@@ -3804,6 +4627,131 @@
       ]
     },
     {
+      "id": "trivy-supply-chain-2026",
+      "organization": "Aqua Security / Trivy",
+      "title": {
+        "ja": "Trivy：失効漏れの資格情報から配布物とActionを改ざん",
+        "en": "Trivy: residual credentials used to tamper with releases and actions"
+      },
+      "summary": {
+        "ja": "Aqua Securityは、GitHub Actionsの設定不備で特権トークンを取得され、初回対応の失効漏れを経て再び配布物を改ざんされたと報告しました。既存のActionタグも悪性コミットへ付け替えられました。",
+        "en": "Aqua reports privileged-token theft through GitHub Actions misconfiguration, incomplete initial rotation, and renewed release tampering. Existing action tags were redirected to malicious commits."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-03-20",
+      "reviewedAt": "2026-10-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "supply-chain",
+        "credentials",
+        "configuration"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "2月下旬の設定不備によるトークン取得後、3月1日の資格情報更新では一部の有効な資格情報が残り、3月19日の改ざんに利用されました。",
+            "en": "Aqua describes late-February token theft, credentials remaining valid after March 1 rotation, and reuse for March 19 tampering."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "Attack Timeline"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "Trivy v0.69.4とGitHub Actionsに悪性コードが配布され、既存タグも付け替えられました。影響を受けたCIに渡された秘密情報は露出した可能性があると警告しています。",
+            "en": "Malicious Trivy v0.69.4 and actions were distributed, including changed existing tags; Aqua warns that secrets accessible to affected runners must be considered exposed."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "What Happened / What Was Affected"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-03-20",
+          "text": {
+            "ja": "この事案を公表。",
+            "en": "Incident disclosed."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "悪性配布物を削除し、資格情報の失効と更新、長期トークンからの移行、CIとアクセス制御の強化を進めていると公表しました。",
+            "en": "Aqua reported artifact removal, credential revocation and rotation, moving away from long-lived tokens, and strengthening CI and access controls."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "Ongoing Actions / Attack Timeline"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "Actionのタグだけでなく、検証したコミットを固定できているか確認します。初回対応で新しい鍵を作っただけにせず、全旧鍵の失効記録と利用先を照合します。",
+          "en": "Inspect verified commit pinning rather than tag names alone, and reconcile every old credential’s revocation with its consumers."
+        },
+        "sourceIds": [
+          "s2"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+          "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "2月下旬の初回侵入の正確な日は不明です。このレコードは3月19日の再侵害を中心に記録し、配布数を被害組織数とは扱いません。",
+          "en": "The exact late-February entry day is unknown. This record focuses on the March 19 recurrence; distribution counts are not victim-organization counts."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "reviewedAt": "2026-10-02",
+          "title": "Trivy Security incident 2026-03-19",
+          "url": "https://github.com/aquasecurity/trivy/discussions/10425",
+          "publisher": "Aqua Security / Trivy maintainers",
+          "publishedAt": "2026-03-20",
+          "kind": "vendor"
+        },
+        {
+          "id": "s2",
+          "reviewedAt": "2026-10-02",
+          "title": "Trivy supply chain attack: ongoing investigation and remediation",
+          "url": "https://www.aquasec.com/blog/trivy-supply-chain-attack-what-you-need-to-know/",
+          "publisher": "Aqua Security",
+          "publishedAt": "2026-03-22",
+          "kind": "vendor"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-004",
+        "SEC-005",
+        "SEC-007",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
+    {
       "id": "uber-2022",
       "title": {
         "ja": "Uber：認証要求の連打と委託先アカウントの侵害",
@@ -4170,7 +5118,7 @@
   "rules": [
     {
       "id": "SEC-001",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "修正対象と稼働バージョンを照合する",
@@ -4236,11 +5184,14 @@
         "kddi-isp-2026",
         "metabase-2026",
         "moveit-2023",
+        "nidek-website-2026",
         "nishiyama-2026",
         "openai-huggingface-eval-2026",
+        "postman-shai-hulud-2025",
         "prontest-cloud-2026",
         "react2shell-2025",
         "rust-arrayref-2026",
+        "trivy-supply-chain-2026",
         "voising-bi-2026"
       ],
       "references": [
@@ -4258,7 +5209,7 @@
     },
     {
       "id": "SEC-002",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "MFAの方式と適用漏れを確認する",
@@ -4320,7 +5271,9 @@
         "awabank-test-environment-2026",
         "digital-agency-gss-2026",
         "forticloud-sso-2026",
+        "gainsight-oauth-2025",
         "nishiyama-2026",
+        "openai-mixpanel-2025",
         "prontest-cloud-2026",
         "quick-2025",
         "snowflake-unc5537-2024",
@@ -4337,7 +5290,7 @@
     },
     {
       "id": "SEC-003",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "端末とセッションの失効経路を確認する",
@@ -4400,6 +5353,7 @@
         "axios-npm-2026",
         "circleci-2023",
         "okta-support-2023",
+        "openai-mixpanel-2025",
         "quick-2025",
         "rust-arrayref-2026",
         "uber-2022"
@@ -4410,7 +5364,7 @@
     },
     {
       "id": "SEC-004",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "配布物と添付ファイルへの秘密情報の混入を確認する",
@@ -4476,9 +5430,11 @@
         "codecov-2021",
         "okta-support-2023",
         "openai-huggingface-eval-2026",
+        "postman-shai-hulud-2025",
         "rust-arrayref-2026",
         "sakura-billing-2026",
         "toyota-github-2022",
+        "trivy-supply-chain-2026",
         "unit42-ai-assisted-2026"
       ],
       "references": [],
@@ -4487,7 +5443,7 @@
     },
     {
       "id": "SEC-005",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "更新対象の資格情報と旧鍵の失効を照合する",
@@ -4516,6 +5472,10 @@
         {
           "ja": "旧鍵の失効結果・利用先・失効後の監査ログ",
           "en": "Revocation results, consumers, post-revocation audit logs"
+        },
+        {
+          "ja": "OAuthの有効期限・更新トークンの再利用・未使用連携の失効記録",
+          "en": "OAuth expiry, refresh-token reuse, and revocation of unused integrations"
         }
       ],
       "checks": [
@@ -4526,6 +5486,10 @@
         {
           "ja": "新しい鍵の発行と旧鍵の失効を分けて確認し、未知の追加アカウントや永続化も調査対象へ渡す。",
           "en": "Verify issuance and revocation separately; escalate unknown accounts and persistence for investigation."
+        },
+        {
+          "ja": "長期間有効な連携トークンと更新トークンを棚卸しし、有効期限・再利用制御・失効後の拒否をメタデータと承認済みの試験証拠で確認する。",
+          "en": "Inventory long-lived integration and refresh tokens; verify expiry, reuse controls, and rejection after revocation through metadata and authorized test evidence."
         }
       ],
       "remediation": [
@@ -4547,6 +5511,7 @@
         }
       ],
       "incidentIds": [
+        "anthropic-claude-code-abuse-2025",
         "anthropic-cyber-evals-2026",
         "askul-2025",
         "awabank-test-environment-2026",
@@ -4557,12 +5522,15 @@
         "codecov-2021",
         "digital-agency-gss-2026",
         "forticloud-sso-2026",
+        "gainsight-oauth-2025",
         "gyazo-2026",
         "kddi-isp-2026",
         "metabase-2026",
         "nishiyama-2026",
         "okta-support-2023",
         "openai-huggingface-eval-2026",
+        "openai-mixpanel-2025",
+        "postman-shai-hulud-2025",
         "prontest-cloud-2026",
         "quick-2025",
         "react2shell-2025",
@@ -4572,6 +5540,7 @@
         "temairazu-2026",
         "times-car-2026",
         "toyota-github-2022",
+        "trivy-supply-chain-2026",
         "unit42-ai-assisted-2026",
         "voising-bi-2026"
       ],
@@ -4581,7 +5550,7 @@
     },
     {
       "id": "SEC-006",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "稼働環境の公開範囲を確認する",
@@ -4649,6 +5618,7 @@
         "kddi-isp-2026",
         "metabase-2026",
         "moveit-2023",
+        "nidek-website-2026",
         "nishiyama-2026",
         "openai-huggingface-eval-2026",
         "prontest-cloud-2026",
@@ -4668,7 +5638,7 @@
     },
     {
       "id": "SEC-007",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "CIで実行する外部コードと権限を確認する",
@@ -4694,6 +5664,10 @@
         {
           "ja": "ジョブの権限・渡す秘密の種類・信頼境界",
           "en": "Job permissions, secret types, trust boundaries"
+        },
+        {
+          "ja": "依存パッケージのlockfile・固定インストール・公開用ジョブ",
+          "en": "Dependency lockfiles, frozen installation, and publishing jobs"
         }
       ],
       "checks": [
@@ -4704,6 +5678,10 @@
         {
           "ja": "外部コードを動かすステップに不要な秘密や書込み権限が渡らないか確認する。",
           "en": "Check whether external-code steps receive unnecessary secrets or write permissions."
+        },
+        {
+          "ja": "lockfileが保存され、CIが固定インストールを使うか確認する。依存パッケージのインストール中に、別のパッケージの公開用トークンを取得できないか点検する。",
+          "en": "Check committed lockfiles and frozen installs, and whether dependency installation can access tokens that publish other packages."
         }
       ],
       "remediation": [
@@ -4728,7 +5706,9 @@
         "anthropic-cyber-evals-2026",
         "axios-npm-2026",
         "codecov-2021",
+        "postman-shai-hulud-2025",
         "rust-arrayref-2026",
+        "trivy-supply-chain-2026",
         "unit42-ai-assisted-2026"
       ],
       "references": [],
@@ -4737,7 +5717,7 @@
     },
     {
       "id": "SEC-008",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "侵害後に広がる管理権限を確認する",
@@ -4797,17 +5777,23 @@
         }
       ],
       "incidentIds": [
+        "aflac-japan-2026",
+        "anthropic-claude-code-abuse-2025",
         "anthropic-cyber-evals-2026",
         "askul-2025",
         "campfire-2026",
         "circleci-2023",
         "cloudflare-thanksgiving-2023",
         "digital-agency-gss-2026",
+        "discord-support-vendor-2025",
         "forticloud-sso-2026",
+        "gainsight-oauth-2025",
         "gyazo-2026",
         "kddi-isp-2026",
         "metabase-2026",
         "openai-huggingface-eval-2026",
+        "openai-mixpanel-2025",
+        "postman-shai-hulud-2025",
         "quick-2025",
         "react2shell-2025",
         "sakura-billing-2026",
@@ -4815,6 +5801,7 @@
         "snowflake-unc5537-2024",
         "temairazu-2026",
         "times-car-2026",
+        "trivy-supply-chain-2026",
         "unit42-ai-assisted-2026",
         "voising-bi-2026"
       ],
@@ -4824,7 +5811,7 @@
     },
     {
       "id": "SEC-009",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "取得・管理操作のログが揃っているか確認する",
@@ -4883,6 +5870,8 @@
         }
       ],
       "incidentIds": [
+        "aflac-japan-2026",
+        "anthropic-claude-code-abuse-2025",
         "anthropic-cyber-evals-2026",
         "askul-2025",
         "awabank-test-environment-2026",
@@ -4890,14 +5879,19 @@
         "campfire-2026",
         "cloudflare-thanksgiving-2023",
         "digital-agency-gss-2026",
+        "discord-support-vendor-2025",
         "forticloud-sso-2026",
+        "gainsight-oauth-2025",
         "gyazo-2026",
         "kddi-isp-2026",
         "keio-ransomware-2026",
         "metabase-2026",
+        "nidek-website-2026",
         "nishiyama-2026",
         "okta-support-2023",
         "openai-huggingface-eval-2026",
+        "openai-mixpanel-2025",
+        "postman-shai-hulud-2025",
         "prontest-cloud-2026",
         "quick-2025",
         "react2shell-2025",
@@ -4907,6 +5901,7 @@
         "snowflake-unc5537-2024",
         "temairazu-2026",
         "times-car-2026",
+        "trivy-supply-chain-2026",
         "unit42-ai-assisted-2026",
         "voising-bi-2026"
       ],
@@ -4990,7 +5985,7 @@
     },
     {
       "id": "SEC-011",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "AIエージェントの接続先と実行権限を確認する",
@@ -5063,6 +6058,7 @@
         }
       ],
       "incidentIds": [
+        "anthropic-claude-code-abuse-2025",
         "anthropic-cyber-evals-2026",
         "openai-huggingface-eval-2026",
         "unit42-ai-assisted-2026"
@@ -5086,7 +6082,7 @@
     },
     {
       "id": "SEC-012",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "updatedAt": "2026-10-02",
       "title": {
         "ja": "非本番環境と保存データの廃止期限を確認する",
@@ -5160,8 +6156,12 @@
         }
       ],
       "incidentIds": [
+        "aflac-japan-2026",
         "awabank-test-environment-2026",
+        "discord-support-vendor-2025",
         "gyazo-2026",
+        "nidek-website-2026",
+        "openai-mixpanel-2025",
         "sakura-billing-2026",
         "temairazu-2026",
         "times-car-2026",
@@ -5269,7 +6269,79 @@
       ],
       "execution": "read-only-by-default",
       "provenance": "editorial-guidance"
+    },
+    {
+      "id": "SEC-014",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-02",
+      "title": {
+        "ja": "照会APIの認可と取得量の制御を確認する",
+        "en": "Inspect query authorization and retrieval limits"
+      },
+      "summary": {
+        "ja": "会員・顧客・組織の情報を照会、一覧表示、一括出力するWebアプリやAPI。",
+        "en": "Web apps and APIs that query, list, or export member, customer, or organization information."
+      },
+      "category": "implementation",
+      "surfaces": [
+        "web-app",
+        "identity",
+        "data-store"
+      ],
+      "applicability": {
+        "ja": "利用者のIDや所属組織に応じて取得可能なデータが変わる環境。大量照会の制御も対象です。",
+        "en": "Environments where user or organization identity determines accessible data, including bulk-query controls."
+      },
+      "targets": [
+        {
+          "ja": "APIルート・認可処理・組織IDによる絞り込み・DBへの照会",
+          "en": "API routes, authorization, tenant filtering, and database queries"
+        },
+        {
+          "ja": "ページ送り・一括出力・取得量の上限・監視設定",
+          "en": "Pagination, exports, retrieval limits, and monitoring configuration"
+        }
+      ],
+      "checks": [
+        {
+          "ja": "画面の表示制限に加え、各APIが呼び出し元の権限とデータの所属を照合するか確認する。未認証・権限不足・別組織の試験データが拒否されるか、許可されたテスト環境の証拠で確認する。",
+          "en": "Inspect server-side caller and record authorization; use evidence from an authorized test environment for unauthenticated, insufficient-role, and cross-tenant denial."
+        },
+        {
+          "ja": "通常形式のリクエストを繰り返した場合も、利用者・組織ごとの取得量を制限・検知できるか確認する。ページ送りや複数のAPIに分けた取得も試験計画に含める。",
+          "en": "Inspect per-user and per-tenant volume limits and detection, including repeated ordinary requests, pagination, and access spread across endpoints."
+        }
+      ],
+      "remediation": [
+        {
+          "ja": "認可をサーバー側で共通化し、業務に合う取得量の上限と通知を設ける。許可された操作の成功と、許可していない照会の拒否を試験データで確認する。",
+          "en": "Centralize server-side authorization and set appropriate limits and alerts; verify allowed and denied queries with synthetic data."
+        }
+      ],
+      "completionEvidence": [
+        {
+          "ja": "対象API、権限とデータ所属の組合せ、許可・拒否の試験結果、取得量の上限と通知の証拠を残す。未検査のAPIや一括出力は明記する。",
+          "en": "Record API coverage, role/ownership combinations, allow/deny results, retrieval limits, and alert evidence; identify untested endpoints and exports."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "取得量の制限だけでは認可の欠陥を直せません。本番での大量リクエストや実顧客データへの照会を点検のために実行せず、権限や試験証拠が不足すれば未確認とします。",
+          "en": "Limits do not repair authorization flaws. Do not exercise bulk requests or real customer queries in production; unavailable permissions or test evidence mean unverified."
+        }
+      ],
+      "incidentIds": [
+        "aflac-japan-2026"
+      ],
+      "references": [
+        {
+          "title": "アフラック生命保険：調査結果と再発防止策",
+          "url": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf"
+        }
+      ],
+      "execution": "read-only-by-default",
+      "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "f5ac5fc91ec93ce474f12df056aee19dcd547d59b6784a26e747f38affeacbd2"
+  "contentHash": "ff9986ee77e08bad8b2c287793a57b06073a191f8e97017f3704534e1b361fb0"
 }

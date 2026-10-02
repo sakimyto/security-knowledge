@@ -1,0 +1,95 @@
+{
+  "id": "discord-support-vendor-2025",
+  "organization": "Discord / 委託先のカスタマーサポート",
+  "title": {
+    "ja": "Discord：サポート委託先への侵入で問い合わせ情報にアクセス",
+    "en": "Discord: support-provider compromise exposed ticket information"
+  },
+  "summary": {
+    "ja": "Discordは、サポート委託先への侵入により問い合わせ情報へ不正アクセスがあったと公表しました。約70,000人の利用者は本人確認画像が露出した可能性のある範囲であり、画像流出の確定人数ではありません。",
+    "en": "Discord reported unauthorized access to support information through a provider compromise. About 70,000 users potentially had identity-document photos exposed; this is not a confirmed image-leak count."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2025-10-03",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["supply-chain", "unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "Discordは委託先5CAへの侵入と説明しています。Discord本体のシステム侵害とは区別して公表しています。",
+        "en": "Discord attributed the compromise to service provider 5CA and distinguished it from a breach of Discord itself."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "TL;DR / What happened?"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "問い合わせ情報や一部の本人確認画像が対象です。サポートに提供した内容以外のチャット、パスワード、認証情報は対象外と説明しています。",
+        "en": "Support data and some identity images were affected; Discord said other chats, passwords, and authentication data were not involved."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "What data was involved? / What data was not involved?"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-10-03",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "委託先のチケットシステムへのアクセスを失効させ、外部の調査会社を起用し、影響を受けた利用者への通知を進めると公表しました。",
+        "en": "Discord revoked provider access, engaged forensic specialists, and reported notifying affected users."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "TL;DR / What are we doing about this?"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "委託先が取得できるチケットと添付書類、アクセスログ、本人確認画像の保存期間を点検します。委託先への初回侵入手法は、この発表だけでは判断できません。",
+      "en": "Inspect provider ticket permissions, attachment access logs, and identity-image retention; this notice does not establish the initial entry technique."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "委託先の侵入原因、具体的な脆弱性と流出人数は未確定です。委託先への原因帰属はDiscordの発表に基づきます。",
+      "en": "Initial cause, specific vulnerabilities, and confirmed victim count are unresolved; provider attribution reflects Discord’s statement."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Update on a Security Incident Involving Third-Party Customer Service",
+      "url": "https://discord.com/press-releases/update-on-security-incident-involving-third-party-customer-service",
+      "publisher": "Discord",
+      "publishedAt": "2025-10-03",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": ["SEC-008", "SEC-009", "SEC-012"]
+}

@@ -1,6 +1,6 @@
 {
   "id": "SEC-008",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "侵害後に広がる管理権限を確認する",
@@ -55,17 +55,23 @@
     }
   ],
   "incidentIds": [
+    "aflac-japan-2026",
+    "anthropic-claude-code-abuse-2025",
     "anthropic-cyber-evals-2026",
     "askul-2025",
     "campfire-2026",
     "circleci-2023",
     "cloudflare-thanksgiving-2023",
     "digital-agency-gss-2026",
+    "discord-support-vendor-2025",
     "forticloud-sso-2026",
+    "gainsight-oauth-2025",
     "gyazo-2026",
     "kddi-isp-2026",
     "metabase-2026",
     "openai-huggingface-eval-2026",
+    "openai-mixpanel-2025",
+    "postman-shai-hulud-2025",
     "quick-2025",
     "react2shell-2025",
     "sakura-billing-2026",
@@ -73,6 +79,7 @@
     "snowflake-unc5537-2024",
     "temairazu-2026",
     "times-car-2026",
+    "trivy-supply-chain-2026",
     "unit42-ai-assisted-2026",
     "voising-bi-2026"
   ],

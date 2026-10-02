@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
@@ -10,7 +10,7 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "2025-10-02〜2026-10-02の公表日を対象に23事例を追加し、過去の10事例と合わせた選定DBです。評価試験・複数組織の攻撃報告も含むため、件数は企業数や事故全体の統計を意味しません。",
-    "en": "A curated database with 23 records disclosed during 2025-10-02–2026-10-02 and 10 earlier records. Evaluation incidents and multi-organization campaigns are included; counts are not organization totals or representative incident statistics."
+    "ja": "2025-10-02〜2026-10-02に公表された国内外の31事例と、過去の10事例を収録した選定DBです。評価試験・複数組織の攻撃報告も含むため、件数は企業数や事故全体の統計を意味しません。",
+    "en": "A curated database of 31 domestic and international records disclosed during 2025-10-02–2026-10-02, plus 10 earlier records. Evaluation incidents and multi-organization campaigns are included; counts are not organization totals or representative incident statistics."
   }
 }

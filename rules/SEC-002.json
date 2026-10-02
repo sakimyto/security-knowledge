@@ -1,6 +1,6 @@
 {
   "id": "SEC-002",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "MFAの方式と適用漏れを確認する",
@@ -60,7 +60,9 @@
     "awabank-test-environment-2026",
     "digital-agency-gss-2026",
     "forticloud-sso-2026",
+    "gainsight-oauth-2025",
     "nishiyama-2026",
+    "openai-mixpanel-2025",
     "prontest-cloud-2026",
     "quick-2025",
     "snowflake-unc5537-2024",

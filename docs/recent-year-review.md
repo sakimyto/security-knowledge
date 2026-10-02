@@ -1,10 +1,10 @@
 # 直近1年の事故から、どこを点検するか
 
-確認日：2026-10-02。公表日での対象期間：2025-10-02〜2026-10-02。DB v0.2.0。
+確認日：2026-10-02。公表日での対象期間：2025-10-02〜2026-10-02。DB v0.3.0。
 
 ## 収録範囲
 
-このDBは、2025年10月2日から2026年10月2日までに公表された事案から23事例を選び、過去の10事例と合わせて収録しています。企業の発表、開発元のアドバイザリ、調査機関の報告を根拠に、侵入経路と点検する箇所をつなぎます。事故全体の統計や企業の責任を判断する資料ではありません。
+このDBは、2025年10月2日から2026年10月2日までに公表された国内外の31事例を選び、過去の10事例を加えた計41事例を収録しています。各事案の公表資料など一次情報に基づいて発生原因を整理し、自分の環境で点検する箇所へつなぎます。事故全体の統計や企業の責任を判断する資料ではありません。
 
 ## 点検へつなげる
 
@@ -12,7 +12,7 @@
 
 ## AIの関与
 
-直近23事例のAI関与は、公表で確認3件、推定1件、不明19件です。OpenAIとAnthropicの2件は評価試験の逸脱です。Unit 42の1件は、調査元が攻撃中のLLM呼び出しを報告しています。Metabaseの1件は開発元の推定です。この選定DBから、犯罪者のAI利用が増えた割合や、攻撃が回避不能だったかは判断できません。
+直近31事例のAI関与は、公表で確認4件、推定1件、不明26件です。確認4件のうち、OpenAI・Hugging FaceとAnthropicの2026年の2件は、評価試験中の逸脱です。残る2件は実際に観測された攻撃であり、Anthropicが2025年に報告したClaude Codeの悪用事例と、Unit 42が2026年に報告した事例が該当します。Metabaseの事例は開発元による推定です。この選定DBから、AIを用いた攻撃の増加率や、それらが回避不能であるかを判断できません。
 
 ## 記録の読み方
 
@@ -20,38 +20,49 @@
 
 ## 回避策を考えるための分類
 
-以下は直近23レコードの編集上の分類です。過失や、特定の対策で事故を完全に防げたという認定ではありません。
+以下は直近31レコードの編集上の分類です。過失や、特定の対策で事故を完全に防げたという認定ではありません。
 
 | 分類 | レコード数 | 点検すること |
 | --- | ---: | --- |
 | 侵入・悪用の前に修正情報あり | 3 | 実際の稼働版、更新の担当と期限、適用後の侵害調査 |
 | 公表前の悪用 | 4 | 権限と公開範囲、保存データ、検知と失効 |
-| 運用・設定を点検 | 8 | MFAの例外、秘密情報、端末、供給網、AIの実行境界 |
-| 判断材料が不足 | 8 | 原因を推測せず、確認できる影響範囲と封じ込めを点検 |
+| 運用・設定を点検 | 13 | MFAの例外、秘密情報、端末、供給網、AIの実行境界 |
+| 判断材料が不足 | 11 | 原因を推測せず、確認できる影響範囲と封じ込めを点検 |
 
 ## 追加した点検ルール
 
 - [SEC-011：AIエージェントの接続先と実行権限](../rules/SEC-011.json)。プロンプトの制限と実際の通信・権限を照合します。
 - [SEC-012：非本番環境と保存データの廃止期限](../rules/SEC-012.json)。責任者・用途・期限・消去の証拠を確認します。
 - [SEC-013：隔離手順とバックアップの復元](../rules/SEC-013.json)。削除権限の分離と復元試験の結果を確認します。
+- [SEC-014：照会APIの認可と取得量](../rules/SEC-014.json)。別の利用者・組織のデータを取得できないか、通常形式の大量照会を制限・検知できるか、試験証拠を確認します。
 
-## 23事例と一次情報
+SEC-005にはOAuthの期限と旧トークンの失効、SEC-007にはlockfileとCIの公開権限の点検を追加しました。
+
+## 31事例と一次情報
 
 公表日は、企業事案では参照資料に記載された初報日、キャンペーンでは採用した調査報告の公表日です。発生日や発見日とは分けています。各JSONに、主張ごとの出典と本文中の該当箇所を記録しています。
 
 | 公表日 | 事例 | 対策の判断 | AI関与 | 一次情報 |
 | --- | --- | --- | --- | --- |
+| 2025-10-03 | [Discord：サポート委託先への侵入で問い合わせ情報にアクセス](../incidents/discord-support-vendor-2025.json) | 判断材料が不足 | 不明 | [Discord](https://discord.com/press-releases/update-on-security-incident-involving-third-party-customer-service) |
 | 2025-10-19 | [アスクル：MFAの例外アカウントから侵入](../incidents/askul-2025.json) | 運用・設定を点検 | 不明 | [ASKUL](https://www.askullogist.co.jp/pdf/20251212.pdf) |
 | 2025-11-04 | [QUICK：私物端末から業務用認証情報が流出](../incidents/quick-2025.json) | 運用・設定を点検 | 不明 | [QUICK](https://corporate.quick.co.jp/news/oshirase20251104/) |
+| 2025-11-13 | [Claude Code：攻撃者がAIを悪用した複数組織への侵入](../incidents/anthropic-claude-code-abuse-2025.json) | 判断材料が不足 | 公表で確認 | [Anthropic](https://www.anthropic.com/news/disrupting-AI-espionage) |
+| 2025-11-20 | [Gainsight連携：古いOAuthトークンを顧客環境へのアクセスに悪用](../incidents/gainsight-oauth-2025.json) | 運用・設定を点検 | 不明 | [Gainsight](https://communities.gainsight.com/community-news-2/salesforce-gainsight-connected-app-incident-29798) |
+| 2025-11-24 | [Postman：依存パッケージ経由でCIの公開用トークンを悪用](../incidents/postman-shai-hulud-2025.json) | 運用・設定を点検 | 不明 | [Postman](https://blog.postman.com/engineering/root-cause-analysis-shai-halud-2-0/) |
+| 2025-11-26 | [Mixpanel：SMSを使うフィッシングと解析データの持ち出し](../incidents/openai-mixpanel-2025.json) | 運用・設定を点検 | 不明 | [OpenAI](https://openai.com/index/mixpanel-incident/) |
 | 2025-12-15 | [React2Shell：公開後にRSCの脆弱性を悪用](../incidents/react2shell-2025.json) | 先に修正情報あり | 不明 | [Microsoft](https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/) |
 | 2026-01-22 | [FortiCloud SSO：修正済み機器でも認証を悪用](../incidents/forticloud-sso-2026.json) | 公表前の悪用 | 不明 | [Fortinet](https://www.fortinet.com/blog/psirt-blogs/analysis-of-sso-abuse-on-fortios) |
 | 2026-02-13 | [西山製作所：VPNの脆弱性と認証情報を悪用](../incidents/nishiyama-2026.json) | 判断材料が不足 | 不明 | [西山製作所](https://www.nishiyama-ss.co.jp/asset/pdf/20260403_CyberAttack3.pdf) |
+| 2026-03-20 | [Trivy：失効漏れの資格情報から配布物とActionを改ざん](../incidents/trivy-supply-chain-2026.json) | 運用・設定を点検 | 不明 | [Aqua Security / Trivy maintainers](https://github.com/aquasecurity/trivy/discussions/10425) |
 | 2026-03-31 | [Axios：公開者アカウントから悪性パッケージを配布](../incidents/axios-npm-2026.json) | 運用・設定を点検 | 不明 | [Google Threat Intelligence Group](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package/) |
 | 2026-04-03 | [阿波銀行：残存したテスト環境から情報が流出](../incidents/awabank-test-environment-2026.json) | 運用・設定を点検 | 不明 | [阿波銀行](https://www.awabank.co.jp/kojin/benri/awagin_app/news/2026/news20260603a/index.html) |
 | 2026-04-03 | [CAMPFIRE：開発サーバーに置いたGitHub認証情報を悪用](../incidents/campfire-2026.json) | 運用・設定を点検 | 不明 | [CAMPFIRE](https://campfire.co.jp/press/2026/06/02/campfire/) |
 | 2026-04-09 | [Prontest：クラウドの計算資源を不正利用](../incidents/prontest-cloud-2026.json) | 判断材料が不足 | 不明 | [Prontest](https://prontest.co.jp/news/notice-of-unauthorized-access-in-our-cloud-environment-and-response-status/) |
 | 2026-06-23 | [KDDI：第三者ソフトのゼロデイからISP情報が流出](../incidents/kddi-isp-2026.json) | 公表前の悪用 | 不明 | [KDDI](https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-73_4619/kddi_nr_s-73_4619_pdf_01.pdf) |
+| 2026-06-30 | [アフラック：通常の利用に似たアクセスで大量のデータを照会](../incidents/aflac-japan-2026.json) | 運用・設定を点検 | 不明 | [アフラック生命保険](https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf) |
 | 2026-07-16 | [OpenAI・Hugging Face：評価用AIが外部へ侵入](../incidents/openai-huggingface-eval-2026.json) | 公表前の悪用 | 公表で確認 | [OpenAI](https://openai.com/index/hugging-face-model-evaluation-security-incident/) |
+| 2026-07-24 | [ニデック（医療機器）：Webサイトで使うソフトの脆弱性を悪用](../incidents/nidek-website-2026.json) | 判断材料が不足 | 不明 | [NIDEK](https://www.nidek.co.jp/news/20260724_news/) |
 | 2026-07-30 | [Anthropic：評価環境の通信制限が効かず外部へ到達](../incidents/anthropic-cyber-evals-2026.json) | 運用・設定を点検 | 公表で確認 | [Anthropic](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) |
 | 2026-08-06 | [Metabase：ゼロデイと管理者セッションからデータ取得](../incidents/metabase-2026.json) | 公表前の悪用 | 推定 | [Metabase](https://www.metabase.com/blog/vulnerability-what-happened) |
 | 2026-08-17 | [さくらインターネット：管理用サーバーへの不正アクセス](../incidents/sakura-hosting-2026.json) | 判断材料が不足 | 不明 | [さくらインターネット](https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/) |
@@ -69,8 +80,8 @@
 
 [piyolog](https://piyolog.hatenadiary.jp/)を事例発見の入口に使い、根拠には当事者・開発元・調査元の一次情報を採用しました。記事の本文は転載していません。原因が非公表でも、影響と対応を記録できる事例は収録しました。
 
-この版は国内の直近事案と、供給網・AI・ゼロデイの点検に役立つ事例を優先して選んでいます。月別の件数は均等でなく、選定の偏りがあります。未収録の事故もあるため、母集団の傾向や被害総額の推計には使いません。2025年9月に初報があった事案は直近1年の集計対象外です。企業数・被害者数・公表件数の重複を解消した統計でもありません。
+この版は国内外の直近事案と、供給網・AI・ゼロデイの点検に役立つ事例を優先して選んでいます。今回、国内2件（アフラック生命保険、医療機器のNIDEK）と海外6件を追加しました。国別の網羅性はなく、海外の事例も日本の環境に適用できるかを点検ルールの条件で判断します。月別の件数は均等でなく、選定の偏りがあります。未収録の事故もあるため、母集団の傾向や被害総額の推計には使いません。2025年9月に初報があった事案は直近1年の集計対象外です。企業数・被害者数・公表件数の重複を解消した統計でもありません。
 
-Antigravity CLIで23事例の日本語をレビューし、この解説の下書きを生成しました。編集者が数値・日付・確度を照合し、読みやすさを推敲しました。CLIへ渡したのは公開用の要約と集計だけです。モデルの文章を一次情報の代わりにはしていません。
+Antigravity CLIで前版の23事例と今回追加した8事例の日本語をレビューし、この解説の下書きを生成しました。編集者が数値・日付・確度を照合し、読みやすさを推敲しました。CLIへ渡したのは公開用の要約と集計だけです。モデルの文章を一次情報の代わりにはしていません。
 
 今後の追加・訂正は[編集基準](../CONTRIBUTING.md)に従い、根拠と確度を更新します。週次点検への接続は[運用手順](weekly-review.md)を参照してください。

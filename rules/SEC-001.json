@@ -1,6 +1,6 @@
 {
   "id": "SEC-001",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "修正対象と稼働バージョンを照合する",
@@ -63,11 +63,14 @@
     "kddi-isp-2026",
     "metabase-2026",
     "moveit-2023",
+    "nidek-website-2026",
     "nishiyama-2026",
     "openai-huggingface-eval-2026",
+    "postman-shai-hulud-2025",
     "prontest-cloud-2026",
     "react2shell-2025",
     "rust-arrayref-2026",
+    "trivy-supply-chain-2026",
     "voising-bi-2026"
   ],
   "references": [

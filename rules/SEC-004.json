@@ -1,6 +1,6 @@
 {
   "id": "SEC-004",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "配布物と添付ファイルへの秘密情報の混入を確認する",
@@ -61,9 +61,11 @@
     "codecov-2021",
     "okta-support-2023",
     "openai-huggingface-eval-2026",
+    "postman-shai-hulud-2025",
     "rust-arrayref-2026",
     "sakura-billing-2026",
     "toyota-github-2022",
+    "trivy-supply-chain-2026",
     "unit42-ai-assisted-2026"
   ],
   "references": [],

@@ -11,8 +11,8 @@ const inventory = readJson(resolve(ROOT, 'examples/inventory.json'))
 
 test('primary sources, references, and bidirectional links validate', () => {
   assert.deepEqual(validateCatalog(catalog), [])
-  assert.equal(catalog.incidents.length, 33)
-  assert.equal(catalog.rules.length, 13)
+  assert.equal(catalog.incidents.length, 41)
+  assert.equal(catalog.rules.length, 14)
   assert.equal(
     catalog.incidents.filter((incident) => incident.outcome === 'exposure-only').length,
     2,
@@ -23,8 +23,8 @@ test('recent records preserve unknown causes and distinguish evaluated AI from a
   const recent = catalog.incidents.filter(
     (item) => item.disclosedAt >= '2025-10-02' && item.disclosedAt <= '2026-10-02',
   )
-  assert.equal(recent.length, 23)
-  assert.equal(recent.filter((item) => item.ai.status === 'confirmed').length, 3)
+  assert.equal(recent.length, 31)
+  assert.equal(recent.filter((item) => item.ai.status === 'confirmed').length, 4)
   assert.equal(recent.filter((item) => item.ai.status === 'inferred').length, 1)
   const voising = recent.find((item) => item.id === 'voising-bi-2026')
   assert.deepEqual(voising.cves, [])
@@ -104,6 +104,7 @@ test('unchanged knowledge does not skip environment checks and incomplete invent
   assert.equal(plan.changes.updated.length, 0)
   assert.equal(plan.tasks.length, catalog.rules.length)
   assert.equal(plan.tasks.find((item) => item.ruleId === 'SEC-011').applicability, 'candidate')
+  assert.equal(plan.tasks.find((item) => item.ruleId === 'SEC-014').applicability, 'candidate')
   assert.equal(plan.tasks.find((item) => item.ruleId === 'SEC-002').applicability, 'unverified')
   const complete = makePlan(catalog, { ...inventory, complete: true })
   assert.equal(

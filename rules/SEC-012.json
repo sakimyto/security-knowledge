@@ -1,6 +1,6 @@
 {
   "id": "SEC-012",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "非本番環境と保存データの廃止期限を確認する",
@@ -71,8 +71,12 @@
     }
   ],
   "incidentIds": [
+    "aflac-japan-2026",
     "awabank-test-environment-2026",
+    "discord-support-vendor-2025",
     "gyazo-2026",
+    "nidek-website-2026",
+    "openai-mixpanel-2025",
     "sakura-billing-2026",
     "temairazu-2026",
     "times-car-2026",

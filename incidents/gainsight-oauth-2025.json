@@ -1,0 +1,104 @@
+{
+  "id": "gainsight-oauth-2025",
+  "organization": "Gainsight–Salesforce連携の顧客環境",
+  "title": {
+    "ja": "Gainsight連携：古いOAuthトークンを顧客環境へのアクセスに悪用",
+    "en": "Gainsight integration: old OAuth tokens reused against customer environments"
+  },
+  "summary": {
+    "ja": "攻撃者は、古い連携トークンの有効性を調べ、失効されていないものをSalesforce APIへのアクセスに使いました。トークンを最初に取得した経路は特定されていません。",
+    "en": "Attackers tested old integration tokens and used still-valid credentials against Salesforce APIs. The original acquisition path is unidentified."
+  },
+  "occurredAt": "2025-10-22",
+  "disclosedAt": "2025-11-20",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials", "unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "10月22日にトークンを検証し、11月16〜19日に顧客のSalesforce環境でAPIを呼び出したと報告しています。Gainsight環境への同時期の侵入を示すものではありません。",
+        "en": "Gainsight reports token validation on October 22 and customer Salesforce API calls on November 16–19, without corresponding recent access to Gainsight systems."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "Analyzing the Token Usage"
+    },
+    {
+      "topic": "cause",
+      "text": {
+        "ja": "最も新しいトークンも2023年8月発行でした。調査元は漏えい元を特定できず、失効や更新まで長期間有効な設計を問題として説明しています。",
+        "en": "Even the newest token dated to August 2023. Investigators could not identify the leak source; Gainsight identifies long-lived validity as a systemic issue."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "Analyzing the Token Origin / At the Root of the Issue"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-11-20",
+      "text": {
+        "ja": "この事案を公表。",
+        "en": "Incident disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "全システムの資格情報を更新し、古い鍵を削除しました。連携トークンの頻繁な更新、単回使用の更新トークン、接続元制限、PKCEを導入したと公表しました。",
+        "en": "Gainsight reported credential rotation, stale-key removal, frequent token refresh, single-use refresh tokens, trusted IP restrictions, and PKCE."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "Immediate Remediation / OAuth Token Lifecycle Management"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "OAuthの有効期限、更新トークンの再利用制御、旧トークンの失効結果を確認します。漏えい元が不明でも、鍵を長期間使い続けられる範囲は点検できます。",
+      "en": "Inspect OAuth lifetimes, refresh-token reuse controls, and legacy revocation evidence even when the leak source is unknown."
+    },
+    "sourceIds": ["s2"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した情報では、攻撃者によるAI利用は確認できません。AI不使用を意味しません。",
+      "en": "The cited sources do not establish attacker use of AI; absence of evidence is not evidence of absence."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "漏えい元と最初の漏えい時期は不明です。古いトークンの再利用を、2025年のGainsight本体への侵入と同一視しません。",
+      "en": "The original source and leakage date are unknown; 2025 reuse does not establish a new breach of Gainsight itself."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "reviewedAt": "2026-10-02",
+      "title": "Salesforce–Gainsight Connected App Incident",
+      "url": "https://communities.gainsight.com/community-news-2/salesforce-gainsight-connected-app-incident-29798",
+      "publisher": "Gainsight",
+      "publishedAt": "2025-11-20",
+      "kind": "organization"
+    },
+    {
+      "id": "s2",
+      "reviewedAt": "2026-10-02",
+      "title": "How We Accelerated a Year of Security Work in Weeks",
+      "url": "https://www.gainsight.com/blog/how-we-accelerated-a-year-of-security-work-in-weeks/",
+      "publisher": "Gainsight",
+      "publishedAt": "2026-01-02",
+      "kind": "organization"
+    }
+  ],
+  "ruleIds": ["SEC-002", "SEC-005", "SEC-008", "SEC-009"]
+}

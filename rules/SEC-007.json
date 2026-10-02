@@ -1,6 +1,6 @@
 {
   "id": "SEC-007",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "CIで実行する外部コードと権限を確認する",
@@ -24,6 +24,10 @@
     {
       "ja": "ジョブの権限・渡す秘密の種類・信頼境界",
       "en": "Job permissions, secret types, trust boundaries"
+    },
+    {
+      "ja": "依存パッケージのlockfile・固定インストール・公開用ジョブ",
+      "en": "Dependency lockfiles, frozen installation, and publishing jobs"
     }
   ],
   "checks": [
@@ -34,6 +38,10 @@
     {
       "ja": "外部コードを動かすステップに不要な秘密や書込み権限が渡らないか確認する。",
       "en": "Check whether external-code steps receive unnecessary secrets or write permissions."
+    },
+    {
+      "ja": "lockfileが保存され、CIが固定インストールを使うか確認する。依存パッケージのインストール中に、別のパッケージの公開用トークンを取得できないか点検する。",
+      "en": "Check committed lockfiles and frozen installs, and whether dependency installation can access tokens that publish other packages."
     }
   ],
   "remediation": [
@@ -58,7 +66,9 @@
     "anthropic-cyber-evals-2026",
     "axios-npm-2026",
     "codecov-2021",
+    "postman-shai-hulud-2025",
     "rust-arrayref-2026",
+    "trivy-supply-chain-2026",
     "unit42-ai-assisted-2026"
   ],
   "references": [],

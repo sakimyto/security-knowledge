@@ -1,6 +1,6 @@
 {
   "id": "SEC-006",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "稼働環境の公開範囲を確認する",
@@ -64,6 +64,7 @@
     "kddi-isp-2026",
     "metabase-2026",
     "moveit-2023",
+    "nidek-website-2026",
     "nishiyama-2026",
     "openai-huggingface-eval-2026",
     "prontest-cloud-2026",
