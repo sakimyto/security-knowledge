@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "environment": "example-project",
+  "revision": "example-commit-and-config-snapshot",
+  "complete": false,
+  "assets": [
+    {
+      "id": "web",
+      "surfaces": ["web-app", "dependencies"]
+    },
+    {
+      "id": "build",
+      "surfaces": ["ci", "repositories", "containers"]
+    }
+  ]
+}

@@ -1,0 +1,519 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sakimyto.com/security-data/catalog.schema.json",
+  "title": "Security Knowledge catalog",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "updatedAt": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "title": {
+      "$ref": "#/$defs/text"
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^https://github\\.com/[^/]+/[^/]+$"
+    },
+    "repositoryPath": {
+      "type": "string",
+      "minLength": 0,
+      "pattern": "^[a-z0-9-]*$"
+    },
+    "license": {
+      "const": "MIT"
+    },
+    "coverage": {
+      "$ref": "#/$defs/text"
+    },
+    "incidents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/incident"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/rule"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "contentHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "version",
+    "updatedAt",
+    "title",
+    "repository",
+    "repositoryPath",
+    "license",
+    "coverage",
+    "incidents",
+    "rules"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "text": {
+      "type": "object",
+      "properties": {
+        "ja": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": ["ja", "en"],
+      "additionalProperties": false
+    },
+    "claim": {
+      "type": "object",
+      "properties": {
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "$ref": "#/$defs/text"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["confirmed", "inferred", "unknown"]
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": ["topic", "text", "status", "sourceIds", "locator"],
+      "additionalProperties": false
+    },
+    "timeline": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "text": {
+          "$ref": "#/$defs/text"
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": ["date", "text", "sourceIds"],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^https://[^\\s]+$"
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": ["organization", "vendor", "investigator", "government", "secondary"]
+        },
+        "publishedAt": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "reviewedAt": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      },
+      "required": ["id", "title", "url", "publisher", "kind", "publishedAt", "reviewedAt"],
+      "additionalProperties": false
+    },
+    "incident": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "title": {
+          "$ref": "#/$defs/text"
+        },
+        "organization": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "$ref": "#/$defs/text"
+        },
+        "occurredAt": {
+          "type": ["string", "null"],
+          "minLength": 1,
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "disclosedAt": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "reviewedAt": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "outcome": {
+          "type": "string",
+          "enum": ["confirmed-breach", "exposure-only"]
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "known-vulnerability",
+              "zero-day",
+              "endpoint",
+              "credentials",
+              "implementation",
+              "configuration",
+              "supply-chain"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "cves": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^CVE-\\d{4}-\\d{4,}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "claims": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "timeline": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeline"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reportedActions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "prevention": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "type": "string",
+              "enum": [
+                "patch-available",
+                "pre-disclosure-exploitation",
+                "operational-control",
+                "unknown"
+              ]
+            },
+            "assessment": {
+              "$ref": "#/$defs/text"
+            },
+            "sourceIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": ["classification", "assessment", "sourceIds"],
+          "additionalProperties": false
+        },
+        "ai": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["confirmed", "inferred", "unknown"]
+            },
+            "assessment": {
+              "$ref": "#/$defs/text"
+            }
+          },
+          "required": ["status", "assessment"],
+          "additionalProperties": false
+        },
+        "unknowns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "ruleIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^SEC-\\d{3}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "organization",
+        "summary",
+        "occurredAt",
+        "disclosedAt",
+        "reviewedAt",
+        "outcome",
+        "categories",
+        "cves",
+        "claims",
+        "timeline",
+        "reportedActions",
+        "prevention",
+        "ai",
+        "unknowns",
+        "sources",
+        "ruleIds"
+      ],
+      "additionalProperties": false
+    },
+    "rule": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^SEC-\\d{3}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "updatedAt": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "title": {
+          "$ref": "#/$defs/text"
+        },
+        "summary": {
+          "$ref": "#/$defs/text"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "known-vulnerability",
+            "zero-day",
+            "endpoint",
+            "credentials",
+            "implementation",
+            "configuration",
+            "supply-chain"
+          ]
+        },
+        "surfaces": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "dependencies",
+              "web-app",
+              "identity",
+              "endpoint",
+              "ci",
+              "repositories",
+              "containers",
+              "cloud",
+              "data-store",
+              "support"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "applicability": {
+          "$ref": "#/$defs/text"
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "remediation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "completionEvidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "incidentIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^https://[^\\s]+$"
+              }
+            },
+            "required": ["title", "url"],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "execution": {
+          "const": "read-only-by-default"
+        },
+        "provenance": {
+          "const": "editorial-guidance"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "updatedAt",
+        "title",
+        "summary",
+        "category",
+        "surfaces",
+        "applicability",
+        "targets",
+        "checks",
+        "remediation",
+        "completionEvidence",
+        "limitations",
+        "incidentIds",
+        "references",
+        "execution",
+        "provenance"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

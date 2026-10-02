@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "0.1.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "Security Knowledge — 事故から点検へ",
+    "en": "Security Knowledge — From incidents to checks"
+  },
+  "repository": "https://github.com/sakimyto/security-knowledge",
+  "repositoryPath": "",
+  "license": "MIT",
+  "coverage": {
+    "ja": "原因や公開状態を一次情報で確認できる10事例を選んだ初期版。事故全体の統計や網羅的な安全性評価には使えません。",
+    "en": "An initial selection of 10 incidents with primary-source evidence. It is not a representative dataset or a comprehensive security assessment."
+  },
+  "contentHash": "5a3c8e3041e8e7a9a707f8f14a11d64425b5b69cc92828916f1aaeaa5e43cb4b",
+  "entries": [
+    {
+      "kind": "incident",
+      "id": "circleci-2023",
+      "hash": "2d1c93b1f50bbfabd2c13b0abd6cd587cc5dcf2ddb4569710345a43e627a9788"
+    },
+    {
+      "kind": "incident",
+      "id": "cloudflare-thanksgiving-2023",
+      "hash": "98665310d09970c4a288fdf4686f8e76fa0483ce3e5f05670bfef949f75001fa"
+    },
+    {
+      "kind": "incident",
+      "id": "codecov-2021",
+      "hash": "8eddabe999ec0a13dcb7fa03264b806636affbbbaf6806b6faf99fe164fdb1be"
+    },
+    {
+      "kind": "incident",
+      "id": "equifax-2017",
+      "hash": "0954c174783b7f496ec4a924a31369007b98b19efba85df4a6f8e54c2dfa7e5d"
+    },
+    {
+      "kind": "incident",
+      "id": "moveit-2023",
+      "hash": "45b350a8a188702b74a004f233526410807f88335b0bca600f2fdba3d548bfef"
+    },
+    {
+      "kind": "incident",
+      "id": "okta-support-2023",
+      "hash": "ce2a745c071cd0822922d4da150d4c8c22b9b85503b2fc9041c1761718ea25de"
+    },
+    {
+      "kind": "incident",
+      "id": "snowflake-unc5537-2024",
+      "hash": "24174c9c99c67f8211c4e3c0cf1b613975a33a0eaf02a73d422670a9a81fce03"
+    },
+    {
+      "kind": "incident",
+      "id": "toyota-cloud-2023",
+      "hash": "5ff255efcb15fa05449044fc4e4496a8fa03254b7a8e73c959b4c53d01ed6bba"
+    },
+    {
+      "kind": "incident",
+      "id": "toyota-github-2022",
+      "hash": "43212999882c7072a980d356ca9ffceb30fb5eb838a0e95b78cceef75be465bb"
+    },
+    {
+      "kind": "incident",
+      "id": "uber-2022",
+      "hash": "378245575d4a60d27b27fc4ce0173d340b03aa930b5475fdfc416585e8186914"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-001",
+      "hash": "970e961f606656001a0cbfc24c1e70351206a325caab6d22d191ded8f7246858"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-002",
+      "hash": "fa80cd4a400004f1464265b363e20452a28a78afbb3b11aab9474176349cbd98"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-003",
+      "hash": "cc74ebfdf1e90addb82c750d65123c33b5b0990f52a9a5bcd3fab4c2eed0af1e"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-004",
+      "hash": "d6a71883919069fabba154a0f2e70da90713b93786f6661d64851f1d865a0503"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-005",
+      "hash": "ae8fe31ed23e82b7f9d5756ada677947351808388401cd709299219967474987"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-006",
+      "hash": "cb9620460d12c370a578999c7a3e1346a304de2c630f1ed46e278a2c8b2df198"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-007",
+      "hash": "5df095c5cbdbb5aadcd5440d3aa8382cc65e0f07fdd15a958510491631243a19"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-008",
+      "hash": "9c74ad8f2397c4f3791125b55128a3b6a9f38855df63054006958961221b894e"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-009",
+      "hash": "f9b6bfbcefa2cc2a397b922e16d61c667977793da710c5628d38d0a13769fab7"
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-010",
+      "hash": "ffc7fd3744c4d1db4cb9b6afcf26acd6364f9ed2f63acef3d486db1a4974c450"
+    }
+  ]
+}

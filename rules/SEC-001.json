@@ -1,0 +1,70 @@
+{
+  "id": "SEC-001",
+  "version": "1.0.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "修正対象と稼働バージョンを照合する",
+    "en": "Reconcile advisories with deployed versions"
+  },
+  "summary": {
+    "ja": "依存パッケージや自前運用の製品を使う環境。ソースのlockfileだけでなく、実際に配布・稼働するものが対象です。",
+    "en": "Environments using dependencies or self-hosted products; include deployed artifacts, not only lockfiles."
+  },
+  "category": "known-vulnerability",
+  "surfaces": ["dependencies", "web-app"],
+  "applicability": {
+    "ja": "依存パッケージや自前運用の製品を使う環境。ソースのlockfileだけでなく、実際に配布・稼働するものが対象です。",
+    "en": "Environments using dependencies or self-hosted products; include deployed artifacts, not only lockfiles."
+  },
+  "targets": [
+    {
+      "ja": "lockfile・パッケージ定義・SBOM",
+      "en": "Lockfiles, package manifests, SBOMs"
+    },
+    {
+      "ja": "製品台帳・コンテナのダイジェスト・稼働バージョン",
+      "en": "Product inventory, image digests, running versions"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "OSV・開発元の最新アドバイザリとバージョンを照合し、影響条件と根拠を記録する。",
+      "en": "Match versions against OSV and current vendor advisories; record affected conditions and evidence."
+    },
+    {
+      "ja": "悪用が確認されたものと外部から到達可能なものを優先し、更新が本番に反映されたか確認する。",
+      "en": "Prioritize active exploitation and reachable assets; verify deployment of updates."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "互換性を確認して更新し、すぐ更新できない場合は開発元の回避策と公開範囲の制限を検討する。",
+      "en": "Test and update; if immediate updating is unavailable, assess vendor mitigations and exposure restrictions."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "稼働バージョン・対象アドバイザリ・適用した更新・必要な動作確認の結果を残す。",
+      "en": "Record the running version, advisory, deployed fix, and relevant validation results."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "このDBにCVEがないことは安全の証拠になりません。閉じた製品の内部実装や実際の侵害は別途調査が必要です。",
+      "en": "Absence from this dataset is not evidence of safety. Closed-source internals and actual compromise require separate investigation."
+    }
+  ],
+  "incidentIds": ["equifax-2017", "moveit-2023"],
+  "references": [
+    {
+      "title": "OSV API",
+      "url": "https://google.github.io/osv.dev/api/"
+    },
+    {
+      "title": "CISA KEV",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

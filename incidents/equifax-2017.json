@@ -1,0 +1,112 @@
+{
+  "id": "equifax-2017",
+  "title": {
+    "ja": "Equifax：未修正のApache Strutsから侵入",
+    "en": "Equifax: unpatched Apache Struts"
+  },
+  "organization": "Equifax",
+  "summary": {
+    "ja": "既知のApache Struts脆弱性がオンライン異議申立てサイトで悪用され、個人情報が流出しました。更新指示があっても、適用の確認が必要だった事例です。",
+    "en": "A known Apache Struts vulnerability in the online dispute portal enabled theft of personal information. Patch instructions needed verification of actual deployment."
+  },
+  "occurredAt": "2017-05-13",
+  "disclosedAt": "2017-09-07",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["known-vulnerability"],
+  "cves": ["CVE-2017-5638"],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "Apache StrutsのCVE-2017-5638が侵入に使われました。",
+        "en": "CVE-2017-5638 in Apache Struts was the entry vector."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Attack vector"
+    },
+    {
+      "topic": "control",
+      "text": {
+        "ja": "脆弱性は組織に通知されていましたが、対象のサイトに修正が適用されていませんでした。",
+        "en": "The organization had been notified, but the affected portal remained unpatched."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "GAO-18-559, p. 15: Identification"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-07-29",
+      "text": {
+        "ja": "不審なネットワーク通信を検出。",
+        "en": "Suspicious network traffic detected."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2017-09-07",
+      "text": {
+        "ja": "事故を公表。",
+        "en": "Breach disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "containment",
+      "text": {
+        "ja": "対象のWebアプリケーションを停止し、調査と対策を実施しました。",
+        "en": "The affected web application was taken offline for investigation and mitigation."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "本文 / Main text"
+    }
+  ],
+  "prevention": {
+    "classification": "patch-available",
+    "assessment": {
+      "ja": "事前に知られていた脆弱性です。更新の通知から実際の稼働バージョン確認までを一つの点検として扱います。",
+      "en": "The vulnerability was known beforehand. Track patch notification through verification of the running version."
+    },
+    "sourceIds": ["s1", "s2"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した一次情報に、攻撃でAIを利用したことを裏付ける記述はありません。AI不使用を意味しません。",
+      "en": "The cited primary sources do not establish AI involvement. This does not establish that AI was absent."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "この要約だけでは、当時の全資産の状態や担当者ごとの判断は評価できません。",
+      "en": "This summary cannot assess every asset or individual decision at the time."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Equifax Releases Details on Cybersecurity Incident",
+      "url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+      "publisher": "Equifax",
+      "kind": "organization",
+      "publishedAt": "2017-09-15",
+      "reviewedAt": "2026-10-02"
+    },
+    {
+      "id": "s2",
+      "title": "Data Protection: Actions Taken in Response to the 2017 Breach",
+      "url": "https://www.gao.gov/assets/gao-18-559.pdf",
+      "publisher": "U.S. GAO",
+      "kind": "government",
+      "publishedAt": "2018-08-30",
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": ["SEC-001"]
+}

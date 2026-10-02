@@ -1,0 +1,103 @@
+{
+  "id": "uber-2022",
+  "title": {
+    "ja": "Uber：認証要求の連打と委託先アカウントの侵害",
+    "en": "Uber: repeated MFA prompts and a contractor account"
+  },
+  "organization": "Uber",
+  "summary": {
+    "ja": "委託先のアカウントで繰り返された二要素認証の要求が承認され、内部ツールへのアクセスが拡大しました。パスワードの入手経路については、会社も可能性として説明しています。",
+    "en": "A contractor accepted one of repeated two-factor requests, enabling access to internal tools. Uber described the initial password acquisition as a likely explanation."
+  },
+  "occurredAt": "2022-09-15",
+  "disclosedAt": "2022-09-15",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials", "endpoint"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "委託先が二要素認証の要求を承認した後、攻撃者がログインしました。",
+        "en": "The attacker logged in after a contractor accepted a two-factor request."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "What happened?"
+    },
+    {
+      "topic": "origin",
+      "text": {
+        "ja": "個人端末のマルウェア感染後、パスワードが売買された可能性があるとUberは説明しました。",
+        "en": "Uber assessed that malware on a personal device likely led to the password being sold."
+      },
+      "status": "inferred",
+      "sourceIds": ["s1"],
+      "locator": "What happened?"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2022-09-15",
+      "text": {
+        "ja": "事故への対応中であると公表。",
+        "en": "Initial incident disclosure."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2022-09-19",
+      "text": {
+        "ja": "侵入経路と対応状況を更新。",
+        "en": "Entry path and response update published."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "対象アカウントの停止・パスワード変更、鍵の更新、内部ツール復帰時の再認証を実施しました。",
+        "en": "Affected accounts were blocked or reset, keys rotated, and reauthentication required when tools were restored."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "How did we respond?"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "MFAの有無だけでなく、認証方式・承認の連打への対処・委託先を含む適用範囲を点検します。",
+      "en": "Inspect MFA methods, repeated prompt handling, and coverage of contractor accounts, not only whether MFA exists."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した一次情報に、攻撃でAIを利用したことを裏付ける記述はありません。AI不使用を意味しません。",
+      "en": "The cited primary sources do not establish AI involvement. This does not establish that AI was absent."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "パスワード窃取の具体的経路は、参照した発表では確定していません。",
+      "en": "The exact password theft path is not established by the cited disclosure."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Security update (September 19 update)",
+      "url": "https://www.uber.com/us/en/newsroom/security-update/",
+      "publisher": "Uber",
+      "kind": "organization",
+      "publishedAt": "2022-09-16",
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": ["SEC-002", "SEC-003"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "security-knowledge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/build.mjs --check",
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "plan": "node scripts/plan.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

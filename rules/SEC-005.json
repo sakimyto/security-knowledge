@@ -1,0 +1,67 @@
+{
+  "id": "SEC-005",
+  "version": "1.0.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "更新対象の資格情報と旧鍵の失効を照合する",
+    "en": "Reconcile credential inventory and revocation"
+  },
+  "summary": {
+    "ja": "資格情報の漏洩・侵害・供給元事故が疑われる環境。通常点検では実値を含まない台帳と失効手順を確認します。",
+    "en": "Suspected credential exposure, compromise, or supplier incidents. Routine checks use metadata inventories and revocation procedures."
+  },
+  "category": "credentials",
+  "surfaces": ["identity", "ci", "cloud", "data-store"],
+  "applicability": {
+    "ja": "資格情報の漏洩・侵害・供給元事故が疑われる環境。通常点検では実値を含まない台帳と失効手順を確認します。",
+    "en": "Suspected credential exposure, compromise, or supplier incidents. Routine checks use metadata inventories and revocation procedures."
+  },
+  "targets": [
+    {
+      "ja": "鍵・トークン・サービスアカウントのメタデータ台帳",
+      "en": "Metadata inventory of keys, tokens, service identities"
+    },
+    {
+      "ja": "旧鍵の失効結果・利用先・失効後の監査ログ",
+      "en": "Revocation results, consumers, post-revocation audit logs"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "使用中と誤認されたものだけでなく、全対象のID・所有者・利用先・失効方法を照合する。",
+      "en": "Reconcile all affected IDs, owners, consumers, and revocation methods, including identities believed unused."
+    },
+    {
+      "ja": "新しい鍵の発行と旧鍵の失効を分けて確認し、未知の追加アカウントや永続化も調査対象へ渡す。",
+      "en": "Verify issuance and revocation separately; escalate unknown accounts and persistence for investigation."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "利用先への切替と旧鍵の失効を段階的に行う計画を作る。本番の失効・権限変更は既存の承認範囲で実施する。",
+      "en": "Prepare staged consumer migration and revocation; production revocation and permission changes require existing authority."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "台帳の全対象に失効結果が対応し、旧鍵が拒否される検証または供給元の失効記録を残す。",
+      "en": "Record revocation for every affected identity and rejection tests or provider revocation evidence."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "新しい鍵を作っただけでは完了ではありません。漏洩した鍵をAIへ渡さず、権限不足なら未確認とします。",
+      "en": "Issuing a new key alone is not completion. Never provide leaked keys to an AI; missing access means unverified."
+    }
+  ],
+  "incidentIds": [
+    "codecov-2021",
+    "toyota-github-2022",
+    "circleci-2023",
+    "okta-support-2023",
+    "cloudflare-thanksgiving-2023"
+  ],
+  "references": [],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

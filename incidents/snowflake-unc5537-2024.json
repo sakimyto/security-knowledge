@@ -1,0 +1,103 @@
+{
+  "id": "snowflake-unc5537-2024",
+  "title": {
+    "ja": "Snowflake顧客：窃取済み認証情報でデータ取得",
+    "en": "Snowflake customers: stolen credentials used for data theft"
+  },
+  "organization": "Snowflake customer environments",
+  "summary": {
+    "ja": "Mandiantが調査した顧客環境では、過去の情報窃取型マルウェア等で盗まれた認証情報が使われました。MFA未適用、資格情報の未更新、接続元の制限不足が共通要因でした。",
+    "en": "Mandiant found stolen customer credentials used to access Snowflake environments. Missing MFA, unrotated credentials, and absent network restrictions enabled the investigated compromises."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2024-06-10",
+  "reviewedAt": "2026-10-02",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials", "endpoint", "configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "調査した侵害は盗まれた顧客の資格情報に追跡でき、Snowflake本体の侵害が原因だという証拠は見つからなかったとしています。",
+        "en": "Investigated compromises were traced to stolen customer credentials; investigators found no evidence of a Snowflake platform breach."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Initial access"
+    },
+    {
+      "topic": "controls",
+      "text": {
+        "ja": "影響を受けた調査対象では、MFA・資格情報更新・ネットワーク許可リストに不足がありました。",
+        "en": "Affected investigated accounts lacked MFA, rotation of exposed credentials, and network allow-list controls."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Three primary factors"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2024-06-10",
+      "text": {
+        "ja": "Mandiantが調査結果を公表。",
+        "en": "Mandiant published its findings."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2024-06-17",
+      "text": {
+        "ja": "脅威ハンティングのガイドを追加。",
+        "en": "Threat hunting guide added."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "guidance",
+      "text": {
+        "ja": "MandiantはMFA適用、資格情報の管理、信頼できる接続元への制限、異常アクセスの検知を推奨しました。",
+        "en": "Mandiant recommended MFA, credential management, trusted network restrictions, and abnormal-access detection."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "Recommendations"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "調査対象の共通要因であり、全Snowflake利用者の状態を表すものではありません。利用者側の設定と監査ログを点検します。",
+      "en": "These are factors in investigated compromises, not all Snowflake customers. Inspect customer-side settings and audit logs."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した一次情報に、攻撃でAIを利用したことを裏付ける記述はありません。AI不使用を意味しません。",
+      "en": "The cited primary sources do not establish AI involvement. This does not establish that AI was absent."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "個別の被害組織の侵入日と被害範囲は、このキャンペーン単位の記録では確定しません。",
+      "en": "This campaign record does not establish each victim’s entry date or impact."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "UNC5537 Targets Snowflake Customer Instances for Data Theft and Extortion",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc5537-snowflake-data-theft-extortion",
+      "publisher": "Mandiant",
+      "kind": "investigator",
+      "publishedAt": "2024-06-10",
+      "reviewedAt": "2026-10-02"
+    }
+  ],
+  "ruleIds": ["SEC-002", "SEC-006", "SEC-008", "SEC-009"]
+}

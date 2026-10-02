@@ -1,0 +1,61 @@
+{
+  "id": "SEC-009",
+  "version": "1.0.0",
+  "updatedAt": "2026-10-02",
+  "title": {
+    "ja": "取得・管理操作のログが揃っているか確認する",
+    "en": "Inspect coverage of access and administration logs"
+  },
+  "summary": {
+    "ja": "ファイル取得・データ一括出力・鍵発行・管理操作を提供する環境。",
+    "en": "Environments supporting file access, bulk exports, credential issuance, or administrative actions."
+  },
+  "category": "credentials",
+  "surfaces": ["identity", "data-store", "support"],
+  "applicability": {
+    "ja": "ファイル取得・データ一括出力・鍵発行・管理操作を提供する環境。",
+    "en": "Environments supporting file access, bulk exports, credential issuance, or administrative actions."
+  },
+  "targets": [
+    {
+      "ja": "監査ログの種類・保管・検索クエリ",
+      "en": "Audit event types, retention, query coverage"
+    },
+    {
+      "ja": "ファイル直接取得・鍵発行・不審な認証の通知",
+      "en": "Direct file access, credential creation, anomalous login alerts"
+    }
+  ],
+  "checks": [
+    {
+      "ja": "画面経由と直接API経由の操作が両方記録され、取得漏れがないか合成イベントで確認する。",
+      "en": "Use synthetic events to verify that UI and direct API paths are both logged."
+    },
+    {
+      "ja": "大量取得や想定外の管理操作に通知が届くか確認し、秘密や個人情報はログへ出さない。",
+      "en": "Verify alerts for bulk access and unexpected administration without logging secrets or personal data."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "不足するイベントの記録と通知を整え、保存期間と調査担当者を決める。",
+      "en": "Add missing event coverage and alerts; define retention and investigation ownership."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "合成イベントの操作から記録・検索・通知までの一連の証拠を残す。",
+      "en": "Record synthetic event execution, collection, query, and alert delivery."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "ログがないことは侵害がない証拠ではありません。ログを取得できなければ未確認とします。",
+      "en": "Missing logs do not establish absence of compromise. Unavailable logs mean unverified."
+    }
+  ],
+  "incidentIds": ["okta-support-2023", "cloudflare-thanksgiving-2023", "snowflake-unc5537-2024"],
+  "references": [],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}
