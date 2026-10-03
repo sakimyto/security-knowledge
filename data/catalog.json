@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "updatedAt": "2026-10-02",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
@@ -6343,5 +6343,5 @@
       "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "19cc1cc00255b5194ac17f4de9f546678e925162ab667d0e14596766a7dae515"
+  "contentHash": "8475e05c44114b0f314005201084fde4507f872e33e385664e6d54db36106b36"
 }

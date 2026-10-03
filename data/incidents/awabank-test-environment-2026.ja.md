@@ -1,6 +1,6 @@
 # awabank-test-environment-2026 — 阿波銀行：残存したテスト環境から情報が流出
 
-事例 | Catalog: 0.4.0 | Record SHA-256: 274695977d4b0103725da2aef85bb23722b25dde5a57ad8c0d4d2c1e25ee7b74
+事例 | Catalog: 0.4.1 | Record SHA-256: 274695977d4b0103725da2aef85bb23722b25dde5a57ad8c0d4d2c1e25ee7b74
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

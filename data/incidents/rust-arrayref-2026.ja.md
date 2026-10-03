@@ -1,6 +1,6 @@
 # rust-arrayref-2026 — Rust：正規クレートの更新に悪性ビルド処理が混入
 
-事例 | Catalog: 0.4.0 | Record SHA-256: 636cf32e46b05d55895c1e34fda7bb20010e0d4d7bb0d25a61acf9a5eb673d50
+事例 | Catalog: 0.4.1 | Record SHA-256: 636cf32e46b05d55895c1e34fda7bb20010e0d4d7bb0d25a61acf9a5eb673d50
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

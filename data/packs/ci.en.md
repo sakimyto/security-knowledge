@@ -6,7 +6,7 @@ This is a selection of candidate rules. Assess the remaining rules or record the
 
 # SEC-004 — Inspect artifacts and attachments for secret inclusion
 
-Inspection rule | Catalog: 0.4.0 | Record SHA-256: 0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6
+Inspection rule | Catalog: 0.4.1 | Record SHA-256: 0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
@@ -52,7 +52,7 @@ Primary-source URLs and claim confidence are in the related incident records’ 
 
 # SEC-005 — Reconcile credential inventory and revocation
 
-Inspection rule | Catalog: 0.4.0 | Record SHA-256: 4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0
+Inspection rule | Catalog: 0.4.1 | Record SHA-256: 4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
@@ -100,7 +100,7 @@ Primary-source URLs and claim confidence are in the related incident records’ 
 
 # SEC-007 — Inspect external CI code and permissions
 
-Inspection rule | Catalog: 0.4.0 | Record SHA-256: 24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5
+Inspection rule | Catalog: 0.4.1 | Record SHA-256: 24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
@@ -148,7 +148,7 @@ Primary-source URLs and claim confidence are in the related incident records’ 
 
 # SEC-008 — Inspect privileges enabling lateral access
 
-Inspection rule | Catalog: 0.4.0 | Record SHA-256: f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464
+Inspection rule | Catalog: 0.4.1 | Record SHA-256: f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

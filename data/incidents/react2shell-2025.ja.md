@@ -1,6 +1,6 @@
 # react2shell-2025 — React2Shell：公開後にRSCの脆弱性を悪用
 
-事例 | Catalog: 0.4.0 | Record SHA-256: e1fdfa5bfd246913e92ba9225eeda9a0f496fe731af6f782f90ea416e924444a
+事例 | Catalog: 0.4.1 | Record SHA-256: e1fdfa5bfd246913e92ba9225eeda9a0f496fe731af6f782f90ea416e924444a
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

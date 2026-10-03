@@ -1,6 +1,6 @@
 # trivy-supply-chain-2026 — Trivy：失効漏れの資格情報から配布物とActionを改ざん
 
-事例 | Catalog: 0.4.0 | Record SHA-256: cb35a6d0ed024d98b333585f5eb25ad4d4550664ccda998253132a9b849b8169
+事例 | Catalog: 0.4.1 | Record SHA-256: cb35a6d0ed024d98b333585f5eb25ad4d4550664ccda998253132a9b849b8169
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

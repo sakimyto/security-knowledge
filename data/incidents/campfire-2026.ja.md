@@ -1,6 +1,6 @@
 # campfire-2026 — CAMPFIRE：開発サーバーに置いたGitHub認証情報を悪用
 
-事例 | Catalog: 0.4.0 | Record SHA-256: 6ebd0adb88b55b1f734f6be5eb9eb9168c3977c7504da6a2c91087448117eca6
+事例 | Catalog: 0.4.1 | Record SHA-256: 6ebd0adb88b55b1f734f6be5eb9eb9168c3977c7504da6a2c91087448117eca6
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

@@ -1,6 +1,6 @@
 # cloudflare-thanksgiving-2023 — Cloudflare：失効漏れのトークンとアカウントから侵入
 
-事例 | Catalog: 0.4.0 | Record SHA-256: 98665310d09970c4a288fdf4686f8e76fa0483ce3e5f05670bfef949f75001fa
+事例 | Catalog: 0.4.1 | Record SHA-256: 98665310d09970c4a288fdf4686f8e76fa0483ce3e5f05670bfef949f75001fa
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

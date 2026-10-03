@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogHash": "8475e05c44114b0f314005201084fde4507f872e33e385664e6d54db36106b36",
+  "environment": "security-knowledge public repository; source and generated data only",
+  "environmentRevision": "ffed2e9c0529832db9a6438c36c3c7baa43c7d88",
+  "checkedAt": "2026-10-03T01:05:16.500Z",
+  "results": [
+    {
+      "ruleId": "SEC-001",
+      "ruleHash": "8e6c53174bef8ca55cea3f34e97f1aad0f6f0c55a15111ba9f2df8613d55fe55",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-002",
+      "ruleHash": "fcf58a1b53fff45725fbbe1f19fa49d638d0ea143a2444428247b31f3c62de1a",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-003",
+      "ruleHash": "fa4a4a16010e066b0c6208029e5cf0d1e65b0a96a18bfd0463081b7681220a25",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-004",
+      "ruleHash": "0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-005",
+      "ruleHash": "4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-006",
+      "ruleHash": "ef322bf44c1b8241baf2b84ce08f6422b46075b59a85e88eb927713bbef64e8a",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-007",
+      "ruleHash": "24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5",
+      "assetId": "public-repository",
+      "status": "finding",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [
+        "https://github.com/sakimyto/security-knowledge/blob/ffed2e9c0529832db9a6438c36c3c7baa43c7d88/.github/workflows/check.yml"
+      ],
+      "reason": "CI uses mutable actions/checkout@v6 and actions/setup-node@v6 references. Workflow declares contents: read; account and runtime settings were not inspected.",
+      "proposedAction": "Pin official Action commit references and verify CI. v0.4.1 includes the pins; remaining runtime and account boundaries require separate evidence."
+    },
+    {
+      "ruleId": "SEC-008",
+      "ruleHash": "f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-009",
+      "ruleHash": "ee5ca8e3ff31cae2c3818e2446db3453376e07ac498d71a4b9bd54aa2678f745",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-010",
+      "ruleHash": "057e3ecf2e5f444da0fa1a37d2696bce79690ae193150a0ea534ec07542be6ff",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-011",
+      "ruleHash": "c825b2408ad9c74579cd404c68b6cb9daa00d14601a42ba32b6b60fac4afcbf0",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-012",
+      "ruleHash": "a263b1e54e292b97464b5b6e1494a948a77571813c642c26eec1ed994473b833",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-013",
+      "ruleHash": "0e16048f65f44638a3e7858bde158f737c2fa74751e5b12580da67ab0a3e7856",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    },
+    {
+      "ruleId": "SEC-014",
+      "ruleHash": "40889eb24f568c0135a0c8abe83471c8d3cf585ac435d86a668dbc910a6fc471",
+      "assetId": "public-repository",
+      "status": "unverified",
+      "scope": "Published source, generated distribution and .github/workflows/check.yml; excludes account, workstation and hosting settings",
+      "evidence": [],
+      "reason": "Required environment settings, applicable advisory checks or synthetic boundary-test evidence were unavailable in this source-only inspection.",
+      "proposedAction": "Provide rule-specific environment metadata and authorized test evidence before assigning a conformance result."
+    }
+  ]
+}

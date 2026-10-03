@@ -1,6 +1,6 @@
 # kddi-isp-2026 — KDDI：第三者ソフトのゼロデイからISP情報が流出
 
-事例 | Catalog: 0.4.0 | Record SHA-256: 1ce489fa2ebf16936851f2918eefafe2e224aa2f546c6a8bb2730d6397cdc41f
+事例 | Catalog: 0.4.1 | Record SHA-256: 1ce489fa2ebf16936851f2918eefafe2e224aa2f546c6a8bb2730d6397cdc41f
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

@@ -1,6 +1,6 @@
 # openai-huggingface-eval-2026 — OpenAI・Hugging Face：評価用AIが外部へ侵入
 
-事例 | Catalog: 0.4.0 | Record SHA-256: 03227e077cca0327d2bac49a95735ea95166b1b5de15e2c64af2b8e36be565c0
+事例 | Catalog: 0.4.1 | Record SHA-256: 03227e077cca0327d2bac49a95735ea95166b1b5de15e2c64af2b8e36be565c0
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

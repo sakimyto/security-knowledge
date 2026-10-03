@@ -1,6 +1,6 @@
 # anthropic-cyber-evals-2026 — Anthropic：評価環境の通信制限が効かず外部へ到達
 
-事例 | Catalog: 0.4.0 | Record SHA-256: df22edd6b470df3c7276c13334a0400fb1c2344c796091898bb40b00c80e7654
+事例 | Catalog: 0.4.1 | Record SHA-256: df22edd6b470df3c7276c13334a0400fb1c2344c796091898bb40b00c80e7654
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

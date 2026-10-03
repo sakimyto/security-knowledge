@@ -1,6 +1,6 @@
 # toyota-cloud-2023 — Toyota: cloud misconfiguration exposed vehicle data
 
-Incident | Catalog: 0.4.0 | Record SHA-256: 5ff255efcb15fa05449044fc4e4496a8fa03254b7a8e73c959b4c53d01ed6bba
+Incident | Catalog: 0.4.1 | Record SHA-256: 5ff255efcb15fa05449044fc4e4496a8fa03254b7a8e73c959b4c53d01ed6bba
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

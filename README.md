@@ -16,6 +16,8 @@
 - 入出力形式：`schema/`
 - [編集基準と追加手順](CONTRIBUTING.md)
 - [週次点検の手順と状態管理](docs/weekly-review.md)
+- [公開リポジトリを点検した実例](docs/public-repository-review.md)
+- [事故DBの週次更新手順](docs/catalog-maintenance.md)
 
 ## 手元で検証する
 

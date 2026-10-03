@@ -6,7 +6,7 @@
 
 # SEC-004 — 配布物と添付ファイルへの秘密情報の混入を確認する
 
-点検ルール | Catalog: 0.4.0 | Record SHA-256: 0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6
+点検ルール | Catalog: 0.4.1 | Record SHA-256: 0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -52,7 +52,7 @@ anthropic-cyber-evals-2026, axios-npm-2026, campfire-2026, codecov-2021, okta-su
 
 # SEC-005 — 更新対象の資格情報と旧鍵の失効を照合する
 
-点検ルール | Catalog: 0.4.0 | Record SHA-256: 4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0
+点検ルール | Catalog: 0.4.1 | Record SHA-256: 4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -100,7 +100,7 @@ anthropic-claude-code-abuse-2025, anthropic-cyber-evals-2026, askul-2025, awaban
 
 # SEC-007 — CIで実行する外部コードと権限を確認する
 
-点検ルール | Catalog: 0.4.0 | Record SHA-256: 24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5
+点検ルール | Catalog: 0.4.1 | Record SHA-256: 24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -148,7 +148,7 @@ anthropic-cyber-evals-2026, axios-npm-2026, codecov-2021, postman-shai-hulud-202
 
 # SEC-008 — 侵害後に広がる管理権限を確認する
 
-点検ルール | Catalog: 0.4.0 | Record SHA-256: f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464
+点検ルール | Catalog: 0.4.1 | Record SHA-256: f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
