@@ -1,6 +1,6 @@
 # quick-2025 — QUICK：私物端末から業務用認証情報が流出
 
-事例 | Catalog: 0.6.0 | Record SHA-256: 2af038caa32254c502baaf93e1ff3ab3ac89e5d9c8df1bdb1c7798081907def1
+事例 | Catalog: 0.6.1 | Record SHA-256: 2af038caa32254c502baaf93e1ff3ab3ac89e5d9c8df1bdb1c7798081907def1
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

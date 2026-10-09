@@ -34,7 +34,7 @@
       },
       "status": "confirmed",
       "sourceIds": ["s1"],
-      "locator": "6. 調査結果 (2)–(5)"
+      "locator": "p.3 §4-2 / p.4 §6(2)・(3)"
     },
     {
       "topic": "investigation-limit",
@@ -66,7 +66,7 @@
       },
       "status": "confirmed",
       "sourceIds": ["s1"],
-      "locator": "7. 対応状況"
+      "locator": "p.4 §5-2 / p.4–5 §7-1・7-2"
     }
   ],
   "prevention": {

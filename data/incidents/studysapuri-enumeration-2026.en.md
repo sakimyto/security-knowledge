@@ -1,6 +1,6 @@
 # studysapuri-enumeration-2026 — スタディサプリ: unauthorized access and impact
 
-Incident | Catalog: 0.6.0 | Record SHA-256: e709385db6344a1c52370d62755c2795b63673ebc2dd03d31ad7344bbda9d787
+Incident | Catalog: 0.6.1 | Record SHA-256: e709385db6344a1c52370d62755c2795b63673ebc2dd03d31ad7344bbda9d787
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "updatedAt": "2026-10-10",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
@@ -1024,7 +1024,7 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "6. 調査結果 (2)–(5)"
+          "locator": "p.3 §4-2 / p.4 §6(2)・(3)"
         },
         {
           "topic": "investigation-limit",
@@ -1062,7 +1062,7 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "7. 対応状況"
+          "locator": "p.4 §5-2 / p.4–5 §7-1・7-2"
         }
       ],
       "prevention": {
@@ -18968,5 +18968,5 @@
       "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "89f795be65dd3fc98ef0beae56b067035824d39a3575e49e10f1858765681559"
+  "contentHash": "0a19d26cb175869ee749bbe6435fb1ebf0e50b1a17b8338b00a19bef1817ece3"
 }

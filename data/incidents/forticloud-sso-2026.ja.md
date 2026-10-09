@@ -1,6 +1,6 @@
 # forticloud-sso-2026 — FortiCloud SSO：修正済み機器でも認証を悪用
 
-事例 | Catalog: 0.6.0 | Record SHA-256: 0a7f90420b23c4dfb973bdcaff05e36e1eb84dc5c20fa128b3a09de3ba9ff80b
+事例 | Catalog: 0.6.1 | Record SHA-256: 0a7f90420b23c4dfb973bdcaff05e36e1eb84dc5c20fa128b3a09de3ba9ff80b
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

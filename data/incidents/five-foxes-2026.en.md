@@ -1,6 +1,6 @@
 # five-foxes-2026 — ファイブフォックス: unauthorized access and impact
 
-Incident | Catalog: 0.6.0 | Record SHA-256: 1164d7bf395f8a3bdd5487847b0d3ff5271b4b9e0755e30dde1591c09ae710af
+Incident | Catalog: 0.6.1 | Record SHA-256: 1164d7bf395f8a3bdd5487847b0d3ff5271b4b9e0755e30dde1591c09ae710af
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

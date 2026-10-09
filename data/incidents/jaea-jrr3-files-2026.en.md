@@ -1,6 +1,6 @@
 # jaea-jrr3-files-2026 — 日本原子力研究開発機構: unauthorized access and impact
 
-Incident | Catalog: 0.6.0 | Record SHA-256: e2d2f8ac400820eff303adb4faa348f2cbe16a08f6b39602a0a72ef0cd29d66c
+Incident | Catalog: 0.6.1 | Record SHA-256: e2d2f8ac400820eff303adb4faa348f2cbe16a08f6b39602a0a72ef0cd29d66c
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

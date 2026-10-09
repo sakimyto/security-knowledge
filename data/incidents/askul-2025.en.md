@@ -1,6 +1,6 @@
 # askul-2025 — ASKUL: access through an MFA exception
 
-Incident | Catalog: 0.6.0 | Record SHA-256: 63068f9fc0320bbeaa13c8e8d526c9ea03fa97164d4c6d81740716b72c0d1a75
+Incident | Catalog: 0.6.1 | Record SHA-256: dd4e201cf595e3657dda8f4b8b90eadee70252112457fe137712945bea0982ed
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
@@ -15,12 +15,12 @@ Categories: credentials | CVEs: unspecified
 ## Sourced claims
 
 - [confirmed / Reported fact] A contractor account was misused; the original credential leak remains unresolved. (s1; p.4 §6\(1\) 不正アクセス)
-- [confirmed / Reported fact] Some servers lacked EDR and continuous monitoring; encrypted or deleted backups impeded recovery. (s1; 6. 調査結果 \(2\)–\(5\))
+- [confirmed / Reported fact] Some servers lacked EDR and continuous monitoring; encrypted or deleted backups impeded recovery. (s1; p.3 §4-2 / p.4 §6\(2\)・\(3\))
 - [confirmed / Reported fact] ASKUL reported that an OS update erased relevant contractor-PC logs, limiting the origin investigation. (s1; p.4 §6\(1\) 調査により判明した事項)
 
 ## Reported actions
 
-- [confirmed / Reported fact] ASKUL reported credential resets, MFA rollout, and environment rebuilding. (s1; 7. 対応状況)
+- [confirmed / Reported fact] ASKUL reported credential resets, MFA rollout, and environment rebuilding. (s1; p.4 §5-2 / p.4–5 §7-1・7-2)
 
 ## Cause and mitigation hypotheses
 

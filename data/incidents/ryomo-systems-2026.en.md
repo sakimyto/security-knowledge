@@ -1,6 +1,6 @@
 # ryomo-systems-2026 — 両毛システムズ（大東ガス・伊勢崎市）: unauthorized access and impact
 
-Incident | Catalog: 0.6.0 | Record SHA-256: 1fe38fdc844c0bc2c94071e45b3df1bde05b5b6c5467c002b8a3e1489b3f7753
+Incident | Catalog: 0.6.1 | Record SHA-256: 1fe38fdc844c0bc2c94071e45b3df1bde05b5b6c5467c002b8a3e1489b3f7753
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

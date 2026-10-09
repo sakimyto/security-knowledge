@@ -1,6 +1,6 @@
 # en-midcareer-credential-stuffing-2026 — エン：不正アクセスの経緯と影響
 
-事例 | Catalog: 0.6.0 | Record SHA-256: c7bca70e71d847a9acfb894ba7a91c1d3401b0cbe5ce4078f9a44adb7cb8e5eb
+事例 | Catalog: 0.6.1 | Record SHA-256: c7bca70e71d847a9acfb894ba7a91c1d3401b0cbe5ce4078f9a44adb7cb8e5eb
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

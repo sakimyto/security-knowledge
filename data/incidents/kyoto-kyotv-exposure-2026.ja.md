@@ -1,6 +1,6 @@
 # kyoto-kyotv-exposure-2026 — 京都府 KYO育tv：情報の公開範囲・権限の問題
 
-事例 | Catalog: 0.6.0 | Record SHA-256: 562e6014bc755e2daf473e3aae5b2179212ffb379a8375cd382b4aa83da312f7
+事例 | Catalog: 0.6.1 | Record SHA-256: 562e6014bc755e2daf473e3aae5b2179212ffb379a8375cd382b4aa83da312f7
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

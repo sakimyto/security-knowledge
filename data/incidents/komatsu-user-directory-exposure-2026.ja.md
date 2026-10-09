@@ -1,6 +1,6 @@
 # komatsu-user-directory-exposure-2026 — 小松製作所：情報の公開範囲・権限の問題
 
-事例 | Catalog: 0.6.0 | Record SHA-256: 936a4a0a2b4765428f6bfd97f9e593a48d8bc3b4646f55d06c594d8c14bf87d6
+事例 | Catalog: 0.6.1 | Record SHA-256: 936a4a0a2b4765428f6bfd97f9e593a48d8bc3b4646f55d06c594d8c14bf87d6
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

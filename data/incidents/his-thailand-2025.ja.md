@@ -1,6 +1,6 @@
 # his-thailand-2025 — HISタイ法人：ファイルサーバーの侵害を2026年に公表
 
-事例 | Catalog: 0.6.0 | Record SHA-256: 04ba131fee62f89d5b3d083df9e3cf34c3095e4b9f0bf0d8a76e30ed2258fdf8
+事例 | Catalog: 0.6.1 | Record SHA-256: 04ba131fee62f89d5b3d083df9e3cf34c3095e4b9f0bf0d8a76e30ed2258fdf8
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
