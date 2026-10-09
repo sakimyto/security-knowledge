@@ -1,0 +1,122 @@
+{
+  "id": "ota-cultural-pc-scam-2026",
+  "organization": "大田区文化振興協会",
+  "title": {
+    "ja": "大田区文化振興協会：不正アクセスの経緯と影響",
+    "en": "大田区文化振興協会: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "偽警告の連絡先へ電話し、指示に従った業務端末が遠隔操作されたとみられます。 施設利用者・職員計556人の情報へアクセス可能でした。外部への流出は調査中です。",
+    "en": "A staff member called a fake alert’s number and followed instructions; remote control of the work computer is suspected. Data about 556 facility users and staff was accessible; external disclosure remains under investigation."
+  },
+  "occurredAt": "2026-08-22",
+  "disclosedAt": "2026-09-04",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "endpoint"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "偽警告の連絡先へ電話し、指示に従った業務端末が遠隔操作されたとみられます。",
+        "en": "A staff member called a fake alert’s number and followed instructions; remote control of the work computer is suspected."
+      },
+      "status": "inferred",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "施設利用者・職員計556人の情報へアクセス可能でした。外部への流出は調査中です。",
+        "en": "Data about 556 facility users and staff was accessible; external disclosure remains under investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-22",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "端末を即時隔離し、専門機関がログを保全して調査しています。",
+        "en": "The computer was isolated immediately; specialists preserved logs and began investigating."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The notice describes a likely support-scam sequence; actual extraction is unconfirmed. Staff and user counts are potentially affected people."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "大田区文化振興協会：事故に関する公表資料",
+      "url": "https://www.ota-bunka.or.jp/news/detail?110295",
+      "publisher": "大田区文化振興協会",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-003",
+    "SEC-004",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

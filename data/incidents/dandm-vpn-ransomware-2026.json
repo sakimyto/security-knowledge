@@ -1,0 +1,113 @@
+{
+  "id": "dandm-vpn-ransomware-2026",
+  "organization": "D&M",
+  "title": {
+    "ja": "D&M：不正アクセスの経緯と影響",
+    "en": "D&M: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "VPN機器を経由して社内ファイル共有サーバーへ侵入され、ランサムウェアに感染しました。VPNの具体的な侵害手段は未公表です。 過去約2年のFAX受注情報633件が流出した可能性があります。カードや銀行口座情報は確認されていません。",
+    "en": "An attacker entered through a VPN device and infected the file server with ransomware; the VPN compromise method is undisclosed. 633 fax-order records from approximately two years may have been disclosed; card and bank-account information was not identified."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-06-12",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "VPN機器を経由して社内ファイル共有サーバーへ侵入され、ランサムウェアに感染しました。VPNの具体的な侵害手段は未公表です。",
+        "en": "An attacker entered through a VPN device and infected the file server with ransomware; the VPN compromise method is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 概要 / 原因 / 現在の状況"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "過去約2年のFAX受注情報633件が流出した可能性があります。カードや銀行口座情報は確認されていません。",
+        "en": "633 fax-order records from approximately two years may have been disclosed; card and bank-account information was not identified."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 概要 / 原因 / 現在の状況"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-12",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "対象サーバーをネットワークから切り離し、VPNへの対策を実施しました。",
+        "en": "The affected file server was isolated and VPN security measures completed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 概要 / 原因 / 現在の状況"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "侵入開始日、VPN機器の製品・CVE・修正提供時期、実際の流出は未確認です。",
+      "en": "The notice does not establish all entry, timing and extraction details; unresolved claims remain unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "D&M：事故に関する公表資料",
+      "url": "https://www.rext.jp/ir/attachment/?%2F%E9%80%A3%E7%B5%90%E5%AD%90%E4%BC%9A%E7%A4%BE%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%94%E5%A0%B1%E5%91%8A.pdf=&field=0&id=81&inline=1",
+      "publisher": "D&M",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012",
+    "SEC-013"
+  ]
+}

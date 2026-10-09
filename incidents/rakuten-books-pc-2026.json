@@ -1,0 +1,95 @@
+{
+  "id": "rakuten-books-pc-2026",
+  "organization": "楽天ブックスネットワーク",
+  "title": {
+    "ja": "楽天ブックスネットワーク：不正アクセスの経緯と影響",
+    "en": "楽天ブックスネットワーク: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "社内PCの一部に不正アクセスがあり、4月5日に検知しました。具体的な経路は未公表です。 配送先33,333件、取引先2,101件、従業員339件を保存していました。流出は未確認です。",
+    "en": "Unauthorized access to some internal PCs was detected on April 5; the entry route is undisclosed. Affected PCs held 33,333 delivery, 2,101 contact and 339 employee records; leakage was not confirmed."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-21",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["endpoint"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "社内PCの一部に不正アクセスがあり、4月5日に検知しました。具体的な経路は未公表です。",
+        "en": "Unauthorized access to some internal PCs was detected on April 5; the entry route is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "配送先33,333件、取引先2,101件、従業員339件を保存していました。流出は未確認です。",
+        "en": "Affected PCs held 33,333 delivery, 2,101 contact and 339 employee records; leakage was not confirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-21",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "端末を隔離し、外部機関による調査と通知を実施しました。",
+        "en": "The PCs were isolated and external investigation and notifications performed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The initial entry route and actual exfiltration are not established. Stored record categories are not necessarily distinct people."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "楽天ブックスネットワーク：事故に関する公表資料",
+      "url": "https://www.rakuten-booksnetwork.co.jp/2026/08/21/unauthorized-access-notice/index.html",
+      "publisher": "楽天ブックスネットワーク",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-003", "SEC-008", "SEC-009", "SEC-012"]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "SEC-015",
+  "version": "1.0.0",
+  "updatedAt": "2026-10-09",
+  "title": {
+    "ja": "アップロードしたファイルの実行を制限する",
+    "en": "Restrict execution of uploaded files"
+  },
+  "summary": {
+    "ja": "利用者や外部システムから受け取るファイルの保存先と、実行できる範囲を点検します。",
+    "en": "Inspect storage and execution boundaries for files received from users or external systems."
+  },
+  "category": "configuration",
+  "surfaces": [
+    "web-app",
+    "cloud",
+    "data-store"
+  ],
+  "applicability": {
+    "ja": "ファイルのアップロード、取り込み、保存、配信を行うサービス。",
+    "en": "Services that upload, ingest, store, or serve files."
+  },
+  "targets": [
+    {
+      "ja": "アップロードの保存先、配信設定、実行ハンドラー、処理用アカウントの権限",
+      "en": "Upload storage, serving configuration, executable handlers, and processing-account privileges."
+    }
+  ],
+  "checks": [
+    {
+      "ja": "保存先がアプリの実行領域やコード配布先と重ならないか、設定と構成を照合する。",
+      "en": "Compare configuration and architecture to check whether upload storage overlaps application or code deployment paths."
+    },
+    {
+      "ja": "保存したファイルをプログラムとして実行できる経路と、別の環境へ到達する権限を確認する。",
+      "en": "Identify paths that could execute stored files and privileges reaching other environments."
+    },
+    {
+      "ja": "所有者が許可した検証環境の試験結果を確認する。証拠がなければunverifiedとし、攻撃用ファイルを本番へ送らない。",
+      "en": "Review tests from an owner-authorized environment. Without evidence, mark unverified; do not submit attack files to production."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "ファイルの保存・配信とコード実行を分離し、保存先の実行ハンドラーと不要な権限を取り除く。",
+      "en": "Separate storage and serving from code execution; remove executable handlers and unnecessary privileges."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "保存先で実行が拒否される設定と試験証拠、通常の保存・配信が成功する試験証拠を残す。",
+      "en": "Record configuration and test evidence of denied execution and successful normal storage and serving."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "拡張子の制限だけでは実行の可否を確認できません。画像処理ライブラリや変換処理の脆弱性は別に照合します。",
+      "en": "Filename restrictions alone do not prove non-execution. Review image-processing and conversion-library vulnerabilities separately."
+    },
+    {
+      "ja": "このルールへの接続は点検の提案です。アップロード機能が事故の侵入原因だったという認定ではありません。",
+      "en": "This link is inspection guidance; it does not establish uploads as the intrusion cause."
+    }
+  ],
+  "incidentIds": [
+    "chiba-biodiversity-2026",
+    "conoha-wing-2026",
+    "inkrevolution-payment-2025",
+    "pickleballone-plugin-2026",
+    "saga-hirakawaya-payment-2026",
+    "scala-iask-2026"
+  ],
+  "references": [],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

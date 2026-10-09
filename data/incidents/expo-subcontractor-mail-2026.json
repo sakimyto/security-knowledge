@@ -1,0 +1,125 @@
+{
+  "id": "expo-subcontractor-mail-2026",
+  "organization": "2025年日本国際博覧会協会",
+  "title": {
+    "ja": "2025年日本国際博覧会協会：不正アクセスの経緯と影響",
+    "en": "2025年日本国際博覧会協会: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "再委託先の従業員が偽海外企業のメールを受信したことを端緒にMicrosoft 365が不正アクセスされました。 関係者・出演者のメールと添付資料が潜在的対象です。確認した公表本文に人数はなく、提供一覧の156人は未確認です。",
+    "en": "A phishing message impersonating an overseas firm preceded unauthorized Microsoft 365 access at a subcontractor. Potential scope includes stakeholder and performer mail and attachments. The reviewed notice gives no person count; the supplied 156-person figure remains unverified."
+  },
+  "occurredAt": "2026-05-13",
+  "disclosedAt": "2026-08-20",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials",
+    "supply-chain"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "再委託先の従業員が偽海外企業のメールを受信したことを端緒にMicrosoft 365が不正アクセスされました。",
+        "en": "A phishing message impersonating an overseas firm preceded unauthorized Microsoft 365 access at a subcontractor."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1,2,4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "関係者・出演者のメールと添付資料が潜在的対象です。確認した公表本文に人数はなく、提供一覧の156人は未確認です。",
+        "en": "Potential scope includes stakeholder and performer mail and attachments. The reviewed notice gives no person count; the supplied 156-person figure remains unverified."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1,2,4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-05-13",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "同日にアクセスを遮断し、委託・再委託先の管理と不要データの廃棄を確認しています。",
+        "en": "Access was blocked the same day; subcontractor management and retention are being reviewed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1,2,4"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "認証情報の取得手順と当時のMFA状態、対象人数は本文に記載されていません。",
+      "en": "The notice does not state the credential-theft procedure, prior MFA state or affected-person count."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "2025年日本国際博覧会協会：事故に関する公表資料",
+      "url": "https://www.expo2025.or.jp/news/news-20260820-01/",
+      "publisher": "2025年日本国際博覧会協会",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-003",
+    "SEC-005",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

@@ -11,7 +11,7 @@
   },
   "occurredAt": "2026-05-16",
   "disclosedAt": "2026-06-23",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-09",
   "outcome": "confirmed-breach",
   "categories": ["zero-day"],
   "cves": [],
@@ -83,7 +83,7 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-09",
       "title": "当社ISPサービスのお客さま情報の流出について（第2報・訂正）",
       "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-73_4619/kddi_nr_s-73_4619_pdf_01.pdf",
       "publisher": "KDDI",
@@ -92,7 +92,7 @@
     },
     {
       "id": "s2",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-09",
       "title": "当社ISPサービスのお客さま情報の流出について",
       "url": "https://newsroom.kddi.com/news/assets/2026/kddi_nr_s-71_4593/kddi_nr_s-71_4593_pdf_01.pdf",
       "publisher": "KDDI",

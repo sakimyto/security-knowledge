@@ -1,0 +1,95 @@
+{
+  "id": "jst-mail-2026",
+  "organization": "科学技術振興機構",
+  "title": {
+    "ja": "科学技術振興機構：不正アクセスの経緯と影響",
+    "en": "科学技術振興機構: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "役職員12人のメールボックスへの不正アクセスを確認しました。具体的な経路は未公表です。 8月28日の精査でメール約18,000件に更新しました。外部アドレス約1,400件等は内訳で、16,000件の旧数字を置き換えます。",
+    "en": "Unauthorized access affected 12 staff mailboxes; the entry route is undisclosed. The August 28 review revised affected mail to about 18,000 records; about 1,400 external addresses are a subset, replacing the supplied 16,000 figure."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-07",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "役職員12人のメールボックスへの不正アクセスを確認しました。具体的な経路は未公表です。",
+        "en": "Unauthorized access affected 12 staff mailboxes; the entry route is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "8月28日の精査でメール約18,000件に更新しました。外部アドレス約1,400件等は内訳で、16,000件の旧数字を置き換えます。",
+        "en": "The August 28 review revised affected mail to about 18,000 records; about 1,400 external addresses are a subset, replacing the supplied 16,000 figure."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-07",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "悪用経路を遮断し、アクセス権限を無効化しました。",
+        "en": "The abused route was blocked and access permissions revoked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "メール持出しの確定範囲、侵入方法、MFA状態は未公表です。",
+      "en": "Email messages and unique contact addresses are different units; the follow-up message total supersedes the initial estimate."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "科学技術振興機構：事故に関する公表資料",
+      "url": "https://www.jst.go.jp/osirase/2026/20260807-2.html",
+      "publisher": "科学技術振興機構",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-002", "SEC-003", "SEC-005", "SEC-009", "SEC-012"]
+}

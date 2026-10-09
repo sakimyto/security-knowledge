@@ -1,0 +1,95 @@
+{
+  "id": "corona-cloud-2026",
+  "organization": "コロナ",
+  "title": {
+    "ja": "コロナ：不正アクセスの経緯と影響",
+    "en": "コロナ: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "施工情報の外部クラウドサービスへの不正アクセスを確認しました。 最大35,000人の氏名・住所や施工資料が流出した可能性があります。",
+    "en": "Unauthorized access affected an external construction-information cloud service. Names, addresses and related construction documents for up to 35,000 customers may have leaked."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-28",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["supply-chain", "unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "施工情報の外部クラウドサービスへの不正アクセスを確認しました。",
+        "en": "Unauthorized access affected an external construction-information cloud service."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大35,000人の氏名・住所や施工資料が流出した可能性があります。",
+        "en": "Names, addresses and related construction documents for up to 35,000 customers may have leaked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-28",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "全ユーザーのアカウントを無効化し、再設定しました。",
+        "en": "All user accounts were disabled and reset."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The initial entry mechanism and actual exfiltration scope are undisclosed; this is not attributed to another vendor without evidence."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "コロナ：事故に関する公表資料",
+      "url": "https://www.corona.co.jp/news/other/post-439.html",
+      "publisher": "コロナ",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-012"]
+}

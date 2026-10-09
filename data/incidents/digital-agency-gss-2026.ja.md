@@ -1,6 +1,6 @@
 # digital-agency-gss-2026 — デジタル庁GSS：修正未適用のVPNから侵入
 
-事例 | Catalog: 0.4.1 | Record SHA-256: f213edc27fdd0fbcd2d58006757eb9243c43e43797634ac1440d9d22d7be9e9c
+事例 | Catalog: 0.5.0 | Record SHA-256: 3bace779bb84ced753b9ca8b43af12f97ad9bc8c16e55301e16cbbef6de329fe
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -8,7 +8,7 @@ GSSの保守環境で、VPNの既知の脆弱性を利用した不正アクセ�
 
 Organization: デジタル庁 | Outcome: confirmed-breach
 
-Occurred: unknown | Disclosed: 2026-09-11 | Reviewed: 2026-10-02
+Occurred: unknown | Disclosed: 2026-09-11 | Reviewed: 2026-10-09
 
 Categories: known-vulnerability, credentials | CVEs: unspecified
 
@@ -41,4 +41,4 @@ Rules: SEC-001, SEC-002, SEC-005, SEC-006, SEC-008, SEC-009
 
 ## 出典
 
-- s1: [GSSにおける不正アクセスについて（Q&A）](https://www.digital.go.jp/press/5fc99139-a4e2-4b7b-8b0c-d475e926143f) — デジタル庁; government; published: 2026-09-12; reviewed: 2026-10-02
+- s1: [GSSにおける不正アクセスについて（Q&A）](https://www.digital.go.jp/press/5fc99139-a4e2-4b7b-8b0c-d475e926143f) — デジタル庁; government; published: 2026-09-12; reviewed: 2026-10-09

@@ -1,0 +1,112 @@
+{
+  "id": "omic-support-scam-2026",
+  "organization": "海外貨物検査",
+  "title": {
+    "ja": "海外貨物検査：不正アクセスの経緯と影響",
+    "en": "海外貨物検査: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "契約審査員が偽警告に従い、貸与PCを第三者へ遠隔操作させました。 氏名924件、職歴183件等の項目別内訳です。内訳を足して人数に換算しません。",
+    "en": "An inspector followed a fake warning and allowed remote control of a loaned PC. The notice lists 924 name and 183 career-history records among other fields; counts are not summed as unique people."
+  },
+  "occurredAt": "2026-06-13",
+  "disclosedAt": null,
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "endpoint"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "契約審査員が偽警告に従い、貸与PCを第三者へ遠隔操作させました。",
+        "en": "An inspector followed a fake warning and allowed remote control of a loaned PC."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "氏名924件、職歴183件等の項目別内訳です。内訳を足して人数に換算しません。",
+        "en": "The notice lists 924 name and 183 career-history records among other fields; counts are not summed as unique people."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-13",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "PCを遮断し専門調査を行い、管理体制と教育を見直しています。",
+        "en": "The PC was disconnected, specialists investigated and governance and training reviewed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "本文に初報日はありません。端末は社内ネットワークと独立しており、本体システムへの影響はありません。",
+      "en": "The notice does not establish the first disclosure date. The PC was independent of the internal network; core systems were reported unaffected."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "海外貨物検査：事故に関する公表資料",
+      "url": "https://omicnet.com/uncategorized/%e5%80%8b%e4%ba%ba%e6%83%85%e5%a0%b1%e6%bc%8f%e6%b4%a9%e3%81%ae%e3%81%8a%e3%81%9d%e3%82%8c%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b%e3%81%a8%e3%81%8a%e8%a9%ab%e3%81%b3/",
+      "publisher": "海外貨物検査",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-003",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

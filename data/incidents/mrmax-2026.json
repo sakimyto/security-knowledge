@@ -1,0 +1,122 @@
+{
+  "id": "mrmax-2026",
+  "organization": "ミスターマックス",
+  "title": {
+    "ja": "MrMax：ソフトウェア機能の不正利用から会員情報が流出",
+    "en": "MrMax: software-function abuse leads to member-data leakage"
+  },
+  "summary": {
+    "ja": "アプリ・オンラインストアのサーバーへの侵入と、一部会員情報の流出を確認しました。最大対象人数は1,735,154人ですが、流出が確認された実人数は示されていません。",
+    "en": "MrMax confirmed server intrusion and some member-data leakage. The maximum potential scope is 1,735,154 people; the confirmed leaked-person count is unspecified."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-06",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "サービスを構成するソフトウェアの機能を不正に利用して侵入されました。",
+        "en": "The intruder abused functions of software composing the service."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "1. 経緯"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大1,735,154人が対象です。住所・生年月日・カード情報・パスワード・購入履歴は流出していないと確認しています。",
+        "en": "Potential scope is up to 1,735,154 people. MrMax confirmed addresses, birth dates, cards, passwords, and purchase histories were not leaked."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "2. 情報流出の可能性がある対象のお客様および情報"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-03",
+      "text": {
+        "ja": "不審なアクセスを検知し、サービスを停止。外部アクセスを遮断。",
+        "en": "Suspicious access was detected; services and external access were stopped."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "text": {
+        "ja": "影響と対応を公表。",
+        "en": "Impact and response disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "経路の遮断と監視強化を実施し、外部専門機関と調査しています。",
+        "en": "MrMax blocked the path, strengthened monitoring, and engaged external investigators."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "4. 今後の対応"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "稼働するソフトと修正情報を照合し、公開範囲・権限・取得ログを点検します。",
+      "en": "Compare deployed software with advisories and inspect exposure, permissions, and access logs."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "製品、CVE、修正の提供時期は未公表です。既知脆弱性の放置や実装欠陥とは断定できません。",
+      "en": "Product, CVE, and patch timing are undisclosed; patch neglect and implementation defects are unestablished."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "不正アクセスによる情報流出に関するお詫びとお知らせ",
+      "url": "https://www.mrmax.co.jp/info/incident_20261006/",
+      "publisher": "ミスターマックス",
+      "kind": "organization",
+      "publishedAt": "2026-10-06",
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-006",
+    "SEC-008",
+    "SEC-009"
+  ]
+}

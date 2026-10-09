@@ -1,0 +1,111 @@
+{
+  "id": "seiho-contract-lookup-2026",
+  "organization": "生命保険協会",
+  "title": {
+    "ja": "生命保険協会：情報の公開範囲・権限の問題",
+    "en": "生命保険協会: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "外部から特定の操作をすると契約照会システムの登録者情報が閲覧可能でした。 利用者ベースで約37,000件の潜在的対象です。不正取得や利用は未確認です。",
+    "en": "Specific external operations could expose registered-user data in a contract-lookup system. Potential scope is about 37,000 user records; unauthorized acquisition or use was not confirmed."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-07-29",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "外部から特定の操作をすると契約照会システムの登録者情報が閲覧可能でした。",
+        "en": "Specific external operations could expose registered-user data in a contract-lookup system."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 §§1-3"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "利用者ベースで約37,000件の潜在的対象です。不正取得や利用は未確認です。",
+        "en": "Potential scope is about 37,000 user records; unauthorized acquisition or use was not confirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 §§1-3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-29",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "安全性確認までWeb申請を停止し、原因と影響範囲を調査しています。",
+        "en": "Web applications were suspended pending safety verification and investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 §§1-3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The exposure window and actual unauthorized viewing scope are not fully established; possible lookup records are not proven exfiltration."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "生命保険協会：事故に関する公表資料",
+      "url": "https://www.seiho.or.jp/info/news/shared/mt-item/20260729.pdf",
+      "publisher": "生命保険協会",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-009",
+    "SEC-014"
+  ]
+}

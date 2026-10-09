@@ -1,0 +1,113 @@
+{
+  "id": "nikkei-workspace-2026",
+  "organization": "日本経済新聞社",
+  "title": {
+    "ja": "日本経済新聞社：不正アクセスの経緯と影響",
+    "en": "日本経済新聞社: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "業務用Google Workspaceのアカウントが7月下旬以降不正ログインされました。 社員・取引先等1,646人の情報が潜在的対象で、読者・取材先情報は含まれません。",
+    "en": "A Google Workspace account was accessed without authorization from late July. Data for 1,646 employees and contacts may be affected; reader and news-source data were excluded."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-04",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "業務用Google Workspaceのアカウントが7月下旬以降不正ログインされました。",
+        "en": "A Google Workspace account was accessed without authorization from late July."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本文 第1-4段落"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "社員・取引先等1,646人の情報が潜在的対象で、読者・取材先情報は含まれません。",
+        "en": "Data for 1,646 employees and contacts may be affected; reader and news-source data were excluded."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本文 第1-4段落"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-04",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "Googleの通知後にパスワードを変更し、その後の不正ログインは未確認です。",
+        "en": "The password was changed after Google’s notification; no further unauthorized login was observed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本文 第1-4段落"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "同日公表のMicrosoft 365・約9,000送信の別事案と合算しません。侵入方法は未公表です。",
+      "en": "The original credential-theft route and actual exfiltration scope are undisclosed. A separate Microsoft 365 notice is not merged into this case."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "日本経済新聞社：事故に関する公表資料",
+      "url": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1547.html",
+      "publisher": "日本経済新聞社",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-003",
+    "SEC-005",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

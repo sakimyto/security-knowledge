@@ -1,0 +1,103 @@
+{
+  "id": "istyle-transfer-exposure-2026",
+  "organization": "アイスタイル",
+  "title": {
+    "ja": "アイスタイル：情報の公開範囲・権限の問題",
+    "en": "アイスタイル: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "社内受け渡し用ファイルを外部転送サービスで公開設定にしてしまい、URLを知る人が閲覧可能でした。 10,997人のメールアドレス等が20分間閲覧可能でした。氏名やパスワードは対象外です。",
+    "en": "A sharing-setting error made an internal-transfer file accessible to anyone knowing its URL. Email addresses and associated data for 10,997 users were exposed for 20 minutes; names and passwords were excluded."
+  },
+  "occurredAt": "2026-09-02",
+  "disclosedAt": "2026-09-16",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": ["configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "社内受け渡し用ファイルを外部転送サービスで公開設定にしてしまい、URLを知る人が閲覧可能でした。",
+        "en": "A sharing-setting error made an internal-transfer file accessible to anyone knowing its URL."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "10,997人のメールアドレス等が20分間閲覧可能でした。氏名やパスワードは対象外です。",
+        "en": "Email addresses and associated data for 10,997 users were exposed for 20 minutes; names and passwords were excluded."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-02",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-09-16",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "20分後にファイルを削除し、手動抽出の廃止と運用の見直しを検討しています。",
+        "en": "The file was deleted after 20 minutes; automated handling and revised procedures are being considered."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "第三者の取得や不正利用は確認されていません。",
+      "en": "The undisclosed details must remain unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "アイスタイル：事故に関する公表資料",
+      "url": "https://www.istyle.co.jp/news/info/2026/09/20260916-3.html",
+      "publisher": "アイスタイル",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-012"]
+}

@@ -1,0 +1,286 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Security Knowledge candidate review ledger",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "receivedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "reviewedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 2000,
+      "maximum": 2100
+    },
+    "yearProvenance": {
+      "type": "string",
+      "pattern": "^user-confirmed-\\d{4}$"
+    },
+    "originalSourceUrl": {
+      "type": ["string", "null"],
+      "pattern": "^https://[^\\s]+$"
+    },
+    "description": {
+      "$ref": "#/$defs/text"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "receivedAt",
+    "reviewedAt",
+    "year",
+    "yearProvenance",
+    "originalSourceUrl",
+    "description",
+    "records"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "text": {
+      "type": "object",
+      "properties": {
+        "ja": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": ["ja", "en"],
+      "additionalProperties": false
+    },
+    "record": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^U\\d{4}-\\d{3}$"
+        },
+        "organization": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supplied": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "dateMeaning": {
+              "const": "unverified"
+            },
+            "count": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "value": {
+                  "type": ["integer", "null"],
+                  "minimum": 0
+                },
+                "unit": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "qualifiers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+                },
+                "scope": {
+                  "const": "unverified"
+                },
+                "provenance": {
+                  "const": "user-supplied-unverified"
+                }
+              },
+              "required": ["text", "value", "unit", "qualifiers", "scope", "provenance"],
+              "additionalProperties": false
+            },
+            "provenance": {
+              "const": "user-supplied-unverified"
+            }
+          },
+          "required": ["date", "dateMeaning", "count", "provenance"],
+          "additionalProperties": false
+        },
+        "status": {
+          "enum": [
+            "catalogued",
+            "catalogued-partial",
+            "excluded-non-cyber",
+            "verified-disclosure-partial",
+            "awaiting-primary-source"
+          ]
+        },
+        "reviewedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "catalogIncidentIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "verified": {
+          "type": "object",
+          "properties": {
+            "summary": {
+              "$ref": "#/$defs/text"
+            },
+            "disclosedAt": {
+              "type": ["string", "null"],
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "sourceUrls": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^https://[^\\s]+$"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "claims": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "topic": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "status": {
+                    "enum": ["confirmed", "inferred", "unknown"]
+                  },
+                  "text": {
+                    "$ref": "#/$defs/text"
+                  },
+                  "locator": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sourceUrls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^https://[^\\s]+$"
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                  }
+                },
+                "required": ["topic", "status", "text", "locator", "sourceUrls"],
+                "additionalProperties": false
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            }
+          },
+          "required": ["summary", "disclosedAt", "sourceUrls", "claims"],
+          "additionalProperties": false
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/text"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "discoveryUrls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^https://[^\\s]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "attemptedSourceUrls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^https://[^\\s]+$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "retrievalFailures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "pattern": "^https://[^\\s]+$"
+              },
+              "result": {
+                "const": "unavailable"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": ["url", "result", "reason"],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "retry": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "organization",
+        "supplied",
+        "status",
+        "reviewedAt",
+        "catalogIncidentIds",
+        "verified",
+        "gaps",
+        "discoveryUrls",
+        "attemptedSourceUrls",
+        "retrievalFailures",
+        "retry"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

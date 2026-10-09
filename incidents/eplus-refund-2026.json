@@ -1,0 +1,103 @@
+{
+  "id": "eplus-refund-2026",
+  "organization": "イープラス",
+  "title": {
+    "ja": "イープラス：不正アクセスの経緯と影響",
+    "en": "イープラス: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "スマチケの払戻し情報を管理する独立したシステムへ不正アクセスされました。 1,463件が漏えいしました。銀行振込751件、カード返金644件、郵便振替68件で、クレジットカード情報と会員パスワードは対象外です。",
+    "en": "Unauthorized access targeted the separate SmartTicket refund-management system. 1,463 records leaked: 751 bank transfers, 644 card refunds, and 68 postal transfers. Card details and member passwords were unaffected."
+  },
+  "occurredAt": "2026-09-11",
+  "disclosedAt": "2026-09-29",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "スマチケの払戻し情報を管理する独立したシステムへ不正アクセスされました。",
+        "en": "Unauthorized access targeted the separate SmartTicket refund-management system."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "1. 経緯 / 2. 漏えいした個人情報 / 4. 現時点の対応状況"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "1,463件が漏えいしました。銀行振込751件、カード返金644件、郵便振替68件で、クレジットカード情報と会員パスワードは対象外です。",
+        "en": "1,463 records leaked: 751 bank transfers, 644 card refunds, and 68 postal transfers. Card details and member passwords were unaffected."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "1. 経緯 / 2. 漏えいした個人情報 / 4. 現時点の対応状況"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-11",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-09-29",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "9月15日にアクセスを遮断し、管理下の全システムを再検査しました。",
+        "en": "Access was blocked on September 15 and all managed systems re-inspected."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "1. 経緯 / 2. 漏えいした個人情報 / 4. 現時点の対応状況"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法は未公表です。",
+      "en": "The specific entry mechanism is undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "イープラス：事故に関する公表資料",
+      "url": "https://support-qa.eplus.jp/hc/ja/articles/62711500727961",
+      "publisher": "イープラス",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-008", "SEC-009", "SEC-012"]
+}

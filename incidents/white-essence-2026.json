@@ -1,0 +1,95 @@
+{
+  "id": "white-essence-2026",
+  "organization": "ホワイトエッセンス",
+  "title": {
+    "ja": "ホワイトエッセンス：不正アクセスの経緯と影響",
+    "en": "ホワイトエッセンス: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "予約サイトのプログラムの脆弱性を起点に、基幹システムへ不正アクセスされたと公表しています。 約105万アカウントの漏えいを確認しました。加盟院関係者・社員等も含む全体数です。",
+    "en": "A reservation-site vulnerability enabled unauthorized access to the core system. Leakage affects about 1.05 million accounts, including clinic personnel and employees."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-12",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "予約サイトのプログラムの脆弱性を起点に、基幹システムへ不正アクセスされたと公表しています。",
+        "en": "A reservation-site vulnerability enabled unauthorized access to the core system."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "画像本文 §§1-3,6（ブラウザで目視）"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "約105万アカウントの漏えいを確認しました。加盟院関係者・社員等も含む全体数です。",
+        "en": "Leakage affects about 1.05 million accounts, including clinic personnel and employees."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "画像本文 §§1-3,6（ブラウザで目視）"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-12",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "脆弱性に対処し通信の検知・遮断を導入、認証・権限を見直しています。",
+        "en": "The flaw was addressed, traffic blocking introduced and authentication and permissions reviewed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "画像本文 §§1-3,6（ブラウザで目視）"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "製品・CVE・修正提供時期と保存パスワードの暗号方式は未公表です。",
+      "en": "The notice does not establish all entry, timing and extraction details; unresolved claims remain unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ホワイトエッセンス：事故に関する公表資料",
+      "url": "https://www.whiteessence.com/news/news/20261005/",
+      "publisher": "ホワイトエッセンス",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-005", "SEC-008", "SEC-009", "SEC-012"]
+}

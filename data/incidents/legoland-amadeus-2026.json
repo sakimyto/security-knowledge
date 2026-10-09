@@ -1,0 +1,113 @@
+{
+  "id": "legoland-amadeus-2026",
+  "organization": "レゴランド・ジャパン",
+  "title": {
+    "ja": "レゴランド・ジャパン：不正アクセスの経緯と影響",
+    "en": "レゴランド・ジャパン: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "委託するAmadeusのホテル予約プラットフォームで不正アクセスが発生しました。侵入原因は未公表です。 予約1,557件の連絡先情報が影響を受けた可能性があります。決済、パスワード、金融、パスポート情報へのアクセスは確認されていません。",
+    "en": "The outsourced Amadeus hotel-booking platform was accessed without authorization; its entry cause is undisclosed. Contact data from 1,557 bookings may be affected; payment, password, financial and passport access was not confirmed."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-25",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "supply-chain",
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "委託するAmadeusのホテル予約プラットフォームで不正アクセスが発生しました。侵入原因は未公表です。",
+        "en": "The outsourced Amadeus hotel-booking platform was accessed without authorization; its entry cause is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本文"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "予約1,557件の連絡先情報が影響を受けた可能性があります。決済、パスワード、金融、パスポート情報へのアクセスは確認されていません。",
+        "en": "Contact data from 1,557 bookings may be affected; payment, password, financial and passport access was not confirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本文"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-25",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "予約情報を引用する詐欺連絡への注意と正式な問い合わせ先を案内しています。",
+        "en": "Customers were warned about fraudulent messages citing reservation details and given official contact information."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本文"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The reservation count is not a distinct-person count. The vendor’s initial entry route is undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "レゴランド・ジャパン：事故に関する公表資料",
+      "url": "https://www.legoland.jp/operation/news/news-release/news20260925/",
+      "publisher": "レゴランド・ジャパン",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-005",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

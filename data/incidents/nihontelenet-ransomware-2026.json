@@ -1,0 +1,112 @@
+{
+  "id": "nihontelenet-ransomware-2026",
+  "organization": "日本テレネット",
+  "title": {
+    "ja": "日本テレネット：不正アクセスの経緯と影響",
+    "en": "日本テレネット: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "サーバーがランサムウェアとみられる攻撃で暗号化され、業務が停止しました。 委託先から預かった個人情報と従業員情報の流出が調査対象です。確認した初報には対象件数がありません。",
+    "en": "A suspected ransomware attack encrypted servers and disrupted operations. Investigation covers entrusted personal data and employee information; the reviewed initial notice contains no total."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-03-17",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "サーバーがランサムウェアとみられる攻撃で暗号化され、業務が停止しました。",
+        "en": "A suspected ransomware attack encrypted servers and disrupted operations."
+      },
+      "status": "inferred",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "経緯 / 現状 / 今後の対応"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "委託先から預かった個人情報と従業員情報の流出が調査対象です。確認した初報には対象件数がありません。",
+        "en": "Investigation covers entrusted personal data and employee information; the reviewed initial notice contains no total."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "経緯 / 現状 / 今後の対応"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-03-17",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "対象機器を遮断し、新しい環境を構築して業務を再開しています。",
+        "en": "Affected machines were isolated and work resumed in a new environment."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "経緯 / 現状 / 今後の対応"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "6月12日の続報がHTTP 500で取得できず、入力の1,041,044件は未確認です。初期侵入方法も未公表です。",
+      "en": "The June follow-up could not be retrieved. The supplied 1,041,044 records and final extraction scope remain unverified."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "日本テレネット：事故に関する公表資料",
+      "url": "https://www.nippon-tele.net/release/20260317_4599/",
+      "publisher": "日本テレネット",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-008",
+    "SEC-009",
+    "SEC-012",
+    "SEC-013"
+  ]
+}

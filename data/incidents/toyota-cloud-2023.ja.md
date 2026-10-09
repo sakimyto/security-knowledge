@@ -1,6 +1,6 @@
 # toyota-cloud-2023 — トヨタ：クラウドの誤設定で車両データが公開状態
 
-事例 | Catalog: 0.4.1 | Record SHA-256: 5ff255efcb15fa05449044fc4e4496a8fa03254b7a8e73c959b4c53d01ed6bba
+事例 | Catalog: 0.5.0 | Record SHA-256: 5ff255efcb15fa05449044fc4e4496a8fa03254b7a8e73c959b4c53d01ed6bba
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

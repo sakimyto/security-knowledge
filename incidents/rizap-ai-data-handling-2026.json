@@ -1,0 +1,95 @@
+{
+  "id": "rizap-ai-data-handling-2026",
+  "organization": "IHIグループ健康保険組合",
+  "title": {
+    "ja": "IHIグループ健康保険組合：情報の公開範囲・権限の問題",
+    "en": "IHIグループ健康保険組合: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "委託先RIZAPの従業員が、データ抽出の際に保健指導対象者の個人情報を生成AIへ参照させました。攻撃者によるAI利用ではありません。 IHI健保の対象は210人です。AI提供事業者以外の閲覧とモデル学習の可能性はないと事業者への照会で確認したと報告しています。",
+    "en": "A RIZAP employee submitted health-guidance data to generative AI during extraction; this is not evidence of attacker AI use. The IHI fund identified 210 affected members and reports that the AI provider ruled out access by other parties and training use."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-02",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": ["supply-chain", "configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "委託先RIZAPの従業員が、データ抽出の際に保健指導対象者の個人情報を生成AIへ参照させました。攻撃者によるAI利用ではありません。",
+        "en": "A RIZAP employee submitted health-guidance data to generative AI during extraction; this is not evidence of attacker AI use."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "2026/09/02 本文"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "IHI健保の対象は210人です。AI提供事業者以外の閲覧とモデル学習の可能性はないと事業者への照会で確認したと報告しています。",
+        "en": "The IHI fund identified 210 affected members and reports that the AI provider ruled out access by other parties and training use."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "2026/09/02 本文"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-02",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "本人への通知と、委託先の情報管理・業務手順の見直しを進めています。",
+        "en": "Affected members are being notified and vendor data-handling procedures reviewed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "2026/09/02 本文"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "生成AIの製品名・送信設定は未公表です。210人はIHI健保の範囲で、RIZAP全体の人数ではありません。",
+      "en": "The employer’s external-model submission is not evidence of attacker AI use. The reviewed health-insurance disclosure covers 210 people, not the whole RIZAP event."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "IHIグループ健康保険組合：事故に関する公表資料",
+      "url": "https://www.ihikenpo.or.jp/asp/news/news.asp?articleid=189769&page=1",
+      "publisher": "IHIグループ健康保険組合",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-011", "SEC-012"]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "gmo-infoq-2026",
+  "organization": "GMOリサーチ&AI",
+  "title": {
+    "ja": "infoQ：ソフトウェアの脆弱性から侵入されポイントも不正交換",
+    "en": "infoQ: software vulnerability exploited, with unauthorized point redemptions"
+  },
+  "summary": {
+    "ja": "ソフトウェアの脆弱性から侵入され、個人情報の持ち出しを確認しました。対象は最大948,498件で、611件ではポイントの不正交換も確認しています。",
+    "en": "GMO confirmed information theft through a software vulnerability, affecting up to 948,498 records, plus unauthorized point redemption in 611 cases."
+  },
+  "occurredAt": "2026-10-02",
+  "disclosedAt": "2026-10-05",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "サイトで使うソフトウェアの脆弱性を悪用されました。製品や修正時期は未公表です。",
+        "en": "A site software vulnerability was exploited; product and patch timing are undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "5. 原因"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "対象は最大948,498件です。611件・2,869,500円のポイント不正交換も確認しました。",
+        "en": "Potential scope is up to 948,498 records. Unauthorized point redemptions involved 611 cases and ¥2,869,500."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "3. 対象となる情報 / 4. ポイントの不正な交換"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "text": {
+        "ja": "この日以降の不正アクセスを調査で確認。",
+        "en": "Investigation found access from this date onward."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "text": {
+        "ja": "問い合わせを受けて調査し、ポイント交換とサービスを停止。",
+        "en": "Customer reports prompted investigation and suspension of redemption and the service."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "text": {
+        "ja": "影響を公表し、個人情報保護委員会へ報告。",
+        "en": "Impact disclosed and reported to the privacy regulator."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "経路と外部アクセスを遮断し、外部専門会社と調査を継続。不正交換分は補填すると公表しました。",
+        "en": "The path and external access were blocked; specialists continue investigating. Reimbursement was announced."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "4. ポイントの不正な交換 / 6. 当社の対応"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "稼働版と修正情報、取得権限とログ、ポイント交換の認可と操作上限を点検します。",
+      "en": "Inspect deployed versions, advisories, access privileges and logs, and redemption authorization and limits."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "既知脆弱性の修正未適用か、公表前の悪用かは判断できません。611件は全体と別に加算しません。",
+      "en": "Patch neglect versus pre-disclosure exploitation is unresolved. Do not add the 611 cases to the overall scope."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "infoQへの不正アクセスによる個人情報漏えいに関するお知らせ",
+      "url": "https://gmo-research.ai/pressroom/notice/notice-20261005",
+      "publisher": "GMOリサーチ&AI",
+      "kind": "organization",
+      "publishedAt": "2026-10-05",
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-005",
+    "SEC-008",
+    "SEC-009",
+    "SEC-014"
+  ]
+}

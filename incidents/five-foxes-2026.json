@@ -1,0 +1,95 @@
+{
+  "id": "five-foxes-2026",
+  "organization": "ファイブフォックス",
+  "title": {
+    "ja": "ファイブフォックス：不正アクセスの経緯と影響",
+    "en": "ファイブフォックス: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "グループの一部システムへの不正アクセスを7月8日に確認しました。侵入経路は未公表です。 顧客59,504件、問合せ8,403件、従業員2,450件と2,828件に流出の可能性があります。件数の合計は73,185件で、人数とは区別します。",
+    "en": "Unauthorized access to group systems was detected on July 8; the entry route is undisclosed. Potentially affected datasets contain 59,504 member, 8,403 inquiry, 2,450 and 2,828 employee records; the 73,185-record total is not a unique-person count."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-07-14",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "グループの一部システムへの不正アクセスを7月8日に確認しました。侵入経路は未公表です。",
+        "en": "Unauthorized access to group systems was detected on July 8; the entry route is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 §§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "顧客59,504件、問合せ8,403件、従業員2,450件と2,828件に流出の可能性があります。件数の合計は73,185件で、人数とは区別します。",
+        "en": "Potentially affected datasets contain 59,504 member, 8,403 inquiry, 2,450 and 2,828 employee records; the 73,185-record total is not a unique-person count."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 §§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "システム停止とネットワーク遮断、専門調査を実施し、顧客情報を新環境へ移しました。",
+        "en": "Systems and networks were isolated, specialists investigated, and customer data moved to a new environment."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 §§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "実際の持出し範囲と技術的原因は未公表です。",
+      "en": "Exfiltration scope and technical cause are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ファイブフォックス：事故に関する公表資料",
+      "url": "https://www.fivefoxes.co.jp/2026/09/post-23.html",
+      "publisher": "ファイブフォックス",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-008", "SEC-009", "SEC-012", "SEC-013"]
+}

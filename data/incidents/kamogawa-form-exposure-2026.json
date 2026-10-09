@@ -1,0 +1,121 @@
+{
+  "id": "kamogawa-form-exposure-2026",
+  "organization": "鴨川市",
+  "title": {
+    "ja": "鴨川市：情報の公開範囲・権限の問題",
+    "en": "鴨川市: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "アンケートの設定確認が不十分で、回答者が過去の回答者情報を閲覧できました。 218人の氏名・住所・電話番号が対象です。続報でメールアドレスは対象外と訂正されました。",
+    "en": "Inadequate survey-permission checking allowed respondents to view earlier submissions. Names, addresses and telephone numbers for 218 respondents were exposed; the follow-up excluded email addresses."
+  },
+  "occurredAt": "2026-08-31",
+  "disclosedAt": "2026-09-09",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": [
+    "configuration"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "アンケートの設定確認が不十分で、回答者が過去の回答者情報を閲覧できました。",
+        "en": "Inadequate survey-permission checking allowed respondents to view earlier submissions."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "事案の概要 / 原因 / 続報（9月9日）"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "218人の氏名・住所・電話番号が対象です。続報でメールアドレスは対象外と訂正されました。",
+        "en": "Names, addresses and telephone numbers for 218 respondents were exposed; the follow-up excluded email addresses."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "事案の概要 / 原因 / 続報（9月9日）"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-31",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "キャンペーンを中止し、全回答者へお詫び状を送りました。",
+        "en": "The campaign was stopped and all respondents notified."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "事案の概要 / 原因 / 続報（9月9日）"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "最初の公表日は未確認のため、確認できた続報の日を記録しています。実際の閲覧人数は不明です。",
+      "en": "The first disclosure date is unknown; September 9 is the earliest reviewed update. A correction excludes email addresses from the exposed fields."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "鴨川市：事故に関する公表資料",
+      "url": "https://www.city.kamogawa.lg.jp/site/furusatotax/45030.html",
+      "publisher": "鴨川市",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009"
+  ]
+}

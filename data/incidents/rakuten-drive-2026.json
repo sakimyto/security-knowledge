@@ -1,0 +1,143 @@
+{
+  "id": "rakuten-drive-2026",
+  "organization": "楽天ドライブ",
+  "title": {
+    "ja": "楽天ドライブ：管理アカウントの認証情報を取得され保存データへアクセス",
+    "en": "Rakuten Drive: stolen administrator credentials used to access stored data"
+  },
+  "summary": {
+    "ja": "管理アカウントの認証情報を不正取得され、保存データや一部アカウント情報を閲覧・取得されました。対象情報と期間が異なる3事象を分けて記録します。",
+    "en": "Illicitly acquired administrator credentials enabled access to stored data and account information. Three events have separate scopes and periods."
+  },
+  "occurredAt": "2026-01-29",
+  "disclosedAt": "2026-10-06",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "一部システムの管理用アカウントの認証情報を不正取得されました。",
+        "en": "Credentials for an administrator account on part of the system were illicitly acquired."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "概要"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "8月27日のアカウント情報は687件、パスワード加工値等を含む情報は313件です。1月29日〜9月17日の保存データは15,382アカウントが対象です。",
+        "en": "August 27 events affected 687 accounts and 313 accounts including transformed passwords. Stored-data access during January 29–September 17 affected 15,382 accounts."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "事象①〜③"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-01-29",
+      "text": {
+        "ja": "保存データへのアクセス・取得が確認された期間の開始日。",
+        "en": "Start of the reported stored-data access period."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "text": {
+        "ja": "アカウント情報に関わる2事象が発生。",
+        "en": "Two account-information events occurred."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "text": {
+        "ja": "保存データへのアクセス・取得が確認された期間の最終日。",
+        "en": "End of the reported stored-data access period."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "text": {
+        "ja": "原因と3事象の対象を公表。",
+        "en": "Administrator access and the three scopes disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "経路遮断、監視強化、アプリ配布と新規アカウント発行の制限を実施しました。",
+        "en": "The path was blocked, monitoring strengthened, and app downloads and new accounts restricted."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本件への対応"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "管理者認証の例外、資格情報の失効、閲覧できる保存データと取得ログを点検します。",
+      "en": "Inspect administrator-authentication exceptions, credential revocation, data-access scope, and logs."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "認証情報の取得方法とMFAの状態は未公表です。3事象の対象重複が不明なため合算しません。",
+      "en": "Credential acquisition and MFA status are undisclosed. Unknown overlap prevents adding the three counts."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "「楽天ドライブ」における不正アクセスの発生について",
+      "url": "https://support.rakuten-drive.com/hc/ja/articles/62934949147929",
+      "publisher": "楽天ドライブ",
+      "kind": "organization",
+      "publishedAt": "2026-10-06",
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-005",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

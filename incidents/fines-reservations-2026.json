@@ -1,0 +1,95 @@
+{
+  "id": "fines-reservations-2026",
+  "organization": "ファインズ",
+  "title": {
+    "ja": "ファインズ：不正アクセスの経緯と影響",
+    "en": "ファインズ: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "予約システムで第三者による不正アクセスを確認しました。具体的な原因は未公表です。 対象は予約者情報1,536,322件です。異なる予約や同一人物の重複を含むかは未公表です。",
+    "en": "Unauthorized access to the reservation system was confirmed; the specific cause is undisclosed. 1,536,322 reservation records are affected; repeat bookings or duplicate people are not quantified."
+  },
+  "occurredAt": null,
+  "disclosedAt": null,
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "予約システムで第三者による不正アクセスを確認しました。具体的な原因は未公表です。",
+        "en": "Unauthorized access to the reservation system was confirmed; the specific cause is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "速報 §§1-3"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "対象は予約者情報1,536,322件です。異なる予約や同一人物の重複を含むかは未公表です。",
+        "en": "1,536,322 reservation records are affected; repeat bookings or duplicate people are not quantified."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "速報 §§1-3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-22",
+      "text": {
+        "ja": "異常を検知した日。侵入開始日とは区別します。",
+        "en": "Detection date, distinct from an established intrusion start."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "アクセスを遮断し、弁護士と連携して調査しています。",
+        "en": "Access was blocked and an investigation is underway with legal counsel."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "速報 §§1-3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "最初の公表日、初期侵入方法、実際の流出の確定範囲は未確認です。",
+      "en": "First disclosure date, initial entry and confirmed exfiltration scope are unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ファインズ：事故に関する公表資料",
+      "url": "https://e-tenki.co.jp/news/%E5%BC%8A%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84/",
+      "publisher": "ファインズ",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-008", "SEC-009", "SEC-012", "SEC-014"]
+}

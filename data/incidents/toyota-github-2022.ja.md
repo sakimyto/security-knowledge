@@ -1,6 +1,6 @@
 # toyota-github-2022 — トヨタ：公開ソースコードにアクセスキーが残存
 
-事例 | Catalog: 0.4.1 | Record SHA-256: 43212999882c7072a980d356ca9ffceb30fb5eb838a0e95b78cceef75be465bb
+事例 | Catalog: 0.5.0 | Record SHA-256: 43212999882c7072a980d356ca9ffceb30fb5eb838a0e95b78cceef75be465bb
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

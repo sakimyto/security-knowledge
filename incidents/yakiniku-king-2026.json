@@ -1,0 +1,121 @@
+{
+  "id": "yakiniku-king-2026",
+  "organization": "物語コーポレーション（焼肉きんぐ）",
+  "title": {
+    "ja": "焼肉きんぐ：アプリ会員情報10,788,963件の漏えい",
+    "en": "Yakiniku King: leakage of 10,788,963 app-member records"
+  },
+  "summary": {
+    "ja": "会員管理システムへの不正アクセスで10,788,963件の会員情報が漏えいしました。原因と侵入経路の詳細は調査中です。",
+    "en": "Unauthorized member-system access leaked 10,788,963 records. The detailed cause and entry path remain under investigation."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-05",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "会員管理システムへの不正アクセスを10月2日に確認しました。",
+        "en": "Unauthorized access to the member-management system was detected on October 2."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "1. 経緯"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "10,788,963件の会員番号・氏名・メールアドレス・電話番号が漏えいしました。ログインパスワードや店舗利用履歴は対象外です。",
+        "en": "10,788,963 records with member numbers, names, emails, and phone numbers leaked; login passwords and store histories were unaffected."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "2. 漏えいした情報の内容"
+    },
+    {
+      "topic": "cause",
+      "text": {
+        "ja": "不正アクセスが可能になった原因と経緯は調査中です。",
+        "en": "The cause and circumstances enabling entry remain under investigation."
+      },
+      "status": "unknown",
+      "sourceIds": ["s1"],
+      "locator": "3. 原因"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "text": {
+        "ja": "不正アクセスを確認し、通信遮断と防御措置を実施。",
+        "en": "Unauthorized access detected; communications blocked and defensive measures applied."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-03",
+      "text": {
+        "ja": "会員情報の漏えいを確認。",
+        "en": "Member-data leakage confirmed."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-05",
+      "text": {
+        "ja": "漏えいと対応を公表。",
+        "en": "Leakage and response disclosed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "通信遮断と防御措置を実施し、対策・監視の強化と関係機関への報告を進めています。",
+        "en": "Communications were blocked and defenses applied; further security measures and authority reports are underway."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "1. 経緯 / 4. 対策および今後の対応"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "会員DBの公開範囲、管理権限、取得ログ、保存する属性と期限を点検します。",
+      "en": "Inspect member-database exposure, administrative privileges, access logs, and retained attributes and deadlines."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "ライブラリ、端末侵害、認証情報漏えいなどの具体的原因は確認できません。",
+      "en": "A library flaw, endpoint compromise, credential leak, or other specific cause is not established."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "焼肉きんぐ公式アプリへの不正アクセスによる個人情報漏えいに関するお詫び",
+      "url": "https://www.monogatari.co.jp/news/261005_news/",
+      "publisher": "物語コーポレーション",
+      "kind": "organization",
+      "publishedAt": "2026-10-05",
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-008", "SEC-009", "SEC-012"]
+}

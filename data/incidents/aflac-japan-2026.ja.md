@@ -1,6 +1,6 @@
 # aflac-japan-2026 — アフラック：通常の利用に似たアクセスで大量のデータを照会
 
-事例 | Catalog: 0.4.1 | Record SHA-256: e7147a302edd53b5d5620ad5861ec3ca6464a90590cb3779fd971d5a8eb2b4a0
+事例 | Catalog: 0.5.0 | Record SHA-256: e126404f444d6e96d894bbf676e8cb58c82fd04e0fe81fb0ebf7358ccf28e236
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -8,7 +8,7 @@
 
 Organization: アフラック生命保険 | Outcome: confirmed-breach
 
-Occurred: 2026-06-10 | Disclosed: 2026-06-30 | Reviewed: 2026-10-02
+Occurred: 2026-06-10 | Disclosed: 2026-06-30 | Reviewed: 2026-10-09
 
 Categories: implementation | CVEs: unspecified
 
@@ -41,4 +41,4 @@ Rules: SEC-008, SEC-009, SEC-012, SEC-014
 
 ## 出典
 
-- s1: [当社システムに対する不正アクセスの発生および情報漏えいに関する調査結果と再発防止策について](https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf) — アフラック生命保険; organization; published: 2026-07-31; reviewed: 2026-10-02
+- s1: [当社システムに対する不正アクセスの発生および情報漏えいに関する調査結果と再発防止策について](https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf) — アフラック生命保険; organization; published: 2026-07-31; reviewed: 2026-10-09

@@ -1,0 +1,103 @@
+{
+  "id": "shueisha-hapicomi-2026",
+  "organization": "集英社",
+  "title": {
+    "ja": "集英社：不正アクセスの経緯と影響",
+    "en": "集英社: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "同社は、CMSの設定不備に起因するAPI認証情報への攻撃、特権アカウント作成、反復API取得が原因と説明しています。 ブロガー2,835名の情報のほか、案件630件、送信メール11,237件、取引先一覧10,780件も対象です。",
+    "en": "Shueisha attributes the incident to attacks on API credentials arising from CMS misconfiguration, privileged-account creation, and repeated API requests. Affected scopes include 2,835 bloggers, 630 projects, 11,237 sent emails, and 10,780 vendor entries."
+  },
+  "occurredAt": "2026-09-09",
+  "disclosedAt": "2026-09-28",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["configuration", "credentials"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "同社は、CMSの設定不備に起因するAPI認証情報への攻撃、特権アカウント作成、反復API取得が原因と説明しています。",
+        "en": "Shueisha attributes the incident to attacks on API credentials arising from CMS misconfiguration, privileged-account creation, and repeated API requests."
+      },
+      "status": "inferred",
+      "sourceIds": ["s1"],
+      "locator": "p.1 §1 / p.2 §2-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "ブロガー2,835名の情報のほか、案件630件、送信メール11,237件、取引先一覧10,780件も対象です。",
+        "en": "Affected scopes include 2,835 bloggers, 630 projects, 11,237 sent emails, and 10,780 vendor entries."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "p.1 §1 / p.2 §2-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-09",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-09-28",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "不正アカウントを削除し、設定を変更。外部会社の調査と対象者への通知を実施しています。",
+        "en": "Unauthorized accounts were removed, settings changed, and external investigation and notifications undertaken."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "p.1 §1 / p.2 §2-4"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "公表の原因説明は同社の評価です。侵入を可能にした設定の詳細と第三者検証結果は未公表です。",
+      "en": "The cause is the organization's assessment; detailed configuration and independent validation are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "集英社：事故に関する公表資料",
+      "url": "https://www.shueisha.co.jp/wp-content/uploads/2026/09/Shueisha20260928-1.pdf",
+      "publisher": "集英社",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-014"]
+}

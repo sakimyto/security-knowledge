@@ -1,0 +1,103 @@
+{
+  "id": "coop-yamaguchi-2026",
+  "organization": "コープやまぐち",
+  "title": {
+    "ja": "コープやまぐち：不正アクセスの経緯と影響",
+    "en": "コープやまぐち: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "外部委託のLINEミニアプリ用DBが不正アクセスされ、全データを削除されました。LINEヤフーのDBの事故ではありません。 対象範囲は69,586件、143,126件、365件、4,218件の4区分です。計217,295件は対象データ数で、流出は未確認です。",
+    "en": "The outsourced mini-app database was accessed and deleted; this was not a LINE Yahoo database incident. The four affected datasets contain 69,586, 143,126, 365 and 4,218 records; the 217,295-record total describes potential scope, not confirmed theft."
+  },
+  "occurredAt": "2026-08-27",
+  "disclosedAt": "2026-08-28",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["supply-chain", "unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "外部委託のLINEミニアプリ用DBが不正アクセスされ、全データを削除されました。LINEヤフーのDBの事故ではありません。",
+        "en": "The outsourced mini-app database was accessed and deleted; this was not a LINE Yahoo database incident."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 §§1,2,5"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "対象範囲は69,586件、143,126件、365件、4,218件の4区分です。計217,295件は対象データ数で、流出は未確認です。",
+        "en": "The four affected datasets contain 69,586, 143,126, 365 and 4,218 records; the 217,295-record total describes potential scope, not confirmed theft."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 §§1,2,5"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-27",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-08-28",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "アクセスを遮断し、認証情報を変更してバックアップから復元しました。",
+        "en": "Access was blocked, credentials changed and the database restored from backup."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 §§1,2,5"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "侵入経路と外部持出しの有無は調査中です。",
+      "en": "The entry route and exfiltration remain under investigation."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "コープやまぐち：事故に関する公表資料",
+      "url": "https://www.yamaguti-coop.or.jp/line-miniapp-incident-report2/",
+      "publisher": "コープやまぐち",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-012", "SEC-013"]
+}

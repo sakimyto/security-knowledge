@@ -6,13 +6,13 @@
 
 # SEC-004 — 配布物と添付ファイルへの秘密情報の混入を確認する
 
-点検ルール | Catalog: 0.4.1 | Record SHA-256: 0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6
+点検ルール | Catalog: 0.5.0 | Record SHA-256: 4c8742376f6fe13cb33908f282d1a6af6fd73ae0a13007f8013ca7042fd629b4
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
 コード・ビルド成果物・コンテナ・サポート資料を保存または配布する環境。
 
-Version: 1.2.0 | Updated: 2026-10-02 | Surfaces: repositories, containers, ci, support
+Version: 1.1.0 | Updated: 2026-10-09 | Surfaces: repositories, containers, ci, support
 
 Execution: read-only-by-default | Provenance: editorial-guidance
 
@@ -44,7 +44,7 @@ Execution: read-only-by-default | Provenance: editorial-guidance
 
 ## 関連事例
 
-anthropic-cyber-evals-2026, axios-npm-2026, campfire-2026, codecov-2021, okta-support-2023, openai-huggingface-eval-2026, postman-shai-hulud-2025, rust-arrayref-2026, sakura-billing-2026, toyota-github-2022, trivy-supply-chain-2026, unit42-ai-assisted-2026
+anthropic-cyber-evals-2026, axios-npm-2026, campfire-2026, codecov-2021, innovation-github-2026, kyorin-remote-pc-2026, okta-support-2023, openai-huggingface-eval-2026, ota-cultural-pc-scam-2026, postman-shai-hulud-2025, rust-arrayref-2026, sakura-billing-2026, toyota-github-2022, trivy-supply-chain-2026, unit42-ai-assisted-2026, visualarts-cloud-credentials-2026
 
 ## 出典
 

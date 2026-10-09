@@ -1,0 +1,95 @@
+{
+  "id": "nice-mail-2026",
+  "organization": "ナイス",
+  "title": {
+    "ja": "ナイス：不正アクセスの経緯と影響",
+    "en": "ナイス: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "問い合わせ用メールに不正アクセスがあり、8月21日の追記でスパム送信も確認しました。 約2,400件の氏名・メール・電話等が流出した可能性があります。",
+    "en": "An inquiry mailbox was accessed; the August 21 update confirms spam sent from it. About 2,400 contact records may have leaked."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-06",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "問い合わせ用メールに不正アクセスがあり、8月21日の追記でスパム送信も確認しました。",
+        "en": "An inquiry mailbox was accessed; the August 21 update confirms spam sent from it."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4 / 8月21日追記"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "約2,400件の氏名・メール・電話等が流出した可能性があります。",
+        "en": "About 2,400 contact records may have leaked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4 / 8月21日追記"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-06",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "メールと管理用パスワードを変更し、送信機能を遮断しました。",
+        "en": "Mailbox and administrative passwords were changed and sending disabled."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4 / 8月21日追記"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The initial entry route and actual disclosure scope are undisclosed. Unauthorized mail transmission was confirmed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ナイス：事故に関する公表資料",
+      "url": "https://www.nice.co.jp/release/2026_08_06.html",
+      "publisher": "ナイス",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-002", "SEC-003", "SEC-005", "SEC-009", "SEC-012"]
+}

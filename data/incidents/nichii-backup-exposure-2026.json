@@ -1,0 +1,121 @@
+{
+  "id": "nichii-backup-exposure-2026",
+  "organization": "ニチイ学館",
+  "title": {
+    "ja": "ニチイ学館：情報の公開範囲・権限の問題",
+    "en": "ニチイ学館: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "削除されずに残ったバックアップが、2020年5月11日〜2026年9月11日に認証なしで取得できる状態でした。 問い合わせ入力2,674件のうち583名分に個人情報があり、99名分は要配慮個人情報を含みます。構造化された顧客情報欄は暗号化され取得できないと説明しています。",
+    "en": "A retained backup was downloadable without authentication from May 11, 2020 to September 11, 2026. Of 2,674 inquiry entries, 583 people had personal data and 99 had sensitive data. Structured customer fields were reportedly encrypted and inaccessible."
+  },
+  "occurredAt": "2020-05-11",
+  "disclosedAt": "2026-10-02",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": [
+    "configuration"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "削除されずに残ったバックアップが、2020年5月11日〜2026年9月11日に認証なしで取得できる状態でした。",
+        "en": "A retained backup was downloadable without authentication from May 11, 2020 to September 11, 2026."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §1 / p.2 §1(2)-(4), §2-3"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "問い合わせ入力2,674件のうち583名分に個人情報があり、99名分は要配慮個人情報を含みます。構造化された顧客情報欄は暗号化され取得できないと説明しています。",
+        "en": "Of 2,674 inquiry entries, 583 people had personal data and 99 had sensitive data. Structured customer fields were reportedly encrypted and inaccessible."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §1 / p.2 §1(2)-(4), §2-3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2020-05-11",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "ファイルを削除し、保存されていた直近3か月のログを調査しました。",
+        "en": "The file was deleted and the retained three months of logs reviewed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §1 / p.2 §1(2)-(4), §2-3"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "直近3か月の第三者アクセスは確認されていません。それ以前のログがないため、全期間で取得がなかったとは判断できません。",
+      "en": "No third-party access was found in the retained three months; missing earlier logs prevent excluding access throughout the full period."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ニチイ学館：事故に関する公表資料",
+      "url": "https://www.nichiigakkan.co.jp/topics/assets/2ba7ca6c5a8a249293493f6eb40ad90b9be2ce78.pdf",
+      "publisher": "ニチイ学館",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "osaka-high-court-teams-2026",
+  "organization": "大阪高等裁判所",
+  "title": {
+    "ja": "大阪高等裁判所：情報の公開範囲・権限の問題",
+    "en": "大阪高等裁判所: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "事件用Teamsチームに本来の参加者以外を誤って登録しました。外部からの侵入ではありません。 外部約3,500、職員約2,500アカウントが登録され、ユーザー名とメールが相互閲覧可能でした。事件記録は対象外です。",
+    "en": "A case-specific Teams group mistakenly included unintended members; no external intrusion was reported. Approximately 3,500 external and 2,500 staff accounts could see each other’s names and email addresses; case records were unaffected."
+  },
+  "occurredAt": "2026-08-27",
+  "disclosedAt": null,
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": ["configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "事件用Teamsチームに本来の参加者以外を誤って登録しました。外部からの侵入ではありません。",
+        "en": "A case-specific Teams group mistakenly included unintended members; no external intrusion was reported."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "本文 第1-2段落"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "外部約3,500、職員約2,500アカウントが登録され、ユーザー名とメールが相互閲覧可能でした。事件記録は対象外です。",
+        "en": "Approximately 3,500 external and 2,500 staff accounts could see each other’s names and email addresses; case records were unaffected."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "本文 第1-2段落"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-27",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "外部からの問合せ後、チームを直ちに削除しました。",
+        "en": "The team was deleted immediately after an external inquiry."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "本文 第1-2段落"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "公開本文に公表日の記載がないため、日付は追加確認が必要です。",
+      "en": "The publication date is not stated in the notice body."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "大阪高等裁判所：事故に関する公表資料",
+      "url": "https://www.courts.go.jp/osaka-h/about/osirase/owabi/index.html",
+      "publisher": "大阪高等裁判所",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-008", "SEC-014"]
+}

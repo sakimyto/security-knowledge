@@ -1,7 +1,7 @@
 {
   "id": "SEC-002",
-  "version": "1.2.0",
-  "updatedAt": "2026-10-02",
+  "version": "1.1.0",
+  "updatedAt": "2026-10-09",
   "title": {
     "ja": "MFAの方式と適用漏れを確認する",
     "en": "Inspect MFA methods and coverage"
@@ -60,15 +60,37 @@
     "anthropic-cyber-evals-2026",
     "askul-2025",
     "awabank-test-environment-2026",
+    "charm-2026",
+    "chubu-business-credentials-2026",
     "digital-agency-gss-2026",
+    "en-midcareer-credential-stuffing-2026",
+    "expo-subcontractor-mail-2026",
+    "fancrew-credential-stuffing-2026",
     "forticloud-sso-2026",
+    "fuso-cloud-storage-2026",
     "gainsight-oauth-2025",
+    "ichimasa-mail-2026",
+    "ieej-mail-2026",
+    "jogmec-directory-2026",
+    "jst-mail-2026",
+    "kindal-phishing-2026",
+    "kodansha-phishing-2026",
+    "logicvein-2025",
+    "mediaplex-2026",
+    "mitsui-fudosan-directory-2026",
+    "nice-mail-2026",
+    "nikkei-workspace-2026",
     "nishiyama-2026",
     "openai-mixpanel-2025",
+    "pickleballone-plugin-2026",
     "prontest-cloud-2026",
     "quick-2025",
+    "rakuten-drive-2026",
+    "scala-iask-2026",
     "snowflake-unc5537-2024",
-    "uber-2022"
+    "trunk-mail-2026",
+    "uber-2022",
+    "visualarts-cloud-credentials-2026"
   ],
   "references": [
     {

@@ -1,6 +1,6 @@
 # sakura-billing-2026 — さくらインターネット：請求情報DBへの別の不正アクセス
 
-事例 | Catalog: 0.4.1 | Record SHA-256: 493c79f96ce4c126392ba6b9db8dff616fe874d06de5eef3f1b56a8b58eed167
+事例 | Catalog: 0.5.0 | Record SHA-256: 8cc850b7d26f6bd6fdee359326dcd9d92dc14d5c20b33ff93fef8e2e7067dc15
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -8,18 +8,18 @@
 
 Organization: さくらインターネット | Outcome: confirmed-breach
 
-Occurred: unknown | Disclosed: 2026-08-19 | Reviewed: 2026-10-02
+Occurred: unknown | Disclosed: 2026-08-19 | Reviewed: 2026-10-09
 
 Categories: unknown, credentials | CVEs: unspecified
 
 ## 根拠のある主張
 
-- [confirmed / 公表で確認] 請求情報DBへの不正アクセスが確認されましたが、ホスティング事案との関連は確認されていません。 (s1; 2. 請求情報データベース)
-- [confirmed / 公表で確認] 流出の可能性がある対象は136万563件です。一部には初期パスワードが含まれますが、現行パスワード全体の流出を意味しません。 (s1; 2. 影響範囲)
+- [confirmed / 公表で確認] 請求情報DBへの不正アクセスが確認されましたが、ホスティング事案との関連は確認されていません。 (s1; 4.\(2\) 販売管理システム / 4.\(3\) 認証情報)
+- [confirmed / 公表で確認] 流出の可能性がある対象は136万563件です。一部には初期パスワードが含まれますが、現行パスワード全体の流出を意味しません。 (s1; 5. 影響を受けた可能性のある情報)
 
 ## 公表された対応
 
-- [confirmed / 公表で確認] 初期パスワードの無効化・変更対応と、アクセス制御・監視の強化を公表しました。 (s1; 2. 対応 / 3. 再発防止策)
+- [confirmed / 公表で確認] 初期パスワードの無効化・変更対応と、アクセス制御・監視の強化を公表しました。 (s1; 7. お客さまへの対応 / 8. 封じ込め / 9. 再発防止策)
 
 ## 経緯
 
@@ -41,4 +41,4 @@ Rules: SEC-004, SEC-005, SEC-006, SEC-008, SEC-009, SEC-012
 
 ## 出典
 
-- s1: [当社サービスへの不正アクセスに関するご報告とお詫び（第3報）](https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/) — さくらインターネット; organization; published: 2026-09-10; reviewed: 2026-10-02
+- s1: [当社システムへの不正アクセスに関する調査結果および再発防止策について（第三報）](https://www.sakura.ad.jp/corporate/information/newsreleases/2026/09/10/1968225692/) — さくらインターネット; organization; published: 2026-09-10; reviewed: 2026-10-09

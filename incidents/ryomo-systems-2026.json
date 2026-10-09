@@ -1,0 +1,146 @@
+{
+  "id": "ryomo-systems-2026",
+  "organization": "両毛システムズ（大東ガス・伊勢崎市）",
+  "title": {
+    "ja": "両毛システムズ（大東ガス・伊勢崎市）：不正アクセスの経緯と影響",
+    "en": "両毛システムズ（大東ガス・伊勢崎市）: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "委託先の両毛システムズの社内ネットワークに侵入されました。大東ガスの顧客システムは分離されており、過去の業務ファイルが残っていました。 大東ガスの約124,000件の情報が流出した可能性があります。 VPNから両毛システムズの社内ファイルサーバーへ侵入され、ランサムウェアによる攻撃を確認しました。VPNの侵害手段は未公表です。 伊勢崎市の児童生徒アカウント情報3,789件に漏洩の可能性があります。パスワードを含みます。",
+    "en": "Ryomo Systems’ internal network was compromised; Daito Gas’s customer system was separated, but old working files remained in the vendor network. About 124,000 Daito Gas records may have been extracted. Attackers reached Ryomo Systems’ file server through a VPN and ransomware was confirmed; the VPN compromise method is undisclosed. 3,789 Isesaki student-account records, including passwords, may have been exposed."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-28",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["supply-chain", "unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "委託先の両毛システムズの社内ネットワークに侵入されました。大東ガスの顧客システムは分離されており、過去の業務ファイルが残っていました。",
+        "en": "Ryomo Systems’ internal network was compromised; Daito Gas’s customer system was separated, but old working files remained in the vendor network."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "大東ガスの約124,000件の情報が流出した可能性があります。",
+        "en": "About 124,000 Daito Gas records may have been extracted."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    },
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "VPNから両毛システムズの社内ファイルサーバーへ侵入され、ランサムウェアによる攻撃を確認しました。VPNの侵害手段は未公表です。",
+        "en": "Attackers reached Ryomo Systems’ file server through a VPN and ransomware was confirmed; the VPN compromise method is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "§§1,3,5,6"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "伊勢崎市の児童生徒アカウント情報3,789件に漏洩の可能性があります。パスワードを含みます。",
+        "en": "3,789 Isesaki student-account records, including passwords, may have been exposed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "§§1,3,5,6"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-28",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-09-28",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s2"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "関係者への注意喚起と詳細確認を進めています。",
+        "en": "Affected parties were warned and further fact checking is underway."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    },
+    {
+      "topic": "response",
+      "text": {
+        "ja": "該当アカウントのパスワードを変更し、学校と保護者へ通知しました。",
+        "en": "Affected passwords were changed and schools and guardians notified."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "§§1,3,5,6"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The VPN product, CVE and credential-acquisition route are undisclosed; August 14 is detection, not a confirmed intrusion start."
+    },
+    {
+      "ja": "VPNの製品・脆弱性・認証情報の取得方法、侵入開始日は未公表です。8月14日は不正アクセスを確認した日です。",
+      "en": "The VPN product, CVE and credential-acquisition route are undisclosed; vendor intrusion detection is not a verified intrusion-start date."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "両毛システムズ（大東ガス・伊勢崎市）：事故に関する公表資料",
+      "url": "https://www.daitogas.co.jp/info/170",
+      "publisher": "両毛システムズ（大東ガス・伊勢崎市）",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "s2",
+      "title": "両毛システムズ（大東ガス・伊勢崎市）：事故に関する公表資料",
+      "url": "https://www.city.isesaki.lg.jp/soshiki/kyoikubu/shisetsu/23971.html",
+      "publisher": "両毛システムズ（大東ガス・伊勢崎市）",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-012", "SEC-013"]
+}

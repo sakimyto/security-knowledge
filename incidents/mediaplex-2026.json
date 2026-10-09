@@ -1,0 +1,95 @@
+{
+  "id": "mediaplex-2026",
+  "organization": "テレビ朝日メディアプレックス",
+  "title": {
+    "ja": "テレビ朝日メディアプレックス：不正アクセスの経緯と影響",
+    "en": "テレビ朝日メディアプレックス: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "認証連携アカウントの認証情報を盗まれ悪用された可能性があると、専門調査で報告されています。 従業員1,343件、採用応募者2,786件、取引先414件が漏えいまたは潜在的対象です。",
+    "en": "Investigators report possible theft and abuse of authentication-federation account credentials. 1,343 employee, 2,786 applicant and 414 contact records leaked or may have leaked."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-07-03",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "認証連携アカウントの認証情報を盗まれ悪用された可能性があると、専門調査で報告されています。",
+        "en": "Investigators report possible theft and abuse of authentication-federation account credentials."
+      },
+      "status": "inferred",
+      "sourceIds": ["s1"],
+      "locator": "第2報 pp.1-3 §§1-5"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "従業員1,343件、採用応募者2,786件、取引先414件が漏えいまたは潜在的対象です。",
+        "en": "1,343 employee, 2,786 applicant and 414 contact records leaked or may have leaked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 pp.1-3 §§1-5"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-03",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "関係サーバー停止と外部接続遮断を行い、専門調査後に監視・管理体制を見直しました。",
+        "en": "Affected servers and external connections were stopped; monitoring and controls were reviewed after forensics."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 pp.1-3 §§1-5"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "認証情報の取得経路と当時のMFA状態は未公表です。発表も原因を可能性として述べています。",
+      "en": "The authentication sequence is described as likely; the full entry chain and confirmed extraction scope are unresolved."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "テレビ朝日メディアプレックス：事故に関する公表資料",
+      "url": "https://www.mediaplex.co.jp/wp-content/uploads/20260730.pdf",
+      "publisher": "テレビ朝日メディアプレックス",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-002", "SEC-005", "SEC-008", "SEC-009", "SEC-012"]
+}

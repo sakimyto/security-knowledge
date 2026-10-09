@@ -9,21 +9,32 @@ import { readJson } from './schema.mjs'
 const catalog = loadCatalog()
 const inventory = readJson(resolve(ROOT, 'examples/inventory.json'))
 
+test('unknown disclosure dates remain null rather than using a supplied listing date', () => {
+  const unknown = structuredClone(catalog)
+  unknown.incidents[0].disclosedAt = null
+  assert.deepEqual(validateCatalog(unknown), [])
+  unknown.incidents[0].disclosedAt = '2026-02-30'
+  assert.match(validateCatalog(unknown).join('\n'), /invalid date/)
+})
+
 test('primary sources, references, and bidirectional links validate', () => {
   assert.deepEqual(validateCatalog(catalog), [])
-  assert.equal(catalog.incidents.length, 41)
-  assert.equal(catalog.rules.length, 14)
+  assert.equal(catalog.incidents.length, 136)
+  assert.equal(catalog.rules.length, 16)
   assert.equal(
     catalog.incidents.filter((incident) => incident.outcome === 'exposure-only').length,
-    2,
+    16,
   )
 })
 
 test('recent records preserve unknown causes and distinguish evaluated AI from attack attribution', () => {
   const recent = catalog.incidents.filter(
-    (item) => item.disclosedAt >= '2025-10-02' && item.disclosedAt <= '2026-10-02',
+    (item) =>
+      item.disclosedAt !== null &&
+      item.disclosedAt >= '2025-10-09' &&
+      item.disclosedAt <= '2026-10-09',
   )
-  assert.equal(recent.length, 31)
+  assert.equal(recent.length, 120)
   assert.equal(recent.filter((item) => item.ai.status === 'confirmed').length, 4)
   assert.equal(recent.filter((item) => item.ai.status === 'inferred').length, 1)
   const voising = recent.find((item) => item.id === 'voising-bi-2026')

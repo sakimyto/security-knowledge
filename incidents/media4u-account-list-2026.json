@@ -1,0 +1,104 @@
+{
+  "id": "media4u-account-list-2026",
+  "organization": "メディア4u",
+  "title": {
+    "ja": "メディア4u：不正アクセスの経緯と影響",
+    "en": "メディア4u: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "SMS配信サービスで不正アクセスがあり、管理情報が流出しました。初期侵入方法は未公表です。 管理一覧95,412件のうち個人情報を含みうる対象は22,928件です。1社のアカウントで不正SMS280通が送信されました。認証秘密は対象外です。",
+    "en": "Unauthorized access to the SMS delivery service exposed account-management information; initial entry is undisclosed. Of 95,412 management-list records, 22,928 may contain personal data. One client account sent 280 unauthorized messages; authentication secrets were excluded."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-07-14",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "SMS配信サービスで不正アクセスがあり、管理情報が流出しました。初期侵入方法は未公表です。",
+        "en": "Unauthorized access to the SMS delivery service exposed account-management information; initial entry is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "7月17日第二報 §§1-4 / FAQ"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "管理一覧95,412件のうち個人情報を含みうる対象は22,928件です。1社のアカウントで不正SMS280通が送信されました。認証秘密は対象外です。",
+        "en": "Of 95,412 management-list records, 22,928 may contain personal data. One client account sent 280 unauthorized messages; authentication secrets were excluded."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "7月17日第二報 §§1-4 / FAQ"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "通信遮断、管理用認証情報の失効・再発行、脆弱性修正と監視強化を行いました。",
+        "en": "Access was blocked, administrative credentials revoked and reissued, vulnerabilities fixed, and monitoring strengthened."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "7月17日第二報 §§1-4 / FAQ"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The initial entry route, attack start and complete extraction scope are undisclosed. Management-list records are not all confirmed personal-data records."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "メディア4u：事故に関する公表資料",
+      "url": "https://www.media4u.co.jp/news/3354",
+      "publisher": "メディア4u",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "s2",
+      "title": "メディア4u：事故に関する公表資料",
+      "url": "https://www.media4u.co.jp/news/3351",
+      "publisher": "メディア4u",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-005", "SEC-008", "SEC-009", "SEC-012"]
+}

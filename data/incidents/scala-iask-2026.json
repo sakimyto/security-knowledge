@@ -1,0 +1,221 @@
+{
+  "id": "scala-iask-2026",
+  "organization": "スカラコミュニケーションズ（大和証券・シチズン時計・損保ジャパンへの影響を含む）",
+  "title": {
+    "ja": "スカラi-ask：管理画面への不正ログインが同一サーバーの利用企業へ波及",
+    "en": "Scala i-ask: administrator intrusion affects customers on a shared server"
+  },
+  "summary": {
+    "ja": "管理画面への不正ログイン後に不正プログラムが設置されました。同一サーバーの最大5社に影響する共通事案として、確認できた3社の公表をまとめています。",
+    "en": "An intruder installed a program after administrator login. This shared incident covers up to five customers, including three separately verified disclosures."
+  },
+  "occurredAt": "2026-10-02",
+  "disclosedAt": "2026-10-05",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials",
+    "supply-chain"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "i-askの管理画面に不正ログインし、不正プログラムが設置されました。",
+        "en": "Unauthorized administrator login was followed by installation of a program."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "1. 漏えいの経緯"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "同一サーバーの最大5社、最大713,126件の延べ問い合わせ情報に漏えいの可能性があります。",
+        "en": "Potential exposure spans up to five customers and 713,126 non-deduplicated inquiries."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "2. 漏えいした可能性のある情報"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "大和証券は約11万人の情報、識別できない問い合わせも含め約22万件への影響の可能性を公表しました。",
+        "en": "Daiwa reported potential exposure affecting about 110,000 people and about 220,000 inquiries including unidentifiable records."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "p.2 §2"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "シチズン時計は約10万人、損保ジャパンは約6万件の延べ問い合わせへの影響の可能性を公表しました。",
+        "en": "Citizen reported about 100,000 people; Sompo reported about 60,000 inquiries. Both describe possible exposure."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s3",
+        "s4"
+      ],
+      "locator": "シチズン §漏えいの可能性がある情報 / 損保ジャパン §2"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "text": {
+        "ja": "管理画面への不正ログインが開始したと公表。",
+        "en": "Reported start of unauthorized administrator login."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "text": {
+        "ja": "監視アラートを受けて調査し、アクセスを遮断。",
+        "en": "Monitoring alerted staff; access was blocked."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "text": {
+        "ja": "大和証券が影響を公表。",
+        "en": "Daiwa disclosed its affected information."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "text": {
+        "ja": "スカラとシチズン時計が公表。",
+        "en": "Scala and Citizen published notices."
+      },
+      "sourceIds": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "text": {
+        "ja": "損保ジャパンが公表。",
+        "en": "Sompo published its notice."
+      },
+      "sourceIds": [
+        "s4"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "管理アカウントのパスワードを変更し、不正プログラムを隔離。アップロードしたファイルの実行を制限しました。",
+        "en": "Scala changed administrator passwords, isolated the program, and restricted execution of uploaded files."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "3. 現在の対応状況"
+    },
+    {
+      "topic": "planned-response",
+      "text": {
+        "ja": "認証の強化、環境間の分離、監視の強化を予定しています。",
+        "en": "Stronger authentication, environment separation, and monitoring are planned."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "3. 現在の対応状況"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "管理画面の認証、環境間の権限、保存先での実行制限を点検します。",
+      "en": "Inspect administrator authentication, cross-environment privileges, and execution restrictions on upload storage."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "不正ログインを可能にした方法と当時のMFA適用状態は未公表です。各社の人数・件数を合算しません。",
+      "en": "The login mechanism and prior MFA coverage are undisclosed. Customer counts must not be added."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "i-askへの不正アクセスに関する発表",
+      "url": "https://scala-com.jp/news/2026/10-1/",
+      "publisher": "スカラコミュニケーションズ",
+      "kind": "vendor",
+      "publishedAt": "2026-10-06",
+      "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "s2",
+      "title": "外部委託先への不正アクセスによるお客様情報の漏洩の可能性について",
+      "url": "https://ssl4.eir-parts.net/doc/8601/tdnet/2891437/00.pdf",
+      "publisher": "大和証券",
+      "kind": "organization",
+      "publishedAt": "2026-10-05",
+      "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "s3",
+      "title": "委託先への不正アクセスに関する発表",
+      "url": "https://www.citizen.co.jp/release/news/detail/2026/20261006.html",
+      "publisher": "シチズン時計",
+      "kind": "organization",
+      "publishedAt": "2026-10-06",
+      "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "s4",
+      "title": "外部委託先への不正アクセスによる情報漏えいの可能性について",
+      "url": "https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2026/20261007_1.pdf?la=ja-JP",
+      "publisher": "損保ジャパン",
+      "kind": "organization",
+      "publishedAt": "2026-10-07",
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-005",
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012",
+    "SEC-015"
+  ]
+}

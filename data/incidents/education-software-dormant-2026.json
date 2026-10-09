@@ -1,0 +1,113 @@
+{
+  "id": "education-software-dormant-2026",
+  "organization": "教育ソフトウェア",
+  "title": {
+    "ja": "教育ソフトウェア：不正アクセスの経緯と影響",
+    "en": "教育ソフトウェア: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "2016年までのサービスに使った休眠サーバーが侵入・暗号化被害を受けました。 旧サービスの利用者情報4,627件が潜在的対象で、調査では流出は未確認です。",
+    "en": "A dormant rental server used for a service ending in 2016 was accessed and encrypted. 4,627 old-service records may have been exposed; investigation did not confirm leakage."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-17",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "2016年までのサービスに使った休眠サーバーが侵入・暗号化被害を受けました。",
+        "en": "A dormant rental server used for a service ending in 2016 was accessed and encrypted."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本件の概要 / 現在の状況"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "旧サービスの利用者情報4,627件が潜在的対象で、調査では流出は未確認です。",
+        "en": "4,627 old-service records may have been exposed; investigation did not confirm leakage."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本件の概要 / 現在の状況"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-17",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "ネットワークを遮断して専門調査を行い、対象サーバーを廃止しました。",
+        "en": "The network was disconnected, specialists investigated, and the server retired."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本件の概要 / 現在の状況"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "攻撃期間は4月30日〜5月1日と推定されています。侵入の具体的原因と正確な開始日は未公表です。",
+      "en": "The estimated access window does not establish an exact intrusion-start day. Encrypted stored records are not confirmed exfiltration."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "教育ソフトウェア：事故に関する公表資料",
+      "url": "https://www.kyoikusw.co.jp/news/20260817/",
+      "publisher": "教育ソフトウェア",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-006",
+    "SEC-009",
+    "SEC-012",
+    "SEC-013"
+  ]
+}

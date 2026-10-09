@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "catalogHash": "8475e05c44114b0f314005201084fde4507f872e33e385664e6d54db36106b36",
+  "catalogHash": "79ef7a655dffd4ba0ead9d908a4bb7ceddf4e58e5025df7954b9e3ac6a813af1",
   "environment": "example-project",
   "environmentRevision": "replace-with-actual-environment-revision",
-  "checkedAt": "2026-10-02T00:00:00Z",
+  "checkedAt": "2026-10-09T00:00:00Z",
   "results": [
     {
       "ruleId": "SEC-001",
-      "ruleHash": "8e6c53174bef8ca55cea3f34e97f1aad0f6f0c55a15111ba9f2df8613d55fe55",
+      "ruleHash": "67a3397e78c18fd3cf3303bf454c613d89623c43468980a489e4beb63612710c",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -17,7 +17,7 @@
     },
     {
       "ruleId": "SEC-002",
-      "ruleHash": "fcf58a1b53fff45725fbbe1f19fa49d638d0ea143a2444428247b31f3c62de1a",
+      "ruleHash": "43673699ac5402b96501ccf4eabaaa84f55cefb99726b9897eec16d24cb2285d",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -27,7 +27,7 @@
     },
     {
       "ruleId": "SEC-003",
-      "ruleHash": "fa4a4a16010e066b0c6208029e5cf0d1e65b0a96a18bfd0463081b7681220a25",
+      "ruleHash": "78f7bf62fe833e1e37584647f8ffb181736f3ea5d1fccd99aed31612001b6a49",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -37,7 +37,7 @@
     },
     {
       "ruleId": "SEC-004",
-      "ruleHash": "0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6",
+      "ruleHash": "4c8742376f6fe13cb33908f282d1a6af6fd73ae0a13007f8013ca7042fd629b4",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -47,7 +47,7 @@
     },
     {
       "ruleId": "SEC-005",
-      "ruleHash": "4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0",
+      "ruleHash": "8ff0d31313bf4bf957c0027bdf882b1e32f9121f40ae6f4a20482f273965a008",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -57,7 +57,7 @@
     },
     {
       "ruleId": "SEC-006",
-      "ruleHash": "ef322bf44c1b8241baf2b84ce08f6422b46075b59a85e88eb927713bbef64e8a",
+      "ruleHash": "03bdd270e4914e6e5c436bbc77ecc0b77a78bbf9eb2983b485d635ef5a111e25",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -67,7 +67,7 @@
     },
     {
       "ruleId": "SEC-007",
-      "ruleHash": "24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5",
+      "ruleHash": "154186523c183ea0ec0059b951eb9b35f0ac41557c28df13c071663be3aef6ee",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -77,7 +77,7 @@
     },
     {
       "ruleId": "SEC-008",
-      "ruleHash": "f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464",
+      "ruleHash": "6de9a8001e402946286fea02a53aa5d36592fa83613987d2c8d0b712ec1e36bc",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -87,7 +87,7 @@
     },
     {
       "ruleId": "SEC-009",
-      "ruleHash": "ee5ca8e3ff31cae2c3818e2446db3453376e07ac498d71a4b9bd54aa2678f745",
+      "ruleHash": "0a7a2e012927ce64c5b1bf76ae30501f35e91bf4182bcc0f6643df83c6b9bb17",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -107,7 +107,7 @@
     },
     {
       "ruleId": "SEC-011",
-      "ruleHash": "c825b2408ad9c74579cd404c68b6cb9daa00d14601a42ba32b6b60fac4afcbf0",
+      "ruleHash": "537cca64dc9624271583c5f4ee5fe0d980f78ff9312f6ac589de280905f29d55",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -117,7 +117,7 @@
     },
     {
       "ruleId": "SEC-012",
-      "ruleHash": "a263b1e54e292b97464b5b6e1494a948a77571813c642c26eec1ed994473b833",
+      "ruleHash": "d2422730d0b8989c3da5381bfce8830159db92021af6503600ae5fae24b20c3d",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -127,7 +127,7 @@
     },
     {
       "ruleId": "SEC-013",
-      "ruleHash": "0e16048f65f44638a3e7858bde158f737c2fa74751e5b12580da67ab0a3e7856",
+      "ruleHash": "de03f5d46ff7a4ee0a31c8fc1b9b60435223ba5d1d3f93876df514453e15bee6",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -137,7 +137,27 @@
     },
     {
       "ruleId": "SEC-014",
-      "ruleHash": "40889eb24f568c0135a0c8abe83471c8d3cf585ac435d86a668dbc910a6fc471",
+      "ruleHash": "ba83f5606c6bc7750f81821ef96169dd4e8621b75200040ea500ef2c24b521b3",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-015",
+      "ruleHash": "1dfd83077658a79d47897d199f646eb9f69aa4d92c7646c57f2b82a715fde44c",
+      "assetId": "example-unspecified",
+      "status": "unverified",
+      "scope": "Example only; no inspection performed",
+      "evidence": [],
+      "reason": "No environment evidence supplied",
+      "proposedAction": "Inspect authorized scope and replace example metadata"
+    },
+    {
+      "ruleId": "SEC-016",
+      "ruleHash": "cce435bbacb6fef88c9e9d661222b081d8463e4f025448a7796cdcddd7548488",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",

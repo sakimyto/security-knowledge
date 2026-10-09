@@ -1,6 +1,6 @@
 # Security Knowledgeの使い方
 
-Catalog: 0.4.1 | Reviewed: 2026-10-02 | 14 rules / 41 incidents
+Catalog: 0.5.0 | Reviewed: 2026-10-09 | 16 rules / 136 incidents
 
 URLを読めるAIはこの案内と discovery.json を取得します。URLを読めないAIには、このファイルと必要なルールのMarkdownを添付または貼り付けてください。小さいモデルは1ルールずつ読み、結果を外部に保存してから次へ進めます。
 
@@ -38,9 +38,13 @@ Jevのような判断モデルには decision-tasks.jsonl の選択式質問と�
 - [SEC-012: 非本番環境と保存データの廃止期限を確認する](rules/SEC-012.ja.md) — cloud, data-store
 - [SEC-013: 隔離手順とバックアップの復元を確認する](rules/SEC-013.ja.md) — cloud, data-store
 - [SEC-014: 照会APIの認可と取得量の制御を確認する](rules/SEC-014.ja.md) — web-app, identity, data-store
+- [SEC-015: アップロードしたファイルの実行を制限する](rules/SEC-015.ja.md) — web-app, cloud, data-store
+- [SEC-016: 利用者ごとのレスポンスをキャッシュで混在させない](rules/SEC-016.ja.md) — web-app, cloud, data-store
 
 分野別の`packs/`は読む量を絞るための資料です。候補の選択だけで適用外と判定せず、他のルールも条件を確認するか`unverified`として残してください。大きなコンテキストを扱える環境には、全件の llms-full.ja.txt と llms-full.txt も配布しています。
 
 差分の照合は index.json、形式とファイルの照合は discovery.json を使います。ハッシュは署名ではありません。利用側で信頼するコミットを固定し、全ファイルを同じ版から取得します。
 
 [接続手順と制約](https://github.com/sakimyto/security-knowledge/blob/main/docs/consuming.md)
+
+[国内169候補の確認台帳](intake/domestic-20261009.json)には、元の未検証の件数・日付、確認済みの主張、収録・除外の理由、再確認の対象を記録しています。未確認の候補を事故件数へ加算せず、点検には事故とルールの正本を使います。

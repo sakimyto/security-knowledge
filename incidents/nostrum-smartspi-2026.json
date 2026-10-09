@@ -1,0 +1,103 @@
+{
+  "id": "nostrum-smartspi-2026",
+  "organization": "福岡大学",
+  "title": {
+    "ja": "福岡大学：不正アクセスの経緯と影響",
+    "en": "福岡大学: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "委託先ノストラムのネットワークに侵入され、ファイル暗号化とバックドア設置を確認しました。 最大33,668人の学籍番号・生年月日・模試結果と、登録者最大800人の氏名が対象です。持ち出しの直接証拠は確認されていません。",
+    "en": "The vendor Nostrum’s network was compromised; file encryption and a backdoor were confirmed. Up to 33,668 students’ identifiers, dates of birth and mock-test results and up to 800 registered names may be affected; direct extraction evidence was not found."
+  },
+  "occurredAt": "2026-04-17",
+  "disclosedAt": "2026-07-09",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["supply-chain", "unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "委託先ノストラムのネットワークに侵入され、ファイル暗号化とバックドア設置を確認しました。",
+        "en": "The vendor Nostrum’s network was compromised; file encryption and a backdoor were confirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大33,668人の学籍番号・生年月日・模試結果と、登録者最大800人の氏名が対象です。持ち出しの直接証拠は確認されていません。",
+        "en": "Up to 33,668 students’ identifiers, dates of birth and mock-test results and up to 800 registered names may be affected; direct extraction evidence was not found."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-04-17",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-07-09",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "外部アクセスを遮断し、専門業者による調査と関係機関への報告を行いました。",
+        "en": "External access was blocked; specialists investigated and authorities were notified."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The notice does not establish all entry, timing and extraction details; unresolved claims remain unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "福岡大学：事故に関する公表資料",
+      "url": "https://www.fukuoka-u.ac.jp/news/26/07/08175927.html",
+      "publisher": "福岡大学",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-008", "SEC-009", "SEC-012", "SEC-013"]
+}

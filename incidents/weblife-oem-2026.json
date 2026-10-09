@@ -1,0 +1,103 @@
+{
+  "id": "weblife-oem-2026",
+  "organization": "ウェブライフ",
+  "title": {
+    "ja": "ウェブライフ：不正アクセスの経緯と影響",
+    "en": "ウェブライフ: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "OEM顧客管理のアクセス制御に不備があり、8月14〜17日に不正アクセスを受けました。 最大7,425人が対象です。8月28日更新ではメール以外の氏名・住所・電話等の流出の可能性を否定しています。",
+    "en": "A customer-management access-control defect enabled unauthorized activity from August 14 to 17. Up to 7,425 people were affected; the August 28 update ruled out exposure of names, addresses, phone numbers and other fields, while email exposure remains possible."
+  },
+  "occurredAt": "2026-08-14",
+  "disclosedAt": "2026-08-18",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["implementation"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "OEM顧客管理のアクセス制御に不備があり、8月14〜17日に不正アクセスを受けました。",
+        "en": "A customer-management access-control defect enabled unauthorized activity from August 14 to 17."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "初報 §§1-4 / 続報 §§2-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大7,425人が対象です。8月28日更新ではメール以外の氏名・住所・電話等の流出の可能性を否定しています。",
+        "en": "Up to 7,425 people were affected; the August 28 update ruled out exposure of names, addresses, phone numbers and other fields, while email exposure remains possible."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "初報 §§1-4 / 続報 §§2-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-14",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-08-18",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "アクセス制御を修正し、同じ方法では取得できないことを確認しました。",
+        "en": "Access controls were fixed and the same retrieval path verified blocked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "初報 §§1-4 / 続報 §§2-4"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "アクセス制御の具体的実装と実際のメール持出し範囲は未公表です。",
+      "en": "The exact implementation defect and confirmed email extraction scope are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ウェブライフ：事故に関する公表資料",
+      "url": "https://web-life.co.jp/news/6551/",
+      "publisher": "ウェブライフ",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-009", "SEC-014"]
+}

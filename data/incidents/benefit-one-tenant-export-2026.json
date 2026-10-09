@@ -1,0 +1,109 @@
+{
+  "id": "benefit-one-tenant-export-2026",
+  "organization": "ベネフィット・ワン",
+  "title": {
+    "ja": "ベネフィット・ワン：不正アクセスの経緯と影響",
+    "en": "ベネフィット・ワン: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "ダウンロード機能の条件設定不備で他社従業員の情報を含めました。2025年10月に不具合を認知していましたが解消作業が適切に実施されていませんでした。 2,322企業・団体、13,460名が対象です。実際に取得した担当者は1社1名と公表しています。",
+    "en": "An export-condition defect included other tenants' employee data. A problem recognized in October 2025 had not been properly remediated. Affected data covers 2,322 organizations and 13,460 people; one representative from one customer downloaded it."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-30",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "implementation"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "ダウンロード機能の条件設定不備で他社従業員の情報を含めました。2025年10月に不具合を認知していましたが解消作業が適切に実施されていませんでした。",
+        "en": "An export-condition defect included other tenants' employee data. A problem recognized in October 2025 had not been properly remediated."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §1-2"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "2,322企業・団体、13,460名が対象です。実際に取得した担当者は1社1名と公表しています。",
+        "en": "Affected data covers 2,322 organizations and 13,460 people; one representative from one customer downloaded it."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §1-2"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "取得者に削除を依頼し、削除済みで転送・複製がないことを確認しました。",
+        "en": "The recipient deleted the data and reportedly had not forwarded or copied it."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §1-2"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "攻撃者の侵入を公表した事案ではありません。修正の未完了をパッケージのパッチ放置に置き換えません。",
+      "en": "This disclosure does not establish attacker intrusion; an unremediated application defect is not evidence of package patch neglect."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ベネフィット・ワン：事故に関する公表資料",
+      "url": "https://corp.benefit-one.co.jp/company/news/news/2026/20260930/20260930.pdf",
+      "publisher": "ベネフィット・ワン",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-014"
+  ]
+}
