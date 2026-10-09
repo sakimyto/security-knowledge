@@ -1,6 +1,6 @@
 # circleci-2023 — CircleCI：端末からSSOセッションを窃取
 
-事例 | Catalog: 0.5.0 | Record SHA-256: 2d1c93b1f50bbfabd2c13b0abd6cd587cc5dcf2ddb4569710345a43e627a9788
+事例 | Catalog: 0.6.0 | Record SHA-256: 2d1c93b1f50bbfabd2c13b0abd6cd587cc5dcf2ddb4569710345a43e627a9788
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

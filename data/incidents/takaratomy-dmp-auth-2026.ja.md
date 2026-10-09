@@ -1,6 +1,6 @@
 # takaratomy-dmp-auth-2026 — タカラトミー：情報の公開範囲・権限の問題
 
-事例 | Catalog: 0.5.0 | Record SHA-256: 246f6d4235208ee8bfc357fb9ce09e7fabdab234c1a96d994e8bb60a8a613526
+事例 | Catalog: 0.6.0 | Record SHA-256: 246f6d4235208ee8bfc357fb9ce09e7fabdab234c1a96d994e8bb60a8a613526
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

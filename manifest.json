@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "1.1.0",
-  "version": "0.5.0",
-  "updatedAt": "2026-10-09",
+  "schemaVersion": "1.2.0",
+  "version": "0.6.0",
+  "updatedAt": "2026-10-10",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,7 +10,7 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外136事例と16点検ルールを収録した選定DBです。公表日が2025-10-09〜2026-10-09の120事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。",
-    "en": "A curated database of 136 primary-source incident records and 16 inspection rules: 120 disclosed during 2025-10-09–2026-10-09, 11 outside that period, and 5 with unknown disclosure dates. A separate review ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics."
+    "ja": "一次資料を確認した国内外136事例と16点検ルールを収録した選定DBです。公表日が2025-10-10〜2026-10-10の120事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。 6事例に編集者の原因・対策仮説を別項目で収録しています。",
+    "en": "A curated database of 136 primary-source incident records and 16 inspection rules: 120 disclosed during 2025-10-10–2026-10-10, 11 outside that period, and 5 with unknown disclosure dates. A separate review ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records include separate editorial cause and mitigation hypotheses."
   }
 }

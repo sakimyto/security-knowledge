@@ -1,6 +1,6 @@
 # equifax-2017 — Equifax：未修正のApache Strutsから侵入
 
-事例 | Catalog: 0.5.0 | Record SHA-256: 0954c174783b7f496ec4a924a31369007b98b19efba85df4a6f8e54c2dfa7e5d
+事例 | Catalog: 0.6.0 | Record SHA-256: 0954c174783b7f496ec4a924a31369007b98b19efba85df4a6f8e54c2dfa7e5d
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

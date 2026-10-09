@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "1.1.0",
-  "version": "0.5.0",
-  "updatedAt": "2026-10-09",
+  "schemaVersion": "1.2.0",
+  "version": "0.6.0",
+  "updatedAt": "2026-10-10",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,8 +10,8 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外136事例と16点検ルールを収録した選定DBです。公表日が2025-10-09〜2026-10-09の120事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。",
-    "en": "A curated database of 136 primary-source incident records and 16 inspection rules: 120 disclosed during 2025-10-09–2026-10-09, 11 outside that period, and 5 with unknown disclosure dates. A separate review ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics."
+    "ja": "一次資料を確認した国内外136事例と16点検ルールを収録した選定DBです。公表日が2025-10-10〜2026-10-10の120事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。 6事例に編集者の原因・対策仮説を別項目で収録しています。",
+    "en": "A curated database of 136 primary-source incident records and 16 inspection rules: 120 disclosed during 2025-10-10–2026-10-10, 11 outside that period, and 5 with unknown disclosure dates. A separate review ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records include separate editorial cause and mitigation hypotheses."
   },
   "incidents": [
     {
@@ -995,7 +995,7 @@
       },
       "occurredAt": null,
       "disclosedAt": "2025-10-19",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-10",
       "outcome": "confirmed-breach",
       "categories": [
         "credentials"
@@ -1012,7 +1012,7 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "6. 調査結果 (1)"
+          "locator": "p.4 §6(1) 不正アクセス"
         },
         {
           "topic": "impact",
@@ -1025,6 +1025,18 @@
             "s1"
           ],
           "locator": "6. 調査結果 (2)–(5)"
+        },
+        {
+          "topic": "investigation-limit",
+          "text": {
+            "ja": "委託先PCのOS更新で侵入時点のログが失われ、取得経路の調査に限界があると公表しました。",
+            "en": "ASKUL reported that an OS update erased relevant contractor-PC logs, limiting the origin investigation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "p.4 §6(1) 調査により判明した事項"
         }
       ],
       "timeline": [
@@ -1079,8 +1091,8 @@
       "sources": [
         {
           "id": "s1",
-          "reviewedAt": "2026-10-02",
-          "title": "ランサムウェア攻撃に関する調査結果および今後の対応について",
+          "reviewedAt": "2026-10-10",
+          "title": "ランサムウェア攻撃の影響調査結果および安全性強化に向けた取り組みのご報告（第13報）",
           "url": "https://www.askullogist.co.jp/pdf/20251212.pdf",
           "publisher": "ASKUL",
           "publishedAt": "2025-12-12",
@@ -1094,6 +1106,100 @@
         "SEC-008",
         "SEC-009",
         "SEC-013"
+      ],
+      "hypotheses": [
+        {
+          "id": "contractor-endpoint-origin",
+          "kind": "cause",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "委託先端末から管理者の資格情報が取得された可能性を、調査候補として残します。",
+            "en": "Acquisition of administrator credentials from the contractor endpoint remains a candidate origin."
+          },
+          "basis": {
+            "ja": "委託先アカウントの悪用は確認されていますが、同PCの侵入時ログは失われています。",
+            "en": "Account misuse was confirmed, but relevant contractor-PC logs are unavailable."
+          },
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "p.4 §6(1)",
+          "assumptions": [
+            {
+              "ja": "該当する資格情報が、侵入前に委託先端末で使用・保存されていた場合。",
+              "en": "The credentials were used or stored on the contractor endpoint before entry."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "保全済みの端末・EDR記録で、初回ログイン前の資格情報読み取りや持ち出しを確認できる。",
+              "en": "Preserved endpoint or EDR records show credential access or transfer before the first login."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "別の保管先から同じ資格情報が流出した記録があり、端末由来という説明と時系列が合わない。",
+              "en": "A documented leak elsewhere and its timing contradict the endpoint-origin explanation."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "ログ欠落は侵害の証拠ではありません。フィッシングや別の保管先からの流出も排除できません。",
+              "en": "Missing logs are not proof of compromise; phishing and other storage origins remain possible."
+            }
+          ],
+          "ruleIds": [
+            "SEC-003",
+            "SEC-009"
+          ]
+        },
+        {
+          "id": "mfa-exception-closure",
+          "kind": "mitigation",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "委託先も含めてリモート管理のMFA例外をなくすと、ID・パスワードだけを使う侵入を減らせる可能性があります。",
+            "en": "Removing contractor MFA exceptions could reduce remote entry using passwords alone."
+          },
+          "basis": {
+            "ja": "悪用された委託先用管理者アカウントには、例外としてMFAが適用されていませんでした。",
+            "en": "The misused contractor administrator account had an MFA exception."
+          },
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "p.4 §6(1)",
+          "assumptions": [
+            {
+              "ja": "対象の侵入がID・パスワード認証に依存し、セッション窃取や別経路ではない場合。",
+              "en": "Entry depends on password authentication rather than stolen sessions or another path."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "自分の環境のIdP設定と認証ログで委託先・緊急用の例外がなく、隔離環境の架空アカウントでパスワードのみの接続が拒否される。",
+              "en": "IdP policies and logs show no contractor or emergency exception; a synthetic isolated test rejects password-only access."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "旧方式の認証や例外アカウントで追加要素なしに接続できる、または窃取されたセッションで接続できる。",
+              "en": "Legacy or exempt access bypasses the extra factor, or a stolen session still grants access."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "MFAだけで資格情報の流出、端末侵害、バックアップ破壊を防ぐことはできません。",
+              "en": "MFA alone does not prevent credential leaks, endpoint compromise, or backup destruction."
+            }
+          ],
+          "ruleIds": [
+            "SEC-002",
+            "SEC-005"
+          ]
+        }
       ]
     },
     {
@@ -1447,7 +1553,7 @@
       },
       "occurredAt": null,
       "disclosedAt": "2026-04-03",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-10",
       "outcome": "confirmed-breach",
       "categories": [
         "credentials",
@@ -1465,7 +1571,7 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "5. 原因"
+          "locator": "5. 攻撃の内容について"
         },
         {
           "topic": "expansion",
@@ -1477,7 +1583,7 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "5. 原因"
+          "locator": "5. 攻撃の内容について"
         },
         {
           "topic": "impact",
@@ -1489,7 +1595,7 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "3. 流出した可能性のある情報"
+          "locator": "2. 漏えいのおそれのある情報 / 3. 個人情報漏えいの可能性"
         }
       ],
       "timeline": [
@@ -1515,7 +1621,19 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "4. 対応"
+          "locator": "6. これまでに実施した安全措置 ①"
+        },
+        {
+          "topic": "credential-controls",
+          "text": {
+            "ja": "個人用アクセストークンへの依存を見直し、権限を限定した認証方式へ移行したと公表しています。",
+            "en": "CAMPFIRE reported replacing reliance on personal access tokens with restricted authentication."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "6. ② 1. 認証・権限管理の強化"
         }
       ],
       "prevention": {
@@ -1544,8 +1662,8 @@
       "sources": [
         {
           "id": "s1",
-          "reviewedAt": "2026-10-02",
-          "title": "不正アクセスに関する調査結果と再発防止策について",
+          "reviewedAt": "2026-10-10",
+          "title": "不正アクセス事案にかかる調査結果について",
           "url": "https://campfire.co.jp/press/2026/06/02/campfire/",
           "publisher": "CAMPFIRE",
           "publishedAt": "2026-06-02",
@@ -1558,6 +1676,55 @@
         "SEC-006",
         "SEC-008",
         "SEC-009"
+      ],
+      "hypotheses": [
+        {
+          "id": "break-credential-chain",
+          "kind": "mitigation",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "開発用GitHubの権限とクラウド管理権限を分け、共有できる資格情報を減らすと、漏えい後の到達範囲を縮められる可能性があります。",
+            "en": "Separating development GitHub authority from cloud administration and reducing reusable credentials could limit lateral reach."
+          },
+          "basis": {
+            "ja": "個人サーバー上のGitHub認証情報が悪用され、GitHubで得た情報からクラウドの資格情報を取得したと同社は判断しています。",
+            "en": "A GitHub credential on a personal server was misused; CAMPFIRE assesses that GitHub information led to cloud credentials."
+          },
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "5. 攻撃の内容について / 6. ②1",
+          "assumptions": [
+            {
+              "ja": "漏えいした開発用の権限から、別環境の認証情報や広い権限へ到達できる構成の場合。",
+              "en": "Development authority can reach credentials or broader privileges in another environment."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "秘密の値を読まず、権限一覧・資格情報の配置メタデータ・アクセスログから環境間の経路が制限されていると確認できる。",
+              "en": "Permission inventories, credential-location metadata, and logs show restricted cross-environment paths without reading secret values."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "開発用アカウントがクラウドの長期鍵や高権限のロールへ到達できる、または失効済みの旧鍵が引き続き使える。",
+              "en": "A development identity can reach long-lived cloud keys or privileged roles, or a revoked legacy key still works."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "公開資料だけでは当時の全権限を再現できません。分離や短期化は最初の漏えい自体を防ぐ保証にはなりません。",
+              "en": "Public evidence cannot reconstruct all past permissions; separation and short lifetimes do not guarantee prevention of the initial leak."
+            }
+          ],
+          "ruleIds": [
+            "SEC-004",
+            "SEC-005",
+            "SEC-006"
+          ]
+        }
       ]
     },
     {
@@ -5286,7 +5453,7 @@
       },
       "occurredAt": "2025-10-22",
       "disclosedAt": "2025-11-20",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-10",
       "outcome": "confirmed-breach",
       "categories": [
         "credentials",
@@ -5317,6 +5484,18 @@
             "s2"
           ],
           "locator": "Analyzing the Token Origin / At the Root of the Issue"
+        },
+        {
+          "topic": "investigation-limit",
+          "text": {
+            "ja": "Gainsightが公表したMandiant調査要約では、同社のログに活動中の攻撃者の証拠は見つからなかったと報告しています。過去の流出経路を特定した結果ではありません。",
+            "en": "The Mandiant summary published by Gainsight reports no active threat-actor evidence in its logs; it does not establish the historical leak origin."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3"
+          ],
+          "locator": "冒頭の調査結論（2025-12-05時点）"
         }
       ],
       "timeline": [
@@ -5371,7 +5550,7 @@
       "sources": [
         {
           "id": "s1",
-          "reviewedAt": "2026-10-02",
+          "reviewedAt": "2026-10-10",
           "title": "Salesforce–Gainsight Connected App Incident",
           "url": "https://communities.gainsight.com/community-news-2/salesforce-gainsight-connected-app-incident-29798",
           "publisher": "Gainsight",
@@ -5380,12 +5559,21 @@
         },
         {
           "id": "s2",
-          "reviewedAt": "2026-10-02",
+          "reviewedAt": "2026-10-10",
           "title": "How We Accelerated a Year of Security Work in Weeks",
           "url": "https://www.gainsight.com/blog/how-we-accelerated-a-year-of-security-work-in-weeks/",
           "publisher": "Gainsight",
           "publishedAt": "2026-01-02",
           "kind": "organization"
+        },
+        {
+          "id": "s3",
+          "title": "Mandiant Investigation Summary",
+          "url": "https://www.gainsight.com/blog/mandiant-investigation-summary/",
+          "publisher": "Gainsight（Mandiant調査要約）",
+          "kind": "organization",
+          "publishedAt": "2025-12-08",
+          "reviewedAt": "2026-10-10"
         }
       ],
       "ruleIds": [
@@ -5393,6 +5581,146 @@
         "SEC-005",
         "SEC-008",
         "SEC-009"
+      ],
+      "hypotheses": [
+        {
+          "id": "historical-internal-origin",
+          "kind": "cause",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "古いトークン群が、過去のGainsight管理下の環境から流出した可能性があります。",
+            "en": "The old token set may have leaked from a historical Gainsight-controlled environment."
+          },
+          "basis": {
+            "ja": "同社は、古いトークン群の取得元を特定できず、過去の内部流出と外部環境からの取得の2候補を示しています。",
+            "en": "Gainsight cannot identify the old token set’s origin and describes historical internal leakage and external acquisition as alternatives."
+          },
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "Analyzing the Token Origin / Where did these tokens come from?",
+          "assumptions": [
+            {
+              "ja": "当該トークン群が存在した時期に、その環境から情報を取得できる経路があった場合。",
+              "en": "An extraction path existed when the token set was present in that environment."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "当時の保全資料で、対象トークン群と持ち出し操作の時系列が一致する。",
+              "en": "Preserved historical records match the token set and extraction timeline."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "外部環境での取得が別の保全記録から確定し、内部由来という説明と矛盾する。",
+              "en": "Independent preserved evidence establishes an external origin incompatible with this explanation."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "当時のログがなく、公開資料だけでは検証できません。2025年の本体侵入を示すものではありません。",
+              "en": "Relevant historical logs are unavailable; public evidence cannot verify this or establish a 2025 platform breach."
+            }
+          ],
+          "ruleIds": [
+            "SEC-005",
+            "SEC-009"
+          ]
+        },
+        {
+          "id": "historical-external-origin",
+          "kind": "cause",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "古いトークン群が、Gainsightの管理外の環境・端末から取得された可能性があります。",
+            "en": "The old token set may have been acquired from external environments or endpoints outside Gainsight’s control."
+          },
+          "basis": {
+            "ja": "同社は、古いトークン群の取得元を特定できず、過去の内部流出と外部環境からの取得の2候補を示しています。",
+            "en": "Gainsight cannot identify the old token set’s origin and describes historical internal leakage and external acquisition as alternatives."
+          },
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "Where did these tokens come from?",
+          "assumptions": [
+            {
+              "ja": "当該トークンが外部の環境や端末でも扱われ、攻撃者がそこへ到達できた場合。",
+              "en": "The tokens were handled externally and the attacker could reach that location."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "外部環境の保全記録に当該トークンの利用と取得の痕跡があり、取得時期が合う。",
+              "en": "Preserved external records show matching token handling, acquisition, and timing."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "内部環境からの持ち出しが確定する、または候補の外部環境に当該トークンが存在しなかったと証明できる。",
+              "en": "An internal extraction is established, or the tokens demonstrably never existed at the proposed external location."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "候補を並べても同じ確率を意味しません。フィッシングや端末侵害という具体的手法は未特定です。",
+              "en": "Listing alternatives implies no equal probability; specific techniques such as phishing or endpoint compromise remain unidentified."
+            }
+          ],
+          "ruleIds": [
+            "SEC-005",
+            "SEC-009"
+          ]
+        },
+        {
+          "id": "legacy-token-revocation",
+          "kind": "mitigation",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "旧OAuthトークンの失効と更新時の再利用制御を検証すると、過去に漏れたトークンの再利用を抑えられる可能性があります。",
+            "en": "Verifying legacy OAuth revocation and refresh-token reuse controls could limit replay of historically leaked tokens."
+          },
+          "basis": {
+            "ja": "古いトークンが未失効の顧客環境で悪用され、同社は更新頻度と単回使用の更新トークンを導入したと説明しています。",
+            "en": "Old tokens remained usable in customer environments; Gainsight reported frequent rotation and single-use refresh tokens."
+          },
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "At the Root of the Issue / OAuth Token Lifecycle Management",
+          "assumptions": [
+            {
+              "ja": "API側でも旧トークンを失効でき、更新前後の全資格情報を制御できる場合。",
+              "en": "The API provider can revoke old tokens and all pre- and post-refresh credentials can be controlled."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "自分の隔離環境の架空トークンで、失効したaccess tokenと使用済みrefresh tokenが拒否され、接続先の失効記録とも一致する。",
+              "en": "Synthetic isolated tests reject revoked access tokens and consumed refresh tokens; provider revocation records agree."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "新しい鍵を発行しても旧鍵が通る、または更新トークンを再使用して新しいアクセス権を得られる。",
+              "en": "Old keys remain accepted after replacement, or reused refresh tokens issue new access authority."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "アプリ側の削除だけでは失効の証拠になりません。MFAやPKCEだけで窃取済みbearer tokenのAPI利用は止まりません。",
+              "en": "Application-side deletion does not prove revocation; MFA or PKCE alone does not stop an already stolen bearer token’s API use."
+            }
+          ],
+          "ruleIds": [
+            "SEC-005",
+            "SEC-008"
+          ]
+        }
       ]
     },
     {
@@ -10429,7 +10757,7 @@
       },
       "occurredAt": "2026-10-04",
       "disclosedAt": "2026-10-06",
-      "reviewedAt": "2026-10-09",
+      "reviewedAt": "2026-10-10",
       "outcome": "confirmed-breach",
       "categories": [
         "unknown"
@@ -10528,12 +10856,105 @@
           "publisher": "ニモカ",
           "kind": "organization",
           "publishedAt": "2026-10-06",
-          "reviewedAt": "2026-10-09"
+          "reviewedAt": "2026-10-10"
         }
       ],
       "ruleIds": [
         "SEC-009",
         "SEC-014"
+      ],
+      "hypotheses": [
+        {
+          "id": "legitimate-function-abuse",
+          "kind": "cause",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "第三者が正規の入力・通知機能を悪用した可能性を、侵入経路の候補として検討します。",
+            "en": "Abuse of the legitimate input and notification function is a candidate mechanism."
+          },
+          "basis": {
+            "ja": "身に覚えのないメールは、所定の入力に応じてサービスが登録先へ自動送信したものでした。",
+            "en": "The service sent unexpected emails to registered recipients in response to defined input."
+          },
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "p.1 §2 概要",
+          "assumptions": [
+            {
+              "ja": "攻撃者が正規フローに到達し、他人の登録情報に紐づく入力をサービスが受理した場合。",
+              "en": "The attacker reached the normal flow and it accepted input associated with another user."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "保全されたWeb・アプリログで、不正アクセスと同時刻の正規エンドポイント呼び出しや本人確認の不足が確認できる。",
+              "en": "Preserved web and application logs link unauthorized activity to normal endpoints and insufficient ownership checks."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "調査で別の侵入経路によるDB取得が確認され、メール送信はその後の別の動作だったと分かる。",
+              "en": "Investigation establishes database access through another path, with email as separate subsequent activity."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "通知メールは機能が動いた証拠であり、認可欠陥の証明ではありません。SQLインジェクションなど別経路も排除できません。",
+              "en": "Email proves the function ran, not an authorization flaw; other paths such as SQL injection remain possible."
+            }
+          ],
+          "ruleIds": [
+            "SEC-009",
+            "SEC-014"
+          ]
+        },
+        {
+          "id": "lookup-ownership-controls",
+          "kind": "mitigation",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "照会と通知の前に利用者と対象データの権利関係を確かめ、取得量を制限すると、正規機能の悪用を抑えられる可能性があります。",
+            "en": "Checking ownership before lookup and notification, plus retrieval limits, could curb legitimate-function abuse."
+          },
+          "basis": {
+            "ja": "公開照会サービスへの不正アクセスと、登録情報を含む自動メールが公表されています。",
+            "en": "The disclosure describes unauthorized public-service access and automated emails containing registration data."
+          },
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "p.1 §2 / p.2 §4",
+          "assumptions": [
+            {
+              "ja": "照会・通知の経路で、利用者とデータの関係をサーバー側で検証できる場合。",
+              "en": "Server-side ownership checks are available on lookup and notification paths."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "自分の隔離テスト環境で架空の2利用者を使い、他人のデータ照会・通知が拒否され、取得量制限が働く。",
+              "en": "Two synthetic users in an isolated environment cannot trigger each other’s lookup or notification; retrieval limits work."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "未認証や別利用者の入力で対象データが返る、または大量の照会・通知が制限なく通る。",
+              "en": "Unauthenticated or cross-user input returns data, or bulk lookups and notifications remain unrestricted."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "本人確認と制限が有効でも、サーバー侵害など別経路は残ります。事故当時の欠陥は未公表です。",
+              "en": "Server compromise and other paths remain possible despite these controls; the incident’s specific defect is undisclosed."
+            }
+          ],
+          "ruleIds": [
+            "SEC-014"
+          ]
+        }
       ]
     },
     {
@@ -11921,7 +12342,7 @@
       },
       "occurredAt": null,
       "disclosedAt": "2025-11-24",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-10",
       "outcome": "confirmed-breach",
       "categories": [
         "supply-chain",
@@ -11963,7 +12384,8 @@
             "en": "Incident disclosed."
           },
           "sourceIds": [
-            "s1"
+            "s1",
+            "s2"
           ]
         }
       ],
@@ -12007,12 +12429,21 @@
       "sources": [
         {
           "id": "s1",
-          "reviewedAt": "2026-10-02",
+          "reviewedAt": "2026-10-10",
           "title": "Root Cause Analysis: Shai-Hulud 2.0",
           "url": "https://blog.postman.com/engineering/root-cause-analysis-shai-halud-2-0/",
           "publisher": "Postman",
           "publishedAt": "2025-12-04",
           "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "title": "Shai-Hulud 2.0 npm supply-chain attack",
+          "url": "https://blog.postman.com/engineering/shai-hulud-2-0-npm-supply-chain-attack/",
+          "publisher": "Postman",
+          "kind": "organization",
+          "publishedAt": "2025-11-24",
+          "reviewedAt": "2026-10-10"
         }
       ],
       "ruleIds": [
@@ -12022,6 +12453,101 @@
         "SEC-007",
         "SEC-008",
         "SEC-009"
+      ],
+      "hypotheses": [
+        {
+          "id": "frozen-reviewed-dependencies",
+          "kind": "mitigation",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "レビュー済みのlockfileと固定インストールで、CIが意図せず新しい感染版を取得する機会を減らせる可能性があります。",
+            "en": "A reviewed lockfile and frozen install could reduce unintended adoption of newly compromised versions in CI."
+          },
+          "basis": {
+            "ja": "同社は、適切なlockfileを欠くビルドが感染版を取り込んだと説明しています。",
+            "en": "Postman attributes infected dependency installation to a build lacking an appropriate lockfile."
+          },
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "How did it happen?",
+          "assumptions": [
+            {
+              "ja": "承認済みの依存版が感染しておらず、lockfileの変更もレビューされる場合。",
+              "en": "Approved dependencies are not already infected and lockfile updates are reviewed."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "CI設定と自分の隔離環境のビルド記録で固定インストールを確認し、manifestとの不一致が黙って解決されず失敗する。",
+              "en": "CI configuration and isolated build records confirm frozen installation that fails on manifest mismatch."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "lockfileが無視・再生成される、または承認されたlockfile自体に感染版が含まれる。",
+              "en": "The lockfile is ignored or regenerated, or it already includes a compromised version."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "lockfileはコードの安全性を証明しません。依存更新の検証や公開権限の制限も必要です。",
+              "en": "Lockfiles do not prove code safety; dependency review and restricted publishing authority remain necessary."
+            }
+          ],
+          "ruleIds": [
+            "SEC-001",
+            "SEC-007"
+          ]
+        },
+        {
+          "id": "separate-publishing-authority",
+          "kind": "mitigation",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "依存コードを実行するCIから常設の公開用トークンを外し、公開ジョブの権限を限定すると、感染後の再配布を抑えられる可能性があります。",
+            "en": "Removing standing publishing tokens from dependency-executing CI and restricting release authority could curb malicious redistribution."
+          },
+          "basis": {
+            "ja": "感染したビルドが公開用トークンを悪用しました。同社はトークン失効とOIDCへの移行を公表しています。",
+            "en": "The infected build misused publishing authority; Postman reported revocation and an OIDC transition."
+          },
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "How did it happen? / What we have already done",
+          "assumptions": [
+            {
+              "ja": "ビルドと公開を分離でき、OIDCの発行条件を特定の承認済みワークフローに限定できる場合。",
+              "en": "Build and publishing can be separated and OIDC issuance restricted to an approved workflow."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "workflowの権限と公開元の設定で常設トークンがなく、承認されたジョブ以外に公開権限が発行されないと確認できる。",
+              "en": "Workflow permissions and publisher configuration show no standing token and deny release authority to other jobs."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "依存コードを実行する同じジョブで公開権限を使える、または旧トークン・別workflowでも公開できる。",
+              "en": "Dependency execution still shares publishing authority, or legacy tokens and other workflows can publish."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "OIDCへの置換だけでは不十分です。許可された公開ジョブやその成果物が改ざんされれば再配布のリスクが残ります。",
+              "en": "OIDC alone is insufficient; compromise of the trusted publishing job or artifact can still enable redistribution."
+            }
+          ],
+          "ruleIds": [
+            "SEC-004",
+            "SEC-005",
+            "SEC-007"
+          ]
+        }
       ]
     },
     {
@@ -15795,7 +16321,7 @@
       },
       "occurredAt": null,
       "disclosedAt": "2026-08-18",
-      "reviewedAt": "2026-10-09",
+      "reviewedAt": "2026-10-10",
       "outcome": "confirmed-breach",
       "categories": [
         "known-vulnerability"
@@ -15851,6 +16377,18 @@
             "s1"
           ],
           "locator": "3. 本件不正アクセスへの対応と再発防止策【実施済みの対策】"
+        },
+        {
+          "topic": "planned-controls",
+          "text": {
+            "ja": "直接公開を避ける構成、個人情報の最小化、更新期限と責任者の明確化を今後の対策として挙げています。",
+            "en": "VOISING lists reduced direct exposure, data minimization, and patch deadlines and ownership as planned controls."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "3. 今後の対策"
         }
       ],
       "prevention": {
@@ -15879,7 +16417,7 @@
       "sources": [
         {
           "id": "s1",
-          "reviewedAt": "2026-10-09",
+          "reviewedAt": "2026-10-10",
           "title": "不正アクセスによる情報流出に関するご報告（第4報）",
           "url": "https://voising-official.com/news/1015",
           "publisher": "VOISING",
@@ -15894,6 +16432,55 @@
         "SEC-008",
         "SEC-009",
         "SEC-012"
+      ],
+      "hypotheses": [
+        {
+          "id": "bi-exposure-and-patching",
+          "kind": "mitigation",
+          "status": "hypothesis",
+          "provenance": "editorial-analysis",
+          "statement": {
+            "ja": "BIへの外部到達を制限し、稼働版と修正適用の期限を照合すると、更新待ちの間の悪用機会を減らせる可能性があります。",
+            "en": "Restricting BI exposure and checking deployed versions against patch deadlines could reduce exploitation opportunities while awaiting updates."
+          },
+          "basis": {
+            "ja": "同社は修正適用が攻撃に間に合わなかったと説明し、直接公開を避ける構成を今後の対策に挙げています。",
+            "en": "VOISING reports delayed patching and plans to avoid direct Internet exposure."
+          },
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "1. 原因 / 3. 今後の対策",
+          "assumptions": [
+            {
+              "ja": "対象BIに修正が存在し、攻撃者の到達経路をアクセス制御で制限できる場合。",
+              "en": "A relevant fix exists and access controls can restrict the attacker’s reachable path."
+            }
+          ],
+          "supportingObservations": [
+            {
+              "ja": "自分の環境の経路設定、稼働版、修正適用記録を照合し、期限内の適用と許可した経路への限定を確認できる。",
+              "en": "Route configuration, deployed versions, and patch records demonstrate timely fixes and restricted paths."
+            }
+          ],
+          "contradictingObservations": [
+            {
+              "ja": "管理画面に想定外の公開経路が残る、修正が未適用、または例外の期限と担当が未設定である。",
+              "en": "Unexpected public paths, unapplied fixes, or ownerless and undated exceptions remain."
+            }
+          ],
+          "limitations": [
+            {
+              "ja": "製品名・CVEは未公表です。特定製品の推測はせず、経路制限で内部侵害や別の脆弱性まで防げるとは判断しません。",
+              "en": "Product and CVE are undisclosed; do not guess them or treat network restriction as protection from internal compromise or other flaws."
+            }
+          ],
+          "ruleIds": [
+            "SEC-001",
+            "SEC-006",
+            "SEC-008"
+          ]
+        }
       ]
     },
     {
@@ -18381,5 +18968,5 @@
       "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "79ef7a655dffd4ba0ead9d908a4bb7ceddf4e58e5025df7954b9e3ac6a813af1"
+  "contentHash": "89f795be65dd3fc98ef0beae56b067035824d39a3575e49e10f1858765681559"
 }

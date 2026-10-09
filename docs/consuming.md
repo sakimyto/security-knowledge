@@ -1,6 +1,6 @@
 # AI・サービスへの取り込み
 
-このSecurity Knowledgeの追加案には、国内外の49事例と15点検ルールを一次情報の出典付きで収録しています。利用するAIの機能に合わせて、URLの参照、ファイルの添付や貼り付け、JSONでの取り込みを選べます。点検に必要な対象環境の情報と、許可されたツールは利用者が用意してください。
+Security Knowledgeは、国内外の事故と点検ルールを一次情報の出典付きで収録しています。収録件数と対象期間はmanifest.jsonで確認できます。利用するAIの機能に合わせて、URLの参照、ファイルの添付や貼り付け、JSONでの取り込みを選べます。点検に必要な対象環境の情報と、許可されたツールは利用者が用意してください。
 
 ## 使い方を選ぶ
 
@@ -24,7 +24,7 @@
 | `discovery.json` | 形式・言語・バイト数・SHA-256・個別レコード・分野別資料のパス |
 | `catalog.json` / `index.json` | 全データ / レコードIDとハッシュの差分照合 |
 | `rules/SEC-xxx.json` / `.ja.md` / `.en.md` | 1ルールの適用条件、見る箇所、確認方法、修正の方向、完了の証拠、制約 |
-| `incidents/<id>.json` / `.ja.md` / `.en.md` | 1事例の主張、確度、出典、未確認事項、関連ルール |
+| `incidents/<id>.json` / `.ja.md` / `.en.md` | 1事例の主張、確度、出典、未確認事項、関連ルール、編集者の仮説がある場合はその根拠と検証観測 |
 | `packs/<surface>.ja.md` / `.en.md` | 指定分野の点検候補をまとめた資料 |
 | `rules.jsonl` / `incidents.jsonl` | 1行1件の完全なレコード。`kind`、`id`、`hash`、`record` を持つ |
 | `decision-tasks.jsonl` | 1ルール1行の選択式質問。標準配布は英語。ルールのID・ハッシュも保持 |
@@ -69,6 +69,14 @@ node scripts/report.mjs .local/report.json
 - `unverified`: 情報・権限・証拠・検証手段が不足している。未読の項目も含める。
 
 外部AIへ送る前に、入力から秘密の実値・認証Cookie・顧客データを除き、組織で許可した提供先と範囲を確認します。例や高いモデルconfidenceを、実際の点検の証拠にはしません。変更や送信の権限は、利用側の指示とツールで管理します。
+
+## 仮説を点検に使う
+
+Catalog Schema 1.2.0の任意フィールド `hypotheses` は、編集者による原因・対策の仮説です。`status: hypothesis` と `provenance: editorial-analysis` を、検索用に分割した資料にも引き継ぎます。未記載は未評価です。
+
+まず `basis`、`sourceIds`、`locator` で一次資料の出発点を確認します。次に `assumptions` を自分の環境に照合し、`supportingObservations` と `contradictingObservations` を調べます。記載した観測は取得済みの証拠ではありません。`limitations` を読み、証拠が不足すれば未確認を残します。事故の原因を自分の環境の観測から確定したり、仮説だけで点検を合格にしたりしません。
+
+`ruleIds` から従来の点検結果へ接続できます。Jevなどの選択式モデルには、仮説と取得した観測を分けて渡し、実環境の適用条件を評価します。原因・AI関与の事実集計は `claims` と `ai` を使い、`hypotheses` を混ぜません。report、inventory、decision-inputの形式版は変わりません。
 
 
 ## 初報日と候補の確認台帳

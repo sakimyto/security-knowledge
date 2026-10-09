@@ -56,6 +56,23 @@ export function validateCatalog(catalog, root = ROOT) {
         if (!sourceIds.has(id)) errors.push(`${incident.id}: missing source ${id}`)
       if (claim.sourceIds.length === 0) errors.push(`${incident.id}: each claim needs a source`)
     }
+    const hypothesisIds = new Set()
+    for (const hypothesis of incident.hypotheses ?? []) {
+      if (hypothesisIds.has(hypothesis.id))
+        errors.push(`${incident.id}: duplicate hypothesis ID ${hypothesis.id}`)
+      hypothesisIds.add(hypothesis.id)
+      for (const id of hypothesis.sourceIds)
+        if (!sourceIds.has(id)) errors.push(`${incident.id}: missing hypothesis source ${id}`)
+      if (
+        !hypothesis.sourceIds.some((id) =>
+          incident.sources.some((source) => source.id === id && source.kind !== 'secondary'),
+        )
+      )
+        errors.push(`${incident.id}: hypothesis needs a primary source`)
+      for (const id of hypothesis.ruleIds)
+        if (!incident.ruleIds.includes(id))
+          errors.push(`${incident.id}: hypothesis rule must be linked to this incident: ${id}`)
+    }
     for (const id of incident.ruleIds) {
       if (!ruleIds.has(id)) errors.push(`${incident.id}: missing rule ${id}`)
       else if (!catalog.rules.find((rule) => rule.id === id).incidentIds.includes(incident.id))

@@ -1,6 +1,6 @@
 # 2rinkan-api-2026 — 2りんかんイエローハット: unauthorized access and impact
 
-Incident | Catalog: 0.5.0 | Record SHA-256: b23feebb0460c883d9d52b449f48c4c1ad2f0da3ce64ee7816bfdab4bc972590
+Incident | Catalog: 0.6.0 | Record SHA-256: b23feebb0460c883d9d52b449f48c4c1ad2f0da3ce64ee7816bfdab4bc972590
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

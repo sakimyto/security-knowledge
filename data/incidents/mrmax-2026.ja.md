@@ -1,6 +1,6 @@
 # mrmax-2026 — MrMax：ソフトウェア機能の不正利用から会員情報が流出
 
-事例 | Catalog: 0.5.0 | Record SHA-256: 2d5eb51be91f991d6ed1d3ca8577fa0d12776c9ad167c05687fb282bb09bd4c4
+事例 | Catalog: 0.6.0 | Record SHA-256: 2d5eb51be91f991d6ed1d3ca8577fa0d12776c9ad167c05687fb282bb09bd4c4
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

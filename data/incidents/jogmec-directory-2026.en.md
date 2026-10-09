@@ -1,6 +1,6 @@
 # jogmec-directory-2026 — JOGMEC: unauthorized access and impact
 
-Incident | Catalog: 0.5.0 | Record SHA-256: 6ae43cd9737c3f48847260b919a7815a8ddef8ee03a956335ea647da7bcca61d
+Incident | Catalog: 0.6.0 | Record SHA-256: 6ae43cd9737c3f48847260b919a7815a8ddef8ee03a956335ea647da7bcca61d
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

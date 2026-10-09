@@ -11,7 +11,7 @@
   },
   "occurredAt": "2025-10-22",
   "disclosedAt": "2025-11-20",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-10",
   "outcome": "confirmed-breach",
   "categories": ["credentials", "unknown"],
   "cves": [],
@@ -35,6 +35,16 @@
       "status": "confirmed",
       "sourceIds": ["s2"],
       "locator": "Analyzing the Token Origin / At the Root of the Issue"
+    },
+    {
+      "topic": "investigation-limit",
+      "text": {
+        "ja": "Gainsightが公表したMandiant調査要約では、同社のログに活動中の攻撃者の証拠は見つからなかったと報告しています。過去の流出経路を特定した結果ではありません。",
+        "en": "The Mandiant summary published by Gainsight reports no active threat-actor evidence in its logs; it does not establish the historical leak origin."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s3"],
+      "locator": "冒頭の調査結論（2025-12-05時点）"
     }
   ],
   "timeline": [
@@ -83,7 +93,7 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-10",
       "title": "Salesforce–Gainsight Connected App Incident",
       "url": "https://communities.gainsight.com/community-news-2/salesforce-gainsight-connected-app-incident-29798",
       "publisher": "Gainsight",
@@ -92,13 +102,147 @@
     },
     {
       "id": "s2",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-10",
       "title": "How We Accelerated a Year of Security Work in Weeks",
       "url": "https://www.gainsight.com/blog/how-we-accelerated-a-year-of-security-work-in-weeks/",
       "publisher": "Gainsight",
       "publishedAt": "2026-01-02",
       "kind": "organization"
+    },
+    {
+      "id": "s3",
+      "title": "Mandiant Investigation Summary",
+      "url": "https://www.gainsight.com/blog/mandiant-investigation-summary/",
+      "publisher": "Gainsight（Mandiant調査要約）",
+      "kind": "organization",
+      "publishedAt": "2025-12-08",
+      "reviewedAt": "2026-10-10"
     }
   ],
-  "ruleIds": ["SEC-002", "SEC-005", "SEC-008", "SEC-009"]
+  "ruleIds": ["SEC-002", "SEC-005", "SEC-008", "SEC-009"],
+  "hypotheses": [
+    {
+      "id": "historical-internal-origin",
+      "kind": "cause",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "古いトークン群が、過去のGainsight管理下の環境から流出した可能性があります。",
+        "en": "The old token set may have leaked from a historical Gainsight-controlled environment."
+      },
+      "basis": {
+        "ja": "同社は、古いトークン群の取得元を特定できず、過去の内部流出と外部環境からの取得の2候補を示しています。",
+        "en": "Gainsight cannot identify the old token set’s origin and describes historical internal leakage and external acquisition as alternatives."
+      },
+      "sourceIds": ["s2"],
+      "locator": "Analyzing the Token Origin / Where did these tokens come from?",
+      "assumptions": [
+        {
+          "ja": "当該トークン群が存在した時期に、その環境から情報を取得できる経路があった場合。",
+          "en": "An extraction path existed when the token set was present in that environment."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "当時の保全資料で、対象トークン群と持ち出し操作の時系列が一致する。",
+          "en": "Preserved historical records match the token set and extraction timeline."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "外部環境での取得が別の保全記録から確定し、内部由来という説明と矛盾する。",
+          "en": "Independent preserved evidence establishes an external origin incompatible with this explanation."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "当時のログがなく、公開資料だけでは検証できません。2025年の本体侵入を示すものではありません。",
+          "en": "Relevant historical logs are unavailable; public evidence cannot verify this or establish a 2025 platform breach."
+        }
+      ],
+      "ruleIds": ["SEC-005", "SEC-009"]
+    },
+    {
+      "id": "historical-external-origin",
+      "kind": "cause",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "古いトークン群が、Gainsightの管理外の環境・端末から取得された可能性があります。",
+        "en": "The old token set may have been acquired from external environments or endpoints outside Gainsight’s control."
+      },
+      "basis": {
+        "ja": "同社は、古いトークン群の取得元を特定できず、過去の内部流出と外部環境からの取得の2候補を示しています。",
+        "en": "Gainsight cannot identify the old token set’s origin and describes historical internal leakage and external acquisition as alternatives."
+      },
+      "sourceIds": ["s2"],
+      "locator": "Where did these tokens come from?",
+      "assumptions": [
+        {
+          "ja": "当該トークンが外部の環境や端末でも扱われ、攻撃者がそこへ到達できた場合。",
+          "en": "The tokens were handled externally and the attacker could reach that location."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "外部環境の保全記録に当該トークンの利用と取得の痕跡があり、取得時期が合う。",
+          "en": "Preserved external records show matching token handling, acquisition, and timing."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "内部環境からの持ち出しが確定する、または候補の外部環境に当該トークンが存在しなかったと証明できる。",
+          "en": "An internal extraction is established, or the tokens demonstrably never existed at the proposed external location."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "候補を並べても同じ確率を意味しません。フィッシングや端末侵害という具体的手法は未特定です。",
+          "en": "Listing alternatives implies no equal probability; specific techniques such as phishing or endpoint compromise remain unidentified."
+        }
+      ],
+      "ruleIds": ["SEC-005", "SEC-009"]
+    },
+    {
+      "id": "legacy-token-revocation",
+      "kind": "mitigation",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "旧OAuthトークンの失効と更新時の再利用制御を検証すると、過去に漏れたトークンの再利用を抑えられる可能性があります。",
+        "en": "Verifying legacy OAuth revocation and refresh-token reuse controls could limit replay of historically leaked tokens."
+      },
+      "basis": {
+        "ja": "古いトークンが未失効の顧客環境で悪用され、同社は更新頻度と単回使用の更新トークンを導入したと説明しています。",
+        "en": "Old tokens remained usable in customer environments; Gainsight reported frequent rotation and single-use refresh tokens."
+      },
+      "sourceIds": ["s2"],
+      "locator": "At the Root of the Issue / OAuth Token Lifecycle Management",
+      "assumptions": [
+        {
+          "ja": "API側でも旧トークンを失効でき、更新前後の全資格情報を制御できる場合。",
+          "en": "The API provider can revoke old tokens and all pre- and post-refresh credentials can be controlled."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "自分の隔離環境の架空トークンで、失効したaccess tokenと使用済みrefresh tokenが拒否され、接続先の失効記録とも一致する。",
+          "en": "Synthetic isolated tests reject revoked access tokens and consumed refresh tokens; provider revocation records agree."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "新しい鍵を発行しても旧鍵が通る、または更新トークンを再使用して新しいアクセス権を得られる。",
+          "en": "Old keys remain accepted after replacement, or reused refresh tokens issue new access authority."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "アプリ側の削除だけでは失効の証拠になりません。MFAやPKCEだけで窃取済みbearer tokenのAPI利用は止まりません。",
+          "en": "Application-side deletion does not prove revocation; MFA or PKCE alone does not stop an already stolen bearer token’s API use."
+        }
+      ],
+      "ruleIds": ["SEC-005", "SEC-008"]
+    }
+  ]
 }

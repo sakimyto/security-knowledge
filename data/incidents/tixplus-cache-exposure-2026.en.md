@@ -1,6 +1,6 @@
 # tixplus-cache-exposure-2026 — チケットプラス: data exposure and authorization boundaries
 
-Incident | Catalog: 0.5.0 | Record SHA-256: 78ef10d60ce25b1ea9e90e272e45455f39777df6fae961bbb37a0653cd3aa031
+Incident | Catalog: 0.6.0 | Record SHA-256: 78ef10d60ce25b1ea9e90e272e45455f39777df6fae961bbb37a0653cd3aa031
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

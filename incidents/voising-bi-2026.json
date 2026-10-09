@@ -11,7 +11,7 @@
   },
   "occurredAt": null,
   "disclosedAt": "2026-08-18",
-  "reviewedAt": "2026-10-09",
+  "reviewedAt": "2026-10-10",
   "outcome": "confirmed-breach",
   "categories": ["known-vulnerability"],
   "cves": [],
@@ -57,6 +57,16 @@
       "status": "confirmed",
       "sourceIds": ["s1"],
       "locator": "3. 本件不正アクセスへの対応と再発防止策【実施済みの対策】"
+    },
+    {
+      "topic": "planned-controls",
+      "text": {
+        "ja": "直接公開を避ける構成、個人情報の最小化、更新期限と責任者の明確化を今後の対策として挙げています。",
+        "en": "VOISING lists reduced direct exposure, data minimization, and patch deadlines and ownership as planned controls."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "3. 今後の対策"
     }
   ],
   "prevention": {
@@ -83,7 +93,7 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-09",
+      "reviewedAt": "2026-10-10",
       "title": "不正アクセスによる情報流出に関するご報告（第4報）",
       "url": "https://voising-official.com/news/1015",
       "publisher": "VOISING",
@@ -91,5 +101,48 @@
       "kind": "organization"
     }
   ],
-  "ruleIds": ["SEC-001", "SEC-005", "SEC-006", "SEC-008", "SEC-009", "SEC-012"]
+  "ruleIds": ["SEC-001", "SEC-005", "SEC-006", "SEC-008", "SEC-009", "SEC-012"],
+  "hypotheses": [
+    {
+      "id": "bi-exposure-and-patching",
+      "kind": "mitigation",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "BIへの外部到達を制限し、稼働版と修正適用の期限を照合すると、更新待ちの間の悪用機会を減らせる可能性があります。",
+        "en": "Restricting BI exposure and checking deployed versions against patch deadlines could reduce exploitation opportunities while awaiting updates."
+      },
+      "basis": {
+        "ja": "同社は修正適用が攻撃に間に合わなかったと説明し、直接公開を避ける構成を今後の対策に挙げています。",
+        "en": "VOISING reports delayed patching and plans to avoid direct Internet exposure."
+      },
+      "sourceIds": ["s1"],
+      "locator": "1. 原因 / 3. 今後の対策",
+      "assumptions": [
+        {
+          "ja": "対象BIに修正が存在し、攻撃者の到達経路をアクセス制御で制限できる場合。",
+          "en": "A relevant fix exists and access controls can restrict the attacker’s reachable path."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "自分の環境の経路設定、稼働版、修正適用記録を照合し、期限内の適用と許可した経路への限定を確認できる。",
+          "en": "Route configuration, deployed versions, and patch records demonstrate timely fixes and restricted paths."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "管理画面に想定外の公開経路が残る、修正が未適用、または例外の期限と担当が未設定である。",
+          "en": "Unexpected public paths, unapplied fixes, or ownerless and undated exceptions remain."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "製品名・CVEは未公表です。特定製品の推測はせず、経路制限で内部侵害や別の脆弱性まで防げるとは判断しません。",
+          "en": "Product and CVE are undisclosed; do not guess them or treat network restriction as protection from internal compromise or other flaws."
+        }
+      ],
+      "ruleIds": ["SEC-001", "SEC-006", "SEC-008"]
+    }
+  ]
 }

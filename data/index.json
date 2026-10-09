@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "1.1.0",
-  "version": "0.5.0",
-  "updatedAt": "2026-10-09",
+  "schemaVersion": "1.2.0",
+  "version": "0.6.0",
+  "updatedAt": "2026-10-10",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,10 +10,10 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外136事例と16点検ルールを収録した選定DBです。公表日が2025-10-09〜2026-10-09の120事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。",
-    "en": "A curated database of 136 primary-source incident records and 16 inspection rules: 120 disclosed during 2025-10-09–2026-10-09, 11 outside that period, and 5 with unknown disclosure dates. A separate review ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics."
+    "ja": "一次資料を確認した国内外136事例と16点検ルールを収録した選定DBです。公表日が2025-10-10〜2026-10-10の120事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。 6事例に編集者の原因・対策仮説を別項目で収録しています。",
+    "en": "A curated database of 136 primary-source incident records and 16 inspection rules: 120 disclosed during 2025-10-10–2026-10-10, 11 outside that period, and 5 with unknown disclosure dates. A separate review ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records include separate editorial cause and mitigation hypotheses."
   },
-  "contentHash": "79ef7a655dffd4ba0ead9d908a4bb7ceddf4e58e5025df7954b9e3ac6a813af1",
+  "contentHash": "89f795be65dd3fc98ef0beae56b067035824d39a3575e49e10f1858765681559",
   "entries": [
     {
       "kind": "incident",
@@ -53,7 +53,7 @@
     {
       "kind": "incident",
       "id": "askul-2025",
-      "hash": "8807f2dc9a76a9250318dde15e88f1d97a29fa9f39feda176246710b552f4235"
+      "hash": "63068f9fc0320bbeaa13c8e8d526c9ea03fa97164d4c6d81740716b72c0d1a75"
     },
     {
       "kind": "incident",
@@ -73,7 +73,7 @@
     {
       "kind": "incident",
       "id": "campfire-2026",
-      "hash": "6ebd0adb88b55b1f734f6be5eb9eb9168c3977c7504da6a2c91087448117eca6"
+      "hash": "40187f45d26d88b144eab0b0497cb9712d4e45b8b0a3a7379a75942c9acbb41f"
     },
     {
       "kind": "incident",
@@ -233,7 +233,7 @@
     {
       "kind": "incident",
       "id": "gainsight-oauth-2025",
-      "hash": "6ae22e8b926ab069ccfd74df1b7d2ab4ca50731bf2e538e801468489502b486f"
+      "hash": "5af6ac84565367170f28cea31fdedb8a045bd9f37761296b596d049b64f0693f"
     },
     {
       "kind": "incident",
@@ -448,7 +448,7 @@
     {
       "kind": "incident",
       "id": "nimoca-2026",
-      "hash": "54b5235683f319ab5ebb6d12a341487a4f7ba86e0d0692cb2422a69d03320725"
+      "hash": "b2b77459abf6e36d515a3dc3b8bb0969b2c8545b71a1dfad88bff40632789bf1"
     },
     {
       "kind": "incident",
@@ -508,7 +508,7 @@
     {
       "kind": "incident",
       "id": "postman-shai-hulud-2025",
-      "hash": "f8b1047dbd4c170d0117eafc65394441c2892db067107bafdc7a1c86abf7ea6a"
+      "hash": "aeeddeafe5bc1269737caf812238694838a31a2f921cf15994f493e2dc4b1ae8"
     },
     {
       "kind": "incident",
@@ -663,7 +663,7 @@
     {
       "kind": "incident",
       "id": "voising-bi-2026",
-      "hash": "48daefbddb8d8e9ee7ed01be4c9f20e3de34a0bc7dda675095f4446e0299b919"
+      "hash": "a6b41828823ceaa34aa28db66570fb4ffea27ebd4dde5425f806be774e0d1feb"
     },
     {
       "kind": "incident",
