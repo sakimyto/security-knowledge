@@ -42,6 +42,13 @@ const labels = {
     confirmed: '公表で確認',
     inferred: '推定',
     unknown: '不明',
+    hypotheses: '原因・対策の仮説',
+    cause: '原因仮説',
+    mitigation: '対策仮説',
+    basis: '一次資料から確認した出発点',
+    assumptions: '成立に必要な条件',
+    supportingObservations: '仮説を支持する観測',
+    contradictingObservations: '仮説を見直す観測',
   },
   en: {
     rule: 'Inspection rule',
@@ -63,6 +70,13 @@ const labels = {
     confirmed: 'Reported fact',
     inferred: 'Assessment',
     unknown: 'Unknown',
+    hypotheses: 'Cause and mitigation hypotheses',
+    cause: 'Cause hypothesis',
+    mitigation: 'Mitigation hypothesis',
+    basis: 'Primary-source starting point',
+    assumptions: 'Required assumptions',
+    supportingObservations: 'Observations that would support the hypothesis',
+    contradictingObservations: 'Observations that would challenge the hypothesis',
   },
 }
 
@@ -124,6 +138,39 @@ export function renderRecord(record, kind, locale, catalog) {
         )
       lines.push('')
     }
+    if (record.hypotheses?.length) {
+      lines.push(
+        `## ${l.hypotheses}`,
+        '',
+        locale === 'ja'
+          ? '以下は編集者の仮説です。成立条件と観測は未検証であり、事故の確定原因・公表済みの対策・点検の合格を示しません。'
+          : 'These are editorial hypotheses. Assumptions and observations are unverified, not established incident causes, reported responses, or inspection passes.',
+        '',
+      )
+      for (const hypothesis of record.hypotheses) {
+        lines.push(
+          `### ${hypothesis.id} — ${l[hypothesis.kind]}`,
+          '',
+          `[hypothesis / editorial-analysis] ${md(hypothesis.statement[locale])}`,
+          '',
+          `**${l.basis}:** ${md(hypothesis.basis[locale])} (${hypothesis.sourceIds.join(', ')}; ${md(hypothesis.locator)})`,
+          '',
+        )
+        for (const field of [
+          'assumptions',
+          'supportingObservations',
+          'contradictingObservations',
+          'limitations',
+        ])
+          lines.push(
+            `#### ${l[field]}`,
+            '',
+            ...hypothesis[field].map((item) => `- ${md(item[locale])}`),
+            '',
+          )
+        lines.push(`Rules: ${hypothesis.ruleIds.join(', ')}`, '')
+      }
+    }
     lines.push(
       `## ${l.timeline}`,
       '',
@@ -174,6 +221,10 @@ function startHere(catalog, locale) {
     ja
       ? 'Jevのような判断モデルには decision-tasks.jsonl の選択式質問と、実環境の観測情報を渡します。質問は項目ごとに分かれています。確率やconfidenceは確認の優先順位に使い、証拠や合格として扱いません。'
       : 'For decision models such as Jev, use the atomic Choice questions in decision-tasks.jsonl together with actual environment observations. Probabilities and confidence prioritize review; they are not inspection evidence or a pass.',
+    '',
+    ja
+      ? '事例にhypothesesがある場合は、編集者による原因・対策の仮説です。basisと出典を読み、assumptionsを確認し、支持・反証の観測を自分の環境で調べます。仮説や未取得の観測を確認済みの原因・AI関与・点検の合格へ変換せず、証拠不足は未確認にします。未記載は未評価です。'
+      : 'Incident hypotheses are editorial cause or mitigation proposals. Read basis and sources, check assumptions, and investigate supporting and contradicting observations in your own environment. Do not promote hypotheses or uncollected observations into confirmed causes, AI attribution, or inspection passes. Missing evidence stays unverified; an absent field means not assessed.',
     '',
     `## ${ja ? '利用者が用意する情報' : 'Owner-provided context'}`,
     '',

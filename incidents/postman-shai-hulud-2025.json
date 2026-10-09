@@ -11,7 +11,7 @@
   },
   "occurredAt": null,
   "disclosedAt": "2025-11-24",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-10",
   "outcome": "confirmed-breach",
   "categories": ["supply-chain", "credentials", "configuration"],
   "cves": [],
@@ -44,7 +44,7 @@
         "ja": "この事案を公表。",
         "en": "Incident disclosed."
       },
-      "sourceIds": ["s1"]
+      "sourceIds": ["s1", "s2"]
     }
   ],
   "reportedActions": [
@@ -83,13 +83,106 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-10",
       "title": "Root Cause Analysis: Shai-Hulud 2.0",
       "url": "https://blog.postman.com/engineering/root-cause-analysis-shai-halud-2-0/",
       "publisher": "Postman",
       "publishedAt": "2025-12-04",
       "kind": "organization"
+    },
+    {
+      "id": "s2",
+      "title": "Shai-Hulud 2.0 npm supply-chain attack",
+      "url": "https://blog.postman.com/engineering/shai-hulud-2-0-npm-supply-chain-attack/",
+      "publisher": "Postman",
+      "kind": "organization",
+      "publishedAt": "2025-11-24",
+      "reviewedAt": "2026-10-10"
     }
   ],
-  "ruleIds": ["SEC-001", "SEC-004", "SEC-005", "SEC-007", "SEC-008", "SEC-009"]
+  "ruleIds": ["SEC-001", "SEC-004", "SEC-005", "SEC-007", "SEC-008", "SEC-009"],
+  "hypotheses": [
+    {
+      "id": "frozen-reviewed-dependencies",
+      "kind": "mitigation",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "レビュー済みのlockfileと固定インストールで、CIが意図せず新しい感染版を取得する機会を減らせる可能性があります。",
+        "en": "A reviewed lockfile and frozen install could reduce unintended adoption of newly compromised versions in CI."
+      },
+      "basis": {
+        "ja": "同社は、適切なlockfileを欠くビルドが感染版を取り込んだと説明しています。",
+        "en": "Postman attributes infected dependency installation to a build lacking an appropriate lockfile."
+      },
+      "sourceIds": ["s1"],
+      "locator": "How did it happen?",
+      "assumptions": [
+        {
+          "ja": "承認済みの依存版が感染しておらず、lockfileの変更もレビューされる場合。",
+          "en": "Approved dependencies are not already infected and lockfile updates are reviewed."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "CI設定と自分の隔離環境のビルド記録で固定インストールを確認し、manifestとの不一致が黙って解決されず失敗する。",
+          "en": "CI configuration and isolated build records confirm frozen installation that fails on manifest mismatch."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "lockfileが無視・再生成される、または承認されたlockfile自体に感染版が含まれる。",
+          "en": "The lockfile is ignored or regenerated, or it already includes a compromised version."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "lockfileはコードの安全性を証明しません。依存更新の検証や公開権限の制限も必要です。",
+          "en": "Lockfiles do not prove code safety; dependency review and restricted publishing authority remain necessary."
+        }
+      ],
+      "ruleIds": ["SEC-001", "SEC-007"]
+    },
+    {
+      "id": "separate-publishing-authority",
+      "kind": "mitigation",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "依存コードを実行するCIから常設の公開用トークンを外し、公開ジョブの権限を限定すると、感染後の再配布を抑えられる可能性があります。",
+        "en": "Removing standing publishing tokens from dependency-executing CI and restricting release authority could curb malicious redistribution."
+      },
+      "basis": {
+        "ja": "感染したビルドが公開用トークンを悪用しました。同社はトークン失効とOIDCへの移行を公表しています。",
+        "en": "The infected build misused publishing authority; Postman reported revocation and an OIDC transition."
+      },
+      "sourceIds": ["s1"],
+      "locator": "How did it happen? / What we have already done",
+      "assumptions": [
+        {
+          "ja": "ビルドと公開を分離でき、OIDCの発行条件を特定の承認済みワークフローに限定できる場合。",
+          "en": "Build and publishing can be separated and OIDC issuance restricted to an approved workflow."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "workflowの権限と公開元の設定で常設トークンがなく、承認されたジョブ以外に公開権限が発行されないと確認できる。",
+          "en": "Workflow permissions and publisher configuration show no standing token and deny release authority to other jobs."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "依存コードを実行する同じジョブで公開権限を使える、または旧トークン・別workflowでも公開できる。",
+          "en": "Dependency execution still shares publishing authority, or legacy tokens and other workflows can publish."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "OIDCへの置換だけでは不十分です。許可された公開ジョブやその成果物が改ざんされれば再配布のリスクが残ります。",
+          "en": "OIDC alone is insufficient; compromise of the trusted publishing job or artifact can still enable redistribution."
+        }
+      ],
+      "ruleIds": ["SEC-004", "SEC-005", "SEC-007"]
+    }
+  ]
 }

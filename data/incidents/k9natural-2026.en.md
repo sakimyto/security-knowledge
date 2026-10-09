@@ -1,6 +1,6 @@
 # k9natural-2026 — K9ナチュラルジャパン: unauthorized access and impact
 
-Incident | Catalog: 0.5.0 | Record SHA-256: 048e25cb59b3ad44c47338b60c3a730db097b72050680be8d5b636f4ddf2177f
+Incident | Catalog: 0.6.0 | Record SHA-256: 048e25cb59b3ad44c47338b60c3a730db097b72050680be8d5b636f4ddf2177f
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

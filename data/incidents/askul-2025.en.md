@@ -1,6 +1,6 @@
 # askul-2025 — ASKUL: access through an MFA exception
 
-Incident | Catalog: 0.5.0 | Record SHA-256: 8807f2dc9a76a9250318dde15e88f1d97a29fa9f39feda176246710b552f4235
+Incident | Catalog: 0.6.0 | Record SHA-256: 63068f9fc0320bbeaa13c8e8d526c9ea03fa97164d4c6d81740716b72c0d1a75
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
@@ -8,18 +8,71 @@ Stolen credentials for a contractor administrator account without MFA enabled a 
 
 Organization: ASKUL | Outcome: confirmed-breach
 
-Occurred: unknown | Disclosed: 2025-10-19 | Reviewed: 2026-10-02
+Occurred: unknown | Disclosed: 2025-10-19 | Reviewed: 2026-10-10
 
 Categories: credentials | CVEs: unspecified
 
 ## Sourced claims
 
-- [confirmed / Reported fact] A contractor account was misused; the original credential leak remains unresolved. (s1; 6. 調査結果 \(1\))
+- [confirmed / Reported fact] A contractor account was misused; the original credential leak remains unresolved. (s1; p.4 §6\(1\) 不正アクセス)
 - [confirmed / Reported fact] Some servers lacked EDR and continuous monitoring; encrypted or deleted backups impeded recovery. (s1; 6. 調査結果 \(2\)–\(5\))
+- [confirmed / Reported fact] ASKUL reported that an OS update erased relevant contractor-PC logs, limiting the origin investigation. (s1; p.4 §6\(1\) 調査により判明した事項)
 
 ## Reported actions
 
 - [confirmed / Reported fact] ASKUL reported credential resets, MFA rollout, and environment rebuilding. (s1; 7. 対応状況)
+
+## Cause and mitigation hypotheses
+
+These are editorial hypotheses. Assumptions and observations are unverified, not established incident causes, reported responses, or inspection passes.
+
+### contractor-endpoint-origin — Cause hypothesis
+
+[hypothesis / editorial-analysis] Acquisition of administrator credentials from the contractor endpoint remains a candidate origin.
+
+**Primary-source starting point:** Account misuse was confirmed, but relevant contractor-PC logs are unavailable. (s1; p.4 §6\(1\))
+
+#### Required assumptions
+
+- The credentials were used or stored on the contractor endpoint before entry.
+
+#### Observations that would support the hypothesis
+
+- Preserved endpoint or EDR records show credential access or transfer before the first login.
+
+#### Observations that would challenge the hypothesis
+
+- A documented leak elsewhere and its timing contradict the endpoint-origin explanation.
+
+#### Limitations
+
+- Missing logs are not proof of compromise; phishing and other storage origins remain possible.
+
+Rules: SEC-003, SEC-009
+
+### mfa-exception-closure — Mitigation hypothesis
+
+[hypothesis / editorial-analysis] Removing contractor MFA exceptions could reduce remote entry using passwords alone.
+
+**Primary-source starting point:** The misused contractor administrator account had an MFA exception. (s1; p.4 §6\(1\))
+
+#### Required assumptions
+
+- Entry depends on password authentication rather than stolen sessions or another path.
+
+#### Observations that would support the hypothesis
+
+- IdP policies and logs show no contractor or emergency exception; a synthetic isolated test rejects password-only access.
+
+#### Observations that would challenge the hypothesis
+
+- Legacy or exempt access bypasses the extra factor, or a stolen session still grants access.
+
+#### Limitations
+
+- MFA alone does not prevent credential leaks, endpoint compromise, or backup destruction.
+
+Rules: SEC-002, SEC-005
 
 ## Timeline
 
@@ -41,4 +94,4 @@ Rules: SEC-002, SEC-003, SEC-005, SEC-008, SEC-009, SEC-013
 
 ## Sources
 
-- s1: [ランサムウェア攻撃に関する調査結果および今後の対応について](https://www.askullogist.co.jp/pdf/20251212.pdf) — ASKUL; organization; published: 2025-12-12; reviewed: 2026-10-02
+- s1: [ランサムウェア攻撃の影響調査結果および安全性強化に向けた取り組みのご報告（第13報）](https://www.askullogist.co.jp/pdf/20251212.pdf) — ASKUL; organization; published: 2025-12-12; reviewed: 2026-10-10

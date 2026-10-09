@@ -1,6 +1,6 @@
 # rakuten-drive-2026 — Rakuten Drive: stolen administrator credentials used to access stored data
 
-Incident | Catalog: 0.5.0 | Record SHA-256: ff4a458d1d49a0b46ed75c35487168210a14913f2c385e870c264853e6767ef8
+Incident | Catalog: 0.6.0 | Record SHA-256: ff4a458d1d49a0b46ed75c35487168210a14913f2c385e870c264853e6767ef8
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

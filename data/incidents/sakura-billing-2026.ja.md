@@ -1,6 +1,6 @@
 # sakura-billing-2026 — さくらインターネット：請求情報DBへの別の不正アクセス
 
-事例 | Catalog: 0.5.0 | Record SHA-256: 8cc850b7d26f6bd6fdee359326dcd9d92dc14d5c20b33ff93fef8e2e7067dc15
+事例 | Catalog: 0.6.0 | Record SHA-256: 8cc850b7d26f6bd6fdee359326dcd9d92dc14d5c20b33ff93fef8e2e7067dc15
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

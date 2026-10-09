@@ -11,7 +11,7 @@
   },
   "occurredAt": "2026-10-04",
   "disclosedAt": "2026-10-06",
-  "reviewedAt": "2026-10-09",
+  "reviewedAt": "2026-10-10",
   "outcome": "confirmed-breach",
   "categories": ["unknown"],
   "cves": [],
@@ -96,8 +96,92 @@
       "publisher": "ニモカ",
       "kind": "organization",
       "publishedAt": "2026-10-06",
-      "reviewedAt": "2026-10-09"
+      "reviewedAt": "2026-10-10"
     }
   ],
-  "ruleIds": ["SEC-009", "SEC-014"]
+  "ruleIds": ["SEC-009", "SEC-014"],
+  "hypotheses": [
+    {
+      "id": "legitimate-function-abuse",
+      "kind": "cause",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "第三者が正規の入力・通知機能を悪用した可能性を、侵入経路の候補として検討します。",
+        "en": "Abuse of the legitimate input and notification function is a candidate mechanism."
+      },
+      "basis": {
+        "ja": "身に覚えのないメールは、所定の入力に応じてサービスが登録先へ自動送信したものでした。",
+        "en": "The service sent unexpected emails to registered recipients in response to defined input."
+      },
+      "sourceIds": ["s1"],
+      "locator": "p.1 §2 概要",
+      "assumptions": [
+        {
+          "ja": "攻撃者が正規フローに到達し、他人の登録情報に紐づく入力をサービスが受理した場合。",
+          "en": "The attacker reached the normal flow and it accepted input associated with another user."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "保全されたWeb・アプリログで、不正アクセスと同時刻の正規エンドポイント呼び出しや本人確認の不足が確認できる。",
+          "en": "Preserved web and application logs link unauthorized activity to normal endpoints and insufficient ownership checks."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "調査で別の侵入経路によるDB取得が確認され、メール送信はその後の別の動作だったと分かる。",
+          "en": "Investigation establishes database access through another path, with email as separate subsequent activity."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "通知メールは機能が動いた証拠であり、認可欠陥の証明ではありません。SQLインジェクションなど別経路も排除できません。",
+          "en": "Email proves the function ran, not an authorization flaw; other paths such as SQL injection remain possible."
+        }
+      ],
+      "ruleIds": ["SEC-009", "SEC-014"]
+    },
+    {
+      "id": "lookup-ownership-controls",
+      "kind": "mitigation",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "照会と通知の前に利用者と対象データの権利関係を確かめ、取得量を制限すると、正規機能の悪用を抑えられる可能性があります。",
+        "en": "Checking ownership before lookup and notification, plus retrieval limits, could curb legitimate-function abuse."
+      },
+      "basis": {
+        "ja": "公開照会サービスへの不正アクセスと、登録情報を含む自動メールが公表されています。",
+        "en": "The disclosure describes unauthorized public-service access and automated emails containing registration data."
+      },
+      "sourceIds": ["s1"],
+      "locator": "p.1 §2 / p.2 §4",
+      "assumptions": [
+        {
+          "ja": "照会・通知の経路で、利用者とデータの関係をサーバー側で検証できる場合。",
+          "en": "Server-side ownership checks are available on lookup and notification paths."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "自分の隔離テスト環境で架空の2利用者を使い、他人のデータ照会・通知が拒否され、取得量制限が働く。",
+          "en": "Two synthetic users in an isolated environment cannot trigger each other’s lookup or notification; retrieval limits work."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "未認証や別利用者の入力で対象データが返る、または大量の照会・通知が制限なく通る。",
+          "en": "Unauthenticated or cross-user input returns data, or bulk lookups and notifications remain unrestricted."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "本人確認と制限が有効でも、サーバー侵害など別経路は残ります。事故当時の欠陥は未公表です。",
+          "en": "Server compromise and other paths remain possible despite these controls; the incident’s specific defect is undisclosed."
+        }
+      ],
+      "ruleIds": ["SEC-014"]
+    }
+  ]
 }

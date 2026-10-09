@@ -1,6 +1,6 @@
 # gmo-infoq-2026 — infoQ：ソフトウェアの脆弱性から侵入されポイントも不正交換
 
-事例 | Catalog: 0.5.0 | Record SHA-256: 13871c3484b17db5ae5e564dbecdbb4f793742076960ad9cee96ebd0d5ded20e
+事例 | Catalog: 0.6.0 | Record SHA-256: 13871c3484b17db5ae5e564dbecdbb4f793742076960ad9cee96ebd0d5ded20e
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

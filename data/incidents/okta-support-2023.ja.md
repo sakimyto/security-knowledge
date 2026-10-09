@@ -1,6 +1,6 @@
 # okta-support-2023 — Okta：サポート添付ファイルのセッション情報を悪用
 
-事例 | Catalog: 0.5.0 | Record SHA-256: ce2a745c071cd0822922d4da150d4c8c22b9b85503b2fc9041c1761718ea25de
+事例 | Catalog: 0.6.0 | Record SHA-256: ce2a745c071cd0822922d4da150d4c8c22b9b85503b2fc9041c1761718ea25de
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

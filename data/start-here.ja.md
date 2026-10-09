@@ -1,12 +1,14 @@
 # Security Knowledgeの使い方
 
-Catalog: 0.5.0 | Reviewed: 2026-10-09 | 16 rules / 136 incidents
+Catalog: 0.6.0 | Reviewed: 2026-10-10 | 16 rules / 136 incidents
 
 URLを読めるAIはこの案内と discovery.json を取得します。URLを読めないAIには、このファイルと必要なルールのMarkdownを添付または貼り付けてください。小さいモデルは1ルールずつ読み、結果を外部に保存してから次へ進めます。
 
 アプリやCIへの取り込みには rules.jsonl と incidents.jsonl を使えます。1行が1レコードで、`record`は既存のJSON、`hash`はレコードのSHA-256です。ファイル形式を読めることと、点検を実行できることは別です。
 
 Jevのような判断モデルには decision-tasks.jsonl の選択式質問と、実環境の観測情報を渡します。質問は項目ごとに分かれています。確率やconfidenceは確認の優先順位に使い、証拠や合格として扱いません。
+
+事例にhypothesesがある場合は、編集者による原因・対策の仮説です。basisと出典を読み、assumptionsを確認し、支持・反証の観測を自分の環境で調べます。仮説や未取得の観測を確認済みの原因・AI関与・点検の合格へ変換せず、証拠不足は未確認にします。未記載は未評価です。
 
 ## 利用者が用意する情報
 

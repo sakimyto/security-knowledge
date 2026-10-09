@@ -11,7 +11,7 @@
   },
   "occurredAt": null,
   "disclosedAt": "2026-04-03",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-10",
   "outcome": "confirmed-breach",
   "categories": [
     "credentials",
@@ -29,7 +29,7 @@
       "sourceIds": [
         "s1"
       ],
-      "locator": "5. 原因"
+      "locator": "5. 攻撃の内容について"
     },
     {
       "topic": "expansion",
@@ -41,7 +41,7 @@
       "sourceIds": [
         "s1"
       ],
-      "locator": "5. 原因"
+      "locator": "5. 攻撃の内容について"
     },
     {
       "topic": "impact",
@@ -53,7 +53,7 @@
       "sourceIds": [
         "s1"
       ],
-      "locator": "3. 流出した可能性のある情報"
+      "locator": "2. 漏えいのおそれのある情報 / 3. 個人情報漏えいの可能性"
     }
   ],
   "timeline": [
@@ -79,7 +79,19 @@
       "sourceIds": [
         "s1"
       ],
-      "locator": "4. 対応"
+      "locator": "6. これまでに実施した安全措置 ①"
+    },
+    {
+      "topic": "credential-controls",
+      "text": {
+        "ja": "個人用アクセストークンへの依存を見直し、権限を限定した認証方式へ移行したと公表しています。",
+        "en": "CAMPFIRE reported replacing reliance on personal access tokens with restricted authentication."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "6. ② 1. 認証・権限管理の強化"
     }
   ],
   "prevention": {
@@ -108,8 +120,8 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
-      "title": "不正アクセスに関する調査結果と再発防止策について",
+      "reviewedAt": "2026-10-10",
+      "title": "不正アクセス事案にかかる調査結果について",
       "url": "https://campfire.co.jp/press/2026/06/02/campfire/",
       "publisher": "CAMPFIRE",
       "publishedAt": "2026-06-02",
@@ -122,5 +134,54 @@
     "SEC-006",
     "SEC-008",
     "SEC-009"
+  ],
+  "hypotheses": [
+    {
+      "id": "break-credential-chain",
+      "kind": "mitigation",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "開発用GitHubの権限とクラウド管理権限を分け、共有できる資格情報を減らすと、漏えい後の到達範囲を縮められる可能性があります。",
+        "en": "Separating development GitHub authority from cloud administration and reducing reusable credentials could limit lateral reach."
+      },
+      "basis": {
+        "ja": "個人サーバー上のGitHub認証情報が悪用され、GitHubで得た情報からクラウドの資格情報を取得したと同社は判断しています。",
+        "en": "A GitHub credential on a personal server was misused; CAMPFIRE assesses that GitHub information led to cloud credentials."
+      },
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "5. 攻撃の内容について / 6. ②1",
+      "assumptions": [
+        {
+          "ja": "漏えいした開発用の権限から、別環境の認証情報や広い権限へ到達できる構成の場合。",
+          "en": "Development authority can reach credentials or broader privileges in another environment."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "秘密の値を読まず、権限一覧・資格情報の配置メタデータ・アクセスログから環境間の経路が制限されていると確認できる。",
+          "en": "Permission inventories, credential-location metadata, and logs show restricted cross-environment paths without reading secret values."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "開発用アカウントがクラウドの長期鍵や高権限のロールへ到達できる、または失効済みの旧鍵が引き続き使える。",
+          "en": "A development identity can reach long-lived cloud keys or privileged roles, or a revoked legacy key still works."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "公開資料だけでは当時の全権限を再現できません。分離や短期化は最初の漏えい自体を防ぐ保証にはなりません。",
+          "en": "Public evidence cannot reconstruct all past permissions; separation and short lifetimes do not guarantee prevention of the initial leak."
+        }
+      ],
+      "ruleIds": [
+        "SEC-004",
+        "SEC-005",
+        "SEC-006"
+      ]
+    }
   ]
 }

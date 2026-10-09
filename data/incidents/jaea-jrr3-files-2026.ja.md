@@ -1,6 +1,6 @@
 # jaea-jrr3-files-2026 — 日本原子力研究開発機構：不正アクセスの経緯と影響
 
-事例 | Catalog: 0.5.0 | Record SHA-256: e2d2f8ac400820eff303adb4faa348f2cbe16a08f6b39602a0a72ef0cd29d66c
+事例 | Catalog: 0.6.0 | Record SHA-256: e2d2f8ac400820eff303adb4faa348f2cbe16a08f6b39602a0a72ef0cd29d66c
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

@@ -1,6 +1,6 @@
 # education-software-dormant-2026 — 教育ソフトウェア: unauthorized access and impact
 
-Incident | Catalog: 0.5.0 | Record SHA-256: 3874f781a88de7be80f9209ce9e9feae0d72bc66c102a4e678bd050b2b3393c1
+Incident | Catalog: 0.6.0 | Record SHA-256: 3874f781a88de7be80f9209ce9e9feae0d72bc66c102a4e678bd050b2b3393c1
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

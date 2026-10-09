@@ -1,12 +1,14 @@
 # Using Security Knowledge
 
-Catalog: 0.5.0 | Reviewed: 2026-10-09 | 16 rules / 136 incidents
+Catalog: 0.6.0 | Reviewed: 2026-10-10 | 16 rules / 136 incidents
 
 URL-capable assistants can read this guide and discovery.json. For assistants without browsing, attach or paste this guide and the needed rule Markdown. For limited context, inspect one rule at a time and persist results outside the model.
 
 Apps and retrieval pipelines can ingest rules.jsonl and incidents.jsonl: one record per line, with the original JSON in record and its SHA-256 in hash. Parsing a file does not provide inspection capabilities.
 
 For decision models such as Jev, use the atomic Choice questions in decision-tasks.jsonl together with actual environment observations. Probabilities and confidence prioritize review; they are not inspection evidence or a pass.
+
+Incident hypotheses are editorial cause or mitigation proposals. Read basis and sources, check assumptions, and investigate supporting and contradicting observations in your own environment. Do not promote hypotheses or uncollected observations into confirmed causes, AI attribution, or inspection passes. Missing evidence stays unverified; an absent field means not assessed.
 
 ## Owner-provided context
 

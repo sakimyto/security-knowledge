@@ -1,6 +1,6 @@
 # anthropic-claude-code-abuse-2025 — Claude Code：攻撃者がAIを悪用した複数組織への侵入
 
-事例 | Catalog: 0.5.0 | Record SHA-256: 20d0318c8b3ab9ddede5b6f0dca1923392469c5aeacc7acec2e5544b4522aa64
+事例 | Catalog: 0.6.0 | Record SHA-256: 20d0318c8b3ab9ddede5b6f0dca1923392469c5aeacc7acec2e5544b4522aa64
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

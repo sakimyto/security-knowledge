@@ -11,7 +11,7 @@
   },
   "occurredAt": null,
   "disclosedAt": "2025-10-19",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-10",
   "outcome": "confirmed-breach",
   "categories": [
     "credentials"
@@ -28,7 +28,7 @@
       "sourceIds": [
         "s1"
       ],
-      "locator": "6. 調査結果 (1)"
+      "locator": "p.4 §6(1) 不正アクセス"
     },
     {
       "topic": "impact",
@@ -41,6 +41,18 @@
         "s1"
       ],
       "locator": "6. 調査結果 (2)–(5)"
+    },
+    {
+      "topic": "investigation-limit",
+      "text": {
+        "ja": "委託先PCのOS更新で侵入時点のログが失われ、取得経路の調査に限界があると公表しました。",
+        "en": "ASKUL reported that an OS update erased relevant contractor-PC logs, limiting the origin investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.4 §6(1) 調査により判明した事項"
     }
   ],
   "timeline": [
@@ -95,8 +107,8 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
-      "title": "ランサムウェア攻撃に関する調査結果および今後の対応について",
+      "reviewedAt": "2026-10-10",
+      "title": "ランサムウェア攻撃の影響調査結果および安全性強化に向けた取り組みのご報告（第13報）",
       "url": "https://www.askullogist.co.jp/pdf/20251212.pdf",
       "publisher": "ASKUL",
       "publishedAt": "2025-12-12",
@@ -110,5 +122,99 @@
     "SEC-008",
     "SEC-009",
     "SEC-013"
+  ],
+  "hypotheses": [
+    {
+      "id": "contractor-endpoint-origin",
+      "kind": "cause",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "委託先端末から管理者の資格情報が取得された可能性を、調査候補として残します。",
+        "en": "Acquisition of administrator credentials from the contractor endpoint remains a candidate origin."
+      },
+      "basis": {
+        "ja": "委託先アカウントの悪用は確認されていますが、同PCの侵入時ログは失われています。",
+        "en": "Account misuse was confirmed, but relevant contractor-PC logs are unavailable."
+      },
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.4 §6(1)",
+      "assumptions": [
+        {
+          "ja": "該当する資格情報が、侵入前に委託先端末で使用・保存されていた場合。",
+          "en": "The credentials were used or stored on the contractor endpoint before entry."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "保全済みの端末・EDR記録で、初回ログイン前の資格情報読み取りや持ち出しを確認できる。",
+          "en": "Preserved endpoint or EDR records show credential access or transfer before the first login."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "別の保管先から同じ資格情報が流出した記録があり、端末由来という説明と時系列が合わない。",
+          "en": "A documented leak elsewhere and its timing contradict the endpoint-origin explanation."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "ログ欠落は侵害の証拠ではありません。フィッシングや別の保管先からの流出も排除できません。",
+          "en": "Missing logs are not proof of compromise; phishing and other storage origins remain possible."
+        }
+      ],
+      "ruleIds": [
+        "SEC-003",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "mfa-exception-closure",
+      "kind": "mitigation",
+      "status": "hypothesis",
+      "provenance": "editorial-analysis",
+      "statement": {
+        "ja": "委託先も含めてリモート管理のMFA例外をなくすと、ID・パスワードだけを使う侵入を減らせる可能性があります。",
+        "en": "Removing contractor MFA exceptions could reduce remote entry using passwords alone."
+      },
+      "basis": {
+        "ja": "悪用された委託先用管理者アカウントには、例外としてMFAが適用されていませんでした。",
+        "en": "The misused contractor administrator account had an MFA exception."
+      },
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.4 §6(1)",
+      "assumptions": [
+        {
+          "ja": "対象の侵入がID・パスワード認証に依存し、セッション窃取や別経路ではない場合。",
+          "en": "Entry depends on password authentication rather than stolen sessions or another path."
+        }
+      ],
+      "supportingObservations": [
+        {
+          "ja": "自分の環境のIdP設定と認証ログで委託先・緊急用の例外がなく、隔離環境の架空アカウントでパスワードのみの接続が拒否される。",
+          "en": "IdP policies and logs show no contractor or emergency exception; a synthetic isolated test rejects password-only access."
+        }
+      ],
+      "contradictingObservations": [
+        {
+          "ja": "旧方式の認証や例外アカウントで追加要素なしに接続できる、または窃取されたセッションで接続できる。",
+          "en": "Legacy or exempt access bypasses the extra factor, or a stolen session still grants access."
+        }
+      ],
+      "limitations": [
+        {
+          "ja": "MFAだけで資格情報の流出、端末侵害、バックアップ破壊を防ぐことはできません。",
+          "en": "MFA alone does not prevent credential leaks, endpoint compromise, or backup destruction."
+        }
+      ],
+      "ruleIds": [
+        "SEC-002",
+        "SEC-005"
+      ]
+    }
   ]
 }

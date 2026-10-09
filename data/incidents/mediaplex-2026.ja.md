@@ -1,6 +1,6 @@
 # mediaplex-2026 — テレビ朝日メディアプレックス：不正アクセスの経緯と影響
 
-事例 | Catalog: 0.5.0 | Record SHA-256: 5abb4d1caf11f7ee468acf236ad044329c302949c8d7917fa5b48d3b2612bdff
+事例 | Catalog: 0.6.0 | Record SHA-256: 5abb4d1caf11f7ee468acf236ad044329c302949c8d7917fa5b48d3b2612bdff
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
