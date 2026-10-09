@@ -1,6 +1,6 @@
 # benefit-one-tenant-export-2026 — ベネフィット・ワン：不正アクセスの経緯と影響
 
-事例 | Catalog: 0.6.0 | Record SHA-256: f5f063f0de21e6fc6b015a669912f2ef69dc795aed00fc2ff67eb4dc7dca6fba
+事例 | Catalog: 0.6.1 | Record SHA-256: f5f063f0de21e6fc6b015a669912f2ef69dc795aed00fc2ff67eb4dc7dca6fba
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

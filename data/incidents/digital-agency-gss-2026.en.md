@@ -1,6 +1,6 @@
 # digital-agency-gss-2026 — Digital Agency GSS: entry through an unpatched VPN
 
-Incident | Catalog: 0.6.0 | Record SHA-256: 3bace779bb84ced753b9ca8b43af12f97ad9bc8c16e55301e16cbbef6de329fe
+Incident | Catalog: 0.6.1 | Record SHA-256: 3bace779bb84ced753b9ca8b43af12f97ad9bc8c16e55301e16cbbef6de329fe
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

@@ -1,6 +1,6 @@
 # kamogawa-form-exposure-2026 — 鴨川市: data exposure and authorization boundaries
 
-Incident | Catalog: 0.6.0 | Record SHA-256: 7c931236a95687b166724aeeef6ead1cafc98b728351ad51f2c63c9a07f46aa0
+Incident | Catalog: 0.6.1 | Record SHA-256: 7c931236a95687b166724aeeef6ead1cafc98b728351ad51f2c63c9a07f46aa0
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

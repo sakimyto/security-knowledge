@@ -1,6 +1,6 @@
 # nidek-website-2026 — ニデック（医療機器）：Webサイトで使うソフトの脆弱性を悪用
 
-事例 | Catalog: 0.6.0 | Record SHA-256: ccd806ce45a04c06b083881c61fbaec18e1ed24c2a721b9d7de02493c77f4c62
+事例 | Catalog: 0.6.1 | Record SHA-256: ccd806ce45a04c06b083881c61fbaec18e1ed24c2a721b9d7de02493c77f4c62
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

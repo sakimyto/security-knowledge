@@ -1,6 +1,6 @@
 # nimoca-2026 — nimoca：公開の利用履歴照会サービスへの不正アクセス
 
-事例 | Catalog: 0.6.0 | Record SHA-256: b2b77459abf6e36d515a3dc3b8bb0969b2c8545b71a1dfad88bff40632789bf1
+事例 | Catalog: 0.6.1 | Record SHA-256: b2b77459abf6e36d515a3dc3b8bb0969b2c8545b71a1dfad88bff40632789bf1
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

@@ -1,6 +1,6 @@
 # gainsight-oauth-2025 — Gainsight連携：古いOAuthトークンを顧客環境へのアクセスに悪用
 
-事例 | Catalog: 0.6.0 | Record SHA-256: 5af6ac84565367170f28cea31fdedb8a045bd9f37761296b596d049b64f0693f
+事例 | Catalog: 0.6.1 | Record SHA-256: 5af6ac84565367170f28cea31fdedb8a045bd9f37761296b596d049b64f0693f
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

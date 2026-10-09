@@ -1,6 +1,6 @@
 # kindal-phishing-2026 — カインドオル: unauthorized access and impact
 
-Incident | Catalog: 0.6.0 | Record SHA-256: ddd8f0650f26c8616c586bf663b8fbcefbe2a9026029ac80776c8cfc73412519
+Incident | Catalog: 0.6.1 | Record SHA-256: ddd8f0650f26c8616c586bf663b8fbcefbe2a9026029ac80776c8cfc73412519
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

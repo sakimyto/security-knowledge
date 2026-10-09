@@ -1,6 +1,6 @@
 # Using Security Knowledge
 
-Catalog: 0.6.0 | Reviewed: 2026-10-10 | 16 rules / 136 incidents
+Catalog: 0.6.1 | Reviewed: 2026-10-10 | 16 rules / 136 incidents
 
 URL-capable assistants can read this guide and discovery.json. For assistants without browsing, attach or paste this guide and the needed rule Markdown. For limited context, inspect one rule at a time and persist results outside the model.
 

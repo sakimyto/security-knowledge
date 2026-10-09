@@ -1,6 +1,6 @@
 # asahi-pharma-digital-2026 — Pharma DIGITAL：委託先の会員DBへの不正アクセス
 
-事例 | Catalog: 0.6.0 | Record SHA-256: 6109e35c4eb63bb73b6c2e7cea1793515ffd3ace7dbb5bf77698567bb566f964
+事例 | Catalog: 0.6.1 | Record SHA-256: 6109e35c4eb63bb73b6c2e7cea1793515ffd3ace7dbb5bf77698567bb566f964
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

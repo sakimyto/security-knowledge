@@ -1,6 +1,6 @@
 # postman-shai-hulud-2025 — Postman: poisoned dependencies exposed CI publishing authority
 
-Incident | Catalog: 0.6.0 | Record SHA-256: aeeddeafe5bc1269737caf812238694838a31a2f921cf15994f493e2dc4b1ae8
+Incident | Catalog: 0.6.1 | Record SHA-256: aeeddeafe5bc1269737caf812238694838a31a2f921cf15994f493e2dc4b1ae8
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

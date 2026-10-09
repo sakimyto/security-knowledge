@@ -1,6 +1,6 @@
 # mrmax-2026 — MrMax: software-function abuse leads to member-data leakage
 
-Incident | Catalog: 0.6.0 | Record SHA-256: 2d5eb51be91f991d6ed1d3ca8577fa0d12776c9ad167c05687fb282bb09bd4c4
+Incident | Catalog: 0.6.1 | Record SHA-256: 2d5eb51be91f991d6ed1d3ca8577fa0d12776c9ad167c05687fb282bb09bd4c4
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

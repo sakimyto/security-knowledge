@@ -1,6 +1,6 @@
 # jst-mail-2026 — 科学技術振興機構: unauthorized access and impact
 
-Incident | Catalog: 0.6.0 | Record SHA-256: 895070d543f5d23d9a6ab92bade62d1304f263584a18a17f6aadb77bf55f1b62
+Incident | Catalog: 0.6.1 | Record SHA-256: 895070d543f5d23d9a6ab92bade62d1304f263584a18a17f6aadb77bf55f1b62
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

@@ -1,6 +1,6 @@
 # chubu-business-credentials-2026 — 中部電力: unauthorized access and impact
 
-Incident | Catalog: 0.6.0 | Record SHA-256: a5e2f5d5d1ff2908d555228d792a318fb0d866435cd4378a1d7b7be695f2abcf
+Incident | Catalog: 0.6.1 | Record SHA-256: a5e2f5d5d1ff2908d555228d792a318fb0d866435cd4378a1d7b7be695f2abcf
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

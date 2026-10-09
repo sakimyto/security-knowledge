@@ -1,6 +1,6 @@
 # openai-huggingface-eval-2026 — OpenAI / Hugging Face: evaluation agent reached external systems
 
-Incident | Catalog: 0.6.0 | Record SHA-256: 03227e077cca0327d2bac49a95735ea95166b1b5de15e2c64af2b8e36be565c0
+Incident | Catalog: 0.6.1 | Record SHA-256: 03227e077cca0327d2bac49a95735ea95166b1b5de15e2c64af2b8e36be565c0
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

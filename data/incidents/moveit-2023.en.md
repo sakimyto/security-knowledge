@@ -1,6 +1,6 @@
 # moveit-2023 — MOVEit: SQL injection exploited before disclosure
 
-Incident | Catalog: 0.6.0 | Record SHA-256: 45b350a8a188702b74a004f233526410807f88335b0bca600f2fdba3d548bfef
+Incident | Catalog: 0.6.1 | Record SHA-256: 45b350a8a188702b74a004f233526410807f88335b0bca600f2fdba3d548bfef
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

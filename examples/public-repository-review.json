@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "catalogHash": "89f795be65dd3fc98ef0beae56b067035824d39a3575e49e10f1858765681559",
+  "catalogHash": "0a19d26cb175869ee749bbe6435fb1ebf0e50b1a17b8338b00a19bef1817ece3",
   "environment": "security-knowledge local proposal; source and generated data only",
-  "environmentRevision": "catalog-source-v0.6.0-20261010",
+  "environmentRevision": "catalog-source-v0.6.1-20261010",
   "checkedAt": "2026-10-10T00:00:00Z",
   "results": [
     {
