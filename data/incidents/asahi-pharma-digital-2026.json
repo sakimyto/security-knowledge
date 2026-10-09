@@ -1,0 +1,123 @@
+{
+  "id": "asahi-pharma-digital-2026",
+  "organization": "旭化成セラピューティクス",
+  "title": {
+    "ja": "Pharma DIGITAL：委託先の会員DBへの不正アクセス",
+    "en": "Pharma DIGITAL: unauthorized access to an outsourced member database"
+  },
+  "summary": {
+    "ja": "運営を委託する医薬情報ネットから会員DBへの不正アクセスの報告を受けました。医療関係者と従業員の情報が閲覧・取得された可能性があり、原因の調査が続いています。",
+    "en": "Operator Iyaku Joho Net reported unauthorized database access. Medical-professional and employee data may have been viewed or taken; investigation continues."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-06",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "supply-chain",
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "委託先が会員DBへの不正アクセスを確認し、10月2日に報告しました。",
+        "en": "The operator confirmed member-database access and reported it on October 2."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "1. 概要"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大対象は医療関係者約514,000名と従業員約700名です。前者のうち約44,000名にはメールアドレスも含まれます。",
+        "en": "Potential maximum scope is about 514,000 medical professionals and 700 employees; about 44,000 of the former also have email data affected."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "2. 漏えいした可能性がある情報"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "text": {
+        "ja": "委託先から報告を受けました。",
+        "en": "The operator notified Asahi."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "text": {
+        "ja": "対象範囲と対応を公表。",
+        "en": "Potential scope and response disclosed."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "サイトを停止し、侵入経路を是正。外部専門組織と調査しています。",
+        "en": "The site was stopped, the access path corrected, and external specialists engaged."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "1. 概要 / 3. 現時点での状況と対応"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "委託先のアクセス権、取得ログ、保存する会員情報の範囲と期限を点検します。",
+      "en": "Inspect vendor permissions, access logs, and member-data scope and retention."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "侵入方法と流出の確定範囲は未公表です。44,000名を514,000名に加算しません。",
+      "en": "Entry details and confirmed exfiltration scope are undisclosed. Do not add 44,000 to 514,000."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Pharma DIGITALへの不正アクセスおよび個人情報漏えいの可能性について",
+      "url": "https://www.asahi-kasei.co.jp/pharma/oshirase_20261006.html",
+      "publisher": "旭化成セラピューティクス",
+      "kind": "organization",
+      "publishedAt": "2026-10-06",
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "SEC-011",
   "version": "1.1.0",
-  "updatedAt": "2026-10-02",
+  "updatedAt": "2026-10-09",
   "title": {
     "ja": "AIエージェントの接続先と実行権限を確認する",
     "en": "Inspect AI-agent destinations and execution privileges"
@@ -76,6 +76,7 @@
     "anthropic-claude-code-abuse-2025",
     "anthropic-cyber-evals-2026",
     "openai-huggingface-eval-2026",
+    "rizap-ai-data-handling-2026",
     "unit42-ai-assisted-2026"
   ],
   "references": [

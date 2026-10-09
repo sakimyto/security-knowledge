@@ -1,7 +1,7 @@
 {
   "id": "SEC-013",
-  "version": "1.0.0",
-  "updatedAt": "2026-10-02",
+  "version": "1.1.0",
+  "updatedAt": "2026-10-09",
   "title": {
     "ja": "隔離手順とバックアップの復元を確認する",
     "en": "Inspect containment and backup restoration"
@@ -66,7 +66,25 @@
       "en": "This inspection rule does not authorize production isolation or destructive recovery."
     }
   ],
-  "incidentIds": ["askul-2025", "keio-ransomware-2026", "nishiyama-2026", "sakura-hosting-2026"],
+  "incidentIds": [
+    "askul-2025",
+    "conoha-wing-2026",
+    "coop-yamaguchi-2026",
+    "cota-2026",
+    "dandm-vpn-ransomware-2026",
+    "education-software-dormant-2026",
+    "epark-peakmanager-2026",
+    "five-foxes-2026",
+    "gex-ransomware-2026",
+    "keio-ransomware-2026",
+    "logicvein-2025",
+    "nichirei-2026",
+    "nihontelenet-ransomware-2026",
+    "nishiyama-2026",
+    "nostrum-smartspi-2026",
+    "ryomo-systems-2026",
+    "sakura-hosting-2026"
+  ],
   "references": [
     {
       "title": "アスクル調査結果",

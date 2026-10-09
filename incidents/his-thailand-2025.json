@@ -1,0 +1,111 @@
+{
+  "id": "his-thailand-2025",
+  "organization": "H.I.S. TOURS CO., LTD.（HISタイ現地法人）",
+  "title": {
+    "ja": "HISタイ法人：ファイルサーバーの侵害を2026年に公表",
+    "en": "HIS Thailand: file-server intrusion disclosed in 2026"
+  },
+  "summary": {
+    "ja": "2025年12月の検知後、全ファイルの確認を経て2026年10月に公表しました。最大627名のパスポート情報とアレルギー情報が流出した可能性があります。",
+    "en": "Following detection in December 2025 and a file review, HIS disclosed possible exposure of passport and allergy data for up to 627 people in October 2026."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-07",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "タイ法人のファイルサーバーへの不審なアクセスを確認しました。侵入方法は未公表です。",
+        "en": "Suspicious file-server access was confirmed; the entry mechanism is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "p.1 §1"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大627名のパスポート情報とアレルギー情報が流出した可能性があります。",
+        "en": "Passport and allergy data for up to 627 people may have been taken."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "p.1 §2"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-12-11",
+      "text": {
+        "ja": "検知ソフトのアラートを受け、サーバーを切断。",
+        "en": "A detection alert prompted server isolation."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-02-24",
+      "text": {
+        "ja": "調査で最大627名のパスポート情報を確認。",
+        "en": "Investigation identified passport data for up to 627 people."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-07",
+      "text": {
+        "ja": "全ファイルの確認後に公表。",
+        "en": "Public notice followed completion of the file review."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "サーバーの切断、アクセス制限、外部専門家との調査、関係機関への報告を実施しました。",
+        "en": "HIS isolated the server, restricted access, involved external experts, and reported to authorities."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "p.1 §1"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "保存データの用途と廃棄期限、ファイル一覧、アクセス権と取得ログを点検します。",
+      "en": "Inspect data purpose, retention deadlines, file inventories, permissions, and access logs."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "侵入開始日、取得が完了した範囲、技術的な原因は未公表です。",
+      "en": "The intrusion start, completed exfiltration scope, and technical cause are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "子会社ファイルサーバへの不正アクセスによる個人情報流出の可能性に関するお知らせ",
+      "url": "https://www.his.co.jp/assets/20261007.pdf",
+      "publisher": "エイチ・アイ・エス",
+      "kind": "organization",
+      "publishedAt": "2026-10-07",
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-008", "SEC-009", "SEC-012"]
+}

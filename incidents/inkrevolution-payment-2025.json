@@ -1,0 +1,112 @@
+{
+  "id": "inkrevolution-payment-2025",
+  "organization": "インク革命",
+  "title": {
+    "ja": "インク革命：不正アクセスの経緯と影響",
+    "en": "インク革命: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "システムの脆弱性を悪用して決済アプリケーションを改ざんされました。具体的な製品・CVEは未公表です。 顧客24,166人の個人情報とカード情報が流出した可能性があります。両区分を合算しません。",
+    "en": "A system vulnerability was exploited to alter the payment application; product and CVE are undisclosed. Personal and card data for 24,166 customers may have been disclosed; the two categories are not additive."
+  },
+  "occurredAt": "2025-04-08",
+  "disclosedAt": "2025-12-18",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "システムの脆弱性を悪用して決済アプリケーションを改ざんされました。具体的な製品・CVEは未公表です。",
+        "en": "A system vulnerability was exploited to alter the payment application; product and CVE are undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-2,5"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "顧客24,166人の個人情報とカード情報が流出した可能性があります。両区分を合算しません。",
+        "en": "Personal and card data for 24,166 customers may have been disclosed; the two categories are not additive."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-2,5"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-04-08",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2025-12-18",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "カード決済を停止し、バックドアを除去して改ざんを修正しました。外部調査で追加侵害がないことを確認しています。",
+        "en": "Card payments were stopped; the backdoor was removed and alterations fixed. External investigators verified completion and no new compromise."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "§§1-2,5"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "事前の修正提供時期と具体的な侵入方法は未公表です。カード情報と個人情報の対象は同じ24,166人です。",
+      "en": "Prior patch availability and the exact initial entry mechanism are undisclosed. The same 24,166 customers appear in both personal-data and card-data categories."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "インク革命：事故に関する公表資料",
+      "url": "https://ink-revolution.com/pages/info-2026-07-15",
+      "publisher": "インク革命",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "s2",
+      "title": "インク革命：事故に関する公表資料",
+      "url": "https://ink-revolution.com/pages/info-2025-12-18",
+      "publisher": "インク革命",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-005", "SEC-008", "SEC-009", "SEC-015"]
+}

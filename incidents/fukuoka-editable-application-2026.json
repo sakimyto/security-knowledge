@@ -1,0 +1,103 @@
+{
+  "id": "fukuoka-editable-application-2026",
+  "organization": "福岡県",
+  "title": {
+    "ja": "福岡県：情報の公開範囲・権限の問題",
+    "en": "福岡県: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "申請様式を閲覧専用にすべきところ、オンライン編集・保存できる設定で公開し、入力情報が残りました。 24法人の役員183人の情報が閲覧可能になりました。実際の閲覧件数は不明です。",
+    "en": "An application file was published with editing and saving enabled instead of read-only access, retaining applicants’ information. Information about 183 officers from 24 organizations was accessible; actual view counts are unknown."
+  },
+  "occurredAt": "2026-08-21",
+  "disclosedAt": "2026-09-29",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": ["configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "申請様式を閲覧専用にすべきところ、オンライン編集・保存できる設定で公開し、入力情報が残りました。",
+        "en": "An application file was published with editing and saving enabled instead of read-only access, retaining applicants’ information."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-5"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "24法人の役員183人の情報が閲覧可能になりました。実際の閲覧件数は不明です。",
+        "en": "Information about 183 officers from 24 organizations was accessible; actual view counts are unknown."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-5"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-21",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-09-29",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "ファイルを削除して対象法人へ通知しました。公開前の権限確認を複数人で行う手順を導入します。",
+        "en": "The file was removed and organizations notified; multi-person permission checks before publication are planned."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-5"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "第三者による閲覧件数は不明です。",
+      "en": "The notice does not establish all entry, timing and extraction details; unresolved claims remain unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "福岡県：事故に関する公表資料",
+      "url": "https://www.pref.fukuoka.lg.jp/press-release/nkojinjyouhou.html",
+      "publisher": "福岡県",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-008", "SEC-009"]
+}

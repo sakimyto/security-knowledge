@@ -11,7 +11,7 @@
   },
   "occurredAt": null,
   "disclosedAt": "2026-09-11",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-09",
   "outcome": "confirmed-breach",
   "categories": [
     "known-vulnerability",
@@ -96,7 +96,7 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-09",
       "title": "GSSにおける不正アクセスについて（Q&A）",
       "url": "https://www.digital.go.jp/press/5fc99139-a4e2-4b7b-8b0c-d475e926143f",
       "publisher": "デジタル庁",

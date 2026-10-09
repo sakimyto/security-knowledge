@@ -1,0 +1,104 @@
+{
+  "id": "komatsu-user-directory-exposure-2026",
+  "organization": "小松製作所",
+  "title": {
+    "ja": "小松製作所：情報の公開範囲・権限の問題",
+    "en": "小松製作所: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "利用者管理や関連システムの設計・設定・運用に不備があり、権限を持つ利用者間で必要以上の個人情報が見えていました。 初報は139,302人。追加点検で214,916人、29,621人、86,015人、46,445人の別の対象範囲を確認しました。重複があり合算できません。インターネット全体への公開ではありません。",
+    "en": "Design, configuration and operational defects allowed authorized users to view personal information beyond the necessary scope. The first notice covered 139,302 people; further reviews found scopes of 214,916, 29,621, 86,015 and 46,445. Overlap prevents addition; the data was not publicly accessible on the internet."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-06-16",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": ["configuration", "implementation"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "利用者管理や関連システムの設計・設定・運用に不備があり、権限を持つ利用者間で必要以上の個人情報が見えていました。",
+        "en": "Design, configuration and operational defects allowed authorized users to view personal information beyond the necessary scope."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "9月15日 §§1-3 / 6月16日 §§1-5"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "初報は139,302人。追加点検で214,916人、29,621人、86,015人、46,445人の別の対象範囲を確認しました。重複があり合算できません。インターネット全体への公開ではありません。",
+        "en": "The first notice covered 139,302 people; further reviews found scopes of 214,916, 29,621, 86,015 and 46,445. Overlap prevents addition; the data was not publicly accessible on the internet."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "9月15日 §§1-3 / 6月16日 §§1-5"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-16",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "設定変更、対象ファイルの非表示化などを行い、不要な閲覧を停止しました。",
+        "en": "Permissions were changed and files hidden to stop unnecessary access."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "9月15日 §§1-3 / 6月16日 §§1-5"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "閲覧開始の正確な日付と利用者間の対象重複は不明です。",
+      "en": "The exact start date and overlap among affected user groups are unknown; additional scopes cannot be summed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "小松製作所：事故に関する公表資料",
+      "url": "https://www.komatsu.jp/ja/newsroom/2026/20260915",
+      "publisher": "小松製作所",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "s2",
+      "title": "小松製作所：事故に関する公表資料",
+      "url": "https://www.komatsu.jp/ja/newsroom/2026/20260616_3",
+      "publisher": "小松製作所",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-008", "SEC-009", "SEC-014"]
+}

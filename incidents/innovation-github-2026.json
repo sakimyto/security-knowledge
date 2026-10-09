@@ -1,0 +1,95 @@
+{
+  "id": "innovation-github-2026",
+  "organization": "イノベーション",
+  "title": {
+    "ja": "イノベーション：不正アクセスの経緯と影響",
+    "en": "イノベーション: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "GitHubのアクセストークンを設定ファイルに直接記載していました。第三者が取得し悪用しました。 8月7日確定報で62,691人の漏えいを確認しました。個人情報がリポジトリに保存されていたことも別の原因です。本番DB侵入は未確認です。",
+    "en": "A GitHub access token was embedded in a configuration file, acquired and abused by a third party. The August 7 final notice confirms leakage for 62,691 people; personal data stored in repositories was a separate contributing factor. No production-database intrusion was found."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-04",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials", "configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "GitHubのアクセストークンを設定ファイルに直接記載していました。第三者が取得し悪用しました。",
+        "en": "A GitHub access token was embedded in a configuration file, acquired and abused by a third party."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "確定報 §§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "8月7日確定報で62,691人の漏えいを確認しました。個人情報がリポジトリに保存されていたことも別の原因です。本番DB侵入は未確認です。",
+        "en": "The August 7 final notice confirms leakage for 62,691 people; personal data stored in repositories was a separate contributing factor. No production-database intrusion was found."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "確定報 §§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-04",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "トークンを無効化し、権限・発行手順を統制、個人情報の点検と混入検知を導入しました。",
+        "en": "The token was revoked, permissions and issuance governed, and personal-data audits and detection implemented."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "確定報 §§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "第三者が設定ファイルへ到達した具体的方法は未公表です。",
+      "en": "Hardcoded repository secrets and stored personal data are reported. The precise account-entry route remains undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "イノベーション：事故に関する公表資料",
+      "url": "https://www.innovation.co.jp/2026/08/github%e3%81%b8%e3%81%ae%e4%b8%8d%e6%ad%a3%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e8%a9%b3%e7%b4%b0%e8%aa%bf%e6%9f%bb%e3%81%ae%e5%ae%8c%e4%ba%86%e3%81%8a%e3%82%88/",
+      "publisher": "イノベーション",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-004", "SEC-005", "SEC-007", "SEC-008", "SEC-009", "SEC-012"]
+}

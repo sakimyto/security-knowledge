@@ -1,7 +1,7 @@
 {
   "id": "SEC-004",
-  "version": "1.2.0",
-  "updatedAt": "2026-10-02",
+  "version": "1.1.0",
+  "updatedAt": "2026-10-09",
   "title": {
     "ja": "配布物と添付ファイルへの秘密情報の混入を確認する",
     "en": "Inspect artifacts and attachments for secret inclusion"
@@ -59,14 +59,18 @@
     "axios-npm-2026",
     "campfire-2026",
     "codecov-2021",
+    "innovation-github-2026",
+    "kyorin-remote-pc-2026",
     "okta-support-2023",
     "openai-huggingface-eval-2026",
+    "ota-cultural-pc-scam-2026",
     "postman-shai-hulud-2025",
     "rust-arrayref-2026",
     "sakura-billing-2026",
     "toyota-github-2022",
     "trivy-supply-chain-2026",
-    "unit42-ai-assisted-2026"
+    "unit42-ai-assisted-2026",
+    "visualarts-cloud-credentials-2026"
   ],
   "references": [],
   "execution": "read-only-by-default",

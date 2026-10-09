@@ -1,0 +1,103 @@
+{
+  "id": "pickleballone-plugin-2026",
+  "organization": "ピックルボールワン",
+  "title": {
+    "ja": "ピックルボールワン：不正アクセスの経緯と影響",
+    "en": "ピックルボールワン: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "外部ソフトウェアのプラグインの脆弱性を悪用され、サーバーに不正プログラムを設置されました。 最大約1,853人の会員情報が対象の可能性があります。外部へ持ち出された痕跡は未確認で、カード情報は保持していません。",
+    "en": "An external plugin vulnerability was exploited to install malicious server programs. Up to about 1,853 members may be affected; extraction traces were not found and card data was not stored."
+  },
+  "occurredAt": "2026-06-15",
+  "disclosedAt": "2026-06-30",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "外部ソフトウェアのプラグインの脆弱性を悪用され、サーバーに不正プログラムを設置されました。",
+        "en": "An external plugin vulnerability was exploited to install malicious server programs."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大約1,853人の会員情報が対象の可能性があります。外部へ持ち出された痕跡は未確認で、カード情報は保持していません。",
+        "en": "Up to about 1,853 members may be affected; extraction traces were not found and card data was not stored."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-15",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-06-30",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "経路遮断、プログラム除去、認証情報再設定と脆弱性修正を完了しました。管理者の二段階認証や監視を導入・推進しています。",
+        "en": "Access was blocked, programs removed, credentials reset and the vulnerability fixed; administrator two-factor authentication and monitoring are being implemented."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "プラグイン名、CVE、侵入前の修正提供時期と実際の流出は未確認です。",
+      "en": "The plugin vulnerability and prior fix availability are undisclosed. The provider found no extraction evidence and did not hold payment-card data."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ピックルボールワン：事故に関する公表資料",
+      "url": "https://company.pickle-one.com/news/20260630",
+      "publisher": "ピックルボールワン",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-002", "SEC-005", "SEC-008", "SEC-009", "SEC-015"]
+}

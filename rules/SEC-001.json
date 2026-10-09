@@ -1,7 +1,7 @@
 {
   "id": "SEC-001",
-  "version": "1.2.0",
-  "updatedAt": "2026-10-02",
+  "version": "1.1.0",
+  "updatedAt": "2026-10-09",
   "title": {
     "ja": "修正対象と稼働バージョンを照合する",
     "en": "Reconcile advisories with deployed versions"
@@ -55,23 +55,39 @@
     }
   ],
   "incidentIds": [
+    "applynow-bi-2026",
     "axios-npm-2026",
+    "dandm-vpn-ransomware-2026",
     "digital-agency-gss-2026",
+    "education-software-dormant-2026",
     "equifax-2017",
     "forticloud-sso-2026",
+    "gmo-infoq-2026",
     "gyazo-2026",
+    "inkrevolution-payment-2025",
+    "kaga-solnet-2026",
     "kddi-isp-2026",
+    "leanbody-metabase-2026",
+    "logicvein-2025",
+    "media4u-account-list-2026",
     "metabase-2026",
     "moveit-2023",
+    "mrmax-2026",
     "nidek-website-2026",
     "nishiyama-2026",
     "openai-huggingface-eval-2026",
+    "osaka-recruitment-vendor-2026",
+    "ozmall-2026",
+    "pickleballone-plugin-2026",
     "postman-shai-hulud-2025",
     "prontest-cloud-2026",
     "react2shell-2025",
     "rust-arrayref-2026",
+    "saga-hirakawaya-payment-2026",
     "trivy-supply-chain-2026",
-    "voising-bi-2026"
+    "voising-bi-2026",
+    "white-essence-2026",
+    "zurich-zdash-2026"
   ],
   "references": [
     {

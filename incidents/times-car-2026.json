@@ -11,7 +11,7 @@
   },
   "occurredAt": null,
   "disclosedAt": "2026-09-25",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-09",
   "outcome": "confirmed-breach",
   "categories": ["unknown"],
   "cves": [],
@@ -23,8 +23,8 @@
         "en": "Leakage covered 6.6 million member records, including 1.6 million identity documents; these counts must not be added."
       },
       "status": "confirmed",
-      "sourceIds": ["s2"],
-      "locator": "流出した情報 / 対象件数"
+      "sourceIds": ["s1", "s2"],
+      "locator": "第2報 §1 / 第3報 §1"
     },
     {
       "topic": "entry",
@@ -83,7 +83,7 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-09",
       "title": "タイムズカーにおける不正アクセスに関するお知らせ（第2報）",
       "url": "https://share.timescar.jp/news/2026/0928/1815.html",
       "publisher": "タイムズモビリティ",
@@ -92,7 +92,7 @@
     },
     {
       "id": "s2",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-09",
       "title": "タイムズカーにおける不正アクセスに関するお知らせ（第3報）",
       "url": "https://share.timescar.jp/news/2026/0929/1816.html",
       "publisher": "タイムズモビリティ",

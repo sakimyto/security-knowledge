@@ -1,0 +1,111 @@
+{
+  "id": "weverse-payment-api-2026",
+  "organization": "Weverse Company",
+  "title": {
+    "ja": "Weverse Company：不正アクセスの経緯と影響",
+    "en": "Weverse Company: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "外部の脆弱性指摘を受けて調査し、決済情報APIの情報流出を確認しました。アクセス制御を強化しています。 アカウントID基準で422,584件の内部識別値などが流出しました。氏名・連絡先やカード番号の流出とは公表されていません。日本の利用者だけの件数とは示されていません。",
+    "en": "Following an external vulnerability report, the company confirmed payment-API disclosure and strengthened access controls. 422,584 account IDs’ internal identifiers and transaction metadata were disclosed; names, contacts and card numbers were not reported leaked. The count is not stated to cover Japan alone."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-06",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "implementation"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "外部の脆弱性指摘を受けて調査し、決済情報APIの情報流出を確認しました。アクセス制御を強化しています。",
+        "en": "Following an external vulnerability report, the company confirmed payment-API disclosure and strengthened access controls."
+      },
+      "status": "inferred",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-2"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "アカウントID基準で422,584件の内部識別値などが流出しました。氏名・連絡先やカード番号の流出とは公表されていません。日本の利用者だけの件数とは示されていません。",
+        "en": "422,584 account IDs’ internal identifiers and transaction metadata were disclosed; names, contacts and card numbers were not reported leaked. The count is not stated to cover Japan alone."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-2"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-06",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "APIのアクセス制御を強化し内部識別値を除去しました。外部公開APIの全数点検と監視強化を計画しています。",
+        "en": "API access controls were strengthened and internal identifiers removed; a complete public-API review and monitoring improvements are planned."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-2"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "脆弱性の具体的な技術内容、取得開始日、対象国別の内訳は未公表です。",
+      "en": "Strengthened API controls are reported, but the precise entry chain remains an assessment. Account identifiers and transaction metadata are not names or card credentials."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Weverse Company：事故に関する公表資料",
+      "url": "https://shop.weverse.io/ja/shop/JPY/artists/0/notices/14265",
+      "publisher": "Weverse Company",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-008",
+    "SEC-009",
+    "SEC-014"
+  ]
+}

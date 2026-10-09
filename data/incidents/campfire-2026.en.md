@@ -1,6 +1,6 @@
 # campfire-2026 — CAMPFIRE: leaked GitHub credentials and cloud access
 
-Incident | Catalog: 0.4.1 | Record SHA-256: 6ebd0adb88b55b1f734f6be5eb9eb9168c3977c7504da6a2c91087448117eca6
+Incident | Catalog: 0.5.0 | Record SHA-256: 6ebd0adb88b55b1f734f6be5eb9eb9168c3977c7504da6a2c91087448117eca6
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

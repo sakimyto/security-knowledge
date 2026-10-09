@@ -1,0 +1,95 @@
+{
+  "id": "k9natural-2026",
+  "organization": "K9ナチュラルジャパン",
+  "title": {
+    "ja": "K9ナチュラルジャパン：不正アクセスの経緯と影響",
+    "en": "K9ナチュラルジャパン: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "オンラインサービス管理サーバーに不正アクセスがありました。具体的な侵入原因は未公表です。 続報で個人情報の漏洩78,763件を確認しました。初報の約6万件から増加しました。カード情報の漏洩はありません。",
+    "en": "The online-service management server was accessed without authorization; the entry cause is undisclosed. The follow-up confirmed 78,763 leaked records, revised upward from about 60,000; card data was not leaked."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-07-14",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "オンラインサービス管理サーバーに不正アクセスがありました。具体的な侵入原因は未公表です。",
+        "en": "The online-service management server was accessed without authorization; the entry cause is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "9月4日報告 概要 / 二次被害"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "続報で個人情報の漏洩78,763件を確認しました。初報の約6万件から増加しました。カード情報の漏洩はありません。",
+        "en": "The follow-up confirmed 78,763 leaked records, revised upward from about 60,000; card data was not leaked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "9月4日報告 概要 / 二次被害"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "外部調査を完了し、安全性を高めた新しいプラットフォームへの移行を進めています。",
+        "en": "External investigation is complete and migration to a new platform is underway."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "9月4日報告 概要 / 二次被害"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "初期侵入方法、悪用された脆弱性、パスワードの加工方式は未公表です。",
+      "en": "The revised 78,763 records replaces the initial estimate. Initial entry and overlap among affected customers are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "K9ナチュラルジャパン：事故に関する公表資料",
+      "url": "https://www.k9natural.jp/blogs/news/%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%B5%81%E5%87%BA%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%AA%BF%E6%9F%BB%E7%B5%90%E6%9E%9C%E3%81%AE%E3%81%94%E5%A0%B1%E5%91%8A",
+      "publisher": "K9ナチュラルジャパン",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-012"]
+}

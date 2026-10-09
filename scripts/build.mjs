@@ -1,9 +1,13 @@
 import { resolve } from 'node:path'
 import { loadCatalog, ROOT, validateCatalog } from './catalog.mjs'
 import { buildDistribution, writeDistribution } from './distribution.mjs'
+import { loadIntakes, validateIntake } from './intake.mjs'
 
 const catalog = loadCatalog()
-const errors = validateCatalog(catalog)
+const errors = [
+  ...validateCatalog(catalog),
+  ...loadIntakes().flatMap((data) => validateIntake(data, catalog)),
+]
 if (errors.length) {
   console.error(errors.join('\n'))
   process.exit(1)

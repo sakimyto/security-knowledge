@@ -58,10 +58,27 @@ test('distribution preserves all original records and hashes across JSON, JSONL,
   }
   assert.equal(manifest().surfaces.length, 11)
   const report = JSON.parse(files.get('report.example.json'))
-  assert.equal(report.results.length, 14)
+  assert.equal(report.results.length, 16)
   assert.ok(
     report.results.every((result) => result.status === 'unverified' && !result.evidence.length),
   )
+})
+
+test('rehashed intake JSONL cannot change candidate facts independently of the reviewed ledger', () => {
+  const invalid = withManifest((d, copy) => {
+    const resource = d.resources.find((item) => item.kind === 'intake' && item.format === 'jsonl')
+    const rows = copy
+      .get(resource.path)
+      .trimEnd()
+      .split('\n')
+      .map((line) => JSON.parse(line))
+    rows[0].supplied.count.value = 1
+    const text = `${rows.map((row) => JSON.stringify(row)).join('\n')}\n`
+    copy.set(resource.path, text)
+    resource.bytes = Buffer.byteLength(text)
+    resource.sha256 = fileHash(text)
+  })
+  assert.match(validateDistribution(invalid).join('\n'), /Intake JSONL mismatch/)
 })
 
 test('Markdown data cannot create injected headings, HTML, or links', () => {

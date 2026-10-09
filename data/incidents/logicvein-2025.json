@@ -1,0 +1,115 @@
+{
+  "id": "logicvein-2025",
+  "organization": "ロジックベイン",
+  "title": {
+    "ja": "ロジックベイン：不正アクセスの経緯と影響",
+    "en": "ロジックベイン: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "VPN経由の社内侵入後にランサムウェアを実行したと調査機関が推測しています。 約97,338人が潜在的対象で、うち17,559人の情報のリークサイト掲載を確認しています。",
+    "en": "Investigators infer that intrusion through VPN preceded ransomware execution. Potential scope is about 97,338 people; leak-site publication is confirmed for 17,559."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2025-12-08",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "VPN経由の社内侵入後にランサムウェアを実行したと調査機関が推測しています。",
+        "en": "Investigators infer that intrusion through VPN preceded ransomware execution."
+      },
+      "status": "inferred",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第4報 §§1-3,6"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "約97,338人が潜在的対象で、うち17,559人の情報のリークサイト掲載を確認しています。",
+        "en": "Potential scope is about 97,338 people; leak-site publication is confirmed for 17,559."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第4報 §§1-3,6"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-12-08",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "全端末の接続遮断、EDR導入、権限・認証の再設計を実施しました。",
+        "en": "Measures include disconnecting endpoints, introducing EDR and redesigning authorization and authentication."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第4報 §§1-3,6"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "VPNの製品・脆弱性や認証突破方法は未公表です。経路は発表でも推測です。",
+      "en": "The VPN/ransomware route is reported as an assessment; product and precise access mechanism are undisclosed. Published records are a subset of potentially affected people."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ロジックベイン：事故に関する公表資料",
+      "url": "https://www.lvi.co.jp/company-news/2026/08/17/post-2244/",
+      "publisher": "ロジックベイン",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-002",
+    "SEC-003",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012",
+    "SEC-013"
+  ]
+}

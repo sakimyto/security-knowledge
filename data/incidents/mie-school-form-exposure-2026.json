@@ -1,0 +1,121 @@
+{
+  "id": "mie-school-form-exposure-2026",
+  "organization": "三重県立久居農林高等学校",
+  "title": {
+    "ja": "三重県立久居農林高等学校：情報の公開範囲・権限の問題",
+    "en": "三重県立久居農林高等学校: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "担当者が申込フォームの設定を変えた際、申込者全員に他の申込者の情報が見える設定にしていました。 申込者229人の名前、メール、中学校などが閲覧可能になりました。",
+    "en": "A staff configuration change exposed other applicants’ information to all form respondents. Names, emails and school information for 229 applicants were accessible."
+  },
+  "occurredAt": "2026-07-16",
+  "disclosedAt": "2026-07-22",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": [
+    "configuration"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "担当者が申込フォームの設定を変えた際、申込者全員に他の申込者の情報が見える設定にしていました。",
+        "en": "A staff configuration change exposed other applicants’ information to all form respondents."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "申込者229人の名前、メール、中学校などが閲覧可能になりました。",
+        "en": "Names, emails and school information for 229 applicants were accessible."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-16",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "フォームを停止して設定を修正し、対象者と学校へ通知しました。",
+        "en": "The form was suspended, permissions fixed and affected people and schools notified."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "実際の第三者閲覧人数や持ち出しの有無は未公表です。",
+      "en": "Actual unintended access remains unconfirmed; the incident involved a mistaken editing setting rather than reported external intrusion."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "三重県立久居農林高等学校：事故に関する公表資料",
+      "url": "https://www.pref.mie.lg.jp/TOPICS/m0053100002.htm",
+      "publisher": "三重県立久居農林高等学校",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009"
+  ]
+}

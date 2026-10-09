@@ -1,0 +1,103 @@
+{
+  "id": "takaratomy-dmp-auth-2026",
+  "organization": "タカラトミー",
+  "title": {
+    "ja": "タカラトミー：情報の公開範囲・権限の問題",
+    "en": "タカラトミー: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "アプリ公開時からユーザー認証の設計・実装に脆弱性がありました。 登録者数による最大約155,000人が潜在的対象です。第三者の閲覧や不正利用は未確認です。",
+    "en": "The app had a user-authentication design and implementation defect from release. Potential scope is up to approximately 155,000 registered users; third-party access or misuse was not confirmed."
+  },
+  "occurredAt": "2025-08-01",
+  "disclosedAt": "2026-07-28",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": ["implementation"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "アプリ公開時からユーザー認証の設計・実装に脆弱性がありました。",
+        "en": "The app had a user-authentication design and implementation defect from release."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "pp.1-2 本文 / §§1-2"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "登録者数による最大約155,000人が潜在的対象です。第三者の閲覧や不正利用は未確認です。",
+        "en": "Potential scope is up to approximately 155,000 registered users; third-party access or misuse was not confirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "pp.1-2 本文 / §§1-2"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-08-01",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-07-28",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "7月13日までに修正を完了し、確認体制を強化します。",
+        "en": "The defect was fixed by July 13 and security review is being strengthened."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "pp.1-2 本文 / §§1-2"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な認証の欠陥と第三者取得の有無は未公表です。",
+      "en": "Potentially accessible accounts are not confirmed accessed accounts. The implementation defect does not establish a library vulnerability."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "タカラトミー：事故に関する公表資料",
+      "url": "https://www.takaratomy.co.jp/support/pdf/dmp20260728.pdf",
+      "publisher": "タカラトミー",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-009", "SEC-014"]
+}

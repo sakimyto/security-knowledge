@@ -1,0 +1,112 @@
+{
+  "id": "daiichi-life-hr-2026",
+  "organization": "第一生命",
+  "title": {
+    "ja": "第一生命：不正アクセスの経緯と影響",
+    "en": "第一生命: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "従業員向け人事システムへの不正アクセスを9月24日に検知しました。 従業員約5万人と退職者約7万人の計約12万人が流出の可能性の対象です。顧客情報への不正アクセスは確認されていません。",
+    "en": "Unauthorized access to the employee HR system was detected on September 24. Potential exposure covers about 50,000 employees and 70,000 former employees; customer-data access is unconfirmed."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-02",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "従業員向け人事システムへの不正アクセスを9月24日に検知しました。",
+        "en": "Unauthorized access to the employee HR system was detected on September 24."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 冒頭 / 現時点で閲覧され、外部に流出した可能性のある個人情報"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "従業員約5万人と退職者約7万人の計約12万人が流出の可能性の対象です。顧客情報への不正アクセスは確認されていません。",
+        "en": "Potential exposure covers about 50,000 employees and 70,000 former employees; customer-data access is unconfirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 冒頭 / 現時点で閲覧され、外部に流出した可能性のある個人情報"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "対象となる退職者へ注意喚起と専用窓口を案内しました。",
+        "en": "Former employees were notified of precautions and a dedicated contact channel."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 冒頭 / 現時点で閲覧され、外部に流出した可能性のある個人情報"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法と流出の確定範囲は未公表です。",
+      "en": "The entry mechanism and confirmed exfiltration scope are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "第一ライフグループ・第一生命：事故に関する公表資料",
+      "url": "https://www.dai-ichi-life.co.jp/information/pdf/index_192.pdf",
+      "publisher": "第一ライフグループ・第一生命",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

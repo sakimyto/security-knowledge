@@ -1,0 +1,71 @@
+{
+  "id": "SEC-016",
+  "version": "1.0.0",
+  "updatedAt": "2026-10-09",
+  "title": {
+    "ja": "利用者ごとのレスポンスをキャッシュで混在させない",
+    "en": "Keep personalized responses isolated in caches"
+  },
+  "summary": {
+    "ja": "CDN、プロキシ、アプリのキャッシュで、別の利用者や組織の情報が返らないことを確認します。",
+    "en": "Check that CDN, proxy and application caches do not return another user’s or tenant’s data."
+  },
+  "category": "configuration",
+  "surfaces": [
+    "web-app",
+    "cloud",
+    "data-store"
+  ],
+  "applicability": {
+    "ja": "ログイン状態や組織、権限によってレスポンスが変わり、キャッシュを利用するサービス。",
+    "en": "Services that cache responses which vary by login identity, tenant or permissions."
+  },
+  "targets": [
+    {
+      "ja": "CDN・プロキシの保存条件、キャッシュキー、Cookie・Authorizationの扱い、認証後のページとAPI",
+      "en": "CDN and proxy storage conditions, cache keys, Cookie and Authorization handling, authenticated pages and APIs."
+    }
+  ],
+  "checks": [
+    {
+      "ja": "個人情報を含むレスポンスの保存条件とキャッシュキーを照合し、利用者・組織・権限の違いを正しく扱っているか確認する。",
+      "en": "Compare storage conditions and cache keys for personalized responses; verify isolation by identity, tenant and permission."
+    },
+    {
+      "ja": "所有者が許可した検証環境の試験証拠で、Aの後にBが同じURLへアクセスしてもAのデータが返らず、未ログイン・ログアウト後にもデータが残らないことを確認する。",
+      "en": "Review tests in an owner-authorized environment: B visiting a URL after A must not receive A’s data, including anonymous and post-logout access."
+    },
+    {
+      "ja": "通常、エラー、リダイレクト、再認証のレスポンスとキャッシュ無効化後の挙動を確認する。設定だけで証明できなければunverifiedとする。",
+      "en": "Check normal, error, redirect and reauthentication responses, plus behavior after invalidation. Configuration alone without behavioral evidence remains unverified."
+    }
+  ],
+  "remediation": [
+    {
+      "ja": "個別レスポンスの共有キャッシュを止めるか、必要な識別子と権限を含む分離を設計し、変更時には既存キャッシュも無効化する。",
+      "en": "Disable shared caching of personalized responses or design adequate identity and permission isolation; invalidate existing cache entries when changing policy."
+    }
+  ],
+  "completionEvidence": [
+    {
+      "ja": "変更した設定と、異なる利用者・組織・未ログイン状態の順序を変えても混在しない試験結果を残す。通常の配信も成功することを確認する。",
+      "en": "Keep configuration changes and tests that vary user, tenant and anonymous-access order without cross-user data. Verify normal delivery still succeeds."
+    }
+  ],
+  "limitations": [
+    {
+      "ja": "Cache-Controlの記載だけでは、CDNやアプリ独自の保存処理まで保証できません。認可そのものはSEC-014で別に確認します。",
+      "en": "Cache-Control alone does not prove CDN or custom application storage behavior. Inspect authorization separately with SEC-014."
+    },
+    {
+      "ja": "事故へのリンクは点検の提案です。各サービスに同じ設定不備があるという認定ではありません。",
+      "en": "Incident links provide inspection guidance; they do not establish the same defect in every service."
+    }
+  ],
+  "incidentIds": [
+    "tixplus-cache-exposure-2026"
+  ],
+  "references": [],
+  "execution": "read-only-by-default",
+  "provenance": "editorial-guidance"
+}

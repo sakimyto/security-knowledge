@@ -1,0 +1,121 @@
+{
+  "id": "ainokaze-reservations-2026",
+  "organization": "あいの風とやま鉄道",
+  "title": {
+    "ja": "あいの風とやま鉄道：不正アクセスの経緯と影響",
+    "en": "あいの風とやま鉄道: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "座席管理システムに9月2日から8日まで複数回の不正アクセスがありました。原因は調査中です。 1,409人の情報に漏えいのおそれがあります。決済は独立システムで、カード情報は保持していません。",
+    "en": "The reservation system was accessed repeatedly between September 2 and 8; the cause is under investigation. Information for 1,409 customers may have leaked; card payment was processed in an independent system."
+  },
+  "occurredAt": "2026-09-02",
+  "disclosedAt": "2026-09-15",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "座席管理システムに9月2日から8日まで複数回の不正アクセスがありました。原因は調査中です。",
+        "en": "The reservation system was accessed repeatedly between September 2 and 8; the cause is under investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4 / Q4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "1,409人の情報に漏えいのおそれがあります。決済は独立システムで、カード情報は保持していません。",
+        "en": "Information for 1,409 customers may have leaked; card payment was processed in an independent system."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4 / Q4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-02",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "ネット新規予約を停止し、対象者へ通知しました。",
+        "en": "Online reservations were suspended and affected customers notified."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4 / Q4"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法と情報取得の確定範囲は未公表です。",
+      "en": "The undisclosed details must remain unknown."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "あいの風とやま鉄道：事故に関する公表資料",
+      "url": "https://ainokaze.co.jp/24166",
+      "publisher": "あいの風とやま鉄道",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

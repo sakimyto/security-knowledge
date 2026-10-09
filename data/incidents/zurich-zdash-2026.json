@@ -1,0 +1,121 @@
+{
+  "id": "zurich-zdash-2026",
+  "organization": "チューリッヒ保険",
+  "title": {
+    "ja": "チューリッヒ保険：不正アクセスの経緯と影響",
+    "en": "チューリッヒ保険: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "Z-Dashで脆弱性が見つかり、4月1日と6日の不正アクセスを過去ログで確認しました。 最大1,668人の氏名・メール等が対象です。ドラレコ映像は含まれません。",
+    "en": "A Z-Dash vulnerability was discovered; historical logs showed unauthorized access on April 1 and 6. Up to 1,668 customers may be affected; dashcam videos were excluded."
+  },
+  "occurredAt": "2026-04-01",
+  "disclosedAt": "2026-08-27",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "Z-Dashで脆弱性が見つかり、4月1日と6日の不正アクセスを過去ログで確認しました。",
+        "en": "A Z-Dash vulnerability was discovered; historical logs showed unauthorized access on April 1 and 6."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "概要 / 対象となるお客さま / 当社のこれまでの対応"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大1,668人の氏名・メール等が対象です。ドラレコ映像は含まれません。",
+        "en": "Up to 1,668 customers may be affected; dashcam videos were excluded."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "概要 / 対象となるお客さま / 当社のこれまでの対応"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-04-01",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "システムを停止し、原因と対象範囲を調査しています。",
+        "en": "The system was suspended while the cause and scope are investigated."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "概要 / 対象となるお客さま / 当社のこれまでの対応"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "脆弱性の具体的内容、修正の提供時期、実際の流出範囲は未公表です。",
+      "en": "The vulnerability product, CVE and prior patch availability are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "チューリッヒ保険：事故に関する公表資料",
+      "url": "https://www.zurich.co.jp/aboutus/news/news/2026/0827/",
+      "publisher": "チューリッヒ保険",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

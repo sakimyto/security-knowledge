@@ -1,0 +1,122 @@
+{
+  "id": "chiba-biodiversity-2026",
+  "organization": "千葉県生物多様性センター",
+  "title": {
+    "ja": "千葉県生物多様性センター：不正アクセスの経緯と影響",
+    "en": "千葉県生物多様性センター: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "団員用サイトに不正アクセスされ、通常存在しないページを挿入されました。侵入原因は未公表です。 登録団員は1,963人ですが、約1,500人のサーバー上の情報は氏名等のみです。住所などは別名簿にある場合があり、全項目の流出を意味しません。流出は未確認です。",
+    "en": "The member site was accessed and unauthorized pages inserted; the entry cause is undisclosed. There are 1,963 members; about 1,500 have only names or nicknames on the server. Other fields may be stored separately; complete-record leakage is not established."
+  },
+  "occurredAt": "2026-08-27",
+  "disclosedAt": "2026-09-01",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "団員用サイトに不正アクセスされ、通常存在しないページを挿入されました。侵入原因は未公表です。",
+        "en": "The member site was accessed and unauthorized pages inserted; the entry cause is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "登録団員は1,963人ですが、約1,500人のサーバー上の情報は氏名等のみです。住所などは別名簿にある場合があり、全項目の流出を意味しません。流出は未確認です。",
+        "en": "There are 1,963 members; about 1,500 have only names or nicknames on the server. Other fields may be stored separately; complete-record leakage is not established."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-27",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "サイトを外部から閲覧できない状態にし、団員に通知しました。専門調査を依頼する予定です。",
+        "en": "The site was taken offline and members notified; specialist investigation is planned."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-5"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "Actual leakage and entry mechanism remain unconfirmed. More detailed member information was held outside the affected server."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "千葉県生物多様性センター：事故に関する公表資料",
+      "url": "https://www.pref.chiba.lg.jp/shizen/press/2026/260901hompageerror.html",
+      "publisher": "千葉県生物多様性センター",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-008",
+    "SEC-009",
+    "SEC-012",
+    "SEC-015"
+  ]
+}

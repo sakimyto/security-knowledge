@@ -1,0 +1,122 @@
+{
+  "id": "conoha-wing-2026",
+  "organization": "ConoHa WING",
+  "title": {
+    "ja": "ConoHa WING：不正アクセスの経緯と影響",
+    "en": "ConoHa WING: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "一部Webサーバー領域に不正アクセスされ、不正プログラムを設置されました。原因の技術詳細は未公表です。 426アカウントのサーバー領域が対象です。会員・契約・支払い情報は別環境にあり、漏洩していないと説明しています。",
+    "en": "Some hosted web-server areas were accessed and malicious programs installed; technical entry details are undisclosed. 426 hosting accounts are affected; separately stored membership, contract and payment information is reported unaffected."
+  },
+  "occurredAt": "2026-09-03",
+  "disclosedAt": "2026-09-20",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "一部Webサーバー領域に不正アクセスされ、不正プログラムを設置されました。原因の技術詳細は未公表です。",
+        "en": "Some hosted web-server areas were accessed and malicious programs installed; technical entry details are undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-3"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "426アカウントのサーバー領域が対象です。会員・契約・支払い情報は別環境にあり、漏洩していないと説明しています。",
+        "en": "426 hosting accounts are affected; separately stored membership, contract and payment information is reported unaffected."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-03",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "9月18日までに影響範囲を特定して不正プログラムを排除し、対象者へ個別に連絡しました。",
+        "en": "The scope was determined and malicious programs removed by September 18; affected customers were individually contacted."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The initial entry mechanism and prior patch availability are unknown. Hosting and membership/billing systems have separate scopes."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ConoHa WING：事故に関する公表資料",
+      "url": "https://www.conoha.jp/wing/news/?ap=2015054834&btn_id=www_rspnet_jp--p5050_post20260920a170000g",
+      "publisher": "ConoHa WING",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-008",
+    "SEC-009",
+    "SEC-013",
+    "SEC-015"
+  ]
+}

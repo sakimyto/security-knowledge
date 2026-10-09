@@ -1,0 +1,124 @@
+{
+  "id": "cmic-ra-connect-2026",
+  "organization": "旭化成セラピューティクス・シミックHCI",
+  "title": {
+    "ja": "旭化成セラピューティクス・シミックHCI：不正アクセスの経緯と影響",
+    "en": "旭化成セラピューティクス・シミックHCI: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "患者支援サービスのWeb公開領域に置いたファイルを第三者に取得されました。 患者30人とメールのみ216人、医療従事者1,535人、委託元関係者113人と46人が対象です。合計1,940人と報告しています。",
+    "en": "Files in the publicly served area of a patient-support service were retrieved by a third party. The disclosed groups are 30 patients, 216 email-only patient records, 1,535 medical professionals and two client-staff groups of 113 and 46, totaling 1,940."
+  },
+  "occurredAt": "2026-06-15",
+  "disclosedAt": "2026-07-24",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "configuration",
+    "supply-chain"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "患者支援サービスのWeb公開領域に置いたファイルを第三者に取得されました。",
+        "en": "Files in the publicly served area of a patient-support service were retrieved by a third party."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "患者30人とメールのみ216人、医療従事者1,535人、委託元関係者113人と46人が対象です。合計1,940人と報告しています。",
+        "en": "The disclosed groups are 30 patients, 216 email-only patient records, 1,535 medical professionals and two client-staff groups of 113 and 46, totaling 1,940."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-15",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "アクセスを遮断し認証情報を変更しました。公開設定・アクセス管理とファイル監視を見直しました。",
+        "en": "Access was blocked and credentials changed; publication permissions, access management and file monitoring were reviewed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "公開領域へ置かれた詳しい経緯、認証情報の取得方法は未公表です。10月の別委託先の事故とは別件です。",
+      "en": "The public-storage configuration and scopes are established; actual third-party downloads are unresolved. This is separate from the October Pharma DIGITAL event."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "旭化成セラピューティクス・シミックHCI：事故に関する公表資料",
+      "url": "https://www.cmic-hci.com/news/20260724",
+      "publisher": "旭化成セラピューティクス・シミックHCI",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-005",
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

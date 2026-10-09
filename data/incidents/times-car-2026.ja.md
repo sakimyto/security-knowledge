@@ -1,6 +1,6 @@
 # times-car-2026 — タイムズカー：会員情報と本人確認書類が流出
 
-事例 | Catalog: 0.4.1 | Record SHA-256: 8de24493d8aada652dfe02055b6cacca57f0cff723ed7906ca65c10e5eaf6331
+事例 | Catalog: 0.5.0 | Record SHA-256: 6e241f759e7f549bd905c7792ad87a9ba77851b26e7fe3b8a14438b14fcf95e7
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -8,13 +8,13 @@
 
 Organization: タイムズモビリティ | Outcome: confirmed-breach
 
-Occurred: unknown | Disclosed: 2026-09-25 | Reviewed: 2026-10-02
+Occurred: unknown | Disclosed: 2026-09-25 | Reviewed: 2026-10-09
 
 Categories: unknown | CVEs: unspecified
 
 ## 根拠のある主張
 
-- [confirmed / 公表で確認] 660万件の会員情報と、うち160万件の本人確認書類画像の流出を確認しました。両者を合算しません。 (s2; 流出した情報 / 対象件数)
+- [confirmed / 公表で確認] 660万件の会員情報と、うち160万件の本人確認書類画像の流出を確認しました。両者を合算しません。 (s1, s2; 第2報 §1 / 第3報 §1)
 - [confirmed / 公表で確認] 不正アクセスの侵入経路と原因は調査中です。 (s1; 今後の調査)
 
 ## 公表された対応
@@ -41,5 +41,5 @@ Rules: SEC-005, SEC-006, SEC-008, SEC-009, SEC-012
 
 ## 出典
 
-- s1: [タイムズカーにおける不正アクセスに関するお知らせ（第2報）](https://share.timescar.jp/news/2026/0928/1815.html) — タイムズモビリティ; organization; published: 2026-09-28; reviewed: 2026-10-02
-- s2: [タイムズカーにおける不正アクセスに関するお知らせ（第3報）](https://share.timescar.jp/news/2026/0929/1816.html) — タイムズモビリティ; organization; published: 2026-09-29; reviewed: 2026-10-02
+- s1: [タイムズカーにおける不正アクセスに関するお知らせ（第2報）](https://share.timescar.jp/news/2026/0928/1815.html) — タイムズモビリティ; organization; published: 2026-09-28; reviewed: 2026-10-09
+- s2: [タイムズカーにおける不正アクセスに関するお知らせ（第3報）](https://share.timescar.jp/news/2026/0929/1816.html) — タイムズモビリティ; organization; published: 2026-09-29; reviewed: 2026-10-09

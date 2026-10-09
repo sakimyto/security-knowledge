@@ -1,0 +1,95 @@
+{
+  "id": "tokyometro-metpo-mail-2026",
+  "organization": "東京メトロ",
+  "title": {
+    "ja": "東京メトロ：不正アクセスの経緯と影響",
+    "en": "東京メトロ: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "メール配信サービスのサーバーに不正アクセスを確認しました。原因の詳細は調査中です。 配信停止中のメールアドレス約59,000件が閲覧・取得された可能性があります。該当サーバーには他の会員情報はありません。",
+    "en": "Unauthorized access to a mail-delivery server was confirmed; the cause remains under investigation. About 59,000 suppressed email addresses may have been viewed or retrieved; that server contained no other member information."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-27",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "メール配信サービスのサーバーに不正アクセスを確認しました。原因の詳細は調査中です。",
+        "en": "Unauthorized access to a mail-delivery server was confirmed; the cause remains under investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "配信停止中のメールアドレス約59,000件が閲覧・取得された可能性があります。該当サーバーには他の会員情報はありません。",
+        "en": "About 59,000 suppressed email addresses may have been viewed or retrieved; that server contained no other member information."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-27",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "被疑箇所を特定して防御措置を実施し、利用記録を保全して調査しています。",
+        "en": "The suspected path was secured and access records preserved for investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§§1-3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "侵入開始日、侵入方法、実際の持ち出しの範囲は未確認です。",
+      "en": "The initial entry method and actually exfiltrated scope are undisclosed. Suppressed notification addresses are not all affected members."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "東京メトロ：事故に関する公表資料",
+      "url": "https://www.metpo.jp/news/Gn52e-Vm",
+      "publisher": "東京メトロ",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-012"]
+}

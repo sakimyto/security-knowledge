@@ -1,0 +1,113 @@
+{
+  "id": "jaea-jrr3-files-2026",
+  "organization": "日本原子力研究開発機構",
+  "title": {
+    "ja": "日本原子力研究開発機構：不正アクセスの経緯と影響",
+    "en": "日本原子力研究開発機構: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "研究支援サイトの2,419ファイルを不正ダウンロードされました。 個人情報を含む367ファイル・175人が流出し、6人分は個人番号を含みます。",
+    "en": "2,419 research-support files were downloaded without authorization. 367 personal-data files for 175 people leaked, including identification numbers for six people."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-01",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "研究支援サイトの2,419ファイルを不正ダウンロードされました。",
+        "en": "2,419 research-support files were downloaded without authorization."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本事象の概要 / 漏えいした個人情報 / 対応状況"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "個人情報を含む367ファイル・175人が流出し、6人分は個人番号を含みます。",
+        "en": "367 personal-data files for 175 people leaked, including identification numbers for six people."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本事象の概要 / 漏えいした個人情報 / 対応状況"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-01",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "外部アクセスを停止し、対象者へ通知しました。業務ネットワークとは独立したサイトです。",
+        "en": "External access was stopped and affected people notified; the site is independent of the business network."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "本事象の概要 / 漏えいした個人情報 / 対応状況"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The initial entry route is undisclosed. Downloaded files, personal-data files and affected people are different units."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "日本原子力研究開発機構：事故に関する公表資料",
+      "url": "https://www.jaea.go.jp/02/press2026/p26100105/",
+      "publisher": "日本原子力研究開発機構",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012",
+    "SEC-014"
+  ]
+}

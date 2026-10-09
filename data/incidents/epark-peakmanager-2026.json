@@ -1,0 +1,113 @@
+{
+  "id": "epark-peakmanager-2026",
+  "organization": "EPARKリラク＆エステ",
+  "title": {
+    "ja": "EPARKリラク＆エステ：不正アクセスの経緯と影響",
+    "en": "EPARKリラク＆エステ: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "顧客DBの外部転送と、その後の削除を専門調査で確認しました。侵入手法は非公表です。 9月24日更新で約3,300万件から名寄せ後約2,218万レコードへ修正しました。正確な人数への換算はできません。",
+    "en": "Forensics confirmed database exfiltration followed by deletion; the entry method is withheld. The September 24 update revised about 33 million records to about 22.18 million after matching; an exact person count cannot be determined."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-07-31",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "顧客DBの外部転送と、その後の削除を専門調査で確認しました。侵入手法は非公表です。",
+        "en": "Forensics confirmed database exfiltration followed by deletion; the entry method is withheld."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第2報 §§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "9月24日更新で約3,300万件から名寄せ後約2,218万レコードへ修正しました。正確な人数への換算はできません。",
+        "en": "The September 24 update revised about 33 million records to about 22.18 million after matching; an exact person count cannot be determined."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第2報 §§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-31",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "削除されたDBは復旧済みで、情報管理と安全対策を見直しています。",
+        "en": "The deleted database was restored and information-management and security controls are being reviewed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第2報 §§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "自由記述の備考にカード情報らしき内容5件があり、初報の「カード情報なし」を訂正しています。",
+      "en": "The revised 22.18 million records replaces the 33 million estimate. Five free-text entries resembling expired card data are not verified payment credentials."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "EPARKリラク＆エステ：事故に関する公表資料",
+      "url": "https://www.epark-relax.co.jp/news/231",
+      "publisher": "EPARKリラク＆エステ",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012",
+    "SEC-013"
+  ]
+}

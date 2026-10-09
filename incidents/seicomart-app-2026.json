@@ -1,0 +1,104 @@
+{
+  "id": "seicomart-app-2026",
+  "organization": "セイコーマート",
+  "title": {
+    "ja": "セイコーマート：不正アクセスの経緯と影響",
+    "en": "セイコーマート: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "セイコーマートアプリのサーバーへの不正アクセスを確認しました。手法の詳細は非公表です。 閲覧の対象は574,647人分です。第三報の572,022人分から増加しました。9月24日までの退会者は対象外です。",
+    "en": "Unauthorized access to the app server was confirmed; the method is withheld. 574,647 people’s data was accessed, revised from 572,022 in the third notice; members withdrawn by September 24 are excluded."
+  },
+  "occurredAt": null,
+  "disclosedAt": null,
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "セイコーマートアプリのサーバーへの不正アクセスを確認しました。手法の詳細は非公表です。",
+        "en": "Unauthorized access to the app server was confirmed; the method is withheld."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "10月5日第四報 / 9月30日第三報"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "閲覧の対象は574,647人分です。第三報の572,022人分から増加しました。9月24日までの退会者は対象外です。",
+        "en": "574,647 people’s data was accessed, revised from 572,022 in the third notice; members withdrawn by September 24 are excluded."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "10月5日第四報 / 9月30日第三報"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-05",
+      "text": {
+        "ja": "確認した追加報告の公表日。初報日は未確認です。",
+        "en": "Reviewed follow-up publication date; the first disclosure date remains unknown."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "対象の有無を全会員へ通知し、アプリ・Webでの会員情報閲覧・変更などの機能を終了します。",
+        "en": "Members were notified of exposure status; online account-viewing and modification functions are being discontinued."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "10月5日第四報 / 9月30日第三報"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "最初の公表日は一次資料で未確認です。詳細な侵入手法は開示を控えると説明しています。",
+      "en": "The first disclosure date remains unverified. The company explicitly withholds the intrusion method."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "セイコーマート：事故に関する公表資料",
+      "url": "https://www.seicomart.co.jp/images/top/pdf/202610051430.pdf",
+      "publisher": "セイコーマート",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "s2",
+      "title": "セイコーマート：事故に関する公表資料",
+      "url": "https://www.secoma.co.jp/info/pdf/202609301908.pdf",
+      "publisher": "セイコーマート",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-008", "SEC-009", "SEC-012", "SEC-014"]
+}

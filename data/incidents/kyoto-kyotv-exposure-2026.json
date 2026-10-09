@@ -1,0 +1,111 @@
+{
+  "id": "kyoto-kyotv-exposure-2026",
+  "organization": "京都府 KYO育tv",
+  "title": {
+    "ja": "京都府 KYO育tv：情報の公開範囲・権限の問題",
+    "en": "京都府 KYO育tv: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "お気に入り機能のシステム不備で、会員情報がインターネット上で閲覧可能でした。 最大1,338人が対象で、86人の検索結果への表示を実際に確認しました。",
+    "en": "A favorites-feature defect exposed member data on the internet. Potential scope is up to 1,338 members; search results actually showed data for 86."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-04",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": [
+    "implementation"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "お気に入り機能のシステム不備で、会員情報がインターネット上で閲覧可能でした。",
+        "en": "A favorites-feature defect exposed member data on the internet."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §§1-3"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大1,338人が対象で、86人の検索結果への表示を実際に確認しました。",
+        "en": "Potential scope is up to 1,338 members; search results actually showed data for 86."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §§1-3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-04",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "機能を停止し検索結果の削除を依頼した後、全サービスを停止しました。",
+        "en": "The feature was disabled, search-result removal requested, and all services subsequently suspended."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §§1-3"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "最初の公開日時と具体的な実装の不備は未公表です。",
+      "en": "Potentially accessible profiles and the 86 profiles actually shown have separate scopes; actual disclosure is not universal."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "京都府 KYO育tv：事故に関する公表資料",
+      "url": "https://www.pref.kyoto.jp/press/documents/26080407.pdf",
+      "publisher": "京都府 KYO育tv",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-009",
+    "SEC-014"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "shizuoka-form-exposure-2026",
+  "organization": "静岡県",
+  "title": {
+    "ja": "静岡県：情報の公開範囲・権限の問題",
+    "en": "静岡県: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "Googleフォームの「結果の概要を表示する」設定が有効で、他の申込者の回答を表示していました。 防災リーダー研修の109人の氏名・電話等が対象です。",
+    "en": "A Google Forms response-summary setting exposed other applicants’ answers. Names, phone numbers and related data for 109 disaster-preparedness trainees were exposed."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-08-19",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": ["configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "Googleフォームの「結果の概要を表示する」設定が有効で、他の申込者の回答を表示していました。",
+        "en": "A Google Forms response-summary setting exposed other applicants’ answers."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "p.1 §§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "防災リーダー研修の109人の氏名・電話等が対象です。",
+        "en": "Names, phone numbers and related data for 109 disaster-preparedness trainees were exposed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "p.1 §§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-19",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "表示設定を直ちに修正し、関係者へ謝罪しました。",
+        "en": "The visibility setting was fixed immediately and affected people informed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "p.1 §§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "公開状態が始まった正確な日時は未公表です。",
+      "en": "Actual access by third parties remains unconfirmed; exposure resulted from the published Forms response-summary setting."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "静岡県：事故に関する公表資料",
+      "url": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/085/031/02_0819boujou.pdf",
+      "publisher": "静岡県",
+      "kind": "government",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-014"]
+}

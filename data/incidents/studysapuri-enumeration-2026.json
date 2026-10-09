@@ -1,0 +1,120 @@
+{
+  "id": "studysapuri-enumeration-2026",
+  "organization": "スタディサプリ",
+  "title": {
+    "ja": "スタディサプリ：不正アクセスの経緯と影響",
+    "en": "スタディサプリ: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "機能の仕様不備を突き、特定メールが登録済みか照会された可能性があります。 3,687件は登録有無を特定された可能性のあるメール数です。利用者アカウントへの不正ログインは未確認です。",
+    "en": "A feature-specification defect may have enabled identification of registered email addresses. 3,687 is the count of addresses whose membership may have been identified; user-account compromise was not confirmed."
+  },
+  "occurredAt": "2026-09-30",
+  "disclosedAt": "2026-10-03",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "implementation"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "機能の仕様不備を突き、特定メールが登録済みか照会された可能性があります。",
+        "en": "A feature-specification defect may have enabled identification of registered email addresses."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "#ssntc_303 原因 / 影響範囲 / 当社の対応"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "3,687件は登録有無を特定された可能性のあるメール数です。利用者アカウントへの不正ログインは未確認です。",
+        "en": "3,687 is the count of addresses whose membership may have been identified; user-account compromise was not confirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "#ssntc_303 原因 / 影響範囲 / 当社の対応"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "9月30日中に仕様を修正し、同じ照会ができない状態にしました。",
+        "en": "The feature was corrected on September 30 to prevent the same enumeration."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "#ssntc_303 原因 / 影響範囲 / 当社の対応"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的機能と照会手法は未公表です。氏名・パスワード等の流出とは区別します。",
+      "en": "Affected email addresses are not a count of compromised logins. Vulnerability identifiers and prior remediation timing are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "スタディサプリ：事故に関する公表資料",
+      "url": "https://studysapuri.jp/info/important/#ssntc_303",
+      "publisher": "スタディサプリ",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-009",
+    "SEC-014"
+  ]
+}

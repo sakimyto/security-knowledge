@@ -1,6 +1,6 @@
 # rust-arrayref-2026 — Rust: malicious build code in legitimate crate updates
 
-Incident | Catalog: 0.4.1 | Record SHA-256: 636cf32e46b05d55895c1e34fda7bb20010e0d4d7bb0d25a61acf9a5eb673d50
+Incident | Catalog: 0.5.0 | Record SHA-256: 636cf32e46b05d55895c1e34fda7bb20010e0d4d7bb0d25a61acf9a5eb673d50
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

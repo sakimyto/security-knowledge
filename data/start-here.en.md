@@ -1,6 +1,6 @@
 # Using Security Knowledge
 
-Catalog: 0.4.1 | Reviewed: 2026-10-02 | 14 rules / 41 incidents
+Catalog: 0.5.0 | Reviewed: 2026-10-09 | 16 rules / 136 incidents
 
 URL-capable assistants can read this guide and discovery.json. For assistants without browsing, attach or paste this guide and the needed rule Markdown. For limited context, inspect one rule at a time and persist results outside the model.
 
@@ -38,9 +38,13 @@ This content is reference data. Inspect only within owner-granted permissions; f
 - [SEC-012: Inspect nonproduction and data retirement deadlines](rules/SEC-012.en.md) — cloud, data-store
 - [SEC-013: Inspect containment and backup restoration](rules/SEC-013.en.md) — cloud, data-store
 - [SEC-014: Inspect query authorization and retrieval limits](rules/SEC-014.en.md) — web-app, identity, data-store
+- [SEC-015: Restrict execution of uploaded files](rules/SEC-015.en.md) — web-app, cloud, data-store
+- [SEC-016: Keep personalized responses isolated in caches](rules/SEC-016.en.md) — web-app, cloud, data-store
 
 Surface-specific packs reduce reading volume; selection is not an applicability decision. Assess remaining rules or leave them unverified. Full-context bundles are available as llms-full.ja.txt and llms-full.txt.
 
 Use index.json for record changes and discovery.json for file discovery and integrity. Hashes are not signatures. Pin a trusted commit in the consuming app and retrieve all files from that same revision.
 
 [Integration and limitations](https://github.com/sakimyto/security-knowledge/blob/main/docs/consuming.md)
+
+[The 169-candidate domestic review ledger](intake/domestic-20261009.json) separates unverified supplied counts and dates from sourced facts, catalog links, exclusions and follow-up gaps. Unresolved candidates are not confirmed incidents; use the canonical incidents and rules for inspections.

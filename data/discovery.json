@@ -1,9 +1,9 @@
 {
   "formatVersion": "1.0.0",
-  "schemaVersion": "1.0.0",
-  "catalogVersion": "0.4.1",
-  "updatedAt": "2026-10-02",
-  "catalogHash": "8475e05c44114b0f314005201084fde4507f872e33e385664e6d54db36106b36",
+  "schemaVersion": "1.1.0",
+  "catalogVersion": "0.5.0",
+  "updatedAt": "2026-10-09",
+  "catalogHash": "79ef7a655dffd4ba0ead9d908a4bb7ceddf4e58e5025df7954b9e3ac6a813af1",
   "repository": "https://github.com/sakimyto/security-knowledge",
   "locales": [
     "ja",
@@ -14,22 +14,36 @@
       "path": "catalog.json",
       "kind": "catalog",
       "format": "json",
-      "bytes": 253344,
-      "sha256": "b7e07515b7896cdd8c54f51c4c3c6fb5df65e47fd943d2bb461e4ba1fa8ec560"
+      "bytes": 721643,
+      "sha256": "05426fe8bb3717122157e904513b638ecbcc7fa10f489dd0e176418ae7d32d1a"
     },
     {
       "path": "index.json",
       "kind": "index",
       "format": "json",
-      "bytes": 9249,
-      "sha256": "247cf3feb7cb96268e85b4ed04ac19e212289d280d4cbda9fb72f418eb8b1cfe"
+      "bytes": 24628,
+      "sha256": "8d7a789102e251d1ed5f27c69db40c46a285c10691460e889fc84213155053ce"
+    },
+    {
+      "path": "intake/domestic-20261009.json",
+      "kind": "intake",
+      "format": "json",
+      "bytes": 440408,
+      "sha256": "b9b6c3b2428a8e570843b37ab66e4b6c6a92ffa7f01d50917326e92730886857"
+    },
+    {
+      "path": "intake/domestic-20261009.jsonl",
+      "kind": "intake",
+      "format": "jsonl",
+      "bytes": 327675,
+      "sha256": "86a95f0a96fc308c0da7d14013b83eb8bac223cd0a9cbdfa912b16d3be8f492f"
     },
     {
       "path": "catalog.schema.json",
       "kind": "schema",
       "format": "json",
-      "bytes": 12891,
-      "sha256": "1ef7b6f041a32b3e13c7a0d74a053129ea77b459473f25ebe00c1a97dcb53132"
+      "bytes": 12937,
+      "sha256": "ac874441327575c0d0ca6aba589bff26301f21f9a45b51a42aa399fd1d3aa5f7"
     },
     {
       "path": "inventory.schema.json",
@@ -49,8 +63,8 @@
       "path": "discovery.schema.json",
       "kind": "schema",
       "format": "json",
-      "bytes": 4566,
-      "sha256": "f8e2e21cc81506faded4c53162a1db6f1f425977026370dd7219d00be98df358"
+      "bytes": 4624,
+      "sha256": "081a9bba5627df8e147b176b6c5224182c3533fe496676e29664be659dbf00df"
     },
     {
       "path": "decision-input.schema.json",
@@ -58,6 +72,13 @@
       "format": "json",
       "bytes": 1462,
       "sha256": "c095b4cce821fb6d8e98c3e675e994271c53e1757ad5eeb516bd9f64bde5df55"
+    },
+    {
+      "path": "intake.schema.json",
+      "kind": "schema",
+      "format": "json",
+      "bytes": 8074,
+      "sha256": "30a0f77cd21768a6a5f8eee05ff5c89020260b8bbd81e49a89be7b3cad78a768"
     },
     {
       "path": "inventory.example.json",
@@ -70,29 +91,29 @@
       "path": "report.example.json",
       "kind": "example",
       "format": "json",
-      "bytes": 5963,
-      "sha256": "20218aa14e17faa83122071c67229eea841ae0e5592be3332e5271e6fbf0ff88"
+      "bytes": 6775,
+      "sha256": "851f6f04c67a007a2cb240ba629d02fe56559acf35fdfe44dd07b6bc53815031"
     },
     {
       "path": "decision-tasks.jsonl",
       "kind": "jsonl",
       "format": "jsonl",
-      "bytes": 46496,
-      "sha256": "55213013707f05dad47eb06cf80f587307baf75bca000188bcd98fc4fa808aee"
+      "bytes": 54923,
+      "sha256": "63e4a6f596d972121cfd03e37c4081dd779cc55daacc28f10ffdcd6e5bab5331"
     },
     {
       "path": "decision-input.example.json",
       "kind": "example",
       "format": "json",
       "bytes": 547,
-      "sha256": "38a5092d149844def833ec1036de59759096bfdac5023f98301c80d251890966"
+      "sha256": "c0ddd5bd97a4a6882de6f47da40e973483c7a9d66c3e9dd078a6228fe574f4ac"
     },
     {
       "path": "jev-request.example.json",
       "kind": "example",
       "format": "json",
       "bytes": 3825,
-      "sha256": "ee725dc28806de209abf84402d7432ed47f58af7b2856ccbba7f75b8ec338bdf"
+      "sha256": "2f514a40a4ab4b8e9eb350df8b49496a2104fd4f5b7afc4cf2e14982145c5f57"
     },
     {
       "path": "jev-response.example.json",
@@ -105,215 +126,215 @@
       "path": "rules.jsonl",
       "kind": "jsonl",
       "format": "jsonl",
-      "bytes": 45648,
-      "sha256": "4317b46aa4c6ac3680ad9aadd2a09546e6c3e6909ce0e4f3108971f01d7734a5"
+      "bytes": 61865,
+      "sha256": "ed2e781d354f9077ec0a0563352e1042c0c9bf43cec9a2400a329695a3733a44"
     },
     {
       "path": "rules/SEC-001.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 3436,
-      "sha256": "6013fd2d8756b67d65c6bde7a4afdec5903fde679a6e7059e40f2dec23e19d8d"
+      "bytes": 3891,
+      "sha256": "0e09d77abc4b19e10c039db7ca843e952c528a980cf3cf8bf3e6697fbe54e86e"
     },
     {
       "path": "rules/SEC-001.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2425,
-      "sha256": "1e40950ae0c48f97fcaf8cfd01c3fdc562952cec08d9ba92b98e32853a1d02c0"
+      "bytes": 2784,
+      "sha256": "1034219de814b59e61ef6aca330e13ce0ca301466c135ecee49406e9f38df9a7"
     },
     {
       "path": "rules/SEC-001.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2087,
-      "sha256": "8813ee03ea3cb544c78035825c69f9aae0017b3bd20aa62b4b6dee2347c49070"
+      "bytes": 2446,
+      "sha256": "0bdddcc3b29a126c0f708e2077a9fd7e4f4ebe7da58f522200c0d8565d765f0b"
     },
     {
       "path": "rules/SEC-002.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 3099,
-      "sha256": "abb2df7e01f3845652e0ca74b14dd1d6897ca5bd0855339721fa6399458568dc"
+      "bytes": 3742,
+      "sha256": "ad2bc16ed8680733134191a0f63a6fec3d8debdfa3194e89279f27cb69d27a8a"
     },
     {
       "path": "rules/SEC-002.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2212,
-      "sha256": "4946a22e63d017cc57a632e218535fef1d92fc7d115093adcdbf8f13868cfb27"
+      "bytes": 2723,
+      "sha256": "acabe7eb35e33a6d1aa02c10cbbfa79f087571bab3bb26100de9d9b18cbd5e98"
     },
     {
       "path": "rules/SEC-002.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 1930,
-      "sha256": "7583ca0e2eadf86379ba3ae95cab01d376b1a98ecd6f640f634be77d365c01dd"
+      "bytes": 2441,
+      "sha256": "4a66c0ca702eeec883177a511364c0ddefe7bdc7e64421a774859ba588304837"
     },
     {
       "path": "rules/SEC-003.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 2893,
-      "sha256": "83bc96d4711d6526d9f21468db110a9fe33517d641118d4e0de29fa5f48d4217"
+      "bytes": 3298,
+      "sha256": "7d0f2dcad8b453e94028da839054cac600ca995dbb126653aee02741e47dc4cb"
     },
     {
       "path": "rules/SEC-003.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2042,
-      "sha256": "b728daaa43cbaa9c4a0fa0277ae6adee3a2497d3d244acb1a17f876fc00a302b"
+      "bytes": 2357,
+      "sha256": "4feff40a7bf22aee51fec0971a52c76fd8ac950cee3385ab1ae37c21f176b9eb"
     },
     {
       "path": "rules/SEC-003.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 1752,
-      "sha256": "519b3e1b4be30ebce2369cfcc74e320309c1c739e2acf06d44d8135716ece876"
+      "bytes": 2067,
+      "sha256": "768648a476a3165c0a7060c58c7c1ac6b5ccb03a17f07394266ed3af2d64d841"
     },
     {
       "path": "rules/SEC-004.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 3039,
-      "sha256": "453ef9e1d5182fd5fba9cd2353864b8580ecffc4eb5d244258a4f2319c4d934c"
+      "bytes": 3172,
+      "sha256": "8f32d1620083ee1e7db6b1a82920b37d9ef671a7b31166fc8959bd843ad3e1ab"
     },
     {
       "path": "rules/SEC-004.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2196,
-      "sha256": "0f389b1550c5e18660c4b20ad68aa4e778fefee95143bc64efca6e1dcc19c3ac"
+      "bytes": 2305,
+      "sha256": "f5f36be116a1bc0b79f1c6960b8cc4c80b13657759fc2a341016f483d5520d08"
     },
     {
       "path": "rules/SEC-004.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 1852,
-      "sha256": "1cde3a7fb3189a7d8d8fa6d085acffbcc91294f07529d5e8d2b4119e4eacd386"
+      "bytes": 1961,
+      "sha256": "c9c94a08374be273c613ff80fb3d3a622f9784d4ff5d475836cd80dfc47dc1f8"
     },
     {
       "path": "rules/SEC-005.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 4435,
-      "sha256": "0764db54676ece9774c8e057006949ccf29b32d634e2e395ab123e9320779276"
+      "bytes": 5587,
+      "sha256": "fd540abba4fcdbf435055a5b156ac9d6fa0d4d0a5c72c75bccebfe96350e9da9"
     },
     {
       "path": "rules/SEC-005.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2973,
-      "sha256": "21e08e99658d15e0ba4333774d89eff94f14ac2bcc4c878b59c84bcd293bbaa5"
+      "bytes": 3885,
+      "sha256": "a740dfd3fa6daef21e9f9bdabe8cc23bdc01903d89805c6fadfd99194def2bae"
     },
     {
       "path": "rules/SEC-005.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2660,
-      "sha256": "00973dd1f24cb8b54336f8a1279b71aa3907df18ba6f4288c00064f819007caa"
+      "bytes": 3572,
+      "sha256": "8466d3b36abbbd650f22c5d54229dfe31163263a3e2e4de5ba653dece7054bdd"
     },
     {
       "path": "rules/SEC-006.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 3213,
-      "sha256": "beebcdb4ac59d17691c1ada887ad3dfe4b7efafcbc9aaecd01ebe2ea89dbd73a"
+      "bytes": 3999,
+      "sha256": "25a45f6acfba7543f68524fd6754b8d4b3f8b4502b21a88bf4945280bdbd5ef9"
     },
     {
       "path": "rules/SEC-006.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2332,
-      "sha256": "c620a9a0bd72aba42fcb9d1386751b4a735adec8d1891b566df7028dd2e14550"
+      "bytes": 2968,
+      "sha256": "3fc83e92312a452ae928b404edf4fc7f787f24c5e9f6fc8647873064f35d9703"
     },
     {
       "path": "rules/SEC-006.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2004,
-      "sha256": "8d84ebe3b88c5ae9888925857f79c511034480dbcb407a8400a554ee254319cb"
+      "bytes": 2640,
+      "sha256": "73b4813167dd9d7751341b3b66dbded2675ba3631554631261aca91bf0cd402d"
     },
     {
       "path": "rules/SEC-007.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 3239,
-      "sha256": "dbf898aa799fe31f869f33fbdac540ab997785b2fe317addad3474a8d23a38fa"
+      "bytes": 3269,
+      "sha256": "38747fdc8ce12294f4b87882641a399ff8aeb918b27eaca884e691493c317b5b"
     },
     {
       "path": "rules/SEC-007.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2215,
-      "sha256": "e415bb7114940781e3b32b798db61d0f7d0e8dfec4fb038c25c0cc5de09cfd4a"
+      "bytes": 2239,
+      "sha256": "3c7c14ce776061543812ae65c355943dc6261e257aad04ce7fd9c8407d49ef4d"
     },
     {
       "path": "rules/SEC-007.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 1864,
-      "sha256": "4efa1bd196890400445c293a15ed1d1ae8bf46fd483cc3644f0db516a5f82328"
+      "bytes": 1888,
+      "sha256": "e54e11d227abf1652ee216a25ad74a89fef0419e0f635a496aef81cd5a687a3c"
     },
     {
       "path": "rules/SEC-008.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 3233,
-      "sha256": "39313e35d9a508296730d702e4a579f9f911e467e40d4e3382c761a9a62a3087"
+      "bytes": 5263,
+      "sha256": "f84e574c6b4ff815988389dfdb4d8d9e1e02c03162be8e5a4dcd3a58783235a1"
     },
     {
       "path": "rules/SEC-008.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2327,
-      "sha256": "6d46ae2ad780c37191a090d8249324039e546d4a52b08d812de4d32f0f81ed0f"
+      "bytes": 3937,
+      "sha256": "cd8be0a1880c6ac44e749a17c77cc62a27f2e3d511df0efc8271bc05bee8ab49"
     },
     {
       "path": "rules/SEC-008.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2124,
-      "sha256": "75dce36a3c6c6c304808872fb7b5cf4815195bfa64a8d765073fb1df99aaa162"
+      "bytes": 3734,
+      "sha256": "e540febefc8207b0586b9310c28d0bc7a1aec2d4c09a104e676371feb1256e57"
     },
     {
       "path": "rules/SEC-009.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 3467,
-      "sha256": "3f0338f9ccce40bafdfa97bf6bcf014f020a2695a9ab59d15845885fd04a99eb"
+      "bytes": 6059,
+      "sha256": "0390bf6d7963e9fdf80b83f3dfd04ba8c90b62c5377ed8de8dab71a71db822c2"
     },
     {
       "path": "rules/SEC-009.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2504,
-      "sha256": "4ae33264f2ced5f1c810722e34711ab35e1764c60a00ae00087df5b057ee1e0c"
+      "bytes": 4562,
+      "sha256": "ca39d6d7268c6b4c7f033467f5d4a171796c3a51e8ac9b288613c0e67b540dbd"
     },
     {
       "path": "rules/SEC-009.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2293,
-      "sha256": "849fb2352a822e1b06726561af3e2e6b9a866aac996669b1da59ebffa62de2ea"
+      "bytes": 4351,
+      "sha256": "13d2a2b616486f286d7504c54bac341f45ab3fc21a1f8fcacdf3e42675b104f4"
     },
     {
       "path": "rules/SEC-010.json",
@@ -328,7 +349,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2131,
-      "sha256": "b2ddde9b6ffc7ac6c1d5e85401046b358b25b5cb666ae7cc264662b7ec8cf01f"
+      "sha256": "a1697fef7df6759f28fba0663be49daa55d4e1deb5d982b2c8d7a508274b3829"
     },
     {
       "path": "rules/SEC-010.en.md",
@@ -336,113 +357,182 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 1881,
-      "sha256": "09e03d253711c517778b0e3ab29d7df8dfedc4a52d88ef8374ebafbf96da0e9d"
+      "sha256": "714dbbe5a0a741f6737f3dfdf853dcd46e9b7a21443beea2986f275ddd96ed6e"
     },
     {
       "path": "rules/SEC-011.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 4910,
-      "sha256": "f5e1241cfd5a23b3e4e58c8663c38511122e07e6a5fb18da98b48e58d24d657b"
+      "bytes": 4945,
+      "sha256": "a02f0b3e59fd0bd818bca9232a746429ba8ab28f16aacf36050fb9846b395f09"
     },
     {
       "path": "rules/SEC-011.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 3131,
-      "sha256": "40c26282ef2d0565c98c8d880aa832796a66384b0c07914df5867113d98edf61"
+      "bytes": 3160,
+      "sha256": "77ffb0c1cce68cc29cb7334e1b8f377d48421dd6a630d97be34f7fa847afc47b"
     },
     {
       "path": "rules/SEC-011.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2752,
-      "sha256": "896ee023e563b6afa3cb97ed5c001600b3fc3f61a2eb5026081bb6ba8c0996b3"
+      "bytes": 2781,
+      "sha256": "9ef43a3b6827c7973a0aa79e95a6ec0d8aeb9f358a761298d444a685e1331782"
     },
     {
       "path": "rules/SEC-012.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 4669,
-      "sha256": "f09c82af5f9e2fc09154957969a2a2d6eb86f8b48c2d9ab979cc80c30ab9eb5b"
+      "bytes": 6626,
+      "sha256": "d69c52cbef7dbdeb159c4fd029bee460a15c9a80ba6a7797b21aae6dd3e3a343"
     },
     {
       "path": "rules/SEC-012.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2950,
-      "sha256": "596a312fafb840eb25b90d727ee5c08daeadf7b0ab2726023427ef2fe67270ef"
+      "bytes": 4493,
+      "sha256": "4179f40037403896723c25c4d5a644abae596b6dc3b7f37b65d06452fbab4f56"
     },
     {
       "path": "rules/SEC-012.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2639,
-      "sha256": "bfd241d1f6fade26d19fcd909c0e0d2ce7559ec6a80d5e84f23c890ec089bdd1"
+      "bytes": 4182,
+      "sha256": "d2d4755135e14319094a3ce2e2f31bca9cc4b57880f32615ed06d90e7771c660"
     },
     {
       "path": "rules/SEC-013.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 3955,
-      "sha256": "f9189de53e5715b028e585d56c4c7c9cbb1b92786b4dc90ec0d967ca4b264aca"
+      "bytes": 4309,
+      "sha256": "31be0dfd42c38f41784ff40237bb814c59c825d4df50ce75ff70e7f732b80cd7"
     },
     {
       "path": "rules/SEC-013.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2546,
-      "sha256": "e6e8c98dc91a458c2771b5da15888b379385cad6e8c7ef09a5af8a63cb29216c"
+      "bytes": 2822,
+      "sha256": "ccaeac9b05bd1ff06ab6a9961b5d1cc373d509d795ffd3c12f4f809a7ab021be"
     },
     {
       "path": "rules/SEC-013.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2243,
-      "sha256": "c23b5950632a195062b5ce3e0adb184717ff18a436911da7176c75f7271db430"
+      "bytes": 2519,
+      "sha256": "1884cb85355095cd7bb9078af8f6bd195c5497510a1bef800f794825793dc494"
     },
     {
       "path": "rules/SEC-014.json",
       "kind": "rule",
       "format": "json",
-      "bytes": 3712,
-      "sha256": "1505be30b95e366b480703409608b1425d386d49f6966c4de9ecc8d655f0b482"
+      "bytes": 4467,
+      "sha256": "a82ba6a5726bdc1358e314705d6ccee375b527b86e0a7d372bc6b993b93064bd"
     },
     {
       "path": "rules/SEC-014.ja.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2536,
-      "sha256": "aa60605e1924f956b1e8e93e90a9e5753a3a45431779324004fd4e99810d49df"
+      "bytes": 3147,
+      "sha256": "43bb9ba546659a6118b0e4959de3bde442adc60491a3f2e7e84db791f6727d1f"
     },
     {
       "path": "rules/SEC-014.en.md",
       "kind": "rule",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2100,
-      "sha256": "a5318e01a079f613551a4eb78f65104bd0c4a94009e803c9fcbbc4ff096d7de8"
+      "bytes": 2711,
+      "sha256": "2087530d6aa900a23669a9f568d7fabf4ffc1b954504d9540f90da487c432f6f"
+    },
+    {
+      "path": "rules/SEC-015.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3443,
+      "sha256": "7d48570e8d241e44d6f465c52cf65c96a4bc783506efb850fecaa2727cd92812"
+    },
+    {
+      "path": "rules/SEC-015.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2348,
+      "sha256": "f7588bb816ebe0e045a7ab380c2f32ec57ebec741a17289f81bbb0b22c49ae0d"
+    },
+    {
+      "path": "rules/SEC-015.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1982,
+      "sha256": "044badddf02d6760d7b9a07253d62efda228a77769d2a0399bc54b5bb4346e1b"
+    },
+    {
+      "path": "rules/SEC-016.json",
+      "kind": "rule",
+      "format": "json",
+      "bytes": 3915,
+      "sha256": "f4504cd78a191e29a74f746534f1bb772b0a356ff7c127706de9cff145d036e9"
+    },
+    {
+      "path": "rules/SEC-016.ja.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2583,
+      "sha256": "cb2b1a67a6602eff9c73b75b9d5704bf1c27a08ef8cadca7128525642a67c089"
+    },
+    {
+      "path": "rules/SEC-016.en.md",
+      "kind": "rule",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2133,
+      "sha256": "68f3ed9e57b0de16d85b3b3aa3f670395149a198eff5c9f738f13a4ba9f4eaab"
     },
     {
       "path": "incidents.jsonl",
       "kind": "jsonl",
       "format": "jsonl",
-      "bytes": 150096,
-      "sha256": "d37561e12bb1f500b6e8b0b3549b2b8d03c578f1186e0b92b6185a5878358025"
+      "bytes": 492139,
+      "sha256": "6ab43f6a2593472487daaa0ada8ea3a9b40d0a2d018c193abcb02516d1d14ff4"
+    },
+    {
+      "path": "incidents/2rinkan-api-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4453,
+      "sha256": "93a56b304564f19e5c06779c7843187ef015caeb06e2da021c4f4ba6ad827842"
+    },
+    {
+      "path": "incidents/2rinkan-api-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2549,
+      "sha256": "2d50391d811ca047af6c49eb68b0f286131d35cdeb5732b363717b118b348bcc"
+    },
+    {
+      "path": "incidents/2rinkan-api-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2351,
+      "sha256": "b49237e9199f35ae26b2be2ac65e25cc81d9ad79daf3a8a7b47191b0e797ce0a"
     },
     {
       "path": "incidents/aflac-japan-2026.json",
       "kind": "incident",
       "format": "json",
       "bytes": 4654,
-      "sha256": "335cc5f606e47d33b640b04e1edb71a66935c40de771d2605d608e8b684edea8"
+      "sha256": "7e9885d1d21aca1408a618d31656154467a772455129c45326acb6a8296a09e0"
     },
     {
       "path": "incidents/aflac-japan-2026.ja.md",
@@ -450,7 +540,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2799,
-      "sha256": "20e91836ae784206b695dd1325cf17c00ad07d039f8327a61a3f30c3cb84f072"
+      "sha256": "5e8a924fac9efa8a2ddcd19b012afca4aaa9a73cd8ee6502e5a2b1425a3a3af8"
     },
     {
       "path": "incidents/aflac-japan-2026.en.md",
@@ -458,7 +548,30 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2336,
-      "sha256": "932f2223e8fe7da1bc1e871c4a3f7c7d655a2335969dd4e4dae3380aabf655a9"
+      "sha256": "6c8cb812985b4843c02d487fd9d71c5e8a7f8e13c7587b10a6d1c98844e461fa"
+    },
+    {
+      "path": "incidents/ainokaze-reservations-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4000,
+      "sha256": "a4c182a71e91d0455135b5d0daa28ebb89d54ddbab3b9e5039529631b30c6f44"
+    },
+    {
+      "path": "incidents/ainokaze-reservations-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2231,
+      "sha256": "393b8e5771edc8617194f3f13b29ddc10af714036664217fda8029216ec247a7"
+    },
+    {
+      "path": "incidents/ainokaze-reservations-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1983,
+      "sha256": "c1112552b26b6f8222151d0185c62207bd05f8aa9d6f449d36c2fb596be0946c"
     },
     {
       "path": "incidents/anthropic-claude-code-abuse-2025.json",
@@ -473,7 +586,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2676,
-      "sha256": "86b838b403b867e6fecb68c9cd2a9a3a3c008d674dbfb13f18b1c2a2eb9e5e2b"
+      "sha256": "b998993b276375459d145d88fb67470c2a081fe8458e8cdc03a0f69cd5090e1b"
     },
     {
       "path": "incidents/anthropic-claude-code-abuse-2025.en.md",
@@ -481,7 +594,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2339,
-      "sha256": "33ed26501d581ab490dd816c0a75c65613435b0baf895bc6fbd6fad6cd989b1d"
+      "sha256": "99e2d8edbcd28cfcf4cde48e4a4f66d30e95c49eb24bb258b9c969cc6ca9bc9b"
     },
     {
       "path": "incidents/anthropic-cyber-evals-2026.json",
@@ -496,7 +609,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2640,
-      "sha256": "f9c406641b56a20ef3414a47b10233a15b20afd74e6b7288e4265a3d07b3bca8"
+      "sha256": "c23e5cb2df848e2f3df7dcdc3688d4592ff237ea0548e59a6afbbc505f721fb2"
     },
     {
       "path": "incidents/anthropic-cyber-evals-2026.en.md",
@@ -504,7 +617,53 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2338,
-      "sha256": "0aa7784637790dde85250547b6ec097f975a4f8bcd2a92035128964206979567"
+      "sha256": "869ea7aebbdb6429836ea161bfb3e728d554663973232e115f5d9e36c09bbd22"
+    },
+    {
+      "path": "incidents/applynow-bi-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 10015,
+      "sha256": "c1f74ce5fd687b8568e5575917f3e2f165f709c69e6ba7e6bd4cd2f2787a7a57"
+    },
+    {
+      "path": "incidents/applynow-bi-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 5146,
+      "sha256": "29fb665650f466ff48676d6dea6b1966c9123c40edf1f243a2ad699742346c3e"
+    },
+    {
+      "path": "incidents/applynow-bi-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 4842,
+      "sha256": "81e42fa307040ebec4d52a5621bfdbe404aa94a9a9c167ad51a0369fe3aee47d"
+    },
+    {
+      "path": "incidents/asahi-pharma-digital-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4000,
+      "sha256": "c76ab8276e680bbadce46fc820e4cd9612277722a6148068d2899c6be9a435ca"
+    },
+    {
+      "path": "incidents/asahi-pharma-digital-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2300,
+      "sha256": "020ab21e3d0a56dacedac4f36862f10a56d2f6c11fc6cc829441380eab7c17c7"
+    },
+    {
+      "path": "incidents/asahi-pharma-digital-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2065,
+      "sha256": "8fb87cb42e7a51e31e419972384ff58c1d1c41e892db0d2f4b7654091f57b723"
     },
     {
       "path": "incidents/askul-2025.json",
@@ -519,7 +678,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2186,
-      "sha256": "ef3ef4772736daec698d8e61b784d12fb3f9796e9776bfaca8423896c4a6bb5b"
+      "sha256": "b9b42d3cb52ba031f3fb26b930930a2d90af9e7e22d093ccdc95bf8d73e73a7f"
     },
     {
       "path": "incidents/askul-2025.en.md",
@@ -527,7 +686,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 1837,
-      "sha256": "7e64e9031bb4c5a2e28707e6d1ebf568d126bb9c880f68126adbb38d77acf539"
+      "sha256": "fd91a695e0e12a6468194c8fa2eb2bd18ba981b0053e8c3edd03f179f54a59fc"
     },
     {
       "path": "incidents/awabank-test-environment-2026.json",
@@ -542,7 +701,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2231,
-      "sha256": "6b1789cbc402d12c4a5eabbe57d7b18bf472ab520e445567781acb619d4cab99"
+      "sha256": "1cf85d7100f26460e37ec0856a167ad58355697a7ebe22a810b91d4662e399f9"
     },
     {
       "path": "incidents/awabank-test-environment-2026.en.md",
@@ -550,7 +709,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2012,
-      "sha256": "66c3e4487dbd156eb2b456b440071f503e2b3fe78488302b8e5b274e0f78ee3e"
+      "sha256": "ae31618b5b871573d31066a93ef6bcaf9d6835e94dfea03bc1b5a5587a85d8de"
     },
     {
       "path": "incidents/axios-npm-2026.json",
@@ -565,7 +724,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2367,
-      "sha256": "1956c74d8b8365eb09e959b9448300d3645f58aae4f9295cd4e4915b6d1763bc"
+      "sha256": "dcc4d65c497627da2e60041a455528ea759caad4122ca41252d382f93f45d382"
     },
     {
       "path": "incidents/axios-npm-2026.en.md",
@@ -573,7 +732,30 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2030,
-      "sha256": "c9380f4605b25b4c1c92d110e1f8dd431cefa4c66f2c7f3108801c92e5619956"
+      "sha256": "b1e8413cb3efef9f9046df951a736cd67d4f6bb98f1d0e3efa86ab76aeb5ab64"
+    },
+    {
+      "path": "incidents/benefit-one-tenant-export-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4155,
+      "sha256": "61138bd0318933cf605736a460d1682ce38f6bc336a9148cd1fa04ea5ba4f046"
+    },
+    {
+      "path": "incidents/benefit-one-tenant-export-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2408,
+      "sha256": "b0a528271d1f69094e28105c3abed31652590460d1f1e80151674974e2b0aae8"
+    },
+    {
+      "path": "incidents/benefit-one-tenant-export-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2121,
+      "sha256": "015b7a3cfaad759a8599cca1a1b497cb7b5fc60ae088f2c609f0f7c5659b86fb"
     },
     {
       "path": "incidents/campfire-2026.json",
@@ -588,7 +770,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2379,
-      "sha256": "55760ce5043661a19f224aa650a7f3e45f71b7c90710a57a3b4b724a5780c67c"
+      "sha256": "184b5d671e0e12cdf446532845e9f4aac63ad159f47a5c2c05552ce97390e5d2"
     },
     {
       "path": "incidents/campfire-2026.en.md",
@@ -596,7 +778,99 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2141,
-      "sha256": "6035214ef7e928a77ea58b544c7effdec13c4f9f2abb7e5e8414c3d73c1c1ca3"
+      "sha256": "087673b7fff14dae0ef5051c9ae0f3f0a21a7abba57d8474a2fc7d261387bec6"
+    },
+    {
+      "path": "incidents/charm-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3916,
+      "sha256": "fce919a56538be6645a67cd173ae0e060ce722e40b109d46082058bf2a2cb5d5"
+    },
+    {
+      "path": "incidents/charm-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2226,
+      "sha256": "4f5bbb92b5404a0ed18f696092431680a41fb8c2ca853aa9358eb48e0a6be088"
+    },
+    {
+      "path": "incidents/charm-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2042,
+      "sha256": "996101164d3e6947dd5f6a7d32347f9fa2e2fe9ed75582e2f1d47a6aee3c4e60"
+    },
+    {
+      "path": "incidents/chiba-biodiversity-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4533,
+      "sha256": "6da720b21e9158dbd46c3d1ef4b366d99b9063e4b0739dc6302aa05f684ef23c"
+    },
+    {
+      "path": "incidents/chiba-biodiversity-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2554,
+      "sha256": "02dfb6994d3fe63d5cac94e6e51905aad5e6e322afeba333a3edac4c200bae95"
+    },
+    {
+      "path": "incidents/chiba-biodiversity-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2245,
+      "sha256": "5556e1bff91ecc073d9335aecc5b9d38ace6f7a31c67208a8b33a756539b69a4"
+    },
+    {
+      "path": "incidents/chibagin-shoten-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3658,
+      "sha256": "34326d3794e2c93c5c5929ba34dc67d782bc1e781ebe69bdeb50d1ff22bdeaed"
+    },
+    {
+      "path": "incidents/chibagin-shoten-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2044,
+      "sha256": "d81fde20baf463573e1857c2791311601a342eb0cfb0b27187f4be7a3264e8a4"
+    },
+    {
+      "path": "incidents/chibagin-shoten-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1934,
+      "sha256": "f1cf79cd0c6c1c4a40b101c42f5b33d61a848832063b457037bfb3693f3762b1"
+    },
+    {
+      "path": "incidents/chubu-business-credentials-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3834,
+      "sha256": "9cf8d05fb417840d0ee714ae0e0e51142554c56c36e02df5c9d09d3a942da04c"
+    },
+    {
+      "path": "incidents/chubu-business-credentials-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2161,
+      "sha256": "42b417c3c4d274c634e79783c277acfe057a924fb4edc89a15b78d46881642ce"
+    },
+    {
+      "path": "incidents/chubu-business-credentials-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1989,
+      "sha256": "de1c210081399979870914e1db9c5267156b418e01ebd07e9b72d7ff5382f88e"
     },
     {
       "path": "incidents/circleci-2023.json",
@@ -611,7 +885,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2412,
-      "sha256": "c8dad275325cb5356cbc0550f61a372b1f69072bdf079c8a4b88d919d62455fd"
+      "sha256": "dda5cabba8f6505da562dff08e4f44eb25780ee83cc4ce64a5010749bed32649"
     },
     {
       "path": "incidents/circleci-2023.en.md",
@@ -619,7 +893,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2126,
-      "sha256": "adad250f775abb8f2bb2a00d8ed92b11761adc115b67733bcb4984f7722ca21b"
+      "sha256": "92a4514a82e500295aae08d913667be592e44d00d3467e17d52f861bd8cce796"
     },
     {
       "path": "incidents/cloudflare-thanksgiving-2023.json",
@@ -634,7 +908,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2369,
-      "sha256": "fd4cac2817fc796b9f8f796974ea3f7d78962c5a4c522a74d6764a155094900e"
+      "sha256": "7ea882c424f5c6919089ec57105169722d845ca5306bc3847dd7b1c6f4195c65"
     },
     {
       "path": "incidents/cloudflare-thanksgiving-2023.en.md",
@@ -642,7 +916,30 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2029,
-      "sha256": "511531075f6947241273c43e035beae161eea341c61506363c2c0c92865d38c6"
+      "sha256": "7bbfa0d9d85988c605d6e4f50543a38ad22d24d62953b091065df689961458d3"
+    },
+    {
+      "path": "incidents/cmic-ra-connect-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4521,
+      "sha256": "946d28f808ee01534db3984ae6ccb1a25a2dc0a6ba89adcdaa2d89cbfe848c93"
+    },
+    {
+      "path": "incidents/cmic-ra-connect-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2473,
+      "sha256": "f9045ebbb4c172d7358941b5d0b44294961dd55cb0e339f43cd747b44bbc8d74"
+    },
+    {
+      "path": "incidents/cmic-ra-connect-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2364,
+      "sha256": "e177b5d6c36597cf7f47185b20ed54696cab5d4733e2d96153993bd2616e6888"
     },
     {
       "path": "incidents/codecov-2021.json",
@@ -657,7 +954,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2417,
-      "sha256": "d71bb36527410295939d67573994345729454c2f86442a9f71dabf8c8d5001af"
+      "sha256": "36701f6c32892ed85ac3c73785773d873e37635770a1764a67774c73f80e416a"
     },
     {
       "path": "incidents/codecov-2021.en.md",
@@ -665,14 +962,175 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2158,
-      "sha256": "cf136ddd9e1520cf6dc9cb3dafc5f547b5b4eba8845430221aa9595dd4ab34a6"
+      "sha256": "51549ed6b40027e30962476f41916c63ea2625a654ec2a1a7bc0aee2d30125f1"
+    },
+    {
+      "path": "incidents/conoha-wing-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4328,
+      "sha256": "00516846c875f9fcb9503f6e6ca95197eff095eb596b70a846f8a2757104b993"
+    },
+    {
+      "path": "incidents/conoha-wing-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2370,
+      "sha256": "06f9ba524520c74e9b41799c65c3111874e36a975fe3e5d0aabaf91b02811b42"
+    },
+    {
+      "path": "incidents/conoha-wing-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2169,
+      "sha256": "58831cb9c6735be6959b30ee724eb4ba63072ab6618f734e92288ace06372763"
+    },
+    {
+      "path": "incidents/coop-yamaguchi-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4260,
+      "sha256": "dbe0fa22fbc119c4b0660465ed5e814fba6bd09e787995f588e0a9b367f8e2b4"
+    },
+    {
+      "path": "incidents/coop-yamaguchi-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2368,
+      "sha256": "052f569b6ab69359e3ae93d68797bdc2cf15468f43f1b0705a39a20d98094e00"
+    },
+    {
+      "path": "incidents/coop-yamaguchi-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2144,
+      "sha256": "a2c5c68736f1ba11f2479b5da26c726693ce317f3bca4a6637d758bbd805cc70"
+    },
+    {
+      "path": "incidents/corona-cloud-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3568,
+      "sha256": "de713349fa98700cb96e5b29198c16dd020a88cd868c1f13158850354b887350"
+    },
+    {
+      "path": "incidents/corona-cloud-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 1969,
+      "sha256": "b22463cd4b9859a938c9c4adc6962d2659545f7384b6e3dcbf6013834b30f74c"
+    },
+    {
+      "path": "incidents/corona-cloud-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1872,
+      "sha256": "dc1561aa17a20a348da8799b05127fe989d01f1f9af6b23074e0525965097fbe"
+    },
+    {
+      "path": "incidents/cota-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3876,
+      "sha256": "4481648c7405a568a02ef391206aaf14c364daf746b774d2bac0cbe7c0f48b4c"
+    },
+    {
+      "path": "incidents/cota-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2153,
+      "sha256": "6578b594fe1d7d5d434f8e8a3c02ce20bb3fe9d85ceadd539f4e6d6297157c69"
+    },
+    {
+      "path": "incidents/cota-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2023,
+      "sha256": "6370da4ce12fa2736be5a1d302886bbc0732edc06c0da2cd15967762e8e7c61c"
+    },
+    {
+      "path": "incidents/daiichi-life-hr-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4027,
+      "sha256": "107101ee14a2c6c255f16bdc3bad4e25d00b4c3b623a017f612c2473c6bb1f35"
+    },
+    {
+      "path": "incidents/daiichi-life-hr-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2431,
+      "sha256": "4b139a26f075cf6fb7e37f7f7bfd2ffa37cb082a2e36370601d4b6cde12617a3"
+    },
+    {
+      "path": "incidents/daiichi-life-hr-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2197,
+      "sha256": "f089dc64ecf0aca3e9e2e1c6aecc9b2c3f50170191c8e54901cccab60d351bd4"
+    },
+    {
+      "path": "incidents/daiki-suisan-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3829,
+      "sha256": "e5a6eea04ae8a76777da8a70d942f4e415fba206d7ca55627ac208030fa0490b"
+    },
+    {
+      "path": "incidents/daiki-suisan-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2176,
+      "sha256": "f474aef39a7627e27cd06cd4e538bd97e17d2f52dde81768c8aafe9cbd25941e"
+    },
+    {
+      "path": "incidents/daiki-suisan-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1975,
+      "sha256": "f594c007917a89bc06c68b9fa1f7024bde9e2b86c4e2e7e4e26e8f11c128b7af"
+    },
+    {
+      "path": "incidents/dandm-vpn-ransomware-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4418,
+      "sha256": "e65a07508e7f5faac6a2ff2aff96153090fb09605354dae0d7f208a31fa6d04e"
+    },
+    {
+      "path": "incidents/dandm-vpn-ransomware-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2657,
+      "sha256": "b1aac49230d5f3175c363181311ce316754b2c7b7eeb5fe55fab4f7b96f9cfb5"
+    },
+    {
+      "path": "incidents/dandm-vpn-ransomware-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2423,
+      "sha256": "7176131c28148b6c3fe93124f432d99835b6b54cf0d0bd56ff8f734e125d454f"
     },
     {
       "path": "incidents/digital-agency-gss-2026.json",
       "kind": "incident",
       "format": "json",
       "bytes": 3803,
-      "sha256": "10e71f8bac3af864702bc0f14a9fd3aaf0fb0999833d52583d2243bd3ddde2b8"
+      "sha256": "e4f8eedd448cee6ad3579f84ce7f61e4579de952fb8e5d32562c518ce99e3760"
     },
     {
       "path": "incidents/digital-agency-gss-2026.ja.md",
@@ -680,7 +1138,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2220,
-      "sha256": "1031ce34bff83b2c7a1eff0870c51d6a6f106f0c6aecc406dd3b4e9ff5b6b250"
+      "sha256": "6b7329dba8de70740f7b2c42447afcb7ecb300396ea44b30ce70b9ccf365940b"
     },
     {
       "path": "incidents/digital-agency-gss-2026.en.md",
@@ -688,7 +1146,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 1986,
-      "sha256": "5cf35f525b80e068440bd5ebedaf3986df4248eae4a861ccf0b9682ba7b62bc0"
+      "sha256": "5792cb219e79a6a9d4f1ff7d69d0c67b8796bb220c65fef86f7a0325350e9321"
     },
     {
       "path": "incidents/discord-support-vendor-2025.json",
@@ -703,7 +1161,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2675,
-      "sha256": "3a76cbc9ef43a8077fe7b8d4c24665888665e8ea8fa14b9b0a2a2d61c778950d"
+      "sha256": "d9debae8a18d0e771101a24f242c2539ca47f2f60c25beda74e1e68227c49809"
     },
     {
       "path": "incidents/discord-support-vendor-2025.en.md",
@@ -711,7 +1169,99 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2252,
-      "sha256": "31c78dc21014d53be8dd42770ac03dec237892d05e5b1a6722127d6d3953a973"
+      "sha256": "644d8ca7cd02d3336f9e7c3b8e42ae261cca2e3e94d498b2aa815575d821a5b7"
+    },
+    {
+      "path": "incidents/education-software-dormant-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3834,
+      "sha256": "fc35bc9aed624241587a9e53a7ecf9e8be57c109f7434814f70ddd4b5e7cafce"
+    },
+    {
+      "path": "incidents/education-software-dormant-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2212,
+      "sha256": "c9b29d784a9469a0fc3284399fd3219205fa9662ce174a2e2288e2a15d86eac2"
+    },
+    {
+      "path": "incidents/education-software-dormant-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2031,
+      "sha256": "1c38fbb80b0efa5644ea684b861dd820de556f30dbd634762c830972d73f0987"
+    },
+    {
+      "path": "incidents/en-midcareer-credential-stuffing-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4404,
+      "sha256": "ae921707fb98d4f291ed6a659df04ad6e22392ebaa331a03214cc85fbec1d63a"
+    },
+    {
+      "path": "incidents/en-midcareer-credential-stuffing-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2601,
+      "sha256": "6306b38f44fc387f5e536b3df19b6e7a355d735c78aa322888f460ba3413f08d"
+    },
+    {
+      "path": "incidents/en-midcareer-credential-stuffing-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2320,
+      "sha256": "218c8c62352abe27c53ede499f5e4b88e53506863d78f39b891f25f2d4354d26"
+    },
+    {
+      "path": "incidents/epark-peakmanager-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4089,
+      "sha256": "fee2b0818c2997afdfd073e13576b33b958f17458f9fe67c43ede12b065be650"
+    },
+    {
+      "path": "incidents/epark-peakmanager-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2275,
+      "sha256": "8b82d372fc5a85616bbcadc5317d7dfd7c6850d3cb52ba2a632a562bc0f89d2f"
+    },
+    {
+      "path": "incidents/epark-peakmanager-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2151,
+      "sha256": "4c0e14136e852e2df02656c072d9867ee4f477cc9de6545ba27d571e1dc1847a"
+    },
+    {
+      "path": "incidents/eplus-refund-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4206,
+      "sha256": "9431d03d759b9a6441b519c20eee5801664521d0ac282f5777a358bda9e4df10"
+    },
+    {
+      "path": "incidents/eplus-refund-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2426,
+      "sha256": "0218cab689bcd7a7190d20abfc4c6866cb949dcade8eb920c41be824dedd699b"
+    },
+    {
+      "path": "incidents/eplus-refund-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2161,
+      "sha256": "124c70bdc1b2ef2477d663458ae7df861970f9a515dd72df378c27d3ee43cfd0"
     },
     {
       "path": "incidents/equifax-2017.json",
@@ -726,7 +1276,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2369,
-      "sha256": "4765164c3853d857eb01d6c0c80f3187b62a793173cdcd4615cca61864967801"
+      "sha256": "54661567212ec60cb406cf0781bf1ca4576e9dc3327533f75c45b1f86bc5edc2"
     },
     {
       "path": "incidents/equifax-2017.en.md",
@@ -734,7 +1284,122 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2075,
-      "sha256": "41036fa21821e49abae43df75d8f442df255f5e8854e9021cf4368279ec16e38"
+      "sha256": "eea6df4f5c441e9d562ac7553b301c03c9b13d353589dd982f97b46ab47376a3"
+    },
+    {
+      "path": "incidents/estore-shopserve-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4226,
+      "sha256": "5b1371931d6f89908ec34da7fca03e2b30a84d35230a567d948042cac8858613"
+    },
+    {
+      "path": "incidents/estore-shopserve-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2371,
+      "sha256": "a7ea059532f8f2aef8b0501a7461b64c8dc6d89a0622cac6fe3f0c36fcbe1aff"
+    },
+    {
+      "path": "incidents/estore-shopserve-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2108,
+      "sha256": "b38405b544cd5ed74291b205da79e9d460ca6ee6c1a31e8b0dc52a964e57c922"
+    },
+    {
+      "path": "incidents/expo-subcontractor-mail-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4447,
+      "sha256": "9ea260d5afe69655c095ef0180cd395d01970c4d5b7bde881f31a8d34cfc9681"
+    },
+    {
+      "path": "incidents/expo-subcontractor-mail-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2451,
+      "sha256": "37395052e9141ea69ab6fc5a590e2bf7c05b99855e4762eab2531fa7d3d64d5a"
+    },
+    {
+      "path": "incidents/expo-subcontractor-mail-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2278,
+      "sha256": "03acd7716d70528b2337c62456c2e017f8bff807bdf0e90fee0148a10987a525"
+    },
+    {
+      "path": "incidents/fancrew-credential-stuffing-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4224,
+      "sha256": "6c5bbb27c3113a6c2e94d9e9460c0b91099f984e6cae77baeb97b2ec09bb5682"
+    },
+    {
+      "path": "incidents/fancrew-credential-stuffing-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2344,
+      "sha256": "06e5f508755be074aec891bd3f596b09a421540580650ab860ba696b7da8a571"
+    },
+    {
+      "path": "incidents/fancrew-credential-stuffing-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2197,
+      "sha256": "315916ea9d250e14c4a7961c064e0ca3b2f524df3a388be8f85211e9730cc74a"
+    },
+    {
+      "path": "incidents/fines-reservations-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3938,
+      "sha256": "0b9df70e0819654720d28c90eef627f61f5ace482118b0939b740ffb919e7f6d"
+    },
+    {
+      "path": "incidents/fines-reservations-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2318,
+      "sha256": "6841b1df7b3c453791d6624d9f672929bcdbc2beec2475e34b6e3bcb8b4ebcd4"
+    },
+    {
+      "path": "incidents/fines-reservations-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2109,
+      "sha256": "28922bc2bf34e38f4ce601a68788b698e76c575abd5eea7d89c71d96a8ec86b3"
+    },
+    {
+      "path": "incidents/five-foxes-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4031,
+      "sha256": "d6bfafba5ce457311fdd5e596b72eb53bd82dc502d32991f65ce118404082182"
+    },
+    {
+      "path": "incidents/five-foxes-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2289,
+      "sha256": "b8ffa19efc2d0d5e52a2e09d20edfdcdf96e34c5b7844155e4103240fe089b87"
+    },
+    {
+      "path": "incidents/five-foxes-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2082,
+      "sha256": "4d089cd83eaf5b4324e40f34a04d676342fde04c83816b191064cce86fd31b77"
     },
     {
       "path": "incidents/forticloud-sso-2026.json",
@@ -749,7 +1414,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2421,
-      "sha256": "057d13be8ab40a19f27eac7637543f89f620b688413fa879a8ca7a4c1569abd5"
+      "sha256": "d84aa3361a8997423674602ff889d926b65d0f47efb6c7dbcafa9e61fcfb9de5"
     },
     {
       "path": "incidents/forticloud-sso-2026.en.md",
@@ -757,7 +1422,76 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2153,
-      "sha256": "957df803ce559b2d4dc7302f7a80272574f624935d88cde33c65840a1434145c"
+      "sha256": "03de6c62b78f9ccae64e0055c28a36424f0f4274e898cb0ae3407d345759ad9d"
+    },
+    {
+      "path": "incidents/fujita-personal-pc-scam-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3944,
+      "sha256": "f2ea0915bad6a2fc91fb5df60af58152888a7f835678f494e5573a6f1f691883"
+    },
+    {
+      "path": "incidents/fujita-personal-pc-scam-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2151,
+      "sha256": "5b7ade833fbd6dc50bcb98053298fc25b72c58f6d52dbc5a06150ce5fe5effa5"
+    },
+    {
+      "path": "incidents/fujita-personal-pc-scam-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2034,
+      "sha256": "c8ff986f7aa0de793d1968e50ed17d977352186c5a51e47ff19c9f8a6f99b0c8"
+    },
+    {
+      "path": "incidents/fukuoka-editable-application-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4072,
+      "sha256": "735808a7972e043eb37db311f5c1dcea5a796df645c5594ce677de39575a723d"
+    },
+    {
+      "path": "incidents/fukuoka-editable-application-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2181,
+      "sha256": "64e3696331eb08fbce63fde62ee96492eca77f0e9b7ad642f3fec2edf415ba65"
+    },
+    {
+      "path": "incidents/fukuoka-editable-application-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2091,
+      "sha256": "ab7cef35bc62dec124eccde5a82ba4bd8c6ca3e2049f67e8da87c080578515e3"
+    },
+    {
+      "path": "incidents/fuso-cloud-storage-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3671,
+      "sha256": "423e4bb62b2251a3587ed138fb941f71478ca372bda71166273c82022714ac4d"
+    },
+    {
+      "path": "incidents/fuso-cloud-storage-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2151,
+      "sha256": "fe1daceb4f179af494a65dbe0eb2becb1fc6ea38d0fd2f8f84ce7b9e759c263c"
+    },
+    {
+      "path": "incidents/fuso-cloud-storage-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1852,
+      "sha256": "430f185199719f201bcd00005d3dff320ab2a10175e53e9215032eae9d409103"
     },
     {
       "path": "incidents/gainsight-oauth-2025.json",
@@ -772,7 +1506,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2946,
-      "sha256": "b790f75c30a782a7bb2103ca3a2c558b6a5219ff65e46290166f86aee641ffff"
+      "sha256": "ff925ae419039e9c96a305f7450d1eb609c0236cef16988bbdf07aa326a74d22"
     },
     {
       "path": "incidents/gainsight-oauth-2025.en.md",
@@ -780,37 +1514,382 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2502,
-      "sha256": "48793dfcf1383c672a133f78a3be7da3407a0ae7e5ff0bef73cc2e742e410c7f"
+      "sha256": "6cf0fa4e17ef260e5d7cde15e12f93fa58bed2fe8247413ec2464645be148b73"
+    },
+    {
+      "path": "incidents/gex-ransomware-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4172,
+      "sha256": "c9fdf4df77a99d0a79d9f7384f375e47603d68d46ec55f59406776bb10268f92"
+    },
+    {
+      "path": "incidents/gex-ransomware-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2404,
+      "sha256": "5d67300b8464330f295a5e7e48017a536268b1cb7be9d3e847283e94f20bf8ed"
+    },
+    {
+      "path": "incidents/gex-ransomware-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2198,
+      "sha256": "4fce5c09adba48c540ad374d92d053f3d4cc5b5e92b870fbb83c3762997c2c14"
+    },
+    {
+      "path": "incidents/gmo-infoq-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4460,
+      "sha256": "98867b228624b5f41fdbce9818e12ebb2588abb2dd41dc49f1171fbd80500c88"
+    },
+    {
+      "path": "incidents/gmo-infoq-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2460,
+      "sha256": "ef42afbd3db802fbd2bf5ffcb9297edb3fcacf7f6ae5b215956b3bffd735aa26"
+    },
+    {
+      "path": "incidents/gmo-infoq-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2223,
+      "sha256": "878ae04f940f23bb291428dcfca45b4b821f20ed373a0d86c98988b78a882583"
+    },
+    {
+      "path": "incidents/gpoint-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3728,
+      "sha256": "3fc6a489a1ab9af23dd7ce5471b3fb38bbd6d59988d54642d409b60c5c188e6b"
+    },
+    {
+      "path": "incidents/gpoint-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2110,
+      "sha256": "8ce6fb19dcfb26d518c005f7aca505f8a62d49c893e0ddbf14284d6cf8076f86"
+    },
+    {
+      "path": "incidents/gpoint-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1889,
+      "sha256": "6385bc6f7b9e10796292f44a80385850b30c8037772f6a8c0a3dd5487b1d0f66"
     },
     {
       "path": "incidents/gyazo-2026.json",
       "kind": "incident",
       "format": "json",
-      "bytes": 4415,
-      "sha256": "f939296d84d40b5d29fabc2c3e8dd43c927be9b9bd2cc039e481b8aa552624bf"
+      "bytes": 4418,
+      "sha256": "ed183e9a826b590928c50e5753067d430fee757668601cfcccf55d4be8834fac"
     },
     {
       "path": "incidents/gyazo-2026.ja.md",
       "kind": "incident",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2585,
-      "sha256": "3b80d535ef97380da807289143eea5cbffdc4a3e411ae75534aa149baade88d5"
+      "bytes": 2588,
+      "sha256": "4416e3815b4c1faf984f3ea6fa6eed81c7c1bff8fa4f8072dbbdf46fd3be681d"
     },
     {
       "path": "incidents/gyazo-2026.en.md",
       "kind": "incident",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2250,
-      "sha256": "d844ccaffd80254b44c10e8b7a58bbe96e376f2462eed7dc1bc3117768c776e7"
+      "bytes": 2253,
+      "sha256": "d94c540f312fb671f8a3916dfbd39ceaa2b436b6e114cf77f2fc5d100a113955"
+    },
+    {
+      "path": "incidents/his-thailand-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4146,
+      "sha256": "60e6959d4efdfb5b2cdb47e6f49613c14f56e9982ab9926bdf47becb29f24fbb"
+    },
+    {
+      "path": "incidents/his-thailand-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2300,
+      "sha256": "592c2b87d3e7e1156585d7aa879fb2269e22214f3662890146ace97d363f53ff"
+    },
+    {
+      "path": "incidents/his-thailand-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2028,
+      "sha256": "4888e3cddeccb778c57f1b16e5e7081aac6c25b1442a32c4d5851498557f1a3e"
+    },
+    {
+      "path": "incidents/ichimasa-mail-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3769,
+      "sha256": "107bea3a7228ecf42e48dffb4ea2f0d1c039ff600c1280b4c134bbd4be0fcc50"
+    },
+    {
+      "path": "incidents/ichimasa-mail-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2144,
+      "sha256": "7918001ec1ac91cb131ea35054556858f23139c9c8f6f1657ffb904f4960c0c2"
+    },
+    {
+      "path": "incidents/ichimasa-mail-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1974,
+      "sha256": "f02b292db6971bfbb15ce0ce2c8f030badfa90236eafdfec86eca5f39933b558"
+    },
+    {
+      "path": "incidents/ieej-mail-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3900,
+      "sha256": "b84293b180b47f5d033bb1b17be3679e7c0e2c241d8755b27d3246b31973b712"
+    },
+    {
+      "path": "incidents/ieej-mail-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2196,
+      "sha256": "9f36b358a7c8ff69a47dc37ee04ea0733c701c14b3f7063343397b056b2a92eb"
+    },
+    {
+      "path": "incidents/ieej-mail-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2090,
+      "sha256": "015d1ceecde6924dcaa212fcf5b01e37ee68e3cb4fd6e901f298adbc11701d30"
+    },
+    {
+      "path": "incidents/inkrevolution-payment-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4637,
+      "sha256": "0214a97db57f499e3a85c1d7c9d19023a1a9245adb492e71afd8997166ecd9e7"
+    },
+    {
+      "path": "incidents/inkrevolution-payment-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2560,
+      "sha256": "5b82142137100e29ba3578ac553e3e60fc2aed5eac7e09fbd15d7b0c65941f69"
+    },
+    {
+      "path": "incidents/inkrevolution-payment-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2341,
+      "sha256": "fbdc80538cef17f03b71f65c14330a30dbe8ab1c728ab8077bf103f4c240b6a7"
+    },
+    {
+      "path": "incidents/innovation-github-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4403,
+      "sha256": "be8b19d4b242654a3fe37c7d61832e3c9727ce6635cc006e0e73a4b3a0f421f5"
+    },
+    {
+      "path": "incidents/innovation-github-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2549,
+      "sha256": "287d6abe4d19c7d6227c2dd8209ad1e1dea8a7dfe6f4eb473fc6d678bd1fb5db"
+    },
+    {
+      "path": "incidents/innovation-github-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2405,
+      "sha256": "8fe9b19d368212e322ffd7d8ef34c08223cd65c73d54e5a7f3c412fb9df64e1d"
+    },
+    {
+      "path": "incidents/istyle-transfer-exposure-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3975,
+      "sha256": "981f2155430adfaf89c6bb6ee121dac4eea991e165639c08052529c124b5b07e"
+    },
+    {
+      "path": "incidents/istyle-transfer-exposure-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2197,
+      "sha256": "ce5b6746c784de4b28f3308bb364b836bd3826f1d016c42cd17828cabab88754"
+    },
+    {
+      "path": "incidents/istyle-transfer-exposure-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1995,
+      "sha256": "b75bf9b804d79fb1f8505bc68abfcc7bf6136a5dd29741956b3e5e5d7dec7638"
+    },
+    {
+      "path": "incidents/jaea-jrr3-files-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3929,
+      "sha256": "e04d8573cc8ef1ed33503c1c0ede2e8f11c6a11fb0900552dfdfd2f65cc1eacb"
+    },
+    {
+      "path": "incidents/jaea-jrr3-files-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2283,
+      "sha256": "8105bcb5ef5461741eb3cbad29b433a9b7a6c1dbdf8615593a403a2a350898b7"
+    },
+    {
+      "path": "incidents/jaea-jrr3-files-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2152,
+      "sha256": "8df923bdd400e071e6af34c81ab1e741b1e1bc9af96b63dbf842b70b94cc20ba"
+    },
+    {
+      "path": "incidents/jogmec-directory-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3650,
+      "sha256": "9be6164130fa89d48a6612fc4b2d96545ce24cea79662368ac5e2e0966be0848"
+    },
+    {
+      "path": "incidents/jogmec-directory-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2040,
+      "sha256": "6d82009b7ca4973e218abf155a48a0982ce4a931c1a8e108b656b32b43a578b6"
+    },
+    {
+      "path": "incidents/jogmec-directory-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1888,
+      "sha256": "0ce906171c2f8be1e57675eeb572fe8c8147aacdceca3fd98481b6bb18bd5117"
+    },
+    {
+      "path": "incidents/jst-mail-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3944,
+      "sha256": "b1946c0e6c820203057b22ee744d7637dccf67c52e141378bb8b67d6565ca9c2"
+    },
+    {
+      "path": "incidents/jst-mail-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2210,
+      "sha256": "8fafdb27183aa192dece895a52e7474c74aff7487085572eadd66924235713fb"
+    },
+    {
+      "path": "incidents/jst-mail-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2042,
+      "sha256": "40a45c7d620f80670f5dc1823c027048d1acc83ba8eac556efb26b5c06bc2e26"
+    },
+    {
+      "path": "incidents/k9natural-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4330,
+      "sha256": "5ce6024b3d34c5cdc9c8600d6c52481b60be1c44abb764f9ac23c628ac64f6ef"
+    },
+    {
+      "path": "incidents/k9natural-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2618,
+      "sha256": "a5e577dc3a25b609fe12025691c567407cf21664b65f0f5f6dbdc8558027b4ba"
+    },
+    {
+      "path": "incidents/k9natural-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2360,
+      "sha256": "64914d27ec1befc5ffb22e3c432e9910edfce115884ba3f23e0efb92a30ec01a"
+    },
+    {
+      "path": "incidents/kaga-solnet-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4320,
+      "sha256": "bdae8f27f74ea1b641246ed41839920c84ed35cd2c2dd6d5ca7b9856a416f93c"
+    },
+    {
+      "path": "incidents/kaga-solnet-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2426,
+      "sha256": "da0412695d0b267f423b88ff352a49a43ee39e5e642fc324da9380fdf5870c0c"
+    },
+    {
+      "path": "incidents/kaga-solnet-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2243,
+      "sha256": "eae459ee0fec768248bcd811d5fee450f020e182696f95218113406cef407a15"
+    },
+    {
+      "path": "incidents/kamogawa-form-exposure-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4104,
+      "sha256": "fe2c00926aacc716b3c393c4a050a23cd2c6708f5fd30b81d54b76996e5a584f"
+    },
+    {
+      "path": "incidents/kamogawa-form-exposure-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2296,
+      "sha256": "9593f754fe78325c869802ec6ac7af868ea96ce06a51b505c1fcbf723bb53ad2"
+    },
+    {
+      "path": "incidents/kamogawa-form-exposure-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2118,
+      "sha256": "38406ff7845144788f4c72c39dfb85f91d0bc5afcd6f8712deacdc251712bc45"
     },
     {
       "path": "incidents/kddi-isp-2026.json",
       "kind": "incident",
       "format": "json",
       "bytes": 4183,
-      "sha256": "ed360ee32843bcf276e105e254a09b0028b698ff6a24cd5cbf0b2a92896e8002"
+      "sha256": "0c157919a43587fcc3060dcdf30643bf31f09ad460432ecc565b255ac95e1761"
     },
     {
       "path": "incidents/kddi-isp-2026.ja.md",
@@ -818,7 +1897,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2510,
-      "sha256": "baea9c704b057785269a781dd2dc0302f843e5ed4ef30e5b5821b9544ca36d21"
+      "sha256": "c59a307e8955eb1c859b054f53f8d5219a49afa80ebeb9a410285ad5feefb2f5"
     },
     {
       "path": "incidents/kddi-isp-2026.en.md",
@@ -826,7 +1905,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2223,
-      "sha256": "84cb1ad890f42375e36e4c0eac99e1ebb7bae2fb4ae0cc96baba5da0198981c7"
+      "sha256": "e2a6b520e1d0eb5ef21b8fd4e7e6b8dc12403553e96fca27e331eb85e2df3eb1"
     },
     {
       "path": "incidents/keio-ransomware-2026.json",
@@ -841,7 +1920,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2164,
-      "sha256": "895298db425b7656ed0e9d3b5fe0222bb88b2b32f6d4e95f075c893f3cb4546a"
+      "sha256": "8742fecf2918e66085f64ef0f85c0dfdeaf3da5e889fc252832c24607a5bdb29"
     },
     {
       "path": "incidents/keio-ransomware-2026.en.md",
@@ -849,7 +1928,260 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 1854,
-      "sha256": "4c34081d3558a08719c5f4dbfbbfa093896a502d4d005581c87fc3c4d852013d"
+      "sha256": "5afdda9d2756529f52f97af014ca550df164510440fe8d89fe41b6036a16e825"
+    },
+    {
+      "path": "incidents/kindal-phishing-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3919,
+      "sha256": "b49c2cc715ce2873c0ebe563a2f11a4fff6ff7d3919aef0cabed03962c2a4470"
+    },
+    {
+      "path": "incidents/kindal-phishing-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2141,
+      "sha256": "c4a723b8ff4b86a5a8ba5fcf02a5ef8940f06c9d0d0919c65c55a13965424ddd"
+    },
+    {
+      "path": "incidents/kindal-phishing-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1979,
+      "sha256": "ba4808c291860d07d7f99df9eb6f32601b7bc65c5ef19fe40b77a970230a1d42"
+    },
+    {
+      "path": "incidents/kodansha-phishing-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4030,
+      "sha256": "d060d62bbabfa68ea2b6a7990c155990b7b6c8a3f63b879b86a29a48ae160271"
+    },
+    {
+      "path": "incidents/kodansha-phishing-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2229,
+      "sha256": "49ed5e945c8516745592e42a19851b87652ce5ccad0947f0023cdc3d47b61c22"
+    },
+    {
+      "path": "incidents/kodansha-phishing-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2070,
+      "sha256": "dbfacf8d594f226028b81f44d847cb9dad77f29b6b38d0e92b4e605c74998f60"
+    },
+    {
+      "path": "incidents/komatsu-user-directory-exposure-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4727,
+      "sha256": "7759f0360c47250ed95820db7724b2cd0b32f797269c0a1d66654c4afab494c8"
+    },
+    {
+      "path": "incidents/komatsu-user-directory-exposure-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2731,
+      "sha256": "7eff0158a90b2f40ab148438a680e62df789eb031713e7dabd79094f5c3e397a"
+    },
+    {
+      "path": "incidents/komatsu-user-directory-exposure-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2483,
+      "sha256": "0bd6dcbe8fc6195ca2a08a3db9ea9f7e1736bd2d59e2dc49db6f1ee2afd60db4"
+    },
+    {
+      "path": "incidents/kwansei-external-sns-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3937,
+      "sha256": "56d6fcaf80a53d4516bcca4bd01bd41f1a257f731140d9f8f9ddfb8ac1e1edf9"
+    },
+    {
+      "path": "incidents/kwansei-external-sns-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2275,
+      "sha256": "ba8c399cb38a9d52ddd9c775489ef9f438ae52a72e256f4bd6eb2c690d9cc17d"
+    },
+    {
+      "path": "incidents/kwansei-external-sns-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1972,
+      "sha256": "238117dfafa48226a154d0ec32f7caca41c03da68937f60c6e91e2472ef684e3"
+    },
+    {
+      "path": "incidents/kyorin-remote-pc-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4018,
+      "sha256": "902435d1ceadc67a6071bef8f278b5e73e1b09c3d1018f9500a9e7dd666e8b68"
+    },
+    {
+      "path": "incidents/kyorin-remote-pc-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2175,
+      "sha256": "2d78d43998802eefcc810d6ef2219df882c3fac16fd10cff442c6a5547014844"
+    },
+    {
+      "path": "incidents/kyorin-remote-pc-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2109,
+      "sha256": "41261e1884d8532ba020b02fd9dd29cb50bc76b3aaa12c92ecbcd946847301d5"
+    },
+    {
+      "path": "incidents/kyoto-kyotv-exposure-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3630,
+      "sha256": "02129e4f1e122edc52ef6e52aa826449e2ca4b3a80bdd97367aaee6061d7a57f"
+    },
+    {
+      "path": "incidents/kyoto-kyotv-exposure-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2055,
+      "sha256": "760412756d7163a347e85cf0b3b05d866fa0cb13df96161f5c2d20e2a8fa3155"
+    },
+    {
+      "path": "incidents/kyoto-kyotv-exposure-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1905,
+      "sha256": "a596f7910726d35bc557e1e581c040ac62e570fc95867b4aebffbb4b1b6de707"
+    },
+    {
+      "path": "incidents/leanbody-metabase-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4577,
+      "sha256": "380940efebfb2c1110de582d97dbdbf3654ff84724a69fd4468ebc3fd4952c4a"
+    },
+    {
+      "path": "incidents/leanbody-metabase-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2514,
+      "sha256": "9611b0444607d2130c1a8c9277365037e76412154013e9f2a873da7bb50b76c8"
+    },
+    {
+      "path": "incidents/leanbody-metabase-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2259,
+      "sha256": "64c6ba105131d56dcf0f42d4b16a7a97458f43573a6974e6d06b33a62ae6eb1c"
+    },
+    {
+      "path": "incidents/legoland-amadeus-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4164,
+      "sha256": "35b2242791b87cc518aa1744a2bbfa5a4fdc5478b9844aa2f4e1d0588cc3f727"
+    },
+    {
+      "path": "incidents/legoland-amadeus-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2391,
+      "sha256": "67a2094b591ea07314641472704f598fdfb3320521a4e9d5b015731282c944a0"
+    },
+    {
+      "path": "incidents/legoland-amadeus-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2126,
+      "sha256": "578b85b03cd663e99a38bb47ddaa36ae9e4bddc4492f2d373d97988f0393cacc"
+    },
+    {
+      "path": "incidents/logicvein-2025.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3873,
+      "sha256": "e69dcfaebae7010b992ba36dade7a34e3db2b3935816e5e50fa3a01aee464167"
+    },
+    {
+      "path": "incidents/logicvein-2025.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2162,
+      "sha256": "9da85da1ec519f4f2b5a5ae4dab9a872431db72a010db1242157e9e6d0e8f050"
+    },
+    {
+      "path": "incidents/logicvein-2025.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2042,
+      "sha256": "d71ec0dfc98aceb91b104f7796111711dd2eb6a47dac0fbd805166fe8ea28f57"
+    },
+    {
+      "path": "incidents/media4u-account-list-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4539,
+      "sha256": "5a9622166ff0ea3da8bf2705aed69cd3040a73c990a7f3f9eea675842e808c46"
+    },
+    {
+      "path": "incidents/media4u-account-list-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2521,
+      "sha256": "07642876d982a27b186de8fed57eda81feac98060b87b11551e163a2725a25a7"
+    },
+    {
+      "path": "incidents/media4u-account-list-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2424,
+      "sha256": "6abe586e61f32a239f99eb2ade17ff99f03d6fa78630a19187c5d6f3860fd180"
+    },
+    {
+      "path": "incidents/mediaplex-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4041,
+      "sha256": "0d14f15675d7b8ca60ba7f1f6f974be96392da39c1609c2d06d630b42b54b38b"
+    },
+    {
+      "path": "incidents/mediaplex-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2342,
+      "sha256": "70e24476f6ebd2c1aa0d9483baf5dee36661d2211dc55377b5ad90ed4f29a98e"
+    },
+    {
+      "path": "incidents/mediaplex-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2109,
+      "sha256": "80a1789f4438cb78b414a8b4d578dfe491289c324294c51c39b3181c392342db"
     },
     {
       "path": "incidents/metabase-2026.json",
@@ -864,7 +2196,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 3055,
-      "sha256": "baf7ae8630927b3d5f4c866520208d721f5127c25e34cb24ae1a441662e5780b"
+      "sha256": "b9e3e0081fb3bd9765edd894d3fac1026119115d082cb580a346f2876c279784"
     },
     {
       "path": "incidents/metabase-2026.en.md",
@@ -872,7 +2204,76 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2744,
-      "sha256": "a2d1fdf618a701197bb62b896ac7f714e50dbd52651f54b2de6e60aaaf001160"
+      "sha256": "03a867b01c087a3d511319c8aaaea40c5afc03e7223106ac481274788c7225f8"
+    },
+    {
+      "path": "incidents/mie-school-form-exposure-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4001,
+      "sha256": "5fee5fc107afe6eb5c96be46bf0d2df217ad417c5dfee21349e56f51ae84c333"
+    },
+    {
+      "path": "incidents/mie-school-form-exposure-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2213,
+      "sha256": "422a127dae6e2c2ad1cc97831450590e1afb4d9dcdfcc495fe4f921fa151e16b"
+    },
+    {
+      "path": "incidents/mie-school-form-exposure-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2051,
+      "sha256": "823f1a03c1094ed82c437ec56337afc960e096c4f532eff5de007ed175a447d3"
+    },
+    {
+      "path": "incidents/mitsui-fudosan-directory-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3745,
+      "sha256": "b82b37e50f8ba7da222dfc5a6a62c24e55a4823b35453d5144408cea432e640b"
+    },
+    {
+      "path": "incidents/mitsui-fudosan-directory-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2113,
+      "sha256": "3a668df3756a84a9ab38cfaf90fa79f9d988eee4d408ca606106587e74146d36"
+    },
+    {
+      "path": "incidents/mitsui-fudosan-directory-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1983,
+      "sha256": "db6ff8f56cad73744fe5611c7254c123cdc6f13f0b2e9c9c5a931ae54c9ea2f4"
+    },
+    {
+      "path": "incidents/miyamoto-munashi-orders-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3741,
+      "sha256": "3fefffd491a48699d85d38b3817a48ee8564677fd8d748bd8d960790bc659b33"
+    },
+    {
+      "path": "incidents/miyamoto-munashi-orders-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2137,
+      "sha256": "7435b051800c80d05ef6d9c404d2817608fb4963500ddd0b626971e9344072f3"
+    },
+    {
+      "path": "incidents/miyamoto-munashi-orders-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1925,
+      "sha256": "c35066773b6ca352885087aff6eba64c161f6e9b5380af2ae5a145d2e9cfe6bd"
     },
     {
       "path": "incidents/moveit-2023.json",
@@ -887,7 +2288,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2664,
-      "sha256": "50dfd89136405bb6006de2a49b16909ba280ca4fcc3514ab292b5ad052bb8c23"
+      "sha256": "ad00b5d7f714e53170b2cbf6edd0cdfc455ea516fa58c94e1e2817beeebda476"
     },
     {
       "path": "incidents/moveit-2023.en.md",
@@ -895,7 +2296,122 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2378,
-      "sha256": "4b87d8f023efc0977034a5216684d5c351f7a2df4008c5e97105b2a7707fdee5"
+      "sha256": "02aa8fc8c9066463738a830e1e6db18a1499e4cb3e098efb2dcac603948ebf38"
+    },
+    {
+      "path": "incidents/mrmax-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4057,
+      "sha256": "d56e4ba02af53b0dcea2a3048f5f53db26e652b276ce8ee4950a46ed62c872cb"
+    },
+    {
+      "path": "incidents/mrmax-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2309,
+      "sha256": "2d6f3a36b10492546bc1b797e7fb1a9d1c96f91cff2c66f5c21e3c53e5c60d81"
+    },
+    {
+      "path": "incidents/mrmax-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2037,
+      "sha256": "79b2b2f8f8f11e3ab55506bcb67b2f743967b10487b645d7008acc3df28fb09a"
+    },
+    {
+      "path": "incidents/murauchi-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4489,
+      "sha256": "7f45a7b3f60bb25edee861bb208e5f18f7b8c80967eb3c6ecfabf74c7c1afd06"
+    },
+    {
+      "path": "incidents/murauchi-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2555,
+      "sha256": "6314af143bdf86bd5bbc469553ea38c9a30552cc94d7983c0090ad19c96f33c1"
+    },
+    {
+      "path": "incidents/murauchi-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2310,
+      "sha256": "daa26ee70c793dd735b9709ce589634b299a2dc71bdfa3b5580300cd2bb26526"
+    },
+    {
+      "path": "incidents/nice-mail-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3579,
+      "sha256": "fe522bdac889a83c85550f82faa0e908e16794683fcc20face059a8c1e9d2669"
+    },
+    {
+      "path": "incidents/nice-mail-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2070,
+      "sha256": "f93e17b8ec3420400eba20c71105de7d5d66423e43477982de37bc6fdda9638b"
+    },
+    {
+      "path": "incidents/nice-mail-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1825,
+      "sha256": "1850bf18f5e24d9bfe5ea12aacc8e8d69378a3f2a085c4898e797e929a6a509d"
+    },
+    {
+      "path": "incidents/nichii-backup-exposure-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4516,
+      "sha256": "3edde552ca9788edf4c19fa5b525dfa7edae500f3cf8e1f2b67d169cae3aaa72"
+    },
+    {
+      "path": "incidents/nichii-backup-exposure-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2606,
+      "sha256": "d624e7b00e73d6539c530354866a1f354cc90dcabc7c95b1a360cf1686280b32"
+    },
+    {
+      "path": "incidents/nichii-backup-exposure-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2246,
+      "sha256": "7d8828c2b5347327d079fc64ff8c11bc93cd919955aa7c803b4bfd99979fe1da"
+    },
+    {
+      "path": "incidents/nichirei-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3716,
+      "sha256": "fc821f07c8f02773e2071779855ce72c7b6b1bc6acc9aa8035cc51dc66e3ec57"
+    },
+    {
+      "path": "incidents/nichirei-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2111,
+      "sha256": "83f497e3aa003183869beaafc0da72af6e5bc6670dc1580fd7d4523cf72d17ae"
+    },
+    {
+      "path": "incidents/nichirei-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1895,
+      "sha256": "b822313895aab7ec8ab5bc822d06ba5451b5a39c9cd4106fb5787e11eaa816ca"
     },
     {
       "path": "incidents/nidek-website-2026.json",
@@ -910,7 +2426,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2792,
-      "sha256": "77cdad6892e43942de694bdc50e9df599cc88cd00567bc09c0eebae45759f633"
+      "sha256": "c14718d96eae71bebc8c6b80661ef99eedaf56e93c613b649f36712b3973bc97"
     },
     {
       "path": "incidents/nidek-website-2026.en.md",
@@ -918,7 +2434,76 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2296,
-      "sha256": "777e96913bcdf9ea54aefe803f1ef7ced0d7c740dcb12a59e91146c25f806d5f"
+      "sha256": "25229a3d2a8c71f20e41c993e5051e5984463e4af255ca209490bd503e01f850"
+    },
+    {
+      "path": "incidents/nihontelenet-ransomware-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3944,
+      "sha256": "23a0b4663f9bbe62be8019af071f7eb5fb94ae258fdfff8245a13123b345e8cb"
+    },
+    {
+      "path": "incidents/nihontelenet-ransomware-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2286,
+      "sha256": "53bfdaa34104f772d27a3c97f73ede439b58ec22d2bac9badaaf8c6fca216e01"
+    },
+    {
+      "path": "incidents/nihontelenet-ransomware-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2036,
+      "sha256": "68b241cf1ce4d08490593ce7fa0c32bd80a1b3c9f939bb06553f463e3cb6470a"
+    },
+    {
+      "path": "incidents/nikkei-workspace-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3846,
+      "sha256": "21e866df4e7ce59fb84497727119caaa0bfed64701933a94b00b243ccfedcd84"
+    },
+    {
+      "path": "incidents/nikkei-workspace-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2169,
+      "sha256": "defded673aa7f03d2e7bfb41366fd7c28135dccb00e866389af164e2b2e65017"
+    },
+    {
+      "path": "incidents/nikkei-workspace-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2034,
+      "sha256": "7a0c6170eb2897f7b9bddf1a24bf4d8b5c0f001138a705898d666b1ab753da01"
+    },
+    {
+      "path": "incidents/nimoca-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4037,
+      "sha256": "fcf9ad322e5ca2ef2da5918803b8b688402f9ca360acbd1f066bfafa9b67e544"
+    },
+    {
+      "path": "incidents/nimoca-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2259,
+      "sha256": "558a31c7c5629ac050933c8131154dae4d1ea6d373119e0189f72a2bedb97fa4"
+    },
+    {
+      "path": "incidents/nimoca-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2004,
+      "sha256": "a6b2f11367b5e9a617d43112a0eade8e000d12cbfdfd32a73acb26ccf1668350"
     },
     {
       "path": "incidents/nishiyama-2026.json",
@@ -933,7 +2518,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2176,
-      "sha256": "849c254b38a5a869af951ff0fc4f6126fea51ff0a00427790b2c4956e061204d"
+      "sha256": "27b0695ee9b22551b043aed47be025dcf11d5cbf7a69074b962e2aaadcc41e56"
     },
     {
       "path": "incidents/nishiyama-2026.en.md",
@@ -941,7 +2526,30 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 1900,
-      "sha256": "b335b47690d2720c6874accbde034bb6c875bdf92163d7eb9d3a267db2843292"
+      "sha256": "50ecacc5f0f5da1ca97d27ce5a29b2840c6aa5c3bfc10d1d0ac001c7866099de"
+    },
+    {
+      "path": "incidents/nostrum-smartspi-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4273,
+      "sha256": "b435d1fff4d012118fc5aaab1b0fad2411259ab1f0cf9153dcbe0154722cebf1"
+    },
+    {
+      "path": "incidents/nostrum-smartspi-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2329,
+      "sha256": "bc4192904d21f9dd29fb014bc3ae5a920658a12262c03db619a5bab91907bea9"
+    },
+    {
+      "path": "incidents/nostrum-smartspi-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2128,
+      "sha256": "39d33a37e236b72ccc183103fa104783aed7083cb1c5d742f731fc77e9ea969d"
     },
     {
       "path": "incidents/okta-support-2023.json",
@@ -956,7 +2564,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2610,
-      "sha256": "23c41e20aa03d6aeb0ce769a67e5edd1bfeebda9abb6308ca2044f53d79a00ac"
+      "sha256": "7d4a0ea4b576893595e943ea39ed5ab2de634ee8f3759382508d3cefa5bcd2b7"
     },
     {
       "path": "incidents/okta-support-2023.en.md",
@@ -964,7 +2572,30 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2185,
-      "sha256": "6b35da468bd345c8890efa481db87631b9f11c5e91f53838bd38b05fe317533b"
+      "sha256": "044ffa2b647c63e4baa25898592f89036bd4061f5b7b4a0d7eaa0278153fe50e"
+    },
+    {
+      "path": "incidents/omic-support-scam-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3916,
+      "sha256": "6af130738299e801d24b33bccc47241e3b9e7c8990c16d27f8fc7b314e32f616"
+    },
+    {
+      "path": "incidents/omic-support-scam-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2259,
+      "sha256": "ded9aab7e4dab9eb90cbb9a2c79d7ef8563bfec17d6657591364ba08f2509fcf"
+    },
+    {
+      "path": "incidents/omic-support-scam-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2151,
+      "sha256": "2942d5827ad1a1bec0030ccf386743c496c5023dd081e0b7c7cce75e090b286c"
     },
     {
       "path": "incidents/openai-huggingface-eval-2026.json",
@@ -979,7 +2610,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 3023,
-      "sha256": "17fd309d720e1737085e95134f9ac2ab57783234d73c2409660a4951f8cdb2a6"
+      "sha256": "3ca5265d9fc49744aa109a07e9c2a497ab46f3dc9c4eab8e42a8c7f7f21d8198"
     },
     {
       "path": "incidents/openai-huggingface-eval-2026.en.md",
@@ -987,7 +2618,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2769,
-      "sha256": "30804dffece30f755df170a2f4c482d10b999a473c6d64f64650deb691d5e756"
+      "sha256": "60e33f58fac8a87e82fff1ee24ba1af84d08fecc4c6164e3e6df02ebba662ac0"
     },
     {
       "path": "incidents/openai-mixpanel-2025.json",
@@ -1002,7 +2633,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 3019,
-      "sha256": "45b67e7d34ac52e95964aeaac92461e7e8fa43bc7ff8ef16d9e13fe56f613d7f"
+      "sha256": "784ee6d868e51309ed63273a7eb3318ef21ca710c9948316c3fbaa0d43605e05"
     },
     {
       "path": "incidents/openai-mixpanel-2025.en.md",
@@ -1010,7 +2641,122 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2521,
-      "sha256": "4c14aaa8a47991c16fb814c69fe4897d5db784126aca8e9ca79cfc1a4006f59d"
+      "sha256": "8ccf5a909f36d8a6f517b725652ca95d71de5de6d36bdcebd9429e636922375f"
+    },
+    {
+      "path": "incidents/osaka-high-court-teams-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3861,
+      "sha256": "8910745fd021ba1285aae1ba74476a428880a39e57529c7c7ce475cfd51ada67"
+    },
+    {
+      "path": "incidents/osaka-high-court-teams-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2232,
+      "sha256": "43189a5283cf4c2ad309f300471adfcac15b9d5ff7520ef2ffe42dc14c81af97"
+    },
+    {
+      "path": "incidents/osaka-high-court-teams-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1997,
+      "sha256": "ebf6cbe29d13c1cf9f1528e24f2b7c72d3f36c4f44aea6fdd2e2a56fb4efa756"
+    },
+    {
+      "path": "incidents/osaka-recruitment-vendor-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4259,
+      "sha256": "93b281ad32eafa90edf773bc4f749a29960b44a855763f2d27346b7a92dea7d0"
+    },
+    {
+      "path": "incidents/osaka-recruitment-vendor-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2369,
+      "sha256": "55dc08e0cde4d31c393646ed40083fc00bf4afda9cc30e5097b7fe82526e73a5"
+    },
+    {
+      "path": "incidents/osaka-recruitment-vendor-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2163,
+      "sha256": "4e26d05c26f8c4dc3690db2de98619a655126e92aedabd396175705122c3870c"
+    },
+    {
+      "path": "incidents/ota-cultural-pc-scam-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4080,
+      "sha256": "cbf17ff5719e55942d7529619ef0b584564293547f9516867bbb9809a2dfb132"
+    },
+    {
+      "path": "incidents/ota-cultural-pc-scam-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2163,
+      "sha256": "2a584f7f878be9835f443512af5a41fe71b6e097bc1161991fc36d892c821026"
+    },
+    {
+      "path": "incidents/ota-cultural-pc-scam-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2136,
+      "sha256": "3aca910d3e8d7f66d4691ebb13fb3e87ac157f5c267731045c4982a32f1e410e"
+    },
+    {
+      "path": "incidents/ozmall-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3706,
+      "sha256": "850f30bdb999442683bd529ee9e9d2b056c2d2a6e98de3c6e427c396bd75b045"
+    },
+    {
+      "path": "incidents/ozmall-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2076,
+      "sha256": "85139a3c1ec780d60a5234b0ef8fe4be1472a58c0eb40c41a47b8e0627948a2f"
+    },
+    {
+      "path": "incidents/ozmall-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1889,
+      "sha256": "bcf0ceffefe6273801cef22b17df7043730168391760c13dd3269a711ad8603a"
+    },
+    {
+      "path": "incidents/pickleballone-plugin-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4402,
+      "sha256": "f3cdaba9530690021f28510bcac5fdd58da76ee6e8f41a367a351225eb6a0a1f"
+    },
+    {
+      "path": "incidents/pickleballone-plugin-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2456,
+      "sha256": "79a91110597f98a747849b84868dbf6558385d4b82933b98d2fe376fcaaf46e1"
+    },
+    {
+      "path": "incidents/pickleballone-plugin-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2169,
+      "sha256": "4431f42c2f230dfbda38988b033a8c07a99a484b898c9a8faa0007348d67ebcc"
     },
     {
       "path": "incidents/postman-shai-hulud-2025.json",
@@ -1025,7 +2771,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2796,
-      "sha256": "e74a1751d3c7c636b482df68b9c5cb78523eabaa288898644fb304bb3b8e617c"
+      "sha256": "8571024a4132c282ecfd621838b04fdd162b831387941c9e5dd6cf850b0b31e7"
     },
     {
       "path": "incidents/postman-shai-hulud-2025.en.md",
@@ -1033,7 +2779,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2274,
-      "sha256": "5d304dffdd3828d1e3fe6bcf014b05da38442fd28da4117d68069d05e9c3e0f6"
+      "sha256": "2e5a82f63b37c207219754c111bf10d7631848296d49aeb2b09c4d5263b38ff3"
     },
     {
       "path": "incidents/prontest-cloud-2026.json",
@@ -1048,7 +2794,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2227,
-      "sha256": "1130c928d66ec2e4999a2c518def92c218d4e23d29199ece8ddf0fededf8e055"
+      "sha256": "2b17e0cb0022deb624a1669333cfd0f177e7c91fefe71dd2d9ea15374033899c"
     },
     {
       "path": "incidents/prontest-cloud-2026.en.md",
@@ -1056,7 +2802,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 1934,
-      "sha256": "3513257f766ab9e02f07578ec2a62728a667926b2f617910be8b5193a6e0c5de"
+      "sha256": "fa0d6c11b8405ffefd13daab96847c4f9c23a0e81cadaa56343690e84c95c3c7"
     },
     {
       "path": "incidents/quick-2025.json",
@@ -1071,7 +2817,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2140,
-      "sha256": "309993a9c9e62bd0f6f86ec8d82c286783201db1209a9dfe083ede07cec34a5e"
+      "sha256": "85546d3692c98fc76f0ad6b8a111579296877b181c1fc88d00a4ff8a2c5c887b"
     },
     {
       "path": "incidents/quick-2025.en.md",
@@ -1079,7 +2825,53 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 1829,
-      "sha256": "60afcbf4a2edc3aee2433b205a49aecb51d9a6208d0d07adef55b5bf61c2ca04"
+      "sha256": "c6bdd1e28b20725e1ea1756cd0b286665fc2c4e975caa23b728ba79a5828402b"
+    },
+    {
+      "path": "incidents/rakuten-books-pc-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3912,
+      "sha256": "dd62885ba6a184ba94ddedd4f6d874443322de3ca1d56f2d947ee117d6c7544b"
+    },
+    {
+      "path": "incidents/rakuten-books-pc-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2214,
+      "sha256": "78812d53a158eba298295ba8d9a5e826e74f6725b632e9a85c83e9314540268b"
+    },
+    {
+      "path": "incidents/rakuten-books-pc-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2087,
+      "sha256": "088a69ff39623247952be221500b6939a19e1b6560807e46e45e969aae4ca497"
+    },
+    {
+      "path": "incidents/rakuten-drive-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4669,
+      "sha256": "97bc236d506c07c943a6c800f9de5b2d1fc607d0ec26138eced4cfeae0ffc0d3"
+    },
+    {
+      "path": "incidents/rakuten-drive-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2520,
+      "sha256": "022ea8983144a624c4088c96be1026dcab31f15c2b14b5f1c01634b8c17f0f00"
+    },
+    {
+      "path": "incidents/rakuten-drive-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2204,
+      "sha256": "d9c43b70b8895e7c9123fc9c4e4c7cf5cd8ccda70c468d9a5949ecb47bede72d"
     },
     {
       "path": "incidents/react2shell-2025.json",
@@ -1094,7 +2886,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2603,
-      "sha256": "317d55b235fcf3523d2d5075d6610ad3db36110ac288a2bd170cfed587d7544e"
+      "sha256": "f1829a316a6221986acf061da888bcd380e6eba211e521422c74a46f660b517e"
     },
     {
       "path": "incidents/react2shell-2025.en.md",
@@ -1102,7 +2894,30 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2345,
-      "sha256": "337cd583b185348c60fca6c3175bbe8803e31805891aa50631375414691b9954"
+      "sha256": "82810e2124863bcf14a447707ad241149eb57fe2b90fe180f0c1dfbe0f67b184"
+    },
+    {
+      "path": "incidents/rizap-ai-data-handling-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4346,
+      "sha256": "d57127301402533b3cca4c053743f3788a6b0601d3dd24607fb38ad160903f73"
+    },
+    {
+      "path": "incidents/rizap-ai-data-handling-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2513,
+      "sha256": "afe6742844ae5725bf3d0daedbfae3adfbbc045647043b5c0cd8a5a829143e66"
+    },
+    {
+      "path": "incidents/rizap-ai-data-handling-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2249,
+      "sha256": "be6264dff39d4b19cb727f5653c85302a1dc712ca2114ea9d2e4d83b1dc87462"
     },
     {
       "path": "incidents/rust-arrayref-2026.json",
@@ -1117,7 +2932,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2432,
-      "sha256": "f0d2e03cd0d24b798e5b7fa2d3b71355277c04dddc82fa325c1a21366afae4d2"
+      "sha256": "d5b30a068b6aa8b95ec967f19b78e7c466acb428d864ab11d8aa0e770af4d715"
     },
     {
       "path": "incidents/rust-arrayref-2026.en.md",
@@ -1125,30 +2940,76 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2144,
-      "sha256": "b697b290a195ae026e2f460a36d5740b2cd5a2f6f7dafc6a257ce686594b2f76"
+      "sha256": "00fe57fbddd7758026c3b45e8d638882a0bd43ac58e7cf5a829c0f818bebb024"
+    },
+    {
+      "path": "incidents/ryomo-systems-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 6825,
+      "sha256": "9ad00b2472ffc7ce865c2b3ee77aae75b4934d23b422c20c8619acbd54911750"
+    },
+    {
+      "path": "incidents/ryomo-systems-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 3688,
+      "sha256": "32a0e1e9c546b9a8d979cf26c45ab237bd484446120bf41cc0cd772cb73019b9"
+    },
+    {
+      "path": "incidents/ryomo-systems-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 3258,
+      "sha256": "1e0150cb90ab283469a8791681433940a3067b8b9eb918c840b011d8800d53f8"
+    },
+    {
+      "path": "incidents/saga-hirakawaya-payment-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4400,
+      "sha256": "353f73ac4acf88fa0807aa568f54e0b1a0b5b5079773229da0654fa5bf443ce5"
+    },
+    {
+      "path": "incidents/saga-hirakawaya-payment-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2413,
+      "sha256": "c795241c5536983702a243aa7981d3b5dde9527026e7d86b8d38b661015b32ab"
+    },
+    {
+      "path": "incidents/saga-hirakawaya-payment-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2220,
+      "sha256": "03d9f3de6590d07321fc2311fdfc3e7138600b0c1392322a32d2a0025815cb26"
     },
     {
       "path": "incidents/sakura-billing-2026.json",
       "kind": "incident",
       "format": "json",
-      "bytes": 4054,
-      "sha256": "f92be7e31b8b4c3836074334d0586afe25f4bf62c5343d5ee317da17a917ad25"
+      "bytes": 4167,
+      "sha256": "bc3fd63369aef7df2663c96b4395cd63856a3cbb47dc97a6ee7e5aaf4f9e7a1b"
     },
     {
       "path": "incidents/sakura-billing-2026.ja.md",
       "kind": "incident",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2407,
-      "sha256": "9dc39fde2bbe788a0012001c1745c526184d29fdddf80ab45c1c9ef68aaa9f11"
+      "bytes": 2524,
+      "sha256": "4dae6899453b203c7eb4732c37b5007f49dfed0039ae8d64f7383a8facb04d2a"
     },
     {
       "path": "incidents/sakura-billing-2026.en.md",
       "kind": "incident",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2103,
-      "sha256": "9de5a77419b1b69e519d6554cb2c831bd9d81994bb1504b8a624a74c2f326f61"
+      "bytes": 2220,
+      "sha256": "dcdac418850acf7e3df4b20c6eefb8f24e9703192a27f349b711de1f5615019a"
     },
     {
       "path": "incidents/sakura-hosting-2026.json",
@@ -1163,7 +3024,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2262,
-      "sha256": "96d720c520b451347b2d9d55d7c85f910828eb6ea26012242be9171c287f760a"
+      "sha256": "0996110b211b0c4ce4d1256beabdfb205ce85e124a8fb385f0477a8d6534bba1"
     },
     {
       "path": "incidents/sakura-hosting-2026.en.md",
@@ -1171,7 +3032,122 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2004,
-      "sha256": "cc3c715b9b581d0b537b2800f0bb54aa2851aa69ed4a9bf233e765e4fe2e2beb"
+      "sha256": "f763812f02494088c40b261fec973cf968bf6647b133a112e5c6293731599d9f"
+    },
+    {
+      "path": "incidents/scala-iask-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 7306,
+      "sha256": "f9bb589833213ca2c0674be11d55763d9624fc33660784686827462c0d87c3f1"
+    },
+    {
+      "path": "incidents/scala-iask-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 3940,
+      "sha256": "8ed1a9c01da6b38518ba9c82ebfb0eb50d1499ea856d015b54ed155cbd8495d5"
+    },
+    {
+      "path": "incidents/scala-iask-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 3558,
+      "sha256": "2c16b3d7638c35dc29e594ca7d2281748344fd99a49ac839e0f47895efb686b9"
+    },
+    {
+      "path": "incidents/seicomart-app-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4436,
+      "sha256": "d396f7a5c16acb2e5dfe203620e282ceae7159fad3d57f7e60d50ba06ab8cc4f"
+    },
+    {
+      "path": "incidents/seicomart-app-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2594,
+      "sha256": "a3400cc88737f4df37c834e2b03fd34cac0de240080ccccd47d512d2558547b2"
+    },
+    {
+      "path": "incidents/seicomart-app-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2335,
+      "sha256": "5a3950fbfa5e8c0d3d3f6c48662c6ac241abe18c14eab4428523df74b7b81fc9"
+    },
+    {
+      "path": "incidents/seiho-contract-lookup-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3768,
+      "sha256": "bc6844073ef0c893d5ea9fd55c30253eb2e1f3234af69745c5ae8b2b63021d83"
+    },
+    {
+      "path": "incidents/seiho-contract-lookup-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2096,
+      "sha256": "fd8c669d4eabca6ea788a361387f475b3a2cd6531ab741a516b5d2126dee3a19"
+    },
+    {
+      "path": "incidents/seiho-contract-lookup-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2000,
+      "sha256": "f719abdd9e65337f35c2d5a47750e286a1bbc30554d70634dbc2b4b056a4dafd"
+    },
+    {
+      "path": "incidents/shizuoka-form-exposure-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3574,
+      "sha256": "4a8604a80bae4cc42a8b934412a076bb5efbf69ad660a0742eded9f97563e82e"
+    },
+    {
+      "path": "incidents/shizuoka-form-exposure-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2003,
+      "sha256": "5e6066a9a81d1b17e64aa0a0c0aaeab94a63d4b0dfcb9452c698b75c9d6a9ff3"
+    },
+    {
+      "path": "incidents/shizuoka-form-exposure-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1911,
+      "sha256": "1aabcf555140dcea62989b03b615d8a7832f91653066b281db9d856bf6df4874"
+    },
+    {
+      "path": "incidents/shueisha-hapicomi-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4316,
+      "sha256": "7f32118f4cbd72bc53da1004db9481b6b2bfc6de132d0aea4265593a290752bf"
+    },
+    {
+      "path": "incidents/shueisha-hapicomi-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2368,
+      "sha256": "9a1d0a2022355f618d36b3b1b2f9e8357c3d5e55102c3a6f826c37be172e921e"
+    },
+    {
+      "path": "incidents/shueisha-hapicomi-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2188,
+      "sha256": "0c845798c5a4aa0f17302b3672610e6ae1890201ff1dffb56bf508bfb1f02ec4"
     },
     {
       "path": "incidents/snowflake-unc5537-2024.json",
@@ -1186,7 +3162,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2494,
-      "sha256": "ddeca0b16179377f8cb4d848486c39d3c70b4490ec95887c81f1e6c7bb47fb6f"
+      "sha256": "70af15bde8cf5df51e7fff84150393e0ceb1d863bbdcb38610a430c9adf0dffa"
     },
     {
       "path": "incidents/snowflake-unc5537-2024.en.md",
@@ -1194,7 +3170,53 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2163,
-      "sha256": "1e9815fe1a15236b27937076c1317ff13b0d611e7981bba519884aa5c0285135"
+      "sha256": "cf70b2610c34b3365a91332457fed941487c549e76359e3cff4cb211f65636cd"
+    },
+    {
+      "path": "incidents/studysapuri-enumeration-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4195,
+      "sha256": "56f542ca0262748b9eab551f0e57087af04d8a9f88e91d021f11e983b746d6bf"
+    },
+    {
+      "path": "incidents/studysapuri-enumeration-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2365,
+      "sha256": "b659117b87d2ab4fa3badad00649bdac3447e0954084d2c9afc5f37b34971e93"
+    },
+    {
+      "path": "incidents/studysapuri-enumeration-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2190,
+      "sha256": "61d9188e69623601a3c23fe0966e53a7d7962045a3a14a7632074e278bd4b89a"
+    },
+    {
+      "path": "incidents/takaratomy-dmp-auth-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3945,
+      "sha256": "05c6b1c2bfc61ad62432ea79eacf7201fc07a628a21fcdb2ec05461b3843b528"
+    },
+    {
+      "path": "incidents/takaratomy-dmp-auth-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2133,
+      "sha256": "670dafe91510ead24c57c81b65f715d067b155e5b7b3df053b7a74c9b78044fc"
+    },
+    {
+      "path": "incidents/takaratomy-dmp-auth-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2071,
+      "sha256": "68ac31a87a2e4ed0e572a5a68375ed5c3139b3541219d3dc0c3392430702896c"
     },
     {
       "path": "incidents/temairazu-2026.json",
@@ -1209,7 +3231,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2216,
-      "sha256": "6ff0253e153dbbc3ac7927599371ab8b455a4f6c7c2fcf73c1fd1c43d9a087ad"
+      "sha256": "29b81606f9f94a7f0d0ce2bbc84f8e75cb359b4cfe0320edc3f6b60bbeca56f0"
     },
     {
       "path": "incidents/temairazu-2026.en.md",
@@ -1217,30 +3239,76 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2026,
-      "sha256": "eca9596597399fc29395c255960a29f9eea8cb1d09536dbcba19a79915093da3"
+      "sha256": "539e8a877e7632cc99aaadbbcab3e3d74c0305357b6f8a70f70bf394c953ba8a"
     },
     {
       "path": "incidents/times-car-2026.json",
       "kind": "incident",
       "format": "json",
-      "bytes": 4125,
-      "sha256": "c5032af10162bfd5e49b06ad44890dc9f3213a07fd32da14cdd25ee19029d923"
+      "bytes": 4131,
+      "sha256": "0db5120389c6bfc3425340052f36874cb4ec885df7c4d24ab1222b476a2875ee"
     },
     {
       "path": "incidents/times-car-2026.ja.md",
       "kind": "incident",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2393,
-      "sha256": "c1219187eb70cc59a7866652ce313dec33ba04fdb06b717db5e68f80d1b9012c"
+      "bytes": 2389,
+      "sha256": "e9daeb784b122a503c433d0b55d1f6d4a8a30f833c37472f1834438464a76c52"
     },
     {
       "path": "incidents/times-car-2026.en.md",
       "kind": "incident",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2238,
-      "sha256": "1b0a83a3146085ba3e6ff42fae7030db5df79d3be63a49fbbf591d7cefb5182c"
+      "bytes": 2234,
+      "sha256": "9f0fc2a61b4df92eaa04aa2f5ee82d292ec30efd39cd016431de31d8ac343a7f"
+    },
+    {
+      "path": "incidents/tixplus-cache-exposure-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4320,
+      "sha256": "a93bba8c4697e85851fa5f9d7054fb9432b565907aec5cf723e09cf62a5c34e0"
+    },
+    {
+      "path": "incidents/tixplus-cache-exposure-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2522,
+      "sha256": "fde7d650624b69205384959da3dca2fe27904d65e5dcc760b670822583b4d136"
+    },
+    {
+      "path": "incidents/tixplus-cache-exposure-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2172,
+      "sha256": "5c30f8668f88f5e322698832217c36e89597b118cff2456ff66c7cf854889bb1"
+    },
+    {
+      "path": "incidents/tokyometro-metpo-mail-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3952,
+      "sha256": "c50ef66ae5f947f72b0e833266f8b2ea959ac25f1ee06e6dae77180e9a2996b7"
+    },
+    {
+      "path": "incidents/tokyometro-metpo-mail-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2216,
+      "sha256": "b1dfc2e627be482ffec2168a0554ddfe7a7a07cdbce414cff7b75b7fc9919851"
+    },
+    {
+      "path": "incidents/tokyometro-metpo-mail-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2013,
+      "sha256": "df15609635ff784ec68daee6858b5bc30baf9b7809a1399d0f71d1b07a22d3ba"
     },
     {
       "path": "incidents/toyota-cloud-2023.json",
@@ -1255,7 +3323,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2435,
-      "sha256": "65a5f5507afc969211080a911887ad17c8b7b410c6cf8af4c13c03c8ffea0757"
+      "sha256": "45b7fb6e33d81e0164596ca29b65f10dff188848a248b0c9735a4b9e19d7b08a"
     },
     {
       "path": "incidents/toyota-cloud-2023.en.md",
@@ -1263,7 +3331,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2102,
-      "sha256": "c689ef1e4ee812e31ea6cb450a95078bd48b448fbcbe8949980d8b650ca81004"
+      "sha256": "e55d965b48086de189175fcd7aa8c263d021e2c1161c631f6ea7dadd14fa5f0e"
     },
     {
       "path": "incidents/toyota-github-2022.json",
@@ -1278,7 +3346,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2390,
-      "sha256": "55b3e151f4a8f5ff053282a8d21a39c2f4313700526cb20268599dfe9126e2fe"
+      "sha256": "0f310d59cc05d10e0ab5d3ffc96cc666367b39797a2805f5b7fa9893bc564fb2"
     },
     {
       "path": "incidents/toyota-github-2022.en.md",
@@ -1286,7 +3354,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2001,
-      "sha256": "ca72c48da974bcf150fcbaeea709b3f7d797fd782d7fc01568ea02b56882958c"
+      "sha256": "3c7dbd27c60283def190d55be67d6b8dc0c96877c096ae4afb51a41277215bd9"
     },
     {
       "path": "incidents/trivy-supply-chain-2026.json",
@@ -1301,7 +3369,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2880,
-      "sha256": "676f3ac45497dd0a179d9d5d59e901b34aadeb73b91c02264d5533e1dd0c8db9"
+      "sha256": "711d912663cd999305e8efecf12031ebe2afc8a7e330abcf44cbbeb11ba1f96f"
     },
     {
       "path": "incidents/trivy-supply-chain-2026.en.md",
@@ -1309,7 +3377,30 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2499,
-      "sha256": "805472cf9325f0592ad6679692a70d9689b2dc62ed491865b3570c8c6932aeb6"
+      "sha256": "19925ff1f7f359ed21842d59327e26cc1865682094d8942766461288e0599123"
+    },
+    {
+      "path": "incidents/trunk-mail-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3616,
+      "sha256": "2d525eaa773b5064d9557adf98328ef431aae4fd4e155806b41f2ba2b2c259dc"
+    },
+    {
+      "path": "incidents/trunk-mail-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2051,
+      "sha256": "228baeb913b2bba7f828e1b46644e7ec4be38c27ac084086c387cfb12981c141"
+    },
+    {
+      "path": "incidents/trunk-mail-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1819,
+      "sha256": "e30da1cfe530143ff714b8ab2b0e0345019e86dc86c6611dffb44b3d68ea32de"
     },
     {
       "path": "incidents/uber-2022.json",
@@ -1324,7 +3415,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2200,
-      "sha256": "a918bee0525bc293fbeffb383c1718663d64d1cd00ce722d17a0b526c982223d"
+      "sha256": "b0059fa89526ff898d09a7753dced5f0f4e2657282c3f2337dc6f0a51f46a20e"
     },
     {
       "path": "incidents/uber-2022.en.md",
@@ -1332,7 +3423,7 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 1891,
-      "sha256": "20f7ce24cc1b3db7bca6eaeff89f1abc65aa818d5439dbb77f009f1aa1a62040"
+      "sha256": "e88c847e613a28e732f4cf8f1f69fa3d243b5cf81fe3799dd5255f6b3ff2970a"
     },
     {
       "path": "incidents/unit42-ai-assisted-2026.json",
@@ -1347,7 +3438,7 @@
       "format": "markdown",
       "locale": "ja",
       "bytes": 2620,
-      "sha256": "deb4c5b90451f58c57b5698b128624dd84822243e16e7c7783f098d6fccd8ede"
+      "sha256": "fa94776b657512275b8d8c11a5c3123ee8eed2ffeded6db2d4bccb3bd82a694d"
     },
     {
       "path": "incidents/unit42-ai-assisted-2026.en.md",
@@ -1355,252 +3446,413 @@
       "format": "markdown",
       "locale": "en",
       "bytes": 2275,
-      "sha256": "be50009881e1c538a7e32c866edb9758316db4b0fe48e51632140535cef189d6"
+      "sha256": "a63ef0af30d2c5aaddbcb284891b1daaa301fc74ef837b38c405292690e011f1"
+    },
+    {
+      "path": "incidents/visualarts-cloud-credentials-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4811,
+      "sha256": "2ddf54255a294b49a2b6a0e95944cef97ee8f475aeef83cec49240028666aa2b"
+    },
+    {
+      "path": "incidents/visualarts-cloud-credentials-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2732,
+      "sha256": "cf0b8baa84f1520f78ec5ab3ad117247f2f98a46faecf7a4ab01dd7d771ebf10"
+    },
+    {
+      "path": "incidents/visualarts-cloud-credentials-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2563,
+      "sha256": "ece4ac0801cd29c24ad17733af4df813a8ee1b7d2652a44b53d5285e049d16e2"
     },
     {
       "path": "incidents/voising-bi-2026.json",
       "kind": "incident",
       "format": "json",
-      "bytes": 3738,
-      "sha256": "de9b360533fb7a972fd3feda19dd49f8ee6c701ccee25e213ea455d4a5f60b11"
+      "bytes": 3948,
+      "sha256": "970d859d673756a800856e33d6f49a96ff3a0147a07d467f37bebe517448a7bf"
     },
     {
       "path": "incidents/voising-bi-2026.ja.md",
       "kind": "incident",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2173,
-      "sha256": "f8e07c1d3c80d8056b952574d5e18fbc091df3371fc7ab09d63df46791f610a5"
+      "bytes": 2383,
+      "sha256": "7cfe3cf31abdfe917a16b86f5190e0e52ac96dd9776ab8528887f2ee75810fd7"
     },
     {
       "path": "incidents/voising-bi-2026.en.md",
       "kind": "incident",
       "format": "markdown",
       "locale": "en",
-      "bytes": 1898,
-      "sha256": "2786a9d1fbbc7036bbed82921f9241f3d31fe751434231765570e98df5298630"
+      "bytes": 2108,
+      "sha256": "ef0d352d11b10768d7b4fef158e8d09fc22acfe4fa20333f2d6d00f51f2c3013"
+    },
+    {
+      "path": "incidents/weblife-oem-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4142,
+      "sha256": "626258f1e9dddfa4409f477310cfb04286ed4ac771c768e671c4cd2774cc34f5"
+    },
+    {
+      "path": "incidents/weblife-oem-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2261,
+      "sha256": "b258a20dcfe598dd87ad056c611951049e92b3841695e93dc347929c2276a42a"
+    },
+    {
+      "path": "incidents/weblife-oem-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2136,
+      "sha256": "2dfe517d56ab030095496ae5619b433fcda7387bfa41e73bb477b8c6a7ca6e1f"
+    },
+    {
+      "path": "incidents/weverse-payment-api-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4427,
+      "sha256": "531acebf02568f282be3b8de163ae4a6427211b39864495ad4a2be209ac625fc"
+    },
+    {
+      "path": "incidents/weverse-payment-api-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2440,
+      "sha256": "2ca7093c3a99693745bb3a62179989d96fdba7126be7c50d2e9a4b866cff33ee"
+    },
+    {
+      "path": "incidents/weverse-payment-api-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2290,
+      "sha256": "3523565f3fadfaf5ae01dc5cdd0dc161e5a22c87a6fe44342ac4c9e161082695"
+    },
+    {
+      "path": "incidents/white-essence-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3955,
+      "sha256": "c2e5f83b9ef7766fac9fad40f3ee36a60f85bd53ded2a2c22e568564b106a9c6"
+    },
+    {
+      "path": "incidents/white-essence-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2330,
+      "sha256": "b3c3c796c39e89165b0399087e802391aab081f9666b98937f742dd61b45daa7"
+    },
+    {
+      "path": "incidents/white-essence-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2073,
+      "sha256": "c9abe9b27acf85ba25f22f3983c47c0e47ee302507e3821d52aeccd215de62e5"
+    },
+    {
+      "path": "incidents/yakiniku-king-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4580,
+      "sha256": "f86949e0a2863fa6346fd08cdfd02c4b28c4ae7c6ee5aa032846df9ddc7f60f3"
+    },
+    {
+      "path": "incidents/yakiniku-king-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2440,
+      "sha256": "316e268e564e7161ad9b7b39d706c627f899914d079929128a1c0a532a786eb0"
+    },
+    {
+      "path": "incidents/yakiniku-king-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2268,
+      "sha256": "249d0329e8b63b74ccbb39907c8d651d196e7634d2fa2ea71fe235ee01eadcdb"
+    },
+    {
+      "path": "incidents/yellowhat-booking-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 3801,
+      "sha256": "5546a6efbd4c3dec020dcdd4ec5448bb5219bea5780059bd27490aa53a23cc3e"
+    },
+    {
+      "path": "incidents/yellowhat-booking-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2176,
+      "sha256": "147dd5d39ff4f6044e26a44731abefe49d10eb499e9e3dfe6750f5d72c6f4197"
+    },
+    {
+      "path": "incidents/yellowhat-booking-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 1937,
+      "sha256": "df4bd438bcc8106b301f92e0932a738301284522a9c2d45a8ee1b52a8e76322f"
+    },
+    {
+      "path": "incidents/zurich-zdash-2026.json",
+      "kind": "incident",
+      "format": "json",
+      "bytes": 4036,
+      "sha256": "30b463a902c94a9693edf3a27c1f19491e55865ff5912346c51c6febebc66292"
+    },
+    {
+      "path": "incidents/zurich-zdash-2026.ja.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "ja",
+      "bytes": 2319,
+      "sha256": "d898727ceba0ea4499ac97083fc20442c8704dbcc38ffe7dbb8dcd9a92285c0f"
+    },
+    {
+      "path": "incidents/zurich-zdash-2026.en.md",
+      "kind": "incident",
+      "format": "markdown",
+      "locale": "en",
+      "bytes": 2109,
+      "sha256": "8961c1e94872e9049f2b297a86ebca7e046430d234002c05026cb23a45b0a2cf"
     },
     {
       "path": "packs/ai-agent.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 3507,
-      "sha256": "be4d1d31de861c7374c63d1cd7f4b06f7e6cdbc9872949b685e780c09ec10fc6"
+      "bytes": 3536,
+      "sha256": "a10d65e2617f1e93de72fff954dc46cbfb8dd9ce11717a610c906b808c1d7450"
     },
     {
       "path": "packs/ai-agent.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 3030,
-      "sha256": "cf3cfda741c223e08474561f83baea48aacc088948d528228e2bd373b367f7b1"
+      "bytes": 3059,
+      "sha256": "87a08d0e81b645c58dcec4dca963c83760f3a6e8a71e23fb5d58ada701c2f845"
     },
     {
       "path": "packs/ci.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 10084,
-      "sha256": "a12aaebfd366d599a5b96df8cadab1fa2c0c7943a0bff0762a3718846d41a376"
+      "bytes": 12739,
+      "sha256": "521d175d2887e26f3913fe20897d61055e23b047fd658818613615cdcaed3001"
     },
     {
       "path": "packs/ci.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 8775,
-      "sha256": "18f4f8023adfe646aaff43b941dab99b22c50bd4ae92118474d10b47da4fc9fd"
+      "bytes": 11430,
+      "sha256": "21959e8bbd37c6b1c10cad351f3d8edaa45c23e0bd23fea24f3689afd006c8da"
     },
     {
       "path": "packs/cloud.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 13505,
-      "sha256": "4941c8a67ef67c6fdfedc1c7a83915b1be9e67e18803f83fccae29a6099ae551"
+      "bytes": 23415,
+      "sha256": "14ffddb4937de8c956a28255a2a1f957b4ef5b06bc98422754fc67c179939c3b"
     },
     {
       "path": "packs/cloud.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 11949,
-      "sha256": "ab27cf09f4436cefd0dcd63ffaf1f1f4d0218877c14c3243897dd54dcaf72513"
+      "bytes": 21043,
+      "sha256": "c6299907af5477d8696af614f2c89a4dc6354c4e4f65b86b8ef08300339b40eb"
     },
     {
       "path": "packs/containers.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2574,
-      "sha256": "a67fb875764c6c37cba49a32a88b780cf409ec26361010824ceaf49f326014db"
+      "bytes": 2683,
+      "sha256": "862f2272218264b1752c2113cd24a41574dae0b508af106f3ee56a52e722daec"
     },
     {
       "path": "packs/containers.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2132,
-      "sha256": "ee48a8602713647544c659cd776ae4a04b4a0f1d4297db270e0d8b55b1207ce6"
+      "bytes": 2241,
+      "sha256": "f4ed86baa03877c10c44b8dc8a65744e377ac5bd721c0da8921a402cd98fdf7b"
     },
     {
       "path": "packs/data-store.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 20684,
-      "sha256": "2e11637ac288c2e9d5e88a993475e76e8da29e0ef8a99a8b3321884d2bdab655"
+      "bytes": 33263,
+      "sha256": "f952130524afc23610587bf574f93b2b5f619b3cb7b4dc70e2c0c2ebf5513b72"
     },
     {
       "path": "packs/data-store.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 18231,
-      "sha256": "f47bda84ad26a9c242ea3516697911c98f4c1a8aefbbf5b6174c751a3d101293"
+      "bytes": 29994,
+      "sha256": "f11ec7f3ad7c641513f9ab0f3ad9f54a0a86dc2dfd7381cdaca46ac16f66ccf5"
     },
     {
       "path": "packs/dependencies.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2805,
-      "sha256": "c0f5bd2374cb9e8662a86b185ad9a1c2a3a99ff41141bdb39a9dd4cfcb5ee98f"
+      "bytes": 3164,
+      "sha256": "10525729d9454fbca51e18abdc498b0a130929dad732ae20262ec489926e143d"
     },
     {
       "path": "packs/dependencies.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2369,
-      "sha256": "112c99dedea81d24b382438379478cdf2ce2e0d1b88d23292bf83ff60ceafe21"
+      "bytes": 2728,
+      "sha256": "4a24eb5a89b9f0aa208ba225a8bb58b008d20862a45bbd306d96e93d0b3997c5"
     },
     {
       "path": "packs/endpoint.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2418,
-      "sha256": "6fbaed46ca79fc19e197de0203641ba3651c8f1d7c9e81dde970ac7d322ae1e0"
+      "bytes": 2733,
+      "sha256": "1810f8c2557924b551edd7d287c1b9fc11b63e1e337e8164c95e9a1137e4fa6b"
     },
     {
       "path": "packs/endpoint.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2030,
-      "sha256": "4f7b2e88ad2f6bf68c854d80de2cf0e6d2a2f7af520a3af9855a0426f938cc8f"
+      "bytes": 2345,
+      "sha256": "3795c0370176102e599782bc565322c5ef9caaa120230b83d9af3f91c384ed5b"
     },
     {
       "path": "packs/identity.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 14975,
-      "sha256": "4ca63536de4047289cea4f64c33c21ea79f6f51ac4c51169701f3a95c0dbc1d8"
+      "bytes": 20992,
+      "sha256": "afd4e006920cd608edd3ae68e52b3bbc387e35e2682c69537a3abdfcae038419"
     },
     {
       "path": "packs/identity.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 13142,
-      "sha256": "3bd7b858e2b81aed5e236846f655c2ce4118a3e974b8b5b9c6ea68f61ccec1a9"
+      "bytes": 19159,
+      "sha256": "3dd13a1a95f7407c3e7bd2788a345f2831f8db61af9cd62be32a90cb592333c8"
     },
     {
       "path": "packs/repositories.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 2576,
-      "sha256": "c26189e023f7f5f98c13ce121adf86c669b82fe73388990e0a9e4beaa48c7526"
+      "bytes": 2685,
+      "sha256": "19d6229e1cff09ff7376304bd11aac7eb3cf61afea96af2f11a804ad4867167c"
     },
     {
       "path": "packs/repositories.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 2134,
-      "sha256": "ea8f06d720d9e944e758d4a8dc9d8830cbac6ac1e62e436a970aaa6b96459c87"
+      "bytes": 2243,
+      "sha256": "ab24c0075ff5732a8a981f2b8a555c545deabee391c89cbc571c2ab129445a2c"
     },
     {
       "path": "packs/support.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 7119,
-      "sha256": "bc542a71a68b54d5ab028d03ba0428a4ddb9675b5d91d42fb0ec6d3652befb21"
+      "bytes": 9601,
+      "sha256": "b1edf254fe445c291baf9b7fcadb7cf86c2bded476df5090ded8e713008c8ede"
     },
     {
       "path": "packs/support.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 6176,
-      "sha256": "9a886ac03dc3b45222d9aa0c935d855574e9cda5af158e959ed1fbd33312762d"
+      "bytes": 8658,
+      "sha256": "4e2fa35952f5545918fbacd0ef6ccbd6b816b6359cd63d03a08428f284813f89"
     },
     {
       "path": "packs/web-app.ja.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 9802,
-      "sha256": "fb08eef9086c9c209e3bb963a30c3e018de02458d88992e0943e51b30283a80a"
+      "bytes": 16341,
+      "sha256": "f6ce0f5c3807bbe00c5de01d8b2e06eee33b78a3d3f44d86e10033725d51f4d6"
     },
     {
       "path": "packs/web-app.en.md",
       "kind": "pack",
       "format": "markdown",
       "locale": "en",
-      "bytes": 8352,
-      "sha256": "cc6b57e62d1dc42f66ee278f56a024bf7efb0ea7400580442e88cdd6d4de8f2f"
+      "bytes": 14075,
+      "sha256": "61751f95d67549af8654282c91da44410b0663b11ba91635c0405ede5045a730"
     },
     {
       "path": "start-here.ja.md",
       "kind": "quickstart",
       "format": "markdown",
       "locale": "ja",
-      "bytes": 5106,
-      "sha256": "2970aa643cf3258e22db63b0512349cc29344702b51e5e757643a50b8bd37423"
+      "bytes": 5685,
+      "sha256": "3ecd66e0dfae1e568b0c38b28d2f53cad5bc53c67f4ab230350a1e6e121eaba0"
     },
     {
       "path": "llms-full.ja.txt",
       "kind": "full-text",
       "format": "text",
       "locale": "ja",
-      "bytes": 142324,
-      "sha256": "805b2fe7c5935cba0b36a4c0dc1675449208524a8fc7a442a175d138592f2677"
+      "bytes": 383096,
+      "sha256": "a228d7017f9013b344e2dbb6697459db3f4134063e3e06d196eb227187a6ec80"
     },
     {
       "path": "start-here.en.md",
       "kind": "quickstart",
       "format": "markdown",
       "locale": "en",
-      "bytes": 4253,
-      "sha256": "2d060e827461d19db990531f2d4b83134d4979b422aa3f5312f854d95016ff7f"
+      "bytes": 4762,
+      "sha256": "5c74c7eeadfae4048684a0e19b1a0e95ada2e92df05f7f01beb2116c8cb56a50"
     },
     {
       "path": "llms-full.txt",
       "kind": "full-text",
       "format": "text",
       "locale": "en",
-      "bytes": 123919,
-      "sha256": "872051adf70ff6edc170843a50ec8768285ddc043ecc681ad06273bd50a7fafe"
+      "bytes": 344651,
+      "sha256": "f1a1852b658817bd43b6ad1938f81ff6aa8468da840d4ac35f8abd37f2225073"
     },
     {
       "path": "llms.txt",
       "kind": "entry",
       "format": "text",
-      "bytes": 2102,
-      "sha256": "858beb383ba41136c37e755b0578480d9bf6182735f3c4376fceb3a6194cbd28"
+      "bytes": 2335,
+      "sha256": "431a69d5a1b3343002a69b0f5cd9ef61de6b4bcba9ea96f54a2202fc6c862feb"
     }
   ],
   "records": [
     {
       "kind": "rule",
       "id": "SEC-001",
-      "hash": "8e6c53174bef8ca55cea3f34e97f1aad0f6f0c55a15111ba9f2df8613d55fe55",
+      "hash": "67a3397e78c18fd3cf3303bf454c613d89623c43468980a489e4beb63612710c",
       "json": "rules/SEC-001.json",
       "markdown": {
         "ja": "rules/SEC-001.ja.md",
@@ -1614,7 +3866,7 @@
     {
       "kind": "rule",
       "id": "SEC-002",
-      "hash": "fcf58a1b53fff45725fbbe1f19fa49d638d0ea143a2444428247b31f3c62de1a",
+      "hash": "43673699ac5402b96501ccf4eabaaa84f55cefb99726b9897eec16d24cb2285d",
       "json": "rules/SEC-002.json",
       "markdown": {
         "ja": "rules/SEC-002.ja.md",
@@ -1627,7 +3879,7 @@
     {
       "kind": "rule",
       "id": "SEC-003",
-      "hash": "fa4a4a16010e066b0c6208029e5cf0d1e65b0a96a18bfd0463081b7681220a25",
+      "hash": "78f7bf62fe833e1e37584647f8ffb181736f3ea5d1fccd99aed31612001b6a49",
       "json": "rules/SEC-003.json",
       "markdown": {
         "ja": "rules/SEC-003.ja.md",
@@ -1642,7 +3894,7 @@
     {
       "kind": "rule",
       "id": "SEC-004",
-      "hash": "0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6",
+      "hash": "4c8742376f6fe13cb33908f282d1a6af6fd73ae0a13007f8013ca7042fd629b4",
       "json": "rules/SEC-004.json",
       "markdown": {
         "ja": "rules/SEC-004.ja.md",
@@ -1658,7 +3910,7 @@
     {
       "kind": "rule",
       "id": "SEC-005",
-      "hash": "4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0",
+      "hash": "8ff0d31313bf4bf957c0027bdf882b1e32f9121f40ae6f4a20482f273965a008",
       "json": "rules/SEC-005.json",
       "markdown": {
         "ja": "rules/SEC-005.ja.md",
@@ -1674,7 +3926,7 @@
     {
       "kind": "rule",
       "id": "SEC-006",
-      "hash": "ef322bf44c1b8241baf2b84ce08f6422b46075b59a85e88eb927713bbef64e8a",
+      "hash": "03bdd270e4914e6e5c436bbc77ecc0b77a78bbf9eb2983b485d635ef5a111e25",
       "json": "rules/SEC-006.json",
       "markdown": {
         "ja": "rules/SEC-006.ja.md",
@@ -1689,7 +3941,7 @@
     {
       "kind": "rule",
       "id": "SEC-007",
-      "hash": "24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5",
+      "hash": "154186523c183ea0ec0059b951eb9b35f0ac41557c28df13c071663be3aef6ee",
       "json": "rules/SEC-007.json",
       "markdown": {
         "ja": "rules/SEC-007.ja.md",
@@ -1702,7 +3954,7 @@
     {
       "kind": "rule",
       "id": "SEC-008",
-      "hash": "f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464",
+      "hash": "6de9a8001e402946286fea02a53aa5d36592fa83613987d2c8d0b712ec1e36bc",
       "json": "rules/SEC-008.json",
       "markdown": {
         "ja": "rules/SEC-008.ja.md",
@@ -1718,7 +3970,7 @@
     {
       "kind": "rule",
       "id": "SEC-009",
-      "hash": "ee5ca8e3ff31cae2c3818e2446db3453376e07ac498d71a4b9bd54aa2678f745",
+      "hash": "0a7a2e012927ce64c5b1bf76ae30501f35e91bf4182bcc0f6643df83c6b9bb17",
       "json": "rules/SEC-009.json",
       "markdown": {
         "ja": "rules/SEC-009.ja.md",
@@ -1747,7 +3999,7 @@
     {
       "kind": "rule",
       "id": "SEC-011",
-      "hash": "c825b2408ad9c74579cd404c68b6cb9daa00d14601a42ba32b6b60fac4afcbf0",
+      "hash": "537cca64dc9624271583c5f4ee5fe0d980f78ff9312f6ac589de280905f29d55",
       "json": "rules/SEC-011.json",
       "markdown": {
         "ja": "rules/SEC-011.ja.md",
@@ -1760,7 +4012,7 @@
     {
       "kind": "rule",
       "id": "SEC-012",
-      "hash": "a263b1e54e292b97464b5b6e1494a948a77571813c642c26eec1ed994473b833",
+      "hash": "d2422730d0b8989c3da5381bfce8830159db92021af6503600ae5fae24b20c3d",
       "json": "rules/SEC-012.json",
       "markdown": {
         "ja": "rules/SEC-012.ja.md",
@@ -1774,7 +4026,7 @@
     {
       "kind": "rule",
       "id": "SEC-013",
-      "hash": "0e16048f65f44638a3e7858bde158f737c2fa74751e5b12580da67ab0a3e7856",
+      "hash": "de03f5d46ff7a4ee0a31c8fc1b9b60435223ba5d1d3f93876df514453e15bee6",
       "json": "rules/SEC-013.json",
       "markdown": {
         "ja": "rules/SEC-013.ja.md",
@@ -1788,7 +4040,7 @@
     {
       "kind": "rule",
       "id": "SEC-014",
-      "hash": "40889eb24f568c0135a0c8abe83471c8d3cf585ac435d86a668dbc910a6fc471",
+      "hash": "ba83f5606c6bc7750f81821ef96169dd4e8621b75200040ea500ef2c24b521b3",
       "json": "rules/SEC-014.json",
       "markdown": {
         "ja": "rules/SEC-014.ja.md",
@@ -1801,13 +4053,63 @@
       ]
     },
     {
+      "kind": "rule",
+      "id": "SEC-015",
+      "hash": "1dfd83077658a79d47897d199f646eb9f69aa4d92c7646c57f2b82a715fde44c",
+      "json": "rules/SEC-015.json",
+      "markdown": {
+        "ja": "rules/SEC-015.ja.md",
+        "en": "rules/SEC-015.en.md"
+      },
+      "surfaces": [
+        "web-app",
+        "cloud",
+        "data-store"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "SEC-016",
+      "hash": "cce435bbacb6fef88c9e9d661222b081d8463e4f025448a7796cdcddd7548488",
+      "json": "rules/SEC-016.json",
+      "markdown": {
+        "ja": "rules/SEC-016.ja.md",
+        "en": "rules/SEC-016.en.md"
+      },
+      "surfaces": [
+        "web-app",
+        "cloud",
+        "data-store"
+      ]
+    },
+    {
+      "kind": "incident",
+      "id": "2rinkan-api-2026",
+      "hash": "b23feebb0460c883d9d52b449f48c4c1ad2f0da3ce64ee7816bfdab4bc972590",
+      "json": "incidents/2rinkan-api-2026.json",
+      "markdown": {
+        "ja": "incidents/2rinkan-api-2026.ja.md",
+        "en": "incidents/2rinkan-api-2026.en.md"
+      }
+    },
+    {
       "kind": "incident",
       "id": "aflac-japan-2026",
-      "hash": "e7147a302edd53b5d5620ad5861ec3ca6464a90590cb3779fd971d5a8eb2b4a0",
+      "hash": "e126404f444d6e96d894bbf676e8cb58c82fd04e0fe81fb0ebf7358ccf28e236",
       "json": "incidents/aflac-japan-2026.json",
       "markdown": {
         "ja": "incidents/aflac-japan-2026.ja.md",
         "en": "incidents/aflac-japan-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "ainokaze-reservations-2026",
+      "hash": "ce3591f4aea9f0ac691896a4117c23890de02da0b44994cca5eb1eeeca633852",
+      "json": "incidents/ainokaze-reservations-2026.json",
+      "markdown": {
+        "ja": "incidents/ainokaze-reservations-2026.ja.md",
+        "en": "incidents/ainokaze-reservations-2026.en.md"
       }
     },
     {
@@ -1828,6 +4130,26 @@
       "markdown": {
         "ja": "incidents/anthropic-cyber-evals-2026.ja.md",
         "en": "incidents/anthropic-cyber-evals-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "applynow-bi-2026",
+      "hash": "9f8c1b3dd74b491b783ea5b8ab7259e976f4d0eb53c0c531dfa1d0c4ba004d3e",
+      "json": "incidents/applynow-bi-2026.json",
+      "markdown": {
+        "ja": "incidents/applynow-bi-2026.ja.md",
+        "en": "incidents/applynow-bi-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "asahi-pharma-digital-2026",
+      "hash": "6109e35c4eb63bb73b6c2e7cea1793515ffd3ace7dbb5bf77698567bb566f964",
+      "json": "incidents/asahi-pharma-digital-2026.json",
+      "markdown": {
+        "ja": "incidents/asahi-pharma-digital-2026.ja.md",
+        "en": "incidents/asahi-pharma-digital-2026.en.md"
       }
     },
     {
@@ -1862,12 +4184,62 @@
     },
     {
       "kind": "incident",
+      "id": "benefit-one-tenant-export-2026",
+      "hash": "f5f063f0de21e6fc6b015a669912f2ef69dc795aed00fc2ff67eb4dc7dca6fba",
+      "json": "incidents/benefit-one-tenant-export-2026.json",
+      "markdown": {
+        "ja": "incidents/benefit-one-tenant-export-2026.ja.md",
+        "en": "incidents/benefit-one-tenant-export-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "campfire-2026",
       "hash": "6ebd0adb88b55b1f734f6be5eb9eb9168c3977c7504da6a2c91087448117eca6",
       "json": "incidents/campfire-2026.json",
       "markdown": {
         "ja": "incidents/campfire-2026.ja.md",
         "en": "incidents/campfire-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "charm-2026",
+      "hash": "54a4aa3a9c1a3bbce24dddd98023c105c152629e0c8c2b34c3cea140b413ee57",
+      "json": "incidents/charm-2026.json",
+      "markdown": {
+        "ja": "incidents/charm-2026.ja.md",
+        "en": "incidents/charm-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "chiba-biodiversity-2026",
+      "hash": "b0a1076b6b3e0166e129ab33ca803ce3e0b601de8fbc7de953f4c86d78247a06",
+      "json": "incidents/chiba-biodiversity-2026.json",
+      "markdown": {
+        "ja": "incidents/chiba-biodiversity-2026.ja.md",
+        "en": "incidents/chiba-biodiversity-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "chibagin-shoten-2026",
+      "hash": "ff5d0b03985124ea4a55c656613b4987b9b011f08ef16190988892d91b078607",
+      "json": "incidents/chibagin-shoten-2026.json",
+      "markdown": {
+        "ja": "incidents/chibagin-shoten-2026.ja.md",
+        "en": "incidents/chibagin-shoten-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "chubu-business-credentials-2026",
+      "hash": "a5e2f5d5d1ff2908d555228d792a318fb0d866435cd4378a1d7b7be695f2abcf",
+      "json": "incidents/chubu-business-credentials-2026.json",
+      "markdown": {
+        "ja": "incidents/chubu-business-credentials-2026.ja.md",
+        "en": "incidents/chubu-business-credentials-2026.en.md"
       }
     },
     {
@@ -1892,6 +4264,16 @@
     },
     {
       "kind": "incident",
+      "id": "cmic-ra-connect-2026",
+      "hash": "1a36b068d868c6f0f6c0e3fcca031c35bdf48f549842c4e736e916218115df53",
+      "json": "incidents/cmic-ra-connect-2026.json",
+      "markdown": {
+        "ja": "incidents/cmic-ra-connect-2026.ja.md",
+        "en": "incidents/cmic-ra-connect-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "codecov-2021",
       "hash": "8eddabe999ec0a13dcb7fa03264b806636affbbbaf6806b6faf99fe164fdb1be",
       "json": "incidents/codecov-2021.json",
@@ -1902,8 +4284,78 @@
     },
     {
       "kind": "incident",
+      "id": "conoha-wing-2026",
+      "hash": "aac83b7aa21e2c92df683305394272b8e2eca0e294341720c8c755c7c5e1cdd3",
+      "json": "incidents/conoha-wing-2026.json",
+      "markdown": {
+        "ja": "incidents/conoha-wing-2026.ja.md",
+        "en": "incidents/conoha-wing-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "coop-yamaguchi-2026",
+      "hash": "f12a84e85a4d1d955aeefeffe0b5123564ca05425604d9ff1984fffa9c8564e5",
+      "json": "incidents/coop-yamaguchi-2026.json",
+      "markdown": {
+        "ja": "incidents/coop-yamaguchi-2026.ja.md",
+        "en": "incidents/coop-yamaguchi-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "corona-cloud-2026",
+      "hash": "4a8232fbb4ba01a5155e35f00344402d8111a426bc649508def3ce756a89c558",
+      "json": "incidents/corona-cloud-2026.json",
+      "markdown": {
+        "ja": "incidents/corona-cloud-2026.ja.md",
+        "en": "incidents/corona-cloud-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "cota-2026",
+      "hash": "c325e90cabd79ff31d5a93921bbddfe94950955be9bd73560189fc1f7b244d0a",
+      "json": "incidents/cota-2026.json",
+      "markdown": {
+        "ja": "incidents/cota-2026.ja.md",
+        "en": "incidents/cota-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "daiichi-life-hr-2026",
+      "hash": "450a232adab40cc0d14d3ccd8cdc4bde9c301c08b446d819218a48fbcacbc731",
+      "json": "incidents/daiichi-life-hr-2026.json",
+      "markdown": {
+        "ja": "incidents/daiichi-life-hr-2026.ja.md",
+        "en": "incidents/daiichi-life-hr-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "daiki-suisan-2026",
+      "hash": "b866f255a4f638c3063d342dfb74e4b679b13ac27bf57a2f18ab45179bb68b23",
+      "json": "incidents/daiki-suisan-2026.json",
+      "markdown": {
+        "ja": "incidents/daiki-suisan-2026.ja.md",
+        "en": "incidents/daiki-suisan-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "dandm-vpn-ransomware-2026",
+      "hash": "bb99944206b32df33d824d17b5d4d63bff63df6e5c3bef43ec7412c8df7b2981",
+      "json": "incidents/dandm-vpn-ransomware-2026.json",
+      "markdown": {
+        "ja": "incidents/dandm-vpn-ransomware-2026.ja.md",
+        "en": "incidents/dandm-vpn-ransomware-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "digital-agency-gss-2026",
-      "hash": "f213edc27fdd0fbcd2d58006757eb9243c43e43797634ac1440d9d22d7be9e9c",
+      "hash": "3bace779bb84ced753b9ca8b43af12f97ad9bc8c16e55301e16cbbef6de329fe",
       "json": "incidents/digital-agency-gss-2026.json",
       "markdown": {
         "ja": "incidents/digital-agency-gss-2026.ja.md",
@@ -1922,12 +4374,102 @@
     },
     {
       "kind": "incident",
+      "id": "education-software-dormant-2026",
+      "hash": "3874f781a88de7be80f9209ce9e9feae0d72bc66c102a4e678bd050b2b3393c1",
+      "json": "incidents/education-software-dormant-2026.json",
+      "markdown": {
+        "ja": "incidents/education-software-dormant-2026.ja.md",
+        "en": "incidents/education-software-dormant-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "en-midcareer-credential-stuffing-2026",
+      "hash": "c7bca70e71d847a9acfb894ba7a91c1d3401b0cbe5ce4078f9a44adb7cb8e5eb",
+      "json": "incidents/en-midcareer-credential-stuffing-2026.json",
+      "markdown": {
+        "ja": "incidents/en-midcareer-credential-stuffing-2026.ja.md",
+        "en": "incidents/en-midcareer-credential-stuffing-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "epark-peakmanager-2026",
+      "hash": "9467c1dd391fd00f133719c66693e4161e50e6fd9cbe15248ed6eaa210644c7b",
+      "json": "incidents/epark-peakmanager-2026.json",
+      "markdown": {
+        "ja": "incidents/epark-peakmanager-2026.ja.md",
+        "en": "incidents/epark-peakmanager-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "eplus-refund-2026",
+      "hash": "c31232ec14679bfc3ac80d9722f6956348291327fc199fb4c66c0a40d3c82a28",
+      "json": "incidents/eplus-refund-2026.json",
+      "markdown": {
+        "ja": "incidents/eplus-refund-2026.ja.md",
+        "en": "incidents/eplus-refund-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "equifax-2017",
       "hash": "0954c174783b7f496ec4a924a31369007b98b19efba85df4a6f8e54c2dfa7e5d",
       "json": "incidents/equifax-2017.json",
       "markdown": {
         "ja": "incidents/equifax-2017.ja.md",
         "en": "incidents/equifax-2017.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "estore-shopserve-2026",
+      "hash": "f2da27c9f7d3ced790c1505ac8368eb7a6f96cf44d700df09301a393370ea95e",
+      "json": "incidents/estore-shopserve-2026.json",
+      "markdown": {
+        "ja": "incidents/estore-shopserve-2026.ja.md",
+        "en": "incidents/estore-shopserve-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "expo-subcontractor-mail-2026",
+      "hash": "0cd173f9da8b3609017a8cda4bbd60804fadb98db5fa900496ca746b63180a34",
+      "json": "incidents/expo-subcontractor-mail-2026.json",
+      "markdown": {
+        "ja": "incidents/expo-subcontractor-mail-2026.ja.md",
+        "en": "incidents/expo-subcontractor-mail-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "fancrew-credential-stuffing-2026",
+      "hash": "06b91766aa45f599b9efe4500d9ce2d3988e7f4c893be81eb51e27e0157d76da",
+      "json": "incidents/fancrew-credential-stuffing-2026.json",
+      "markdown": {
+        "ja": "incidents/fancrew-credential-stuffing-2026.ja.md",
+        "en": "incidents/fancrew-credential-stuffing-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "fines-reservations-2026",
+      "hash": "3cb63566486dcb76e21c0b62a5d7d0809e3bcc3490b71076e7cd0e76f2087394",
+      "json": "incidents/fines-reservations-2026.json",
+      "markdown": {
+        "ja": "incidents/fines-reservations-2026.ja.md",
+        "en": "incidents/fines-reservations-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "five-foxes-2026",
+      "hash": "1164d7bf395f8a3bdd5487847b0d3ff5271b4b9e0755e30dde1591c09ae710af",
+      "json": "incidents/five-foxes-2026.json",
+      "markdown": {
+        "ja": "incidents/five-foxes-2026.ja.md",
+        "en": "incidents/five-foxes-2026.en.md"
       }
     },
     {
@@ -1942,6 +4484,36 @@
     },
     {
       "kind": "incident",
+      "id": "fujita-personal-pc-scam-2026",
+      "hash": "32b3342553c5c75a7f6c07e74edb590a5e4ba498295c3d3fbef00f656663ea2f",
+      "json": "incidents/fujita-personal-pc-scam-2026.json",
+      "markdown": {
+        "ja": "incidents/fujita-personal-pc-scam-2026.ja.md",
+        "en": "incidents/fujita-personal-pc-scam-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "fukuoka-editable-application-2026",
+      "hash": "d86c03032a3c4423457ff8eca08083ef2813fa836d131f0cc0fd70178ee2fe8c",
+      "json": "incidents/fukuoka-editable-application-2026.json",
+      "markdown": {
+        "ja": "incidents/fukuoka-editable-application-2026.ja.md",
+        "en": "incidents/fukuoka-editable-application-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "fuso-cloud-storage-2026",
+      "hash": "3b25591dfda38f6871e45fbae55a876e717848a374089a8375b98b964ebe78d0",
+      "json": "incidents/fuso-cloud-storage-2026.json",
+      "markdown": {
+        "ja": "incidents/fuso-cloud-storage-2026.ja.md",
+        "en": "incidents/fuso-cloud-storage-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "gainsight-oauth-2025",
       "hash": "6ae22e8b926ab069ccfd74df1b7d2ab4ca50731bf2e538e801468489502b486f",
       "json": "incidents/gainsight-oauth-2025.json",
@@ -1952,8 +4524,38 @@
     },
     {
       "kind": "incident",
+      "id": "gex-ransomware-2026",
+      "hash": "2afbd620b9c914be6581994fdb8058a5839ba0135ea00b8a3234c43d170e6967",
+      "json": "incidents/gex-ransomware-2026.json",
+      "markdown": {
+        "ja": "incidents/gex-ransomware-2026.ja.md",
+        "en": "incidents/gex-ransomware-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "gmo-infoq-2026",
+      "hash": "13871c3484b17db5ae5e564dbecdbb4f793742076960ad9cee96ebd0d5ded20e",
+      "json": "incidents/gmo-infoq-2026.json",
+      "markdown": {
+        "ja": "incidents/gmo-infoq-2026.ja.md",
+        "en": "incidents/gmo-infoq-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "gpoint-2026",
+      "hash": "a21b3dcd5d4d14c8601cb5636cdde269503907677eed17b5eaf751a6f5bd7374",
+      "json": "incidents/gpoint-2026.json",
+      "markdown": {
+        "ja": "incidents/gpoint-2026.ja.md",
+        "en": "incidents/gpoint-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "gyazo-2026",
-      "hash": "dcfbe0fdc99c01508af80909bf27ebcc40c68ff910badfd997a051e6b57dbbbf",
+      "hash": "00e0c42c09a87122058edb8469c388161613ad7353f06afe4fa917431b6599a5",
       "json": "incidents/gyazo-2026.json",
       "markdown": {
         "ja": "incidents/gyazo-2026.ja.md",
@@ -1962,8 +4564,128 @@
     },
     {
       "kind": "incident",
+      "id": "his-thailand-2025",
+      "hash": "04ba131fee62f89d5b3d083df9e3cf34c3095e4b9f0bf0d8a76e30ed2258fdf8",
+      "json": "incidents/his-thailand-2025.json",
+      "markdown": {
+        "ja": "incidents/his-thailand-2025.ja.md",
+        "en": "incidents/his-thailand-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "ichimasa-mail-2026",
+      "hash": "36e9075b34455f97bdad8031217cf8401bd0f8daadb89b73a5e8cd7367f7f7d4",
+      "json": "incidents/ichimasa-mail-2026.json",
+      "markdown": {
+        "ja": "incidents/ichimasa-mail-2026.ja.md",
+        "en": "incidents/ichimasa-mail-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "ieej-mail-2026",
+      "hash": "8beb133767a180c42d639b832135c9b43437f07f61f7cc11626cc65fd013cf33",
+      "json": "incidents/ieej-mail-2026.json",
+      "markdown": {
+        "ja": "incidents/ieej-mail-2026.ja.md",
+        "en": "incidents/ieej-mail-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "inkrevolution-payment-2025",
+      "hash": "83a6635a752d92a116dc52e10d59df2c698d080ac55f1e889ad9e260d53c97ed",
+      "json": "incidents/inkrevolution-payment-2025.json",
+      "markdown": {
+        "ja": "incidents/inkrevolution-payment-2025.ja.md",
+        "en": "incidents/inkrevolution-payment-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "innovation-github-2026",
+      "hash": "9b337c09cb817904742b3eb705f49ec243fecb0b58d575ba6dd4cb480edf08de",
+      "json": "incidents/innovation-github-2026.json",
+      "markdown": {
+        "ja": "incidents/innovation-github-2026.ja.md",
+        "en": "incidents/innovation-github-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "istyle-transfer-exposure-2026",
+      "hash": "ed1836cd5270d2d3c91fd2db550b4cfbd19cd375e1bb9ef9f53d5f42ca3d4b63",
+      "json": "incidents/istyle-transfer-exposure-2026.json",
+      "markdown": {
+        "ja": "incidents/istyle-transfer-exposure-2026.ja.md",
+        "en": "incidents/istyle-transfer-exposure-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "jaea-jrr3-files-2026",
+      "hash": "e2d2f8ac400820eff303adb4faa348f2cbe16a08f6b39602a0a72ef0cd29d66c",
+      "json": "incidents/jaea-jrr3-files-2026.json",
+      "markdown": {
+        "ja": "incidents/jaea-jrr3-files-2026.ja.md",
+        "en": "incidents/jaea-jrr3-files-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "jogmec-directory-2026",
+      "hash": "6ae43cd9737c3f48847260b919a7815a8ddef8ee03a956335ea647da7bcca61d",
+      "json": "incidents/jogmec-directory-2026.json",
+      "markdown": {
+        "ja": "incidents/jogmec-directory-2026.ja.md",
+        "en": "incidents/jogmec-directory-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "jst-mail-2026",
+      "hash": "895070d543f5d23d9a6ab92bade62d1304f263584a18a17f6aadb77bf55f1b62",
+      "json": "incidents/jst-mail-2026.json",
+      "markdown": {
+        "ja": "incidents/jst-mail-2026.ja.md",
+        "en": "incidents/jst-mail-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "k9natural-2026",
+      "hash": "048e25cb59b3ad44c47338b60c3a730db097b72050680be8d5b636f4ddf2177f",
+      "json": "incidents/k9natural-2026.json",
+      "markdown": {
+        "ja": "incidents/k9natural-2026.ja.md",
+        "en": "incidents/k9natural-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "kaga-solnet-2026",
+      "hash": "8c01e877b54f983d164df636d5002c41f1e92602149c99e7f72bda5f2fc726bc",
+      "json": "incidents/kaga-solnet-2026.json",
+      "markdown": {
+        "ja": "incidents/kaga-solnet-2026.ja.md",
+        "en": "incidents/kaga-solnet-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "kamogawa-form-exposure-2026",
+      "hash": "7c931236a95687b166724aeeef6ead1cafc98b728351ad51f2c63c9a07f46aa0",
+      "json": "incidents/kamogawa-form-exposure-2026.json",
+      "markdown": {
+        "ja": "incidents/kamogawa-form-exposure-2026.ja.md",
+        "en": "incidents/kamogawa-form-exposure-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "kddi-isp-2026",
-      "hash": "1ce489fa2ebf16936851f2918eefafe2e224aa2f546c6a8bb2730d6397cdc41f",
+      "hash": "39e8d7d7e2c170f2e4134b750493f6fa127f9d2ec76f4c5cdb87182811848709",
       "json": "incidents/kddi-isp-2026.json",
       "markdown": {
         "ja": "incidents/kddi-isp-2026.ja.md",
@@ -1982,12 +4704,152 @@
     },
     {
       "kind": "incident",
+      "id": "kindal-phishing-2026",
+      "hash": "ddd8f0650f26c8616c586bf663b8fbcefbe2a9026029ac80776c8cfc73412519",
+      "json": "incidents/kindal-phishing-2026.json",
+      "markdown": {
+        "ja": "incidents/kindal-phishing-2026.ja.md",
+        "en": "incidents/kindal-phishing-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "kodansha-phishing-2026",
+      "hash": "22741cbdb034a399b515ee8a55376c1b6d21fc094a9dcb1f7fe8865d6d8be011",
+      "json": "incidents/kodansha-phishing-2026.json",
+      "markdown": {
+        "ja": "incidents/kodansha-phishing-2026.ja.md",
+        "en": "incidents/kodansha-phishing-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "komatsu-user-directory-exposure-2026",
+      "hash": "936a4a0a2b4765428f6bfd97f9e593a48d8bc3b4646f55d06c594d8c14bf87d6",
+      "json": "incidents/komatsu-user-directory-exposure-2026.json",
+      "markdown": {
+        "ja": "incidents/komatsu-user-directory-exposure-2026.ja.md",
+        "en": "incidents/komatsu-user-directory-exposure-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "kwansei-external-sns-2026",
+      "hash": "e497475ac81eb807e2f7072e63b93f65af628d75c06577303a9aab4f4eac672b",
+      "json": "incidents/kwansei-external-sns-2026.json",
+      "markdown": {
+        "ja": "incidents/kwansei-external-sns-2026.ja.md",
+        "en": "incidents/kwansei-external-sns-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "kyorin-remote-pc-2026",
+      "hash": "a3859bb7b118e8aa97beaac660b0651dad1af1fdb680422edf92b9bd2ffa6554",
+      "json": "incidents/kyorin-remote-pc-2026.json",
+      "markdown": {
+        "ja": "incidents/kyorin-remote-pc-2026.ja.md",
+        "en": "incidents/kyorin-remote-pc-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "kyoto-kyotv-exposure-2026",
+      "hash": "562e6014bc755e2daf473e3aae5b2179212ffb379a8375cd382b4aa83da312f7",
+      "json": "incidents/kyoto-kyotv-exposure-2026.json",
+      "markdown": {
+        "ja": "incidents/kyoto-kyotv-exposure-2026.ja.md",
+        "en": "incidents/kyoto-kyotv-exposure-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "leanbody-metabase-2026",
+      "hash": "ef8a0ed8bfcf8d65cb67431ce6486801206e36884be4edd71dacfd59c410ca53",
+      "json": "incidents/leanbody-metabase-2026.json",
+      "markdown": {
+        "ja": "incidents/leanbody-metabase-2026.ja.md",
+        "en": "incidents/leanbody-metabase-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "legoland-amadeus-2026",
+      "hash": "291b8a2fe1b14f307f74c1777f2ae669126c5d6996f3f0579459e5d656c971d7",
+      "json": "incidents/legoland-amadeus-2026.json",
+      "markdown": {
+        "ja": "incidents/legoland-amadeus-2026.ja.md",
+        "en": "incidents/legoland-amadeus-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "logicvein-2025",
+      "hash": "c4597506bc8bb7f66ad7729d67299eddb4b2170a08c9023e919d7843749e5b37",
+      "json": "incidents/logicvein-2025.json",
+      "markdown": {
+        "ja": "incidents/logicvein-2025.ja.md",
+        "en": "incidents/logicvein-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "media4u-account-list-2026",
+      "hash": "654609ed01e84214e9c82cfbaa412ec7f6f21829190aa8087c3d633a01e5c2f0",
+      "json": "incidents/media4u-account-list-2026.json",
+      "markdown": {
+        "ja": "incidents/media4u-account-list-2026.ja.md",
+        "en": "incidents/media4u-account-list-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "mediaplex-2026",
+      "hash": "5abb4d1caf11f7ee468acf236ad044329c302949c8d7917fa5b48d3b2612bdff",
+      "json": "incidents/mediaplex-2026.json",
+      "markdown": {
+        "ja": "incidents/mediaplex-2026.ja.md",
+        "en": "incidents/mediaplex-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "metabase-2026",
       "hash": "053252ba1c260199433f8a2d6153668f9bde48f01bc0164cb9a05c534d6404f5",
       "json": "incidents/metabase-2026.json",
       "markdown": {
         "ja": "incidents/metabase-2026.ja.md",
         "en": "incidents/metabase-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "mie-school-form-exposure-2026",
+      "hash": "4caf3e03f608febeeed13cee26c67d43ce5999032b0dbe2688372a7f5ce0756e",
+      "json": "incidents/mie-school-form-exposure-2026.json",
+      "markdown": {
+        "ja": "incidents/mie-school-form-exposure-2026.ja.md",
+        "en": "incidents/mie-school-form-exposure-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "mitsui-fudosan-directory-2026",
+      "hash": "5fb126193524c37cc80b81e089fe6298ece75e3d10e9566a339400bc53622974",
+      "json": "incidents/mitsui-fudosan-directory-2026.json",
+      "markdown": {
+        "ja": "incidents/mitsui-fudosan-directory-2026.ja.md",
+        "en": "incidents/mitsui-fudosan-directory-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "miyamoto-munashi-orders-2026",
+      "hash": "da031d47bce587fe9110335a0d92d4dea55f418a50e93ecc722b65cb8599366b",
+      "json": "incidents/miyamoto-munashi-orders-2026.json",
+      "markdown": {
+        "ja": "incidents/miyamoto-munashi-orders-2026.ja.md",
+        "en": "incidents/miyamoto-munashi-orders-2026.en.md"
       }
     },
     {
@@ -2002,12 +4864,92 @@
     },
     {
       "kind": "incident",
+      "id": "mrmax-2026",
+      "hash": "2d5eb51be91f991d6ed1d3ca8577fa0d12776c9ad167c05687fb282bb09bd4c4",
+      "json": "incidents/mrmax-2026.json",
+      "markdown": {
+        "ja": "incidents/mrmax-2026.ja.md",
+        "en": "incidents/mrmax-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "murauchi-2026",
+      "hash": "571ba8d0db83007b2fac5bae148beaf96464e20ac61768a68b180cab16e3beda",
+      "json": "incidents/murauchi-2026.json",
+      "markdown": {
+        "ja": "incidents/murauchi-2026.ja.md",
+        "en": "incidents/murauchi-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "nice-mail-2026",
+      "hash": "be91d0ba7ef14f9ae0fc8b3228368325912aafeb9ac36f19935bbd6fb5bef4ec",
+      "json": "incidents/nice-mail-2026.json",
+      "markdown": {
+        "ja": "incidents/nice-mail-2026.ja.md",
+        "en": "incidents/nice-mail-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "nichii-backup-exposure-2026",
+      "hash": "6b33ea71899c07dd3e0e53da2fe350a2aca66f1d53c4c85cf2947dc3209cba66",
+      "json": "incidents/nichii-backup-exposure-2026.json",
+      "markdown": {
+        "ja": "incidents/nichii-backup-exposure-2026.ja.md",
+        "en": "incidents/nichii-backup-exposure-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "nichirei-2026",
+      "hash": "4702212496ab34e8fcc03434ffbf2d1248ffb6fde2760a032b7f7fa2beba50e1",
+      "json": "incidents/nichirei-2026.json",
+      "markdown": {
+        "ja": "incidents/nichirei-2026.ja.md",
+        "en": "incidents/nichirei-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "nidek-website-2026",
       "hash": "ccd806ce45a04c06b083881c61fbaec18e1ed24c2a721b9d7de02493c77f4c62",
       "json": "incidents/nidek-website-2026.json",
       "markdown": {
         "ja": "incidents/nidek-website-2026.ja.md",
         "en": "incidents/nidek-website-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "nihontelenet-ransomware-2026",
+      "hash": "66033c09ad37e8574d54a825d4379e832b04e295a95872bb6e8dd9e696e1bacd",
+      "json": "incidents/nihontelenet-ransomware-2026.json",
+      "markdown": {
+        "ja": "incidents/nihontelenet-ransomware-2026.ja.md",
+        "en": "incidents/nihontelenet-ransomware-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "nikkei-workspace-2026",
+      "hash": "ee01f0870e85f5943f444e73386aa614e2554f43c9b42d067653676ccc88058b",
+      "json": "incidents/nikkei-workspace-2026.json",
+      "markdown": {
+        "ja": "incidents/nikkei-workspace-2026.ja.md",
+        "en": "incidents/nikkei-workspace-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "nimoca-2026",
+      "hash": "54b5235683f319ab5ebb6d12a341487a4f7ba86e0d0692cb2422a69d03320725",
+      "json": "incidents/nimoca-2026.json",
+      "markdown": {
+        "ja": "incidents/nimoca-2026.ja.md",
+        "en": "incidents/nimoca-2026.en.md"
       }
     },
     {
@@ -2022,12 +4964,32 @@
     },
     {
       "kind": "incident",
+      "id": "nostrum-smartspi-2026",
+      "hash": "242637d40494b3f5ab57999c339a61accff4d7ca3ec81be2a52bc5c0ce1d05d5",
+      "json": "incidents/nostrum-smartspi-2026.json",
+      "markdown": {
+        "ja": "incidents/nostrum-smartspi-2026.ja.md",
+        "en": "incidents/nostrum-smartspi-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "okta-support-2023",
       "hash": "ce2a745c071cd0822922d4da150d4c8c22b9b85503b2fc9041c1761718ea25de",
       "json": "incidents/okta-support-2023.json",
       "markdown": {
         "ja": "incidents/okta-support-2023.ja.md",
         "en": "incidents/okta-support-2023.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "omic-support-scam-2026",
+      "hash": "fecb2e50bf1531f7d318982f74b796546f1befc734e2e3f40a106dbeda44d0ad",
+      "json": "incidents/omic-support-scam-2026.json",
+      "markdown": {
+        "ja": "incidents/omic-support-scam-2026.ja.md",
+        "en": "incidents/omic-support-scam-2026.en.md"
       }
     },
     {
@@ -2048,6 +5010,56 @@
       "markdown": {
         "ja": "incidents/openai-mixpanel-2025.ja.md",
         "en": "incidents/openai-mixpanel-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "osaka-high-court-teams-2026",
+      "hash": "e3329068e3f5966b01110a65dcd67fd554fb23879d3ee03f3fa8229976d3f507",
+      "json": "incidents/osaka-high-court-teams-2026.json",
+      "markdown": {
+        "ja": "incidents/osaka-high-court-teams-2026.ja.md",
+        "en": "incidents/osaka-high-court-teams-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "osaka-recruitment-vendor-2026",
+      "hash": "edfc5c2cab5f9bcf85648d1dc4fe76de257c794de25c7c4744c938febb62e3c2",
+      "json": "incidents/osaka-recruitment-vendor-2026.json",
+      "markdown": {
+        "ja": "incidents/osaka-recruitment-vendor-2026.ja.md",
+        "en": "incidents/osaka-recruitment-vendor-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "ota-cultural-pc-scam-2026",
+      "hash": "646a939c8e0a033da3f87844680e1bf5af29449ff8b7ac0444f2638fa960f97f",
+      "json": "incidents/ota-cultural-pc-scam-2026.json",
+      "markdown": {
+        "ja": "incidents/ota-cultural-pc-scam-2026.ja.md",
+        "en": "incidents/ota-cultural-pc-scam-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "ozmall-2026",
+      "hash": "9af109d24ff7cf931e711edc84225003a7237e7178ecf9ddd5a2ace199bd3ac8",
+      "json": "incidents/ozmall-2026.json",
+      "markdown": {
+        "ja": "incidents/ozmall-2026.ja.md",
+        "en": "incidents/ozmall-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "pickleballone-plugin-2026",
+      "hash": "422c70a2423d50129296b38ba787db00cba1c1702d45f96332e4f8ac6846f745",
+      "json": "incidents/pickleballone-plugin-2026.json",
+      "markdown": {
+        "ja": "incidents/pickleballone-plugin-2026.ja.md",
+        "en": "incidents/pickleballone-plugin-2026.en.md"
       }
     },
     {
@@ -2082,12 +5094,42 @@
     },
     {
       "kind": "incident",
+      "id": "rakuten-books-pc-2026",
+      "hash": "70e2209a9611ac3f16bf8955953d13b5d6b05b52825e344d03f9f731fd2e87b5",
+      "json": "incidents/rakuten-books-pc-2026.json",
+      "markdown": {
+        "ja": "incidents/rakuten-books-pc-2026.ja.md",
+        "en": "incidents/rakuten-books-pc-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "rakuten-drive-2026",
+      "hash": "ff4a458d1d49a0b46ed75c35487168210a14913f2c385e870c264853e6767ef8",
+      "json": "incidents/rakuten-drive-2026.json",
+      "markdown": {
+        "ja": "incidents/rakuten-drive-2026.ja.md",
+        "en": "incidents/rakuten-drive-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "react2shell-2025",
       "hash": "e1fdfa5bfd246913e92ba9225eeda9a0f496fe731af6f782f90ea416e924444a",
       "json": "incidents/react2shell-2025.json",
       "markdown": {
         "ja": "incidents/react2shell-2025.ja.md",
         "en": "incidents/react2shell-2025.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "rizap-ai-data-handling-2026",
+      "hash": "fe7d44d7960301de77bf878518ff223ddf10a93042ed7739928316dab7914dec",
+      "json": "incidents/rizap-ai-data-handling-2026.json",
+      "markdown": {
+        "ja": "incidents/rizap-ai-data-handling-2026.ja.md",
+        "en": "incidents/rizap-ai-data-handling-2026.en.md"
       }
     },
     {
@@ -2102,8 +5144,28 @@
     },
     {
       "kind": "incident",
+      "id": "ryomo-systems-2026",
+      "hash": "1fe38fdc844c0bc2c94071e45b3df1bde05b5b6c5467c002b8a3e1489b3f7753",
+      "json": "incidents/ryomo-systems-2026.json",
+      "markdown": {
+        "ja": "incidents/ryomo-systems-2026.ja.md",
+        "en": "incidents/ryomo-systems-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "saga-hirakawaya-payment-2026",
+      "hash": "6431a41d9d56e99593cd7444910aed88034f8ef223fc311b39f3bdf4d6b25dec",
+      "json": "incidents/saga-hirakawaya-payment-2026.json",
+      "markdown": {
+        "ja": "incidents/saga-hirakawaya-payment-2026.ja.md",
+        "en": "incidents/saga-hirakawaya-payment-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "sakura-billing-2026",
-      "hash": "493c79f96ce4c126392ba6b9db8dff616fe874d06de5eef3f1b56a8b58eed167",
+      "hash": "8cc850b7d26f6bd6fdee359326dcd9d92dc14d5c20b33ff93fef8e2e7067dc15",
       "json": "incidents/sakura-billing-2026.json",
       "markdown": {
         "ja": "incidents/sakura-billing-2026.ja.md",
@@ -2122,12 +5184,82 @@
     },
     {
       "kind": "incident",
+      "id": "scala-iask-2026",
+      "hash": "a5d9727432d418e412cc213f97bd184a309d1382d6e04aeba5f81588afc634c7",
+      "json": "incidents/scala-iask-2026.json",
+      "markdown": {
+        "ja": "incidents/scala-iask-2026.ja.md",
+        "en": "incidents/scala-iask-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "seicomart-app-2026",
+      "hash": "67f8d18b06d61368a719e7c1ee5fa0be978bf32a0cac759445ee942f05968b79",
+      "json": "incidents/seicomart-app-2026.json",
+      "markdown": {
+        "ja": "incidents/seicomart-app-2026.ja.md",
+        "en": "incidents/seicomart-app-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "seiho-contract-lookup-2026",
+      "hash": "f8c99a945cf73d4a3280f70efe1747d2ee3b779e7b90cccd2f8a13061e09ea97",
+      "json": "incidents/seiho-contract-lookup-2026.json",
+      "markdown": {
+        "ja": "incidents/seiho-contract-lookup-2026.ja.md",
+        "en": "incidents/seiho-contract-lookup-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "shizuoka-form-exposure-2026",
+      "hash": "e7eb25dc5dcfecc99ae12c74a539414a80108401d7674a9f2d9c9ba2a7e0081c",
+      "json": "incidents/shizuoka-form-exposure-2026.json",
+      "markdown": {
+        "ja": "incidents/shizuoka-form-exposure-2026.ja.md",
+        "en": "incidents/shizuoka-form-exposure-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "shueisha-hapicomi-2026",
+      "hash": "f016884e45e79dd2f76c1c6d7d26cffca85f304b4260722a091ca53c68a57f28",
+      "json": "incidents/shueisha-hapicomi-2026.json",
+      "markdown": {
+        "ja": "incidents/shueisha-hapicomi-2026.ja.md",
+        "en": "incidents/shueisha-hapicomi-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "snowflake-unc5537-2024",
       "hash": "24174c9c99c67f8211c4e3c0cf1b613975a33a0eaf02a73d422670a9a81fce03",
       "json": "incidents/snowflake-unc5537-2024.json",
       "markdown": {
         "ja": "incidents/snowflake-unc5537-2024.ja.md",
         "en": "incidents/snowflake-unc5537-2024.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "studysapuri-enumeration-2026",
+      "hash": "e709385db6344a1c52370d62755c2795b63673ebc2dd03d31ad7344bbda9d787",
+      "json": "incidents/studysapuri-enumeration-2026.json",
+      "markdown": {
+        "ja": "incidents/studysapuri-enumeration-2026.ja.md",
+        "en": "incidents/studysapuri-enumeration-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "takaratomy-dmp-auth-2026",
+      "hash": "246f6d4235208ee8bfc357fb9ce09e7fabdab234c1a96d994e8bb60a8a613526",
+      "json": "incidents/takaratomy-dmp-auth-2026.json",
+      "markdown": {
+        "ja": "incidents/takaratomy-dmp-auth-2026.ja.md",
+        "en": "incidents/takaratomy-dmp-auth-2026.en.md"
       }
     },
     {
@@ -2143,11 +5275,31 @@
     {
       "kind": "incident",
       "id": "times-car-2026",
-      "hash": "8de24493d8aada652dfe02055b6cacca57f0cff723ed7906ca65c10e5eaf6331",
+      "hash": "6e241f759e7f549bd905c7792ad87a9ba77851b26e7fe3b8a14438b14fcf95e7",
       "json": "incidents/times-car-2026.json",
       "markdown": {
         "ja": "incidents/times-car-2026.ja.md",
         "en": "incidents/times-car-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "tixplus-cache-exposure-2026",
+      "hash": "78ef10d60ce25b1ea9e90e272e45455f39777df6fae961bbb37a0653cd3aa031",
+      "json": "incidents/tixplus-cache-exposure-2026.json",
+      "markdown": {
+        "ja": "incidents/tixplus-cache-exposure-2026.ja.md",
+        "en": "incidents/tixplus-cache-exposure-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "tokyometro-metpo-mail-2026",
+      "hash": "342ad9320f5ee9336c51227d881e3ac6b71c391b0348f1659ef27210b0c59bb5",
+      "json": "incidents/tokyometro-metpo-mail-2026.json",
+      "markdown": {
+        "ja": "incidents/tokyometro-metpo-mail-2026.ja.md",
+        "en": "incidents/tokyometro-metpo-mail-2026.en.md"
       }
     },
     {
@@ -2182,6 +5334,16 @@
     },
     {
       "kind": "incident",
+      "id": "trunk-mail-2026",
+      "hash": "91ddb9fc8db493646416017524132387a7eca749cdd138599f82140d9660ca7a",
+      "json": "incidents/trunk-mail-2026.json",
+      "markdown": {
+        "ja": "incidents/trunk-mail-2026.ja.md",
+        "en": "incidents/trunk-mail-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "uber-2022",
       "hash": "378245575d4a60d27b27fc4ce0173d340b03aa930b5475fdfc416585e8186914",
       "json": "incidents/uber-2022.json",
@@ -2202,12 +5364,82 @@
     },
     {
       "kind": "incident",
+      "id": "visualarts-cloud-credentials-2026",
+      "hash": "da809668d91c21e62473c54fb5315043fa9774f3a64aa42e4a6f72834a26f5aa",
+      "json": "incidents/visualarts-cloud-credentials-2026.json",
+      "markdown": {
+        "ja": "incidents/visualarts-cloud-credentials-2026.ja.md",
+        "en": "incidents/visualarts-cloud-credentials-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
       "id": "voising-bi-2026",
-      "hash": "f40d9ec1c382b6866d9556f42e40d033ec17c42a91b6d97397ce952724dccaaa",
+      "hash": "48daefbddb8d8e9ee7ed01be4c9f20e3de34a0bc7dda675095f4446e0299b919",
       "json": "incidents/voising-bi-2026.json",
       "markdown": {
         "ja": "incidents/voising-bi-2026.ja.md",
         "en": "incidents/voising-bi-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "weblife-oem-2026",
+      "hash": "2749fc94c9cf16402df9563ad4de536747895378af9caf3faa2906f2f43908ab",
+      "json": "incidents/weblife-oem-2026.json",
+      "markdown": {
+        "ja": "incidents/weblife-oem-2026.ja.md",
+        "en": "incidents/weblife-oem-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "weverse-payment-api-2026",
+      "hash": "883706606f889a12eb54d23039bd1340ceac42c7ab219526af4e09879ba8ce09",
+      "json": "incidents/weverse-payment-api-2026.json",
+      "markdown": {
+        "ja": "incidents/weverse-payment-api-2026.ja.md",
+        "en": "incidents/weverse-payment-api-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "white-essence-2026",
+      "hash": "40c20ac5ea5dad70df8680f9f3d9673648c647937b48b47bbb91451a61e8c0ba",
+      "json": "incidents/white-essence-2026.json",
+      "markdown": {
+        "ja": "incidents/white-essence-2026.ja.md",
+        "en": "incidents/white-essence-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "yakiniku-king-2026",
+      "hash": "1afb049c5ab812dbde734130e9a67f116d85b169fb6bf5a06679138ce615af28",
+      "json": "incidents/yakiniku-king-2026.json",
+      "markdown": {
+        "ja": "incidents/yakiniku-king-2026.ja.md",
+        "en": "incidents/yakiniku-king-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "yellowhat-booking-2026",
+      "hash": "4b7e0cef19e79b62b25eff95531c32aff14704982102bab7511a2c9d3a1bb165",
+      "json": "incidents/yellowhat-booking-2026.json",
+      "markdown": {
+        "ja": "incidents/yellowhat-booking-2026.ja.md",
+        "en": "incidents/yellowhat-booking-2026.en.md"
+      }
+    },
+    {
+      "kind": "incident",
+      "id": "zurich-zdash-2026",
+      "hash": "c4488397968c4d5be2adb94c2141d50c464d30567835aad0b1f47cd973c6ca84",
+      "json": "incidents/zurich-zdash-2026.json",
+      "markdown": {
+        "ja": "incidents/zurich-zdash-2026.ja.md",
+        "en": "incidents/zurich-zdash-2026.en.md"
       }
     }
   ],
@@ -2242,7 +5474,9 @@
         "SEC-006",
         "SEC-008",
         "SEC-012",
-        "SEC-013"
+        "SEC-013",
+        "SEC-015",
+        "SEC-016"
       ],
       "markdown": {
         "ja": "packs/cloud.ja.md",
@@ -2269,7 +5503,9 @@
         "SEC-010",
         "SEC-012",
         "SEC-013",
-        "SEC-014"
+        "SEC-014",
+        "SEC-015",
+        "SEC-016"
       ],
       "markdown": {
         "ja": "packs/data-store.ja.md",
@@ -2339,7 +5575,9 @@
         "SEC-001",
         "SEC-006",
         "SEC-010",
-        "SEC-014"
+        "SEC-014",
+        "SEC-015",
+        "SEC-016"
       ],
       "markdown": {
         "ja": "packs/web-app.ja.md",

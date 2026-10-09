@@ -1,0 +1,122 @@
+{
+  "id": "estore-shopserve-2026",
+  "organization": "ショップサーブ",
+  "title": {
+    "ja": "ショップサーブ：不正アクセスの経緯と影響",
+    "en": "ショップサーブ: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "サーバー上の不正プログラムで購入者情報を外部送信されました。侵入の詳細は調査中です。 8,853,839件の登録データです。同一人の複数登録を含む可能性があり、人数ではありません。店舗の認証情報も対象です。",
+    "en": "A malicious server program transmitted buyer data externally; the entry mechanism remains under investigation. 8,853,839 registered records may include multiple entries per person; merchant credentials were also affected."
+  },
+  "occurredAt": "2026-05-21",
+  "disclosedAt": "2026-08-01",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "サーバー上の不正プログラムで購入者情報を外部送信されました。侵入の詳細は調査中です。",
+        "en": "A malicious server program transmitted buyer data externally; the entry mechanism remains under investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第2報 §§1-4 / 対象件数"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "8,853,839件の登録データです。同一人の複数登録を含む可能性があり、人数ではありません。店舗の認証情報も対象です。",
+        "en": "8,853,839 registered records may include multiple entries per person; merchant credentials were also affected."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第2報 §§1-4 / 対象件数"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-05-21",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "攻撃元の通信を遮断し、会員・店舗へパスワード変更を求めています。",
+        "en": "Attack-source traffic was blocked and customer and merchant password changes requested."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第2報 §§1-4 / 対象件数"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "パスワード保護は「暗号化」と説明していますが、方式や強度は未公表です。",
+      "en": "The initial entry chain, product, CVE and availability of a prior fix are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ショップサーブ：事故に関する公表資料",
+      "url": "https://estore.jp/press/20260802/",
+      "publisher": "ショップサーブ",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-005",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

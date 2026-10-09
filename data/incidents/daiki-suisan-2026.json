@@ -1,0 +1,112 @@
+{
+  "id": "daiki-suisan-2026",
+  "organization": "大起水産",
+  "title": {
+    "ja": "大起水産：不正アクセスの経緯と影響",
+    "en": "大起水産: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "アプリのシステムへの不正アクセスを9月15日に確認しました。具体的な侵入方法は未公表です。 登録者174,933人の情報に流出の可能性があります。パスワードは別サーバーで管理され、対象外です。",
+    "en": "Unauthorized app-system access was detected on September 15; the specific mechanism is undisclosed. Potential exposure covers 174,933 registered users. Passwords were held on a separate server and were unaffected."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-05",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "アプリのシステムへの不正アクセスを9月15日に確認しました。具体的な侵入方法は未公表です。",
+        "en": "Unauthorized app-system access was detected on September 15; the specific mechanism is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §1 / p.2 §2"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "登録者174,933人の情報に流出の可能性があります。パスワードは別サーバーで管理され、対象外です。",
+        "en": "Potential exposure covers 174,933 registered users. Passwords were held on a separate server and were unaffected."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §1 / p.2 §2"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-05",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "アクセス防止措置と監視強化を実施し、外部専門会社と調査しています。",
+        "en": "Access controls and monitoring were strengthened; external specialists are investigating."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 §1 / p.2 §2"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "流出の確定範囲と技術的原因は未公表です。",
+      "en": "Confirmed exfiltration scope and the technical cause are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "大起水産：事故に関する公表資料",
+      "url": "https://www.daiki-suisan.co.jp/files/optionallink/00000164_file.pdf",
+      "publisher": "大起水産",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

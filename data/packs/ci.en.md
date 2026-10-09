@@ -6,13 +6,13 @@ This is a selection of candidate rules. Assess the remaining rules or record the
 
 # SEC-004 — Inspect artifacts and attachments for secret inclusion
 
-Inspection rule | Catalog: 0.4.1 | Record SHA-256: 0bc3057e7502f695450d42cbdbb3bb9f0add66df1feb19fe0866e2ca0a8f41d6
+Inspection rule | Catalog: 0.5.0 | Record SHA-256: 4c8742376f6fe13cb33908f282d1a6af6fd73ae0a13007f8013ca7042fd629b4
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
 Environments storing or distributing code, artifacts, containers, or support material.
 
-Version: 1.2.0 | Updated: 2026-10-02 | Surfaces: repositories, containers, ci, support
+Version: 1.1.0 | Updated: 2026-10-09 | Surfaces: repositories, containers, ci, support
 
 Execution: read-only-by-default | Provenance: editorial-guidance
 
@@ -44,7 +44,7 @@ Environments storing or distributing code, artifacts, containers, or support mat
 
 ## Related incidents
 
-anthropic-cyber-evals-2026, axios-npm-2026, campfire-2026, codecov-2021, okta-support-2023, openai-huggingface-eval-2026, postman-shai-hulud-2025, rust-arrayref-2026, sakura-billing-2026, toyota-github-2022, trivy-supply-chain-2026, unit42-ai-assisted-2026
+anthropic-cyber-evals-2026, axios-npm-2026, campfire-2026, codecov-2021, innovation-github-2026, kyorin-remote-pc-2026, okta-support-2023, openai-huggingface-eval-2026, ota-cultural-pc-scam-2026, postman-shai-hulud-2025, rust-arrayref-2026, sakura-billing-2026, toyota-github-2022, trivy-supply-chain-2026, unit42-ai-assisted-2026, visualarts-cloud-credentials-2026
 
 ## Sources
 
@@ -52,13 +52,13 @@ Primary-source URLs and claim confidence are in the related incident records’ 
 
 # SEC-005 — Reconcile credential inventory and revocation
 
-Inspection rule | Catalog: 0.4.1 | Record SHA-256: 4b6c2d63dde3bd985a945c313d3ddbf204f4b2830230426efbd8029bb2cbe5c0
+Inspection rule | Catalog: 0.5.0 | Record SHA-256: 8ff0d31313bf4bf957c0027bdf882b1e32f9121f40ae6f4a20482f273965a008
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
 Suspected credential exposure, compromise, or supplier incidents. Routine checks use metadata inventories and revocation procedures.
 
-Version: 1.2.0 | Updated: 2026-10-02 | Surfaces: identity, ci, cloud, data-store
+Version: 1.1.0 | Updated: 2026-10-09 | Surfaces: identity, ci, cloud, data-store
 
 Execution: read-only-by-default | Provenance: editorial-guidance
 
@@ -92,7 +92,7 @@ Suspected credential exposure, compromise, or supplier incidents. Routine checks
 
 ## Related incidents
 
-anthropic-claude-code-abuse-2025, anthropic-cyber-evals-2026, askul-2025, awabank-test-environment-2026, axios-npm-2026, campfire-2026, circleci-2023, cloudflare-thanksgiving-2023, codecov-2021, digital-agency-gss-2026, forticloud-sso-2026, gainsight-oauth-2025, gyazo-2026, kddi-isp-2026, metabase-2026, nishiyama-2026, okta-support-2023, openai-huggingface-eval-2026, openai-mixpanel-2025, postman-shai-hulud-2025, prontest-cloud-2026, quick-2025, react2shell-2025, rust-arrayref-2026, sakura-billing-2026, sakura-hosting-2026, temairazu-2026, times-car-2026, toyota-github-2022, trivy-supply-chain-2026, unit42-ai-assisted-2026, voising-bi-2026
+2rinkan-api-2026, anthropic-claude-code-abuse-2025, anthropic-cyber-evals-2026, applynow-bi-2026, askul-2025, awabank-test-environment-2026, axios-npm-2026, campfire-2026, charm-2026, chubu-business-credentials-2026, circleci-2023, cloudflare-thanksgiving-2023, cmic-ra-connect-2026, codecov-2021, coop-yamaguchi-2026, corona-cloud-2026, digital-agency-gss-2026, en-midcareer-credential-stuffing-2026, estore-shopserve-2026, expo-subcontractor-mail-2026, fancrew-credential-stuffing-2026, forticloud-sso-2026, fuso-cloud-storage-2026, gainsight-oauth-2025, gmo-infoq-2026, gyazo-2026, ichimasa-mail-2026, ieej-mail-2026, inkrevolution-payment-2025, innovation-github-2026, jogmec-directory-2026, jst-mail-2026, k9natural-2026, kddi-isp-2026, kindal-phishing-2026, kodansha-phishing-2026, leanbody-metabase-2026, legoland-amadeus-2026, media4u-account-list-2026, mediaplex-2026, metabase-2026, mitsui-fudosan-directory-2026, murauchi-2026, nice-mail-2026, nikkei-workspace-2026, nishiyama-2026, okta-support-2023, openai-huggingface-eval-2026, openai-mixpanel-2025, osaka-recruitment-vendor-2026, pickleballone-plugin-2026, postman-shai-hulud-2025, prontest-cloud-2026, quick-2025, rakuten-drive-2026, react2shell-2025, rust-arrayref-2026, ryomo-systems-2026, sakura-billing-2026, sakura-hosting-2026, scala-iask-2026, shueisha-hapicomi-2026, temairazu-2026, times-car-2026, tokyometro-metpo-mail-2026, toyota-github-2022, trivy-supply-chain-2026, trunk-mail-2026, unit42-ai-assisted-2026, visualarts-cloud-credentials-2026, voising-bi-2026, white-essence-2026
 
 ## Sources
 
@@ -100,13 +100,13 @@ Primary-source URLs and claim confidence are in the related incident records’ 
 
 # SEC-007 — Inspect external CI code and permissions
 
-Inspection rule | Catalog: 0.4.1 | Record SHA-256: 24d16b0e16072cef37450fa3ea774f8f84c2301d0ac79c38c3d367205633d4a5
+Inspection rule | Catalog: 0.5.0 | Record SHA-256: 154186523c183ea0ec0059b951eb9b35f0ac41557c28df13c071663be3aef6ee
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
 CI executing external actions, orbs, scripts, or build tools.
 
-Version: 1.2.0 | Updated: 2026-10-02 | Surfaces: ci
+Version: 1.1.0 | Updated: 2026-10-09 | Surfaces: ci
 
 Execution: read-only-by-default | Provenance: editorial-guidance
 
@@ -140,7 +140,7 @@ CI executing external actions, orbs, scripts, or build tools.
 
 ## Related incidents
 
-anthropic-cyber-evals-2026, axios-npm-2026, codecov-2021, postman-shai-hulud-2025, rust-arrayref-2026, trivy-supply-chain-2026, unit42-ai-assisted-2026
+anthropic-cyber-evals-2026, axios-npm-2026, codecov-2021, innovation-github-2026, postman-shai-hulud-2025, rust-arrayref-2026, trivy-supply-chain-2026, unit42-ai-assisted-2026
 
 ## Sources
 
@@ -148,13 +148,13 @@ Primary-source URLs and claim confidence are in the related incident records’ 
 
 # SEC-008 — Inspect privileges enabling lateral access
 
-Inspection rule | Catalog: 0.4.1 | Record SHA-256: f2471e2ab224669a418afa7fb130562e051bccc70c7a79cd70cb39641c967464
+Inspection rule | Catalog: 0.5.0 | Record SHA-256: 6de9a8001e402946286fea02a53aa5d36592fa83613987d2c8d0b712ec1e36bc
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
 Environments where administrators, services, or CI can access production or separate data stores.
 
-Version: 1.2.0 | Updated: 2026-10-02 | Surfaces: identity, cloud, data-store, ci
+Version: 1.1.0 | Updated: 2026-10-09 | Surfaces: identity, cloud, data-store, ci
 
 Execution: read-only-by-default | Provenance: editorial-guidance
 
@@ -186,7 +186,7 @@ Environments where administrators, services, or CI can access production or sepa
 
 ## Related incidents
 
-aflac-japan-2026, anthropic-claude-code-abuse-2025, anthropic-cyber-evals-2026, askul-2025, campfire-2026, circleci-2023, cloudflare-thanksgiving-2023, digital-agency-gss-2026, discord-support-vendor-2025, forticloud-sso-2026, gainsight-oauth-2025, gyazo-2026, kddi-isp-2026, metabase-2026, openai-huggingface-eval-2026, openai-mixpanel-2025, postman-shai-hulud-2025, quick-2025, react2shell-2025, sakura-billing-2026, sakura-hosting-2026, snowflake-unc5537-2024, temairazu-2026, times-car-2026, trivy-supply-chain-2026, unit42-ai-assisted-2026, voising-bi-2026
+2rinkan-api-2026, aflac-japan-2026, ainokaze-reservations-2026, anthropic-claude-code-abuse-2025, anthropic-cyber-evals-2026, applynow-bi-2026, asahi-pharma-digital-2026, askul-2025, campfire-2026, charm-2026, chiba-biodiversity-2026, chibagin-shoten-2026, chubu-business-credentials-2026, circleci-2023, cloudflare-thanksgiving-2023, cmic-ra-connect-2026, conoha-wing-2026, coop-yamaguchi-2026, corona-cloud-2026, cota-2026, daiichi-life-hr-2026, daiki-suisan-2026, dandm-vpn-ransomware-2026, digital-agency-gss-2026, discord-support-vendor-2025, epark-peakmanager-2026, eplus-refund-2026, estore-shopserve-2026, expo-subcontractor-mail-2026, fines-reservations-2026, five-foxes-2026, forticloud-sso-2026, fujita-personal-pc-scam-2026, fukuoka-editable-application-2026, fuso-cloud-storage-2026, gainsight-oauth-2025, gex-ransomware-2026, gmo-infoq-2026, gpoint-2026, gyazo-2026, his-thailand-2025, inkrevolution-payment-2025, innovation-github-2026, jaea-jrr3-files-2026, jogmec-directory-2026, k9natural-2026, kaga-solnet-2026, kamogawa-form-exposure-2026, kddi-isp-2026, kindal-phishing-2026, komatsu-user-directory-exposure-2026, kwansei-external-sns-2026, leanbody-metabase-2026, legoland-amadeus-2026, logicvein-2025, media4u-account-list-2026, mediaplex-2026, metabase-2026, mie-school-form-exposure-2026, mitsui-fudosan-directory-2026, miyamoto-munashi-orders-2026, mrmax-2026, murauchi-2026, nichirei-2026, nihontelenet-ransomware-2026, nostrum-smartspi-2026, omic-support-scam-2026, openai-huggingface-eval-2026, openai-mixpanel-2025, osaka-high-court-teams-2026, osaka-recruitment-vendor-2026, ozmall-2026, pickleballone-plugin-2026, postman-shai-hulud-2025, quick-2025, rakuten-books-pc-2026, rakuten-drive-2026, react2shell-2025, ryomo-systems-2026, saga-hirakawaya-payment-2026, sakura-billing-2026, sakura-hosting-2026, scala-iask-2026, seicomart-app-2026, shueisha-hapicomi-2026, snowflake-unc5537-2024, temairazu-2026, times-car-2026, tokyometro-metpo-mail-2026, trivy-supply-chain-2026, unit42-ai-assisted-2026, visualarts-cloud-credentials-2026, voising-bi-2026, weverse-payment-api-2026, white-essence-2026, yakiniku-king-2026, yellowhat-booking-2026
 
 ## Sources
 

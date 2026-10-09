@@ -11,7 +11,7 @@
   },
   "occurredAt": "2026-09-11",
   "disclosedAt": "2026-09-16",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-09",
   "outcome": "confirmed-breach",
   "categories": ["unknown"],
   "cves": [],
@@ -23,8 +23,8 @@
         "en": "Remote code execution affected the image-upload server on September 11 and was detected that evening."
       },
       "status": "confirmed",
-      "sourceIds": ["s2"],
-      "locator": "調査で判明した経緯"
+      "sourceIds": ["s1"],
+      "locator": "初報：1. 発生した事象"
     },
     {
       "topic": "impact",
@@ -83,7 +83,7 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-09",
       "title": "Gyazoにおける不正アクセスに関するお知らせ",
       "url": "https://corp.helpfeel.com/news/news-20260916-1",
       "publisher": "Helpfeel",
@@ -92,7 +92,7 @@
     },
     {
       "id": "s2",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-09",
       "title": "Gyazoにおける不正アクセスに関するお知らせ（第2報）",
       "url": "https://corp.helpfeel.com/news/news-20260925-01",
       "publisher": "Helpfeel",

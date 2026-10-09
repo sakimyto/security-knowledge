@@ -1,0 +1,103 @@
+{
+  "id": "kyorin-remote-pc-2026",
+  "organization": "杏林学園",
+  "title": {
+    "ja": "杏林学園：不正アクセスの経緯と影響",
+    "en": "杏林学園: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "在宅勤務中の教員が偽サイトへ誘導され、パソコンを外部から遠隔操作されました。 学生、教職員、学会会員など約2,500人の情報が流出した可能性があります。",
+    "en": "A faculty member working from home was directed to a fake website and their computer remotely accessed. Information about approximately 2,500 students, staff and society members may have been disclosed."
+  },
+  "occurredAt": "2026-06-26",
+  "disclosedAt": "2026-07-08",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["endpoint"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "在宅勤務中の教員が偽サイトへ誘導され、パソコンを外部から遠隔操作されました。",
+        "en": "A faculty member working from home was directed to a fake website and their computer remotely accessed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "発覚経緯 / 対象情報 / 対応"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "学生、教職員、学会会員など約2,500人の情報が流出した可能性があります。",
+        "en": "Information about approximately 2,500 students, staff and society members may have been disclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "発覚経緯 / 対象情報 / 対応"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-26",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-07-08",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "関係機関へ報告し、外部調査と対象者への通知を準備しています。",
+        "en": "Authorities were notified; external investigation and individual notification are being prepared."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "発覚経緯 / 対象情報 / 対応"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The full exfiltration scope is unresolved and a forensic investigation was planned. The event began with a faculty member’s home PC."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "杏林学園：事故に関する公表資料",
+      "url": "https://www.kyorin-u.ac.jp/univ/news/4087/",
+      "publisher": "杏林学園",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-003", "SEC-004", "SEC-009", "SEC-012"]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "kindal-phishing-2026",
+  "organization": "カインドオル",
+  "title": {
+    "ja": "カインドオル：不正アクセスの経緯と影響",
+    "en": "カインドオル: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "偽EC運営会社のメール先へ従業員が認証情報を入力しました。スタッフアカウントには二段階認証が未設定でした。 8月23日に顧客データを2回一括出力され、対象は136,464人です。",
+    "en": "An employee entered staff credentials into a phishing site; the account lacked two-step authentication. Two bulk exports occurred on August 23, affecting 136,464 customers."
+  },
+  "occurredAt": "2026-08-23",
+  "disclosedAt": "2026-08-28",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "偽EC運営会社のメール先へ従業員が認証情報を入力しました。スタッフアカウントには二段階認証が未設定でした。",
+        "en": "An employee entered staff credentials into a phishing site; the account lacked two-step authentication."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4,6"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "8月23日に顧客データを2回一括出力され、対象は136,464人です。",
+        "en": "Two bulk exports occurred on August 23, affecting 136,464 customers."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4,6"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-23",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "アカウントを削除し、全スタッフの二段階認証を必須化しました。",
+        "en": "The compromised account was deleted and two-step authentication required for all staff."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4,6"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "当初のフィッシング日時とMFA方式は未公表です。",
+      "en": "Phishing, weak passwords and absent MFA are reported; the exact original compromise date and extraction completeness are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "カインドオル：事故に関する公表資料",
+      "url": "https://www.kind.co.jp/notice-20260828",
+      "publisher": "カインドオル",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-005",
+    "SEC-008",
+    "SEC-009"
+  ]
+}

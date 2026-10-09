@@ -4,6 +4,7 @@ import { dirname, relative, resolve, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { buildCatalog, hash, ROOT, validateCatalog } from './catalog.mjs'
 import { buildJevRequest, decisionTask } from './decisions.mjs'
+import { loadIntakes, validateIntake } from './intake.mjs'
 import { readJson, validateSchema } from './schema.mjs'
 
 export const fileHash = (text) => createHash('sha256').update(text, 'utf8').digest('hex')
@@ -110,7 +111,7 @@ export function renderRecord(record, kind, locale, catalog) {
     lines.push(
       `Organization: ${md(record.organization)} | Outcome: ${record.outcome}`,
       '',
-      `Occurred: ${record.occurredAt ?? 'unknown'} | Disclosed: ${record.disclosedAt} | Reviewed: ${record.reviewedAt}`,
+      `Occurred: ${record.occurredAt ?? 'unknown'} | Disclosed: ${record.disclosedAt ?? 'unknown'} | Reviewed: ${record.reviewedAt}`,
       '',
       `Categories: ${record.categories.join(', ')} | CVEs: ${record.cves.join(', ') || 'unspecified'}`,
       '',
@@ -213,6 +214,10 @@ function startHere(catalog, locale) {
     '',
     `[${ja ? '接続手順と制約' : 'Integration and limitations'}](${catalog.repository}/blob/main/docs/consuming.md)`,
     '',
+    ja
+      ? '[国内169候補の確認台帳](intake/domestic-20261009.json)には、元の未検証の件数・日付、確認済みの主張、収録・除外の理由、再確認の対象を記録しています。未確認の候補を事故件数へ加算せず、点検には事故とルールの正本を使います。'
+      : '[The 169-candidate domestic review ledger](intake/domestic-20261009.json) separates unverified supplied counts and dates from sourced facts, catalog links, exclusions and follow-up gaps. Unresolved candidates are not confirmed incidents; use the canonical incidents and rules for inspections.',
+    '',
   ].join('\n')
 }
 
@@ -235,7 +240,18 @@ export function buildDistribution(catalog, root = ROOT) {
   }
   add('catalog.json', json(built.catalog), 'catalog', 'json')
   add('index.json', json(built.index), 'index', 'json')
-  for (const name of ['catalog', 'inventory', 'report', 'discovery', 'decision-input'])
+  for (const intake of loadIntakes(root)) {
+    const errors = validateIntake(intake, catalog, root)
+    if (errors.length) throw new Error(errors.join('\n'))
+    add(`intake/${intake.id}.json`, json(intake), 'intake', 'json')
+    add(
+      `intake/${intake.id}.jsonl`,
+      `${intake.records.map((row) => JSON.stringify(row)).join('\n')}\n`,
+      'intake',
+      'jsonl',
+    )
+  }
+  for (const name of ['catalog', 'inventory', 'report', 'discovery', 'decision-input', 'intake'])
     add(
       `${name}.schema.json`,
       json(readJson(resolve(root, `schema/${name}.schema.json`))),
@@ -397,6 +413,7 @@ export function buildDistribution(catalog, root = ROOT) {
       '- [Index](./index.json): compare record IDs and hashes with the prior trusted snapshot.',
       '- [Catalog](./catalog.json): full bilingual JSON with claims, sources, rules, and evidence criteria.',
       '- [Rules JSONL](./rules.jsonl) / [Incidents JSONL](./incidents.jsonl): one complete record per line for ingestion.',
+      '- [Domestic candidate ledger](./intake/domestic-20261009.json) / [JSONL](./intake/domestic-20261009.jsonl): all 169 input candidates, corrections, exclusions and unresolved primary evidence; unverified input is not an incident fact.',
       '- [Decision tasks](./decision-tasks.jsonl): atomic Choice questions for Jev or provider adapters; decisions do not certify inspection results.',
       `- [Jev integration](${catalog.repository}/blob/main/docs/jev.md): official request mapping, offline examples, and response validation.`,
       '- [Full Japanese text](./llms-full.ja.txt) / [Full English text](./llms-full.txt): attachment bundles; use individual records for limited context.',
@@ -492,6 +509,31 @@ export function validateDistribution(files, root = ROOT) {
     }
     if (seen.size !== catalog.rules.length + catalog.incidents.length)
       errors.push('Missing records')
+    for (const resource of discovery.resources.filter(
+      (item) => item.kind === 'intake' && item.format === 'json',
+    )) {
+      const intake = JSON.parse(files.get(resource.path))
+      errors.push(...validateIntake(intake, catalog, root))
+      if (resource.path !== `intake/${intake.id}.json`) errors.push('Intake path does not match ID')
+      const jsonl = `intake/${intake.id}.jsonl`
+      if (
+        !paths.has(jsonl) ||
+        files.get(jsonl) !== `${intake.records.map((row) => JSON.stringify(row)).join('\n')}\n`
+      )
+        errors.push('Intake JSONL mismatch')
+    }
+    if (
+      discovery.resources.some(
+        (item) =>
+          item.kind === 'intake' &&
+          item.format === 'jsonl' &&
+          !discovery.resources.some(
+            (other) =>
+              other.kind === 'intake' && other.path === item.path.replace(/\.jsonl$/, '.json'),
+          ),
+      )
+    )
+      errors.push('Intake JSON missing')
     for (const kind of ['rule', 'incident']) {
       const text = files.get(`${kind}s.jsonl`)
       if (!text?.endsWith('\n')) throw new Error('JSONL must end with a newline')

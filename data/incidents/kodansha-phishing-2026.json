@@ -1,0 +1,122 @@
+{
+  "id": "kodansha-phishing-2026",
+  "organization": "講談社",
+  "title": {
+    "ja": "講談社：不正アクセスの経緯と影響",
+    "en": "講談社: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "取引先を偽装したフィッシング先で社員が認証情報を入力し、メールへ不正ログインされました。 連絡先最大3,812件が盗まれ、うち553メールアドレスへなりすましメールを送信されました。",
+    "en": "An employee entered credentials on a phishing site impersonating a business partner, enabling unauthorized mailbox login. Up to 3,812 contacts were stolen and 553 addresses received impersonation messages."
+  },
+  "occurredAt": "2026-07-27",
+  "disclosedAt": "2026-08-03",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "取引先を偽装したフィッシング先で社員が認証情報を入力し、メールへ不正ログインされました。",
+        "en": "An employee entered credentials on a phishing site impersonating a business partner, enabling unauthorized mailbox login."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 本件の経緯 / 弊社の対応"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "連絡先最大3,812件が盗まれ、うち553メールアドレスへなりすましメールを送信されました。",
+        "en": "Up to 3,812 contacts were stolen and 553 addresses received impersonation messages."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 本件の経緯 / 弊社の対応"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-27",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-08-03",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "パスワードを変更しセッションを削除、その後の不正アクセスは未確認です。",
+        "en": "The password was changed and sessions removed; no further unauthorized access was observed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 本件の経緯 / 弊社の対応"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "当時のMFA方式・設定は未公表です。",
+      "en": "The notice does not establish prior MFA coverage or a more detailed credential-theft mechanism."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "講談社：事故に関する公表資料",
+      "url": "https://www.kodansha.co.jp/notices/723",
+      "publisher": "講談社",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-003",
+    "SEC-005",
+    "SEC-009"
+  ]
+}

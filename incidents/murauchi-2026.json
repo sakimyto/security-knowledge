@@ -1,0 +1,95 @@
+{
+  "id": "murauchi-2026",
+  "organization": "ムラウチドットコム",
+  "title": {
+    "ja": "ムラウチドットコム：不正アクセスの経緯と影響",
+    "en": "ムラウチドットコム: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "社内システムへの第三者の不正アクセスと、個人情報の外部持ち出しを確認しました。原因の技術詳細は未確認です。 顧客の氏名、住所、電話番号などが流出しました。ログインID・パスワード、決済情報、お届け先登録情報は対象外です。件数はPDF本文を確認できていません。",
+    "en": "The company confirmed unauthorized system access and extraction of personal information; technical entry details remain unverified. Customer names, addresses and telephone numbers were leaked; login credentials, payment data and delivery-address records were excluded. The PDF count remains unverified."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-07-24",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "社内システムへの第三者の不正アクセスと、個人情報の外部持ち出しを確認しました。原因の技術詳細は未確認です。",
+        "en": "The company confirmed unauthorized system access and extraction of personal information; technical entry details remain unverified."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "冒頭 / FAQ Q1-Q3,Q7,Q9"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "顧客の氏名、住所、電話番号などが流出しました。ログインID・パスワード、決済情報、お届け先登録情報は対象外です。件数はPDF本文を確認できていません。",
+        "en": "Customer names, addresses and telephone numbers were leaked; login credentials, payment data and delivery-address records were excluded. The PDF count remains unverified."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "冒頭 / FAQ Q1-Q3,Q7,Q9"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-24",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "外部調査を完了し、経路遮断、データ保全、関係機関への報告を進めています。",
+        "en": "External investigation is complete; access blocking, preservation and authority reporting are described."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "冒頭 / FAQ Q1-Q3,Q7,Q9"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "第2報PDFを取得・表示できず、入力の7,716,811件は未確認です。公開HTMLで事故の発生と流出は確認しました。",
+      "en": "The reviewed HTML notice confirms personal-data leakage but does not state the supplied 7,716,811 count. The linked PDF could not be verified."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ムラウチドットコム：事故に関する公表資料",
+      "url": "https://murauchi.com/static-pages/privacy/pressrelease.html",
+      "publisher": "ムラウチドットコム",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-012"]
+}

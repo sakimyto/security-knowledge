@@ -1,0 +1,112 @@
+{
+  "id": "miyamoto-munashi-orders-2026",
+  "organization": "M&Sフードサービス",
+  "title": {
+    "ja": "M&Sフードサービス：不正アクセスの経緯と影響",
+    "en": "M&Sフードサービス: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "持ち帰り注文サイトへの不正アクセスを7月29日に確認しました。 最大1,895件の注文データ、1,030人が潜在的対象です。カード決済情報は保有していません。",
+    "en": "Unauthorized access to the takeaway-ordering site was detected on July 29. Potential scope is up to 1,895 order records for 1,030 people; card payment data was not stored."
+  },
+  "occurredAt": null,
+  "disclosedAt": null,
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "supply-chain",
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "持ち帰り注文サイトへの不正アクセスを7月29日に確認しました。",
+        "en": "Unauthorized access to the takeaway-ordering site was detected on July 29."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大1,895件の注文データ、1,030人が潜在的対象です。カード決済情報は保有していません。",
+        "en": "Potential scope is up to 1,895 order records for 1,030 people; card payment data was not stored."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-29",
+      "text": {
+        "ja": "サイトへの不正アクセスを確認。",
+        "en": "Unauthorized site access detected."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "サイトを一時停止し、運営委託先とログ解析を進めています。",
+        "en": "The site was suspended while the operator and vendor analyze logs."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "本文に公表日はありません。提供一覧の日付やアーカイブの掲載日は確定した公表日として使いません。",
+      "en": "The notice body does not state a publication date. An input-list or archive date is not substituted as a confirmed first-disclosure date."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "M&Sフードサービス：事故に関する公表資料",
+      "url": "https://m-munashi.com/pages/incident202607",
+      "publisher": "M&Sフードサービス",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-008",
+    "SEC-009",
+    "SEC-012"
+  ]
+}

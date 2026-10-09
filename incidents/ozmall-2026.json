@@ -1,0 +1,95 @@
+{
+  "id": "ozmall-2026",
+  "organization": "OZmall",
+  "title": {
+    "ja": "OZmall：不正アクセスの経緯と影響",
+    "en": "OZmall: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "大量の不正アクセスを検知し、原因となった脆弱性へ対処しました。種類は未公表です。 最大442,779人が潜在的対象で、一部退会者を含みます。初報の447,610人から修正しています。",
+    "en": "Abnormal access was detected and the responsible vulnerability addressed; its type is undisclosed. Potential scope is up to 442,779 people including former users, revised from 447,610."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-27",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "大量の不正アクセスを検知し、原因となった脆弱性へ対処しました。種類は未公表です。",
+        "en": "Abnormal access was detected and the responsible vulnerability addressed; its type is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 §§1-4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "最大442,779人が潜在的対象で、一部退会者を含みます。初報の447,610人から修正しています。",
+        "en": "Potential scope is up to 442,779 people including former users, revised from 447,610."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 §§1-4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-27",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "ページを停止して修正し、影響を受けないサーバーも点検しました。",
+        "en": "The page was suspended and fixed, and unaffected servers also checked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "第2報 §§1-4"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "製品・CVE・修正提供時期と、実際の取得範囲は未公表です。",
+      "en": "The vulnerability and prior patch timing are undisclosed. The revised number replaces the initial count rather than adding to it."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "OZmall：事故に関する公表資料",
+      "url": "https://starts-pub.jp/info20261001",
+      "publisher": "OZmall",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-008", "SEC-009", "SEC-012"]
+}

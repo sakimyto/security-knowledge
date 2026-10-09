@@ -1,7 +1,7 @@
 {
   "id": "SEC-014",
-  "version": "1.0.0",
-  "updatedAt": "2026-10-02",
+  "version": "1.1.0",
+  "updatedAt": "2026-10-09",
   "title": {
     "ja": "照会APIの認可と取得量の制御を確認する",
     "en": "Inspect query authorization and retrieval limits"
@@ -54,7 +54,33 @@
       "en": "Limits do not repair authorization flaws. Do not exercise bulk requests or real customer queries in production; unavailable permissions or test evidence mean unverified."
     }
   ],
-  "incidentIds": ["aflac-japan-2026"],
+  "incidentIds": [
+    "2rinkan-api-2026",
+    "aflac-japan-2026",
+    "benefit-one-tenant-export-2026",
+    "en-midcareer-credential-stuffing-2026",
+    "fancrew-credential-stuffing-2026",
+    "fines-reservations-2026",
+    "gmo-infoq-2026",
+    "gpoint-2026",
+    "jaea-jrr3-files-2026",
+    "kaga-solnet-2026",
+    "komatsu-user-directory-exposure-2026",
+    "kwansei-external-sns-2026",
+    "kyoto-kyotv-exposure-2026",
+    "nimoca-2026",
+    "osaka-high-court-teams-2026",
+    "saga-hirakawaya-payment-2026",
+    "seicomart-app-2026",
+    "seiho-contract-lookup-2026",
+    "shizuoka-form-exposure-2026",
+    "shueisha-hapicomi-2026",
+    "studysapuri-enumeration-2026",
+    "takaratomy-dmp-auth-2026",
+    "tixplus-cache-exposure-2026",
+    "weblife-oem-2026",
+    "weverse-payment-api-2026"
+  ],
   "references": [
     {
       "title": "アフラック生命保険：調査結果と再発防止策",

@@ -1,0 +1,113 @@
+{
+  "id": "cota-2026",
+  "organization": "コタ",
+  "title": {
+    "ja": "コタ：不正アクセスの経緯と影響",
+    "en": "コタ: unauthorized access and impact"
+  },
+  "summary": {
+    "ja": "3月27日のPC動作不良の調査で不正アクセスが判明しました。入口は未公表です。 8区分で延べ109,147件が潜在的対象です。専門調査でも漏えいは未確認で、否定できないとして通知しています。",
+    "en": "Investigation of PC malfunctions on March 27 identified unauthorized access; the entry route is undisclosed. Eight datasets total 109,147 potentially affected records; investigation did not confirm leakage but could not rule it out."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-03-30",
+  "reviewedAt": "2026-10-09",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "3月27日のPC動作不良の調査で不正アクセスが判明しました。入口は未公表です。",
+        "en": "Investigation of PC malfunctions on March 27 identified unauthorized access; the entry route is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 §§1,2,4"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "8区分で延べ109,147件が潜在的対象です。専門調査でも漏えいは未確認で、否定できないとして通知しています。",
+        "en": "Eight datasets total 109,147 potentially affected records; investigation did not confirm leakage but could not rule it out."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 §§1,2,4"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-03-30",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "全サーバーとPCを遮断し、外部専門家と調査・復旧を進めました。",
+        "en": "All servers and PCs were disconnected while specialists investigated and restored systems."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "pp.1-2 §§1,2,4"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法や修正の提供時期が分からず、防げたかは判断できません。関連ルールで権限、取得ログ、保存期限と稼働設定を点検します。",
+      "en": "Undisclosed entry or patch timing prevents an avoidability assessment. Inspect privileges, retrieval logs, retention and deployed configuration using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
+      "en": "The cumulative record total spans eight datasets; overlap and actual exfiltration remain unresolved."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "コタ：事故に関する公表資料",
+      "url": "https://media.cota.co.jp/media/c461e507-b70e-4543-81b6-38210d442a3b.pdf",
+      "publisher": "コタ",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": [
+    "SEC-003",
+    "SEC-008",
+    "SEC-009",
+    "SEC-012",
+    "SEC-013"
+  ]
+}

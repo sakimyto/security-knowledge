@@ -1,0 +1,103 @@
+{
+  "id": "tixplus-cache-exposure-2026",
+  "organization": "チケットプラス",
+  "title": {
+    "ja": "チケットプラス：情報の公開範囲・権限の問題",
+    "en": "チケットプラス: data exposure and authorization boundaries"
+  },
+  "summary": {
+    "ja": "負荷軽減のキャッシュ設定変更後、同時アクセスで別ユーザーの情報を表示する状態になりました。 自分の情報を表示された可能性のある最大107名と、他人の情報を表示された可能性のある最大322名を分けています。429名を流出被害者数とは扱いません。",
+    "en": "A cache change intended to reduce load caused cross-user information display during concurrent access. Up to 107 data owners and 322 viewers are separate scopes. Their sum is not a confirmed leaked-person count."
+  },
+  "occurredAt": "2026-09-28",
+  "disclosedAt": "2026-10-01",
+  "reviewedAt": "2026-10-09",
+  "outcome": "exposure-only",
+  "categories": ["configuration"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "負荷軽減のキャッシュ設定変更後、同時アクセスで別ユーザーの情報を表示する状態になりました。",
+        "en": "A cache change intended to reduce load caused cross-user information display during concurrent access."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "1. 発生経緯 / 4. 影響を受けた可能性のあるお客様"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "自分の情報を表示された可能性のある最大107名と、他人の情報を表示された可能性のある最大322名を分けています。429名を流出被害者数とは扱いません。",
+        "en": "Up to 107 data owners and 322 viewers are separate scopes. Their sum is not a confirmed leaked-person count."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "1. 発生経緯 / 4. 影響を受けた可能性のあるお客様"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-28",
+      "text": {
+        "ja": "公表資料が示す事象発生日。",
+        "en": "Event date reported by the source."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-01",
+      "text": {
+        "ja": "公表資料で確認できる開示日。",
+        "en": "Disclosure date established by the reviewed notice."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "サービスを停止して設定を修正し、9月30日に再開しました。",
+        "en": "The service was suspended, configuration corrected, and service resumed on September 30."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "1. 発生経緯 / 4. 影響を受けた可能性のあるお客様"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "公表された設定・権限・運用上の問題に対応する点検です。適用条件を確認し、変更後の挙動と証拠を残します。",
+      "en": "Inspect the disclosed configuration, authorization or operational issue. Verify applicability and retain evidence of behavior after remediation."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "両対象の重複や実際に他人へ表示された人数は未公表です。",
+      "en": "Overlap and the actual count displayed to other people are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "チケットプラス：事故に関する公表資料",
+      "url": "https://tixplus.jp/information/",
+      "publisher": "チケットプラス",
+      "kind": "organization",
+      "publishedAt": null,
+      "reviewedAt": "2026-10-09"
+    }
+  ],
+  "ruleIds": ["SEC-014", "SEC-016"]
+}

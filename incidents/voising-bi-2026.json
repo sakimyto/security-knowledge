@@ -11,7 +11,7 @@
   },
   "occurredAt": null,
   "disclosedAt": "2026-08-18",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-09",
   "outcome": "confirmed-breach",
   "categories": ["known-vulnerability"],
   "cves": [],
@@ -24,7 +24,7 @@
       },
       "status": "confirmed",
       "sourceIds": ["s1"],
-      "locator": "3. 発生原因"
+      "locator": "1. 調査結果【原因】 / 3. 本件不正アクセスへの対応と再発防止策【今後の対策】"
     },
     {
       "topic": "impact",
@@ -34,7 +34,7 @@
       },
       "status": "confirmed",
       "sourceIds": ["s1"],
-      "locator": "2. 影響範囲"
+      "locator": "1. 調査結果【漏えいが確認された件数および情報】"
     }
   ],
   "timeline": [
@@ -56,7 +56,7 @@
       },
       "status": "confirmed",
       "sourceIds": ["s1"],
-      "locator": "4. 実施した対応"
+      "locator": "3. 本件不正アクセスへの対応と再発防止策【実施済みの対策】"
     }
   ],
   "prevention": {
@@ -83,7 +83,7 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-09",
       "title": "不正アクセスによる情報流出に関するご報告（第4報）",
       "url": "https://voising-official.com/news/1015",
       "publisher": "VOISING",
