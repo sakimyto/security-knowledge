@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.6.1",
-  "updatedAt": "2026-10-10",
+  "version": "0.7.0",
+  "updatedAt": "2026-10-12",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,10 +10,10 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外136事例と16点検ルールを収録した選定DBです。公表日が2025-10-10〜2026-10-10の120事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。 6事例に編集者の原因・対策仮説を別項目で収録しています。",
-    "en": "A curated database of 136 primary-source incident records and 16 inspection rules: 120 disclosed during 2025-10-10–2026-10-10, 11 outside that period, and 5 with unknown disclosure dates. A separate review ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records include separate editorial cause and mitigation hypotheses."
+    "ja": "一次資料を確認した国内外141事例と16点検ルールを収録した選定DBです。公表日が2025-10-12〜2026-10-12の125事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
+    "en": "A curated database of 141 primary-source incident records and 16 inspection rules: 125 disclosed during 2025-10-12–2026-10-12, 11 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
   },
-  "contentHash": "0a19d26cb175869ee749bbe6435fb1ebf0e50b1a17b8338b00a19bef1817ece3",
+  "contentHash": "8f5b5dac2ba0c64cde05f9449050278bca9e32d8b20fe11be571fa1e6ffcffa3",
   "entries": [
     {
       "kind": "incident",
@@ -42,8 +42,13 @@
     },
     {
       "kind": "incident",
+      "id": "anthropic-unintended-model-actions-2026",
+      "hash": "11b28c20038b859dcb3b43dafbf4d21a5aca8c2a6b881e52c04dbcf37519f89e"
+    },
+    {
+      "kind": "incident",
       "id": "applynow-bi-2026",
-      "hash": "9f8c1b3dd74b491b783ea5b8ab7259e976f4d0eb53c0c531dfa1d0c4ba004d3e"
+      "hash": "ca9127047de14d988786ad07c1577cb808e4ae4088a8272c9bcef2759e3a66b0"
     },
     {
       "kind": "incident",
@@ -117,6 +122,11 @@
     },
     {
       "kind": "incident",
+      "id": "commune-2026",
+      "hash": "76625721940f73a92f811071163c8f7fe055e43dd5eaf9d7b563a975adcfc596"
+    },
+    {
+      "kind": "incident",
       "id": "conoha-wing-2026",
       "hash": "aac83b7aa21e2c92df683305394272b8e2eca0e294341720c8c755c7c5e1cdd3"
     },
@@ -149,6 +159,11 @@
       "kind": "incident",
       "id": "dandm-vpn-ransomware-2026",
       "hash": "bb99944206b32df33d824d17b5d4d63bff63df6e5c3bef43ec7412c8df7b2981"
+    },
+    {
+      "kind": "incident",
+      "id": "denmark-cpr-2026",
+      "hash": "3779f00af9b08581e405c8c1d38005f2e535fe4dca957f57c61dcaa2d5f3b171"
     },
     {
       "kind": "incident",
@@ -257,6 +272,11 @@
     },
     {
       "kind": "incident",
+      "id": "hiho-mypage-2026",
+      "hash": "3c6c37a3081a6965e25b582be577d1164ea9803c5a7f60f8013f04a4b51c061f"
+    },
+    {
+      "kind": "incident",
       "id": "his-thailand-2025",
       "hash": "04ba131fee62f89d5b3d083df9e3cf34c3095e4b9f0bf0d8a76e30ed2258fdf8"
     },
@@ -264,6 +284,11 @@
       "kind": "incident",
       "id": "ichimasa-mail-2026",
       "hash": "36e9075b34455f97bdad8031217cf8401bd0f8daadb89b73a5e8cd7367f7f7d4"
+    },
+    {
+      "kind": "incident",
+      "id": "idcf-ransomware-2026",
+      "hash": "c086c39120a79d7c753f545ffe0e6699de8775e05b64b65ea640221959ac110c"
     },
     {
       "kind": "incident",
@@ -608,7 +633,7 @@
     {
       "kind": "incident",
       "id": "temairazu-2026",
-      "hash": "850d08abeb2117646398605c54df2f7e164b985406fc001155792b8eadc716e4"
+      "hash": "2b7ee9d46d5cac913fa59cb9b7b3618e2d166ba63a73ca82d87259d994772ed5"
     },
     {
       "kind": "incident",
@@ -703,7 +728,7 @@
     {
       "kind": "rule",
       "id": "SEC-002",
-      "hash": "43673699ac5402b96501ccf4eabaaa84f55cefb99726b9897eec16d24cb2285d"
+      "hash": "e2dd7bc0ab20f4bf4242a0111b8b5e8bb4bb7cfb761aea90825d2d54fa6acf6a"
     },
     {
       "kind": "rule",
@@ -718,12 +743,12 @@
     {
       "kind": "rule",
       "id": "SEC-005",
-      "hash": "8ff0d31313bf4bf957c0027bdf882b1e32f9121f40ae6f4a20482f273965a008"
+      "hash": "79c2bd484b50a09c79404ebcba86eb3fa72303e591cbd6c01696a9e1ddd06bff"
     },
     {
       "kind": "rule",
       "id": "SEC-006",
-      "hash": "03bdd270e4914e6e5c436bbc77ecc0b77a78bbf9eb2983b485d635ef5a111e25"
+      "hash": "2d79db3fc8e77a2e2fa9a8bed4f694994be89104c98a4acc291e6df6f468ccf8"
     },
     {
       "kind": "rule",
@@ -733,22 +758,22 @@
     {
       "kind": "rule",
       "id": "SEC-008",
-      "hash": "6de9a8001e402946286fea02a53aa5d36592fa83613987d2c8d0b712ec1e36bc"
+      "hash": "fea45d31c74f398301ec523a509cde54329a809cbf6ce9455acd6cbc5a8b7884"
     },
     {
       "kind": "rule",
       "id": "SEC-009",
-      "hash": "0a7a2e012927ce64c5b1bf76ae30501f35e91bf4182bcc0f6643df83c6b9bb17"
+      "hash": "1897cb6bf7b88c248a41b1454b628cf8d316d3a162b40690bce0a8c43bf43bff"
     },
     {
       "kind": "rule",
       "id": "SEC-010",
-      "hash": "057e3ecf2e5f444da0fa1a37d2696bce79690ae193150a0ea534ec07542be6ff"
+      "hash": "66b39f4eb8a0f334e98e9388e3f9dab27415e726c0862f0b6a4a4dd10e5e81df"
     },
     {
       "kind": "rule",
       "id": "SEC-011",
-      "hash": "537cca64dc9624271583c5f4ee5fe0d980f78ff9312f6ac589de280905f29d55"
+      "hash": "3ae198ddd5fa82a53bcbca648d3a9070b03e3cd5665387e69e50c6bb6d365cb3"
     },
     {
       "kind": "rule",
@@ -758,12 +783,12 @@
     {
       "kind": "rule",
       "id": "SEC-013",
-      "hash": "de03f5d46ff7a4ee0a31c8fc1b9b60435223ba5d1d3f93876df514453e15bee6"
+      "hash": "fa5daef8c52dd4fa6108e52a3b20c6dd6ff94efafcb0dfe4f6ded56d76949d25"
     },
     {
       "kind": "rule",
       "id": "SEC-014",
-      "hash": "ba83f5606c6bc7750f81821ef96169dd4e8621b75200040ea500ef2c24b521b3"
+      "hash": "1f49941077567de1cb6129da1a01d09145ab36c2eedf3539e24e648c52b90a83"
     },
     {
       "kind": "rule",

@@ -1,6 +1,6 @@
 # askul-2025 — アスクル：MFAの例外アカウントから侵入
 
-事例 | Catalog: 0.6.1 | Record SHA-256: dd4e201cf595e3657dda8f4b8b90eadee70252112457fe137712945bea0982ed
+事例 | Catalog: 0.7.0 | Record SHA-256: dd4e201cf595e3657dda8f4b8b90eadee70252112457fe137712945bea0982ed
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

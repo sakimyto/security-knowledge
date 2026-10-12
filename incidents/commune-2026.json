@@ -1,0 +1,148 @@
+{
+  "id": "commune-2026",
+  "organization": "コミューン",
+  "title": {
+    "ja": "Commune：招待リンクと管理者権限の悪用による会員情報漏えい",
+    "en": "Commune: member data leaked through invitation and administrator impersonation"
+  },
+  "summary": {
+    "ja": "提供元はシステムの不備を突いた一般会員・管理者へのなりすましを公表しました。漏えいした会員は約30.7万人の推計で、従業員・デモアカウントも含みます。メンテナンス中の残存経路も悪用されました。",
+    "en": "The provider reported impersonation through system flaws, an estimated 307,000 affected members including staff and demo accounts, and further abuse of a route left available during maintenance."
+  },
+  "occurredAt": "2026-10-05",
+  "disclosedAt": "2026-10-08",
+  "reviewedAt": "2026-10-12",
+  "outcome": "confirmed-breach",
+  "categories": ["implementation"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "非公開コミュニティの招待リンクを不正に取得して登録し、管理者になりすまして閲覧・取得・上書きを行ったと公表しました。",
+        "en": "The provider reported unauthorized invitation use and administrator impersonation for reading, extraction and changes."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§3 原因"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "漏えいした会員は約30.7万人の推計です。同一会員IDの重複と攻撃者のアカウントを除き、従業員・デモアカウントも含みます。",
+        "en": "The estimated 307,000 affected members excludes repeated member IDs and attacker accounts but includes staff and demo accounts."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§2 影響範囲および漏えいした情報"
+    },
+    {
+      "topic": "containment",
+      "text": {
+        "ja": "10月7日にはメンテナンス中に残った通信経路で不正登録・閲覧があり、14時58分に遮断しました。",
+        "en": "On October 7 a remaining maintenance route allowed unauthorized registration and viewing; it was blocked at 14:58 JST."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§1 経緯"
+    },
+    {
+      "topic": "scope-limit",
+      "text": {
+        "ja": "パスワードとダイレクトメッセージの漏えいは確認していません。144人のパスワードが本人の操作によらず変更されました。",
+        "en": "Password and direct-message leakage was not established; 144 members had passwords changed without their action."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§2 影響範囲および漏えいした情報"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-05",
+      "text": {
+        "ja": "不正アクセスが始まったと公表した日。",
+        "en": "Reported start of unauthorized access."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-06",
+      "text": {
+        "ja": "検知し、21時ごろ全コミュニティを停止しました。",
+        "en": "Detected the incident and stopped communities around 21:00 JST."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-08",
+      "text": {
+        "ja": "青森びいきへの影響を公表しました。",
+        "en": "Disclosed the Aomori community incident."
+      },
+      "sourceIds": ["s2"]
+    },
+    {
+      "date": "2026-10-09",
+      "text": {
+        "ja": "サービス全体の影響と原因を公表しました。",
+        "en": "Published the service-wide scope and cause."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "不備を修正し、ログイン署名鍵を更新して不正経路を遮断しました。検証後、10月8日から順次再開しました。",
+        "en": "Fixed flaws, rotated login signing keys, blocked unauthorized routes and began staged reopening after verification."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§4 当社の対応および再発防止策"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "認可とメンテナンス時の遮断を点検する事例です。修正対象の実装や、更新前の具体的な認可条件は非公表です。",
+      "en": "Inspect authorization and containment during maintenance; the exact implementation and prior checks remain undisclosed."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed primary sources do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "製品依存のCVE、招待リンクの取得方法、管理者になりすました詳細は未公表です。約30.7万人は調査で変わる推計です。",
+      "en": "CVE, invitation acquisition and impersonation details remain undisclosed; the estimated member count can change."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "「Commune」「Commune for Work」への不正アクセスによる個人情報漏えいのお知らせ",
+      "url": "https://communeinc.com/ja/news/2026oct09",
+      "publisher": "コミューン",
+      "kind": "vendor",
+      "publishedAt": "2026-10-09",
+      "reviewedAt": "2026-10-12"
+    },
+    {
+      "id": "s2",
+      "title": "青森県観光ファンコミュニティにおける個人情報漏えいの可能性について",
+      "url": "https://commune.co.jp/notice/20261008aomori",
+      "publisher": "コミューン",
+      "kind": "vendor",
+      "publishedAt": "2026-10-08",
+      "reviewedAt": "2026-10-12"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-014"]
+}

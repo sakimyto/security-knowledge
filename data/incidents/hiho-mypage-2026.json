@@ -1,0 +1,124 @@
+{
+  "id": "hiho-mypage-2026",
+  "organization": "ハイホー",
+  "title": {
+    "ja": "ハイホー：電話勧誘などで得た情報によるマイページ不正ログイン",
+    "en": "hi-ho: unauthorized customer login using information obtained through solicitation"
+  },
+  "summary": {
+    "ja": "電話勧誘で聞き出した情報などによるなりすましログインを確認しました。不正ログインは38,509契約で、人数ではありません。電話番号・郵便番号・生年月日によるログイン方式を廃止しました。",
+    "en": "The company confirmed impersonation using solicited information, reported 38,509 affected contracts rather than people, and ended login using phone number, postal code and birth date."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-08",
+  "reviewedAt": "2026-10-12",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "電話でログイン情報を聞き出し、利用者になりすましてログインしました。一部は別の方法で情報を得た可能性があります。",
+        "en": "Third parties obtained login information through calls and impersonated customers; other acquisition paths may exist."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§2 発生した事象"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "不正ログインは38,509件で、同じ利用者の複数契約を別々に数えた契約単位です。",
+        "en": "The 38,509 count represents contracts, counting multiple contracts of one customer separately."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§4 不正ログインの件数"
+    },
+    {
+      "topic": "investigation-limit",
+      "text": {
+        "ja": "システム侵入や脆弱性悪用、二次被害は、発表時点で確認していません。",
+        "en": "System intrusion, vulnerability exploitation and secondary harm were not established at publication."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§7 システムへの侵入および二次被害の状況"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-08",
+      "text": {
+        "ja": "不正ログインと対応を公表しました。",
+        "en": "Disclosed unauthorized logins and responses."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "不審な通信元を遮断し、電話番号・郵便番号・生年月日によるログインを廃止しました。より安全な認証方式への移行を進めています。",
+        "en": "Blocked suspicious sources, removed personal-detail login and began moving to stronger authentication."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§5 本件の対応"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "第三者が知り得る個人情報を認証に使う条件と、MFA・照会ログを点検します。当時のMFA適用状態は未公表です。",
+      "en": "Inspect authentication based on obtainable personal details, MFA and access logs; prior MFA coverage is undisclosed."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed primary sources do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "発生日と検知日、一部の情報取得経路、閲覧された情報の全範囲は未公表です。逮捕報道の人数・契約数はこの集計へ混ぜません。",
+      "en": "Event and detection dates, other acquisition paths and full viewing scope are undisclosed; arrest-report counts are separate."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "お客様情報への第三者によるアクセスが確認された事案に関するご報告",
+      "url": "https://hi-ho.co.jp/%E3%80%90%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E3%81%B8%E3%81%AE%E7%AC%AC%E4%B8%89%E8%80%85%E3%81%AB%E3%82%88%E3%82%8B",
+      "publisher": "ハイホー",
+      "kind": "organization",
+      "publishedAt": "2026-10-08",
+      "reviewedAt": "2026-10-12"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-005",
+    "SEC-009",
+    "SEC-014"
+  ]
+}

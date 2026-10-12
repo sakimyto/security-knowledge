@@ -1,7 +1,7 @@
 {
   "id": "SEC-014",
-  "version": "1.1.0",
-  "updatedAt": "2026-10-09",
+  "version": "1.2.0",
+  "updatedAt": "2026-10-12",
   "title": {
     "ja": "照会APIの認可と取得量の制御を確認する",
     "en": "Inspect query authorization and retrieval limits"
@@ -38,6 +38,10 @@
     {
       "ja": "通常形式のリクエストを繰り返した場合も、利用者・組織ごとの取得量を制限・検知できるか確認する。ページ送りや複数のAPIに分けた取得も試験計画に含める。",
       "en": "Inspect per-user and per-tenant volume limits and detection, including repeated ordinary requests, pagination, and access spread across endpoints."
+    },
+    {
+      "ja": "非公開APIやHTTPメソッドの違いでも認可を維持するか、不正形式の認証トークンを拒否するか、許可されたテスト環境で確認する。招待・権限変更も対象に含める。",
+      "en": "In an authorized test environment, verify authorization across private endpoints and methods, rejection of malformed tokens, invitations and role changes."
     }
   ],
   "remediation": [
@@ -62,11 +66,14 @@
     "2rinkan-api-2026",
     "aflac-japan-2026",
     "benefit-one-tenant-export-2026",
+    "commune-2026",
+    "denmark-cpr-2026",
     "en-midcareer-credential-stuffing-2026",
     "fancrew-credential-stuffing-2026",
     "fines-reservations-2026",
     "gmo-infoq-2026",
     "gpoint-2026",
+    "hiho-mypage-2026",
     "jaea-jrr3-files-2026",
     "kaga-solnet-2026",
     "komatsu-user-directory-exposure-2026",
@@ -89,6 +96,10 @@
     {
       "title": "アフラック生命保険：調査結果と再発防止策",
       "url": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf"
+    },
+    {
+      "title": "JPCERT/CC：直近で相次いでいる国内組織における不正アクセスに関する注意喚起（10月9日更新）",
+      "url": "https://www.jpcert.or.jp/at/2026/at260030.html"
     }
   ],
   "execution": "read-only-by-default",

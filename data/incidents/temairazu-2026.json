@@ -11,7 +11,7 @@
   },
   "occurredAt": null,
   "disclosedAt": "2026-09-28",
-  "reviewedAt": "2026-10-02",
+  "reviewedAt": "2026-10-12",
   "outcome": "confirmed-breach",
   "categories": [
     "unknown"
@@ -28,7 +28,7 @@
       "sourceIds": [
         "s1"
       ],
-      "locator": "2. 調査・対応状況"
+      "locator": "p.2「原因と対応」"
     },
     {
       "topic": "impact",
@@ -40,7 +40,7 @@
       "sourceIds": [
         "s1"
       ],
-      "locator": "1. 経緯 / 2. 調査・対応状況"
+      "locator": "p.1「確認した事象」"
     }
   ],
   "timeline": [
@@ -66,7 +66,7 @@
       "sourceIds": [
         "s1"
       ],
-      "locator": "2. 対応状況 / 3. お願い"
+      "locator": "p.2「原因と対応」「予約者様へのお願い」 / p.3「ご利用施設様へのお願い」"
     }
   ],
   "prevention": {
@@ -95,8 +95,8 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-02",
-      "title": "当社システムへの不正アクセスに関するお知らせ",
+      "reviewedAt": "2026-10-12",
+      "title": "不審なメッセージおよび当社システムへの不正アクセスに関するお詫びとお知らせ",
       "url": "https://www.temairazu.co.jp/pdf/1206/news-update",
       "publisher": "手間いらず",
       "publishedAt": "2026-09-28",

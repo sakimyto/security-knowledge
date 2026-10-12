@@ -1,7 +1,7 @@
 {
   "id": "SEC-010",
-  "version": "1.1.0",
-  "updatedAt": "2026-10-02",
+  "version": "1.1.1",
+  "updatedAt": "2026-10-12",
   "title": {
     "ja": "外部入力とSQLの組み立てを確認する",
     "en": "Inspect external input and SQL construction"
@@ -59,6 +59,7 @@
   ],
   "incidentIds": [
     "anthropic-cyber-evals-2026",
+    "anthropic-unintended-model-actions-2026",
     "gyazo-2026",
     "metabase-2026",
     "moveit-2023"

@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "catalogHash": "0a19d26cb175869ee749bbe6435fb1ebf0e50b1a17b8338b00a19bef1817ece3",
+  "catalogHash": "8f5b5dac2ba0c64cde05f9449050278bca9e32d8b20fe11be571fa1e6ffcffa3",
   "environment": "security-knowledge local proposal; source and generated data only",
-  "environmentRevision": "catalog-source-v0.6.1-20261010",
-  "checkedAt": "2026-10-10T00:00:00Z",
+  "environmentRevision": "catalog-source-v0.7.0-20261012",
+  "checkedAt": "2026-10-12T00:00:00Z",
   "results": [
     {
       "ruleId": "SEC-001",
@@ -17,7 +17,7 @@
     },
     {
       "ruleId": "SEC-002",
-      "ruleHash": "43673699ac5402b96501ccf4eabaaa84f55cefb99726b9897eec16d24cb2285d",
+      "ruleHash": "e2dd7bc0ab20f4bf4242a0111b8b5e8bb4bb7cfb761aea90825d2d54fa6acf6a",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -47,7 +47,7 @@
     },
     {
       "ruleId": "SEC-005",
-      "ruleHash": "8ff0d31313bf4bf957c0027bdf882b1e32f9121f40ae6f4a20482f273965a008",
+      "ruleHash": "79c2bd484b50a09c79404ebcba86eb3fa72303e591cbd6c01696a9e1ddd06bff",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -57,7 +57,7 @@
     },
     {
       "ruleId": "SEC-006",
-      "ruleHash": "03bdd270e4914e6e5c436bbc77ecc0b77a78bbf9eb2983b485d635ef5a111e25",
+      "ruleHash": "2d79db3fc8e77a2e2fa9a8bed4f694994be89104c98a4acc291e6df6f468ccf8",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -77,7 +77,7 @@
     },
     {
       "ruleId": "SEC-008",
-      "ruleHash": "6de9a8001e402946286fea02a53aa5d36592fa83613987d2c8d0b712ec1e36bc",
+      "ruleHash": "fea45d31c74f398301ec523a509cde54329a809cbf6ce9455acd6cbc5a8b7884",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -87,7 +87,7 @@
     },
     {
       "ruleId": "SEC-009",
-      "ruleHash": "0a7a2e012927ce64c5b1bf76ae30501f35e91bf4182bcc0f6643df83c6b9bb17",
+      "ruleHash": "1897cb6bf7b88c248a41b1454b628cf8d316d3a162b40690bce0a8c43bf43bff",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -97,7 +97,7 @@
     },
     {
       "ruleId": "SEC-010",
-      "ruleHash": "057e3ecf2e5f444da0fa1a37d2696bce79690ae193150a0ea534ec07542be6ff",
+      "ruleHash": "66b39f4eb8a0f334e98e9388e3f9dab27415e726c0862f0b6a4a4dd10e5e81df",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -107,7 +107,7 @@
     },
     {
       "ruleId": "SEC-011",
-      "ruleHash": "537cca64dc9624271583c5f4ee5fe0d980f78ff9312f6ac589de280905f29d55",
+      "ruleHash": "3ae198ddd5fa82a53bcbca648d3a9070b03e3cd5665387e69e50c6bb6d365cb3",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -127,7 +127,7 @@
     },
     {
       "ruleId": "SEC-013",
-      "ruleHash": "de03f5d46ff7a4ee0a31c8fc1b9b60435223ba5d1d3f93876df514453e15bee6",
+      "ruleHash": "fa5daef8c52dd4fa6108e52a3b20c6dd6ff94efafcb0dfe4f6ded56d76949d25",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -137,7 +137,7 @@
     },
     {
       "ruleId": "SEC-014",
-      "ruleHash": "ba83f5606c6bc7750f81821ef96169dd4e8621b75200040ea500ef2c24b521b3",
+      "ruleHash": "1f49941077567de1cb6129da1a01d09145ab36c2eedf3539e24e648c52b90a83",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
