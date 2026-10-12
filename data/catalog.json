@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.6.1",
-  "updatedAt": "2026-10-10",
+  "version": "0.7.0",
+  "updatedAt": "2026-10-12",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,8 +10,8 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外136事例と16点検ルールを収録した選定DBです。公表日が2025-10-10〜2026-10-10の120事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。 6事例に編集者の原因・対策仮説を別項目で収録しています。",
-    "en": "A curated database of 136 primary-source incident records and 16 inspection rules: 120 disclosed during 2025-10-10–2026-10-10, 11 outside that period, and 5 with unknown disclosure dates. A separate review ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records include separate editorial cause and mitigation hypotheses."
+    "ja": "一次資料を確認した国内外141事例と16点検ルールを収録した選定DBです。公表日が2025-10-12〜2026-10-12の125事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
+    "en": "A curated database of 141 primary-source incident records and 16 inspection rules: 125 disclosed during 2025-10-12–2026-10-12, 11 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
   },
   "incidents": [
     {
@@ -606,6 +606,118 @@
       ]
     },
     {
+      "id": "anthropic-unintended-model-actions-2026",
+      "organization": "Anthropic（評価・内部利用での実サイト操作）",
+      "title": {
+        "ja": "Anthropic：評価中の実サーバーでの意図しない命令実行",
+        "en": "Anthropic: unintended real-server command execution during evaluations"
+      },
+      "summary": {
+        "ja": "評価中のモデルが大学の公開ツールの不備を突き、実サーバーで計算を実行したと公表しました。犯罪者によるAI利用とは異なる、評価・内部利用の逸脱に関する報告です。被害組織名は非公表です。",
+        "en": "Anthropic reported a model exploiting a university tool during evaluation to run a calculation on a real server. This concerns evaluation and internal-use overreach, not criminal AI attribution."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-10-09",
+      "reviewedAt": "2026-10-12",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "implementation"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "モデルはサーバーからスクリプトのコードを取得し、その不備を利用してサーバー上で計算を実行しました。",
+            "en": "A model retrieved script code and exploited its flaw to run a server-side calculation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Exploiting a basic flaw in software to run commands on a server"
+        },
+        {
+          "topic": "ai",
+          "text": {
+            "ja": "Anthropicは評価・内部利用のモデルによる実サイト操作を確認し、実世界への影響は小さかったと報告しました。",
+            "en": "Anthropic observed evaluation/internal-use model actions on real sites and reported minimal real-world impact."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "冒頭 / Overview of behaviors"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-09",
+          "text": {
+            "ja": "意図しない実サイト操作と対策を公表しました。",
+            "en": "Published unintended real-site actions and responses."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "内部評価のインターネット接続を停止する範囲を広げ、隔離・監視・ツール制御を強化しました。",
+            "en": "Expanded internal-evaluation internet restrictions and strengthened containment, monitoring and tool controls."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "冒頭 / Remediation"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "実行環境の接続先・権限と、サービス側の入力処理を点検します。具体的な製品・CVEと公開前の修正有無は分かりません。",
+          "en": "Inspect agent permissions, destinations and server input handling; product, CVE and prior patch availability are undisclosed."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "confirmed",
+        "assessment": {
+          "ja": "評価・内部利用でのモデルの実サイト操作が公表されています。犯罪者による攻撃とは分けて集計します。",
+          "en": "Confirmed model actions in evaluations/internal use; separate from observed criminal attacks."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "被害組織と発生日は非公表です。複数の試行をまとめた報告を1記録として扱い、事故総数や犯罪者のAI利用率へ換算しません。",
+          "en": "Victims and dates are undisclosed; this report-level record does not yield incident totals or criminal AI-use rates."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Investigating unintended model actions in our evaluations and internal use",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+          "publisher": "Anthropic",
+          "kind": "organization",
+          "publishedAt": "2026-10-09",
+          "reviewedAt": "2026-10-12"
+        }
+      ],
+      "ruleIds": [
+        "SEC-006",
+        "SEC-009",
+        "SEC-010",
+        "SEC-011"
+      ]
+    },
+    {
       "id": "applynow-bi-2026",
       "organization": "ApplyNow（吉野家・橿原市・富士市）",
       "title": {
@@ -613,12 +725,12 @@
         "en": "ApplyNow（吉野家・橿原市・富士市）: unauthorized access and impact"
       },
       "summary": {
-        "ja": "委託先ApplyNowのデータ分析ツールの脆弱性を悪用されました。契約終了後も応募者情報が残っていました。 吉野家応募者4,998件、はなまる応募者368件、採用担当者418アカウントが対象です。件数と人数は一致しません。 委託していたApplyNowのシステムに不正アクセスがありました。 橿原市の2020年度応募者313件が対象の可能性があります。件数は調査中で未確定です。画像・動画は別領域で対象外です。 ApplyNowの不正アクセスにより、富士市の応募者情報が流出しました。 続報で815件の漏洩を確認しました。初報の約800件の可能性から更新されました。動画は対象外です。",
-        "en": "A vulnerability in outsourced ApplyNow analytics was exploited; applicant data remained after contract termination. Scope includes 4,998 Yoshinoya applications, 368 Hanamaru applications, and 418 recruiter accounts; records are not distinct-person counts. The previously contracted ApplyNow platform was accessed without authorization. 313 Kashihara application records may be affected; the count remains provisional. Separately stored images and videos were excluded. The ApplyNow intrusion leaked Fuji City applicants’ information. The follow-up confirmed 815 leaked records, updating the provisional estimate of about 800; videos were excluded."
+        "ja": "分析ツールへの不正アクセスについて、10月9日の続報でデータ漏えいを確認しました。対象は約39万人（うち電子雇用契約の利用者約3万人）の暫定集計です。顧客別の応募件数・担当者アカウント数と合算しません。製品名・CVE・攻撃前の修正提供時期は未公表です。",
+        "en": "An October 9 follow-up confirmed leakage affecting provisionally about 390,000 people, including about 30,000 electronic-contract users. Customer application records and recruiter accounts must not be added to this count. Product, CVE and prior patch availability remain undisclosed."
       },
       "occurredAt": "2026-08-09",
       "disclosedAt": "2026-09-09",
-      "reviewedAt": "2026-10-09",
+      "reviewedAt": "2026-10-12",
       "outcome": "confirmed-breach",
       "categories": [
         "supply-chain",
@@ -637,7 +749,7 @@
             "s2",
             "s1"
           ],
-          "locator": "p.1 §1-2 / p.2 §4"
+          "locator": "ApplyNow §1 本件の概要 / 吉野家 p.1 §1・2・p.2 §4"
         },
         {
           "topic": "impact",
@@ -698,6 +810,18 @@
             "s4"
           ],
           "locator": "10月7日続報 流出した個人情報 / 今後の対応"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "10月9日の続報で漏えいを確認し、対象を約39万人、うちApplyNow Sign利用者を約3万人と公表しました。外部調査後に件数を確定する予定です。",
+            "en": "The October 9 follow-up confirmed leakage affecting provisionally about 390,000 people, including about 30,000 ApplyNow Sign users; final counts await external investigation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "【2026.10.9 更新】■ データの漏えいの確認について / ■ 漏えいした個人データについて"
         }
       ],
       "timeline": [
@@ -713,13 +837,33 @@
           ]
         },
         {
+          "date": "2026-09-07",
+          "text": {
+            "ja": "不正アクセスを検知し、同日遮断しました。",
+            "en": "Detected and blocked unauthorized access that day."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-09-09",
+          "text": {
+            "ja": "提供元が初報を公表しました。",
+            "en": "Provider published the initial notice."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
           "date": "2026-09-11",
           "text": {
             "ja": "公表資料で確認できる開示日。",
             "en": "Disclosure date established by the reviewed notice."
           },
           "sourceIds": [
-            "s4"
+            "s5"
           ]
         },
         {
@@ -741,6 +885,16 @@
           "sourceIds": [
             "s2"
           ]
+        },
+        {
+          "date": "2026-10-09",
+          "text": {
+            "ja": "漏えい確認と暫定的な全体人数を追記しました。",
+            "en": "Added confirmation of leakage and provisional overall scope."
+          },
+          "sourceIds": [
+            "s1"
+          ]
         }
       ],
       "reportedActions": [
@@ -755,7 +909,7 @@
             "s2",
             "s1"
           ],
-          "locator": "p.1 §1-2 / p.2 §4"
+          "locator": "ApplyNow §4 経緯・§5 現在の対応状況および対策 / 吉野家 p.2 §4"
         },
         {
           "topic": "response",
@@ -780,6 +934,18 @@
             "s4"
           ],
           "locator": "10月7日続報 流出した個人情報 / 今後の対応"
+        },
+        {
+          "topic": "response",
+          "text": {
+            "ja": "9月11日に企業ユーザーの管理画面パスワードを強制リセットし、不正アクセスに使われたアカウント等の無効化とデータベース接続情報の更新を実施しました。",
+            "en": "Forced enterprise administrator-password resets on September 11, disabled abused accounts and rotated database connection information."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "【2026.10.9 更新】■ 経緯 / ■ 現在の対応状況および対策"
         }
       ],
       "prevention": {
@@ -801,54 +967,59 @@
       },
       "unknowns": [
         {
-          "ja": "製品名、CVE、攻撃前の修正提供時期は未公表です。他のBI事案と同じ脆弱性とは断定できません。",
-          "en": "Product, CVE, and prior patch timing are undisclosed; similarity to other BI incidents does not establish a shared vulnerability."
+          "ja": "分析ツールの製品名・CVE・攻撃前の修正提供時期は未公表です。他のBI事案と同じ脆弱性とは断定できません。",
+          "en": "The analytics product, CVE and prior patch availability are undisclosed; a shared flaw with other BI incidents is not established."
         },
         {
-          "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
-          "en": "The notice does not establish all entry, timing and extraction details; unresolved claims remain unknown."
-        },
-        {
-          "ja": "具体的な侵入方法、攻撃開始日、取得の確定範囲は未公表です。",
-          "en": "The October follow-up’s 815 affected people replaces the initial estimate; it is not added to that estimate."
+          "ja": "約39万人は暫定集計です。顧客別の応募件数・担当者アカウント数と合算しません。富士市の815は応募情報の件数で、人数ではありません。",
+          "en": "About 390,000 people is provisional and must not be added to customer application or account counts; Fuji’s 815 counts application records, not people."
         }
       ],
       "sources": [
         {
           "id": "s1",
-          "title": "ApplyNow：事故に関する公表資料",
+          "title": "当社サービスをご利用いただいているお客様への重要なお知らせとお詫び（10月9日更新）",
           "url": "https://applynow.co.jp/news/20260909",
           "publisher": "ApplyNow",
           "kind": "vendor",
           "publishedAt": "2026-09-09",
-          "reviewedAt": "2026-10-09"
+          "reviewedAt": "2026-10-12"
         },
         {
           "id": "s2",
-          "title": "吉野家ホールディングス・吉野家・はなまる：事故に関する公表資料",
+          "title": "ApplyNow採用管理プラットフォームへの不正アクセスによる個人情報漏えいに関するお知らせとお詫び",
           "url": "https://www.yoshinoya.com/wp-content/uploads/2026/09/30185541/news_2026093004.pdf",
           "publisher": "吉野家ホールディングス・吉野家・はなまる",
           "kind": "organization",
-          "publishedAt": null,
-          "reviewedAt": "2026-10-09"
+          "publishedAt": "2026-09-30",
+          "reviewedAt": "2026-10-12"
         },
         {
           "id": "s3",
-          "title": "ApplyNow（吉野家・橿原市・富士市）：事故に関する公表資料",
+          "title": "職員採用試験の動画選考に係る個人情報の漏洩について",
           "url": "https://www.city.kashihara.nara.jp/material/files/group/1/Press_080918_dougasenkou.pdf",
-          "publisher": "ApplyNow（吉野家・橿原市・富士市）",
+          "publisher": "橿原市",
           "kind": "government",
-          "publishedAt": null,
-          "reviewedAt": "2026-10-09"
+          "publishedAt": "2026-09-18",
+          "reviewedAt": "2026-10-12"
         },
         {
           "id": "s4",
-          "title": "ApplyNow（吉野家・橿原市・富士市）：事故に関する公表資料",
+          "title": "本市職員採用試験を受験された方の個人情報の不正流出について【続報】",
           "url": "https://www.city.fuji.shizuoka.jp/1005250000/p007783.html",
-          "publisher": "ApplyNow（吉野家・橿原市・富士市）",
+          "publisher": "富士市",
           "kind": "government",
-          "publishedAt": null,
-          "reviewedAt": "2026-10-09"
+          "publishedAt": "2026-10-07",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s5",
+          "title": "本市職員採用試験を受験された方の個人情報の不正流出の可能性について【お知らせとお詫び】",
+          "url": "https://www.city.fuji.shizuoka.jp/1005250000/p007780.html",
+          "publisher": "富士市",
+          "kind": "government",
+          "publishedAt": "2026-09-11",
+          "reviewedAt": "2026-10-12"
         }
       ],
       "ruleIds": [
@@ -2728,6 +2899,181 @@
       ]
     },
     {
+      "id": "commune-2026",
+      "organization": "コミューン",
+      "title": {
+        "ja": "Commune：招待リンクと管理者権限の悪用による会員情報漏えい",
+        "en": "Commune: member data leaked through invitation and administrator impersonation"
+      },
+      "summary": {
+        "ja": "提供元はシステムの不備を突いた一般会員・管理者へのなりすましを公表しました。漏えいした会員は約30.7万人の推計で、従業員・デモアカウントも含みます。メンテナンス中の残存経路も悪用されました。",
+        "en": "The provider reported impersonation through system flaws, an estimated 307,000 affected members including staff and demo accounts, and further abuse of a route left available during maintenance."
+      },
+      "occurredAt": "2026-10-05",
+      "disclosedAt": "2026-10-08",
+      "reviewedAt": "2026-10-12",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "implementation"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "非公開コミュニティの招待リンクを不正に取得して登録し、管理者になりすまして閲覧・取得・上書きを行ったと公表しました。",
+            "en": "The provider reported unauthorized invitation use and administrator impersonation for reading, extraction and changes."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "§3 原因"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "漏えいした会員は約30.7万人の推計です。同一会員IDの重複と攻撃者のアカウントを除き、従業員・デモアカウントも含みます。",
+            "en": "The estimated 307,000 affected members excludes repeated member IDs and attacker accounts but includes staff and demo accounts."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "§2 影響範囲および漏えいした情報"
+        },
+        {
+          "topic": "containment",
+          "text": {
+            "ja": "10月7日にはメンテナンス中に残った通信経路で不正登録・閲覧があり、14時58分に遮断しました。",
+            "en": "On October 7 a remaining maintenance route allowed unauthorized registration and viewing; it was blocked at 14:58 JST."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "§1 経緯"
+        },
+        {
+          "topic": "scope-limit",
+          "text": {
+            "ja": "パスワードとダイレクトメッセージの漏えいは確認していません。144人のパスワードが本人の操作によらず変更されました。",
+            "en": "Password and direct-message leakage was not established; 144 members had passwords changed without their action."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "§2 影響範囲および漏えいした情報"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-05",
+          "text": {
+            "ja": "不正アクセスが始まったと公表した日。",
+            "en": "Reported start of unauthorized access."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-06",
+          "text": {
+            "ja": "検知し、21時ごろ全コミュニティを停止しました。",
+            "en": "Detected the incident and stopped communities around 21:00 JST."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-08",
+          "text": {
+            "ja": "青森びいきへの影響を公表しました。",
+            "en": "Disclosed the Aomori community incident."
+          },
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "date": "2026-10-09",
+          "text": {
+            "ja": "サービス全体の影響と原因を公表しました。",
+            "en": "Published the service-wide scope and cause."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "不備を修正し、ログイン署名鍵を更新して不正経路を遮断しました。検証後、10月8日から順次再開しました。",
+            "en": "Fixed flaws, rotated login signing keys, blocked unauthorized routes and began staged reopening after verification."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "§4 当社の対応および再発防止策"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "認可とメンテナンス時の遮断を点検する事例です。修正対象の実装や、更新前の具体的な認可条件は非公表です。",
+          "en": "Inspect authorization and containment during maintenance; the exact implementation and prior checks remain undisclosed."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "製品依存のCVE、招待リンクの取得方法、管理者になりすました詳細は未公表です。約30.7万人は調査で変わる推計です。",
+          "en": "CVE, invitation acquisition and impersonation details remain undisclosed; the estimated member count can change."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "「Commune」「Commune for Work」への不正アクセスによる個人情報漏えいのお知らせ",
+          "url": "https://communeinc.com/ja/news/2026oct09",
+          "publisher": "コミューン",
+          "kind": "vendor",
+          "publishedAt": "2026-10-09",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s2",
+          "title": "青森県観光ファンコミュニティにおける個人情報漏えいの可能性について",
+          "url": "https://commune.co.jp/notice/20261008aomori",
+          "publisher": "コミューン",
+          "kind": "vendor",
+          "publishedAt": "2026-10-08",
+          "reviewedAt": "2026-10-12"
+        }
+      ],
+      "ruleIds": [
+        "SEC-005",
+        "SEC-008",
+        "SEC-009",
+        "SEC-014"
+      ]
+    },
+    {
       "id": "conoha-wing-2026",
       "organization": "ConoHa WING",
       "title": {
@@ -3534,6 +3880,194 @@
         "SEC-009",
         "SEC-012",
         "SEC-013"
+      ]
+    },
+    {
+      "id": "denmark-cpr-2026",
+      "organization": "デンマーク中央個人登録簿（CPR）",
+      "title": {
+        "ja": "デンマークCPR：企業の正規照会権限を悪用した情報取得",
+        "en": "Denmark CPR: unauthorized retrieval through legitimate company access"
+      },
+      "summary": {
+        "ja": "民間企業の正規照会権限が悪用され、約880万人の登録情報が取得されました。死亡者・国外転出者も含む登録人数です。権限を得た具体的な方法は調査中です。",
+        "en": "Legitimate company lookup access was abused to retrieve data on about 8.8 million registered people, including deceased and emigrated people; the access-acquisition mechanism remains under investigation."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-10-05",
+      "reviewedAt": "2026-10-12",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "民間企業に認めた正規のCPR照会権限を、第三者が不正に使ったと公表しました。",
+            "en": "Authorities reported third-party abuse of a private company’s legitimate CPR lookup access."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "事故概要 / Fakta"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "約880万人の氏名・住所・CPR番号などが対象です。死亡者・国外転出者も含み、現住人口ではありません。氏名・住所の保護対象者は当該情報の取得範囲から除かれます。",
+            "en": "About 8.8 million registered people include deceased and emigrated people; protected names and addresses were excluded."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "事故概要 / Fakta"
+        },
+        {
+          "topic": "observation",
+          "text": {
+            "ja": "規制当局は10月4日に報告を受け、大量の自動照会による有効なCPR番号の探索を調査しています。",
+            "en": "The regulator received an October 4 notification and is investigating bulk automated searches for valid CPR numbers."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3"
+          ],
+          "locator": "通知と調査状況"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-02",
+          "text": {
+            "ja": "9月中の不規則な挙動を認識したと公表しました。",
+            "en": "Authorities reported recognizing irregular September activity."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-04",
+          "text": {
+            "ja": "規制当局へ報告しました。",
+            "en": "Notified the data-protection regulator."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-05",
+          "text": {
+            "ja": "政府とCPR管理者が事故を公表しました。",
+            "en": "Government and CPR administration disclosed the incident."
+          },
+          "sourceIds": [
+            "s1",
+            "s2"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "対象企業のアクセスを停止し、調査とCPRの安全性点検を開始しました。",
+            "en": "Stopped the company’s access and began investigation and security review."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "事故概要 / Fakta"
+        },
+        {
+          "topic": "response",
+          "text": {
+            "ja": "移民関連の窓口では、電話の問い合わせに追加の本人確認を導入しました。",
+            "en": "Immigration service desks added identity checks for telephone inquiries."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s4"
+          ],
+          "locator": "Ekstra kontrol ved telefoniske henvendelser"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "照会権限・取得量・ログと、漏えい後の本人確認を点検します。権限を悪用できた経路や当時の制御は未公表で、回避可能性は判断できません。",
+          "en": "Inspect lookup privileges, retrieval limits, logs and identity checks; undisclosed entry and prior controls prevent an avoidability assessment."
+        },
+        "sourceIds": [
+          "s1",
+          "s3"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "資格情報の窃取やソフトウェアの脆弱性悪用を、一次資料だけで確定できません。発生日と最終的な被害範囲は調査中です。",
+          "en": "Credential theft or software exploitation is not established; occurrence timing and final scope remain under investigation."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Omfattende uautoriseret adgang til borgeres CPR-oplysninger",
+          "url": "https://fudm.dk/aktuelt/pressemeddelelser/2026/oktober/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger/",
+          "publisher": "デンマーク研究・教育・デジタル化省",
+          "kind": "government",
+          "publishedAt": "2026-10-05",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s2",
+          "title": "Omfattende uautoriseret adgang til borgeres CPR-oplysninger",
+          "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger",
+          "publisher": "CPR管理者",
+          "kind": "government",
+          "publishedAt": "2026-10-05",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s3",
+          "title": "Datatilsynet er opmærksom på sag om opslag i CPR",
+          "url": "https://www.datatilsynet.dk/presse-og-nyheder/nyhedsarkiv/2026/okt/datatilsynet-er-opmaerksom-paa-sag-om-opslag-i-cpr",
+          "publisher": "Datatilsynet",
+          "kind": "government",
+          "publishedAt": "2026-10-05",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s4",
+          "title": "Uvedkommende har fået adgang til borgeres CPR-oplysninger",
+          "url": "https://nyidanmark.dk/da/Nyheder/2026/10/Uvedkommende-har-faaet-adgang-til-borgeres-CPR-oplysninger",
+          "publisher": "Udlændingestyrelsen / SIRI",
+          "kind": "government",
+          "publishedAt": "2026-10-05",
+          "reviewedAt": "2026-10-12"
+        }
+      ],
+      "ruleIds": [
+        "SEC-005",
+        "SEC-008",
+        "SEC-009",
+        "SEC-014"
       ]
     },
     {
@@ -6215,6 +6749,130 @@
       ]
     },
     {
+      "id": "hiho-mypage-2026",
+      "organization": "ハイホー",
+      "title": {
+        "ja": "ハイホー：電話勧誘などで得た情報によるマイページ不正ログイン",
+        "en": "hi-ho: unauthorized customer login using information obtained through solicitation"
+      },
+      "summary": {
+        "ja": "電話勧誘で聞き出した情報などによるなりすましログインを確認しました。不正ログインは38,509契約で、人数ではありません。電話番号・郵便番号・生年月日によるログイン方式を廃止しました。",
+        "en": "The company confirmed impersonation using solicited information, reported 38,509 affected contracts rather than people, and ended login using phone number, postal code and birth date."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-10-08",
+      "reviewedAt": "2026-10-12",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "credentials"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "電話でログイン情報を聞き出し、利用者になりすましてログインしました。一部は別の方法で情報を得た可能性があります。",
+            "en": "Third parties obtained login information through calls and impersonated customers; other acquisition paths may exist."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "§2 発生した事象"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "不正ログインは38,509件で、同じ利用者の複数契約を別々に数えた契約単位です。",
+            "en": "The 38,509 count represents contracts, counting multiple contracts of one customer separately."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "§4 不正ログインの件数"
+        },
+        {
+          "topic": "investigation-limit",
+          "text": {
+            "ja": "システム侵入や脆弱性悪用、二次被害は、発表時点で確認していません。",
+            "en": "System intrusion, vulnerability exploitation and secondary harm were not established at publication."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "§7 システムへの侵入および二次被害の状況"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-08",
+          "text": {
+            "ja": "不正ログインと対応を公表しました。",
+            "en": "Disclosed unauthorized logins and responses."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "不審な通信元を遮断し、電話番号・郵便番号・生年月日によるログインを廃止しました。より安全な認証方式への移行を進めています。",
+            "en": "Blocked suspicious sources, removed personal-detail login and began moving to stronger authentication."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "§5 本件の対応"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "第三者が知り得る個人情報を認証に使う条件と、MFA・照会ログを点検します。当時のMFA適用状態は未公表です。",
+          "en": "Inspect authentication based on obtainable personal details, MFA and access logs; prior MFA coverage is undisclosed."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "発生日と検知日、一部の情報取得経路、閲覧された情報の全範囲は未公表です。逮捕報道の人数・契約数はこの集計へ混ぜません。",
+          "en": "Event and detection dates, other acquisition paths and full viewing scope are undisclosed; arrest-report counts are separate."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "お客様情報への第三者によるアクセスが確認された事案に関するご報告",
+          "url": "https://hi-ho.co.jp/%E3%80%90%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E3%81%B8%E3%81%AE%E7%AC%AC%E4%B8%89%E8%80%85%E3%81%AB%E3%82%88%E3%82%8B",
+          "publisher": "ハイホー",
+          "kind": "organization",
+          "publishedAt": "2026-10-08",
+          "reviewedAt": "2026-10-12"
+        }
+      ],
+      "ruleIds": [
+        "SEC-002",
+        "SEC-005",
+        "SEC-009",
+        "SEC-014"
+      ]
+    },
+    {
       "id": "his-thailand-2025",
       "organization": "H.I.S. TOURS CO., LTD.（HISタイ現地法人）",
       "title": {
@@ -6457,6 +7115,180 @@
         "SEC-005",
         "SEC-009",
         "SEC-012"
+      ]
+    },
+    {
+      "id": "idcf-ransomware-2026",
+      "organization": "IDCフロンティア",
+      "title": {
+        "ja": "IDCFクラウド：ランサムウェアによる停止とデータ復元への影響",
+        "en": "IDCF Cloud: ransomware outage and data-recovery impact"
+      },
+      "summary": {
+        "ja": "10月7日にランサムウェア攻撃による障害が発生しました。影響対象は495の企業・自治体です。一部ゾーンのデータ復元は顧客が保持するバックアップからのみ可能との見通しを公表しました。侵入経路は調査中です。",
+        "en": "An October 7 ransomware outage affected 495 organizations. The provider expected recovery in affected zones to depend on customers’ own backups; entry remained under investigation."
+      },
+      "occurredAt": "2026-10-07",
+      "disclosedAt": "2026-10-07",
+      "reviewedAt": "2026-10-12",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "提供元は第三者のランサムウェア攻撃を確認しました。侵入経路の詳細は調査中です。",
+            "en": "The provider confirmed ransomware by a third party; the entry path remains under investigation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2",
+            "s3"
+          ],
+          "locator": "第2報 ■原因 / 第3報 ■原因"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "対象は東日本リージョン1の一部で、495の企業・自治体に仮想サーバーの停止・再起動不可が発生しました。",
+            "en": "Virtual-server outages and restart failures affected 495 organizations in part of East Japan Region 1."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3"
+          ],
+          "locator": "■対象 / ■発生事象 / ■影響範囲"
+        },
+        {
+          "topic": "recovery",
+          "text": {
+            "ja": "tesla・henry・pascal・jouleゾーンのデータは取り出し・復元が困難な見通しで、顧客自身のバックアップからのみ復元可能との見解です。",
+            "en": "Recovery in tesla, henry, pascal and joule zones was expected to require customers’ own backups."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3"
+          ],
+          "locator": "■現在の調査状況"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-07",
+          "text": {
+            "ja": "3時40分ごろ障害が発生し、初報・第2報を公表しました。",
+            "en": "Outage began around 03:40 JST; initial and second notices published."
+          },
+          "sourceIds": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
+          "date": "2026-10-08",
+          "text": {
+            "ja": "復元の見通しと対象ゾーンを公表しました。",
+            "en": "Published affected zones and recovery outlook."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-09",
+          "text": {
+            "ja": "緊急対策本部と調査・復旧の体制を公表しました。",
+            "en": "Published incident-response and recovery organization."
+          },
+          "sourceIds": [
+            "s4"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "ネットワークと管理コンソールを遮断し、専門企業と調査を続けています。バックアップ手順と別環境への移行を案内しました。",
+            "en": "Isolated networks and consoles, engaged specialists and provided backup and migration guidance."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3",
+            "s4"
+          ],
+          "locator": "第3報 ■現時点の対応状況 / 第4報 ＜お客さま対応について＞"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "侵入経路や当時の権限制御は不明です。関連ルールで横展開の制限と、障害領域から独立したバックアップの復元証拠を点検します。",
+          "en": "Entry and prior privilege controls are unknown; inspect lateral-access limits and recovery evidence for backups independent of affected infrastructure."
+        },
+        "sourceIds": [
+          "s3"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "495は企業・自治体数で、漏えい人数ではありません。情報取得の確定範囲、CVE、復旧完了時期は確認した資料で未確定です。他リージョンの管理画面停止は安全確認のための措置です。",
+          "en": "495 counts organizations, not leaked people. Extraction scope, CVE and recovery completion remain unresolved; other-console suspension was precautionary."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "当社サービスの一部システムに対する不正アクセスについて",
+          "url": "https://www.idcf.jp/news/topics/20261007001",
+          "publisher": "IDCフロンティア",
+          "kind": "vendor",
+          "publishedAt": "2026-10-07",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s2",
+          "title": "【第2報】当社サービスの一部システムに対する不正アクセスについて",
+          "url": "https://www.idcf.jp/news/topics/20261007002",
+          "publisher": "IDCフロンティア",
+          "kind": "vendor",
+          "publishedAt": "2026-10-07",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s3",
+          "title": "【第3報】当社サービスの一部システムへの不正アクセスによる障害について",
+          "url": "https://www.idcf.jp/news/topics/20261008001",
+          "publisher": "IDCフロンティア",
+          "kind": "vendor",
+          "publishedAt": "2026-10-08",
+          "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s4",
+          "title": "【第4報】不正アクセスによる障害への対応体制について",
+          "url": "https://www.idcf.jp/news/topics/20261009001",
+          "publisher": "IDCフロンティア",
+          "kind": "vendor",
+          "publishedAt": "2026-10-09",
+          "reviewedAt": "2026-10-12"
+        }
+      ],
+      "ruleIds": [
+        "SEC-006",
+        "SEC-008",
+        "SEC-009",
+        "SEC-013"
       ]
     },
     {
@@ -14982,7 +15814,7 @@
       },
       "occurredAt": null,
       "disclosedAt": "2026-09-28",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-12",
       "outcome": "confirmed-breach",
       "categories": [
         "unknown"
@@ -14999,7 +15831,7 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "2. 調査・対応状況"
+          "locator": "p.2「原因と対応」"
         },
         {
           "topic": "impact",
@@ -15011,7 +15843,7 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "1. 経緯 / 2. 調査・対応状況"
+          "locator": "p.1「確認した事象」"
         }
       ],
       "timeline": [
@@ -15037,7 +15869,7 @@
           "sourceIds": [
             "s1"
           ],
-          "locator": "2. 対応状況 / 3. お願い"
+          "locator": "p.2「原因と対応」「予約者様へのお願い」 / p.3「ご利用施設様へのお願い」"
         }
       ],
       "prevention": {
@@ -15066,8 +15898,8 @@
       "sources": [
         {
           "id": "s1",
-          "reviewedAt": "2026-10-02",
-          "title": "当社システムへの不正アクセスに関するお知らせ",
+          "reviewedAt": "2026-10-12",
+          "title": "不審なメッセージおよび当社システムへの不正アクセスに関するお詫びとお知らせ",
           "url": "https://www.temairazu.co.jp/pdf/1206/news-update",
           "publisher": "手間いらず",
           "publishedAt": "2026-09-28",
@@ -17314,8 +18146,8 @@
     },
     {
       "id": "SEC-002",
-      "version": "1.1.0",
-      "updatedAt": "2026-10-09",
+      "version": "1.1.1",
+      "updatedAt": "2026-10-12",
       "title": {
         "ja": "MFAの方式と適用漏れを確認する",
         "en": "Inspect MFA methods and coverage"
@@ -17383,6 +18215,7 @@
         "forticloud-sso-2026",
         "fuso-cloud-storage-2026",
         "gainsight-oauth-2025",
+        "hiho-mypage-2026",
         "ichimasa-mail-2026",
         "ieej-mail-2026",
         "jogmec-directory-2026",
@@ -17589,8 +18422,8 @@
     },
     {
       "id": "SEC-005",
-      "version": "1.1.0",
-      "updatedAt": "2026-10-09",
+      "version": "1.1.1",
+      "updatedAt": "2026-10-12",
       "title": {
         "ja": "更新対象の資格情報と旧鍵の失効を照合する",
         "en": "Reconcile credential inventory and revocation"
@@ -17671,8 +18504,10 @@
         "cloudflare-thanksgiving-2023",
         "cmic-ra-connect-2026",
         "codecov-2021",
+        "commune-2026",
         "coop-yamaguchi-2026",
         "corona-cloud-2026",
+        "denmark-cpr-2026",
         "digital-agency-gss-2026",
         "en-midcareer-credential-stuffing-2026",
         "estore-shopserve-2026",
@@ -17683,6 +18518,7 @@
         "gainsight-oauth-2025",
         "gmo-infoq-2026",
         "gyazo-2026",
+        "hiho-mypage-2026",
         "ichimasa-mail-2026",
         "ieej-mail-2026",
         "inkrevolution-payment-2025",
@@ -17736,8 +18572,8 @@
     },
     {
       "id": "SEC-006",
-      "version": "1.1.0",
-      "updatedAt": "2026-10-09",
+      "version": "1.1.1",
+      "updatedAt": "2026-10-12",
       "title": {
         "ja": "稼働環境の公開範囲を確認する",
         "en": "Inspect deployed exposure boundaries"
@@ -17796,6 +18632,7 @@
       ],
       "incidentIds": [
         "anthropic-cyber-evals-2026",
+        "anthropic-unintended-model-actions-2026",
         "asahi-pharma-digital-2026",
         "awabank-test-environment-2026",
         "campfire-2026",
@@ -17812,6 +18649,7 @@
         "fuso-cloud-storage-2026",
         "gyazo-2026",
         "his-thailand-2025",
+        "idcf-ransomware-2026",
         "istyle-transfer-exposure-2026",
         "jaea-jrr3-files-2026",
         "kamogawa-form-exposure-2026",
@@ -17929,8 +18767,8 @@
     },
     {
       "id": "SEC-008",
-      "version": "1.1.0",
-      "updatedAt": "2026-10-09",
+      "version": "1.1.1",
+      "updatedAt": "2026-10-12",
       "title": {
         "ja": "侵害後に広がる管理権限を確認する",
         "en": "Inspect privileges enabling lateral access"
@@ -18005,6 +18843,7 @@
         "circleci-2023",
         "cloudflare-thanksgiving-2023",
         "cmic-ra-connect-2026",
+        "commune-2026",
         "conoha-wing-2026",
         "coop-yamaguchi-2026",
         "corona-cloud-2026",
@@ -18012,6 +18851,7 @@
         "daiichi-life-hr-2026",
         "daiki-suisan-2026",
         "dandm-vpn-ransomware-2026",
+        "denmark-cpr-2026",
         "digital-agency-gss-2026",
         "discord-support-vendor-2025",
         "epark-peakmanager-2026",
@@ -18030,6 +18870,7 @@
         "gpoint-2026",
         "gyazo-2026",
         "his-thailand-2025",
+        "idcf-ransomware-2026",
         "inkrevolution-payment-2025",
         "innovation-github-2026",
         "jaea-jrr3-files-2026",
@@ -18093,8 +18934,8 @@
     },
     {
       "id": "SEC-009",
-      "version": "1.1.0",
-      "updatedAt": "2026-10-09",
+      "version": "1.2.0",
+      "updatedAt": "2026-10-12",
       "title": {
         "ja": "取得・管理操作のログが揃っているか確認する",
         "en": "Inspect coverage of access and administration logs"
@@ -18131,6 +18972,10 @@
         {
           "ja": "大量取得や想定外の管理操作に通知が届くか確認し、秘密や個人情報はログへ出さない。",
           "en": "Verify alerts for bulk access and unexpected administration without logging secrets or personal data."
+        },
+        {
+          "ja": "APIの権限変更・アカウント作成と、メンテナンス中の残存経路への操作を追跡できるか確認する。IPアドレスやUser-Agentだけで侵害を確定しない。",
+          "en": "Verify audit coverage for API role/account changes and remaining maintenance routes; IP addresses or User-Agent alone do not establish compromise."
         }
       ],
       "remediation": [
@@ -18157,6 +19002,7 @@
         "ainokaze-reservations-2026",
         "anthropic-claude-code-abuse-2025",
         "anthropic-cyber-evals-2026",
+        "anthropic-unintended-model-actions-2026",
         "applynow-bi-2026",
         "asahi-pharma-digital-2026",
         "askul-2025",
@@ -18169,6 +19015,7 @@
         "chubu-business-credentials-2026",
         "cloudflare-thanksgiving-2023",
         "cmic-ra-connect-2026",
+        "commune-2026",
         "conoha-wing-2026",
         "coop-yamaguchi-2026",
         "corona-cloud-2026",
@@ -18176,6 +19023,7 @@
         "daiichi-life-hr-2026",
         "daiki-suisan-2026",
         "dandm-vpn-ransomware-2026",
+        "denmark-cpr-2026",
         "digital-agency-gss-2026",
         "discord-support-vendor-2025",
         "education-software-dormant-2026",
@@ -18196,8 +19044,10 @@
         "gmo-infoq-2026",
         "gpoint-2026",
         "gyazo-2026",
+        "hiho-mypage-2026",
         "his-thailand-2025",
         "ichimasa-mail-2026",
+        "idcf-ransomware-2026",
         "ieej-mail-2026",
         "inkrevolution-payment-2025",
         "innovation-github-2026",
@@ -18276,14 +19126,19 @@
         "yellowhat-booking-2026",
         "zurich-zdash-2026"
       ],
-      "references": [],
+      "references": [
+        {
+          "title": "JPCERT/CC：直近で相次いでいる国内組織における不正アクセスに関する注意喚起（10月9日更新）",
+          "url": "https://www.jpcert.or.jp/at/2026/at260030.html"
+        }
+      ],
       "execution": "read-only-by-default",
       "provenance": "editorial-guidance"
     },
     {
       "id": "SEC-010",
-      "version": "1.1.0",
-      "updatedAt": "2026-10-02",
+      "version": "1.1.1",
+      "updatedAt": "2026-10-12",
       "title": {
         "ja": "外部入力とSQLの組み立てを確認する",
         "en": "Inspect external input and SQL construction"
@@ -18341,6 +19196,7 @@
       ],
       "incidentIds": [
         "anthropic-cyber-evals-2026",
+        "anthropic-unintended-model-actions-2026",
         "gyazo-2026",
         "metabase-2026",
         "moveit-2023"
@@ -18356,8 +19212,8 @@
     },
     {
       "id": "SEC-011",
-      "version": "1.1.0",
-      "updatedAt": "2026-10-09",
+      "version": "1.1.1",
+      "updatedAt": "2026-10-12",
       "title": {
         "ja": "AIエージェントの接続先と実行権限を確認する",
         "en": "Inspect AI-agent destinations and execution privileges"
@@ -18431,6 +19287,7 @@
       "incidentIds": [
         "anthropic-claude-code-abuse-2025",
         "anthropic-cyber-evals-2026",
+        "anthropic-unintended-model-actions-2026",
         "openai-huggingface-eval-2026",
         "rizap-ai-data-handling-2026",
         "unit42-ai-assisted-2026"
@@ -18623,8 +19480,8 @@
     },
     {
       "id": "SEC-013",
-      "version": "1.1.0",
-      "updatedAt": "2026-10-09",
+      "version": "1.1.1",
+      "updatedAt": "2026-10-12",
       "title": {
         "ja": "隔離手順とバックアップの復元を確認する",
         "en": "Inspect containment and backup restoration"
@@ -18702,6 +19559,7 @@
         "epark-peakmanager-2026",
         "five-foxes-2026",
         "gex-ransomware-2026",
+        "idcf-ransomware-2026",
         "keio-ransomware-2026",
         "logicvein-2025",
         "nichirei-2026",
@@ -18726,8 +19584,8 @@
     },
     {
       "id": "SEC-014",
-      "version": "1.1.0",
-      "updatedAt": "2026-10-09",
+      "version": "1.2.0",
+      "updatedAt": "2026-10-12",
       "title": {
         "ja": "照会APIの認可と取得量の制御を確認する",
         "en": "Inspect query authorization and retrieval limits"
@@ -18764,6 +19622,10 @@
         {
           "ja": "通常形式のリクエストを繰り返した場合も、利用者・組織ごとの取得量を制限・検知できるか確認する。ページ送りや複数のAPIに分けた取得も試験計画に含める。",
           "en": "Inspect per-user and per-tenant volume limits and detection, including repeated ordinary requests, pagination, and access spread across endpoints."
+        },
+        {
+          "ja": "非公開APIやHTTPメソッドの違いでも認可を維持するか、不正形式の認証トークンを拒否するか、許可されたテスト環境で確認する。招待・権限変更も対象に含める。",
+          "en": "In an authorized test environment, verify authorization across private endpoints and methods, rejection of malformed tokens, invitations and role changes."
         }
       ],
       "remediation": [
@@ -18788,11 +19650,14 @@
         "2rinkan-api-2026",
         "aflac-japan-2026",
         "benefit-one-tenant-export-2026",
+        "commune-2026",
+        "denmark-cpr-2026",
         "en-midcareer-credential-stuffing-2026",
         "fancrew-credential-stuffing-2026",
         "fines-reservations-2026",
         "gmo-infoq-2026",
         "gpoint-2026",
+        "hiho-mypage-2026",
         "jaea-jrr3-files-2026",
         "kaga-solnet-2026",
         "komatsu-user-directory-exposure-2026",
@@ -18815,6 +19680,10 @@
         {
           "title": "アフラック生命保険：調査結果と再発防止策",
           "url": "https://www.aflac.co.jp/static/corp/profile/news/2026/2026073100.pdf"
+        },
+        {
+          "title": "JPCERT/CC：直近で相次いでいる国内組織における不正アクセスに関する注意喚起（10月9日更新）",
+          "url": "https://www.jpcert.or.jp/at/2026/at260030.html"
         }
       ],
       "execution": "read-only-by-default",
@@ -18968,5 +19837,5 @@
       "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "0a19d26cb175869ee749bbe6435fb1ebf0e50b1a17b8338b00a19bef1817ece3"
+  "contentHash": "8f5b5dac2ba0c64cde05f9449050278bca9e32d8b20fe11be571fa1e6ffcffa3"
 }

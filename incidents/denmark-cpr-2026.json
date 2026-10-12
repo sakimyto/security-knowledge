@@ -1,0 +1,158 @@
+{
+  "id": "denmark-cpr-2026",
+  "organization": "デンマーク中央個人登録簿（CPR）",
+  "title": {
+    "ja": "デンマークCPR：企業の正規照会権限を悪用した情報取得",
+    "en": "Denmark CPR: unauthorized retrieval through legitimate company access"
+  },
+  "summary": {
+    "ja": "民間企業の正規照会権限が悪用され、約880万人の登録情報が取得されました。死亡者・国外転出者も含む登録人数です。権限を得た具体的な方法は調査中です。",
+    "en": "Legitimate company lookup access was abused to retrieve data on about 8.8 million registered people, including deceased and emigrated people; the access-acquisition mechanism remains under investigation."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-05",
+  "reviewedAt": "2026-10-12",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "民間企業に認めた正規のCPR照会権限を、第三者が不正に使ったと公表しました。",
+        "en": "Authorities reported third-party abuse of a private company’s legitimate CPR lookup access."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "事故概要 / Fakta"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "約880万人の氏名・住所・CPR番号などが対象です。死亡者・国外転出者も含み、現住人口ではありません。氏名・住所の保護対象者は当該情報の取得範囲から除かれます。",
+        "en": "About 8.8 million registered people include deceased and emigrated people; protected names and addresses were excluded."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "事故概要 / Fakta"
+    },
+    {
+      "topic": "observation",
+      "text": {
+        "ja": "規制当局は10月4日に報告を受け、大量の自動照会による有効なCPR番号の探索を調査しています。",
+        "en": "The regulator received an October 4 notification and is investigating bulk automated searches for valid CPR numbers."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s3"],
+      "locator": "通知と調査状況"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "text": {
+        "ja": "9月中の不規則な挙動を認識したと公表しました。",
+        "en": "Authorities reported recognizing irregular September activity."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-04",
+      "text": {
+        "ja": "規制当局へ報告しました。",
+        "en": "Notified the data-protection regulator."
+      },
+      "sourceIds": ["s3"]
+    },
+    {
+      "date": "2026-10-05",
+      "text": {
+        "ja": "政府とCPR管理者が事故を公表しました。",
+        "en": "Government and CPR administration disclosed the incident."
+      },
+      "sourceIds": ["s1", "s2"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "対象企業のアクセスを停止し、調査とCPRの安全性点検を開始しました。",
+        "en": "Stopped the company’s access and began investigation and security review."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "事故概要 / Fakta"
+    },
+    {
+      "topic": "response",
+      "text": {
+        "ja": "移民関連の窓口では、電話の問い合わせに追加の本人確認を導入しました。",
+        "en": "Immigration service desks added identity checks for telephone inquiries."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s4"],
+      "locator": "Ekstra kontrol ved telefoniske henvendelser"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "照会権限・取得量・ログと、漏えい後の本人確認を点検します。権限を悪用できた経路や当時の制御は未公表で、回避可能性は判断できません。",
+      "en": "Inspect lookup privileges, retrieval limits, logs and identity checks; undisclosed entry and prior controls prevent an avoidability assessment."
+    },
+    "sourceIds": ["s1", "s3"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed primary sources do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "資格情報の窃取やソフトウェアの脆弱性悪用を、一次資料だけで確定できません。発生日と最終的な被害範囲は調査中です。",
+      "en": "Credential theft or software exploitation is not established; occurrence timing and final scope remain under investigation."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Omfattende uautoriseret adgang til borgeres CPR-oplysninger",
+      "url": "https://fudm.dk/aktuelt/pressemeddelelser/2026/oktober/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger/",
+      "publisher": "デンマーク研究・教育・デジタル化省",
+      "kind": "government",
+      "publishedAt": "2026-10-05",
+      "reviewedAt": "2026-10-12"
+    },
+    {
+      "id": "s2",
+      "title": "Omfattende uautoriseret adgang til borgeres CPR-oplysninger",
+      "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger",
+      "publisher": "CPR管理者",
+      "kind": "government",
+      "publishedAt": "2026-10-05",
+      "reviewedAt": "2026-10-12"
+    },
+    {
+      "id": "s3",
+      "title": "Datatilsynet er opmærksom på sag om opslag i CPR",
+      "url": "https://www.datatilsynet.dk/presse-og-nyheder/nyhedsarkiv/2026/okt/datatilsynet-er-opmaerksom-paa-sag-om-opslag-i-cpr",
+      "publisher": "Datatilsynet",
+      "kind": "government",
+      "publishedAt": "2026-10-05",
+      "reviewedAt": "2026-10-12"
+    },
+    {
+      "id": "s4",
+      "title": "Uvedkommende har fået adgang til borgeres CPR-oplysninger",
+      "url": "https://nyidanmark.dk/da/Nyheder/2026/10/Uvedkommende-har-faaet-adgang-til-borgeres-CPR-oplysninger",
+      "publisher": "Udlændingestyrelsen / SIRI",
+      "kind": "government",
+      "publishedAt": "2026-10-05",
+      "reviewedAt": "2026-10-12"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-014"]
+}

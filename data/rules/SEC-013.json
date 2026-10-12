@@ -1,7 +1,7 @@
 {
   "id": "SEC-013",
-  "version": "1.1.0",
-  "updatedAt": "2026-10-09",
+  "version": "1.1.1",
+  "updatedAt": "2026-10-12",
   "title": {
     "ja": "隔離手順とバックアップの復元を確認する",
     "en": "Inspect containment and backup restoration"
@@ -79,6 +79,7 @@
     "epark-peakmanager-2026",
     "five-foxes-2026",
     "gex-ransomware-2026",
+    "idcf-ransomware-2026",
     "keio-ransomware-2026",
     "logicvein-2025",
     "nichirei-2026",

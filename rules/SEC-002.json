@@ -1,7 +1,7 @@
 {
   "id": "SEC-002",
-  "version": "1.1.0",
-  "updatedAt": "2026-10-09",
+  "version": "1.1.1",
+  "updatedAt": "2026-10-12",
   "title": {
     "ja": "MFAの方式と適用漏れを確認する",
     "en": "Inspect MFA methods and coverage"
@@ -67,6 +67,7 @@
     "forticloud-sso-2026",
     "fuso-cloud-storage-2026",
     "gainsight-oauth-2025",
+    "hiho-mypage-2026",
     "ichimasa-mail-2026",
     "ieej-mail-2026",
     "jogmec-directory-2026",

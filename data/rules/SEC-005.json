@@ -1,7 +1,7 @@
 {
   "id": "SEC-005",
-  "version": "1.1.0",
-  "updatedAt": "2026-10-09",
+  "version": "1.1.1",
+  "updatedAt": "2026-10-12",
   "title": {
     "ja": "更新対象の資格情報と旧鍵の失効を照合する",
     "en": "Reconcile credential inventory and revocation"
@@ -82,8 +82,10 @@
     "cloudflare-thanksgiving-2023",
     "cmic-ra-connect-2026",
     "codecov-2021",
+    "commune-2026",
     "coop-yamaguchi-2026",
     "corona-cloud-2026",
+    "denmark-cpr-2026",
     "digital-agency-gss-2026",
     "en-midcareer-credential-stuffing-2026",
     "estore-shopserve-2026",
@@ -94,6 +96,7 @@
     "gainsight-oauth-2025",
     "gmo-infoq-2026",
     "gyazo-2026",
+    "hiho-mypage-2026",
     "ichimasa-mail-2026",
     "ieej-mail-2026",
     "inkrevolution-payment-2025",
