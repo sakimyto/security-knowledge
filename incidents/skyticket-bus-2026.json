@@ -1,0 +1,103 @@
+{
+  "id": "skyticket-bus-2026",
+  "organization": "アドベンチャー",
+  "title": {
+    "ja": "skyticketバス：ログイン不要の予約完了ページを機械的に閲覧",
+    "en": "skyticket bus: automated access to reservation pages without login"
+  },
+  "summary": {
+    "ja": "8月3日から10月1日に、ログイン不要だった予約完了ページが第三者に機械的に閲覧されました。約12,000件は予約数であり、同行者を含む人数はこれより多くなります。",
+    "en": "Reservation pages accessible without login were mechanically viewed on August 3–October 1. About 12,000 reservations are affected; the number of people is higher when companions are included."
+  },
+  "occurredAt": "2026-08-03",
+  "disclosedAt": "2026-10-09",
+  "reviewedAt": "2026-10-19",
+  "outcome": "confirmed-breach",
+  "categories": ["implementation"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "予約完了ページがログインなしで表示でき、第三者が機械的に閲覧しました。公開状態だけの記録ではありません。",
+        "en": "Reservation completion pages were accessible without login and mechanically viewed by a third party; this was more than an unexploited exposure."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§1(3)"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "約12,000予約の予約者・同行者情報が閲覧されたか、その恐れがあります。人数へ読み替えません。",
+        "en": "Reservation and companion data for about 12,000 bookings were viewed or may have been viewed. The figure is not a person count."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§1(3)"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-03",
+      "text": {
+        "ja": "公表された機械的閲覧期間の開始。",
+        "en": "Reported automated-viewing period began."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-01",
+      "text": {
+        "ja": "事案を検知し、修正。",
+        "en": "Incident detected and fixed."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "10月1日にログイン不要の状態を修正しました。",
+        "en": "The unauthenticated-access condition was fixed on October 1."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§1(3)"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "利用者ごとの予約ページの認証・認可と機械的取得のログを点検します。公表資料は具体的な実装コードを示していません。",
+      "en": "Inspect authentication, per-user authorization and logs of automated access to booking pages. The notice does not disclose implementation code."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "閲覧された予約者・同行者の重複除去後の人数は未公表です。具体的なコードや修正前の診断状況は確認できません。",
+      "en": "Deduplicated counts of travelers are undisclosed. Specific code and pre-fix assessment coverage are not established."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "不正アクセスによるお客様情報の流出に関するお詫びとお知らせ",
+      "url": "https://jp.adventurekk.com/news/apology-notice-unauthorized-access-data-leak/",
+      "publisher": "アドベンチャー",
+      "kind": "organization",
+      "publishedAt": "2026-10-09",
+      "reviewedAt": "2026-10-19"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-009", "SEC-014"]
+}

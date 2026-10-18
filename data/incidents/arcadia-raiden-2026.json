@@ -1,0 +1,153 @@
+{
+  "id": "arcadia-raiden-2026",
+  "organization": "アルカディア",
+  "title": {
+    "ja": "SpeeCAN RAIDEN：防災配信と緊急通報サービスへの不正アクセス",
+    "en": "SpeeCAN RAIDEN: unauthorized access affecting disaster and emergency messaging"
+  },
+  "summary": {
+    "ja": "10月11日に不審な挙動を確認しました。防災配信のメールアドレス約313.6万件等に漏えいの可能性があり、続報はNET119・119RAIDENへの影響も説明しています。",
+    "en": "Suspicious activity was detected on October 11. About 3.136 million disaster-messaging email addresses may be exposed; a follow-up also describes potential NET119 and 119RAIDEN impact."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-13",
+  "reviewedAt": "2026-10-19",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "10月11日に不審な挙動を確認し、12日に侵入経路を塞ぐ応急措置を実施しました。",
+        "en": "Suspicious activity was detected on October 11; emergency path blocking followed on October 12."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "10月13日 状況のご報告・経緯"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "防災配信では、メールアドレス約3,136,000件、電話番号約105,000件、FAX番号約15,000件が漏えい可能性の最大推定値です。人数に換算・合算しません。",
+        "en": "Maximum estimated potential exposure includes about 3,136,000 email addresses, 105,000 phone numbers and 15,000 fax numbers. These are not person counts and must not be added."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "10月13日 状況のご報告・最大件数"
+    },
+    {
+      "topic": "extended-scope",
+      "text": {
+        "ja": "第11報はNET119のメールアドレス9,020件に紐づく情報と、119RAIDENのメール約97,000件・電話約17,000件・FAX約400件への漏えい可能性を説明しています。",
+        "en": "Report 11 describes potential exposure of data tied to 9,020 NET119 email addresses and about 97,000 email, 17,000 phone and 400 fax entries at 119RAIDEN."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "10月16日18時10分 第11報"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-11",
+      "text": {
+        "ja": "不審な挙動を確認。",
+        "en": "Suspicious activity detected."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "text": {
+        "ja": "一部のサービスを緊急停止。",
+        "en": "Some services suspended."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "text": {
+        "ja": "停止していたサーバーの復旧を公表。",
+        "en": "Restoration of suspended servers announced."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "侵入経路と不正なアクセス元を遮断し、停止サーバーは10月15日に復旧したと公表しました。NET119・119RAIDENは停止予定なしと説明しています。",
+        "en": "The vendor reported blocking intrusion paths and restoring suspended servers on October 15. NET119 and 119RAIDEN were described as having no planned suspension."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "第9報 / 第11報 / 10月13日状況報告"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
+      "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入方法、CVE、重複除去後の人数と漏えいの確定範囲は未公表です。関連サービス・自治体の発表を別事故として加算しません。",
+      "en": "The entry mechanism, CVE, deduplicated person count and confirmed leakage scope are undisclosed. Related service/customer announcements are not counted as separate incidents."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "SpeeCAN RAIDENへの不正アクセスに伴う一連の対応について（第11報まで）",
+      "url": "https://raiden.site.ktaiwork.jp/archives/4597",
+      "publisher": "アルカディア",
+      "kind": "vendor",
+      "publishedAt": "2026-10-13",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s2",
+      "title": "SpeeCAN RAIDENへの不正アクセスに伴う一連の対応について",
+      "url": "https://www.arcadia.co.jp/info/4076",
+      "publisher": "アルカディア",
+      "kind": "vendor",
+      "publishedAt": "2026-10-16",
+      "reviewedAt": "2026-10-19"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-013"
+  ]
+}

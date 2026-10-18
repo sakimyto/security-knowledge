@@ -1,7 +1,7 @@
 {
   "id": "SEC-013",
-  "version": "1.1.1",
-  "updatedAt": "2026-10-12",
+  "version": "1.1.2",
+  "updatedAt": "2026-10-19",
   "title": {
     "ja": "隔離手順とバックアップの復元を確認する",
     "en": "Inspect containment and backup restoration"
@@ -70,6 +70,7 @@
     }
   ],
   "incidentIds": [
+    "arcadia-raiden-2026",
     "askul-2025",
     "conoha-wing-2026",
     "coop-yamaguchi-2026",
@@ -82,10 +83,12 @@
     "idcf-ransomware-2026",
     "keio-ransomware-2026",
     "logicvein-2025",
+    "medley-atlink-2026",
     "nichirei-2026",
     "nihontelenet-ransomware-2026",
     "nishiyama-2026",
     "nostrum-smartspi-2026",
+    "omu-ransomware-2026",
     "ryomo-systems-2026",
     "sakura-hosting-2026"
   ],

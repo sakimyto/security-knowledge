@@ -1,0 +1,112 @@
+{
+  "id": "nikkei-m365-2026",
+  "organization": "日本経済新聞社・日経BP",
+  "title": {
+    "ja": "日本経済新聞社：Microsoft 365の侵害と日経BPへの波及",
+    "en": "Nikkei: Microsoft 365 compromise and propagation to Nikkei BP"
+  },
+  "summary": {
+    "ja": "Microsoft 365のアカウントから約9,000件のなりすましメールが送信されました。日経BPは、そのメールによる認証情報の取得と、個人情報26件の漏えい可能性を公表しました。",
+    "en": "A Microsoft 365 account sent about 9,000 spoofed messages. Nikkei BP reported credential theft through that email and possible exposure of 26 personal-data records."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-04",
+  "reviewedAt": "2026-10-19",
+  "outcome": "confirmed-breach",
+  "categories": ["credentials", "unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "社員のMicrosoft 365アカウントが攻撃を受け、9月30日になりすましメール約9,000件が送られました。",
+        "en": "An employee Microsoft 365 account was attacked; about 9,000 spoofed messages were sent on September 30."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "本文 第1–3段落"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "日経は宛先・氏名・一部メール本文の漏えいが疑われるとしています。日経BPは日経社員を装うメールで認証情報が取得され、個人情報26件に漏えいの恐れがあると公表しました。",
+        "en": "Nikkei suspects exposure of recipient details and some email contents. Nikkei BP reported phishing credential theft through a Nikkei mailbox and possible exposure of 26 records."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "日経 本文 / 日経BP 第1段落"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "text": {
+        "ja": "不審メール送信と日経BPの被害が発生。",
+        "en": "Suspicious messages sent; Nikkei BP account affected."
+      },
+      "sourceIds": ["s1", "s2"]
+    },
+    {
+      "date": "2026-10-04",
+      "text": {
+        "ja": "両社が影響を公表。",
+        "en": "Both organizations disclosed the incidents."
+      },
+      "sourceIds": ["s1", "s2"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "日経はパスワードを変更し、日経BPは該当アカウントへの接続を遮断しました。両社が個人情報保護委員会への報告を公表しました。",
+        "en": "Nikkei changed passwords; Nikkei BP blocked account access. Both reported notifying the privacy regulator."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "各資料 本文"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
+      "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "日経への初回侵入方法と漏えい総数は未公表です。既存のGoogle Workspace事案1,646人とは別で、約9,000件はメール送信数です。",
+      "en": "Nikkei’s original entry mechanism and total leakage count are undisclosed. This is separate from the existing 1,646-person Google Workspace case; 9,000 counts messages."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "サイバー攻撃による情報漏洩、不審メールの送信について",
+      "url": "https://www.nikkei.co.jp/nikkeiinfo/news/information/1554.html",
+      "publisher": "日本経済新聞社",
+      "kind": "organization",
+      "publishedAt": "2026-10-04",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s2",
+      "title": "メール不正アクセスによる個人情報の漏えいについて",
+      "url": "https://www.nikkeibp.co.jp/atcl/newsrelease/corp/100200417/",
+      "publisher": "日経BP",
+      "kind": "organization",
+      "publishedAt": "2026-10-04",
+      "reviewedAt": "2026-10-19"
+    }
+  ],
+  "ruleIds": ["SEC-002", "SEC-003", "SEC-005", "SEC-009"]
+}

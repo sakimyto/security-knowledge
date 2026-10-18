@@ -1,0 +1,149 @@
+{
+  "id": "skyticket-server-2026",
+  "organization": "アドベンチャー",
+  "title": {
+    "ja": "skyticket：サーバー侵入と残存した決済ログの流出",
+    "en": "skyticket: server intrusion and retained payment-log exposure"
+  },
+  "summary": {
+    "ja": "約1,464万件の登録・入力情報が流出し、うち約413万件にはハッシュ化パスワードが含まれます。続報で、最大6,140名の過去のカード情報等も流出したと訂正しました。",
+    "en": "About 14.64 million records leaked, including about 4.13 million with hashed passwords. A follow-up corrected the earlier exclusion of card data, reporting historical card information for up to 6,140 people."
+  },
+  "occurredAt": "2026-10-02",
+  "disclosedAt": "2026-10-08",
+  "reviewedAt": "2026-10-19",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "10月2日から4日に管理機能を不正操作され、他のサーバーとクラウドの保存データへアクセスされました。",
+        "en": "Management functions were abused on October 2–4 to access other servers and cloud data."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§1(1)"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "登録・入力情報約1,464万件が流出し、うち約413万件にハッシュ化パスワードが含まれます。内数を合算しません。",
+        "en": "About 14.64 million records leaked; about 4.13 million include hashed passwords and must not be added to the total."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§1(1)"
+    },
+    {
+      "topic": "corrected-impact",
+      "text": {
+        "ja": "10月16日の続報は、2017年2月から2018年6月のプレミアム会費用カード情報が最大6,140名分流出したと訂正しました。",
+        "en": "The October 16 follow-up corrected the first report: historical premium-fee card data for up to 6,140 people leaked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "冒頭 / §1"
+    },
+    {
+      "topic": "retained-data",
+      "text": {
+        "ja": "決済方式移行時に削除されなかったログと、暗号化に用いる情報が10月3日に取得されました。福利厚生用ID・氏名・パスワードも流出しました。",
+        "en": "Retained payment logs and encryption information were obtained on October 3. Benefit-service IDs, names and passwords also leaked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "§1–2"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-02",
+      "text": {
+        "ja": "サーバーへの不正アクセス期間の開始。",
+        "en": "Reported server-access period began."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-05",
+      "text": {
+        "ja": "サーバー侵入を検知。",
+        "en": "Server intrusion detected."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-16",
+      "text": {
+        "ja": "カード情報に関する初報を訂正。",
+        "en": "Earlier exclusion of card data corrected."
+      },
+      "sourceIds": ["s2"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "侵入経路を遮断し、対象者に通知しました。続報では残存ログの隔離を進めていると説明しました。",
+        "en": "Access paths were blocked and users notified. The follow-up says isolation of retained logs was in progress."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "初報 §3 / 第2報 §3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
+      "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入原因と、プレミアム会費以外の過去カード情報の残存範囲は調査中です。別経路の業務管理・バス予約事案と合算しません。",
+      "en": "The specific entry cause and retention of other historical card data remain under investigation. Do not combine with the separate business-system or bus cases."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "不正アクセスによるお客様情報の流出に関するお詫びとお知らせ",
+      "url": "https://jp.adventurekk.com/news/apology-notice-unauthorized-access-data-leak/",
+      "publisher": "アドベンチャー",
+      "kind": "organization",
+      "publishedAt": "2026-10-09",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s2",
+      "title": "不正アクセスによるお客様情報の流出に関するお詫びとお知らせ（第2報）",
+      "url": "https://jp.adventurekk.com/news/news-2026-unauthorized-access-notice-2/",
+      "publisher": "アドベンチャー",
+      "kind": "organization",
+      "publishedAt": "2026-10-16",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s3",
+      "title": "【重要】当社よりお送りした「個人情報の流出に関するお知らせ」メールについて",
+      "url": "https://jp.adventurekk.com/news/apology-unauthorized-access-data-leak/",
+      "publisher": "アドベンチャー",
+      "kind": "organization",
+      "publishedAt": "2026-10-08",
+      "reviewedAt": "2026-10-19"
+    }
+  ],
+  "ruleIds": ["SEC-005", "SEC-008", "SEC-009", "SEC-012"]
+}

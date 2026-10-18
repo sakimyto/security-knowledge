@@ -1,0 +1,144 @@
+{
+  "id": "medley-atlink-2026",
+  "organization": "メドレー",
+  "title": {
+    "ja": "アットリンク：医療機関向け予約基盤への不正アクセス",
+    "en": "Medley at-link: unauthorized access to a medical booking platform"
+  },
+  "summary": {
+    "ja": "10月11日の外部通報を受けた調査で不正アクセスを確認し、14日深夜に停止しました。最大787医療機関が漏えい可能性の対象であり、患者数ではありません。",
+    "en": "An external report on October 11 led to confirmation of unauthorized access; service stopped late October 14. Potential exposure covers up to 787 medical institutions, not 787 patients."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-14",
+  "reviewedAt": "2026-10-19",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "10月11日に外部専門機関から通報を受け、調査で第三者の不正アクセスを確認しました。",
+        "en": "An external specialist reported possible access on October 11; investigation confirmed unauthorized access."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§1"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "全利用医療機関787件が最大対象です。漏えいの有無、情報項目と対象医療機関は調査中です。",
+        "en": "All 787 customer medical institutions form the maximum possible scope. Whether information leaked, its fields and affected institutions remain under investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§2"
+    },
+    {
+      "topic": "customer-scope",
+      "text": {
+        "ja": "四条烏丸レディースクリニックは予約システムだけに利用し、別の電子カルテは通常稼働すると説明しました。",
+        "en": "Shijo Karasuma Ladies Clinic uses the service for reservations only and said its separate electronic medical-record system remained operational."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "本文"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-11",
+      "text": {
+        "ja": "外部の情報提供を受けて調査開始。",
+        "en": "Investigation began after an external report."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "text": {
+        "ja": "医療機関への案内と、深夜のサービス停止。",
+        "en": "Customer notice and late-night service suspension."
+      },
+      "sourceIds": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "停止前に医療機関の業務継続を支援し、停止後も専門機関と影響範囲を調査しています。",
+        "en": "Interim support preceded service suspension; external specialists continue investigating scope."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§1–3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
+      "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "侵入開始日、侵入方法と患者の人数は未公表です。787医療機関すべての漏えいが確定したという説明ではありません。",
+      "en": "The intrusion start, mechanism and patient count are undisclosed. The notice does not confirm leakage at all 787 institutions."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "当社サービス「アットリンク」への不正アクセス及びサービスの一時停止に関するお知らせ",
+      "url": "https://ssl4.eir-parts.net/doc/4480/tdnet/2895027/00.pdf",
+      "publisher": "メドレー",
+      "kind": "organization",
+      "publishedAt": "2026-10-15",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s2",
+      "title": "【重要】当院予約システム「アットリンク」のサービス一時停止について",
+      "url": "https://www.shijo-karasuma-lc.com/news/1778/",
+      "publisher": "四条烏丸レディースクリニック",
+      "kind": "organization",
+      "publishedAt": "2026-10-14",
+      "reviewedAt": "2026-10-19"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009",
+    "SEC-013"
+  ]
+}

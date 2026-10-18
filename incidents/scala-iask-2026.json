@@ -1,6 +1,6 @@
 {
   "id": "scala-iask-2026",
-  "organization": "スカラコミュニケーションズ（大和証券・シチズン時計・損保ジャパンへの影響を含む）",
+  "organization": "スカラコミュニケーションズ（利用企業への影響を含む）",
   "title": {
     "ja": "スカラi-ask：管理画面への不正ログインが同一サーバーの利用企業へ波及",
     "en": "Scala i-ask: administrator intrusion affects customers on a shared server"
@@ -11,7 +11,7 @@
   },
   "occurredAt": "2026-10-02",
   "disclosedAt": "2026-10-05",
-  "reviewedAt": "2026-10-09",
+  "reviewedAt": "2026-10-19",
   "outcome": "confirmed-breach",
   "categories": ["credentials", "supply-chain"],
   "cves": [],
@@ -55,6 +55,26 @@
       "status": "confirmed",
       "sourceIds": ["s3", "s4"],
       "locator": "シチズン §漏えいの可能性がある情報 / 損保ジャパン §2"
+    },
+    {
+      "topic": "orix-impact",
+      "text": {
+        "ja": "オリックス生命の約26,500件は、同一顧客の複数回の問い合わせを含み、医療情報を含む可能性があります。",
+        "en": "About 26,500 inquiries at Orix Life include repeat customers and may contain medical information."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s5"],
+      "locator": "§1"
+    },
+    {
+      "topic": "tobu-scope",
+      "text": {
+        "ja": "東武鉄道は、同社情報の閲覧・取得の形跡は確認されていないとの委託先報告を公表しました。同社システムへの侵入も確認されていません。",
+        "en": "Tobu reported that its vendor found no evidence of viewing or obtaining Tobu data, and no intrusion into Tobu-managed systems was confirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s6"],
+      "locator": "§1"
     }
   ],
   "timeline": [
@@ -150,7 +170,7 @@
       "publisher": "スカラコミュニケーションズ",
       "kind": "vendor",
       "publishedAt": "2026-10-06",
-      "reviewedAt": "2026-10-09"
+      "reviewedAt": "2026-10-19"
     },
     {
       "id": "s2",
@@ -178,6 +198,24 @@
       "kind": "organization",
       "publishedAt": "2026-10-07",
       "reviewedAt": "2026-10-09"
+    },
+    {
+      "id": "s5",
+      "title": "当社の委託先における個人情報漏えいの可能性について",
+      "url": "https://www.orixlife.co.jp/b3cd698c38a74ebea491976d56455ecd/77eb698f1d9543a39440e414940f9f4d/n261008.pdf",
+      "publisher": "オリックス生命保険",
+      "kind": "organization",
+      "publishedAt": "2026-10-08",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s6",
+      "title": "委託先事業者への不正アクセスについて（お知らせ）",
+      "url": "https://www.tobu.co.jp/cms-pdf/news/202610071207283jmSLfzYw1kGLERiQZs7tA.pdf",
+      "publisher": "東武鉄道",
+      "kind": "organization",
+      "publishedAt": "2026-10-07",
+      "reviewedAt": "2026-10-19"
     }
   ],
   "ruleIds": ["SEC-002", "SEC-005", "SEC-006", "SEC-008", "SEC-009", "SEC-012", "SEC-015"]

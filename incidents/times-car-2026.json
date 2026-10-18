@@ -6,12 +6,12 @@
     "en": "Times Car: member records and identity documents leaked"
   },
   "summary": {
-    "ja": "同社は、660万件の会員情報と、そのうち160万件の本人確認書類画像の流出を確認しました。退会済み会員や登録未完了の申込者も対象に含まれます。",
-    "en": "The company confirmed leakage of 6.6 million member records, including 1.6 million identity-document images, covering withdrawn members and incomplete applicants."
+    "ja": "約660万アカウントの会員情報が流出し、本人確認書類画像約160万件は内数です。退会者等も対象で、10月16日に本人確認画像の保有ルール変更を公表しました。",
+    "en": "About 6.6 million accounts were affected, including about 1.6 million identity-document image records. Former members are included; new image-retention rules were announced on October 16."
   },
   "occurredAt": null,
   "disclosedAt": "2026-09-25",
-  "reviewedAt": "2026-10-09",
+  "reviewedAt": "2026-10-19",
   "outcome": "confirmed-breach",
   "categories": ["unknown"],
   "cves": [],
@@ -19,12 +19,12 @@
     {
       "topic": "impact",
       "text": {
-        "ja": "660万件の会員情報と、うち160万件の本人確認書類画像の流出を確認しました。両者を合算しません。",
-        "en": "Leakage covered 6.6 million member records, including 1.6 million identity documents; these counts must not be added."
+        "ja": "流出対象は約660万アカウントです。本人確認書類画像約160万件は内数であり、人数や画像の枚数へ読み替えず合算しません。",
+        "en": "The scope is about 6.6 million accounts, including about 1.6 million identity-document image records. Do not treat these as deduplicated people or add the subset to the total."
       },
       "status": "confirmed",
       "sourceIds": ["s1", "s2"],
-      "locator": "第2報 §1 / 第3報 §1"
+      "locator": "第2報 §3 / 第3報 §1"
     },
     {
       "topic": "entry",
@@ -35,6 +35,26 @@
       "status": "confirmed",
       "sourceIds": ["s1"],
       "locator": "今後の調査"
+    },
+    {
+      "topic": "retention",
+      "text": {
+        "ja": "従来は本人確認書類画像を会員期間中と退会後7年間保有していました。10月16日の第4報は、本人確認・不正利用対応・問い合わせ対応等の目的を説明しています。",
+        "en": "Previously, identity-document images were retained throughout membership and for seven years after withdrawal for verification, misuse response and inquiries."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s4"],
+      "locator": "§1"
+    },
+    {
+      "topic": "password-format",
+      "text": {
+        "ja": "同社はパスワードを復元できない形式で保管していると説明しています。方式や強度はこの資料から検証できません。",
+        "en": "The company says passwords were stored in a non-recoverable form. The method and strength cannot be independently assessed from this notice."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s3"],
+      "locator": "p.1 Q1"
     }
   ],
   "timeline": [
@@ -44,7 +64,15 @@
         "ja": "この事案を公表。",
         "en": "Incident disclosed."
       },
-      "sourceIds": ["s1"]
+      "sourceIds": ["s5"]
+    },
+    {
+      "date": "2026-10-16",
+      "text": {
+        "ja": "本人確認画像の保有ルール変更を公表。",
+        "en": "Identity-image retention changes announced."
+      },
+      "sourceIds": ["s4"]
     }
   ],
   "reportedActions": [
@@ -57,6 +85,16 @@
       "status": "confirmed",
       "sourceIds": ["s1"],
       "locator": "対応状況"
+    },
+    {
+      "topic": "planned-retention-change",
+      "text": {
+        "ja": "登録確認完了後は画像を即時削除するルールへ変更し、既存画像も申し出の有無によらず2026年10月末までに削除すると公表しました。実施完了の確認ではありません。",
+        "en": "The company announced deletion after registration verification and removal of existing images by the end of October 2026 without requiring requests. Completion has not been verified."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s4"],
+      "locator": "§1–2"
     }
   ],
   "prevention": {
@@ -83,7 +121,7 @@
   "sources": [
     {
       "id": "s1",
-      "reviewedAt": "2026-10-09",
+      "reviewedAt": "2026-10-19",
       "title": "タイムズカーにおける不正アクセスに関するお知らせ（第2報）",
       "url": "https://share.timescar.jp/news/2026/0928/1815.html",
       "publisher": "タイムズモビリティ",
@@ -92,12 +130,39 @@
     },
     {
       "id": "s2",
-      "reviewedAt": "2026-10-09",
+      "reviewedAt": "2026-10-19",
       "title": "タイムズカーにおける不正アクセスに関するお知らせ（第3報）",
       "url": "https://share.timescar.jp/news/2026/0929/1816.html",
       "publisher": "タイムズモビリティ",
       "publishedAt": "2026-09-29",
       "kind": "organization"
+    },
+    {
+      "id": "s3",
+      "title": "タイムズカーWebサイトへの不正アクセスに関するご質問と回答（10月16日更新）",
+      "url": "https://corp.timescar.jp/mail/announce/faq.pdf",
+      "publisher": "タイムズモビリティ",
+      "kind": "organization",
+      "publishedAt": "2026-10-01",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s4",
+      "title": "「タイムズカーWebシステム」への不正アクセスに関する対応について（第4報）",
+      "url": "https://share.timescar.jp/news/2026/1016/1826.html",
+      "publisher": "タイムズモビリティ",
+      "kind": "organization",
+      "publishedAt": "2026-10-16",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s5",
+      "title": "タイムズカーWebシステムへの不正アクセスに関するお知らせ",
+      "url": "https://share.timescar.jp/news/2026/0925/1814.html",
+      "publisher": "タイムズモビリティ",
+      "kind": "organization",
+      "publishedAt": "2026-09-25",
+      "reviewedAt": "2026-10-19"
     }
   ],
   "ruleIds": ["SEC-005", "SEC-006", "SEC-008", "SEC-009", "SEC-012"]

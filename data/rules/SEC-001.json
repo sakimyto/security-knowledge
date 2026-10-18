@@ -1,7 +1,7 @@
 {
   "id": "SEC-001",
-  "version": "1.1.0",
-  "updatedAt": "2026-10-09",
+  "version": "1.1.1",
+  "updatedAt": "2026-10-19",
   "title": {
     "ja": "修正対象と稼働バージョンを照合する",
     "en": "Reconcile advisories with deployed versions"
@@ -87,6 +87,7 @@
     "react2shell-2025",
     "rust-arrayref-2026",
     "saga-hirakawaya-payment-2026",
+    "skyticket-business-system-2026",
     "trivy-supply-chain-2026",
     "voising-bi-2026",
     "white-essence-2026",

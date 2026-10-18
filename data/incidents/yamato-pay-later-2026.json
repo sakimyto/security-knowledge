@@ -1,0 +1,152 @@
+{
+  "id": "yamato-pay-later-2026",
+  "organization": "ヤマト運輸",
+  "title": {
+    "ja": "ヤマト運輸：代金後払いサービスへの不正アクセス",
+    "en": "Yamato Transport: unauthorized access to the pay-later service"
+  },
+  "summary": {
+    "ja": "9月28日に不正アクセスを確認し、代金後払いサービスを停止しました。顧客・加盟店・従業員情報に漏えいの可能性があり、10月9日にサービスを再開しました。",
+    "en": "Unauthorized access was detected on September 28. The pay-later service was suspended and resumed on October 9; customer, merchant and employee data may have been exposed."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-29",
+  "reviewedAt": "2026-10-19",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "9月28日に第三者による不正アクセスを確認しました。侵入開始日は未公表です。",
+        "en": "Third-party access was confirmed on September 28; the intrusion start is undisclosed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "p.1 本文"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "顧客の連絡先・請求関連情報、加盟店名・コード、担当従業員名に漏えいの可能性があります。カード情報とパスワードは対象に含まれません。",
+        "en": "Potentially affected data include customer contact/billing details, merchant names/codes and staff names; cards and passwords are excluded."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "p.1 §1"
+    },
+    {
+      "topic": "continued-investigation",
+      "text": {
+        "ja": "10月9日の再開後も、漏えいの可能性と範囲を調査しています。",
+        "en": "The October 9 resumption notice says possible leakage and its scope remain under investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s3"
+      ],
+      "locator": "本文 第3段落"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-28",
+      "text": {
+        "ja": "不正アクセスを確認し、22時28分にサービスを停止。",
+        "en": "Unauthorized access detected; service stopped at 22:28."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "text": {
+        "ja": "13時にサービスを再開。",
+        "en": "Service resumed at 13:00."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "外部アクセスを制限し、専門機関と調査しました。10月9日にサービス再開を公表しました。",
+        "en": "External access was restricted and specialists investigated. Service resumption was announced on October 9."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s3"
+      ],
+      "locator": "初報本文 / 第3報本文"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
+      "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "侵入方法、漏えい人数と確定した流出範囲は未公表です。",
+      "en": "The entry mechanism, affected count and confirmed exfiltration scope are undisclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "「クロネコ代金後払いサービス」への不正アクセスの発生について",
+      "url": "https://www.yamato-hd.co.jp/important/img/info_260929_1_1.pdf",
+      "publisher": "ヤマト運輸",
+      "kind": "organization",
+      "publishedAt": "2026-09-29",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s2",
+      "title": "【第2報】「クロネコ代金後払いサービス」への不正アクセスの発生について",
+      "url": "https://www.yamato-hd.co.jp/important/img/info_260929_1_6.pdf",
+      "publisher": "ヤマト運輸",
+      "kind": "organization",
+      "publishedAt": "2026-10-02",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s3",
+      "title": "【第3報】「クロネコ代金後払いサービス」再開のお知らせ",
+      "url": "https://www.yamato-hd.co.jp/important/info_260929_1.html",
+      "publisher": "ヤマト運輸",
+      "kind": "organization",
+      "publishedAt": "2026-10-09",
+      "reviewedAt": "2026-10-19"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-008",
+    "SEC-009"
+  ]
+}

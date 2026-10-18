@@ -1,0 +1,145 @@
+{
+  "id": "toyobo-email-2026",
+  "organization": "東洋紡グループ（東洋紡せんい・東洋紡エムシー）",
+  "title": {
+    "ja": "東洋紡グループ：侵害メールから関連会社へフィッシングが波及",
+    "en": "Toyobo group: compromised email propagates phishing to an affiliate"
+  },
+  "summary": {
+    "ja": "東洋紡せんいのメールアカウントから約1,500件の不審メールが送られました。そのメールを受信した東洋紡エムシーの従業員2名もフィッシング被害を受けました。",
+    "en": "A Toyobo Textile mailbox sent about 1,500 suspicious messages. Two Toyobo MC employees who received them also suffered phishing and unauthorized mailbox access."
+  },
+  "occurredAt": "2026-09-24",
+  "disclosedAt": "2026-09-25",
+  "reviewedAt": "2026-10-19",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "credentials",
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "東洋紡せんいの従業員メールに不正アクセスがあり、PDFから認証情報の入力を求めるサイトへ誘導するメールが約1,500件送られました。",
+        "en": "Unauthorized access to a Toyobo Textile mailbox produced about 1,500 messages linking through a PDF to a credential-entry site."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "§1"
+    },
+    {
+      "topic": "propagation",
+      "text": {
+        "ja": "当該メールを受信した東洋紡エムシーの従業員2名のアカウントにも不正アクセスを確認しました。",
+        "en": "Toyobo MC confirmed unauthorized access to the accounts of two employees who received those messages."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "冒頭 / §1"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "漏えいの有無は調査中です。東洋紡エムシーの当該アカウントからの不審メール送信は確認されていません。",
+        "en": "Leakage remains under investigation. No suspicious outbound email from the affected Toyobo MC accounts was confirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "§2–3"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-24",
+      "text": {
+        "ja": "東洋紡せんいの不正アクセスと送信を確認。",
+        "en": "Toyobo Textile intrusion and outbound messages detected."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "text": {
+        "ja": "東洋紡エムシーの従業員2名の被害を確認。",
+        "en": "Two Toyobo MC employee accounts confirmed affected."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "該当アカウントのパスワードを変更し、認証セッションを失効させました。",
+        "en": "Affected passwords were changed and authentication sessions revoked."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "各資料 §1"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "メールから関連会社へ被害が広がったため、認証、セッション失効と連絡経路を点検します。初回侵入の原因は未確定です。",
+      "en": "Inspect authentication, session revocation and contact verification because mailbox compromise propagated to an affiliate. The initial entry cause remains unestablished."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "東洋紡せんいへの初回侵入方法と当時のMFA状態は未公表です。1,500件は送信数であり、漏えい人数ではありません。",
+      "en": "The initial Toyobo Textile entry mechanism and MFA state are undisclosed. The 1,500 figure counts messages, not leaked persons."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "当社グループ会社メールアカウントへの不正アクセスおよび不審メール送信について（お詫び）",
+      "url": "https://www.toyobo.co.jp/system/files/News_Release/202609/press_20260925_3J.pdf",
+      "publisher": "東洋紡",
+      "kind": "organization",
+      "publishedAt": "2026-09-25",
+      "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s2",
+      "title": "東洋紡グループ会社従業員に対する不正アクセスに関するご報告（お詫び）",
+      "url": "https://www.toyobo-mc.jp/news/press_release-260930_2/",
+      "publisher": "東洋紡エムシー",
+      "kind": "organization",
+      "publishedAt": "2026-09-30",
+      "reviewedAt": "2026-10-19"
+    }
+  ],
+  "ruleIds": [
+    "SEC-002",
+    "SEC-003",
+    "SEC-005",
+    "SEC-009"
+  ]
+}

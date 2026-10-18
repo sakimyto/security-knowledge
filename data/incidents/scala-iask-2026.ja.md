@@ -1,14 +1,14 @@
 # scala-iask-2026 — スカラi-ask：管理画面への不正ログインが同一サーバーの利用企業へ波及
 
-事例 | Catalog: 0.7.0 | Record SHA-256: a5d9727432d418e412cc213f97bd184a309d1382d6e04aeba5f81588afc634c7
+事例 | Catalog: 0.8.0 | Record SHA-256: 87b4cc8070e85a4b82540cef8dc4e6edffaf6a3101d15db5bba7527e706fd583
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
 管理画面への不正ログイン後に不正プログラムが設置されました。同一サーバーの最大5社に影響する共通事案として、確認できた3社の公表をまとめています。
 
-Organization: スカラコミュニケーションズ（大和証券・シチズン時計・損保ジャパンへの影響を含む） | Outcome: confirmed-breach
+Organization: スカラコミュニケーションズ（利用企業への影響を含む） | Outcome: confirmed-breach
 
-Occurred: 2026-10-02 | Disclosed: 2026-10-05 | Reviewed: 2026-10-09
+Occurred: 2026-10-02 | Disclosed: 2026-10-05 | Reviewed: 2026-10-19
 
 Categories: credentials, supply-chain | CVEs: unspecified
 
@@ -18,6 +18,8 @@ Categories: credentials, supply-chain | CVEs: unspecified
 - [confirmed / 公表で確認] 同一サーバーの最大5社、最大713,126件の延べ問い合わせ情報に漏えいの可能性があります。 (s1; 2. 漏えいした可能性のある情報)
 - [confirmed / 公表で確認] 大和証券は約11万人の情報、識別できない問い合わせも含め約22万件への影響の可能性を公表しました。 (s2; p.2 §2)
 - [confirmed / 公表で確認] シチズン時計は約10万人、損保ジャパンは約6万件の延べ問い合わせへの影響の可能性を公表しました。 (s3, s4; シチズン §漏えいの可能性がある情報 / 損保ジャパン §2)
+- [confirmed / 公表で確認] オリックス生命の約26,500件は、同一顧客の複数回の問い合わせを含み、医療情報を含む可能性があります。 (s5; §1)
+- [confirmed / 公表で確認] 東武鉄道は、同社情報の閲覧・取得の形跡は確認されていないとの委託先報告を公表しました。同社システムへの侵入も確認されていません。 (s6; §1)
 
 ## 公表された対応
 
@@ -48,7 +50,9 @@ Rules: SEC-002, SEC-005, SEC-006, SEC-008, SEC-009, SEC-012, SEC-015
 
 ## 出典
 
-- s1: [i-askへの不正アクセスに関する発表](https://scala-com.jp/news/2026/10-1/) — スカラコミュニケーションズ; vendor; published: 2026-10-06; reviewed: 2026-10-09
+- s1: [i-askへの不正アクセスに関する発表](https://scala-com.jp/news/2026/10-1/) — スカラコミュニケーションズ; vendor; published: 2026-10-06; reviewed: 2026-10-19
 - s2: [外部委託先への不正アクセスによるお客様情報の漏洩の可能性について](https://ssl4.eir-parts.net/doc/8601/tdnet/2891437/00.pdf) — 大和証券; organization; published: 2026-10-05; reviewed: 2026-10-09
 - s3: [委託先への不正アクセスに関する発表](https://www.citizen.co.jp/release/news/detail/2026/20261006.html) — シチズン時計; organization; published: 2026-10-06; reviewed: 2026-10-09
 - s4: [外部委託先への不正アクセスによる情報漏えいの可能性について](https://www.sompo-japan.co.jp/-/media/SJNK/files/news/2026/20261007_1.pdf?la=ja-JP) — 損保ジャパン; organization; published: 2026-10-07; reviewed: 2026-10-09
+- s5: [当社の委託先における個人情報漏えいの可能性について](https://www.orixlife.co.jp/b3cd698c38a74ebea491976d56455ecd/77eb698f1d9543a39440e414940f9f4d/n261008.pdf) — オリックス生命保険; organization; published: 2026-10-08; reviewed: 2026-10-19
+- s6: [委託先事業者への不正アクセスについて（お知らせ）](https://www.tobu.co.jp/cms-pdf/news/202610071207283jmSLfzYw1kGLERiQZs7tA.pdf) — 東武鉄道; organization; published: 2026-10-07; reviewed: 2026-10-19

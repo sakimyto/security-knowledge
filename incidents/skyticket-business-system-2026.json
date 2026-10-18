@@ -1,0 +1,103 @@
+{
+  "id": "skyticket-business-system-2026",
+  "organization": "アドベンチャー",
+  "title": {
+    "ja": "skyticket：業務管理システムの脆弱性を悪用したアクセス",
+    "en": "skyticket: vulnerability exploitation in a business-management system"
+  },
+  "summary": {
+    "ja": "9月20日に業務管理システムの脆弱性を悪用されました。返金先口座等の17,780件が流出または流出の恐れの対象で、重複を含み、一部は件数も調査中です。",
+    "en": "A business-system vulnerability was exploited on September 20. Exposure affects 17,780 records including refund-account details; duplicates are included and some counts remain under investigation."
+  },
+  "occurredAt": "2026-09-20",
+  "disclosedAt": "2026-10-09",
+  "reviewedAt": "2026-10-19",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "9月20日に業務管理システムの脆弱性を悪用され、9月28日に発覚しました。",
+        "en": "A business-system vulnerability was exploited on September 20 and detected on September 28."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§1(2)"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "返金先口座情報等を含む17,780件は重複を含みます。メール・生年月日68件、住所18件は内訳であり加算しません。",
+        "en": "The 17,780 records include duplicates and refund-account details. The 68 email/birth-date records and 18 address records are subsets, not additional totals."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§1(2)"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-20",
+      "text": {
+        "ja": "業務管理システムへ不正アクセス。",
+        "en": "Unauthorized business-system access occurred."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-09-28",
+      "text": {
+        "ja": "不正アクセスが発覚。",
+        "en": "Unauthorized access detected."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "不正アクセス経路の遮断と脆弱性対策、個人情報保護委員会への報告を公表しました。",
+        "en": "The company reported blocking access paths, addressing vulnerabilities and notifying the privacy regulator."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "§3"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
+      "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した公表資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed disclosures do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "製品、CVE、侵入前の修正提供状況と流出の確定範囲は未公表です。既知脆弱性の放置とは判断しません。",
+      "en": "Product, CVE, pre-intrusion patch availability and confirmed exfiltration scope are undisclosed; patch neglect is not established."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "不正アクセスによるお客様情報の流出に関するお詫びとお知らせ",
+      "url": "https://jp.adventurekk.com/news/apology-notice-unauthorized-access-data-leak/",
+      "publisher": "アドベンチャー",
+      "kind": "organization",
+      "publishedAt": "2026-10-09",
+      "reviewedAt": "2026-10-19"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-008", "SEC-009", "SEC-012"]
+}

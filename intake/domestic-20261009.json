@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "id": "domestic-20261009",
   "receivedAt": "2026-10-09",
-  "reviewedAt": "2026-10-09",
+  "reviewedAt": "2026-10-19",
   "year": 2026,
   "yearProvenance": "user-confirmed-2026",
   "originalSourceUrl": null,
@@ -640,24 +640,26 @@
         },
         "provenance": "user-supplied-unverified"
       },
-      "status": "verified-disclosure-partial",
-      "reviewedAt": "2026-10-09",
-      "catalogIncidentIds": [],
+      "status": "catalogued-partial",
+      "reviewedAt": "2026-10-19",
+      "catalogIncidentIds": ["omu-ransomware-2026"],
       "verified": {
         "summary": {
-          "ja": "大学の臨時サイトと10月5日会見資料は確認済みです。サーバー停止と一部データ改ざんの形跡は記載されていますが、13万人超の個人情報流出や侵入原因は確認できません。障害を確定した情報漏えい事故へ変換しません。",
-          "en": "Official outage notices and the October 5 briefing confirm server stoppages and traces of data alteration. They do not establish the supplied 130,000-person leakage or entry route. Retain this as a partial disclosure, outside the incident catalog."
+          "ja": "大学は障害をランサムウェア攻撃によるものと判断したと公表しました。事故DBへ接続しましたが、個人情報流出、入力の13万人超と侵入方法は未確認です。",
+          "en": "The university attributed the outage to ransomware. It is now linked to the catalog, while personal-data leakage, the supplied count above 130,000 people and the entry mechanism remain unverified."
         },
         "disclosedAt": "2026-10-02",
         "sourceUrls": [
-          "https://www.omu.moe/news-files/2026-10-06-7fb5a624/press-conference-materials_20261005.pdf"
+          "https://www.omu.moe/news-files/2026-10-06-7fb5a624/press-conference-materials_20261005.pdf",
+          "https://www.omu.moe/news/2026-10-06-7fb5a624.html",
+          "https://www.omu.moe/news/2026-10-08-c5873744.html"
         ],
         "claims": []
       },
       "gaps": [
         {
-          "ja": "大学の臨時サイトと10月5日会見資料は確認済みです。サーバー停止と一部データ改ざんの形跡は記載されていますが、13万人超の個人情報流出や侵入原因は確認できません。障害を確定した情報漏えい事故へ変換しません。",
-          "en": "Primary evidence does not yet establish the supplied incident scope, count or cause; retain this candidate for follow-up."
+          "ja": "個人情報流出の有無、入力の13万人超と侵入方法は未確認です。",
+          "en": "Personal-data leakage, the supplied count above 130,000 people and the entry mechanism remain unverified."
         }
       ],
       "discoveryUrls": ["https://www.pahoo.org/e-soul/privacy/casestudy/case-023-02.shtm"],
@@ -666,7 +668,9 @@
         "https://www.omu.moe/",
         "https://www.omu.moe/news-files/2026-10-06-7fb5a624/press-conference-materials_20261005.pdf",
         "https://www.omu.moe/news/2026-10-02-outage-1.html",
-        "https://www.omu.moe/news/2026-10-02-outage-2.html"
+        "https://www.omu.moe/news/2026-10-02-outage-2.html",
+        "https://www.omu.moe/news/2026-10-06-7fb5a624.html",
+        "https://www.omu.moe/news/2026-10-08-c5873744.html"
       ],
       "retrievalFailures": [],
       "retry": true
