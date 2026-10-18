@@ -1,7 +1,7 @@
 {
   "id": "SEC-003",
-  "version": "1.1.0",
-  "updatedAt": "2026-10-09",
+  "version": "1.1.1",
+  "updatedAt": "2026-10-19",
   "title": {
     "ja": "端末とセッションの失効経路を確認する",
     "en": "Inspect endpoints and session revocation"
@@ -68,6 +68,7 @@
     "kyorin-remote-pc-2026",
     "logicvein-2025",
     "nice-mail-2026",
+    "nikkei-m365-2026",
     "nikkei-workspace-2026",
     "okta-support-2023",
     "omic-support-scam-2026",
@@ -76,6 +77,7 @@
     "quick-2025",
     "rakuten-books-pc-2026",
     "rust-arrayref-2026",
+    "toyobo-email-2026",
     "trunk-mail-2026",
     "uber-2022"
   ],

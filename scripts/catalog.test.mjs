@@ -19,7 +19,7 @@ test('unknown disclosure dates remain null rather than using a supplied listing 
 
 test('primary sources, references, and bidirectional links validate', () => {
   assert.deepEqual(validateCatalog(catalog), [])
-  assert.equal(catalog.incidents.length, 141)
+  assert.equal(catalog.incidents.length, 150)
   assert.equal(catalog.rules.length, 16)
   assert.equal(
     catalog.incidents.filter((incident) => incident.outcome === 'exposure-only').length,
@@ -31,10 +31,10 @@ test('recent records preserve unknown causes and distinguish evaluated AI from a
   const recent = catalog.incidents.filter(
     (item) =>
       item.disclosedAt !== null &&
-      item.disclosedAt >= '2025-10-12' &&
-      item.disclosedAt <= '2026-10-12',
+      item.disclosedAt >= '2025-10-19' &&
+      item.disclosedAt <= '2026-10-19',
   )
-  assert.equal(recent.length, 125)
+  assert.equal(recent.length, 134)
   assert.equal(recent.filter((item) => item.ai.status === 'confirmed').length, 5)
   assert.equal(recent.filter((item) => item.ai.status === 'inferred').length, 1)
   const evaluated = recent.find((item) => item.id === 'anthropic-unintended-model-actions-2026')

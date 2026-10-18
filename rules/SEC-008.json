@@ -1,7 +1,7 @@
 {
   "id": "SEC-008",
-  "version": "1.1.1",
-  "updatedAt": "2026-10-12",
+  "version": "1.1.2",
+  "updatedAt": "2026-10-19",
   "title": {
     "ja": "侵害後に広がる管理権限を確認する",
     "en": "Inspect privileges enabling lateral access"
@@ -61,6 +61,7 @@
     "anthropic-claude-code-abuse-2025",
     "anthropic-cyber-evals-2026",
     "applynow-bi-2026",
+    "arcadia-raiden-2026",
     "asahi-pharma-digital-2026",
     "askul-2025",
     "campfire-2026",
@@ -115,6 +116,7 @@
     "logicvein-2025",
     "media4u-account-list-2026",
     "mediaplex-2026",
+    "medley-atlink-2026",
     "metabase-2026",
     "mie-school-form-exposure-2026",
     "mitsui-fudosan-directory-2026",
@@ -125,6 +127,7 @@
     "nihontelenet-ransomware-2026",
     "nostrum-smartspi-2026",
     "omic-support-scam-2026",
+    "omu-ransomware-2026",
     "openai-huggingface-eval-2026",
     "openai-mixpanel-2025",
     "osaka-high-court-teams-2026",
@@ -143,6 +146,8 @@
     "scala-iask-2026",
     "seicomart-app-2026",
     "shueisha-hapicomi-2026",
+    "skyticket-business-system-2026",
+    "skyticket-server-2026",
     "snowflake-unc5537-2024",
     "temairazu-2026",
     "times-car-2026",
@@ -154,6 +159,7 @@
     "weverse-payment-api-2026",
     "white-essence-2026",
     "yakiniku-king-2026",
+    "yamato-pay-later-2026",
     "yellowhat-booking-2026"
   ],
   "references": [],

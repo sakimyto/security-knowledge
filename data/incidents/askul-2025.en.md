@@ -1,6 +1,6 @@
 # askul-2025 — ASKUL: access through an MFA exception
 
-Incident | Catalog: 0.7.0 | Record SHA-256: dd4e201cf595e3657dda8f4b8b90eadee70252112457fe137712945bea0982ed
+Incident | Catalog: 0.8.0 | Record SHA-256: dd4e201cf595e3657dda8f4b8b90eadee70252112457fe137712945bea0982ed
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

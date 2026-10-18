@@ -51,7 +51,7 @@ test('duplicate rows, false catalog membership, dangling evidence and unsafe URL
       data.records[0].supplied.date = '2026-02-30'
     },
     (data) => {
-      data.records[0].reviewedAt = '2026-10-10'
+      data.records[0].reviewedAt = '2026-10-20'
     },
   ]) {
     const data = intake()
