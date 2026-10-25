@@ -1,6 +1,6 @@
 # medley-atlink-2026 — アットリンク：医療機関向け予約基盤への不正アクセス
 
-事例 | Catalog: 0.8.0 | Record SHA-256: fd9ef8ae2f57b80f0096bd8c7753d4df027eb07a19ab42ff4128fe3d4ca88b00
+事例 | Catalog: 0.9.0 | Record SHA-256: fd9ef8ae2f57b80f0096bd8c7753d4df027eb07a19ab42ff4128fe3d4ca88b00
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

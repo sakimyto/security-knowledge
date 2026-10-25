@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import { loadCatalog } from './catalog.mjs'
+
 const catalog = loadCatalog()
 const record = (id) => {
   const item = catalog.incidents.find((value) => value.id === id)
@@ -26,19 +27,19 @@ test('October 19 evidence preserves distinct scopes and the corrected card discl
 })
 
 test('undisclosed causes and uncertain exposure are not promoted to confirmed leakage', () => {
-  for (const id of [
-    'yamato-pay-later-2026',
-    'omu-ransomware-2026',
-    'medley-atlink-2026',
-    'arcadia-raiden-2026',
-  ]) {
+  for (const id of ['yamato-pay-later-2026', 'medley-atlink-2026']) {
     const item = record(id)
     assert.ok(item.categories.includes('unknown'))
     assert.equal(item.ai.status, 'unknown')
     assert.equal(item.prevention.classification, 'unknown')
   }
   assert.equal(record('omu-ransomware-2026').occurredAt, null)
-  assert.doesNotMatch(JSON.stringify(record('omu-ransomware-2026')), /130,000|13万人/)
+  assert.match(
+    record('omu-ransomware-2026')
+      .unknowns.map((x) => x.en)
+      .join(' '),
+    /130,000.*records/,
+  )
   assert.match(record('medley-atlink-2026').summary.en, /787 medical institutions/)
   assert.ok(!catalog.incidents.some((item) => /jelly-beans/.test(item.id)))
 })

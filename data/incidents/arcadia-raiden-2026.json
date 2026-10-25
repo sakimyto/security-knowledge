@@ -6,15 +6,16 @@
     "en": "SpeeCAN RAIDEN: unauthorized access affecting disaster and emergency messaging"
   },
   "summary": {
-    "ja": "10月11日に不審な挙動を確認しました。防災配信のメールアドレス約313.6万件等に漏えいの可能性があり、続報はNET119・119RAIDENへの影響も説明しています。",
-    "en": "Suspicious activity was detected on October 11. About 3.136 million disaster-messaging email addresses may be exposed; a follow-up also describes potential NET119 and 119RAIDEN impact."
+    "ja": "提供元は、メディアサーバーのパストラバーサルで設定内のキーを取得され、ID総当たりで内部情報へアクセスされたと説明しました。不正メール1,423,428通の送信も確認しています。漏えいの人数・全範囲は調査中です。",
+    "en": "The provider describes traversal of its media server, theft of a configuration key and account-ID brute force to access internal data. It confirmed 1,423,428 unauthorized messages; leaked-person counts and full scope remain under investigation."
   },
   "occurredAt": null,
   "disclosedAt": "2026-10-13",
-  "reviewedAt": "2026-10-19",
+  "reviewedAt": "2026-10-26",
   "outcome": "confirmed-breach",
   "categories": [
-    "unknown"
+    "implementation",
+    "credentials"
   ],
   "cves": [],
   "claims": [
@@ -53,6 +54,31 @@
         "s1"
       ],
       "locator": "10月16日18時10分 第11報"
+    },
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "メディアサーバーのディレクトリパストラバーサルで設定ファイルを取得され、サービス間ログイン用キーとアカウントIDへの総当たりで内部情報を取得されたと説明しています。",
+        "en": "The provider reports directory traversal exposing a configuration file, followed by use of a service-login key and account-ID brute force to obtain internal information."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s3",
+        "s4"
+      ],
+      "locator": "10月19日報告 p.2 【不正アクセス】 / 10月23日報告 §1 原因"
+    },
+    {
+      "topic": "abuse",
+      "text": {
+        "ja": "10月13日01:17〜07:16に不正メール1,423,428通を送信。少なくとも869,575通は社内保有のメールアドレスへの配信ではないと説明しています。",
+        "en": "1,423,428 messages were sent without authorization on October 13 from 01:17 to 07:16; at least 869,575 were not sent to addresses held by the provider."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s4"
+      ],
+      "locator": "§2 状況"
     }
   ],
   "timeline": [
@@ -85,6 +111,26 @@
       "sourceIds": [
         "s1"
       ]
+    },
+    {
+      "date": "2026-10-19",
+      "text": {
+        "ja": "侵入経路・不正メール送信を公表。",
+        "en": "Disclosed entry mechanism and unauthorized email sending."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "text": {
+        "ja": "説明資料と報告書を公開。",
+        "en": "Published explanatory material and report."
+      },
+      "sourceIds": [
+        "s4"
+      ]
     }
   ],
   "reportedActions": [
@@ -99,16 +145,30 @@
         "s1"
       ],
       "locator": "第9報 / 第11報 / 10月13日状況報告"
+    },
+    {
+      "topic": "response",
+      "text": {
+        "ja": "侵入経路修正とキー・パスワード見直し、社内LLMによる診断・コードレビューを実施したと説明しました。攻撃者のAI利用を示す情報ではありません。",
+        "en": "Reported entry-path fixes, credential review and internal-LLM vulnerability diagnosis/code review; this is defensive use and does not establish attacker AI use."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s3",
+        "s4"
+      ],
+      "locator": "10月19日報告 【今後の対応について】 / 10月23日報告 §4"
     }
   ],
   "prevention": {
     "classification": "unknown",
     "assessment": {
-      "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
-      "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+      "ja": "公表されたパストラバーサル経路、設定内のキー、認証と操作ログを点検します。当時の制御全体と攻撃の全容は未確定で、回避可能性の断定はしません。",
+      "en": "Inspect the disclosed traversal path, configuration key, authentication and logs. Prior controls and full attack scope are unresolved; avoidability is not asserted."
     },
     "sourceIds": [
-      "s1"
+      "s3",
+      "s4"
     ]
   },
   "ai": {
@@ -120,8 +180,8 @@
   },
   "unknowns": [
     {
-      "ja": "具体的な侵入方法、CVE、重複除去後の人数と漏えいの確定範囲は未公表です。関連サービス・自治体の発表を別事故として加算しません。",
-      "en": "The entry mechanism, CVE, deduplicated person count and confirmed leakage scope are undisclosed. Related service/customer announcements are not counted as separate incidents."
+      "ja": "漏えい人数と確定した全対象範囲、CVE、攻撃者AIは未確定です。メールアドレス・電話・FAX件数、不正メール送信数、NET119の9,020件を人数として合算しません。",
+      "en": "Deduplicated leaked-person counts, full confirmed scope, CVE and attacker AI remain unresolved. Email/phone/fax records, sent-message totals and 9,020 NET119 records are not summed as people."
     }
   ],
   "sources": [
@@ -132,7 +192,7 @@
       "publisher": "アルカディア",
       "kind": "vendor",
       "publishedAt": "2026-10-13",
-      "reviewedAt": "2026-10-19"
+      "reviewedAt": "2026-10-26"
     },
     {
       "id": "s2",
@@ -142,9 +202,28 @@
       "kind": "vendor",
       "publishedAt": "2026-10-16",
       "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s3",
+      "title": "不正アクセスの経過と当社の対処について",
+      "url": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf",
+      "publisher": "アルカディア",
+      "publishedAt": "2026-10-19",
+      "reviewedAt": "2026-10-26",
+      "kind": "vendor"
+    },
+    {
+      "id": "s4",
+      "title": "【報告書】不正アクセスによる個人情報漏えいの可能性に関して",
+      "url": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/%E3%80%90%E5%A0%B1%E5%91%8A%E6%9B%B8%E3%80%91%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E5%80%8B%E2%BC%88%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AE%E5%8F%AF%E8%83%BD%E6%80%A7%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A620261023.pdf",
+      "publisher": "アルカディア",
+      "publishedAt": "2026-10-23",
+      "reviewedAt": "2026-10-26",
+      "kind": "vendor"
     }
   ],
   "ruleIds": [
+    "SEC-005",
     "SEC-006",
     "SEC-008",
     "SEC-009",

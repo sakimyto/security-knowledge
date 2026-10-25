@@ -1,6 +1,6 @@
 # scala-iask-2026 — スカラi-ask：管理画面への不正ログインが同一サーバーの利用企業へ波及
 
-事例 | Catalog: 0.8.0 | Record SHA-256: 87b4cc8070e85a4b82540cef8dc4e6edffaf6a3101d15db5bba7527e706fd583
+事例 | Catalog: 0.9.0 | Record SHA-256: 87b4cc8070e85a4b82540cef8dc4e6edffaf6a3101d15db5bba7527e706fd583
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

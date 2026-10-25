@@ -6,12 +6,12 @@
     "en": "IDCF Cloud: ransomware outage and data-recovery impact"
   },
   "summary": {
-    "ja": "10月7日にランサムウェア攻撃による障害が発生しました。影響対象は495の企業・自治体です。一部ゾーンのデータ復元は顧客が保持するバックアップからのみ可能との見通しを公表しました。侵入経路は調査中です。",
-    "en": "An October 7 ransomware outage affected 495 organizations. The provider expected recovery in affected zones to depend on customers’ own backups; entry remained under investigation."
+    "ja": "495の企業・自治体に影響したランサムウェア障害について、10月14日に194顧客のスナップショット取出しが可能と見通しを訂正しました。仮想サーバーの外部流出なしとの判断と、ポータル48社への不正照会を別に公表しています。",
+    "en": "For the ransomware outage affecting 495 organizations, the October 14 update established snapshot extraction for 194 customers. The provider separately reported no external VM-data leakage and unauthorized portal queries affecting 48 companies."
   },
   "occurredAt": "2026-10-07",
   "disclosedAt": "2026-10-07",
-  "reviewedAt": "2026-10-12",
+  "reviewedAt": "2026-10-26",
   "outcome": "confirmed-breach",
   "categories": ["unknown"],
   "cves": [],
@@ -39,12 +39,32 @@
     {
       "topic": "recovery",
       "text": {
-        "ja": "tesla・henry・pascal・jouleゾーンのデータは取り出し・復元が困難な見通しで、顧客自身のバックアップからのみ復元可能との見解です。",
-        "en": "Recovery in tesla, henry, pascal and joule zones was expected to require customers’ own backups."
+        "ja": "10月14日に、影響495組織のうちスナップショットを利用していた194顧客のバックアップ取出しが可能と確認しました。復元可否と提供方法は個別案内であり、全顧客の復元完了ではありません。",
+        "en": "On October 14 snapshot extraction was confirmed possible for 194 of 495 affected organizations. Restoration feasibility and delivery were handled individually; full recovery was not established."
       },
       "status": "confirmed",
-      "sourceIds": ["s3"],
-      "locator": "■現在の調査状況"
+      "sourceIds": ["s5"],
+      "locator": "§2 ①"
+    },
+    {
+      "topic": "vm-data-investigation",
+      "text": {
+        "ja": "提供元は4ゾーンの仮想サーバーデータの照会・持出しを示す痕跡や裏付けを確認せず、外部流出はなかったと判断しています。",
+        "en": "The provider found no traces or corroboration of VM-data querying or exfiltration in the four zones and assessed that no external leakage occurred."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s5"],
+      "locator": "§1 調査結果"
+    },
+    {
+      "topic": "portal-query",
+      "text": {
+        "ja": "ポータルで48社の登録情報が不正照会され、2社各1件のメールアドレスが個人名を含む可能性があります。外部持出しの痕跡は未確認です。",
+        "en": "Registration data for 48 companies were queried without authorization; one address at each of two firms may contain a personal name. External exfiltration traces were not found."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s5"],
+      "locator": "§3"
     }
   ],
   "timeline": [
@@ -71,6 +91,22 @@
         "en": "Published incident-response and recovery organization."
       },
       "sourceIds": ["s4"]
+    },
+    {
+      "date": "2026-10-14",
+      "text": {
+        "ja": "調査結果とスナップショット取出しの見通しを公表。",
+        "en": "Published investigation findings and revised snapshot extraction outlook."
+      },
+      "sourceIds": ["s5"]
+    },
+    {
+      "date": "2026-10-18",
+      "text": {
+        "ja": "バックアップサービスの提供再開を公表。スナップショット機能は停止継続。",
+        "en": "Announced backup service resumption; snapshot functionality remained suspended."
+      },
+      "sourceIds": ["s6"]
     }
   ],
   "reportedActions": [
@@ -83,6 +119,16 @@
       "status": "confirmed",
       "sourceIds": ["s3", "s4"],
       "locator": "第3報 ■現時点の対応状況 / 第4報 ＜お客さま対応について＞"
+    },
+    {
+      "topic": "backup-service",
+      "text": {
+        "ja": "稼働継続中の対象リージョン向けにバックアップサービスを再開しました。スナップショット機能は安全確認で停止中です。",
+        "en": "Resumed the backup service for regions still running; snapshot functionality remained suspended for safety checks."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s6"],
+      "locator": "本文"
     }
   ],
   "prevention": {
@@ -102,8 +148,8 @@
   },
   "unknowns": [
     {
-      "ja": "495は企業・自治体数で、漏えい人数ではありません。情報取得の確定範囲、CVE、復旧完了時期は確認した資料で未確定です。他リージョンの管理画面停止は安全確認のための措置です。",
-      "en": "495 counts organizations, not leaked people. Extraction scope, CVE and recovery completion remain unresolved; other-console suspension was precautionary."
+      "ja": "495は企業・自治体数、194はスナップショット取出し可能な顧客数、48は不正照会された契約企業数です。重複排除した人数へ換算しません。侵入方法、CVEと全復旧完了時期は未確定です。",
+      "en": "495 counts affected organizations, 194 customers with extractable snapshots, and 48 portal-query companies. These are not deduplicated people. Entry, CVE and full recovery timing remain unresolved."
     }
   ],
   "sources": [
@@ -142,6 +188,24 @@
       "kind": "vendor",
       "publishedAt": "2026-10-09",
       "reviewedAt": "2026-10-12"
+    },
+    {
+      "id": "s5",
+      "title": "【第5報】不正アクセスによる障害に関する調査の進捗について",
+      "url": "https://www.idcf.jp/news/topics/20261014001",
+      "publisher": "IDCフロンティア",
+      "publishedAt": "2026-10-14",
+      "reviewedAt": "2026-10-26",
+      "kind": "vendor"
+    },
+    {
+      "id": "s6",
+      "title": "【第6報】バックアップサービスの提供再開について",
+      "url": "https://www.idcf.jp/news/topics/20261018001",
+      "publisher": "IDCフロンティア",
+      "publishedAt": "2026-10-18",
+      "reviewedAt": "2026-10-26",
+      "kind": "vendor"
     }
   ],
   "ruleIds": ["SEC-006", "SEC-008", "SEC-009", "SEC-013"]

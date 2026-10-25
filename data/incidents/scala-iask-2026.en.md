@@ -1,6 +1,6 @@
 # scala-iask-2026 — Scala i-ask: administrator intrusion affects customers on a shared server
 
-Incident | Catalog: 0.8.0 | Record SHA-256: 87b4cc8070e85a4b82540cef8dc4e6edffaf6a3101d15db5bba7527e706fd583
+Incident | Catalog: 0.9.0 | Record SHA-256: 87b4cc8070e85a4b82540cef8dc4e6edffaf6a3101d15db5bba7527e706fd583
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

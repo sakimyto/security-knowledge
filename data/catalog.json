@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.8.0",
-  "updatedAt": "2026-10-19",
+  "version": "0.9.0",
+  "updatedAt": "2026-10-26",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,8 +10,8 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外150事例と16点検ルールを収録した選定DBです。公表日が2025-10-19〜2026-10-19の134事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
-    "en": "A curated database of 150 primary-source incident records and 16 inspection rules: 134 disclosed during 2025-10-19–2026-10-19, 11 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
+    "ja": "一次資料を確認した国内外153事例と16点検ルールを収録した選定DBです。公表日が2025-10-26〜2026-10-26の136事例、期間外の12事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
+    "en": "A curated database of 153 primary-source incident records and 16 inspection rules: 136 disclosed during 2025-10-26–2026-10-26, 12 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
   },
   "incidents": [
     {
@@ -1038,15 +1038,16 @@
         "en": "SpeeCAN RAIDEN: unauthorized access affecting disaster and emergency messaging"
       },
       "summary": {
-        "ja": "10月11日に不審な挙動を確認しました。防災配信のメールアドレス約313.6万件等に漏えいの可能性があり、続報はNET119・119RAIDENへの影響も説明しています。",
-        "en": "Suspicious activity was detected on October 11. About 3.136 million disaster-messaging email addresses may be exposed; a follow-up also describes potential NET119 and 119RAIDEN impact."
+        "ja": "提供元は、メディアサーバーのパストラバーサルで設定内のキーを取得され、ID総当たりで内部情報へアクセスされたと説明しました。不正メール1,423,428通の送信も確認しています。漏えいの人数・全範囲は調査中です。",
+        "en": "The provider describes traversal of its media server, theft of a configuration key and account-ID brute force to access internal data. It confirmed 1,423,428 unauthorized messages; leaked-person counts and full scope remain under investigation."
       },
       "occurredAt": null,
       "disclosedAt": "2026-10-13",
-      "reviewedAt": "2026-10-19",
+      "reviewedAt": "2026-10-26",
       "outcome": "confirmed-breach",
       "categories": [
-        "unknown"
+        "implementation",
+        "credentials"
       ],
       "cves": [],
       "claims": [
@@ -1085,6 +1086,31 @@
             "s1"
           ],
           "locator": "10月16日18時10分 第11報"
+        },
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "メディアサーバーのディレクトリパストラバーサルで設定ファイルを取得され、サービス間ログイン用キーとアカウントIDへの総当たりで内部情報を取得されたと説明しています。",
+            "en": "The provider reports directory traversal exposing a configuration file, followed by use of a service-login key and account-ID brute force to obtain internal information."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3",
+            "s4"
+          ],
+          "locator": "10月19日報告 p.2 【不正アクセス】 / 10月23日報告 §1 原因"
+        },
+        {
+          "topic": "abuse",
+          "text": {
+            "ja": "10月13日01:17〜07:16に不正メール1,423,428通を送信。少なくとも869,575通は社内保有のメールアドレスへの配信ではないと説明しています。",
+            "en": "1,423,428 messages were sent without authorization on October 13 from 01:17 to 07:16; at least 869,575 were not sent to addresses held by the provider."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s4"
+          ],
+          "locator": "§2 状況"
         }
       ],
       "timeline": [
@@ -1117,6 +1143,26 @@
           "sourceIds": [
             "s1"
           ]
+        },
+        {
+          "date": "2026-10-19",
+          "text": {
+            "ja": "侵入経路・不正メール送信を公表。",
+            "en": "Disclosed entry mechanism and unauthorized email sending."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "text": {
+            "ja": "説明資料と報告書を公開。",
+            "en": "Published explanatory material and report."
+          },
+          "sourceIds": [
+            "s4"
+          ]
         }
       ],
       "reportedActions": [
@@ -1131,16 +1177,30 @@
             "s1"
           ],
           "locator": "第9報 / 第11報 / 10月13日状況報告"
+        },
+        {
+          "topic": "response",
+          "text": {
+            "ja": "侵入経路修正とキー・パスワード見直し、社内LLMによる診断・コードレビューを実施したと説明しました。攻撃者のAI利用を示す情報ではありません。",
+            "en": "Reported entry-path fixes, credential review and internal-LLM vulnerability diagnosis/code review; this is defensive use and does not establish attacker AI use."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3",
+            "s4"
+          ],
+          "locator": "10月19日報告 【今後の対応について】 / 10月23日報告 §4"
         }
       ],
       "prevention": {
         "classification": "unknown",
         "assessment": {
-          "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
-          "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+          "ja": "公表されたパストラバーサル経路、設定内のキー、認証と操作ログを点検します。当時の制御全体と攻撃の全容は未確定で、回避可能性の断定はしません。",
+          "en": "Inspect the disclosed traversal path, configuration key, authentication and logs. Prior controls and full attack scope are unresolved; avoidability is not asserted."
         },
         "sourceIds": [
-          "s1"
+          "s3",
+          "s4"
         ]
       },
       "ai": {
@@ -1152,8 +1212,8 @@
       },
       "unknowns": [
         {
-          "ja": "具体的な侵入方法、CVE、重複除去後の人数と漏えいの確定範囲は未公表です。関連サービス・自治体の発表を別事故として加算しません。",
-          "en": "The entry mechanism, CVE, deduplicated person count and confirmed leakage scope are undisclosed. Related service/customer announcements are not counted as separate incidents."
+          "ja": "漏えい人数と確定した全対象範囲、CVE、攻撃者AIは未確定です。メールアドレス・電話・FAX件数、不正メール送信数、NET119の9,020件を人数として合算しません。",
+          "en": "Deduplicated leaked-person counts, full confirmed scope, CVE and attacker AI remain unresolved. Email/phone/fax records, sent-message totals and 9,020 NET119 records are not summed as people."
         }
       ],
       "sources": [
@@ -1164,7 +1224,7 @@
           "publisher": "アルカディア",
           "kind": "vendor",
           "publishedAt": "2026-10-13",
-          "reviewedAt": "2026-10-19"
+          "reviewedAt": "2026-10-26"
         },
         {
           "id": "s2",
@@ -1174,9 +1234,28 @@
           "kind": "vendor",
           "publishedAt": "2026-10-16",
           "reviewedAt": "2026-10-19"
+        },
+        {
+          "id": "s3",
+          "title": "不正アクセスの経過と当社の対処について",
+          "url": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/2026_10_19AccessIncident.pdf",
+          "publisher": "アルカディア",
+          "publishedAt": "2026-10-19",
+          "reviewedAt": "2026-10-26",
+          "kind": "vendor"
+        },
+        {
+          "id": "s4",
+          "title": "【報告書】不正アクセスによる個人情報漏えいの可能性に関して",
+          "url": "https://raiden.site.ktaiwork.jp/wp-content/uploads/sites/2/2026/10/%E3%80%90%E5%A0%B1%E5%91%8A%E6%9B%B8%E3%80%91%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E5%80%8B%E2%BC%88%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AE%E5%8F%AF%E8%83%BD%E6%80%A7%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A620261023.pdf",
+          "publisher": "アルカディア",
+          "publishedAt": "2026-10-23",
+          "reviewedAt": "2026-10-26",
+          "kind": "vendor"
         }
       ],
       "ruleIds": [
+        "SEC-005",
         "SEC-006",
         "SEC-008",
         "SEC-009",
@@ -4048,7 +4127,7 @@
       },
       "occurredAt": null,
       "disclosedAt": "2026-10-05",
-      "reviewedAt": "2026-10-12",
+      "reviewedAt": "2026-10-26",
       "outcome": "confirmed-breach",
       "categories": [
         "unknown"
@@ -4125,6 +4204,16 @@
             "s1",
             "s2"
           ]
+        },
+        {
+          "date": "2026-10-09",
+          "text": {
+            "ja": "企業向けのアクセス条件を改めて周知。",
+            "en": "Reiterated company access conditions."
+          },
+          "sourceIds": [
+            "s5"
+          ]
         }
       ],
       "reportedActions": [
@@ -4152,6 +4241,18 @@
             "s4"
           ],
           "locator": "Ekstra kontrol ved telefoniske henvendelser"
+        },
+        {
+          "topic": "access-guidance",
+          "text": {
+            "ja": "10月9日のCPR管理者の周知は、アクセス権を持つ企業に安全管理責任者の配置と照会件数の継続監視を求めています。",
+            "en": "CPR’s October 9 reminder requires companies with access to have a security officer and continuously monitor lookup counts."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s5"
+          ],
+          "locator": "Nyhed 本文"
         }
       ],
       "prevention": {
@@ -4186,7 +4287,7 @@
           "publisher": "デンマーク研究・教育・デジタル化省",
           "kind": "government",
           "publishedAt": "2026-10-05",
-          "reviewedAt": "2026-10-12"
+          "reviewedAt": "2026-10-26"
         },
         {
           "id": "s2",
@@ -4214,6 +4315,15 @@
           "kind": "government",
           "publishedAt": "2026-10-05",
           "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s5",
+          "title": "Indskærpelse af regler og vilkår for din virksomheds adgang til CPR",
+          "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/indskaerpelse-af-regler-og-vilkaar-for-din-virksomheds-adgang-til-cpr",
+          "publisher": "CPR管理者",
+          "publishedAt": "2026-10-09",
+          "reviewedAt": "2026-10-26",
+          "kind": "government"
         }
       ],
       "ruleIds": [
@@ -5771,6 +5881,139 @@
       ]
     },
     {
+      "id": "france-refrigeration-2026",
+      "organization": "CERT-FRが確認した冷凍冷蔵制御装置の侵害",
+      "title": {
+        "ja": "フランス：冷凍冷蔵設備の遠隔制御装置の侵害",
+        "en": "France: compromises of remote refrigeration controllers"
+      },
+      "summary": {
+        "ja": "CERT-FRは冷凍冷蔵設備の遠隔制御装置で多数の侵害を把握したと公表しました。インターネットへの管理画面の露出を解消するよう求めています。個別の店舗数や侵入方法は未確定です。",
+        "en": "CERT-FR reported numerous compromises of remote refrigeration controllers and urged removal of internet-exposed management interfaces. Store counts and exact intrusion methods are unresolved."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-10-12",
+      "reviewedAt": "2026-10-26",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "incident",
+          "text": {
+            "ja": "CERT-FRはDanfoss AK-SM・AK-SC、Copeland xweb、Dixell xwebの多数の侵害を把握したと説明しています。",
+            "en": "CERT-FR reports numerous compromises involving Danfoss AK-SM/AK-SC, Copeland xweb and Dixell xweb controllers."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Résumé / Systèmes affectés"
+        },
+        {
+          "topic": "exposure",
+          "text": {
+            "ja": "CERT-FRはインターネットへの管理画面公開を不適切とし、被害の有無を分けて復旧手順を案内しています。",
+            "en": "CERT-FR warns against internet-exposed management interfaces and distinguishes recovery guidance for compromised and uncompromised units."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Résumé / Solutions"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-12",
+          "text": {
+            "ja": "CERT-FRが初版を公開。",
+            "en": "CERT-FR published the initial alert."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-13",
+          "text": {
+            "ja": "対象機器を追加。",
+            "en": "Added other targeted equipment."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "text": {
+            "ja": "推奨対応を更新。",
+            "en": "Updated recommended actions."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "guidance",
+          "text": {
+            "ja": "CERT-FRは外部公開の停止、安全なVPN・保護ネットワーク経由の復旧、設定確認と製造元の推奨対策を案内しました。実施済みの被害企業の対応とは区別します。",
+            "en": "CERT-FR recommends removing public exposure, restoring access through protected networks/VPNs, reviewing configuration and applying vendor guidance; this is not a claim of completed victim remediation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Solutions"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "具体的な侵入方法と当時の制御は未確定です。関連ルールで公開範囲、権限、ログを点検します。",
+          "en": "The exact entry method and prior controls are unresolved. Inspect exposure, privileges and logs using the linked rules."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、この事案での攻撃者のAI利用を確定できません。",
+          "en": "The reviewed primary evidence does not establish attacker AI use in this incident."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "キャンペーン単位の1記録です。被害店舗数、損害額、特定CVEの実悪用、侵入開始日とAI関与は確認できません。",
+          "en": "This is one campaign-level record. Affected-store counts, losses, exploitation of specific CVEs, intrusion start and AI use are unconfirmed."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Incident de sécurité ciblant les contrôleurs à distance des installations de réfrigération",
+          "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-012/",
+          "publisher": "CERT-FR / ANSSI",
+          "publishedAt": "2026-10-12",
+          "reviewedAt": "2026-10-26",
+          "kind": "government"
+        }
+      ],
+      "ruleIds": [
+        "SEC-006",
+        "SEC-005",
+        "SEC-008",
+        "SEC-009",
+        "SEC-013"
+      ]
+    },
+    {
       "id": "fujita-personal-pc-scam-2026",
       "organization": "藤田医科大学病院",
       "title": {
@@ -6902,6 +7145,146 @@
       ]
     },
     {
+      "id": "hana-bank-2026",
+      "organization": "ハナ銀行",
+      "title": {
+        "ja": "ハナ銀行：営業支援システムへの不正侵入",
+        "en": "Hana Bank: unauthorized intrusion into a sales-support system"
+      },
+      "summary": {
+        "ja": "9月30日の営業支援システムへの不正侵入により、顧客89人の情報が流出した形跡を10月2日に確認しました。具体的な侵入方法は未公表です。",
+        "en": "On October 2 the bank identified signs that a September 30 intrusion into its sales-support system had leaked data on 89 customers; the exact entry method is undisclosed."
+      },
+      "occurredAt": "2026-09-30",
+      "disclosedAt": "2026-10-03",
+      "reviewedAt": "2026-10-26",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "営業支援システムに9月30日の不正侵入があり、10月2日に89人の情報流出の形跡を確認したと説明しています。",
+            "en": "The bank reports a September 30 sales-support system intrusion and October 2 confirmation of signs of leakage affecting 89 customers."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "本文 第2段落"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "氏名、住民登録番号、住所、メールアドレス、電話・携帯電話番号、勤務先名が流出項目とされています。",
+            "en": "Reported leaked fields include names, resident registration numbers, addresses, email/telephone/mobile details and employer names."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "本文 流出項目"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-30",
+          "text": {
+            "ja": "営業支援システムへの不正侵入。",
+            "en": "Sales-support system intrusion."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-02",
+          "text": {
+            "ja": "流出の形跡を確認し、本人へSMSとメールで通知。",
+            "en": "Detected signs of leakage and notified affected customers by SMS and email."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-03",
+          "text": {
+            "ja": "公式サイトに説明と謝罪を掲載。",
+            "en": "Posted the public explanation and apology."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "外部IPの遮断、追加の安全対策、24時間監視を実施しました。",
+            "en": "Blocked external IP access, applied additional safeguards and increased 24-hour monitoring."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "本文 第3段落"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "具体的な侵入方法と当時の制御は未確定です。関連ルールで公開範囲、権限、ログを点検します。",
+          "en": "The exact entry method and prior controls are unresolved. Inspect exposure, privileges and logs using the linked rules."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、この事案での攻撃者のAI利用を確定できません。",
+          "en": "The reviewed primary evidence does not establish attacker AI use in this incident."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "10月2日は本人通知日、10月3日は確認した公式公開資料の日付です。より早い一般公表日、具体的な脆弱性、他社との同一主体、AI利用は未確定です。",
+          "en": "October 2 is customer notification; October 3 is the reviewed public notice. An earlier public disclosure date, specific flaws, shared attribution and AI use remain unconfirmed."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "개인(신용)정보 유출 관련 안내 및 사과문",
+          "url": "https://www.hanabank.com/cont/news/news01/1528985_115430.jsp",
+          "publisher": "ハナ銀行",
+          "publishedAt": "2026-10-03",
+          "reviewedAt": "2026-10-26",
+          "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "title": "금융권 침해사고 재발방지를 위해 금융보안 관리체계를 전면 강화하겠습니다.",
+          "url": "https://www.fsc.go.kr/no010101/87927",
+          "publisher": "韓国金融委員会",
+          "publishedAt": "2026-10-14",
+          "reviewedAt": "2026-10-26",
+          "kind": "government"
+        }
+      ],
+      "ruleIds": [
+        "SEC-006",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
+    {
       "id": "hiho-mypage-2026",
       "organization": "ハイホー",
       "title": {
@@ -7278,12 +7661,12 @@
         "en": "IDCF Cloud: ransomware outage and data-recovery impact"
       },
       "summary": {
-        "ja": "10月7日にランサムウェア攻撃による障害が発生しました。影響対象は495の企業・自治体です。一部ゾーンのデータ復元は顧客が保持するバックアップからのみ可能との見通しを公表しました。侵入経路は調査中です。",
-        "en": "An October 7 ransomware outage affected 495 organizations. The provider expected recovery in affected zones to depend on customers’ own backups; entry remained under investigation."
+        "ja": "495の企業・自治体に影響したランサムウェア障害について、10月14日に194顧客のスナップショット取出しが可能と見通しを訂正しました。仮想サーバーの外部流出なしとの判断と、ポータル48社への不正照会を別に公表しています。",
+        "en": "For the ransomware outage affecting 495 organizations, the October 14 update established snapshot extraction for 194 customers. The provider separately reported no external VM-data leakage and unauthorized portal queries affecting 48 companies."
       },
       "occurredAt": "2026-10-07",
       "disclosedAt": "2026-10-07",
-      "reviewedAt": "2026-10-12",
+      "reviewedAt": "2026-10-26",
       "outcome": "confirmed-breach",
       "categories": [
         "unknown"
@@ -7318,14 +7701,38 @@
         {
           "topic": "recovery",
           "text": {
-            "ja": "tesla・henry・pascal・jouleゾーンのデータは取り出し・復元が困難な見通しで、顧客自身のバックアップからのみ復元可能との見解です。",
-            "en": "Recovery in tesla, henry, pascal and joule zones was expected to require customers’ own backups."
+            "ja": "10月14日に、影響495組織のうちスナップショットを利用していた194顧客のバックアップ取出しが可能と確認しました。復元可否と提供方法は個別案内であり、全顧客の復元完了ではありません。",
+            "en": "On October 14 snapshot extraction was confirmed possible for 194 of 495 affected organizations. Restoration feasibility and delivery were handled individually; full recovery was not established."
           },
           "status": "confirmed",
           "sourceIds": [
-            "s3"
+            "s5"
           ],
-          "locator": "■現在の調査状況"
+          "locator": "§2 ①"
+        },
+        {
+          "topic": "vm-data-investigation",
+          "text": {
+            "ja": "提供元は4ゾーンの仮想サーバーデータの照会・持出しを示す痕跡や裏付けを確認せず、外部流出はなかったと判断しています。",
+            "en": "The provider found no traces or corroboration of VM-data querying or exfiltration in the four zones and assessed that no external leakage occurred."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s5"
+          ],
+          "locator": "§1 調査結果"
+        },
+        {
+          "topic": "portal-query",
+          "text": {
+            "ja": "ポータルで48社の登録情報が不正照会され、2社各1件のメールアドレスが個人名を含む可能性があります。外部持出しの痕跡は未確認です。",
+            "en": "Registration data for 48 companies were queried without authorization; one address at each of two firms may contain a personal name. External exfiltration traces were not found."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s5"
+          ],
+          "locator": "§3"
         }
       ],
       "timeline": [
@@ -7359,6 +7766,26 @@
           "sourceIds": [
             "s4"
           ]
+        },
+        {
+          "date": "2026-10-14",
+          "text": {
+            "ja": "調査結果とスナップショット取出しの見通しを公表。",
+            "en": "Published investigation findings and revised snapshot extraction outlook."
+          },
+          "sourceIds": [
+            "s5"
+          ]
+        },
+        {
+          "date": "2026-10-18",
+          "text": {
+            "ja": "バックアップサービスの提供再開を公表。スナップショット機能は停止継続。",
+            "en": "Announced backup service resumption; snapshot functionality remained suspended."
+          },
+          "sourceIds": [
+            "s6"
+          ]
         }
       ],
       "reportedActions": [
@@ -7374,6 +7801,18 @@
             "s4"
           ],
           "locator": "第3報 ■現時点の対応状況 / 第4報 ＜お客さま対応について＞"
+        },
+        {
+          "topic": "backup-service",
+          "text": {
+            "ja": "稼働継続中の対象リージョン向けにバックアップサービスを再開しました。スナップショット機能は安全確認で停止中です。",
+            "en": "Resumed the backup service for regions still running; snapshot functionality remained suspended for safety checks."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s6"
+          ],
+          "locator": "本文"
         }
       ],
       "prevention": {
@@ -7395,8 +7834,8 @@
       },
       "unknowns": [
         {
-          "ja": "495は企業・自治体数で、漏えい人数ではありません。情報取得の確定範囲、CVE、復旧完了時期は確認した資料で未確定です。他リージョンの管理画面停止は安全確認のための措置です。",
-          "en": "495 counts organizations, not leaked people. Extraction scope, CVE and recovery completion remain unresolved; other-console suspension was precautionary."
+          "ja": "495は企業・自治体数、194はスナップショット取出し可能な顧客数、48は不正照会された契約企業数です。重複排除した人数へ換算しません。侵入方法、CVEと全復旧完了時期は未確定です。",
+          "en": "495 counts affected organizations, 194 customers with extractable snapshots, and 48 portal-query companies. These are not deduplicated people. Entry, CVE and full recovery timing remain unresolved."
         }
       ],
       "sources": [
@@ -7435,6 +7874,24 @@
           "kind": "vendor",
           "publishedAt": "2026-10-09",
           "reviewedAt": "2026-10-12"
+        },
+        {
+          "id": "s5",
+          "title": "【第5報】不正アクセスによる障害に関する調査の進捗について",
+          "url": "https://www.idcf.jp/news/topics/20261014001",
+          "publisher": "IDCフロンティア",
+          "publishedAt": "2026-10-14",
+          "reviewedAt": "2026-10-26",
+          "kind": "vendor"
+        },
+        {
+          "id": "s6",
+          "title": "【第6報】バックアップサービスの提供再開について",
+          "url": "https://www.idcf.jp/news/topics/20261018001",
+          "publisher": "IDCフロンティア",
+          "publishedAt": "2026-10-18",
+          "reviewedAt": "2026-10-26",
+          "kind": "vendor"
         }
       ],
       "ruleIds": [
@@ -8602,6 +9059,136 @@
           "kind": "government",
           "publishedAt": null,
           "reviewedAt": "2026-10-09"
+        }
+      ],
+      "ruleIds": [
+        "SEC-006",
+        "SEC-008",
+        "SEC-009"
+      ]
+    },
+    {
+      "id": "kb-kookmin-2026",
+      "organization": "KB国民銀行",
+      "title": {
+        "ja": "KB国民銀行：職員向け業務支援システムの情報流出",
+        "en": "KB Kookmin Bank: employee work-support system data leak"
+      },
+      "summary": {
+        "ja": "職員向けモバイル業務支援システムから顧客99人と現旧職員20人の情報が流出したと公表しました。インターネットバンキングとは別のシステムです。",
+        "en": "The bank disclosed data leakage involving 99 customers and 20 current or former employees from its mobile work-support system, separate from internet banking."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-10-02",
+      "reviewedAt": "2026-10-26",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "顧客99人は氏名・連絡先・収入・残高など17項目、現旧職員20人は職員番号・氏名・所属など7項目が対象です。個人ごとに流出項目は異なります。",
+            "en": "99 customers were affected across up to 17 fields and 20 current/former employees across up to seven; fields differ by individual."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "本文 流出対象と項目"
+        },
+        {
+          "topic": "scope",
+          "text": {
+            "ja": "対象は職員向け業務支援システムで、インターネットバンキング等の金融取引とは無関係と説明しています。",
+            "en": "The bank describes the employee work-support system as unrelated to internet banking and financial transactions."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "本文 冒頭"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-30",
+          "text": {
+            "ja": "情報流出を確認。侵入開始日とは区別します。",
+            "en": "Confirmed leakage; this is not an established intrusion start."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-02",
+          "text": {
+            "ja": "顧客・職員への通知を公表。",
+            "en": "Published notification to affected customers and employees."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "対象システムとサーバーを停止し、アクセス経路の遮断と異常アクセス監視を強化しました。",
+            "en": "Stopped affected systems and servers, blocked access routes and strengthened abnormal-access monitoring."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "本文 対応"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "具体的な侵入方法と当時の制御は未確定です。関連ルールで公開範囲、権限、ログを点検します。",
+          "en": "The exact entry method and prior controls are unresolved. Inspect exposure, privileges and logs using the linked rules."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、この事案での攻撃者のAI利用を確定できません。",
+          "en": "The reviewed primary evidence does not establish attacker AI use in this incident."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "侵入方法、他社事案との関連、AI関与は確定していません。金融委員会の16社・約10万件は別の集計で、当行人数へ加算しません。",
+          "en": "Entry, links to other incidents and AI use are unresolved. The FSC total of 16 firms and about 100,000 records is separate and is not added to this bank’s people count."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "개인(신용)정보 유출 관련 안내",
+          "url": "https://otalk.kbstar.com/quics?page=C019391&boardId=669&compId=b032269&articleId=146650&bbsMode=view&viewPage=1&articleClass=1",
+          "publisher": "KB国民銀行",
+          "publishedAt": "2026-10-02",
+          "reviewedAt": "2026-10-26",
+          "kind": "organization"
+        },
+        {
+          "id": "s2",
+          "title": "금융권 침해사고 재발방지를 위해 금융보안 관리체계를 전면 강화하겠습니다.",
+          "url": "https://www.fsc.go.kr/no010101/87927",
+          "publisher": "韓国金融委員会",
+          "publishedAt": "2026-10-14",
+          "reviewedAt": "2026-10-26",
+          "kind": "government"
         }
       ],
       "ruleIds": [
@@ -12725,15 +13312,16 @@
         "en": "Osaka Metropolitan University: infrastructure outage attributed to ransomware"
       },
       "summary": {
-        "ja": "大学は10月2日未明の大規模障害をランサムウェア攻撃によるものと判断しました。仮想サーバー群の停止と一部データ改ざんの形跡を確認し、個人情報流出は調査中です。",
-        "en": "The university attributed its October 2 outage to ransomware. Virtual servers stopped and signs of data alteration were found; personal-data leakage remains under investigation."
+        "ja": "大学は、再委託先の正規アカウントを悪用した侵入が基盤障害の原因と報告され、NEC管理クラウド内の大学関連情報の漏えいも確認したと公表しました。大学仮想化基盤内の約13万件は別の調査対象です。",
+        "en": "The university reports a subcontractor account was abused to cause the outage and that university-related information leaked from NEC-managed cloud storage. About 130,000 records in the university virtualization platform are a separate investigation scope."
       },
       "occurredAt": null,
       "disclosedAt": "2026-10-02",
-      "reviewedAt": "2026-10-19",
+      "reviewedAt": "2026-10-26",
       "outcome": "confirmed-breach",
       "categories": [
-        "unknown"
+        "credentials",
+        "supply-chain"
       ],
       "cves": [],
       "claims": [
@@ -12750,18 +13338,6 @@
           "locator": "本文 会見説明"
         },
         {
-          "topic": "impact",
-          "text": {
-            "ja": "学内ネットワーク、メール、教務・財務・人事給与・図書館などのシステムが停止しました。個人情報流出は調査中です。",
-            "en": "Network, email, teaching, finance, payroll and library systems stopped; personal-data leakage is still being investigated."
-          },
-          "status": "confirmed",
-          "sourceIds": [
-            "s1"
-          ],
-          "locator": "本文 影響範囲 / 個人情報"
-        },
-        {
           "topic": "observed-state",
           "text": {
             "ja": "10月2日0時20分頃からサーバーが順次停止し、4時以降の調査で一部データ改ざんの形跡を確認しました。",
@@ -12772,6 +13348,43 @@
             "s2"
           ],
           "locator": "資料2 10月2日の経緯"
+        },
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "大学は、NEC再委託先が9月下旬に攻撃を受け、その正規アカウントで大学へ不正アクセスされたことが原因との報告を受けたと説明しました。NECは窃取された認証情報の悪用と説明しています。",
+            "en": "The university says NEC reported a late-September attack on a subcontractor whose legitimate account was used against university systems. NEC describes abuse of stolen credentials."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s4",
+            "s5"
+          ],
+          "locator": "大学 本文 第1段落 / NEC 冒頭と主な被害状況"
+        },
+        {
+          "topic": "storage-leak",
+          "text": {
+            "ja": "NEC管理の共有クラウドストレージから大学の個人情報・システム関連情報が漏えいしたとの報告を受けました。内容・件数は確認中です。",
+            "en": "NEC reported leakage of university personal/system information from shared cloud storage it managed; contents and counts remain under review."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s4"
+          ],
+          "locator": "本文 第2〜3段落"
+        },
+        {
+          "topic": "scope",
+          "text": {
+            "ja": "教務関連など約13万件は大学の仮想化基盤内の情報で、NEC管理クラウドの漏えいとは別です。仮想化基盤からの漏えいは引き続き調査中です。",
+            "en": "About 130,000 teaching-related records are in the university virtualization platform, separate from the NEC cloud leak; leakage from that platform remains under investigation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s4"
+          ],
+          "locator": "本文 なお本学記者会見の段落"
         }
       ],
       "timeline": [
@@ -12794,6 +13407,26 @@
           "sourceIds": [
             "s1"
           ]
+        },
+        {
+          "date": "2026-10-20",
+          "text": {
+            "ja": "NECから原因とクラウドストレージの漏えいについて報告を受領。",
+            "en": "Received NEC report on cause and cloud-storage leakage."
+          },
+          "sourceIds": [
+            "s4"
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "text": {
+            "ja": "第5報で委託先経路と情報保管領域を説明。",
+            "en": "Fifth notice distinguished the subcontractor access route and storage scopes."
+          },
+          "sourceIds": [
+            "s4"
+          ]
         }
       ],
       "reportedActions": [
@@ -12814,11 +13447,12 @@
       "prevention": {
         "classification": "unknown",
         "assessment": {
-          "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
-          "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+          "ja": "再委託先の初回侵入方法と当時の制御は未確定で、回避可能性は判断できません。委託先アカウントの権限・失効とログ、保存領域を点検します。",
+          "en": "The subcontractor’s initial entry and prior controls are unresolved, so avoidability is unknown. Inspect subcontractor privileges, revocation, logs and storage boundaries."
         },
         "sourceIds": [
-          "s1"
+          "s4",
+          "s5"
         ]
       },
       "ai": {
@@ -12830,8 +13464,8 @@
       },
       "unknowns": [
         {
-          "ja": "初回侵入日、侵入経路と個人情報流出の有無・対象数は確認できません。",
-          "en": "The intrusion start, entry route and whether or how much personal data leaked are not established."
+          "ja": "再委託先への初回侵入方法と日時、NEC管理クラウドから漏えいした内容・件数、大学仮想化基盤の約13万件の情報流出の有無は未確定です。13万件を人数や確認済み流出数に変換しません。",
+          "en": "The subcontractor’s initial entry method/date, cloud-leak contents/count and leakage of about 130,000 university-platform records remain unresolved. The records count is not a people count or confirmed exfiltration total."
         }
       ],
       "sources": [
@@ -12861,6 +13495,24 @@
           "kind": "organization",
           "publishedAt": "2026-10-08",
           "reviewedAt": "2026-10-19"
+        },
+        {
+          "id": "s4",
+          "title": "本学情報基盤システムにおける障害の発生について【第5報】",
+          "url": "https://www.omu.moe/news/2026-10-21-1d69aecb.html",
+          "publisher": "大阪公立大学",
+          "publishedAt": "2026-10-21",
+          "reviewedAt": "2026-10-26",
+          "kind": "organization"
+        },
+        {
+          "id": "s5",
+          "title": "委託先への不正アクセスに起因するお客さまのシステム障害、情報漏えいに関するお詫び",
+          "url": "https://jpn.nec.com/news/info/20261020.html",
+          "publisher": "日本電気",
+          "publishedAt": "2026-10-20",
+          "reviewedAt": "2026-10-26",
+          "kind": "vendor"
         }
       ],
       "ruleIds": [
@@ -19843,7 +20495,7 @@
     {
       "id": "SEC-005",
       "version": "1.1.2",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-26",
       "title": {
         "ja": "更新対象の資格情報と旧鍵の失効を照合する",
         "en": "Reconcile credential inventory and revocation"
@@ -19914,6 +20566,7 @@
         "anthropic-claude-code-abuse-2025",
         "anthropic-cyber-evals-2026",
         "applynow-bi-2026",
+        "arcadia-raiden-2026",
         "askul-2025",
         "awabank-test-environment-2026",
         "axios-npm-2026",
@@ -19934,6 +20587,7 @@
         "expo-subcontractor-mail-2026",
         "fancrew-credential-stuffing-2026",
         "forticloud-sso-2026",
+        "france-refrigeration-2026",
         "fuso-cloud-storage-2026",
         "gainsight-oauth-2025",
         "gmo-infoq-2026",
@@ -19996,7 +20650,7 @@
     {
       "id": "SEC-006",
       "version": "1.1.2",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-26",
       "title": {
         "ja": "稼働環境の公開範囲を確認する",
         "en": "Inspect deployed exposure boundaries"
@@ -20069,14 +20723,17 @@
         "epark-peakmanager-2026",
         "eplus-refund-2026",
         "forticloud-sso-2026",
+        "france-refrigeration-2026",
         "fukuoka-editable-application-2026",
         "fuso-cloud-storage-2026",
         "gyazo-2026",
+        "hana-bank-2026",
         "his-thailand-2025",
         "idcf-ransomware-2026",
         "istyle-transfer-exposure-2026",
         "jaea-jrr3-files-2026",
         "kamogawa-form-exposure-2026",
+        "kb-kookmin-2026",
         "kddi-isp-2026",
         "komatsu-user-directory-exposure-2026",
         "kwansei-external-sns-2026",
@@ -20195,7 +20852,7 @@
     {
       "id": "SEC-008",
       "version": "1.1.2",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-26",
       "title": {
         "ja": "侵害後に広がる管理権限を確認する",
         "en": "Inspect privileges enabling lateral access"
@@ -20289,6 +20946,7 @@
         "fines-reservations-2026",
         "five-foxes-2026",
         "forticloud-sso-2026",
+        "france-refrigeration-2026",
         "fujita-personal-pc-scam-2026",
         "fukuoka-editable-application-2026",
         "fuso-cloud-storage-2026",
@@ -20297,6 +20955,7 @@
         "gmo-infoq-2026",
         "gpoint-2026",
         "gyazo-2026",
+        "hana-bank-2026",
         "his-thailand-2025",
         "idcf-ransomware-2026",
         "inkrevolution-payment-2025",
@@ -20306,6 +20965,7 @@
         "k9natural-2026",
         "kaga-solnet-2026",
         "kamogawa-form-exposure-2026",
+        "kb-kookmin-2026",
         "kddi-isp-2026",
         "kindal-phishing-2026",
         "komatsu-user-directory-exposure-2026",
@@ -20368,7 +21028,7 @@
     {
       "id": "SEC-009",
       "version": "1.2.1",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-26",
       "title": {
         "ja": "取得・管理操作のログが揃っているか確認する",
         "en": "Inspect coverage of access and administration logs"
@@ -20470,6 +21130,7 @@
         "fines-reservations-2026",
         "five-foxes-2026",
         "forticloud-sso-2026",
+        "france-refrigeration-2026",
         "fujita-personal-pc-scam-2026",
         "fukuoka-editable-application-2026",
         "fuso-cloud-storage-2026",
@@ -20478,6 +21139,7 @@
         "gmo-infoq-2026",
         "gpoint-2026",
         "gyazo-2026",
+        "hana-bank-2026",
         "hiho-mypage-2026",
         "his-thailand-2025",
         "ichimasa-mail-2026",
@@ -20491,6 +21153,7 @@
         "k9natural-2026",
         "kaga-solnet-2026",
         "kamogawa-form-exposure-2026",
+        "kb-kookmin-2026",
         "kddi-isp-2026",
         "keio-ransomware-2026",
         "kindal-phishing-2026",
@@ -20925,7 +21588,7 @@
     {
       "id": "SEC-013",
       "version": "1.1.2",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-10-26",
       "title": {
         "ja": "隔離手順とバックアップの復元を確認する",
         "en": "Inspect containment and backup restoration"
@@ -21003,6 +21666,7 @@
         "education-software-dormant-2026",
         "epark-peakmanager-2026",
         "five-foxes-2026",
+        "france-refrigeration-2026",
         "gex-ransomware-2026",
         "idcf-ransomware-2026",
         "keio-ransomware-2026",
@@ -21285,5 +21949,5 @@
       "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "b339bbbf0b5d8e5c34e05b746688c14c9dd38b9d84f773dcbbbfec9f45c1092f"
+  "contentHash": "0756854610402a0671367e173ed87e5cfcc8bc53fd55bc36a5182feaae0bf134"
 }

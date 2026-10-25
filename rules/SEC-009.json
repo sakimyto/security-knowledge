@@ -1,7 +1,7 @@
 {
   "id": "SEC-009",
   "version": "1.2.1",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-26",
   "title": {
     "ja": "取得・管理操作のログが揃っているか確認する",
     "en": "Inspect coverage of access and administration logs"
@@ -99,6 +99,7 @@
     "fines-reservations-2026",
     "five-foxes-2026",
     "forticloud-sso-2026",
+    "france-refrigeration-2026",
     "fujita-personal-pc-scam-2026",
     "fukuoka-editable-application-2026",
     "fuso-cloud-storage-2026",
@@ -107,6 +108,7 @@
     "gmo-infoq-2026",
     "gpoint-2026",
     "gyazo-2026",
+    "hana-bank-2026",
     "hiho-mypage-2026",
     "his-thailand-2025",
     "ichimasa-mail-2026",
@@ -120,6 +122,7 @@
     "k9natural-2026",
     "kaga-solnet-2026",
     "kamogawa-form-exposure-2026",
+    "kb-kookmin-2026",
     "kddi-isp-2026",
     "keio-ransomware-2026",
     "kindal-phishing-2026",
