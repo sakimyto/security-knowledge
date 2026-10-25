@@ -1,6 +1,6 @@
 # toyobo-email-2026 — 東洋紡グループ：侵害メールから関連会社へフィッシングが波及
 
-事例 | Catalog: 0.8.0 | Record SHA-256: edb04797f524cb18dba3c313b8709d3bc388c72b9963ba04e4d55b5a6f945b29
+事例 | Catalog: 0.9.0 | Record SHA-256: edb04797f524cb18dba3c313b8709d3bc388c72b9963ba04e4d55b5a6f945b29
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

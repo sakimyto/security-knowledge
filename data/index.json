@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.8.0",
-  "updatedAt": "2026-10-19",
+  "version": "0.9.0",
+  "updatedAt": "2026-10-26",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,10 +10,10 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外150事例と16点検ルールを収録した選定DBです。公表日が2025-10-19〜2026-10-19の134事例、期間外の11事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
-    "en": "A curated database of 150 primary-source incident records and 16 inspection rules: 134 disclosed during 2025-10-19–2026-10-19, 11 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
+    "ja": "一次資料を確認した国内外153事例と16点検ルールを収録した選定DBです。公表日が2025-10-26〜2026-10-26の136事例、期間外の12事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
+    "en": "A curated database of 153 primary-source incident records and 16 inspection rules: 136 disclosed during 2025-10-26–2026-10-26, 12 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
   },
-  "contentHash": "b339bbbf0b5d8e5c34e05b746688c14c9dd38b9d84f773dcbbbfec9f45c1092f",
+  "contentHash": "0756854610402a0671367e173ed87e5cfcc8bc53fd55bc36a5182feaae0bf134",
   "entries": [
     {
       "kind": "incident",
@@ -53,7 +53,7 @@
     {
       "kind": "incident",
       "id": "arcadia-raiden-2026",
-      "hash": "bfa058d9bf57b474405bee6255db17790e81830dd2869608802fd2c8394bd55d"
+      "hash": "a753dc2f4d8e7e1d35e0cb80e0e91f561385596e45a8210af29744fdf0db6d24"
     },
     {
       "kind": "incident",
@@ -168,7 +168,7 @@
     {
       "kind": "incident",
       "id": "denmark-cpr-2026",
-      "hash": "3779f00af9b08581e405c8c1d38005f2e535fe4dca957f57c61dcaa2d5f3b171"
+      "hash": "38575aebddbddb996b42eb97e9f4dfc606f811e02b2e79be5bc097c682b16569"
     },
     {
       "kind": "incident",
@@ -237,6 +237,11 @@
     },
     {
       "kind": "incident",
+      "id": "france-refrigeration-2026",
+      "hash": "fbd7f3213ff2a5a4fd8cf6c1cd1c518803ddf7c88f29563653854a0ea19ff3c5"
+    },
+    {
+      "kind": "incident",
       "id": "fujita-personal-pc-scam-2026",
       "hash": "32b3342553c5c75a7f6c07e74edb590a5e4ba498295c3d3fbef00f656663ea2f"
     },
@@ -277,6 +282,11 @@
     },
     {
       "kind": "incident",
+      "id": "hana-bank-2026",
+      "hash": "9f39f63fe4a88bea1a6011e822a73fff5628e5cfeabd5f143cc26d68359fb968"
+    },
+    {
+      "kind": "incident",
       "id": "hiho-mypage-2026",
       "hash": "3c6c37a3081a6965e25b582be577d1164ea9803c5a7f60f8013f04a4b51c061f"
     },
@@ -293,7 +303,7 @@
     {
       "kind": "incident",
       "id": "idcf-ransomware-2026",
-      "hash": "c086c39120a79d7c753f545ffe0e6699de8775e05b64b65ea640221959ac110c"
+      "hash": "da4cb80e39df359fb468804b2bee53e949b1db0edd645361218c3b2b4119eceb"
     },
     {
       "kind": "incident",
@@ -344,6 +354,11 @@
       "kind": "incident",
       "id": "kamogawa-form-exposure-2026",
       "hash": "7c931236a95687b166724aeeef6ead1cafc98b728351ad51f2c63c9a07f46aa0"
+    },
+    {
+      "kind": "incident",
+      "id": "kb-kookmin-2026",
+      "hash": "5f9ad878c6d709908cbbfc8fc4b97f0849ac742a159141b3fcf5840b5b8e6877"
     },
     {
       "kind": "incident",
@@ -513,7 +528,7 @@
     {
       "kind": "incident",
       "id": "omu-ransomware-2026",
-      "hash": "1ffcfc988241ace9848dfccbebe88649215e5534ec11b16c2f9e5d5bdafb68c8"
+      "hash": "5de69a004734b1f9687333c63ca59dfbfb0afaccc96c052236e6250577603e7d"
     },
     {
       "kind": "incident",
@@ -788,12 +803,12 @@
     {
       "kind": "rule",
       "id": "SEC-005",
-      "hash": "08485996b2676665f7492aede8c0177923812df34709d710e114a5251290a0f1"
+      "hash": "695e2e119a1364887732e6ee90c1250d22063f1e6e0ec71746e80b7231ace15f"
     },
     {
       "kind": "rule",
       "id": "SEC-006",
-      "hash": "ad7cbc2bc9afdbcb758c4da2a02642a476025789a63a99dba6492fb724e09fdc"
+      "hash": "5910cd6fc104ea1c2aed1c44c6f2be5cccfc619b921bc0067d11b916ad9f104a"
     },
     {
       "kind": "rule",
@@ -803,12 +818,12 @@
     {
       "kind": "rule",
       "id": "SEC-008",
-      "hash": "2f5ad60befb66cf498e0cc52fe6722d94c43986712a3ac56459ff4aa2e55edea"
+      "hash": "ab2bd7e87128a2ce571578558337ab8577fcda20f841171dba5b45d732ad2f03"
     },
     {
       "kind": "rule",
       "id": "SEC-009",
-      "hash": "3fefe4a7151a41b7b6afa07d8879003c47aa0423419a159ba0ecfaa7aba1494a"
+      "hash": "d569cce459bfda1c8696560acffabdb407ad5600c976d86b6d3b56b8f66f2354"
     },
     {
       "kind": "rule",
@@ -828,7 +843,7 @@
     {
       "kind": "rule",
       "id": "SEC-013",
-      "hash": "311a4937937933774491e1bbd55de99f51c947c72360af22a7b5bd57de3acc97"
+      "hash": "6bd470a9068c92dc8d807218f5542d7ee087cb906666937ccf6742f7afaf41da"
     },
     {
       "kind": "rule",

@@ -1,0 +1,120 @@
+{
+  "id": "hana-bank-2026",
+  "organization": "ハナ銀行",
+  "title": {
+    "ja": "ハナ銀行：営業支援システムへの不正侵入",
+    "en": "Hana Bank: unauthorized intrusion into a sales-support system"
+  },
+  "summary": {
+    "ja": "9月30日の営業支援システムへの不正侵入により、顧客89人の情報が流出した形跡を10月2日に確認しました。具体的な侵入方法は未公表です。",
+    "en": "On October 2 the bank identified signs that a September 30 intrusion into its sales-support system had leaked data on 89 customers; the exact entry method is undisclosed."
+  },
+  "occurredAt": "2026-09-30",
+  "disclosedAt": "2026-10-03",
+  "reviewedAt": "2026-10-26",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "営業支援システムに9月30日の不正侵入があり、10月2日に89人の情報流出の形跡を確認したと説明しています。",
+        "en": "The bank reports a September 30 sales-support system intrusion and October 2 confirmation of signs of leakage affecting 89 customers."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "本文 第2段落"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "氏名、住民登録番号、住所、メールアドレス、電話・携帯電話番号、勤務先名が流出項目とされています。",
+        "en": "Reported leaked fields include names, resident registration numbers, addresses, email/telephone/mobile details and employer names."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "本文 流出項目"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "text": {
+        "ja": "営業支援システムへの不正侵入。",
+        "en": "Sales-support system intrusion."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-02",
+      "text": {
+        "ja": "流出の形跡を確認し、本人へSMSとメールで通知。",
+        "en": "Detected signs of leakage and notified affected customers by SMS and email."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-03",
+      "text": {
+        "ja": "公式サイトに説明と謝罪を掲載。",
+        "en": "Posted the public explanation and apology."
+      },
+      "sourceIds": ["s1"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "外部IPの遮断、追加の安全対策、24時間監視を実施しました。",
+        "en": "Blocked external IP access, applied additional safeguards and increased 24-hour monitoring."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "本文 第3段落"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "具体的な侵入方法と当時の制御は未確定です。関連ルールで公開範囲、権限、ログを点検します。",
+      "en": "The exact entry method and prior controls are unresolved. Inspect exposure, privileges and logs using the linked rules."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、この事案での攻撃者のAI利用を確定できません。",
+      "en": "The reviewed primary evidence does not establish attacker AI use in this incident."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "10月2日は本人通知日、10月3日は確認した公式公開資料の日付です。より早い一般公表日、具体的な脆弱性、他社との同一主体、AI利用は未確定です。",
+      "en": "October 2 is customer notification; October 3 is the reviewed public notice. An earlier public disclosure date, specific flaws, shared attribution and AI use remain unconfirmed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "개인(신용)정보 유출 관련 안내 및 사과문",
+      "url": "https://www.hanabank.com/cont/news/news01/1528985_115430.jsp",
+      "publisher": "ハナ銀行",
+      "publishedAt": "2026-10-03",
+      "reviewedAt": "2026-10-26",
+      "kind": "organization"
+    },
+    {
+      "id": "s2",
+      "title": "금융권 침해사고 재발방지를 위해 금융보안 관리체계를 전면 강화하겠습니다.",
+      "url": "https://www.fsc.go.kr/no010101/87927",
+      "publisher": "韓国金融委員会",
+      "publishedAt": "2026-10-14",
+      "reviewedAt": "2026-10-26",
+      "kind": "government"
+    }
+  ],
+  "ruleIds": ["SEC-006", "SEC-008", "SEC-009"]
+}

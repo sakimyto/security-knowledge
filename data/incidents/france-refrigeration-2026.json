@@ -1,0 +1,133 @@
+{
+  "id": "france-refrigeration-2026",
+  "organization": "CERT-FRが確認した冷凍冷蔵制御装置の侵害",
+  "title": {
+    "ja": "フランス：冷凍冷蔵設備の遠隔制御装置の侵害",
+    "en": "France: compromises of remote refrigeration controllers"
+  },
+  "summary": {
+    "ja": "CERT-FRは冷凍冷蔵設備の遠隔制御装置で多数の侵害を把握したと公表しました。インターネットへの管理画面の露出を解消するよう求めています。個別の店舗数や侵入方法は未確定です。",
+    "en": "CERT-FR reported numerous compromises of remote refrigeration controllers and urged removal of internet-exposed management interfaces. Store counts and exact intrusion methods are unresolved."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-10-12",
+  "reviewedAt": "2026-10-26",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "incident",
+      "text": {
+        "ja": "CERT-FRはDanfoss AK-SM・AK-SC、Copeland xweb、Dixell xwebの多数の侵害を把握したと説明しています。",
+        "en": "CERT-FR reports numerous compromises involving Danfoss AK-SM/AK-SC, Copeland xweb and Dixell xweb controllers."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Résumé / Systèmes affectés"
+    },
+    {
+      "topic": "exposure",
+      "text": {
+        "ja": "CERT-FRはインターネットへの管理画面公開を不適切とし、被害の有無を分けて復旧手順を案内しています。",
+        "en": "CERT-FR warns against internet-exposed management interfaces and distinguishes recovery guidance for compromised and uncompromised units."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Résumé / Solutions"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-12",
+      "text": {
+        "ja": "CERT-FRが初版を公開。",
+        "en": "CERT-FR published the initial alert."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "text": {
+        "ja": "対象機器を追加。",
+        "en": "Added other targeted equipment."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "text": {
+        "ja": "推奨対応を更新。",
+        "en": "Updated recommended actions."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "guidance",
+      "text": {
+        "ja": "CERT-FRは外部公開の停止、安全なVPN・保護ネットワーク経由の復旧、設定確認と製造元の推奨対策を案内しました。実施済みの被害企業の対応とは区別します。",
+        "en": "CERT-FR recommends removing public exposure, restoring access through protected networks/VPNs, reviewing configuration and applying vendor guidance; this is not a claim of completed victim remediation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Solutions"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "具体的な侵入方法と当時の制御は未確定です。関連ルールで公開範囲、権限、ログを点検します。",
+      "en": "The exact entry method and prior controls are unresolved. Inspect exposure, privileges and logs using the linked rules."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、この事案での攻撃者のAI利用を確定できません。",
+      "en": "The reviewed primary evidence does not establish attacker AI use in this incident."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "キャンペーン単位の1記録です。被害店舗数、損害額、特定CVEの実悪用、侵入開始日とAI関与は確認できません。",
+      "en": "This is one campaign-level record. Affected-store counts, losses, exploitation of specific CVEs, intrusion start and AI use are unconfirmed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Incident de sécurité ciblant les contrôleurs à distance des installations de réfrigération",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-012/",
+      "publisher": "CERT-FR / ANSSI",
+      "publishedAt": "2026-10-12",
+      "reviewedAt": "2026-10-26",
+      "kind": "government"
+    }
+  ],
+  "ruleIds": [
+    "SEC-006",
+    "SEC-005",
+    "SEC-008",
+    "SEC-009",
+    "SEC-013"
+  ]
+}

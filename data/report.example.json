@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "catalogHash": "b339bbbf0b5d8e5c34e05b746688c14c9dd38b9d84f773dcbbbfec9f45c1092f",
+  "catalogHash": "0756854610402a0671367e173ed87e5cfcc8bc53fd55bc36a5182feaae0bf134",
   "environment": "example-project",
   "environmentRevision": "replace-with-actual-environment-revision",
-  "checkedAt": "2026-10-19T00:00:00Z",
+  "checkedAt": "2026-10-26T00:00:00Z",
   "results": [
     {
       "ruleId": "SEC-001",
@@ -47,7 +47,7 @@
     },
     {
       "ruleId": "SEC-005",
-      "ruleHash": "08485996b2676665f7492aede8c0177923812df34709d710e114a5251290a0f1",
+      "ruleHash": "695e2e119a1364887732e6ee90c1250d22063f1e6e0ec71746e80b7231ace15f",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -57,7 +57,7 @@
     },
     {
       "ruleId": "SEC-006",
-      "ruleHash": "ad7cbc2bc9afdbcb758c4da2a02642a476025789a63a99dba6492fb724e09fdc",
+      "ruleHash": "5910cd6fc104ea1c2aed1c44c6f2be5cccfc619b921bc0067d11b916ad9f104a",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -77,7 +77,7 @@
     },
     {
       "ruleId": "SEC-008",
-      "ruleHash": "2f5ad60befb66cf498e0cc52fe6722d94c43986712a3ac56459ff4aa2e55edea",
+      "ruleHash": "ab2bd7e87128a2ce571578558337ab8577fcda20f841171dba5b45d732ad2f03",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -87,7 +87,7 @@
     },
     {
       "ruleId": "SEC-009",
-      "ruleHash": "3fefe4a7151a41b7b6afa07d8879003c47aa0423419a159ba0ecfaa7aba1494a",
+      "ruleHash": "d569cce459bfda1c8696560acffabdb407ad5600c976d86b6d3b56b8f66f2354",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",
@@ -127,7 +127,7 @@
     },
     {
       "ruleId": "SEC-013",
-      "ruleHash": "311a4937937933774491e1bbd55de99f51c947c72360af22a7b5bd57de3acc97",
+      "ruleHash": "6bd470a9068c92dc8d807218f5542d7ee087cb906666937ccf6742f7afaf41da",
       "assetId": "example-unspecified",
       "status": "unverified",
       "scope": "Example only; no inspection performed",

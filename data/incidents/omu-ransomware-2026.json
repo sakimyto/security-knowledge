@@ -6,15 +6,16 @@
     "en": "Osaka Metropolitan University: infrastructure outage attributed to ransomware"
   },
   "summary": {
-    "ja": "大学は10月2日未明の大規模障害をランサムウェア攻撃によるものと判断しました。仮想サーバー群の停止と一部データ改ざんの形跡を確認し、個人情報流出は調査中です。",
-    "en": "The university attributed its October 2 outage to ransomware. Virtual servers stopped and signs of data alteration were found; personal-data leakage remains under investigation."
+    "ja": "大学は、再委託先の正規アカウントを悪用した侵入が基盤障害の原因と報告され、NEC管理クラウド内の大学関連情報の漏えいも確認したと公表しました。大学仮想化基盤内の約13万件は別の調査対象です。",
+    "en": "The university reports a subcontractor account was abused to cause the outage and that university-related information leaked from NEC-managed cloud storage. About 130,000 records in the university virtualization platform are a separate investigation scope."
   },
   "occurredAt": null,
   "disclosedAt": "2026-10-02",
-  "reviewedAt": "2026-10-19",
+  "reviewedAt": "2026-10-26",
   "outcome": "confirmed-breach",
   "categories": [
-    "unknown"
+    "credentials",
+    "supply-chain"
   ],
   "cves": [],
   "claims": [
@@ -31,18 +32,6 @@
       "locator": "本文 会見説明"
     },
     {
-      "topic": "impact",
-      "text": {
-        "ja": "学内ネットワーク、メール、教務・財務・人事給与・図書館などのシステムが停止しました。個人情報流出は調査中です。",
-        "en": "Network, email, teaching, finance, payroll and library systems stopped; personal-data leakage is still being investigated."
-      },
-      "status": "confirmed",
-      "sourceIds": [
-        "s1"
-      ],
-      "locator": "本文 影響範囲 / 個人情報"
-    },
-    {
       "topic": "observed-state",
       "text": {
         "ja": "10月2日0時20分頃からサーバーが順次停止し、4時以降の調査で一部データ改ざんの形跡を確認しました。",
@@ -53,6 +42,43 @@
         "s2"
       ],
       "locator": "資料2 10月2日の経緯"
+    },
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "大学は、NEC再委託先が9月下旬に攻撃を受け、その正規アカウントで大学へ不正アクセスされたことが原因との報告を受けたと説明しました。NECは窃取された認証情報の悪用と説明しています。",
+        "en": "The university says NEC reported a late-September attack on a subcontractor whose legitimate account was used against university systems. NEC describes abuse of stolen credentials."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s4",
+        "s5"
+      ],
+      "locator": "大学 本文 第1段落 / NEC 冒頭と主な被害状況"
+    },
+    {
+      "topic": "storage-leak",
+      "text": {
+        "ja": "NEC管理の共有クラウドストレージから大学の個人情報・システム関連情報が漏えいしたとの報告を受けました。内容・件数は確認中です。",
+        "en": "NEC reported leakage of university personal/system information from shared cloud storage it managed; contents and counts remain under review."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s4"
+      ],
+      "locator": "本文 第2〜3段落"
+    },
+    {
+      "topic": "scope",
+      "text": {
+        "ja": "教務関連など約13万件は大学の仮想化基盤内の情報で、NEC管理クラウドの漏えいとは別です。仮想化基盤からの漏えいは引き続き調査中です。",
+        "en": "About 130,000 teaching-related records are in the university virtualization platform, separate from the NEC cloud leak; leakage from that platform remains under investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s4"
+      ],
+      "locator": "本文 なお本学記者会見の段落"
     }
   ],
   "timeline": [
@@ -75,6 +101,26 @@
       "sourceIds": [
         "s1"
       ]
+    },
+    {
+      "date": "2026-10-20",
+      "text": {
+        "ja": "NECから原因とクラウドストレージの漏えいについて報告を受領。",
+        "en": "Received NEC report on cause and cloud-storage leakage."
+      },
+      "sourceIds": [
+        "s4"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "text": {
+        "ja": "第5報で委託先経路と情報保管領域を説明。",
+        "en": "Fifth notice distinguished the subcontractor access route and storage scopes."
+      },
+      "sourceIds": [
+        "s4"
+      ]
     }
   ],
   "reportedActions": [
@@ -95,11 +141,12 @@
   "prevention": {
     "classification": "unknown",
     "assessment": {
-      "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
-      "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+      "ja": "再委託先の初回侵入方法と当時の制御は未確定で、回避可能性は判断できません。委託先アカウントの権限・失効とログ、保存領域を点検します。",
+      "en": "The subcontractor’s initial entry and prior controls are unresolved, so avoidability is unknown. Inspect subcontractor privileges, revocation, logs and storage boundaries."
     },
     "sourceIds": [
-      "s1"
+      "s4",
+      "s5"
     ]
   },
   "ai": {
@@ -111,8 +158,8 @@
   },
   "unknowns": [
     {
-      "ja": "初回侵入日、侵入経路と個人情報流出の有無・対象数は確認できません。",
-      "en": "The intrusion start, entry route and whether or how much personal data leaked are not established."
+      "ja": "再委託先への初回侵入方法と日時、NEC管理クラウドから漏えいした内容・件数、大学仮想化基盤の約13万件の情報流出の有無は未確定です。13万件を人数や確認済み流出数に変換しません。",
+      "en": "The subcontractor’s initial entry method/date, cloud-leak contents/count and leakage of about 130,000 university-platform records remain unresolved. The records count is not a people count or confirmed exfiltration total."
     }
   ],
   "sources": [
@@ -142,6 +189,24 @@
       "kind": "organization",
       "publishedAt": "2026-10-08",
       "reviewedAt": "2026-10-19"
+    },
+    {
+      "id": "s4",
+      "title": "本学情報基盤システムにおける障害の発生について【第5報】",
+      "url": "https://www.omu.moe/news/2026-10-21-1d69aecb.html",
+      "publisher": "大阪公立大学",
+      "publishedAt": "2026-10-21",
+      "reviewedAt": "2026-10-26",
+      "kind": "organization"
+    },
+    {
+      "id": "s5",
+      "title": "委託先への不正アクセスに起因するお客さまのシステム障害、情報漏えいに関するお詫び",
+      "url": "https://jpn.nec.com/news/info/20261020.html",
+      "publisher": "日本電気",
+      "publishedAt": "2026-10-20",
+      "reviewedAt": "2026-10-26",
+      "kind": "vendor"
     }
   ],
   "ruleIds": [

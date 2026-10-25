@@ -1,6 +1,6 @@
 # denmark-cpr-2026 — デンマークCPR：企業の正規照会権限を悪用した情報取得
 
-事例 | Catalog: 0.8.0 | Record SHA-256: 3779f00af9b08581e405c8c1d38005f2e535fe4dca957f57c61dcaa2d5f3b171
+事例 | Catalog: 0.9.0 | Record SHA-256: 38575aebddbddb996b42eb97e9f4dfc606f811e02b2e79be5bc097c682b16569
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -8,7 +8,7 @@
 
 Organization: デンマーク中央個人登録簿（CPR） | Outcome: confirmed-breach
 
-Occurred: unknown | Disclosed: 2026-10-05 | Reviewed: 2026-10-12
+Occurred: unknown | Disclosed: 2026-10-05 | Reviewed: 2026-10-26
 
 Categories: unknown | CVEs: unspecified
 
@@ -22,12 +22,14 @@ Categories: unknown | CVEs: unspecified
 
 - [confirmed / 公表で確認] 対象企業のアクセスを停止し、調査とCPRの安全性点検を開始しました。 (s1, s2; 事故概要 / Fakta)
 - [confirmed / 公表で確認] 移民関連の窓口では、電話の問い合わせに追加の本人確認を導入しました。 (s4; Ekstra kontrol ved telefoniske henvendelser)
+- [confirmed / 公表で確認] 10月9日のCPR管理者の周知は、アクセス権を持つ企業に安全管理責任者の配置と照会件数の継続監視を求めています。 (s5; Nyhed 本文)
 
 ## 経緯
 
 - 2026-10-02: 9月中の不規則な挙動を認識したと公表しました。 (s1)
 - 2026-10-04: 規制当局へ報告しました。 (s3)
 - 2026-10-05: 政府とCPR管理者が事故を公表しました。 (s1, s2)
+- 2026-10-09: 企業向けのアクセス条件を改めて周知。 (s5)
 
 ## 編集上の点検提案
 
@@ -45,7 +47,8 @@ Rules: SEC-005, SEC-008, SEC-009, SEC-014
 
 ## 出典
 
-- s1: [Omfattende uautoriseret adgang til borgeres CPR-oplysninger](https://fudm.dk/aktuelt/pressemeddelelser/2026/oktober/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger/) — デンマーク研究・教育・デジタル化省; government; published: 2026-10-05; reviewed: 2026-10-12
+- s1: [Omfattende uautoriseret adgang til borgeres CPR-oplysninger](https://fudm.dk/aktuelt/pressemeddelelser/2026/oktober/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger/) — デンマーク研究・教育・デジタル化省; government; published: 2026-10-05; reviewed: 2026-10-26
 - s2: [Omfattende uautoriseret adgang til borgeres CPR-oplysninger](https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger) — CPR管理者; government; published: 2026-10-05; reviewed: 2026-10-12
 - s3: [Datatilsynet er opmærksom på sag om opslag i CPR](https://www.datatilsynet.dk/presse-og-nyheder/nyhedsarkiv/2026/okt/datatilsynet-er-opmaerksom-paa-sag-om-opslag-i-cpr) — Datatilsynet; government; published: 2026-10-05; reviewed: 2026-10-12
 - s4: [Uvedkommende har fået adgang til borgeres CPR-oplysninger](https://nyidanmark.dk/da/Nyheder/2026/10/Uvedkommende-har-faaet-adgang-til-borgeres-CPR-oplysninger) — Udlændingestyrelsen / SIRI; government; published: 2026-10-05; reviewed: 2026-10-12
+- s5: [Indskærpelse af regler og vilkår for din virksomheds adgang til CPR](https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/indskaerpelse-af-regler-og-vilkaar-for-din-virksomheds-adgang-til-cpr) — CPR管理者; government; published: 2026-10-09; reviewed: 2026-10-26

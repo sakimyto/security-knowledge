@@ -1,7 +1,7 @@
 {
   "id": "SEC-013",
   "version": "1.1.2",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-26",
   "title": {
     "ja": "隔離手順とバックアップの復元を確認する",
     "en": "Inspect containment and backup restoration"
@@ -76,6 +76,7 @@
     "education-software-dormant-2026",
     "epark-peakmanager-2026",
     "five-foxes-2026",
+    "france-refrigeration-2026",
     "gex-ransomware-2026",
     "idcf-ransomware-2026",
     "keio-ransomware-2026",

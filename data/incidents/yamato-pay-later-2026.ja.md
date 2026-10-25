@@ -1,6 +1,6 @@
 # yamato-pay-later-2026 — ヤマト運輸：代金後払いサービスへの不正アクセス
 
-事例 | Catalog: 0.8.0 | Record SHA-256: 59a8d3fd5c8982eea8d124aa4e97fa62158d48aeb2e88aec79833656d5bb3852
+事例 | Catalog: 0.9.0 | Record SHA-256: 59a8d3fd5c8982eea8d124aa4e97fa62158d48aeb2e88aec79833656d5bb3852
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

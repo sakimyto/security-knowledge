@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "id": "domestic-20261009",
   "receivedAt": "2026-10-09",
-  "reviewedAt": "2026-10-19",
+  "reviewedAt": "2026-10-26",
   "year": 2026,
   "yearProvenance": "user-confirmed-2026",
   "originalSourceUrl": null,
@@ -749,27 +749,29 @@
         "provenance": "user-supplied-unverified"
       },
       "status": "catalogued-partial",
-      "reviewedAt": "2026-10-19",
+      "reviewedAt": "2026-10-26",
       "catalogIncidentIds": [
         "omu-ransomware-2026"
       ],
       "verified": {
         "summary": {
-          "ja": "大学は障害をランサムウェア攻撃によるものと判断したと公表しました。事故DBへ接続しましたが、個人情報流出、入力の13万人超と侵入方法は未確認です。",
-          "en": "The university attributed the outage to ransomware. It is now linked to the catalog, while personal-data leakage, the supplied count above 130,000 people and the entry mechanism remain unverified."
+          "ja": "大学は、再委託先の正規アカウントを悪用した侵入が基盤障害の原因と報告され、NEC管理クラウド内の大学関連情報の漏えいも確認したと公表しました。大学仮想化基盤内の約13万件は別の調査対象です。",
+          "en": "The university reports a subcontractor account was abused to cause the outage and that university-related information leaked from NEC-managed cloud storage. About 130,000 records in the university virtualization platform are a separate investigation scope."
         },
         "disclosedAt": "2026-10-02",
         "sourceUrls": [
           "https://www.omu.moe/news-files/2026-10-06-7fb5a624/press-conference-materials_20261005.pdf",
           "https://www.omu.moe/news/2026-10-06-7fb5a624.html",
-          "https://www.omu.moe/news/2026-10-08-c5873744.html"
+          "https://www.omu.moe/news/2026-10-08-c5873744.html",
+          "https://www.omu.moe/news/2026-10-21-1d69aecb.html",
+          "https://jpn.nec.com/news/info/20261020.html"
         ],
         "claims": []
       },
       "gaps": [
         {
-          "ja": "個人情報流出の有無、入力の13万人超と侵入方法は未確認です。",
-          "en": "Personal-data leakage, the supplied count above 130,000 people and the entry mechanism remain unverified."
+          "ja": "再委託先への初回侵入方法と日時、NEC管理クラウドから漏えいした内容・件数、大学仮想化基盤の約13万件の情報流出の有無は未確定です。13万件を人数や確認済み流出数に変換しません。",
+          "en": "The subcontractor’s initial entry method/date, cloud-leak contents/count and leakage of about 130,000 university-platform records remain unresolved. The records count is not a people count or confirmed exfiltration total."
         }
       ],
       "discoveryUrls": [
@@ -782,7 +784,9 @@
         "https://www.omu.moe/news/2026-10-02-outage-1.html",
         "https://www.omu.moe/news/2026-10-02-outage-2.html",
         "https://www.omu.moe/news/2026-10-06-7fb5a624.html",
-        "https://www.omu.moe/news/2026-10-08-c5873744.html"
+        "https://www.omu.moe/news/2026-10-08-c5873744.html",
+        "https://www.omu.moe/news/2026-10-21-1d69aecb.html",
+        "https://jpn.nec.com/news/info/20261020.html"
       ],
       "retrievalFailures": [],
       "retry": true

@@ -1,7 +1,7 @@
 {
   "id": "SEC-005",
   "version": "1.1.2",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-26",
   "title": {
     "ja": "更新対象の資格情報と旧鍵の失効を照合する",
     "en": "Reconcile credential inventory and revocation"
@@ -72,6 +72,7 @@
     "anthropic-claude-code-abuse-2025",
     "anthropic-cyber-evals-2026",
     "applynow-bi-2026",
+    "arcadia-raiden-2026",
     "askul-2025",
     "awabank-test-environment-2026",
     "axios-npm-2026",
@@ -92,6 +93,7 @@
     "expo-subcontractor-mail-2026",
     "fancrew-credential-stuffing-2026",
     "forticloud-sso-2026",
+    "france-refrigeration-2026",
     "fuso-cloud-storage-2026",
     "gainsight-oauth-2025",
     "gmo-infoq-2026",

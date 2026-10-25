@@ -1,6 +1,6 @@
 # toyobo-email-2026 — Toyobo group: compromised email propagates phishing to an affiliate
 
-Incident | Catalog: 0.8.0 | Record SHA-256: edb04797f524cb18dba3c313b8709d3bc388c72b9963ba04e4d55b5a6f945b29
+Incident | Catalog: 0.9.0 | Record SHA-256: edb04797f524cb18dba3c313b8709d3bc388c72b9963ba04e4d55b5a6f945b29
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

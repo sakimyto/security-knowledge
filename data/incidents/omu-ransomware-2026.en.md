@@ -1,22 +1,24 @@
 # omu-ransomware-2026 — Osaka Metropolitan University: infrastructure outage attributed to ransomware
 
-Incident | Catalog: 0.8.0 | Record SHA-256: 1ffcfc988241ace9848dfccbebe88649215e5534ec11b16c2f9e5d5bdafb68c8
+Incident | Catalog: 0.9.0 | Record SHA-256: 5de69a004734b1f9687333c63ca59dfbfb0afaccc96c052236e6250577603e7d
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 
-The university attributed its October 2 outage to ransomware. Virtual servers stopped and signs of data alteration were found; personal-data leakage remains under investigation.
+The university reports a subcontractor account was abused to cause the outage and that university-related information leaked from NEC-managed cloud storage. About 130,000 records in the university virtualization platform are a separate investigation scope.
 
 Organization: 大阪公立大学 | Outcome: confirmed-breach
 
-Occurred: unknown | Disclosed: 2026-10-02 | Reviewed: 2026-10-19
+Occurred: unknown | Disclosed: 2026-10-02 | Reviewed: 2026-10-26
 
-Categories: unknown | CVEs: unspecified
+Categories: credentials, supply-chain | CVEs: unspecified
 
 ## Sourced claims
 
 - [confirmed / Reported fact] The university stated that it judged the incident to be a ransomware attack. (s1; 本文 会見説明)
-- [confirmed / Reported fact] Network, email, teaching, finance, payroll and library systems stopped; personal-data leakage is still being investigated. (s1; 本文 影響範囲 / 個人情報)
 - [confirmed / Reported fact] Servers began stopping around 00:20 on October 2; investigation after 04:00 found signs of data alteration. (s2; 資料2 10月2日の経緯)
+- [confirmed / Reported fact] The university says NEC reported a late-September attack on a subcontractor whose legitimate account was used against university systems. NEC describes abuse of stolen credentials. (s4, s5; 大学 本文 第1段落 / NEC 冒頭と主な被害状況)
+- [confirmed / Reported fact] NEC reported leakage of university personal/system information from shared cloud storage it managed; contents and counts remain under review. (s4; 本文 第2〜3段落)
+- [confirmed / Reported fact] About 130,000 teaching-related records are in the university virtualization platform, separate from the NEC cloud leak; leakage from that platform remains under investigation. (s4; 本文 なお本学記者会見の段落)
 
 ## Reported actions
 
@@ -26,10 +28,12 @@ Categories: unknown | CVEs: unspecified
 
 - 2026-10-02: Outage detected; first and second notices issued. (s2)
 - 2026-10-05: Press conference held. (s1)
+- 2026-10-20: Received NEC report on cause and cloud-storage leakage. (s4)
+- 2026-10-21: Fifth notice distinguished the subcontractor access route and storage scopes. (s4)
 
 ## Editorial inspection guidance
 
-unknown: The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules. (s1)
+unknown: The subcontractor’s initial entry and prior controls are unresolved, so avoidability is unknown. Inspect subcontractor privileges, revocation, logs and storage boundaries. (s4, s5)
 
 ## AI attribution
 
@@ -37,7 +41,7 @@ unknown: The entry mechanism is undisclosed; avoidability cannot be assessed. In
 
 ## Unknowns
 
-- The intrusion start, entry route and whether or how much personal data leaked are not established.
+- The subcontractor’s initial entry method/date, cloud-leak contents/count and leakage of about 130,000 university-platform records remain unresolved. The records count is not a people count or confirmed exfiltration total.
 
 Rules: SEC-008, SEC-009, SEC-013
 
@@ -46,3 +50,5 @@ Rules: SEC-008, SEC-009, SEC-013
 - s1: [情報基盤システムにおける障害に関する記者会見を実施](https://www.omu.moe/news/2026-10-06-7fb5a624.html) — 大阪公立大学; organization; published: 2026-10-06; reviewed: 2026-10-19
 - s2: [10月5日記者会見配付資料](https://www.omu.moe/news-files/2026-10-06-7fb5a624/press-conference-materials_20261005.pdf) — 大阪公立大学; organization; published: 2026-10-05; reviewed: 2026-10-19
 - s3: [本学情報基盤システムにおける障害の発生について【第4報】](https://www.omu.moe/news/2026-10-08-c5873744.html) — 大阪公立大学; organization; published: 2026-10-08; reviewed: 2026-10-19
+- s4: [本学情報基盤システムにおける障害の発生について【第5報】](https://www.omu.moe/news/2026-10-21-1d69aecb.html) — 大阪公立大学; organization; published: 2026-10-21; reviewed: 2026-10-26
+- s5: [委託先への不正アクセスに起因するお客さまのシステム障害、情報漏えいに関するお詫び](https://jpn.nec.com/news/info/20261020.html) — 日本電気; vendor; published: 2026-10-20; reviewed: 2026-10-26

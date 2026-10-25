@@ -1,7 +1,7 @@
 {
   "id": "SEC-006",
   "version": "1.1.2",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-26",
   "title": {
     "ja": "稼働環境の公開範囲を確認する",
     "en": "Inspect deployed exposure boundaries"
@@ -70,14 +70,17 @@
     "epark-peakmanager-2026",
     "eplus-refund-2026",
     "forticloud-sso-2026",
+    "france-refrigeration-2026",
     "fukuoka-editable-application-2026",
     "fuso-cloud-storage-2026",
     "gyazo-2026",
+    "hana-bank-2026",
     "his-thailand-2025",
     "idcf-ransomware-2026",
     "istyle-transfer-exposure-2026",
     "jaea-jrr3-files-2026",
     "kamogawa-form-exposure-2026",
+    "kb-kookmin-2026",
     "kddi-isp-2026",
     "komatsu-user-directory-exposure-2026",
     "kwansei-external-sns-2026",

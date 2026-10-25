@@ -11,7 +11,7 @@
   },
   "occurredAt": null,
   "disclosedAt": "2026-10-05",
-  "reviewedAt": "2026-10-12",
+  "reviewedAt": "2026-10-26",
   "outcome": "confirmed-breach",
   "categories": [
     "unknown"
@@ -88,6 +88,16 @@
         "s1",
         "s2"
       ]
+    },
+    {
+      "date": "2026-10-09",
+      "text": {
+        "ja": "企業向けのアクセス条件を改めて周知。",
+        "en": "Reiterated company access conditions."
+      },
+      "sourceIds": [
+        "s5"
+      ]
     }
   ],
   "reportedActions": [
@@ -115,6 +125,18 @@
         "s4"
       ],
       "locator": "Ekstra kontrol ved telefoniske henvendelser"
+    },
+    {
+      "topic": "access-guidance",
+      "text": {
+        "ja": "10月9日のCPR管理者の周知は、アクセス権を持つ企業に安全管理責任者の配置と照会件数の継続監視を求めています。",
+        "en": "CPR’s October 9 reminder requires companies with access to have a security officer and continuously monitor lookup counts."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s5"
+      ],
+      "locator": "Nyhed 本文"
     }
   ],
   "prevention": {
@@ -149,7 +171,7 @@
       "publisher": "デンマーク研究・教育・デジタル化省",
       "kind": "government",
       "publishedAt": "2026-10-05",
-      "reviewedAt": "2026-10-12"
+      "reviewedAt": "2026-10-26"
     },
     {
       "id": "s2",
@@ -177,6 +199,15 @@
       "kind": "government",
       "publishedAt": "2026-10-05",
       "reviewedAt": "2026-10-12"
+    },
+    {
+      "id": "s5",
+      "title": "Indskærpelse af regler og vilkår for din virksomheds adgang til CPR",
+      "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/indskaerpelse-af-regler-og-vilkaar-for-din-virksomheds-adgang-til-cpr",
+      "publisher": "CPR管理者",
+      "publishedAt": "2026-10-09",
+      "reviewedAt": "2026-10-26",
+      "kind": "government"
     }
   ],
   "ruleIds": [
