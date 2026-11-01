@@ -79,7 +79,8 @@
     "rust-arrayref-2026",
     "toyobo-email-2026",
     "trunk-mail-2026",
-    "uber-2022"
+    "uber-2022",
+    "atlink-medley-2026"
   ],
   "references": [],
   "execution": "read-only-by-default",
