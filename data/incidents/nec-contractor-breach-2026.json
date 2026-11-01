@@ -1,0 +1,174 @@
+{
+  "id": "nec-contractor-breach-2026",
+  "organization": "NEC",
+  "title": {
+    "ja": "NEC委託先サイバー攻撃：正規アカウント悪用による顧客システム暗号化と大阪大学など個人情報流出",
+    "en": "NEC contractor cyberattack: customer system encryption via stolen credentials and information leakage including Osaka University"
+  },
+  "summary": {
+    "ja": "NECのシステム開発・保守委託先が9月下旬にサイバー攻撃を受け、窃取された正規アカウント認証情報で顧客システムへ不正アクセスされました。サーバファイルが暗号化され障害が発生し、NECと顧客、委託先が共有していたクラウドストレージから個人情報やシステム関連情報が漏えいしました。顧客3社のうち2社で個人情報漏えいが確認され、大阪大学では約7万7,851人分の情報が対象となりました。",
+    "en": "NEC's system development/maintenance contractor was cyberattacked in late September, with stolen legitimate account credentials used for unauthorized access to customer systems. Server files were encrypted causing outages, and personal and system-related information leaked from cloud storage shared among NEC, customers, and contractors. Personal information leakage was confirmed for 2 of 3 affected customers, with approximately 77,851 people's information at Osaka University."
+  },
+  "occurredAt": "2026-09-26",
+  "disclosedAt": "2026-10-20",
+  "reviewedAt": "2026-11-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "implementation"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "委託先が9月下旬にサイバー攻撃を受け、窃取された正規アカウントの認証情報が悪用されました。委託先の端末から正規アカウントを用いた不正アクセスが行われました。",
+        "en": "The contractor was cyberattacked in late September, with stolen legitimate account credentials being abused. Unauthorized access using legitimate accounts occurred from contractor terminals."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "9月下旬にサイバー攻撃を受け、窃取された正規アカウントの認証情報が悪用"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "顧客システム環境に不正アクセスされ、サーバ内のファイルが暗号化されシステムが利用できない状態となりました。NECと顧客、委託先間で共有していたクラウドストレージ内のファイルが漏えいし、顧客の個人情報やシステム関連情報が含まれていました。",
+        "en": "Customer systems were accessed without authorization, server files were encrypted, and systems became unavailable. Files in cloud storage shared among NEC, customers, and contractors leaked, containing customer personal information and system-related data."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "サーバ内のファイルが暗号化 / クラウドストレージ内のファイルが漏えい"
+    },
+    {
+      "topic": "osaka-university",
+      "text": {
+        "ja": "大阪大学では在学生1万5,035人、卒業生5万9,014人、教職員3,802人の計7万7,851人分の個人情報が漏えいしました。NECが大学に報告していない協力会社と情報を共有するため、個人情報を含むファイルをクラウドストレージ上で共有していました。",
+        "en": "At Osaka University, personal information of 77,851 people leaked, including 15,035 current students, 59,014 graduates, and 3,802 faculty/staff. NEC had shared files containing personal information on cloud storage to collaborate with an unreported partner company."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s3"
+      ],
+      "locator": "計7万7,851人分 / 大学に報告していない協力会社"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-26",
+      "text": {
+        "ja": "大阪大学の個人情報を含むファイルがダウンロードされる。",
+        "en": "Files containing Osaka University personal information were downloaded."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "text": {
+        "ja": "大阪大学がNECから第三者による情報ダウンロードの報告を受ける。",
+        "en": "Osaka University received report from NEC about third-party information download."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "text": {
+        "ja": "NECが不正アクセスを公表。",
+        "en": "NEC announced unauthorized access."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "text": {
+        "ja": "大阪大学が個人情報漏えいを公表。",
+        "en": "Osaka University announced personal information leakage."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "発覚後、NECは委託先に当社管理の端末を貸与するなど必要な対策を進めています。影響のあった複数の顧客には既に個別に連絡を行い、対応や全容の早期解明に注力しています。",
+        "en": "After discovery, NEC is advancing necessary measures including lending NEC-managed terminals to contractors. Individual contact has been made to multiple affected customers, focusing on response and early clarification of full scope."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "委託先に当社管理の端末を貸与"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "委託先の端末管理と認証情報保護が不十分でした。また、顧客への報告なしに協力会社と個人情報を共有していた管理体制にも問題がありました。関連ルールで委託先管理、認証情報保護、情報共有の承認プロセスを点検します。",
+      "en": "Contractor terminal management and credential protection were inadequate. Management practices that allowed sharing personal information with partner companies without customer notification were also problematic. Related rules inspect contractor management, credential protection, and information sharing approval processes."
+    },
+    "sourceIds": [
+      "s1",
+      "s3"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed primary sources do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "顧客3社の名称（大阪大学を除く）、委託先の名称、具体的な侵入経路、使用されたCVE、漏えいした情報の全容は未確定です。",
+      "en": "Names of 3 customer companies (excluding Osaka University), contractor name, specific intrusion path, CVEs used, and full scope of leaked information remain unresolved."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "委託先への不正アクセスに起因するお客さまのシステム障害、情報漏えいに関するお詫び",
+      "url": "https://jpn.nec.com/news/info/20261020.html",
+      "publisher": "NEC",
+      "kind": "vendor",
+      "publishedAt": "2026-10-20",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s2",
+      "title": "NECの委託先にサイバー攻撃　正規アカウント悪用し顧客のサーバ暗号化、個人情報の漏えいも",
+      "url": "https://www.itmedia.co.jp/news/article/2610/20/2000002433/",
+      "publisher": "ITmedia NEWS",
+      "kind": "secondary",
+      "publishedAt": "2026-10-20",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s3",
+      "title": "大阪大、学生など7.8万人の情報漏えい　NECが無断で協力会社とデータ共有",
+      "url": "https://www.itmedia.co.jp/news/article/2610/22/2000002491/",
+      "publisher": "ITmedia NEWS",
+      "kind": "secondary",
+      "publishedAt": "2026-10-22",
+      "reviewedAt": "2026-11-02"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-006",
+    "SEC-009",
+    "SEC-013"
+  ]
+}

@@ -2,10 +2,10 @@
   "state": {
     "formatVersion": "1.0.0",
     "ruleId": "SEC-001",
-    "ruleHash": "630cc34d315bdd90cd3049bbb4fc8b535e686480bd8844107638a1c60c7fba15",
+    "ruleHash": "fac52ddb96b139acf2b1dd1107c8852450ceea4d28a4a678c529d91f5e0609b6",
     "assetId": "fictional-example",
     "environmentRevision": "replace-with-actual-environment-revision",
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-02T00:00:00Z",
     "scope": "Fictional example only; no inspection performed",
     "observations": [
       {

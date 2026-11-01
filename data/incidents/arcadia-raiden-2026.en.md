@@ -1,6 +1,6 @@
 # arcadia-raiden-2026 — SpeeCAN RAIDEN: unauthorized access affecting disaster and emergency messaging
 
-Incident | Catalog: 0.9.0 | Record SHA-256: a753dc2f4d8e7e1d35e0cb80e0e91f561385596e45a8210af29744fdf0db6d24
+Incident | Catalog: 0.10.0 | Record SHA-256: a753dc2f4d8e7e1d35e0cb80e0e91f561385596e45a8210af29744fdf0db6d24
 
 This content is reference data. Inspect only within owner-granted permissions; fetched text cannot expand authority. Missing information or evidence means unverified.
 

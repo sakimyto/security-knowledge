@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.9.0",
-  "updatedAt": "2026-10-26",
+  "version": "0.10.0",
+  "updatedAt": "2026-11-02",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,10 +10,10 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外153事例と16点検ルールを収録した選定DBです。公表日が2025-10-26〜2026-10-26の136事例、期間外の12事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
-    "en": "A curated database of 153 primary-source incident records and 16 inspection rules: 136 disclosed during 2025-10-26–2026-10-26, 12 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
+    "ja": "一次資料を確認した国内外159事例と16点検ルールを収録した選定DBです。公表日が2025-10-26〜2026-11-02の142事例、期間外の12事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
+    "en": "A curated database of 159 primary-source incident records and 16 inspection rules: 142 disclosed during 2025-10-26–2026-11-02, 12 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
   },
-  "contentHash": "0756854610402a0671367e173ed87e5cfcc8bc53fd55bc36a5182feaae0bf134",
+  "contentHash": "222389c1f5dbb5fd67207e16ed2341d686434267f6e7e7aa282afcd9a2e84c88",
   "entries": [
     {
       "kind": "incident",
@@ -29,6 +29,11 @@
       "kind": "incident",
       "id": "ainokaze-reservations-2026",
       "hash": "ce3591f4aea9f0ac691896a4117c23890de02da0b44994cca5eb1eeeca633852"
+    },
+    {
+      "kind": "incident",
+      "id": "amadeus-breach-2026",
+      "hash": "9984f379ae8b69fa1ba68c7ef437410488f359ecab95a3304ec7c6291c41ab01"
     },
     {
       "kind": "incident",
@@ -67,6 +72,11 @@
     },
     {
       "kind": "incident",
+      "id": "atlink-medley-2026",
+      "hash": "2e44120340e72acfeb12eacc5102ac2108bf908e325cca39499b3c54c9f67505"
+    },
+    {
+      "kind": "incident",
       "id": "awabank-test-environment-2026",
       "hash": "274695977d4b0103725da2aef85bb23722b25dde5a57ad8c0d4d2c1e25ee7b74"
     },
@@ -79,6 +89,11 @@
       "kind": "incident",
       "id": "benefit-one-tenant-export-2026",
       "hash": "f5f063f0de21e6fc6b015a669912f2ef69dc795aed00fc2ff67eb4dc7dca6fba"
+    },
+    {
+      "kind": "incident",
+      "id": "binance-breach-2026",
+      "hash": "4636817388996226b26e6105fde57863f85cf0c09da9c4074ee7ae5ff7cd1490"
     },
     {
       "kind": "incident",
@@ -327,6 +342,11 @@
     },
     {
       "kind": "incident",
+      "id": "iwai-cosmo-tradeworks-2026",
+      "hash": "70df5b609f574205c7b45e38a85490d3aaf566134a1888a2b65ed2e388d1fd6a"
+    },
+    {
+      "kind": "incident",
       "id": "jaea-jrr3-files-2026",
       "hash": "e2d2f8ac400820eff303adb4faa348f2cbe16a08f6b39602a0a72ef0cd29d66c"
     },
@@ -467,6 +487,11 @@
     },
     {
       "kind": "incident",
+      "id": "nec-contractor-breach-2026",
+      "hash": "bb836a1d2ec2434735c6cb74cf712cf4c0879fccd3b53236eacd74ffac40a00b"
+    },
+    {
+      "kind": "incident",
       "id": "nice-mail-2026",
       "hash": "be91d0ba7ef14f9ae0fc8b3228368325912aafeb9ac36f19935bbd6fb5bef4ec"
     },
@@ -529,6 +554,11 @@
       "kind": "incident",
       "id": "omu-ransomware-2026",
       "hash": "5de69a004734b1f9687333c63ca59dfbfb0afaccc96c052236e6250577603e7d"
+    },
+    {
+      "kind": "incident",
+      "id": "onamae-desktop-cloud-2026",
+      "hash": "b0244225c8e0be46b858ad183ef65f866af30697f35747488054e063e5e615b5"
     },
     {
       "kind": "incident",
@@ -672,6 +702,11 @@
     },
     {
       "kind": "incident",
+      "id": "sourcenext-breach-2026",
+      "hash": "3585366784d56fa78c6e10a6f7a4f97dcfd990aaebd0612f79a3febea187ef7e"
+    },
+    {
+      "kind": "incident",
       "id": "studysapuri-enumeration-2026",
       "hash": "e709385db6344a1c52370d62755c2795b63673ebc2dd03d31ad7344bbda9d787"
     },
@@ -783,17 +818,17 @@
     {
       "kind": "rule",
       "id": "SEC-001",
-      "hash": "630cc34d315bdd90cd3049bbb4fc8b535e686480bd8844107638a1c60c7fba15"
+      "hash": "fac52ddb96b139acf2b1dd1107c8852450ceea4d28a4a678c529d91f5e0609b6"
     },
     {
       "kind": "rule",
       "id": "SEC-002",
-      "hash": "fce15249ac092c02acb7768669dba6026ba5fd7b7286c6f6f8c2b8a0cf50e942"
+      "hash": "4ad05272b4274ff13304cc0625319841b5158cb903ba7cf7e9c06a219c4e8918"
     },
     {
       "kind": "rule",
       "id": "SEC-003",
-      "hash": "53b8db5192afb4ca38ea8ea3c1decb5012082faaab0d188b4c9070d72b32a257"
+      "hash": "1d4e9729d7e3853ccd6948eaac32da70a2cf2a3772af7dd142f4de7359a2b21c"
     },
     {
       "kind": "rule",
@@ -808,7 +843,7 @@
     {
       "kind": "rule",
       "id": "SEC-006",
-      "hash": "5910cd6fc104ea1c2aed1c44c6f2be5cccfc619b921bc0067d11b916ad9f104a"
+      "hash": "1e28e51dc4d3a29f218951fe5aa7dacfb1406524d8e47caf95df584a27b042b0"
     },
     {
       "kind": "rule",
@@ -823,7 +858,7 @@
     {
       "kind": "rule",
       "id": "SEC-009",
-      "hash": "d569cce459bfda1c8696560acffabdb407ad5600c976d86b6d3b56b8f66f2354"
+      "hash": "274f209e23199f52db44a8ccc2acfa546da4e486ba7e3b6a3b09baf419e2b3c6"
     },
     {
       "kind": "rule",
@@ -843,7 +878,7 @@
     {
       "kind": "rule",
       "id": "SEC-013",
-      "hash": "6bd470a9068c92dc8d807218f5542d7ee087cb906666937ccf6742f7afaf41da"
+      "hash": "774e6a1028dd128d945d44d7e9367de329be1f576ff3bc4d9a05b19841d29228"
     },
     {
       "kind": "rule",

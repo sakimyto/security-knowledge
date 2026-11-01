@@ -6,7 +6,7 @@
 
 # SEC-005 — 更新対象の資格情報と旧鍵の失効を照合する
 
-点検ルール | Catalog: 0.9.0 | Record SHA-256: 695e2e119a1364887732e6ee90c1250d22063f1e6e0ec71746e80b7231ace15f
+点検ルール | Catalog: 0.10.0 | Record SHA-256: 695e2e119a1364887732e6ee90c1250d22063f1e6e0ec71746e80b7231ace15f
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -54,7 +54,7 @@ Execution: read-only-by-default | Provenance: editorial-guidance
 
 # SEC-006 — 稼働環境の公開範囲を確認する
 
-点検ルール | Catalog: 0.9.0 | Record SHA-256: 5910cd6fc104ea1c2aed1c44c6f2be5cccfc619b921bc0067d11b916ad9f104a
+点検ルール | Catalog: 0.10.0 | Record SHA-256: 1e28e51dc4d3a29f218951fe5aa7dacfb1406524d8e47caf95df584a27b042b0
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -92,7 +92,7 @@ Execution: read-only-by-default | Provenance: editorial-guidance
 
 ## 関連事例
 
-anthropic-cyber-evals-2026, anthropic-unintended-model-actions-2026, arcadia-raiden-2026, asahi-pharma-digital-2026, awabank-test-environment-2026, campfire-2026, chibagin-shoten-2026, cmic-ra-connect-2026, daiichi-life-hr-2026, daiki-suisan-2026, digital-agency-gss-2026, education-software-dormant-2026, epark-peakmanager-2026, eplus-refund-2026, forticloud-sso-2026, france-refrigeration-2026, fukuoka-editable-application-2026, fuso-cloud-storage-2026, gyazo-2026, hana-bank-2026, his-thailand-2025, idcf-ransomware-2026, istyle-transfer-exposure-2026, jaea-jrr3-files-2026, kamogawa-form-exposure-2026, kb-kookmin-2026, kddi-isp-2026, komatsu-user-directory-exposure-2026, kwansei-external-sns-2026, kyoto-kyotv-exposure-2026, medley-atlink-2026, metabase-2026, mie-school-form-exposure-2026, moveit-2023, mrmax-2026, nichii-backup-exposure-2026, nidek-website-2026, nishiyama-2026, openai-huggingface-eval-2026, prontest-cloud-2026, react2shell-2025, rizap-ai-data-handling-2026, sakura-billing-2026, sakura-hosting-2026, scala-iask-2026, seiho-contract-lookup-2026, shizuoka-form-exposure-2026, skyticket-bus-2026, snowflake-unc5537-2024, temairazu-2026, times-car-2026, toyota-cloud-2023, unit42-ai-assisted-2026, voising-bi-2026, yakiniku-king-2026, yamato-pay-later-2026
+anthropic-cyber-evals-2026, anthropic-unintended-model-actions-2026, arcadia-raiden-2026, asahi-pharma-digital-2026, awabank-test-environment-2026, campfire-2026, chibagin-shoten-2026, cmic-ra-connect-2026, daiichi-life-hr-2026, daiki-suisan-2026, digital-agency-gss-2026, education-software-dormant-2026, epark-peakmanager-2026, eplus-refund-2026, forticloud-sso-2026, france-refrigeration-2026, fukuoka-editable-application-2026, fuso-cloud-storage-2026, gyazo-2026, hana-bank-2026, his-thailand-2025, idcf-ransomware-2026, istyle-transfer-exposure-2026, jaea-jrr3-files-2026, kamogawa-form-exposure-2026, kb-kookmin-2026, kddi-isp-2026, komatsu-user-directory-exposure-2026, kwansei-external-sns-2026, kyoto-kyotv-exposure-2026, medley-atlink-2026, metabase-2026, mie-school-form-exposure-2026, moveit-2023, mrmax-2026, nichii-backup-exposure-2026, nidek-website-2026, nishiyama-2026, openai-huggingface-eval-2026, prontest-cloud-2026, react2shell-2025, rizap-ai-data-handling-2026, sakura-billing-2026, sakura-hosting-2026, scala-iask-2026, seiho-contract-lookup-2026, shizuoka-form-exposure-2026, skyticket-bus-2026, snowflake-unc5537-2024, temairazu-2026, times-car-2026, toyota-cloud-2023, unit42-ai-assisted-2026, voising-bi-2026, yakiniku-king-2026, yamato-pay-later-2026, amadeus-breach-2026, atlink-medley-2026, binance-breach-2026, iwai-cosmo-tradeworks-2026, nec-contractor-breach-2026, onamae-desktop-cloud-2026, sourcenext-breach-2026
 
 ## 出典
 
@@ -100,7 +100,7 @@ anthropic-cyber-evals-2026, anthropic-unintended-model-actions-2026, arcadia-rai
 
 # SEC-008 — 侵害後に広がる管理権限を確認する
 
-点検ルール | Catalog: 0.9.0 | Record SHA-256: ab2bd7e87128a2ce571578558337ab8577fcda20f841171dba5b45d732ad2f03
+点検ルール | Catalog: 0.10.0 | Record SHA-256: ab2bd7e87128a2ce571578558337ab8577fcda20f841171dba5b45d732ad2f03
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -146,7 +146,7 @@ Execution: read-only-by-default | Provenance: editorial-guidance
 
 # SEC-012 — 非本番環境と保存データの廃止期限を確認する
 
-点検ルール | Catalog: 0.9.0 | Record SHA-256: 2da99baf28980f61385469445d6c000edb5434471a4a3500f1775ca78467824a
+点検ルール | Catalog: 0.10.0 | Record SHA-256: 2da99baf28980f61385469445d6c000edb5434471a4a3500f1775ca78467824a
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -199,7 +199,7 @@ Execution: read-only-by-default | Provenance: editorial-guidance
 
 # SEC-013 — 隔離手順とバックアップの復元を確認する
 
-点検ルール | Catalog: 0.9.0 | Record SHA-256: 6bd470a9068c92dc8d807218f5542d7ee087cb906666937ccf6742f7afaf41da
+点検ルール | Catalog: 0.10.0 | Record SHA-256: 774e6a1028dd128d945d44d7e9367de329be1f576ff3bc4d9a05b19841d29228
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -240,7 +240,7 @@ Execution: read-only-by-default | Provenance: editorial-guidance
 
 ## 関連事例
 
-arcadia-raiden-2026, askul-2025, conoha-wing-2026, coop-yamaguchi-2026, cota-2026, dandm-vpn-ransomware-2026, education-software-dormant-2026, epark-peakmanager-2026, five-foxes-2026, france-refrigeration-2026, gex-ransomware-2026, idcf-ransomware-2026, keio-ransomware-2026, logicvein-2025, medley-atlink-2026, nichirei-2026, nihontelenet-ransomware-2026, nishiyama-2026, nostrum-smartspi-2026, omu-ransomware-2026, ryomo-systems-2026, sakura-hosting-2026
+arcadia-raiden-2026, askul-2025, conoha-wing-2026, coop-yamaguchi-2026, cota-2026, dandm-vpn-ransomware-2026, education-software-dormant-2026, epark-peakmanager-2026, five-foxes-2026, france-refrigeration-2026, gex-ransomware-2026, idcf-ransomware-2026, keio-ransomware-2026, logicvein-2025, medley-atlink-2026, nichirei-2026, nihontelenet-ransomware-2026, nishiyama-2026, nostrum-smartspi-2026, omu-ransomware-2026, ryomo-systems-2026, sakura-hosting-2026, atlink-medley-2026, nec-contractor-breach-2026
 
 ## 出典
 
@@ -251,7 +251,7 @@ arcadia-raiden-2026, askul-2025, conoha-wing-2026, coop-yamaguchi-2026, cota-202
 
 # SEC-015 — アップロードしたファイルの実行を制限する
 
-点検ルール | Catalog: 0.9.0 | Record SHA-256: 1dfd83077658a79d47897d199f646eb9f69aa4d92c7646c57f2b82a715fde44c
+点検ルール | Catalog: 0.10.0 | Record SHA-256: 1dfd83077658a79d47897d199f646eb9f69aa4d92c7646c57f2b82a715fde44c
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
@@ -298,7 +298,7 @@ chiba-biodiversity-2026, conoha-wing-2026, inkrevolution-payment-2025, picklebal
 
 # SEC-016 — 利用者ごとのレスポンスをキャッシュで混在させない
 
-点検ルール | Catalog: 0.9.0 | Record SHA-256: cce435bbacb6fef88c9e9d661222b081d8463e4f025448a7796cdcddd7548488
+点検ルール | Catalog: 0.10.0 | Record SHA-256: cce435bbacb6fef88c9e9d661222b081d8463e4f025448a7796cdcddd7548488
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 
