@@ -1,0 +1,157 @@
+{
+  "id": "sourcenext-breach-2026",
+  "organization": "ソースネクスト",
+  "title": {
+    "ja": "ソースネクスト：会員情報API不正利用により最大2,252万件の個人情報流出",
+    "en": "Sourcenext: up to 22.52 million member records leaked via unauthorized API access"
+  },
+  "summary": {
+    "ja": "ソースネクストの会員情報取得APIが第三者に不正利用され、最大2,251万9,960件の会員情報が流出した可能性があります。パスワードは暗号化されていましたが、復号鍵にアクセス可能なシステムへの侵入により平文で流出しました。攻撃は10月9日に開始され、13日に検知・封じ込められました。",
+    "en": "Sourcenext's member information retrieval API was abused by a third party, potentially leaking up to 22,519,960 member records. Passwords were encrypted but leaked in plaintext due to intrusion into a system with access to decryption keys. The attack began on October 9 and was detected and contained on the 13th."
+  },
+  "occurredAt": "2026-10-09",
+  "disclosedAt": "2026-10-15",
+  "reviewedAt": "2026-11-02",
+  "outcome": "confirmed-breach",
+  "categories": ["implementation"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "10月9日10時頃から不正アクセスがあり、会員情報取得APIを不正に利用して情報を取得しました。13日9時頃に確認し、13時36分までに封じ込めを完了しました。",
+        "en": "Unauthorized access began around 10:00 on October 9, with the attacker abusing the member information retrieval API. The breach was confirmed around 9:00 on the 13th and containment was completed by 13:36."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "10月9日（金）10時頃から不正アクセス"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "流出可能性のある対象件数は22,519,960件です。対象情報はメールアドレス、パスワード、氏名、住所、電話番号、生年月日などです。クレジットカード情報は対象システムに保存されておらず、流出対象に含まれません。",
+        "en": "The number of potentially affected records is 22,519,960. Affected information includes email addresses, passwords, names, addresses, phone numbers, and birth dates. Credit card information was not stored in the target system and is not included in the leak."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "対象件数：22,519,960件"
+    },
+    {
+      "topic": "password-storage",
+      "text": {
+        "ja": "パスワードは暗号化して保存していましたが、復号鍵にアクセス可能なシステム（API）への不正アクセスにより、パスワードが復号された状態で流出しました。システムは開発時期が古く、最新のハッシュ化方式へ移行できていませんでした。",
+        "en": "Passwords were stored encrypted, but leaked in decrypted form due to unauthorized access to a system (API) with access to decryption keys. The system's development period was old, and migration to modern hashing methods had not been completed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s3"],
+      "locator": "暗号化されたパスワードを復号するための鍵にアクセス可能なシステム"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-09",
+      "text": {
+        "ja": "10時頃から不正アクセスが開始。",
+        "en": "Unauthorized access began around 10:00."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-13",
+      "text": {
+        "ja": "9時頃に不正アクセスを確認。外部からの不正な通信を遮断し、13時36分までに封じ込めを完了。",
+        "en": "Confirmed unauthorized access around 9:00. Blocked unauthorized external communications and completed containment by 13:36."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-15",
+      "text": {
+        "ja": "個人情報保護委員会への報告を完了し、公表。",
+        "en": "Completed report to Personal Information Protection Commission and made public announcement."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-16",
+      "text": {
+        "ja": "所轄警察署へ被害申告。外部の独立したセキュリティ専門機関へ第三者調査を依頼。",
+        "en": "Filed damage report with police. Requested third-party investigation from external independent security specialists."
+      },
+      "sourceIds": ["s2"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "不正アクセス検知後、速やかに緊急措置を講じ、13時36分までに封じ込めを完了しました。漏えい対象に含まれるパスワードをリセットし、ログイン時にパスワードの再設定を求めています。",
+        "en": "Took immediate emergency measures after detecting unauthorized access and completed containment by 13:36. Reset passwords included in the leak scope and require password reset at login."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "10月13日（火）13時36分までに封じ込め対応を完了"
+    },
+    {
+      "topic": "investigation",
+      "text": {
+        "ja": "外部の専門調査機関と連携して詳細な調査を進めるとともに、全システムの緊急点検を実施しています。",
+        "en": "Proceeding with detailed investigation in cooperation with external specialist agencies while conducting emergency inspection of all systems."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "外部の専門調査機関と連携して詳細な調査"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "旧式の暗号化方式を継続使用し、復号鍵にアクセス可能なAPIの保護が不十分でした。関連ルールでパスワードのハッシュ化、API認証、アクセス制御を点検します。",
+      "en": "Continued use of outdated encryption methods and inadequate protection of APIs with access to decryption keys. Related rules inspect password hashing, API authentication, and access controls."
+    },
+    "sourceIds": ["s3"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed primary sources do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的なAPI侵入経路、使用されたCVE、実際に流出したメールアドレスの正確な件数は未確定です。システムの開発時期も明らかにされていません。",
+      "en": "Specific API intrusion path, CVEs used, and exact count of leaked email addresses remain unresolved. The system's development period was also not disclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "当社サイトへの不正アクセスによるお客様情報流出のお詫びとお知らせ",
+      "url": "https://www.sourcenext.com/support/i/2026/1015_info/",
+      "publisher": "ソースネクスト",
+      "kind": "vendor",
+      "publishedAt": "2026-10-15",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s2",
+      "title": "情報漏洩に関するよくあるご質問",
+      "url": "https://www.sourcenext.com/support/i/2026/1015_1/",
+      "publisher": "ソースネクスト",
+      "kind": "vendor",
+      "publishedAt": "2026-10-15",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s3",
+      "title": "ソースネクスト、パスワードなぜ平文で流出　「暗号化していたが、鍵にアクセスできるシステムに侵入された」",
+      "url": "https://www.itmedia.co.jp/news/article/2610/19/2000002372/",
+      "publisher": "ITmedia NEWS",
+      "kind": "secondary",
+      "publishedAt": "2026-10-19",
+      "reviewedAt": "2026-11-02"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-002", "SEC-006"]
+}

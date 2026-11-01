@@ -1,6 +1,6 @@
 # arcadia-raiden-2026 — SpeeCAN RAIDEN：防災配信と緊急通報サービスへの不正アクセス
 
-事例 | Catalog: 0.9.0 | Record SHA-256: a753dc2f4d8e7e1d35e0cb80e0e91f561385596e45a8210af29744fdf0db6d24
+事例 | Catalog: 0.10.0 | Record SHA-256: a753dc2f4d8e7e1d35e0cb80e0e91f561385596e45a8210af29744fdf0db6d24
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

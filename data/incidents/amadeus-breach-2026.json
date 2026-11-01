@@ -1,0 +1,187 @@
+{
+  "id": "amadeus-breach-2026",
+  "organization": "Amadeus IT Group",
+  "title": {
+    "ja": "Amadeus旅客サービスシステム：ANA・JAL等の予約情報への不正アクセス",
+    "en": "Amadeus passenger service system: unauthorized access to ANA, JAL, and other airlines' reservation data"
+  },
+  "summary": {
+    "ja": "Amadeusが提供する旅客サービスシステムで第三者による不正アクセスがあり、ANAは約3万7,800人、JAL・JTAは計約9万2,000人の予約情報が外部から参照された形跡があります。対象期間は2023年8月10日から2026年9月23日で、予約番号、氏名、搭乗日、搭乗区間などが含まれ、一部にはパスポート番号や連絡先も含まれます。クレジットカード番号・パスワードの流出は確認されておらず、認証情報は既に無効化され監視が強化されています。",
+    "en": "Unauthorized access occurred to the passenger service system provided by Amadeus, with evidence that reservation information was viewed externally: approximately 37,800 for ANA and 92,000 combined for JAL/JTA. The period covers August 10, 2023, to September 23, 2026, including booking references, names, travel dates, flight routing, and for some customers, passport numbers and contact information. No credit card numbers or passwords leaked, and compromised credentials have been revoked with enhanced monitoring."
+  },
+  "occurredAt": "2023-08-10",
+  "disclosedAt": "2026-10-28",
+  "reviewedAt": "2026-11-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "unknown"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "Amadeusのシステムへ第三者が不正アクセスし、予約データを閲覧した形跡があります。窃取された認証情報が悪用されたと報告されています。侵害された認証情報は既に無効化され、監視が大幅に強化されました。",
+        "en": "A third party gained unauthorized access to Amadeus systems with evidence of reservation data viewing. Stolen authentication credentials were reportedly abused. Compromised credentials have been revoked and monitoring substantially enhanced."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "unauthorized third party gained access / 窃取された正規アカウントの認証情報が悪用"
+    },
+    {
+      "topic": "impact-ana",
+      "text": {
+        "ja": "ANAでは2023年8月10日から2026年9月23日に予約した約3万7,800人が対象です。約3万6,100人は氏名、予約番号、搭乗日、搭乗区間、搭乗クラスが含まれ、約1,700人は追加でメールアドレス、電話番号、パスポート番号等が含まれます。",
+        "en": "For ANA, approximately 37,800 customers who made reservations from August 10, 2023, to September 23, 2026, are affected. About 36,100 customers' data includes name, booking reference, travel date, flight routing, and cabin class; approximately 1,700 additionally include email, phone, passport number, etc."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Approximately 37,800 customers"
+    },
+    {
+      "topic": "impact-jal",
+      "text": {
+        "ja": "JAL・JTAでは2023年8月10日から2026年9月23日の期間で、約9万人の予約番号・氏名・搭乗日・搭乗区間・搭乗クラスが参照され、約2,000人は追加でメールアドレス・電話番号・パスポート番号等が参照されました。",
+        "en": "For JAL/JTA, during the period from August 10, 2023, to September 23, 2026, booking references, names, travel dates, flight routing, and cabin class were viewed for approximately 90,000 people, with approximately 2,000 additionally including email addresses, phone numbers, passport numbers, etc."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s2"
+      ],
+      "locator": "約90,000名 / 約2,000名"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-23",
+      "text": {
+        "ja": "AmadeusからJALへ不正アクセスの報告。",
+        "en": "Amadeus reported unauthorized access to JAL."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "text": {
+        "ja": "JALが不正アクセスを公表。",
+        "en": "JAL announced unauthorized access."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "text": {
+        "ja": "ANAが不正アクセスを公表。",
+        "en": "ANA announced unauthorized access."
+      },
+      "sourceIds": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "Amadeusは必要なセキュリティ対策を完了し、侵害された認証情報を無効化しました。現時点で当該情報が不正に使用された事実は確認されていません。",
+        "en": "Amadeus has completed necessary security measures and revoked compromised authentication credentials. No unauthorized use of the information has been confirmed at this time."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "必要なセキュリティ対策を完了 / revoked"
+    },
+    {
+      "topic": "notification",
+      "text": {
+        "ja": "ANAとJALは対象顧客に順次個別連絡を行っています。予約時に承ったメールアドレス宛に案内を送付しました。",
+        "en": "ANA and JAL are individually contacting affected customers. Notices were sent to email addresses provided at booking."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "reaching out directly / 予約時に承ったメールアドレス宛"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "認証情報の窃取経路と当時の権限制御は不明です。関連ルールで認証情報の保護、多要素認証、アクセス監視を点検します。",
+      "en": "The path of credential theft and privilege controls at the time are unknown. Related rules inspect credential protection, multi-factor authentication, and access monitoring."
+    },
+    "sourceIds": [
+      "s1",
+      "s2"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed primary sources do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "具体的な侵入経路、認証情報の窃取方法、使用されたCVE、他の航空会社への影響範囲は未確定です。韓国の大韓航空とアシアナ航空も被害を報告していますが、詳細は不明です。",
+      "en": "Specific intrusion path, credential theft method, CVEs used, and impact scope for other airlines remain unresolved. Korean Air and Asiana Airlines also reported impacts, but details are unclear."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Regarding Unauthorized Access to Passenger Service System Provided by Amadeus",
+      "url": "https://www.ana.co.jp/en/jp/special-notice/001613.html",
+      "publisher": "ANA",
+      "kind": "vendor",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s2",
+      "title": "Amadeus社が提供する旅客サービスシステムへの不正アクセスと対応について",
+      "url": "https://www.jal.co.jp/ja-jp/news/general/2026/other/261028.html",
+      "publisher": "JAL",
+      "kind": "vendor",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s3",
+      "title": "JAL、9万件超の予約情報に不正アクセス　一部はパスポート番号も",
+      "url": "https://www.nikkei.com/article/DGXZQOUC288G50Y6A021C2000000/",
+      "publisher": "日本経済新聞",
+      "kind": "secondary",
+      "publishedAt": "2026-10-28",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s4",
+      "title": "ANAの予約情報に不正アクセス、JALと同じ委託先経由で　個人情報をのぞき見た痕跡も",
+      "url": "https://www.itmedia.co.jp/news/article/2610/29/2000002722/",
+      "publisher": "ITmedia NEWS",
+      "kind": "secondary",
+      "publishedAt": "2026-10-29",
+      "reviewedAt": "2026-11-02"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-006",
+    "SEC-009"
+  ]
+}

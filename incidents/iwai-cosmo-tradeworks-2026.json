@@ -1,0 +1,165 @@
+{
+  "id": "iwai-cosmo-tradeworks-2026",
+  "organization": "岩井コスモ証券・トレードワークス",
+  "title": {
+    "ja": "岩井コスモ証券：管理機能の設定不備を突いた不正アクセスと相場操縦目的の不正取引",
+    "en": "Iwai Cosmo Securities: unauthorized access through management function misconfiguration and market manipulation trades"
+  },
+  "summary": {
+    "ja": "岩井コスモ証券の委託先トレードワークスの管理機能の設定不備を突き、第三者が不正アクセスを行いました。7口座で不正発注が発生し、うち5口座で売買が成立。不正取引は12銘柄計約125万株で、多くが品薄株であったため相場操縦目的と推測されています。4,975人の顧客情報が閲覧可能でしたが、取引暗証番号は含まれず、不正約定は同日中に元に戻され、顧客の金銭負担はありません。",
+    "en": "A third party gained unauthorized access by exploiting a misconfiguration in management functions of Iwai Cosmo Securities' contractor TradeWorks. Unauthorized orders occurred in 7 accounts, with trades executed in 5 accounts. The unauthorized trading involved approximately 1.25 million shares across 12 stocks, many of which were thinly traded, suggesting market manipulation intent. Customer information of 4,975 people was viewable but did not include trading PINs. Unauthorized trades were reversed the same day with no monetary burden on customers."
+  },
+  "occurredAt": "2026-10-14",
+  "disclosedAt": "2026-10-16",
+  "reviewedAt": "2026-11-02",
+  "outcome": "confirmed-breach",
+  "categories": ["implementation"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "トレードワークスが提供するシステムの一部の管理機能の設定上の不備を突いて、第三者が不正アクセスをしました。10月14日に不正アクセスを検知し、速やかにアクセスを遮断しました。",
+        "en": "A third party gained unauthorized access by exploiting a misconfiguration in some management functions of the system provided by TradeWorks. The unauthorized access was detected on October 14 and promptly blocked."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "管理機能の設定上の不備を突いて"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "4,975人の氏名・メールアドレス等が閲覧可能でしたが、取引暗証番号は含まれていません。7口座で不正発注が発生し、5口座で売買が成立しました。不正取引は12銘柄計約125万株で、多くが品薄株でした。",
+        "en": "Names, email addresses, etc. of 4,975 people were viewable, but trading PINs were not included. Unauthorized orders occurred in 7 accounts with trades executed in 5 accounts. Unauthorized trading involved approximately 1.25 million shares across 12 stocks, many thinly traded."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2", "s3"],
+      "locator": "4,975名 / 7口座 / 12銘柄計約125万株"
+    },
+    {
+      "topic": "remediation",
+      "text": {
+        "ja": "対象顧客に10月14日に個別連絡を行い、すでに取引前の状態に戻す措置を完了しており、顧客の負担は生じていません。",
+        "en": "Individual contact was made to affected customers on October 14, and measures to restore accounts to their pre-trade state have been completed, with no burden on customers."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "取引前の状態に戻す措置を完了"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-14",
+      "text": {
+        "ja": "午前、社員が顧客以外の誰かが取引を行っていることを覚知。トレードワークスに連絡し、通信機能を遮断。対象顧客に個別連絡し、取引前の状態に復元。",
+        "en": "Morning: Employee noticed someone other than customers was conducting trades. Contacted TradeWorks and blocked communications. Individual contact to affected customers and restored accounts."
+      },
+      "sourceIds": ["s2", "s3"]
+    },
+    {
+      "date": "2026-10-15",
+      "text": {
+        "ja": "15〜17日にパスワード等を入力して顧客口座への不正ログインを試みる「ログインチャレンジ」が計730万件以上発生したが、いずれも未遂。",
+        "en": "From 15-17th, over 7.3 million 'login challenge' attempts to access customer accounts occurred, all unsuccessful."
+      },
+      "sourceIds": ["s3"]
+    },
+    {
+      "date": "2026-10-16",
+      "text": {
+        "ja": "第1報を公表。",
+        "en": "First announcement published."
+      },
+      "sourceIds": ["s1"]
+    },
+    {
+      "date": "2026-10-20",
+      "text": {
+        "ja": "第2報を公表。追加調査により漏えい対象が364人増加し4,975人に。",
+        "en": "Second announcement published. Additional investigation increased leak scope by 364 to 4,975 people."
+      },
+      "sourceIds": ["s2"]
+    },
+    {
+      "date": "2026-10-23",
+      "text": {
+        "ja": "親会社が記者会見を開催。不正取引の規模と相場操縦目的の可能性を説明。",
+        "en": "Parent company held press conference. Explained scale of unauthorized trading and potential market manipulation intent."
+      },
+      "sourceIds": ["s3"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "不正アクセスの原因箇所を特定し修正を完了しました。接続元の制限、不正アクセスの検知・遮断の強化、監視体制の拡充を実施しています。",
+        "en": "Identified and corrected the cause of unauthorized access. Implemented connection source restrictions, enhanced unauthorized access detection/blocking, and expanded monitoring systems."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "恒久的に是正 / 接続元の制限、不正なアクセスの検知・遮断の強化"
+    },
+    {
+      "topic": "insurance",
+      "text": {
+        "ja": "トレードワークスはサイバー保険に加入しており、本件への適用を見込んでいます。現時点の損失見込額は約5,000万円です。",
+        "en": "TradeWorks has cyber insurance and expects it to apply to this incident. Current estimated loss is approximately 50 million yen."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1"],
+      "locator": "サイバー保険に加入 / 約 50 百万円"
+    }
+  ],
+  "prevention": {
+    "classification": "operational-control",
+    "assessment": {
+      "ja": "管理機能の接続元制限が不十分で、外部から利用可能な状態でした。関連ルールで管理機能のアクセス制御、認証、ログイン試行の監視を点検します。",
+      "en": "Connection source restrictions for management functions were insufficient, allowing external access. Related rules inspect access controls for management functions, authentication, and login attempt monitoring."
+    },
+    "sourceIds": ["s1"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed primary sources do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "4,975は閲覧可能だった顧客数、7は不正発注が発生した口座数、5は売買が成立した口座数です。具体的な侵入経路、使用されたCVE、攻撃者の特定情報は未確定です。",
+      "en": "4,975 is the count of customers whose information was viewable, 7 is accounts with unauthorized orders, and 5 is accounts where trades executed. Specific intrusion path, CVEs used, and attacker identification remain unresolved."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "（開示事項の経過）当社が提供するシステムへの不正アクセスに関するお知らせ",
+      "url": "https://www2.jpx.co.jp/disc/39970/140120261023555541.pdf",
+      "publisher": "トレードワークス",
+      "kind": "vendor",
+      "publishedAt": "2026-10-23",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s2",
+      "title": "外部委託先への不正アクセスに伴うお客様情報の漏洩について(第2報)",
+      "url": "https://www.iwaicosmo.co.jp/info/2026/10201710.html",
+      "publisher": "岩井コスモ証券",
+      "kind": "vendor",
+      "publishedAt": "2026-10-20",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s3",
+      "title": "岩井コスモ証券のシステムにサイバー攻撃、不正取引の規模は１２銘柄で１２５万株",
+      "url": "https://www.yomiuri.co.jp/economy/20261023-GYT1T00496/",
+      "publisher": "読売新聞",
+      "kind": "secondary",
+      "publishedAt": "2026-10-23",
+      "reviewedAt": "2026-11-02"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-002", "SEC-006"]
+}

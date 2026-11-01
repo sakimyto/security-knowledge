@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.9.0",
-  "updatedAt": "2026-10-26",
+  "version": "0.10.0",
+  "updatedAt": "2026-11-02",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,8 +10,8 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外153事例と16点検ルールを収録した選定DBです。公表日が2025-10-26〜2026-10-26の136事例、期間外の12事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
-    "en": "A curated database of 153 primary-source incident records and 16 inspection rules: 136 disclosed during 2025-10-26–2026-10-26, 12 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
+    "ja": "一次資料を確認した国内外159事例と16点検ルールを収録した選定DBです。公表日が2025-10-26〜2026-11-02の142事例、期間外の12事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
+    "en": "A curated database of 159 primary-source incident records and 16 inspection rules: 142 disclosed during 2025-10-26–2026-11-02, 12 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
   },
   "incidents": [
     {
@@ -358,6 +358,193 @@
         "SEC-008",
         "SEC-009",
         "SEC-012"
+      ]
+    },
+    {
+      "id": "amadeus-breach-2026",
+      "organization": "Amadeus IT Group",
+      "title": {
+        "ja": "Amadeus旅客サービスシステム：ANA・JAL等の予約情報への不正アクセス",
+        "en": "Amadeus passenger service system: unauthorized access to ANA, JAL, and other airlines' reservation data"
+      },
+      "summary": {
+        "ja": "Amadeusが提供する旅客サービスシステムで第三者による不正アクセスがあり、ANAは約3万7,800人、JAL・JTAは計約9万2,000人の予約情報が外部から参照された形跡があります。対象期間は2023年8月10日から2026年9月23日で、予約番号、氏名、搭乗日、搭乗区間などが含まれ、一部にはパスポート番号や連絡先も含まれます。クレジットカード番号・パスワードの流出は確認されておらず、認証情報は既に無効化され監視が強化されています。",
+        "en": "Unauthorized access occurred to the passenger service system provided by Amadeus, with evidence that reservation information was viewed externally: approximately 37,800 for ANA and 92,000 combined for JAL/JTA. The period covers August 10, 2023, to September 23, 2026, including booking references, names, travel dates, flight routing, and for some customers, passport numbers and contact information. No credit card numbers or passwords leaked, and compromised credentials have been revoked with enhanced monitoring."
+      },
+      "occurredAt": "2023-08-10",
+      "disclosedAt": "2026-10-28",
+      "reviewedAt": "2026-11-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "Amadeusのシステムへ第三者が不正アクセスし、予約データを閲覧した形跡があります。窃取された認証情報が悪用されたと報告されています。侵害された認証情報は既に無効化され、監視が大幅に強化されました。",
+            "en": "A third party gained unauthorized access to Amadeus systems with evidence of reservation data viewing. Stolen authentication credentials were reportedly abused. Compromised credentials have been revoked and monitoring substantially enhanced."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "unauthorized third party gained access / 窃取された正規アカウントの認証情報が悪用"
+        },
+        {
+          "topic": "impact-ana",
+          "text": {
+            "ja": "ANAでは2023年8月10日から2026年9月23日に予約した約3万7,800人が対象です。約3万6,100人は氏名、予約番号、搭乗日、搭乗区間、搭乗クラスが含まれ、約1,700人は追加でメールアドレス、電話番号、パスポート番号等が含まれます。",
+            "en": "For ANA, approximately 37,800 customers who made reservations from August 10, 2023, to September 23, 2026, are affected. About 36,100 customers' data includes name, booking reference, travel date, flight routing, and cabin class; approximately 1,700 additionally include email, phone, passport number, etc."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Approximately 37,800 customers"
+        },
+        {
+          "topic": "impact-jal",
+          "text": {
+            "ja": "JAL・JTAでは2023年8月10日から2026年9月23日の期間で、約9万人の予約番号・氏名・搭乗日・搭乗区間・搭乗クラスが参照され、約2,000人は追加でメールアドレス・電話番号・パスポート番号等が参照されました。",
+            "en": "For JAL/JTA, during the period from August 10, 2023, to September 23, 2026, booking references, names, travel dates, flight routing, and cabin class were viewed for approximately 90,000 people, with approximately 2,000 additionally including email addresses, phone numbers, passport numbers, etc."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "約90,000名 / 約2,000名"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-23",
+          "text": {
+            "ja": "AmadeusからJALへ不正アクセスの報告。",
+            "en": "Amadeus reported unauthorized access to JAL."
+          },
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "date": "2026-10-28",
+          "text": {
+            "ja": "JALが不正アクセスを公表。",
+            "en": "JAL announced unauthorized access."
+          },
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "text": {
+            "ja": "ANAが不正アクセスを公表。",
+            "en": "ANA announced unauthorized access."
+          },
+          "sourceIds": [
+            "s1",
+            "s4"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "Amadeusは必要なセキュリティ対策を完了し、侵害された認証情報を無効化しました。現時点で当該情報が不正に使用された事実は確認されていません。",
+            "en": "Amadeus has completed necessary security measures and revoked compromised authentication credentials. No unauthorized use of the information has been confirmed at this time."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "必要なセキュリティ対策を完了 / revoked"
+        },
+        {
+          "topic": "notification",
+          "text": {
+            "ja": "ANAとJALは対象顧客に順次個別連絡を行っています。予約時に承ったメールアドレス宛に案内を送付しました。",
+            "en": "ANA and JAL are individually contacting affected customers. Notices were sent to email addresses provided at booking."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "reaching out directly / 予約時に承ったメールアドレス宛"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "認証情報の窃取経路と当時の権限制御は不明です。関連ルールで認証情報の保護、多要素認証、アクセス監視を点検します。",
+          "en": "The path of credential theft and privilege controls at the time are unknown. Related rules inspect credential protection, multi-factor authentication, and access monitoring."
+        },
+        "sourceIds": [
+          "s1",
+          "s2"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "具体的な侵入経路、認証情報の窃取方法、使用されたCVE、他の航空会社への影響範囲は未確定です。韓国の大韓航空とアシアナ航空も被害を報告していますが、詳細は不明です。",
+          "en": "Specific intrusion path, credential theft method, CVEs used, and impact scope for other airlines remain unresolved. Korean Air and Asiana Airlines also reported impacts, but details are unclear."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Regarding Unauthorized Access to Passenger Service System Provided by Amadeus",
+          "url": "https://www.ana.co.jp/en/jp/special-notice/001613.html",
+          "publisher": "ANA",
+          "kind": "vendor",
+          "publishedAt": "2026-10-30",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s2",
+          "title": "Amadeus社が提供する旅客サービスシステムへの不正アクセスと対応について",
+          "url": "https://www.jal.co.jp/ja-jp/news/general/2026/other/261028.html",
+          "publisher": "JAL",
+          "kind": "vendor",
+          "publishedAt": "2026-10-30",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s3",
+          "title": "JAL、9万件超の予約情報に不正アクセス　一部はパスポート番号も",
+          "url": "https://www.nikkei.com/article/DGXZQOUC288G50Y6A021C2000000/",
+          "publisher": "日本経済新聞",
+          "kind": "secondary",
+          "publishedAt": "2026-10-28",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s4",
+          "title": "ANAの予約情報に不正アクセス、JALと同じ委託先経由で　個人情報をのぞき見た痕跡も",
+          "url": "https://www.itmedia.co.jp/news/article/2610/29/2000002722/",
+          "publisher": "ITmedia NEWS",
+          "kind": "secondary",
+          "publishedAt": "2026-10-29",
+          "reviewedAt": "2026-11-02"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-006",
+        "SEC-009"
       ]
     },
     {
@@ -1606,6 +1793,180 @@
       ]
     },
     {
+      "id": "atlink-medley-2026",
+      "organization": "メドレー",
+      "title": {
+        "ja": "アットリンク：産婦人科向けシステムへの不正アクセスと最大787医療機関の患者情報流出",
+        "en": "At-link: unauthorized access to obstetrics system affecting up to 787 medical institutions"
+      },
+      "summary": {
+        "ja": "メドレーが提供する産婦人科向け業務支援システム「アットリンク」に第三者による不正アクセスがあり、9月下旬から10月中旬にかけて不正プログラムを通じてデータベースから情報が取得されました。最大787医療機関が対象で、患者の氏名、誕生月日、メールアドレス、ログインID・パスワード、来院日、決済情報などが漏えいした可能性があります。",
+        "en": "Medley's obstetrics clinic support system 'At-link' was subject to unauthorized access by a third party. Information was obtained from the database through maliciously deployed programs from late September to mid-October. Up to 787 medical institutions are affected, with potential leakage of patient names, birth months/days, email addresses, login IDs/passwords, visit dates, and payment information."
+      },
+      "occurredAt": "2026-09-26",
+      "disclosedAt": "2026-10-15",
+      "reviewedAt": "2026-11-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "第三者が2026年9月下旬から10月中旬にかけて、不正に設置したプログラムを通じてデータベースにアクセスし情報を取得していたことを確認しました。",
+            "en": "Confirmed that a third party accessed the database and obtained information through maliciously deployed programs from late September to mid-October 2026."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "2026年9月下旬から10月中旬にかけて、不正に設置したプログラム"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "対象サービスを利用している医療機関は全787件あります。漏えいのおそれがある情報は氏名、フリガナ、誕生月日、メールアドレス、ログインID・パスワード、利用医療機関名、来院日、アプリ決済情報などです。",
+            "en": "787 medical institutions use the affected service. Information at risk includes names, furigana, birth months/days, email addresses, login IDs/passwords, medical institution names, visit dates, and app payment information."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "787件 / 漏えいのおそれがある情報"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-11",
+          "text": {
+            "ja": "外部の専門機関から不正アクセスの可能性について情報提供を受け、調査を開始。",
+            "en": "Received information from external specialists about potential unauthorized access and began investigation."
+          },
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "date": "2026-10-14",
+          "text": {
+            "ja": "深夜から被害拡大防止とさらなる調査のため、サービスを一時停止。",
+            "en": "Service temporarily suspended from late night to prevent further damage and enable additional investigation."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "text": {
+            "ja": "不正アクセスを公表。",
+            "en": "Announced unauthorized access."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-22",
+          "text": {
+            "ja": "一部機能を別環境で構築した新サービス「@link クラウド β版」として再開。",
+            "en": "Resumed partial functionality as new service '@link Cloud β' built in separate environment."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "原因と影響範囲の調査および被害拡大防止のため、10月14日深夜からサービスを一時停止しました。従来システムは再稼働させず、別環境に新たに構築したサービスにデータを移行し、段階的に提供を再開しています。",
+            "en": "Temporarily suspended service from late night on October 14 to investigate causes, determine impact scope, and prevent further damage. Instead of restarting the original system, migrated data to a newly constructed service in a separate environment and resumed provision gradually."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s3"
+          ],
+          "locator": "10月14日（水）深夜からサービスの提供を一時停止 / 従来のシステムは再稼働させず"
+        },
+        {
+          "topic": "investigation",
+          "text": {
+            "ja": "外部の専門機関と連携して調査を進めています。対象となる方には、運営会社と医療機関が連携して個別にお知らせする予定です。",
+            "en": "Investigation proceeds in cooperation with external specialists. Affected individuals will be notified individually through coordination between the operating company and medical institutions."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "外部の専門機関と連携して進めてまいりました調査"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "不正プログラムの設置方法と当時の権限制御は不明です。関連ルールでデータベースアクセス制御、異常検知、医療情報の保護を点検します。",
+          "en": "The method of malicious program deployment and privilege controls at the time are unknown. Related rules inspect database access controls, anomaly detection, and medical information protection."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "787は対象となり得る医療機関数であり、実際の漏えい確認件数ではありません。侵入方法、使用されたCVE、影響を受けた患者の正確な人数は未確定です。",
+          "en": "787 is the count of potentially affected medical institutions, not confirmed leak count. Entry method, CVEs used, and exact number of affected patients remain unresolved."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "アットリンクへの不正アクセスおよびサービスの一時停止に関する最新情報",
+          "url": "https://www.medley.jp/notice/20261015.html",
+          "publisher": "メドレー",
+          "kind": "vendor",
+          "publishedAt": "2026-10-15",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s2",
+          "title": "メドレーの産婦人科向けシステムに不正アクセス、患者の個人情報漏えいか　最大787の医療機関が対象",
+          "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002293/",
+          "publisher": "ITmedia NEWS",
+          "kind": "secondary",
+          "publishedAt": "2026-10-15",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s3",
+          "title": "メドレー、不正アクセスで停止中のサービスを作り直して再開へ　従来システムは再稼働させず",
+          "url": "https://www.itmedia.co.jp/news/article/2610/20/2000002413/",
+          "publisher": "ITmedia NEWS",
+          "kind": "secondary",
+          "publishedAt": "2026-10-20",
+          "reviewedAt": "2026-11-02"
+        }
+      ],
+      "ruleIds": [
+        "SEC-003",
+        "SEC-006",
+        "SEC-009",
+        "SEC-013"
+      ]
+    },
+    {
       "id": "awabank-test-environment-2026",
       "organization": "阿波銀行",
       "title": {
@@ -1941,6 +2302,182 @@
       ],
       "ruleIds": [
         "SEC-014"
+      ]
+    },
+    {
+      "id": "binance-breach-2026",
+      "organization": "Binance",
+      "title": {
+        "ja": "Binance：DevOpsエンジニアPC侵害から約63億ドル相当の暗号資産流出",
+        "en": "Binance: ~$6.3B cryptocurrency outflow via compromised DevOps engineer laptop"
+      },
+      "summary": {
+        "ja": "BinanceはDevOpsエンジニアのPCが侵害され、攻撃者がサービスコンテナ経由で不正出金を実行したと公表しました。推定63億ドル（約1兆円）相当の暗号資産が影響を受け、約30億ドルをオンチェーンで凍結しました。秘密鍵の流出証拠はなく、SAFUファンドと自社資金で全損失を補償すると表明しています。",
+        "en": "Binance reported that an attacker compromised a DevOps engineer's laptop, gained access to a service container, and executed unauthorized withdrawal transactions. Approximately $6.3 billion in cryptocurrency was affected, with ~$3 billion frozen on-chain. No evidence of wallet private key leakage was found, and Binance committed to covering all losses from its SAFU fund and company funds."
+      },
+      "occurredAt": "2026-10-29",
+      "disclosedAt": "2026-10-29",
+      "reviewedAt": "2026-11-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "implementation"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "初期調査では、DevOpsエンジニアのPCが侵害され、攻撃者がサービスコンテナへアクセスし不正な出金取引を提出したと説明しています。ウォレットの秘密鍵流出の証拠は見つかっていません。",
+            "en": "Initial investigation suggests a compromised DevOps engineer's laptop allowed the attacker to access a service container and submit unauthorized withdrawal transactions. No evidence of wallet private key leakage was found."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "Security Incident Update / Initial investigation suggests"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "影響総額は約63億ドルと推定されています。ブロックチェーンパートナーと協力して約30億ドル分の資産をオンチェーンで凍結しました。",
+            "en": "The estimated total impact is around $6.3 billion. Approximately $3 billion in affected assets were frozen on-chain through collaboration with blockchain partners."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "estimated total impact"
+        },
+        {
+          "topic": "asset-recovery",
+          "text": {
+            "ja": "11月1日時点で、流出した資産の約95%を自社資金で補填したと発表しました。SAFUファンドと自社資金で全損失を補償し、ユーザーに損失を転嫁しません。",
+            "en": "As of November 1, Binance reported replenishing about 95% of the stolen assets using company funds. All losses will be covered by the SAFU fund and company funds without passing losses to users."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3",
+            "s4"
+          ],
+          "locator": "95% replacement / cover all losses"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-29",
+          "text": {
+            "ja": "セキュリティインシデントを公表。出金を一時停止し、調査を開始。",
+            "en": "Announced security incident. Temporarily suspended withdrawals and began investigation."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-11-01",
+          "text": {
+            "ja": "ビットコインなど主要資産の出金を段階的に再開。流出資産の約95%を補填したと発表。",
+            "en": "Began phased withdrawal resumption starting with Bitcoin and major assets. Announced ~95% asset replacement."
+          },
+          "sourceIds": [
+            "s3",
+            "s4"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "予防措置として出金を一時停止し、影響を受けたアドレスの認可を無効化しました。法執行機関およびブロックチェーンインテリジェンスパートナーと連携して資金追跡と回収に取り組んでいます。",
+            "en": "As an immediate precaution, withdrawals were temporarily suspended and affected address authorization was revoked. Engaged law enforcement and blockchain intelligence partners to trace and recover funds."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "immediate precaution"
+        },
+        {
+          "topic": "compensation",
+          "text": {
+            "ja": "SAFUファンドと自社資金から全損失を補償すると表明しました。修復完了後に最新のProof of Reservesを公開する予定です。",
+            "en": "Committed to covering all losses from the SAFU fund and company funds. Plans to publish an updated Proof of Reserves once remediation is complete."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "cover all losses from SAFU"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "DevOps環境の侵害経路と当時の認証・権限制御は不明です。技術的な詳細報告は調査完了後に公開予定です。",
+          "en": "The compromise path into the DevOps environment and authentication/privilege controls at the time are unknown. A detailed technical post-mortem will be shared once the investigation is complete."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "DevOps環境への具体的な侵入経路、使用されたCVE、攻撃者の特定情報は未確定です。技術的な詳細報告は調査完了後に公開予定です。",
+          "en": "Specific compromise path into the DevOps environment, CVEs used, and attacker identification remain unconfirmed. Detailed technical post-mortem will be shared once the investigation is complete."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Security Incident Update (2026-10-30)",
+          "url": "https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7",
+          "publisher": "Binance",
+          "kind": "vendor",
+          "publishedAt": "2026-10-29",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s2",
+          "title": "Binanceで資金流出、影響額は推定1兆円規模　DevOpsエンジニアのPC侵害か",
+          "url": "https://xtech.nikkei.com/atcl/nxt/news/24/03451/",
+          "publisher": "日経クロステック",
+          "kind": "secondary",
+          "publishedAt": "2026-10-30",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s3",
+          "title": "バイナンスが出金再開へ､流出したトークン63億ドルのうち95％を補填…FBIは北朝鮮の関与を指摘",
+          "url": "https://toyokeizai.net/articles/-/963196",
+          "publisher": "東洋経済オンライン",
+          "kind": "secondary",
+          "publishedAt": "2026-11-01",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s4",
+          "title": "バイナンス、63億ドルのハッキングを受けビットコインから段階的に暗号資産の引き出しを再開",
+          "url": "https://www.coindesk.com/ja/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
+          "publisher": "CoinDesk",
+          "kind": "secondary",
+          "publishedAt": "2026-11-01",
+          "reviewedAt": "2026-11-02"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-006",
+        "SEC-009"
       ]
     },
     {
@@ -8383,6 +8920,204 @@
       ]
     },
     {
+      "id": "iwai-cosmo-tradeworks-2026",
+      "organization": "岩井コスモ証券・トレードワークス",
+      "title": {
+        "ja": "岩井コスモ証券：管理機能の設定不備を突いた不正アクセスと相場操縦目的の不正取引",
+        "en": "Iwai Cosmo Securities: unauthorized access through management function misconfiguration and market manipulation trades"
+      },
+      "summary": {
+        "ja": "岩井コスモ証券の委託先トレードワークスの管理機能の設定不備を突き、第三者が不正アクセスを行いました。7口座で不正発注が発生し、うち5口座で売買が成立。不正取引は12銘柄計約125万株で、多くが品薄株であったため相場操縦目的と推測されています。4,975人の顧客情報が閲覧可能でしたが、取引暗証番号は含まれず、不正約定は同日中に元に戻され、顧客の金銭負担はありません。",
+        "en": "A third party gained unauthorized access by exploiting a misconfiguration in management functions of Iwai Cosmo Securities' contractor TradeWorks. Unauthorized orders occurred in 7 accounts, with trades executed in 5 accounts. The unauthorized trading involved approximately 1.25 million shares across 12 stocks, many of which were thinly traded, suggesting market manipulation intent. Customer information of 4,975 people was viewable but did not include trading PINs. Unauthorized trades were reversed the same day with no monetary burden on customers."
+      },
+      "occurredAt": "2026-10-14",
+      "disclosedAt": "2026-10-16",
+      "reviewedAt": "2026-11-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "implementation"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "トレードワークスが提供するシステムの一部の管理機能の設定上の不備を突いて、第三者が不正アクセスをしました。10月14日に不正アクセスを検知し、速やかにアクセスを遮断しました。",
+            "en": "A third party gained unauthorized access by exploiting a misconfiguration in some management functions of the system provided by TradeWorks. The unauthorized access was detected on October 14 and promptly blocked."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "管理機能の設定上の不備を突いて"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "4,975人の氏名・メールアドレス等が閲覧可能でしたが、取引暗証番号は含まれていません。7口座で不正発注が発生し、5口座で売買が成立しました。不正取引は12銘柄計約125万株で、多くが品薄株でした。",
+            "en": "Names, email addresses, etc. of 4,975 people were viewable, but trading PINs were not included. Unauthorized orders occurred in 7 accounts with trades executed in 5 accounts. Unauthorized trading involved approximately 1.25 million shares across 12 stocks, many thinly traded."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2",
+            "s3"
+          ],
+          "locator": "4,975名 / 7口座 / 12銘柄計約125万株"
+        },
+        {
+          "topic": "remediation",
+          "text": {
+            "ja": "対象顧客に10月14日に個別連絡を行い、すでに取引前の状態に戻す措置を完了しており、顧客の負担は生じていません。",
+            "en": "Individual contact was made to affected customers on October 14, and measures to restore accounts to their pre-trade state have been completed, with no burden on customers."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "取引前の状態に戻す措置を完了"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-14",
+          "text": {
+            "ja": "午前、社員が顧客以外の誰かが取引を行っていることを覚知。トレードワークスに連絡し、通信機能を遮断。対象顧客に個別連絡し、取引前の状態に復元。",
+            "en": "Morning: Employee noticed someone other than customers was conducting trades. Contacted TradeWorks and blocked communications. Individual contact to affected customers and restored accounts."
+          },
+          "sourceIds": [
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "text": {
+            "ja": "15〜17日にパスワード等を入力して顧客口座への不正ログインを試みる「ログインチャレンジ」が計730万件以上発生したが、いずれも未遂。",
+            "en": "From 15-17th, over 7.3 million 'login challenge' attempts to access customer accounts occurred, all unsuccessful."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "text": {
+            "ja": "第1報を公表。",
+            "en": "First announcement published."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "text": {
+            "ja": "第2報を公表。追加調査により漏えい対象が364人増加し4,975人に。",
+            "en": "Second announcement published. Additional investigation increased leak scope by 364 to 4,975 people."
+          },
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "text": {
+            "ja": "親会社が記者会見を開催。不正取引の規模と相場操縦目的の可能性を説明。",
+            "en": "Parent company held press conference. Explained scale of unauthorized trading and potential market manipulation intent."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "不正アクセスの原因箇所を特定し修正を完了しました。接続元の制限、不正アクセスの検知・遮断の強化、監視体制の拡充を実施しています。",
+            "en": "Identified and corrected the cause of unauthorized access. Implemented connection source restrictions, enhanced unauthorized access detection/blocking, and expanded monitoring systems."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "恒久的に是正 / 接続元の制限、不正なアクセスの検知・遮断の強化"
+        },
+        {
+          "topic": "insurance",
+          "text": {
+            "ja": "トレードワークスはサイバー保険に加入しており、本件への適用を見込んでいます。現時点の損失見込額は約5,000万円です。",
+            "en": "TradeWorks has cyber insurance and expects it to apply to this incident. Current estimated loss is approximately 50 million yen."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "サイバー保険に加入 / 約 50 百万円"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "管理機能の接続元制限が不十分で、外部から利用可能な状態でした。関連ルールで管理機能のアクセス制御、認証、ログイン試行の監視を点検します。",
+          "en": "Connection source restrictions for management functions were insufficient, allowing external access. Related rules inspect access controls for management functions, authentication, and login attempt monitoring."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "4,975は閲覧可能だった顧客数、7は不正発注が発生した口座数、5は売買が成立した口座数です。具体的な侵入経路、使用されたCVE、攻撃者の特定情報は未確定です。",
+          "en": "4,975 is the count of customers whose information was viewable, 7 is accounts with unauthorized orders, and 5 is accounts where trades executed. Specific intrusion path, CVEs used, and attacker identification remain unresolved."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "（開示事項の経過）当社が提供するシステムへの不正アクセスに関するお知らせ",
+          "url": "https://www2.jpx.co.jp/disc/39970/140120261023555541.pdf",
+          "publisher": "トレードワークス",
+          "kind": "vendor",
+          "publishedAt": "2026-10-23",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s2",
+          "title": "外部委託先への不正アクセスに伴うお客様情報の漏洩について(第2報)",
+          "url": "https://www.iwaicosmo.co.jp/info/2026/10201710.html",
+          "publisher": "岩井コスモ証券",
+          "kind": "vendor",
+          "publishedAt": "2026-10-20",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s3",
+          "title": "岩井コスモ証券のシステムにサイバー攻撃、不正取引の規模は１２銘柄で１２５万株",
+          "url": "https://www.yomiuri.co.jp/economy/20261023-GYT1T00496/",
+          "publisher": "読売新聞",
+          "kind": "secondary",
+          "publishedAt": "2026-10-23",
+          "reviewedAt": "2026-11-02"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-002",
+        "SEC-006"
+      ]
+    },
+    {
       "id": "jaea-jrr3-files-2026",
       "organization": "日本原子力研究開発機構",
       "title": {
@@ -11769,6 +12504,180 @@
       ]
     },
     {
+      "id": "nec-contractor-breach-2026",
+      "organization": "NEC",
+      "title": {
+        "ja": "NEC委託先サイバー攻撃：正規アカウント悪用による顧客システム暗号化と大阪大学など個人情報流出",
+        "en": "NEC contractor cyberattack: customer system encryption via stolen credentials and information leakage including Osaka University"
+      },
+      "summary": {
+        "ja": "NECのシステム開発・保守委託先が9月下旬にサイバー攻撃を受け、窃取された正規アカウント認証情報で顧客システムへ不正アクセスされました。サーバファイルが暗号化され障害が発生し、NECと顧客、委託先が共有していたクラウドストレージから個人情報やシステム関連情報が漏えいしました。顧客3社のうち2社で個人情報漏えいが確認され、大阪大学では約7万7,851人分の情報が対象となりました。",
+        "en": "NEC's system development/maintenance contractor was cyberattacked in late September, with stolen legitimate account credentials used for unauthorized access to customer systems. Server files were encrypted causing outages, and personal and system-related information leaked from cloud storage shared among NEC, customers, and contractors. Personal information leakage was confirmed for 2 of 3 affected customers, with approximately 77,851 people's information at Osaka University."
+      },
+      "occurredAt": "2026-09-26",
+      "disclosedAt": "2026-10-20",
+      "reviewedAt": "2026-11-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "implementation"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "委託先が9月下旬にサイバー攻撃を受け、窃取された正規アカウントの認証情報が悪用されました。委託先の端末から正規アカウントを用いた不正アクセスが行われました。",
+            "en": "The contractor was cyberattacked in late September, with stolen legitimate account credentials being abused. Unauthorized access using legitimate accounts occurred from contractor terminals."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "9月下旬にサイバー攻撃を受け、窃取された正規アカウントの認証情報が悪用"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "顧客システム環境に不正アクセスされ、サーバ内のファイルが暗号化されシステムが利用できない状態となりました。NECと顧客、委託先間で共有していたクラウドストレージ内のファイルが漏えいし、顧客の個人情報やシステム関連情報が含まれていました。",
+            "en": "Customer systems were accessed without authorization, server files were encrypted, and systems became unavailable. Files in cloud storage shared among NEC, customers, and contractors leaked, containing customer personal information and system-related data."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "サーバ内のファイルが暗号化 / クラウドストレージ内のファイルが漏えい"
+        },
+        {
+          "topic": "osaka-university",
+          "text": {
+            "ja": "大阪大学では在学生1万5,035人、卒業生5万9,014人、教職員3,802人の計7万7,851人分の個人情報が漏えいしました。NECが大学に報告していない協力会社と情報を共有するため、個人情報を含むファイルをクラウドストレージ上で共有していました。",
+            "en": "At Osaka University, personal information of 77,851 people leaked, including 15,035 current students, 59,014 graduates, and 3,802 faculty/staff. NEC had shared files containing personal information on cloud storage to collaborate with an unreported partner company."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3"
+          ],
+          "locator": "計7万7,851人分 / 大学に報告していない協力会社"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-26",
+          "text": {
+            "ja": "大阪大学の個人情報を含むファイルがダウンロードされる。",
+            "en": "Files containing Osaka University personal information were downloaded."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-09",
+          "text": {
+            "ja": "大阪大学がNECから第三者による情報ダウンロードの報告を受ける。",
+            "en": "Osaka University received report from NEC about third-party information download."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "text": {
+            "ja": "NECが不正アクセスを公表。",
+            "en": "NEC announced unauthorized access."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "text": {
+            "ja": "大阪大学が個人情報漏えいを公表。",
+            "en": "Osaka University announced personal information leakage."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "発覚後、NECは委託先に当社管理の端末を貸与するなど必要な対策を進めています。影響のあった複数の顧客には既に個別に連絡を行い、対応や全容の早期解明に注力しています。",
+            "en": "After discovery, NEC is advancing necessary measures including lending NEC-managed terminals to contractors. Individual contact has been made to multiple affected customers, focusing on response and early clarification of full scope."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "委託先に当社管理の端末を貸与"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "委託先の端末管理と認証情報保護が不十分でした。また、顧客への報告なしに協力会社と個人情報を共有していた管理体制にも問題がありました。関連ルールで委託先管理、認証情報保護、情報共有の承認プロセスを点検します。",
+          "en": "Contractor terminal management and credential protection were inadequate. Management practices that allowed sharing personal information with partner companies without customer notification were also problematic. Related rules inspect contractor management, credential protection, and information sharing approval processes."
+        },
+        "sourceIds": [
+          "s1",
+          "s3"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "顧客3社の名称（大阪大学を除く）、委託先の名称、具体的な侵入経路、使用されたCVE、漏えいした情報の全容は未確定です。",
+          "en": "Names of 3 customer companies (excluding Osaka University), contractor name, specific intrusion path, CVEs used, and full scope of leaked information remain unresolved."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "委託先への不正アクセスに起因するお客さまのシステム障害、情報漏えいに関するお詫び",
+          "url": "https://jpn.nec.com/news/info/20261020.html",
+          "publisher": "NEC",
+          "kind": "vendor",
+          "publishedAt": "2026-10-20",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s2",
+          "title": "NECの委託先にサイバー攻撃　正規アカウント悪用し顧客のサーバ暗号化、個人情報の漏えいも",
+          "url": "https://www.itmedia.co.jp/news/article/2610/20/2000002433/",
+          "publisher": "ITmedia NEWS",
+          "kind": "secondary",
+          "publishedAt": "2026-10-20",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s3",
+          "title": "大阪大、学生など7.8万人の情報漏えい　NECが無断で協力会社とデータ共有",
+          "url": "https://www.itmedia.co.jp/news/article/2610/22/2000002491/",
+          "publisher": "ITmedia NEWS",
+          "kind": "secondary",
+          "publishedAt": "2026-10-22",
+          "reviewedAt": "2026-11-02"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-006",
+        "SEC-009",
+        "SEC-013"
+      ]
+    },
+    {
       "id": "nice-mail-2026",
       "organization": "ナイス",
       "title": {
@@ -13519,6 +14428,236 @@
         "SEC-008",
         "SEC-009",
         "SEC-013"
+      ]
+    },
+    {
+      "id": "onamae-desktop-cloud-2026",
+      "organization": "GMOインターネット",
+      "title": {
+        "ja": "お名前.com デスクトップクラウド：不正プログラム設置と取引口座への不正アクセス",
+        "en": "Onamae.com Desktop Cloud: malicious program deployment and unauthorized trading account access"
+      },
+      "summary": {
+        "ja": "GMOインターネットのお名前.com デスクトップクラウドで不正プログラムが設置され、26,739サーバーに影響の可能性があります。サーバー内の取引口座ログイン情報が第三者に取得され不正利用された事例を確認しました。攻撃者は約80億円の身代金を要求し、一部顧客情報を公開しましたが、同社は要求に応じず、特別お見舞金制度と総額1億5千万円の懸賞金制度を創設しました。",
+        "en": "GMOInternet's Onamae.com Desktop Cloud had malicious programs deployed, with potential impact on 26,739 servers. Trading account login information stored on servers was obtained and misused by a third party. The attacker demanded approximately 8 billion yen ransom and published some customer information, but the company refused to pay, establishing special compensation and a 150-million-yen bounty program."
+      },
+      "occurredAt": "2026-10-20",
+      "disclosedAt": "2026-10-21",
+      "reviewedAt": "2026-11-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "unknown"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "10月20日、一部顧客のサーバー環境で不正プログラムが設置されたことを確認しました。侵入経路の詳細は調査中です。",
+            "en": "On October 20, malicious programs were confirmed to be deployed in some customers' server environments. The detailed entry path remains under investigation."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "不正なプログラムが設置されたことを確認"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "影響の可能性があるサーバー数は26,739件です。サーバー内に保存された取引口座のログイン情報等が取得され、実際に不正利用された報告を受けました。",
+            "en": "The number of potentially affected servers is 26,739. Trading account login information stored on servers was obtained, and actual unauthorized use was reported."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1",
+            "s2"
+          ],
+          "locator": "影響の可能性のあるサーバー数： 26,739件"
+        },
+        {
+          "topic": "ransom",
+          "text": {
+            "ja": "攻撃者から約80億円の要求を伴う脅迫を受けましたが、同社は永久に応じない方針を表明しました。10月27日に一部顧客情報が公開されたことを確認しています。",
+            "en": "The company received an extortion demand for approximately 8 billion yen but stated it will never comply. On October 27, publication of some customer information was confirmed."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3",
+            "s4"
+          ],
+          "locator": "脅迫メールの受信（約80億円の要求）/ 攻撃者による情報の公開"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-20",
+          "text": {
+            "ja": "顧客からの問い合わせを受け、調査を開始。不正プログラムの設置を確認。",
+            "en": "Investigation initiated following customer inquiry. Malicious program deployment confirmed."
+          },
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "text": {
+            "ja": "4時から全プランのサーバーを順次停止。第1報を公表。約80億円の脅迫メールを受信。",
+            "en": "Began sequential shutdown of all plan servers from 4:00. First announcement published. Received 8-billion-yen ransom demand."
+          },
+          "sourceIds": [
+            "s1",
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-22",
+          "text": {
+            "ja": "警察に相談。第2報を公表。",
+            "en": "Consulted police. Second announcement published."
+          },
+          "sourceIds": [
+            "s2"
+          ]
+        },
+        {
+          "date": "2026-10-24",
+          "text": {
+            "ja": "お見舞金支払い、損失補償、代替サービス提供を決定。能動的サイバー防御の適用を政府関係機関に要請（第4報）。",
+            "en": "Decided on compensation payments, loss coverage, and alternative service provision. Requested government application of active cyber defense (4th report)."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "text": {
+            "ja": "攻撃者により顧客情報が公開されたことを確認。情報公開された顧客への特別お見舞金（1公開につき上限300万円）を発表。",
+            "en": "Confirmed attacker's publication of customer information. Announced special compensation (up to 3 million yen per publication) for affected customers."
+          },
+          "sourceIds": [
+            "s4"
+          ]
+        },
+        {
+          "date": "2026-10-28",
+          "text": {
+            "ja": "総額100万ドル（約1.5億円）の「GMOサイバー犯罪撲滅・懸賞金」制度を創設し、情報提供の受付を開始。",
+            "en": "Established 'GMO Cyber Crime Eradication Bounty' program totaling $1 million (~150 million yen) and began accepting information."
+          },
+          "sourceIds": [
+            "s4"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "被害拡大防止のため全サーバーを停止し、セキュリティ専門会社と侵入経路および影響範囲の調査を進めています。",
+            "en": "All servers were shut down to prevent further damage, and investigation of entry paths and impact scope is ongoing with security specialists."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s2"
+          ],
+          "locator": "セキュリティ専門会社とともに、侵入経路および影響範囲の調査"
+        },
+        {
+          "topic": "compensation",
+          "text": {
+            "ja": "全顧客に一律5,000円のお見舞金、不正取引による損失の補償、代替サービスの提供を決定しました。情報公開された顧客には特別お見舞金（1公開につき上限300万円）を支払います。",
+            "en": "Decided on 5,000-yen compensation for all customers, coverage of unauthorized trading losses, and alternative service provision. Special compensation (up to 3 million yen per publication) for customers whose information was published."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3",
+            "s4"
+          ],
+          "locator": "お見舞金のお支払い / 特別お見舞金（1公開につき上限300万円）"
+        },
+        {
+          "topic": "bounty",
+          "text": {
+            "ja": "犯人特定につながる情報提供に対し、総額100万ドル（約1.5億円）を上限とする懸賞金制度を創設しました。",
+            "en": "Established a bounty program with a total cap of $1 million (~150 million yen) for information leading to perpetrator identification."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s4"
+          ],
+          "locator": "総額100万ドルを上限"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "侵入経路や当時の権限制御は不明です。関連ルールで認証情報の安全な保管、多要素認証、セッション管理を点検します。",
+          "en": "Entry path and privilege controls at the time are unknown. Related rules inspect secure credential storage, multi-factor authentication, and session management."
+        },
+        "sourceIds": [
+          "s2"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "26,739は影響可能性のあるサーバー数であり、実際の被害件数ではありません。侵入方法、使用されたCVE、全復旧完了時期、公開された情報の正確な範囲は未確定です。",
+          "en": "26,739 is the count of potentially affected servers, not actual breach count. Entry method, CVEs used, full recovery timing, and exact scope of published information remain unresolved."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "【重要】[お名前.com デスクトップクラウド]第三者による不正アクセスに関するお詫びとお知らせ（2026年10月21日 4:00時点）",
+          "url": "https://www.onamae.com/news/article/11584/",
+          "publisher": "GMOインターネット",
+          "kind": "vendor",
+          "publishedAt": "2026-10-21",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s2",
+          "title": "【重要】「お名前.com デスクトップクラウド」への不正アクセスに関するお詫びとお知らせ（第3報）",
+          "url": "https://group.gmo/info/alert/20261023/",
+          "publisher": "GMOインターネットグループ",
+          "kind": "vendor",
+          "publishedAt": "2026-10-23",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s3",
+          "title": "「お名前.com デスクトップクラウド」への不正アクセスに関するお客様へのご案内",
+          "url": "https://internet.gmo/news/article/263/",
+          "publisher": "GMOインターネット",
+          "kind": "vendor",
+          "publishedAt": "2026-10-30",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s4",
+          "title": "【重要】「お名前.com デスクトップクラウド」への不正アクセスに関する現在の対応について（第12報）",
+          "url": "https://group.gmo/info/alert/2026102705/",
+          "publisher": "GMOインターネットグループ",
+          "kind": "vendor",
+          "publishedAt": "2026-10-27",
+          "reviewedAt": "2026-11-02"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-002",
+        "SEC-006",
+        "SEC-009"
       ]
     },
     {
@@ -17259,6 +18398,189 @@
       ]
     },
     {
+      "id": "sourcenext-breach-2026",
+      "organization": "ソースネクスト",
+      "title": {
+        "ja": "ソースネクスト：会員情報API不正利用により最大2,252万件の個人情報流出",
+        "en": "Sourcenext: up to 22.52 million member records leaked via unauthorized API access"
+      },
+      "summary": {
+        "ja": "ソースネクストの会員情報取得APIが第三者に不正利用され、最大2,251万9,960件の会員情報が流出した可能性があります。パスワードは暗号化されていましたが、復号鍵にアクセス可能なシステムへの侵入により平文で流出しました。攻撃は10月9日に開始され、13日に検知・封じ込められました。",
+        "en": "Sourcenext's member information retrieval API was abused by a third party, potentially leaking up to 22,519,960 member records. Passwords were encrypted but leaked in plaintext due to intrusion into a system with access to decryption keys. The attack began on October 9 and was detected and contained on the 13th."
+      },
+      "occurredAt": "2026-10-09",
+      "disclosedAt": "2026-10-15",
+      "reviewedAt": "2026-11-02",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "implementation"
+      ],
+      "cves": [],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "10月9日10時頃から不正アクセスがあり、会員情報取得APIを不正に利用して情報を取得しました。13日9時頃に確認し、13時36分までに封じ込めを完了しました。",
+            "en": "Unauthorized access began around 10:00 on October 9, with the attacker abusing the member information retrieval API. The breach was confirmed around 9:00 on the 13th and containment was completed by 13:36."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "10月9日（金）10時頃から不正アクセス"
+        },
+        {
+          "topic": "impact",
+          "text": {
+            "ja": "流出可能性のある対象件数は22,519,960件です。対象情報はメールアドレス、パスワード、氏名、住所、電話番号、生年月日などです。クレジットカード情報は対象システムに保存されておらず、流出対象に含まれません。",
+            "en": "The number of potentially affected records is 22,519,960. Affected information includes email addresses, passwords, names, addresses, phone numbers, and birth dates. Credit card information was not stored in the target system and is not included in the leak."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "対象件数：22,519,960件"
+        },
+        {
+          "topic": "password-storage",
+          "text": {
+            "ja": "パスワードは暗号化して保存していましたが、復号鍵にアクセス可能なシステム（API）への不正アクセスにより、パスワードが復号された状態で流出しました。システムは開発時期が古く、最新のハッシュ化方式へ移行できていませんでした。",
+            "en": "Passwords were stored encrypted, but leaked in decrypted form due to unauthorized access to a system (API) with access to decryption keys. The system's development period was old, and migration to modern hashing methods had not been completed."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3"
+          ],
+          "locator": "暗号化されたパスワードを復号するための鍵にアクセス可能なシステム"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-10-09",
+          "text": {
+            "ja": "10時頃から不正アクセスが開始。",
+            "en": "Unauthorized access began around 10:00."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-13",
+          "text": {
+            "ja": "9時頃に不正アクセスを確認。外部からの不正な通信を遮断し、13時36分までに封じ込めを完了。",
+            "en": "Confirmed unauthorized access around 9:00. Blocked unauthorized external communications and completed containment by 13:36."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "text": {
+            "ja": "個人情報保護委員会への報告を完了し、公表。",
+            "en": "Completed report to Personal Information Protection Commission and made public announcement."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "text": {
+            "ja": "所轄警察署へ被害申告。外部の独立したセキュリティ専門機関へ第三者調査を依頼。",
+            "en": "Filed damage report with police. Requested third-party investigation from external independent security specialists."
+          },
+          "sourceIds": [
+            "s2"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "不正アクセス検知後、速やかに緊急措置を講じ、13時36分までに封じ込めを完了しました。漏えい対象に含まれるパスワードをリセットし、ログイン時にパスワードの再設定を求めています。",
+            "en": "Took immediate emergency measures after detecting unauthorized access and completed containment by 13:36. Reset passwords included in the leak scope and require password reset at login."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "10月13日（火）13時36分までに封じ込め対応を完了"
+        },
+        {
+          "topic": "investigation",
+          "text": {
+            "ja": "外部の専門調査機関と連携して詳細な調査を進めるとともに、全システムの緊急点検を実施しています。",
+            "en": "Proceeding with detailed investigation in cooperation with external specialist agencies while conducting emergency inspection of all systems."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "外部の専門調査機関と連携して詳細な調査"
+        }
+      ],
+      "prevention": {
+        "classification": "operational-control",
+        "assessment": {
+          "ja": "旧式の暗号化方式を継続使用し、復号鍵にアクセス可能なAPIの保護が不十分でした。関連ルールでパスワードのハッシュ化、API認証、アクセス制御を点検します。",
+          "en": "Continued use of outdated encryption methods and inadequate protection of APIs with access to decryption keys. Related rules inspect password hashing, API authentication, and access controls."
+        },
+        "sourceIds": [
+          "s3"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+          "en": "The reviewed primary sources do not establish attacker use of AI."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "具体的なAPI侵入経路、使用されたCVE、実際に流出したメールアドレスの正確な件数は未確定です。システムの開発時期も明らかにされていません。",
+          "en": "Specific API intrusion path, CVEs used, and exact count of leaked email addresses remain unresolved. The system's development period was also not disclosed."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "当社サイトへの不正アクセスによるお客様情報流出のお詫びとお知らせ",
+          "url": "https://www.sourcenext.com/support/i/2026/1015_info/",
+          "publisher": "ソースネクスト",
+          "kind": "vendor",
+          "publishedAt": "2026-10-15",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s2",
+          "title": "情報漏洩に関するよくあるご質問",
+          "url": "https://www.sourcenext.com/support/i/2026/1015_1/",
+          "publisher": "ソースネクスト",
+          "kind": "vendor",
+          "publishedAt": "2026-10-15",
+          "reviewedAt": "2026-11-02"
+        },
+        {
+          "id": "s3",
+          "title": "ソースネクスト、パスワードなぜ平文で流出　「暗号化していたが、鍵にアクセスできるシステムに侵入された」",
+          "url": "https://www.itmedia.co.jp/news/article/2610/19/2000002372/",
+          "publisher": "ITmedia NEWS",
+          "kind": "secondary",
+          "publishedAt": "2026-10-19",
+          "reviewedAt": "2026-11-02"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-002",
+        "SEC-006"
+      ]
+    },
+    {
       "id": "studysapuri-enumeration-2026",
       "organization": "スタディサプリ",
       "title": {
@@ -20197,7 +21519,13 @@
         "trivy-supply-chain-2026",
         "voising-bi-2026",
         "white-essence-2026",
-        "zurich-zdash-2026"
+        "zurich-zdash-2026",
+        "amadeus-breach-2026",
+        "binance-breach-2026",
+        "iwai-cosmo-tradeworks-2026",
+        "nec-contractor-breach-2026",
+        "onamae-desktop-cloud-2026",
+        "sourcenext-breach-2026"
       ],
       "references": [
         {
@@ -20307,7 +21635,10 @@
         "toyobo-email-2026",
         "trunk-mail-2026",
         "uber-2022",
-        "visualarts-cloud-credentials-2026"
+        "visualarts-cloud-credentials-2026",
+        "iwai-cosmo-tradeworks-2026",
+        "onamae-desktop-cloud-2026",
+        "sourcenext-breach-2026"
       ],
       "references": [
         {
@@ -20403,7 +21734,8 @@
         "rust-arrayref-2026",
         "toyobo-email-2026",
         "trunk-mail-2026",
-        "uber-2022"
+        "uber-2022",
+        "atlink-medley-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -20763,7 +22095,14 @@
         "unit42-ai-assisted-2026",
         "voising-bi-2026",
         "yakiniku-king-2026",
-        "yamato-pay-later-2026"
+        "yamato-pay-later-2026",
+        "amadeus-breach-2026",
+        "atlink-medley-2026",
+        "binance-breach-2026",
+        "iwai-cosmo-tradeworks-2026",
+        "nec-contractor-breach-2026",
+        "onamae-desktop-cloud-2026",
+        "sourcenext-breach-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -21229,7 +22568,12 @@
         "yakiniku-king-2026",
         "yamato-pay-later-2026",
         "yellowhat-booking-2026",
-        "zurich-zdash-2026"
+        "zurich-zdash-2026",
+        "amadeus-breach-2026",
+        "atlink-medley-2026",
+        "binance-breach-2026",
+        "nec-contractor-breach-2026",
+        "onamae-desktop-cloud-2026"
       ],
       "references": [
         {
@@ -21678,7 +23022,9 @@
         "nostrum-smartspi-2026",
         "omu-ransomware-2026",
         "ryomo-systems-2026",
-        "sakura-hosting-2026"
+        "sakura-hosting-2026",
+        "atlink-medley-2026",
+        "nec-contractor-breach-2026"
       ],
       "references": [
         {
@@ -21949,5 +23295,5 @@
       "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "0756854610402a0671367e173ed87e5cfcc8bc53fd55bc36a5182feaae0bf134"
+  "contentHash": "222389c1f5dbb5fd67207e16ed2341d686434267f6e7e7aa282afcd9a2e84c88"
 }

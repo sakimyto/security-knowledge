@@ -1,0 +1,192 @@
+{
+  "id": "onamae-desktop-cloud-2026",
+  "organization": "GMOインターネット",
+  "title": {
+    "ja": "お名前.com デスクトップクラウド：不正プログラム設置と取引口座への不正アクセス",
+    "en": "Onamae.com Desktop Cloud: malicious program deployment and unauthorized trading account access"
+  },
+  "summary": {
+    "ja": "GMOインターネットのお名前.com デスクトップクラウドで不正プログラムが設置され、26,739サーバーに影響の可能性があります。サーバー内の取引口座ログイン情報が第三者に取得され不正利用された事例を確認しました。攻撃者は約80億円の身代金を要求し、一部顧客情報を公開しましたが、同社は要求に応じず、特別お見舞金制度と総額1億5千万円の懸賞金制度を創設しました。",
+    "en": "GMOInternet's Onamae.com Desktop Cloud had malicious programs deployed, with potential impact on 26,739 servers. Trading account login information stored on servers was obtained and misused by a third party. The attacker demanded approximately 8 billion yen ransom and published some customer information, but the company refused to pay, establishing special compensation and a 150-million-yen bounty program."
+  },
+  "occurredAt": "2026-10-20",
+  "disclosedAt": "2026-10-21",
+  "reviewedAt": "2026-11-02",
+  "outcome": "confirmed-breach",
+  "categories": ["unknown"],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "10月20日、一部顧客のサーバー環境で不正プログラムが設置されたことを確認しました。侵入経路の詳細は調査中です。",
+        "en": "On October 20, malicious programs were confirmed to be deployed in some customers' server environments. The detailed entry path remains under investigation."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "不正なプログラムが設置されたことを確認"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "影響の可能性があるサーバー数は26,739件です。サーバー内に保存された取引口座のログイン情報等が取得され、実際に不正利用された報告を受けました。",
+        "en": "The number of potentially affected servers is 26,739. Trading account login information stored on servers was obtained, and actual unauthorized use was reported."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s1", "s2"],
+      "locator": "影響の可能性のあるサーバー数： 26,739件"
+    },
+    {
+      "topic": "ransom",
+      "text": {
+        "ja": "攻撃者から約80億円の要求を伴う脅迫を受けましたが、同社は永久に応じない方針を表明しました。10月27日に一部顧客情報が公開されたことを確認しています。",
+        "en": "The company received an extortion demand for approximately 8 billion yen but stated it will never comply. On October 27, publication of some customer information was confirmed."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s3", "s4"],
+      "locator": "脅迫メールの受信（約80億円の要求）/ 攻撃者による情報の公開"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-20",
+      "text": {
+        "ja": "顧客からの問い合わせを受け、調査を開始。不正プログラムの設置を確認。",
+        "en": "Investigation initiated following customer inquiry. Malicious program deployment confirmed."
+      },
+      "sourceIds": ["s2"]
+    },
+    {
+      "date": "2026-10-21",
+      "text": {
+        "ja": "4時から全プランのサーバーを順次停止。第1報を公表。約80億円の脅迫メールを受信。",
+        "en": "Began sequential shutdown of all plan servers from 4:00. First announcement published. Received 8-billion-yen ransom demand."
+      },
+      "sourceIds": ["s1", "s3"]
+    },
+    {
+      "date": "2026-10-22",
+      "text": {
+        "ja": "警察に相談。第2報を公表。",
+        "en": "Consulted police. Second announcement published."
+      },
+      "sourceIds": ["s2"]
+    },
+    {
+      "date": "2026-10-24",
+      "text": {
+        "ja": "お見舞金支払い、損失補償、代替サービス提供を決定。能動的サイバー防御の適用を政府関係機関に要請（第4報）。",
+        "en": "Decided on compensation payments, loss coverage, and alternative service provision. Requested government application of active cyber defense (4th report)."
+      },
+      "sourceIds": ["s3"]
+    },
+    {
+      "date": "2026-10-27",
+      "text": {
+        "ja": "攻撃者により顧客情報が公開されたことを確認。情報公開された顧客への特別お見舞金（1公開につき上限300万円）を発表。",
+        "en": "Confirmed attacker's publication of customer information. Announced special compensation (up to 3 million yen per publication) for affected customers."
+      },
+      "sourceIds": ["s4"]
+    },
+    {
+      "date": "2026-10-28",
+      "text": {
+        "ja": "総額100万ドル（約1.5億円）の「GMOサイバー犯罪撲滅・懸賞金」制度を創設し、情報提供の受付を開始。",
+        "en": "Established 'GMO Cyber Crime Eradication Bounty' program totaling $1 million (~150 million yen) and began accepting information."
+      },
+      "sourceIds": ["s4"]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "被害拡大防止のため全サーバーを停止し、セキュリティ専門会社と侵入経路および影響範囲の調査を進めています。",
+        "en": "All servers were shut down to prevent further damage, and investigation of entry paths and impact scope is ongoing with security specialists."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s2"],
+      "locator": "セキュリティ専門会社とともに、侵入経路および影響範囲の調査"
+    },
+    {
+      "topic": "compensation",
+      "text": {
+        "ja": "全顧客に一律5,000円のお見舞金、不正取引による損失の補償、代替サービスの提供を決定しました。情報公開された顧客には特別お見舞金（1公開につき上限300万円）を支払います。",
+        "en": "Decided on 5,000-yen compensation for all customers, coverage of unauthorized trading losses, and alternative service provision. Special compensation (up to 3 million yen per publication) for customers whose information was published."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s3", "s4"],
+      "locator": "お見舞金のお支払い / 特別お見舞金（1公開につき上限300万円）"
+    },
+    {
+      "topic": "bounty",
+      "text": {
+        "ja": "犯人特定につながる情報提供に対し、総額100万ドル（約1.5億円）を上限とする懸賞金制度を創設しました。",
+        "en": "Established a bounty program with a total cap of $1 million (~150 million yen) for information leading to perpetrator identification."
+      },
+      "status": "confirmed",
+      "sourceIds": ["s4"],
+      "locator": "総額100万ドルを上限"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "侵入経路や当時の権限制御は不明です。関連ルールで認証情報の安全な保管、多要素認証、セッション管理を点検します。",
+      "en": "Entry path and privilege controls at the time are unknown. Related rules inspect secure credential storage, multi-factor authentication, and session management."
+    },
+    "sourceIds": ["s2"]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed primary sources do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "26,739は影響可能性のあるサーバー数であり、実際の被害件数ではありません。侵入方法、使用されたCVE、全復旧完了時期、公開された情報の正確な範囲は未確定です。",
+      "en": "26,739 is the count of potentially affected servers, not actual breach count. Entry method, CVEs used, full recovery timing, and exact scope of published information remain unresolved."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "【重要】[お名前.com デスクトップクラウド]第三者による不正アクセスに関するお詫びとお知らせ（2026年10月21日 4:00時点）",
+      "url": "https://www.onamae.com/news/article/11584/",
+      "publisher": "GMOインターネット",
+      "kind": "vendor",
+      "publishedAt": "2026-10-21",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s2",
+      "title": "【重要】「お名前.com デスクトップクラウド」への不正アクセスに関するお詫びとお知らせ（第3報）",
+      "url": "https://group.gmo/info/alert/20261023/",
+      "publisher": "GMOインターネットグループ",
+      "kind": "vendor",
+      "publishedAt": "2026-10-23",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s3",
+      "title": "「お名前.com デスクトップクラウド」への不正アクセスに関するお客様へのご案内",
+      "url": "https://internet.gmo/news/article/263/",
+      "publisher": "GMOインターネット",
+      "kind": "vendor",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s4",
+      "title": "【重要】「お名前.com デスクトップクラウド」への不正アクセスに関する現在の対応について（第12報）",
+      "url": "https://group.gmo/info/alert/2026102705/",
+      "publisher": "GMOインターネットグループ",
+      "kind": "vendor",
+      "publishedAt": "2026-10-27",
+      "reviewedAt": "2026-11-02"
+    }
+  ],
+  "ruleIds": ["SEC-001", "SEC-002", "SEC-006", "SEC-009"]
+}

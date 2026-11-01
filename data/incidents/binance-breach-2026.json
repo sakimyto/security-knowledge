@@ -1,0 +1,176 @@
+{
+  "id": "binance-breach-2026",
+  "organization": "Binance",
+  "title": {
+    "ja": "Binance：DevOpsエンジニアPC侵害から約63億ドル相当の暗号資産流出",
+    "en": "Binance: ~$6.3B cryptocurrency outflow via compromised DevOps engineer laptop"
+  },
+  "summary": {
+    "ja": "BinanceはDevOpsエンジニアのPCが侵害され、攻撃者がサービスコンテナ経由で不正出金を実行したと公表しました。推定63億ドル（約1兆円）相当の暗号資産が影響を受け、約30億ドルをオンチェーンで凍結しました。秘密鍵の流出証拠はなく、SAFUファンドと自社資金で全損失を補償すると表明しています。",
+    "en": "Binance reported that an attacker compromised a DevOps engineer's laptop, gained access to a service container, and executed unauthorized withdrawal transactions. Approximately $6.3 billion in cryptocurrency was affected, with ~$3 billion frozen on-chain. No evidence of wallet private key leakage was found, and Binance committed to covering all losses from its SAFU fund and company funds."
+  },
+  "occurredAt": "2026-10-29",
+  "disclosedAt": "2026-10-29",
+  "reviewedAt": "2026-11-02",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "implementation"
+  ],
+  "cves": [],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "初期調査では、DevOpsエンジニアのPCが侵害され、攻撃者がサービスコンテナへアクセスし不正な出金取引を提出したと説明しています。ウォレットの秘密鍵流出の証拠は見つかっていません。",
+        "en": "Initial investigation suggests a compromised DevOps engineer's laptop allowed the attacker to access a service container and submit unauthorized withdrawal transactions. No evidence of wallet private key leakage was found."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "Security Incident Update / Initial investigation suggests"
+    },
+    {
+      "topic": "impact",
+      "text": {
+        "ja": "影響総額は約63億ドルと推定されています。ブロックチェーンパートナーと協力して約30億ドル分の資産をオンチェーンで凍結しました。",
+        "en": "The estimated total impact is around $6.3 billion. Approximately $3 billion in affected assets were frozen on-chain through collaboration with blockchain partners."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1",
+        "s2"
+      ],
+      "locator": "estimated total impact"
+    },
+    {
+      "topic": "asset-recovery",
+      "text": {
+        "ja": "11月1日時点で、流出した資産の約95%を自社資金で補填したと発表しました。SAFUファンドと自社資金で全損失を補償し、ユーザーに損失を転嫁しません。",
+        "en": "As of November 1, Binance reported replenishing about 95% of the stolen assets using company funds. All losses will be covered by the SAFU fund and company funds without passing losses to users."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s3",
+        "s4"
+      ],
+      "locator": "95% replacement / cover all losses"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-10-29",
+      "text": {
+        "ja": "セキュリティインシデントを公表。出金を一時停止し、調査を開始。",
+        "en": "Announced security incident. Temporarily suspended withdrawals and began investigation."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "text": {
+        "ja": "ビットコインなど主要資産の出金を段階的に再開。流出資産の約95%を補填したと発表。",
+        "en": "Began phased withdrawal resumption starting with Bitcoin and major assets. Announced ~95% asset replacement."
+      },
+      "sourceIds": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "予防措置として出金を一時停止し、影響を受けたアドレスの認可を無効化しました。法執行機関およびブロックチェーンインテリジェンスパートナーと連携して資金追跡と回収に取り組んでいます。",
+        "en": "As an immediate precaution, withdrawals were temporarily suspended and affected address authorization was revoked. Engaged law enforcement and blockchain intelligence partners to trace and recover funds."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "immediate precaution"
+    },
+    {
+      "topic": "compensation",
+      "text": {
+        "ja": "SAFUファンドと自社資金から全損失を補償すると表明しました。修復完了後に最新のProof of Reservesを公開する予定です。",
+        "en": "Committed to covering all losses from the SAFU fund and company funds. Plans to publish an updated Proof of Reserves once remediation is complete."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "cover all losses from SAFU"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "DevOps環境の侵害経路と当時の認証・権限制御は不明です。技術的な詳細報告は調査完了後に公開予定です。",
+      "en": "The compromise path into the DevOps environment and authentication/privilege controls at the time are unknown. A detailed technical post-mortem will be shared once the investigation is complete."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
+      "en": "The reviewed primary sources do not establish attacker use of AI."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "DevOps環境への具体的な侵入経路、使用されたCVE、攻撃者の特定情報は未確定です。技術的な詳細報告は調査完了後に公開予定です。",
+      "en": "Specific compromise path into the DevOps environment, CVEs used, and attacker identification remain unconfirmed. Detailed technical post-mortem will be shared once the investigation is complete."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Security Incident Update (2026-10-30)",
+      "url": "https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7",
+      "publisher": "Binance",
+      "kind": "vendor",
+      "publishedAt": "2026-10-29",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s2",
+      "title": "Binanceで資金流出、影響額は推定1兆円規模　DevOpsエンジニアのPC侵害か",
+      "url": "https://xtech.nikkei.com/atcl/nxt/news/24/03451/",
+      "publisher": "日経クロステック",
+      "kind": "secondary",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s3",
+      "title": "バイナンスが出金再開へ､流出したトークン63億ドルのうち95％を補填…FBIは北朝鮮の関与を指摘",
+      "url": "https://toyokeizai.net/articles/-/963196",
+      "publisher": "東洋経済オンライン",
+      "kind": "secondary",
+      "publishedAt": "2026-11-01",
+      "reviewedAt": "2026-11-02"
+    },
+    {
+      "id": "s4",
+      "title": "バイナンス、63億ドルのハッキングを受けビットコインから段階的に暗号資産の引き出しを再開",
+      "url": "https://www.coindesk.com/ja/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
+      "publisher": "CoinDesk",
+      "kind": "secondary",
+      "publishedAt": "2026-11-01",
+      "reviewedAt": "2026-11-02"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-006",
+    "SEC-009"
+  ]
+}
