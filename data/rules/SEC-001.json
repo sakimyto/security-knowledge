@@ -1,7 +1,7 @@
 {
   "id": "SEC-001",
   "version": "1.1.1",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-11-09",
   "title": {
     "ja": "修正対象と稼働バージョンを照合する",
     "en": "Reconcile advisories with deployed versions"
@@ -97,7 +97,8 @@
     "iwai-cosmo-tradeworks-2026",
     "nec-contractor-breach-2026",
     "onamae-desktop-cloud-2026",
-    "sourcenext-breach-2026"
+    "sourcenext-breach-2026",
+    "idcf-ransomware-2026"
   ],
   "references": [
     {

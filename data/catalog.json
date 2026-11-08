@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.10.0",
-  "updatedAt": "2026-11-02",
+  "version": "0.11.0",
+  "updatedAt": "2026-11-09",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,8 +10,8 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外159事例と16点検ルールを収録した選定DBです。公表日が2025-10-26〜2026-11-02の142事例、期間外の12事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
-    "en": "A curated database of 159 primary-source incident records and 16 inspection rules: 142 disclosed during 2025-10-26–2026-11-02, 12 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
+    "ja": "一次資料を確認した国内外159事例と16点検ルールの選定DBです。公表日が2025-11-09〜2026-11-09の141事例、期間外13事例、公表日不明5事例を含みます。国内169候補の台帳を別に公開しています。全事故の統計ではありません。6事例に編集者の原因・対策仮説11件を分けて収録しています。",
+    "en": "A curated database of 159 primary-source records and 16 inspection rules: 141 disclosed during 2025-11-09–2026-11-09, 13 outside and 5 with unknown dates. The separate domestic ledger contains 169 candidates. These are not representative incident statistics. Six records retain 11 editorial hypotheses."
   },
   "incidents": [
     {
@@ -1790,180 +1790,6 @@
             "SEC-005"
           ]
         }
-      ]
-    },
-    {
-      "id": "atlink-medley-2026",
-      "organization": "メドレー",
-      "title": {
-        "ja": "アットリンク：産婦人科向けシステムへの不正アクセスと最大787医療機関の患者情報流出",
-        "en": "At-link: unauthorized access to obstetrics system affecting up to 787 medical institutions"
-      },
-      "summary": {
-        "ja": "メドレーが提供する産婦人科向け業務支援システム「アットリンク」に第三者による不正アクセスがあり、9月下旬から10月中旬にかけて不正プログラムを通じてデータベースから情報が取得されました。最大787医療機関が対象で、患者の氏名、誕生月日、メールアドレス、ログインID・パスワード、来院日、決済情報などが漏えいした可能性があります。",
-        "en": "Medley's obstetrics clinic support system 'At-link' was subject to unauthorized access by a third party. Information was obtained from the database through maliciously deployed programs from late September to mid-October. Up to 787 medical institutions are affected, with potential leakage of patient names, birth months/days, email addresses, login IDs/passwords, visit dates, and payment information."
-      },
-      "occurredAt": "2026-09-26",
-      "disclosedAt": "2026-10-15",
-      "reviewedAt": "2026-11-02",
-      "outcome": "confirmed-breach",
-      "categories": [
-        "unknown"
-      ],
-      "cves": [],
-      "claims": [
-        {
-          "topic": "entry",
-          "text": {
-            "ja": "第三者が2026年9月下旬から10月中旬にかけて、不正に設置したプログラムを通じてデータベースにアクセスし情報を取得していたことを確認しました。",
-            "en": "Confirmed that a third party accessed the database and obtained information through maliciously deployed programs from late September to mid-October 2026."
-          },
-          "status": "confirmed",
-          "sourceIds": [
-            "s1"
-          ],
-          "locator": "2026年9月下旬から10月中旬にかけて、不正に設置したプログラム"
-        },
-        {
-          "topic": "impact",
-          "text": {
-            "ja": "対象サービスを利用している医療機関は全787件あります。漏えいのおそれがある情報は氏名、フリガナ、誕生月日、メールアドレス、ログインID・パスワード、利用医療機関名、来院日、アプリ決済情報などです。",
-            "en": "787 medical institutions use the affected service. Information at risk includes names, furigana, birth months/days, email addresses, login IDs/passwords, medical institution names, visit dates, and app payment information."
-          },
-          "status": "confirmed",
-          "sourceIds": [
-            "s1",
-            "s2"
-          ],
-          "locator": "787件 / 漏えいのおそれがある情報"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-10-11",
-          "text": {
-            "ja": "外部の専門機関から不正アクセスの可能性について情報提供を受け、調査を開始。",
-            "en": "Received information from external specialists about potential unauthorized access and began investigation."
-          },
-          "sourceIds": [
-            "s2"
-          ]
-        },
-        {
-          "date": "2026-10-14",
-          "text": {
-            "ja": "深夜から被害拡大防止とさらなる調査のため、サービスを一時停止。",
-            "en": "Service temporarily suspended from late night to prevent further damage and enable additional investigation."
-          },
-          "sourceIds": [
-            "s1"
-          ]
-        },
-        {
-          "date": "2026-10-15",
-          "text": {
-            "ja": "不正アクセスを公表。",
-            "en": "Announced unauthorized access."
-          },
-          "sourceIds": [
-            "s1"
-          ]
-        },
-        {
-          "date": "2026-10-22",
-          "text": {
-            "ja": "一部機能を別環境で構築した新サービス「@link クラウド β版」として再開。",
-            "en": "Resumed partial functionality as new service '@link Cloud β' built in separate environment."
-          },
-          "sourceIds": [
-            "s3"
-          ]
-        }
-      ],
-      "reportedActions": [
-        {
-          "topic": "response",
-          "text": {
-            "ja": "原因と影響範囲の調査および被害拡大防止のため、10月14日深夜からサービスを一時停止しました。従来システムは再稼働させず、別環境に新たに構築したサービスにデータを移行し、段階的に提供を再開しています。",
-            "en": "Temporarily suspended service from late night on October 14 to investigate causes, determine impact scope, and prevent further damage. Instead of restarting the original system, migrated data to a newly constructed service in a separate environment and resumed provision gradually."
-          },
-          "status": "confirmed",
-          "sourceIds": [
-            "s1",
-            "s3"
-          ],
-          "locator": "10月14日（水）深夜からサービスの提供を一時停止 / 従来のシステムは再稼働させず"
-        },
-        {
-          "topic": "investigation",
-          "text": {
-            "ja": "外部の専門機関と連携して調査を進めています。対象となる方には、運営会社と医療機関が連携して個別にお知らせする予定です。",
-            "en": "Investigation proceeds in cooperation with external specialists. Affected individuals will be notified individually through coordination between the operating company and medical institutions."
-          },
-          "status": "confirmed",
-          "sourceIds": [
-            "s1"
-          ],
-          "locator": "外部の専門機関と連携して進めてまいりました調査"
-        }
-      ],
-      "prevention": {
-        "classification": "unknown",
-        "assessment": {
-          "ja": "不正プログラムの設置方法と当時の権限制御は不明です。関連ルールでデータベースアクセス制御、異常検知、医療情報の保護を点検します。",
-          "en": "The method of malicious program deployment and privilege controls at the time are unknown. Related rules inspect database access controls, anomaly detection, and medical information protection."
-        },
-        "sourceIds": [
-          "s1"
-        ]
-      },
-      "ai": {
-        "status": "unknown",
-        "assessment": {
-          "ja": "確認した一次資料からは、攻撃者によるAI利用を判断できません。",
-          "en": "The reviewed primary sources do not establish attacker use of AI."
-        }
-      },
-      "unknowns": [
-        {
-          "ja": "787は対象となり得る医療機関数であり、実際の漏えい確認件数ではありません。侵入方法、使用されたCVE、影響を受けた患者の正確な人数は未確定です。",
-          "en": "787 is the count of potentially affected medical institutions, not confirmed leak count. Entry method, CVEs used, and exact number of affected patients remain unresolved."
-        }
-      ],
-      "sources": [
-        {
-          "id": "s1",
-          "title": "アットリンクへの不正アクセスおよびサービスの一時停止に関する最新情報",
-          "url": "https://www.medley.jp/notice/20261015.html",
-          "publisher": "メドレー",
-          "kind": "vendor",
-          "publishedAt": "2026-10-15",
-          "reviewedAt": "2026-11-02"
-        },
-        {
-          "id": "s2",
-          "title": "メドレーの産婦人科向けシステムに不正アクセス、患者の個人情報漏えいか　最大787の医療機関が対象",
-          "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002293/",
-          "publisher": "ITmedia NEWS",
-          "kind": "secondary",
-          "publishedAt": "2026-10-15",
-          "reviewedAt": "2026-11-02"
-        },
-        {
-          "id": "s3",
-          "title": "メドレー、不正アクセスで停止中のサービスを作り直して再開へ　従来システムは再稼働させず",
-          "url": "https://www.itmedia.co.jp/news/article/2610/20/2000002413/",
-          "publisher": "ITmedia NEWS",
-          "kind": "secondary",
-          "publishedAt": "2026-10-20",
-          "reviewedAt": "2026-11-02"
-        }
-      ],
-      "ruleIds": [
-        "SEC-003",
-        "SEC-006",
-        "SEC-009",
-        "SEC-013"
       ]
     },
     {
@@ -8198,12 +8024,12 @@
         "en": "IDCF Cloud: ransomware outage and data-recovery impact"
       },
       "summary": {
-        "ja": "495の企業・自治体に影響したランサムウェア障害について、10月14日に194顧客のスナップショット取出しが可能と見通しを訂正しました。仮想サーバーの外部流出なしとの判断と、ポータル48社への不正照会を別に公表しています。",
-        "en": "For the ransomware outage affecting 495 organizations, the October 14 update established snapshot extraction for 194 customers. The provider separately reported no external VM-data leakage and unauthorized portal queries affecting 48 companies."
+        "ja": "IDCFクラウドの認証用OSSの脆弱性が悪用され、4ゾーンの仮想サーバーが停止・暗号化されました。影響は495組織。バックアップ取出しは206顧客で可能とし、ポータルの不正照会は最大71社と訂正しました。",
+        "en": "An authentication OSS vulnerability enabled VM disruption and encryption in four IDCF zones, affecting 495 organizations. Backups were extractable for 206 customers; portal queries affected up to 71 companies."
       },
       "occurredAt": "2026-10-07",
       "disclosedAt": "2026-10-07",
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-11-09",
       "outcome": "confirmed-breach",
       "categories": [
         "unknown"
@@ -8213,15 +8039,14 @@
         {
           "topic": "entry",
           "text": {
-            "ja": "提供元は第三者のランサムウェア攻撃を確認しました。侵入経路の詳細は調査中です。",
-            "en": "The provider confirmed ransomware by a third party; the entry path remains under investigation."
+            "ja": "認証用OSSの脆弱性から侵入し、管理コンソール経由で仮想化基盤の管理者権限を取得しました。",
+            "en": "Entered through an authentication OSS vulnerability and obtained virtualization administrator privileges via the management console."
           },
           "status": "confirmed",
           "sourceIds": [
-            "s2",
-            "s3"
+            "s7"
           ],
-          "locator": "第2報 ■原因 / 第3報 ■原因"
+          "locator": "§2 (1)–(2)"
         },
         {
           "topic": "impact",
@@ -8238,38 +8063,38 @@
         {
           "topic": "recovery",
           "text": {
-            "ja": "10月14日に、影響495組織のうちスナップショットを利用していた194顧客のバックアップ取出しが可能と確認しました。復元可否と提供方法は個別案内であり、全顧客の復元完了ではありません。",
-            "en": "On October 14 snapshot extraction was confirmed possible for 194 of 495 affected organizations. Restoration feasibility and delivery were handled individually; full recovery was not established."
+            "ja": "206顧客でバックアップ取出しが可能です。全顧客の復元完了を示す数ではありません。",
+            "en": "Backups were extractable for 206 customers; this does not establish completed recovery."
           },
           "status": "confirmed",
           "sourceIds": [
-            "s5"
+            "s7"
           ],
-          "locator": "§2 ①"
+          "locator": "§3 (3)"
         },
         {
           "topic": "vm-data-investigation",
           "text": {
-            "ja": "提供元は4ゾーンの仮想サーバーデータの照会・持出しを示す痕跡や裏付けを確認せず、外部流出はなかったと判断しています。",
-            "en": "The provider found no traces or corroboration of VM-data querying or exfiltration in the four zones and assessed that no external leakage occurred."
+            "ja": "提供元は仮想サーバー内データの外部流出はなかったと説明しています。ポータルの不正照会とは別の範囲です。",
+            "en": "Provider reported no external leakage of VM data, a separate scope from portal queries."
           },
           "status": "confirmed",
           "sourceIds": [
-            "s5"
+            "s7"
           ],
-          "locator": "§1 調査結果"
+          "locator": "§2 (3)"
         },
         {
           "topic": "portal-query",
           "text": {
-            "ja": "ポータルで48社の登録情報が不正照会され、2社各1件のメールアドレスが個人名を含む可能性があります。外部持出しの痕跡は未確認です。",
-            "en": "Registration data for 48 companies were queried without authorization; one address at each of two firms may contain a personal name. External exfiltration traces were not found."
+            "ja": "登録情報の不正照会は最大71社、個人名等を含むものは最大31社31件。パスワード最大4件の不正変更を確認しました。",
+            "en": "Portal queries affected up to 71 companies; up to 31 companies had 31 records involving personal names. Up to four passwords were altered."
           },
           "status": "confirmed",
           "sourceIds": [
-            "s5"
+            "s7"
           ],
-          "locator": "§3"
+          "locator": "§2 (4)"
         }
       ],
       "timeline": [
@@ -8323,6 +8148,26 @@
           "sourceIds": [
             "s6"
           ]
+        },
+        {
+          "date": "2026-10-20",
+          "text": {
+            "ja": "206顧客のバックアップ取出しが可能と判明。",
+            "en": "Backups found extractable for 206 customers."
+          },
+          "sourceIds": [
+            "s7"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "text": {
+            "ja": "第7報で調査結果と対策を公表。",
+            "en": "Published investigation results and measures in the seventh notice."
+          },
+          "sourceIds": [
+            "s7"
+          ]
         }
       ],
       "reportedActions": [
@@ -8350,16 +8195,28 @@
             "s6"
           ],
           "locator": "本文"
+        },
+        {
+          "topic": "portal-hardening",
+          "text": {
+            "ja": "不正変更されたパスワードをリセット。外部IdP、IP制限、MFAを備える別環境への再構築を進めています。",
+            "en": "Reset altered passwords; rebuilding with an external IdP, IP restrictions and mandatory MFA."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s7"
+          ],
+          "locator": "§2 (4), §5"
         }
       ],
       "prevention": {
         "classification": "unknown",
         "assessment": {
-          "ja": "侵入経路や当時の権限制御は不明です。関連ルールで横展開の制限と、障害領域から独立したバックアップの復元証拠を点検します。",
-          "en": "Entry and prior privilege controls are unknown; inspect lateral-access limits and recovery evidence for backups independent of affected infrastructure."
+          "ja": "脆弱性の識別子と攻撃時の修正提供状況は不明です。依存ソフトの管理、権限分離、独立バックアップの復元を点検します。",
+          "en": "The CVE and patch availability at attack time are unknown; inspect dependencies, privilege separation and independent recovery."
         },
         "sourceIds": [
-          "s3"
+          "s7"
         ]
       },
       "ai": {
@@ -8371,8 +8228,8 @@
       },
       "unknowns": [
         {
-          "ja": "495は企業・自治体数、194はスナップショット取出し可能な顧客数、48は不正照会された契約企業数です。重複排除した人数へ換算しません。侵入方法、CVEと全復旧完了時期は未確定です。",
-          "en": "495 counts affected organizations, 194 customers with extractable snapshots, and 48 portal-query companies. These are not deduplicated people. Entry, CVE and full recovery timing remain unresolved."
+          "ja": "495は影響組織数、206は取出し可能な顧客数、71は最大不正照会社数です。合算や人数換算をしません。CVE、全復旧時期、攻撃者のAI利用は未確認です。",
+          "en": "495 counts affected organizations, 206 customers with extractable backups and 71 maximum queried companies. Do not sum or convert to people. CVE, full recovery and attacker AI use remain unknown."
         }
       ],
       "sources": [
@@ -8429,9 +8286,19 @@
           "publishedAt": "2026-10-18",
           "reviewedAt": "2026-10-26",
           "kind": "vendor"
+        },
+        {
+          "id": "s7",
+          "title": "【第7報】不正アクセスに関する調査結果および今後の対応について",
+          "url": "https://www.idcf.jp/news/topics/20261027001",
+          "publisher": "IDCフロンティア",
+          "kind": "vendor",
+          "publishedAt": "2026-10-27",
+          "reviewedAt": "2026-11-09"
         }
       ],
       "ruleIds": [
+        "SEC-001",
         "SEC-006",
         "SEC-008",
         "SEC-009",
@@ -11480,16 +11347,16 @@
       "id": "medley-atlink-2026",
       "organization": "メドレー",
       "title": {
-        "ja": "アットリンク：医療機関向け予約基盤への不正アクセス",
-        "en": "Medley at-link: unauthorized access to a medical booking platform"
+        "ja": "アットリンク：医療機関向けサービスへの不正アクセスと情報流出",
+        "en": "Medley at-link: unauthorized access and personal-data leakage"
       },
       "summary": {
-        "ja": "10月11日の外部通報を受けた調査で不正アクセスを確認し、14日深夜に停止しました。最大787医療機関が漏えい可能性の対象であり、患者数ではありません。",
-        "en": "An external report on October 11 led to confirmation of unauthorized access; service stopped late October 14. Potential exposure covers up to 787 medical institutions, not 787 patients."
+        "ja": "メドレーは、9月下旬から10月中旬の不正アクセスによる個人情報の流出を確認しました。初報の最大対象は787医療機関で、患者数ではありません。10月28日は一部医療機関でのβ版テスト開始です。",
+        "en": "Medley confirmed personal-data leakage after access from late September to mid-October. The initial maximum scope was 787 medical institutions, not patients. Beta testing at selected clinics began October 28."
       },
       "occurredAt": null,
       "disclosedAt": "2026-10-14",
-      "reviewedAt": "2026-10-19",
+      "reviewedAt": "2026-11-09",
       "outcome": "confirmed-breach",
       "categories": [
         "unknown"
@@ -11499,26 +11366,38 @@
         {
           "topic": "entry",
           "text": {
-            "ja": "10月11日に外部専門機関から通報を受け、調査で第三者の不正アクセスを確認しました。",
-            "en": "An external specialist reported possible access on October 11; investigation confirmed unauthorized access."
+            "ja": "不正に設置されたプログラムを通じて情報が取得されました。具体的な侵入手法は非公表です。",
+            "en": "Maliciously installed programs obtained database information; the entry technique is undisclosed."
           },
           "status": "confirmed",
           "sourceIds": [
-            "s1"
+            "s3"
           ],
-          "locator": "§1"
+          "locator": "1. 経緯と調査状況"
         },
         {
           "topic": "impact",
           "text": {
-            "ja": "全利用医療機関787件が最大対象です。漏えいの有無、情報項目と対象医療機関は調査中です。",
-            "en": "All 787 customer medical institutions form the maximum possible scope. Whether information leaked, its fields and affected institutions remain under investigation."
+            "ja": "氏名、誕生月日、ID・パスワード、利用医療機関や来院情報などの流出を確認。決済情報は日付と金額で、カード番号は保有していません。",
+            "en": "Confirmed leaked fields include names, birth month/day, credentials and clinic/visit details. Payment history contains dates and amounts; card numbers were not held."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s3"
+          ],
+          "locator": "1. 漏えいした個人情報の項目"
+        },
+        {
+          "topic": "initial-maximum-scope",
+          "text": {
+            "ja": "10月15日の初報は、全利用医療機関787件を最大対象としました。漏えい確定医療機関数や患者数ではありません。",
+            "en": "The October 15 initial notice set 787 customer clinics as the maximum scope, not confirmed leaks or patient totals."
           },
           "status": "confirmed",
           "sourceIds": [
             "s1"
           ],
-          "locator": "§2"
+          "locator": "p.1 §2"
         },
         {
           "topic": "customer-scope",
@@ -11537,22 +11416,43 @@
         {
           "date": "2026-10-11",
           "text": {
-            "ja": "外部の情報提供を受けて調査開始。",
+            "ja": "外部通報を受けて調査開始。",
             "en": "Investigation began after an external report."
           },
           "sourceIds": [
-            "s1"
+            "s1",
+            "s3"
           ]
         },
         {
           "date": "2026-10-14",
           "text": {
-            "ja": "医療機関への案内と、深夜のサービス停止。",
-            "en": "Customer notice and late-night service suspension."
+            "ja": "医療機関が告知し、深夜にサービス停止。",
+            "en": "A clinic published a notice; service stopped late that night."
           },
           "sourceIds": [
-            "s1",
-            "s2"
+            "s2",
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "text": {
+            "ja": "提供元が個人情報の流出確認を公表。",
+            "en": "Provider confirmed personal-data leakage."
+          },
+          "sourceIds": [
+            "s3"
+          ]
+        },
+        {
+          "date": "2026-10-28",
+          "text": {
+            "ja": "一部医療機関でβ版テストを開始。",
+            "en": "Beta testing began at selected clinics."
+          },
+          "sourceIds": [
+            "s4"
           ]
         }
       ],
@@ -11560,24 +11460,36 @@
         {
           "topic": "response",
           "text": {
-            "ja": "停止前に医療機関の業務継続を支援し、停止後も専門機関と影響範囲を調査しています。",
-            "en": "Interim support preceded service suspension; external specialists continue investigating scope."
+            "ja": "侵入経路を遮断し、関係する認証情報を無効化。規制当局へ報告し、医療機関と通知を進めています。",
+            "en": "Blocked the entry route, invalidated related credentials, reported to regulators and arranged notifications with clinics."
           },
           "status": "confirmed",
           "sourceIds": [
-            "s1"
+            "s3"
           ],
-          "locator": "§1–3"
+          "locator": "1. 経緯と調査状況"
+        },
+        {
+          "topic": "service-status",
+          "text": {
+            "ja": "旧システムを再稼働せず別環境で再構築。10月22日の開始予定は遅れ、10月28日に一部医療機関でテストを開始しました。全体再開とは説明されていません。",
+            "en": "Rebuilt in a separate environment. The October 22 launch was delayed; selected clinics began testing October 28. General resumption was not established."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s4"
+          ],
+          "locator": "一部機能の提供再開に向けた現在の状況"
         }
       ],
       "prevention": {
         "classification": "unknown",
         "assessment": {
-          "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
-          "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+          "ja": "侵入方法と当時の制御は未公表です。関連ルールで権限、保存データ、ログと復旧手順を点検します。",
+          "en": "Entry and prior controls remain undisclosed; inspect privileges, retained data, logs and recovery procedures."
         },
         "sourceIds": [
-          "s1"
+          "s3"
         ]
       },
       "ai": {
@@ -11589,19 +11501,19 @@
       },
       "unknowns": [
         {
-          "ja": "侵入開始日、侵入方法と患者の人数は未公表です。787医療機関すべての漏えいが確定したという説明ではありません。",
-          "en": "The intrusion start, mechanism and patient count are undisclosed. The notice does not confirm leakage at all 787 institutions."
+          "ja": "正確な侵入開始日、患者数、影響医療機関の確定数、CVEは不明です。9月下旬を9月26日へ変換せず、787医療機関を人数へ換算しません。",
+          "en": "Exact entry date, patient count, confirmed clinic count and CVE remain unknown. Late September does not establish September 26; 787 clinics is not a people count."
         }
       ],
       "sources": [
         {
           "id": "s1",
-          "title": "当社サービス「アットリンク」への不正アクセス及びサービスの一時停止に関するお知らせ",
-          "url": "https://ssl4.eir-parts.net/doc/4480/tdnet/2895027/00.pdf",
+          "title": "当社サービス「アットリンク」への不正アクセス及びサービスの一時停止に関するお知らせ（発行元PDFの公開ミラー）",
+          "url": "https://japanir.jp/wp-content/uploads/2026/10/4480-20261015-01.pdf",
           "publisher": "メドレー",
           "kind": "organization",
           "publishedAt": "2026-10-15",
-          "reviewedAt": "2026-10-19"
+          "reviewedAt": "2026-11-09"
         },
         {
           "id": "s2",
@@ -11610,10 +11522,38 @@
           "publisher": "四条烏丸レディースクリニック",
           "kind": "organization",
           "publishedAt": "2026-10-14",
-          "reviewedAt": "2026-10-19"
+          "reviewedAt": "2026-11-09"
+        },
+        {
+          "id": "s3",
+          "title": "アットリンクへの不正アクセスに関する調査状況について",
+          "url": "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%AA%BF%E6%9F%BB%E7%8A%B6%E6%B3%81/",
+          "publisher": "メドレー",
+          "kind": "organization",
+          "publishedAt": "2026-10-23",
+          "reviewedAt": "2026-11-09"
+        },
+        {
+          "id": "s4",
+          "title": "アットリンクへの不正アクセスおよびサービスの一時停止に関する最新情報（10月28日更新）",
+          "url": "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE/",
+          "publisher": "メドレー",
+          "kind": "organization",
+          "publishedAt": "2026-10-15",
+          "reviewedAt": "2026-11-09"
+        },
+        {
+          "id": "s5",
+          "title": "アットリンクへの不正アクセスおよびサービスの一時停止に関する最新情報",
+          "url": "https://www.medley.jp/notice/20261015.html",
+          "publisher": "メドレー",
+          "kind": "organization",
+          "publishedAt": "2026-10-15",
+          "reviewedAt": "2026-11-09"
         }
       ],
       "ruleIds": [
+        "SEC-003",
         "SEC-006",
         "SEC-008",
         "SEC-009",
@@ -21429,7 +21369,7 @@
     {
       "id": "SEC-001",
       "version": "1.1.1",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-11-09",
       "title": {
         "ja": "修正対象と稼働バージョンを照合する",
         "en": "Reconcile advisories with deployed versions"
@@ -21525,7 +21465,8 @@
         "iwai-cosmo-tradeworks-2026",
         "nec-contractor-breach-2026",
         "onamae-desktop-cloud-2026",
-        "sourcenext-breach-2026"
+        "sourcenext-breach-2026",
+        "idcf-ransomware-2026"
       ],
       "references": [
         {
@@ -21543,7 +21484,7 @@
     {
       "id": "SEC-002",
       "version": "1.1.2",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-11-09",
       "title": {
         "ja": "MFAの方式と適用漏れを確認する",
         "en": "Inspect MFA methods and coverage"
@@ -21652,7 +21593,7 @@
     {
       "id": "SEC-003",
       "version": "1.1.1",
-      "updatedAt": "2026-10-19",
+      "updatedAt": "2026-11-09",
       "title": {
         "ja": "端末とセッションの失効経路を確認する",
         "en": "Inspect endpoints and session revocation"
@@ -21735,7 +21676,7 @@
         "toyobo-email-2026",
         "trunk-mail-2026",
         "uber-2022",
-        "atlink-medley-2026"
+        "medley-atlink-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -21982,7 +21923,7 @@
     {
       "id": "SEC-006",
       "version": "1.1.2",
-      "updatedAt": "2026-10-26",
+      "updatedAt": "2026-11-09",
       "title": {
         "ja": "稼働環境の公開範囲を確認する",
         "en": "Inspect deployed exposure boundaries"
@@ -22097,7 +22038,6 @@
         "yakiniku-king-2026",
         "yamato-pay-later-2026",
         "amadeus-breach-2026",
-        "atlink-medley-2026",
         "binance-breach-2026",
         "iwai-cosmo-tradeworks-2026",
         "nec-contractor-breach-2026",
@@ -22367,7 +22307,7 @@
     {
       "id": "SEC-009",
       "version": "1.2.1",
-      "updatedAt": "2026-10-26",
+      "updatedAt": "2026-11-09",
       "title": {
         "ja": "取得・管理操作のログが揃っているか確認する",
         "en": "Inspect coverage of access and administration logs"
@@ -22570,7 +22510,6 @@
         "yellowhat-booking-2026",
         "zurich-zdash-2026",
         "amadeus-breach-2026",
-        "atlink-medley-2026",
         "binance-breach-2026",
         "nec-contractor-breach-2026",
         "onamae-desktop-cloud-2026"
@@ -22932,7 +22871,7 @@
     {
       "id": "SEC-013",
       "version": "1.1.2",
-      "updatedAt": "2026-10-26",
+      "updatedAt": "2026-11-09",
       "title": {
         "ja": "隔離手順とバックアップの復元を確認する",
         "en": "Inspect containment and backup restoration"
@@ -23023,7 +22962,6 @@
         "omu-ransomware-2026",
         "ryomo-systems-2026",
         "sakura-hosting-2026",
-        "atlink-medley-2026",
         "nec-contractor-breach-2026"
       ],
       "references": [
@@ -23295,5 +23233,5 @@
       "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "222389c1f5dbb5fd67207e16ed2341d686434267f6e7e7aa282afcd9a2e84c88"
+  "contentHash": "e99906d58134e7e0d33d994548277ae7814000d92c088aa5894c49b62ae60cca"
 }

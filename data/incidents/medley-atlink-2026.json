@@ -2,16 +2,16 @@
   "id": "medley-atlink-2026",
   "organization": "メドレー",
   "title": {
-    "ja": "アットリンク：医療機関向け予約基盤への不正アクセス",
-    "en": "Medley at-link: unauthorized access to a medical booking platform"
+    "ja": "アットリンク：医療機関向けサービスへの不正アクセスと情報流出",
+    "en": "Medley at-link: unauthorized access and personal-data leakage"
   },
   "summary": {
-    "ja": "10月11日の外部通報を受けた調査で不正アクセスを確認し、14日深夜に停止しました。最大787医療機関が漏えい可能性の対象であり、患者数ではありません。",
-    "en": "An external report on October 11 led to confirmation of unauthorized access; service stopped late October 14. Potential exposure covers up to 787 medical institutions, not 787 patients."
+    "ja": "メドレーは、9月下旬から10月中旬の不正アクセスによる個人情報の流出を確認しました。初報の最大対象は787医療機関で、患者数ではありません。10月28日は一部医療機関でのβ版テスト開始です。",
+    "en": "Medley confirmed personal-data leakage after access from late September to mid-October. The initial maximum scope was 787 medical institutions, not patients. Beta testing at selected clinics began October 28."
   },
   "occurredAt": null,
   "disclosedAt": "2026-10-14",
-  "reviewedAt": "2026-10-19",
+  "reviewedAt": "2026-11-09",
   "outcome": "confirmed-breach",
   "categories": [
     "unknown"
@@ -21,26 +21,38 @@
     {
       "topic": "entry",
       "text": {
-        "ja": "10月11日に外部専門機関から通報を受け、調査で第三者の不正アクセスを確認しました。",
-        "en": "An external specialist reported possible access on October 11; investigation confirmed unauthorized access."
+        "ja": "不正に設置されたプログラムを通じて情報が取得されました。具体的な侵入手法は非公表です。",
+        "en": "Maliciously installed programs obtained database information; the entry technique is undisclosed."
       },
       "status": "confirmed",
       "sourceIds": [
-        "s1"
+        "s3"
       ],
-      "locator": "§1"
+      "locator": "1. 経緯と調査状況"
     },
     {
       "topic": "impact",
       "text": {
-        "ja": "全利用医療機関787件が最大対象です。漏えいの有無、情報項目と対象医療機関は調査中です。",
-        "en": "All 787 customer medical institutions form the maximum possible scope. Whether information leaked, its fields and affected institutions remain under investigation."
+        "ja": "氏名、誕生月日、ID・パスワード、利用医療機関や来院情報などの流出を確認。決済情報は日付と金額で、カード番号は保有していません。",
+        "en": "Confirmed leaked fields include names, birth month/day, credentials and clinic/visit details. Payment history contains dates and amounts; card numbers were not held."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s3"
+      ],
+      "locator": "1. 漏えいした個人情報の項目"
+    },
+    {
+      "topic": "initial-maximum-scope",
+      "text": {
+        "ja": "10月15日の初報は、全利用医療機関787件を最大対象としました。漏えい確定医療機関数や患者数ではありません。",
+        "en": "The October 15 initial notice set 787 customer clinics as the maximum scope, not confirmed leaks or patient totals."
       },
       "status": "confirmed",
       "sourceIds": [
         "s1"
       ],
-      "locator": "§2"
+      "locator": "p.1 §2"
     },
     {
       "topic": "customer-scope",
@@ -59,22 +71,43 @@
     {
       "date": "2026-10-11",
       "text": {
-        "ja": "外部の情報提供を受けて調査開始。",
+        "ja": "外部通報を受けて調査開始。",
         "en": "Investigation began after an external report."
       },
       "sourceIds": [
-        "s1"
+        "s1",
+        "s3"
       ]
     },
     {
       "date": "2026-10-14",
       "text": {
-        "ja": "医療機関への案内と、深夜のサービス停止。",
-        "en": "Customer notice and late-night service suspension."
+        "ja": "医療機関が告知し、深夜にサービス停止。",
+        "en": "A clinic published a notice; service stopped late that night."
       },
       "sourceIds": [
-        "s1",
-        "s2"
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "text": {
+        "ja": "提供元が個人情報の流出確認を公表。",
+        "en": "Provider confirmed personal-data leakage."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "text": {
+        "ja": "一部医療機関でβ版テストを開始。",
+        "en": "Beta testing began at selected clinics."
+      },
+      "sourceIds": [
+        "s4"
       ]
     }
   ],
@@ -82,24 +115,36 @@
     {
       "topic": "response",
       "text": {
-        "ja": "停止前に医療機関の業務継続を支援し、停止後も専門機関と影響範囲を調査しています。",
-        "en": "Interim support preceded service suspension; external specialists continue investigating scope."
+        "ja": "侵入経路を遮断し、関係する認証情報を無効化。規制当局へ報告し、医療機関と通知を進めています。",
+        "en": "Blocked the entry route, invalidated related credentials, reported to regulators and arranged notifications with clinics."
       },
       "status": "confirmed",
       "sourceIds": [
-        "s1"
+        "s3"
       ],
-      "locator": "§1–3"
+      "locator": "1. 経緯と調査状況"
+    },
+    {
+      "topic": "service-status",
+      "text": {
+        "ja": "旧システムを再稼働せず別環境で再構築。10月22日の開始予定は遅れ、10月28日に一部医療機関でテストを開始しました。全体再開とは説明されていません。",
+        "en": "Rebuilt in a separate environment. The October 22 launch was delayed; selected clinics began testing October 28. General resumption was not established."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s4"
+      ],
+      "locator": "一部機能の提供再開に向けた現在の状況"
     }
   ],
   "prevention": {
     "classification": "unknown",
     "assessment": {
-      "ja": "侵入方法が未公表のため、防げたかは判断できません。関連ルールで公開範囲、権限、ログと保存データを点検します。",
-      "en": "The entry mechanism is undisclosed; avoidability cannot be assessed. Inspect exposure, privileges, logs and retained data using the linked rules."
+      "ja": "侵入方法と当時の制御は未公表です。関連ルールで権限、保存データ、ログと復旧手順を点検します。",
+      "en": "Entry and prior controls remain undisclosed; inspect privileges, retained data, logs and recovery procedures."
     },
     "sourceIds": [
-      "s1"
+      "s3"
     ]
   },
   "ai": {
@@ -111,19 +156,19 @@
   },
   "unknowns": [
     {
-      "ja": "侵入開始日、侵入方法と患者の人数は未公表です。787医療機関すべての漏えいが確定したという説明ではありません。",
-      "en": "The intrusion start, mechanism and patient count are undisclosed. The notice does not confirm leakage at all 787 institutions."
+      "ja": "正確な侵入開始日、患者数、影響医療機関の確定数、CVEは不明です。9月下旬を9月26日へ変換せず、787医療機関を人数へ換算しません。",
+      "en": "Exact entry date, patient count, confirmed clinic count and CVE remain unknown. Late September does not establish September 26; 787 clinics is not a people count."
     }
   ],
   "sources": [
     {
       "id": "s1",
-      "title": "当社サービス「アットリンク」への不正アクセス及びサービスの一時停止に関するお知らせ",
-      "url": "https://ssl4.eir-parts.net/doc/4480/tdnet/2895027/00.pdf",
+      "title": "当社サービス「アットリンク」への不正アクセス及びサービスの一時停止に関するお知らせ（発行元PDFの公開ミラー）",
+      "url": "https://japanir.jp/wp-content/uploads/2026/10/4480-20261015-01.pdf",
       "publisher": "メドレー",
       "kind": "organization",
       "publishedAt": "2026-10-15",
-      "reviewedAt": "2026-10-19"
+      "reviewedAt": "2026-11-09"
     },
     {
       "id": "s2",
@@ -132,10 +177,38 @@
       "publisher": "四条烏丸レディースクリニック",
       "kind": "organization",
       "publishedAt": "2026-10-14",
-      "reviewedAt": "2026-10-19"
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "s3",
+      "title": "アットリンクへの不正アクセスに関する調査状況について",
+      "url": "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%AA%BF%E6%9F%BB%E7%8A%B6%E6%B3%81/",
+      "publisher": "メドレー",
+      "kind": "organization",
+      "publishedAt": "2026-10-23",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "s4",
+      "title": "アットリンクへの不正アクセスおよびサービスの一時停止に関する最新情報（10月28日更新）",
+      "url": "https://at-link.net/information/%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%8A%E3%82%88%E3%81%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE/",
+      "publisher": "メドレー",
+      "kind": "organization",
+      "publishedAt": "2026-10-15",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "s5",
+      "title": "アットリンクへの不正アクセスおよびサービスの一時停止に関する最新情報",
+      "url": "https://www.medley.jp/notice/20261015.html",
+      "publisher": "メドレー",
+      "kind": "organization",
+      "publishedAt": "2026-10-15",
+      "reviewedAt": "2026-11-09"
     }
   ],
   "ruleIds": [
+    "SEC-003",
     "SEC-006",
     "SEC-008",
     "SEC-009",

@@ -1,6 +1,6 @@
 # france-refrigeration-2026 — フランス：冷凍冷蔵設備の遠隔制御装置の侵害
 
-事例 | Catalog: 0.10.0 | Record SHA-256: fbd7f3213ff2a5a4fd8cf6c1cd1c518803ddf7c88f29563653854a0ea19ff3c5
+事例 | Catalog: 0.11.0 | Record SHA-256: fbd7f3213ff2a5a4fd8cf6c1cd1c518803ddf7c88f29563653854a0ea19ff3c5
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

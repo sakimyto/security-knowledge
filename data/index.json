@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.10.0",
-  "updatedAt": "2026-11-02",
+  "version": "0.11.0",
+  "updatedAt": "2026-11-09",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,10 +10,10 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外159事例と16点検ルールを収録した選定DBです。公表日が2025-10-26〜2026-11-02の142事例、期間外の12事例、公表日不明の5事例を含みます。国内169候補の確認台帳を別に公開しています。企業数や事故全体の統計を意味しません。6事例に編集者の原因・対策仮説11件を別項目で収録しています。",
-    "en": "A curated database of 159 primary-source incident records and 16 inspection rules: 142 disclosed during 2025-10-26–2026-11-02, 12 outside that period and 5 with unknown disclosure dates. A separate ledger covers 169 domestic candidates. Counts are not organization totals or representative statistics. Six records retain 11 separate editorial hypotheses."
+    "ja": "一次資料を確認した国内外159事例と16点検ルールの選定DBです。公表日が2025-11-09〜2026-11-09の141事例、期間外13事例、公表日不明5事例を含みます。国内169候補の台帳を別に公開しています。全事故の統計ではありません。6事例に編集者の原因・対策仮説11件を分けて収録しています。",
+    "en": "A curated database of 159 primary-source records and 16 inspection rules: 141 disclosed during 2025-11-09–2026-11-09, 13 outside and 5 with unknown dates. The separate domestic ledger contains 169 candidates. These are not representative incident statistics. Six records retain 11 editorial hypotheses."
   },
-  "contentHash": "222389c1f5dbb5fd67207e16ed2341d686434267f6e7e7aa282afcd9a2e84c88",
+  "contentHash": "e99906d58134e7e0d33d994548277ae7814000d92c088aa5894c49b62ae60cca",
   "entries": [
     {
       "kind": "incident",
@@ -69,11 +69,6 @@
       "kind": "incident",
       "id": "askul-2025",
       "hash": "dd4e201cf595e3657dda8f4b8b90eadee70252112457fe137712945bea0982ed"
-    },
-    {
-      "kind": "incident",
-      "id": "atlink-medley-2026",
-      "hash": "2e44120340e72acfeb12eacc5102ac2108bf908e325cca39499b3c54c9f67505"
     },
     {
       "kind": "incident",
@@ -318,7 +313,7 @@
     {
       "kind": "incident",
       "id": "idcf-ransomware-2026",
-      "hash": "da4cb80e39df359fb468804b2bee53e949b1db0edd645361218c3b2b4119eceb"
+      "hash": "1a56e2f0e46008f6f910fa945e9a4f81c7d9403729b65818249304b8c1b5dca3"
     },
     {
       "kind": "incident",
@@ -448,7 +443,7 @@
     {
       "kind": "incident",
       "id": "medley-atlink-2026",
-      "hash": "fd9ef8ae2f57b80f0096bd8c7753d4df027eb07a19ab42ff4128fe3d4ca88b00"
+      "hash": "6afde5c4dffded7f53ca922394aa60c9c0e09db3789b67dcd2822db126d77f7f"
     },
     {
       "kind": "incident",
@@ -818,17 +813,17 @@
     {
       "kind": "rule",
       "id": "SEC-001",
-      "hash": "fac52ddb96b139acf2b1dd1107c8852450ceea4d28a4a678c529d91f5e0609b6"
+      "hash": "efec3489e1663249a2aff75cdb7c25e82d9765acb2bdcfa31e8ee934f12ef626"
     },
     {
       "kind": "rule",
       "id": "SEC-002",
-      "hash": "4ad05272b4274ff13304cc0625319841b5158cb903ba7cf7e9c06a219c4e8918"
+      "hash": "1398f1a8c28e4441472ef3a0952fde97c4ff19b5010178989f4ddd05b6a193dd"
     },
     {
       "kind": "rule",
       "id": "SEC-003",
-      "hash": "1d4e9729d7e3853ccd6948eaac32da70a2cf2a3772af7dd142f4de7359a2b21c"
+      "hash": "00aa6c368be21452c79e662728102938d7d3896073e53de74ea5fc913250b808"
     },
     {
       "kind": "rule",
@@ -843,7 +838,7 @@
     {
       "kind": "rule",
       "id": "SEC-006",
-      "hash": "1e28e51dc4d3a29f218951fe5aa7dacfb1406524d8e47caf95df584a27b042b0"
+      "hash": "a3cc524b847c5ec9223ea64ed01920283062fe3fcd0eaf2595bde44f951eed71"
     },
     {
       "kind": "rule",
@@ -858,7 +853,7 @@
     {
       "kind": "rule",
       "id": "SEC-009",
-      "hash": "274f209e23199f52db44a8ccc2acfa546da4e486ba7e3b6a3b09baf419e2b3c6"
+      "hash": "8b9d4f314306ca656f73c115c195d84dd803e8a58a53355ed03516b330b26cb2"
     },
     {
       "kind": "rule",
@@ -878,7 +873,7 @@
     {
       "kind": "rule",
       "id": "SEC-013",
-      "hash": "774e6a1028dd128d945d44d7e9367de329be1f576ff3bc4d9a05b19841d29228"
+      "hash": "630183526a6d030807db345f6214176c12ca911fb261bde3abebc1c355a21d98"
     },
     {
       "kind": "rule",

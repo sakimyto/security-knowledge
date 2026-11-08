@@ -1,7 +1,7 @@
 {
   "id": "SEC-001",
   "version": "1.1.1",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-11-09",
   "title": {
     "ja": "修正対象と稼働バージョンを照合する",
     "en": "Reconcile advisories with deployed versions"
@@ -11,7 +11,10 @@
     "en": "Environments using dependencies or self-hosted products; include deployed artifacts, not only lockfiles."
   },
   "category": "known-vulnerability",
-  "surfaces": ["dependencies", "web-app"],
+  "surfaces": [
+    "dependencies",
+    "web-app"
+  ],
   "applicability": {
     "ja": "依存パッケージや自前運用の製品を使う環境。ソースのlockfileだけでなく、実際に配布・稼働するものが対象です。",
     "en": "Environments using dependencies or self-hosted products; include deployed artifacts, not only lockfiles."
@@ -94,7 +97,8 @@
     "iwai-cosmo-tradeworks-2026",
     "nec-contractor-breach-2026",
     "onamae-desktop-cloud-2026",
-    "sourcenext-breach-2026"
+    "sourcenext-breach-2026",
+    "idcf-ransomware-2026"
   ],
   "references": [
     {
