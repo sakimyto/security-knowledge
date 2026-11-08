@@ -27,8 +27,8 @@ test('October 26: bank populations and the refrigeration campaign retain uncerta
 
 test('October 26: follow-ups preserve recovery, storage boundaries and email units', () => {
   const idcf = get('idcf-ransomware-2026')
-  assert.match(idcf.summary.en, /194/)
-  assert.match(idcf.claims.map((x) => x.text.en).join(' '), /48 companies/)
+  assert.match(idcf.summary.en, /206/)
+  assert.match(idcf.claims.map((x) => x.text.en).join(' '), /71 companies/)
   const omu = get('omu-ransomware-2026')
   assert.match(omu.summary.en, /subcontractor/)
   assert.match(omu.unknowns.map((x) => x.en).join(' '), /130,000.*records/)

@@ -1,10 +1,10 @@
 {
   "formatVersion": "1.0.0",
   "ruleId": "SEC-001",
-  "ruleHash": "fac52ddb96b139acf2b1dd1107c8852450ceea4d28a4a678c529d91f5e0609b6",
+  "ruleHash": "efec3489e1663249a2aff75cdb7c25e82d9765acb2bdcfa31e8ee934f12ef626",
   "assetId": "fictional-example",
   "environmentRevision": "replace-with-actual-environment-revision",
-  "observedAt": "2026-11-02T00:00:00Z",
+  "observedAt": "2026-11-09T00:00:00Z",
   "scope": "Fictional example only; no inspection performed",
   "observations": [
     {

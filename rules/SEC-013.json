@@ -1,7 +1,7 @@
 {
   "id": "SEC-013",
   "version": "1.1.2",
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-11-09",
   "title": {
     "ja": "隔離手順とバックアップの復元を確認する",
     "en": "Inspect containment and backup restoration"
@@ -11,7 +11,10 @@
     "en": "Applies to shared systems, cloud, and data stores for containment and recovery inspection."
   },
   "category": "configuration",
-  "surfaces": ["cloud", "data-store"],
+  "surfaces": [
+    "cloud",
+    "data-store"
+  ],
   "applicability": {
     "ja": "共有システム、クラウド、データ保存先がある場合に、侵害時の被害拡大と復旧を点検します。",
     "en": "Applies to shared systems, cloud, and data stores for containment and recovery inspection."
@@ -89,7 +92,6 @@
     "omu-ransomware-2026",
     "ryomo-systems-2026",
     "sakura-hosting-2026",
-    "atlink-medley-2026",
     "nec-contractor-breach-2026"
   ],
   "references": [

@@ -1,7 +1,7 @@
 {
   "id": "SEC-002",
   "version": "1.1.2",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-11-09",
   "title": {
     "ja": "MFAの方式と適用漏れを確認する",
     "en": "Inspect MFA methods and coverage"
@@ -11,7 +11,9 @@
     "en": "Human access to administration, SSO, and data platforms. Inspect service identities separately."
   },
   "category": "credentials",
-  "surfaces": ["identity"],
+  "surfaces": [
+    "identity"
+  ],
   "applicability": {
     "ja": "人がログインする管理画面・SSO・データ基盤。サービスアカウントは別の認証制御として扱います。",
     "en": "Human access to administration, SSO, and data platforms. Inspect service identities separately."

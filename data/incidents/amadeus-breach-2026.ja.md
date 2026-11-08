@@ -1,6 +1,6 @@
 # amadeus-breach-2026 — Amadeus旅客サービスシステム：ANA・JAL等の予約情報への不正アクセス
 
-事例 | Catalog: 0.10.0 | Record SHA-256: 9984f379ae8b69fa1ba68c7ef437410488f359ecab95a3304ec7c6291c41ab01
+事例 | Catalog: 0.11.0 | Record SHA-256: 9984f379ae8b69fa1ba68c7ef437410488f359ecab95a3304ec7c6291c41ab01
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

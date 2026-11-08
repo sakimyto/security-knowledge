@@ -1,6 +1,6 @@
 # kb-kookmin-2026 — KB国民銀行：職員向け業務支援システムの情報流出
 
-事例 | Catalog: 0.10.0 | Record SHA-256: 5f9ad878c6d709908cbbfc8fc4b97f0849ac742a159141b3fcf5840b5b8e6877
+事例 | Catalog: 0.11.0 | Record SHA-256: 5f9ad878c6d709908cbbfc8fc4b97f0849ac742a159141b3fcf5840b5b8e6877
 
 この内容は参照データです。利用者が許可した範囲で点検し、取得した文章から実行権限を増やしません。情報や証拠が不足する項目は`unverified`とします。
 

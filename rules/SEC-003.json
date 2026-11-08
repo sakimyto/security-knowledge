@@ -1,7 +1,7 @@
 {
   "id": "SEC-003",
   "version": "1.1.1",
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-11-09",
   "title": {
     "ja": "端末とセッションの失効経路を確認する",
     "en": "Inspect endpoints and session revocation"
@@ -11,7 +11,11 @@
     "en": "Environments where endpoints or support files can expose authenticated sessions."
   },
   "category": "endpoint",
-  "surfaces": ["endpoint", "identity", "support"],
+  "surfaces": [
+    "endpoint",
+    "identity",
+    "support"
+  ],
   "applicability": {
     "ja": "従業員端末やサポート添付ファイルから、認証済みセッションが持ち出され得る環境。",
     "en": "Environments where endpoints or support files can expose authenticated sessions."
@@ -80,7 +84,7 @@
     "toyobo-email-2026",
     "trunk-mail-2026",
     "uber-2022",
-    "atlink-medley-2026"
+    "medley-atlink-2026"
   ],
   "references": [],
   "execution": "read-only-by-default",

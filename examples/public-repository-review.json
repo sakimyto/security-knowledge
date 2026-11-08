@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "catalogHash": "222389c1f5dbb5fd67207e16ed2341d686434267f6e7e7aa282afcd9a2e84c88",
+  "catalogHash": "e99906d58134e7e0d33d994548277ae7814000d92c088aa5894c49b62ae60cca",
   "environment": "security-knowledge local proposal; source and generated data only",
-  "environmentRevision": "catalog-source-v0.10.0-20261102",
-  "checkedAt": "2026-11-02T00:00:00.000Z",
+  "environmentRevision": "catalog-source-v0.11.0-20261109",
+  "checkedAt": "2026-11-09T00:00:00.000Z",
   "results": [
     {
       "ruleId": "SEC-001",
-      "ruleHash": "fac52ddb96b139acf2b1dd1107c8852450ceea4d28a4a678c529d91f5e0609b6",
+      "ruleHash": "efec3489e1663249a2aff75cdb7c25e82d9765acb2bdcfa31e8ee934f12ef626",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -17,7 +17,7 @@
     },
     {
       "ruleId": "SEC-002",
-      "ruleHash": "4ad05272b4274ff13304cc0625319841b5158cb903ba7cf7e9c06a219c4e8918",
+      "ruleHash": "1398f1a8c28e4441472ef3a0952fde97c4ff19b5010178989f4ddd05b6a193dd",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -27,7 +27,7 @@
     },
     {
       "ruleId": "SEC-003",
-      "ruleHash": "1d4e9729d7e3853ccd6948eaac32da70a2cf2a3772af7dd142f4de7359a2b21c",
+      "ruleHash": "00aa6c368be21452c79e662728102938d7d3896073e53de74ea5fc913250b808",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -57,7 +57,7 @@
     },
     {
       "ruleId": "SEC-006",
-      "ruleHash": "1e28e51dc4d3a29f218951fe5aa7dacfb1406524d8e47caf95df584a27b042b0",
+      "ruleHash": "a3cc524b847c5ec9223ea64ed01920283062fe3fcd0eaf2595bde44f951eed71",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -87,7 +87,7 @@
     },
     {
       "ruleId": "SEC-009",
-      "ruleHash": "274f209e23199f52db44a8ccc2acfa546da4e486ba7e3b6a3b09baf419e2b3c6",
+      "ruleHash": "8b9d4f314306ca656f73c115c195d84dd803e8a58a53355ed03516b330b26cb2",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
@@ -127,7 +127,7 @@
     },
     {
       "ruleId": "SEC-013",
-      "ruleHash": "774e6a1028dd128d945d44d7e9367de329be1f576ff3bc4d9a05b19841d29228",
+      "ruleHash": "630183526a6d030807db345f6214176c12ca911fb261bde3abebc1c355a21d98",
       "assetId": "public-security-knowledge-repository",
       "status": "unverified",
       "scope": "Public repository source and distribution only; no production environment inspection",
