@@ -1,6 +1,6 @@
 # Security Knowledgeの使い方
 
-Catalog: 0.11.0 | Reviewed: 2026-11-09 | 16 rules / 159 incidents
+Catalog: 0.12.0 | Reviewed: 2026-11-16 | 16 rules / 160 incidents
 
 URLを読めるAIはこの案内と discovery.json を取得します。URLを読めないAIには、このファイルと必要なルールのMarkdownを添付または貼り付けてください。小さいモデルは1ルールずつ読み、結果を外部に保存してから次へ進めます。
 

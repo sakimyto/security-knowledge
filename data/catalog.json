@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.2.0",
-  "version": "0.11.0",
-  "updatedAt": "2026-11-09",
+  "version": "0.12.0",
+  "updatedAt": "2026-11-16",
   "title": {
     "ja": "Security Knowledge — 事故から点検へ",
     "en": "Security Knowledge — From incidents to checks"
@@ -10,8 +10,8 @@
   "repositoryPath": "",
   "license": "MIT",
   "coverage": {
-    "ja": "一次資料を確認した国内外159事例と16点検ルールの選定DBです。公表日が2025-11-09〜2026-11-09の141事例、期間外13事例、公表日不明5事例を含みます。国内169候補の台帳を別に公開しています。全事故の統計ではありません。6事例に編集者の原因・対策仮説11件を分けて収録しています。",
-    "en": "A curated database of 159 primary-source records and 16 inspection rules: 141 disclosed during 2025-11-09–2026-11-09, 13 outside and 5 with unknown dates. The separate domestic ledger contains 169 candidates. These are not representative incident statistics. Six records retain 11 editorial hypotheses."
+    "ja": "一次資料を確認した国内外160事例と16点検ルールの選定DBです。公表日が2025-11-16〜2026-11-16の141事例、期間外14事例、公表日不明5事例を含みます。国内169候補の台帳を別に公開しています。全事故の統計ではありません。6事例に編集者の原因・対策仮説11件を分けて収録しています。",
+    "en": "A curated database of 160 primary-source records and 16 inspection rules: 141 disclosed during 2025-11-16–2026-11-16, 14 outside and 5 with unknown dates. The separate domestic ledger contains 169 candidates. These are not representative incident statistics. Six records retain 11 editorial hypotheses."
   },
   "incidents": [
     {
@@ -3084,6 +3084,119 @@
         "SEC-003",
         "SEC-005",
         "SEC-008"
+      ]
+    },
+    {
+      "id": "cisco-sdwan-auth-bypass-2026",
+      "organization": "Cisco Catalyst SD-WAN Manager users (organizations not disclosed)",
+      "title": {
+        "ja": "Cisco SD-WAN Manager：認証回避の実悪用",
+        "en": "Cisco SD-WAN Manager: authentication bypass exploited"
+      },
+      "summary": {
+        "ja": "Ciscoは2026年9月、CVE-2026-76504の実際の悪用を把握しました。URIエンコードの処理不備によって管理者権限でAPIへアクセスできる問題です。被害組織や件数は公表していません。",
+        "en": "Cisco became aware of active exploitation of CVE-2026-76504 in September 2026. URI encoding mishandling permits administrator API access. Victims and counts were not disclosed."
+      },
+      "occurredAt": null,
+      "disclosedAt": "2026-09-30",
+      "reviewedAt": "2026-11-16",
+      "outcome": "confirmed-breach",
+      "categories": [
+        "implementation"
+      ],
+      "cves": [
+        "CVE-2026-76504"
+      ],
+      "claims": [
+        {
+          "topic": "entry",
+          "text": {
+            "ja": "Cisco PSIRTは2026年9月に実際の悪用を把握したと公表しています。個別組織の侵入日ではありません。",
+            "en": "Cisco PSIRT reported awareness of active exploitation in September 2026; this is not an individual intrusion date."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Exploitation and Public Announcements"
+        },
+        {
+          "topic": "vulnerability",
+          "text": {
+            "ja": "URIエンコードの不適切な処理により、未認証の遠隔攻撃者が認証ルールを回避し、管理者権限でAPIへアクセスできます。",
+            "en": "Improper URI encoding handling allows unauthenticated remote attackers to bypass authentication and access the API as administrator."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Summary"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-30",
+          "text": {
+            "ja": "Ciscoが実悪用を含むアドバイザリを初公開。",
+            "en": "Cisco first published the advisory reporting exploitation."
+          },
+          "sourceIds": [
+            "s1"
+          ]
+        }
+      ],
+      "reportedActions": [
+        {
+          "topic": "response",
+          "text": {
+            "ja": "Ciscoは修正版と侵害調査の案内を公開しました。",
+            "en": "Cisco released fixes and compromise-investigation guidance."
+          },
+          "status": "confirmed",
+          "sourceIds": [
+            "s1"
+          ],
+          "locator": "Summary / Indicators of Compromise / Fixed Software"
+        }
+      ],
+      "prevention": {
+        "classification": "unknown",
+        "assessment": {
+          "ja": "各侵入と修正公開の前後関係は不明です。稼働版・公開範囲・ログを確認します。",
+          "en": "Individual intrusions relative to patch availability are unknown. Inspect deployed versions, exposure and logs."
+        },
+        "sourceIds": [
+          "s1"
+        ]
+      },
+      "ai": {
+        "status": "unknown",
+        "assessment": {
+          "ja": "参照した資料ではAI関与を確認できません。",
+          "en": "The source does not establish AI involvement."
+        }
+      },
+      "unknowns": [
+        {
+          "ja": "被害組織・人数・機器数・個別の侵入日・流出範囲・復旧状況は不明です。ログの例だけでは侵害を断定できません。",
+          "en": "Victims, people, device counts, intrusion dates, exfiltration and recovery are unknown. Example log indicators alone do not establish compromise."
+        }
+      ],
+      "sources": [
+        {
+          "id": "s1",
+          "title": "Cisco Catalyst SD-WAN Manager API Authentication Bypass Vulnerability",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU",
+          "publisher": "Cisco PSIRT",
+          "publishedAt": "2026-09-30",
+          "reviewedAt": "2026-11-16",
+          "kind": "vendor"
+        }
+      ],
+      "ruleIds": [
+        "SEC-001",
+        "SEC-006",
+        "SEC-009"
       ]
     },
     {
@@ -21368,8 +21481,8 @@
   "rules": [
     {
       "id": "SEC-001",
-      "version": "1.1.1",
-      "updatedAt": "2026-11-09",
+      "version": "1.1.2",
+      "updatedAt": "2026-11-16",
       "title": {
         "ja": "修正対象と稼働バージョンを照合する",
         "en": "Reconcile advisories with deployed versions"
@@ -21426,8 +21539,11 @@
         }
       ],
       "incidentIds": [
+        "amadeus-breach-2026",
         "applynow-bi-2026",
         "axios-npm-2026",
+        "binance-breach-2026",
+        "cisco-sdwan-auth-bypass-2026",
         "dandm-vpn-ransomware-2026",
         "digital-agency-gss-2026",
         "education-software-dormant-2026",
@@ -21435,7 +21551,9 @@
         "forticloud-sso-2026",
         "gmo-infoq-2026",
         "gyazo-2026",
+        "idcf-ransomware-2026",
         "inkrevolution-payment-2025",
+        "iwai-cosmo-tradeworks-2026",
         "kaga-solnet-2026",
         "kddi-isp-2026",
         "leanbody-metabase-2026",
@@ -21444,8 +21562,10 @@
         "metabase-2026",
         "moveit-2023",
         "mrmax-2026",
+        "nec-contractor-breach-2026",
         "nidek-website-2026",
         "nishiyama-2026",
+        "onamae-desktop-cloud-2026",
         "openai-huggingface-eval-2026",
         "osaka-recruitment-vendor-2026",
         "ozmall-2026",
@@ -21456,17 +21576,11 @@
         "rust-arrayref-2026",
         "saga-hirakawaya-payment-2026",
         "skyticket-business-system-2026",
+        "sourcenext-breach-2026",
         "trivy-supply-chain-2026",
         "voising-bi-2026",
         "white-essence-2026",
-        "zurich-zdash-2026",
-        "amadeus-breach-2026",
-        "binance-breach-2026",
-        "iwai-cosmo-tradeworks-2026",
-        "nec-contractor-breach-2026",
-        "onamae-desktop-cloud-2026",
-        "sourcenext-breach-2026",
-        "idcf-ransomware-2026"
+        "zurich-zdash-2026"
       ],
       "references": [
         {
@@ -21922,8 +22036,8 @@
     },
     {
       "id": "SEC-006",
-      "version": "1.1.2",
-      "updatedAt": "2026-11-09",
+      "version": "1.1.3",
+      "updatedAt": "2026-11-16",
       "title": {
         "ja": "稼働環境の公開範囲を確認する",
         "en": "Inspect deployed exposure boundaries"
@@ -21981,13 +22095,16 @@
         }
       ],
       "incidentIds": [
+        "amadeus-breach-2026",
         "anthropic-cyber-evals-2026",
         "anthropic-unintended-model-actions-2026",
         "arcadia-raiden-2026",
         "asahi-pharma-digital-2026",
         "awabank-test-environment-2026",
+        "binance-breach-2026",
         "campfire-2026",
         "chibagin-shoten-2026",
+        "cisco-sdwan-auth-bypass-2026",
         "cmic-ra-connect-2026",
         "daiichi-life-hr-2026",
         "daiki-suisan-2026",
@@ -22004,6 +22121,7 @@
         "his-thailand-2025",
         "idcf-ransomware-2026",
         "istyle-transfer-exposure-2026",
+        "iwai-cosmo-tradeworks-2026",
         "jaea-jrr3-files-2026",
         "kamogawa-form-exposure-2026",
         "kb-kookmin-2026",
@@ -22016,9 +22134,11 @@
         "mie-school-form-exposure-2026",
         "moveit-2023",
         "mrmax-2026",
+        "nec-contractor-breach-2026",
         "nichii-backup-exposure-2026",
         "nidek-website-2026",
         "nishiyama-2026",
+        "onamae-desktop-cloud-2026",
         "openai-huggingface-eval-2026",
         "prontest-cloud-2026",
         "react2shell-2025",
@@ -22030,19 +22150,14 @@
         "shizuoka-form-exposure-2026",
         "skyticket-bus-2026",
         "snowflake-unc5537-2024",
+        "sourcenext-breach-2026",
         "temairazu-2026",
         "times-car-2026",
         "toyota-cloud-2023",
         "unit42-ai-assisted-2026",
         "voising-bi-2026",
         "yakiniku-king-2026",
-        "yamato-pay-later-2026",
-        "amadeus-breach-2026",
-        "binance-breach-2026",
-        "iwai-cosmo-tradeworks-2026",
-        "nec-contractor-breach-2026",
-        "onamae-desktop-cloud-2026",
-        "sourcenext-breach-2026"
+        "yamato-pay-later-2026"
       ],
       "references": [],
       "execution": "read-only-by-default",
@@ -22306,8 +22421,8 @@
     },
     {
       "id": "SEC-009",
-      "version": "1.2.1",
-      "updatedAt": "2026-11-09",
+      "version": "1.2.2",
+      "updatedAt": "2026-11-16",
       "title": {
         "ja": "取得・管理操作のログが揃っているか確認する",
         "en": "Inspect coverage of access and administration logs"
@@ -22372,6 +22487,7 @@
         "2rinkan-api-2026",
         "aflac-japan-2026",
         "ainokaze-reservations-2026",
+        "amadeus-breach-2026",
         "anthropic-claude-code-abuse-2025",
         "anthropic-cyber-evals-2026",
         "anthropic-unintended-model-actions-2026",
@@ -22381,11 +22497,13 @@
         "askul-2025",
         "awabank-test-environment-2026",
         "axios-npm-2026",
+        "binance-breach-2026",
         "campfire-2026",
         "charm-2026",
         "chiba-biodiversity-2026",
         "chibagin-shoten-2026",
         "chubu-business-credentials-2026",
+        "cisco-sdwan-auth-bypass-2026",
         "cloudflare-thanksgiving-2023",
         "cmic-ra-connect-2026",
         "commune-2026",
@@ -22453,6 +22571,7 @@
         "miyamoto-munashi-orders-2026",
         "mrmax-2026",
         "murauchi-2026",
+        "nec-contractor-breach-2026",
         "nice-mail-2026",
         "nichii-backup-exposure-2026",
         "nichirei-2026",
@@ -22466,6 +22585,7 @@
         "okta-support-2023",
         "omic-support-scam-2026",
         "omu-ransomware-2026",
+        "onamae-desktop-cloud-2026",
         "openai-huggingface-eval-2026",
         "openai-mixpanel-2025",
         "osaka-recruitment-vendor-2026",
@@ -22508,11 +22628,7 @@
         "yakiniku-king-2026",
         "yamato-pay-later-2026",
         "yellowhat-booking-2026",
-        "zurich-zdash-2026",
-        "amadeus-breach-2026",
-        "binance-breach-2026",
-        "nec-contractor-breach-2026",
-        "onamae-desktop-cloud-2026"
+        "zurich-zdash-2026"
       ],
       "references": [
         {
@@ -23233,5 +23349,5 @@
       "provenance": "editorial-guidance"
     }
   ],
-  "contentHash": "e99906d58134e7e0d33d994548277ae7814000d92c088aa5894c49b62ae60cca"
+  "contentHash": "1ce313ede05ff62d5c582ed1e510762b27b1a53f6602f63548ba290b198e2f8e"
 }

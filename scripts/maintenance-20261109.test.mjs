@@ -32,7 +32,7 @@ test('November 9: IDCF distinguishes recovery customers, portal records and unkn
   assert.equal(item.ai.status, 'unknown')
   assert.deepEqual(item.cves, [])
   for (const id of ['SEC-001','SEC-002','SEC-003','SEC-006','SEC-009','SEC-013']) {
-    assert.equal(catalog.rules.find(x => x.id === id).updatedAt, '2026-11-09')
+    assert.equal(catalog.rules.find(x => x.id === id).updatedAt, ['SEC-001','SEC-006','SEC-009'].includes(id) ? '2026-11-16' : '2026-11-09')
   }
 })
 
