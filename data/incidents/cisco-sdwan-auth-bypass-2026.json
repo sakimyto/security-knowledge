@@ -1,0 +1,113 @@
+{
+  "id": "cisco-sdwan-auth-bypass-2026",
+  "organization": "Cisco Catalyst SD-WAN Manager users (organizations not disclosed)",
+  "title": {
+    "ja": "Cisco SD-WAN Manager：認証回避の実悪用",
+    "en": "Cisco SD-WAN Manager: authentication bypass exploited"
+  },
+  "summary": {
+    "ja": "Ciscoは2026年9月、CVE-2026-76504の実際の悪用を把握しました。URIエンコードの処理不備によって管理者権限でAPIへアクセスできる問題です。被害組織や件数は公表していません。",
+    "en": "Cisco became aware of active exploitation of CVE-2026-76504 in September 2026. URI encoding mishandling permits administrator API access. Victims and counts were not disclosed."
+  },
+  "occurredAt": null,
+  "disclosedAt": "2026-09-30",
+  "reviewedAt": "2026-11-16",
+  "outcome": "confirmed-breach",
+  "categories": [
+    "implementation"
+  ],
+  "cves": [
+    "CVE-2026-76504"
+  ],
+  "claims": [
+    {
+      "topic": "entry",
+      "text": {
+        "ja": "Cisco PSIRTは2026年9月に実際の悪用を把握したと公表しています。個別組織の侵入日ではありません。",
+        "en": "Cisco PSIRT reported awareness of active exploitation in September 2026; this is not an individual intrusion date."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Exploitation and Public Announcements"
+    },
+    {
+      "topic": "vulnerability",
+      "text": {
+        "ja": "URIエンコードの不適切な処理により、未認証の遠隔攻撃者が認証ルールを回避し、管理者権限でAPIへアクセスできます。",
+        "en": "Improper URI encoding handling allows unauthenticated remote attackers to bypass authentication and access the API as administrator."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Summary"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "text": {
+        "ja": "Ciscoが実悪用を含むアドバイザリを初公開。",
+        "en": "Cisco first published the advisory reporting exploitation."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "reportedActions": [
+    {
+      "topic": "response",
+      "text": {
+        "ja": "Ciscoは修正版と侵害調査の案内を公開しました。",
+        "en": "Cisco released fixes and compromise-investigation guidance."
+      },
+      "status": "confirmed",
+      "sourceIds": [
+        "s1"
+      ],
+      "locator": "Summary / Indicators of Compromise / Fixed Software"
+    }
+  ],
+  "prevention": {
+    "classification": "unknown",
+    "assessment": {
+      "ja": "各侵入と修正公開の前後関係は不明です。稼働版・公開範囲・ログを確認します。",
+      "en": "Individual intrusions relative to patch availability are unknown. Inspect deployed versions, exposure and logs."
+    },
+    "sourceIds": [
+      "s1"
+    ]
+  },
+  "ai": {
+    "status": "unknown",
+    "assessment": {
+      "ja": "参照した資料ではAI関与を確認できません。",
+      "en": "The source does not establish AI involvement."
+    }
+  },
+  "unknowns": [
+    {
+      "ja": "被害組織・人数・機器数・個別の侵入日・流出範囲・復旧状況は不明です。ログの例だけでは侵害を断定できません。",
+      "en": "Victims, people, device counts, intrusion dates, exfiltration and recovery are unknown. Example log indicators alone do not establish compromise."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Cisco Catalyst SD-WAN Manager API Authentication Bypass Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU",
+      "publisher": "Cisco PSIRT",
+      "publishedAt": "2026-09-30",
+      "reviewedAt": "2026-11-16",
+      "kind": "vendor"
+    }
+  ],
+  "ruleIds": [
+    "SEC-001",
+    "SEC-006",
+    "SEC-009"
+  ]
+}
